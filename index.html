@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Athlos – Advanced X-Ray Imaging Sensors</title>
+  <meta name="description" content="Athlos develops and manufactures advanced direct conversion X-ray imaging sensors for dental, medical, and industrial applications. CdTe and Si CMOS technology, made in Finland.">
+  <meta property="og:title" content="Athlos – Advanced X-Ray Imaging Sensors">
+  <meta property="og:description" content="Direct conversion X-ray sensors for dental, medical, and industrial imaging. Superior image quality, higher sensitivity, and faster acquisition.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,300;1,14..32,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Critical inline: prevent FOUC on nav */
+    .nav { background: transparent; }
+  </style>
+</head>
+<body>
+
+  <!-- ============================
+       NAVIGATION
+  ============================= -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="Athlos home">
+        <!-- PNG logo shown when nav has white background (scrolled) -->
+        <img src="images/athlos-logo.png" alt="Athlos" class="nav-logo-png">
+        <!-- Text mark shown when over hero (dark background) -->
+        <span class="nav-logo-text" aria-hidden="true">ATHLOS</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#technology" class="nav-link">Technology</a>
+        <a href="#applications" class="nav-link">Applications</a>
+        <a href="#about" class="nav-link">About</a>
+      </nav>
+      <a href="#contact" class="nav-cta">Contact</a>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile-menu" id="mobileMenu">
+      <a href="#products" class="nav-mobile-link">Products</a>
+      <a href="#technology" class="nav-mobile-link">Technology</a>
+      <a href="#applications" class="nav-mobile-link">Applications</a>
+      <a href="#about" class="nav-mobile-link">About</a>
+      <a href="#contact" class="nav-mobile-link nav-mobile-cta">Contact</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================
+         HERO
+    ============================= -->
+    <section class="hero" id="hero">
+      <!-- Slideshow background -->
+      <div class="hero-slideshow" aria-hidden="true">
+        <div class="hero-slide active" style="background-image: url('images/hero-lab-automation.png')"></div>
+        <div class="hero-slide" style="background-image: url('images/hero-cleanroom-worker.png')"></div>
+        <div class="hero-slide" style="background-image: url('images/hero-facility.png')"></div>
+        <div class="hero-slide" style="background-image: url('images/hero-process.png')"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-gradient"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="hero-content">
+        <p class="hero-eyebrow">Direct Conversion X-Ray Imaging</p>
+        <h1 class="hero-headline">
+          Direct Conversion<br>&amp; Direct Advantage.
+        </h1>
+        <p class="hero-sub">
+          Athlos develops and manufactures advanced X-ray imaging sensors — delivering superior image quality, higher sensitivity, and faster acquisition for dental, medical, and industrial applications.
+        </p>
+        <div class="hero-actions">
+          <a href="#products" class="btn btn-primary">Explore Products</a>
+          <a href="#technology" class="btn btn-outline">Our Technology</a>
+        </div>
+      </div>
+
+      <!-- Slide indicators -->
+      <div class="hero-indicators" aria-hidden="true">
+        <button class="hero-dot active" data-index="0"></button>
+        <button class="hero-dot" data-index="1"></button>
+        <button class="hero-dot" data-index="2"></button>
+        <button class="hero-dot" data-index="3"></button>
+      </div>
+
+      <!-- Scroll cue -->
+      <div class="hero-scroll-cue" aria-hidden="true">
+        <span class="hero-scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- ============================
+         STATEMENT
+    ============================= -->
+    <section class="statement">
+      <div class="container">
+        <div class="statement-inner">
+          <p class="statement-label reveal">Finland · Est. 1988</p>
+          <h2 class="statement-headline reveal">
+            We invented Direct Conversion.<br>For over 35 years, our sensors have defined<br>what precision X-ray imaging can achieve.
+          </h2>
+          <p class="statement-body reveal">
+            By converting X-rays directly into electrical pulses — without an intermediate scintillator — Athlos sensors eliminate a fundamental source of image degradation. The result is sharper detail, truer contrast, and reliable performance across the full dose range.
+          </p>
+          <div class="statement-stats reveal">
+            <div class="stat-item">
+              <span class="stat-number">35+</span>
+              <span class="stat-label">Years of expertise</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number">4</span>
+              <span class="stat-label">Product families</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number">3</span>
+              <span class="stat-label">Markets served</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number">ISO</span>
+              <span class="stat-label">13485:2016 certified</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         TECHNOLOGY
+    ============================= -->
+    <section class="technology" id="technology">
+      <div class="container">
+        <div class="tech-grid">
+          <div class="tech-content">
+            <p class="section-eyebrow reveal">The Science Behind Performance</p>
+            <h2 class="section-headline reveal">Direct conversion.<br>No intermediate steps.<br>No compromise.</h2>
+            <p class="tech-body reveal">
+              Conventional X-ray sensors rely on a scintillator to first convert X-rays into visible light, which is then detected. Each conversion step introduces noise, blurring, and energy loss that limit what the system can resolve.
+            </p>
+            <p class="tech-body reveal">
+              Athlos sensors use CdTe-CMOS and Si-CMOS direct conversion architectures — materials that convert X-ray photons directly into charge, then into digital signal. No light conversion. No phosphor layer. No unnecessary loss.
+            </p>
+            <div class="tech-features reveal">
+              <div class="tech-feature">
+                <span class="tech-feature-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M6 9l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                CdTe and Si direct conversion materials
+              </div>
+              <div class="tech-feature">
+                <span class="tech-feature-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M6 9l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                Proprietary full-custom CMOS readout
+              </div>
+              <div class="tech-feature">
+                <span class="tech-feature-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M6 9l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                Advanced reconstruction and filter libraries
+              </div>
+              <div class="tech-feature">
+                <span class="tech-feature-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M6 9l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                Single-photon sensitivity capability
+              </div>
+            </div>
+            <a href="#" class="btn btn-secondary reveal">Deep dive into the technology →</a>
+          </div>
+          <div class="tech-visual reveal">
+            <div class="tech-image-wrap">
+              <img src="images/product-macro-1.png" alt="Athlos sensor internal architecture – direct conversion CMOS assembly" loading="lazy">
+              <div class="tech-image-tag">
+                <span>CdTe · Si · CMOS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         ADVANTAGES
+    ============================= -->
+    <section class="advantages" id="why">
+      <div class="container">
+        <div class="advantages-header">
+          <p class="section-eyebrow reveal">Why Athlos</p>
+          <h2 class="section-headline reveal">Performance you can measure.<br>Reliability you can depend on.</h2>
+        </div>
+        <div class="advantages-grid">
+          <div class="advantage-card reveal">
+            <div class="advantage-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 14h20M14 4v20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="14" cy="14" r="4" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <h3 class="advantage-title">Sharper Imaging</h3>
+            <p class="advantage-body">Exceptional spatial resolution and contrast resolution, enabling detection of fine structural detail that scintillator-based systems routinely miss.</p>
+          </div>
+          <div class="advantage-card reveal" data-delay="80">
+            <div class="advantage-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4l2 6h6l-5 4 2 6-5-3-5 3 2-6-5-4h6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="advantage-title">Higher Sensitivity</h3>
+            <p class="advantage-body">Direct conversion of X-ray photons into charge maximises detective quantum efficiency — detecting with confidence at lower dose levels.</p>
+          </div>
+          <div class="advantage-card reveal" data-delay="160">
+            <div class="advantage-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="10" width="4" height="14" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="12" y="6" width="4" height="18" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="20" y="2" width="4" height="22" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <h3 class="advantage-title">Wide Dynamic Range</h3>
+            <p class="advantage-body">Consistent, accurate imaging across widely varying dose conditions — maintaining performance in both low-contrast and high-attenuation situations.</p>
+          </div>
+          <div class="advantage-card reveal" data-delay="240">
+            <div class="advantage-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M14 8v6l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="advantage-title">Faster Acquisition</h3>
+            <p class="advantage-body">Ultra-high-speed scanning rates enable real-time industrial inspection and high-throughput clinical workflows without image quality trade-offs.</p>
+          </div>
+          <div class="advantage-card reveal" data-delay="320">
+            <div class="advantage-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4C8.477 4 4 8.477 4 14s4.477 10 10 10 10-4.477 10-10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M19 4l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="advantage-title">Proven Expertise</h3>
+            <p class="advantage-body">Our team invented direct conversion X-ray imaging in the early 1990s. Over 35 years of applied knowledge informs every sensor we design and manufacture.</p>
+          </div>
+          <div class="advantage-card reveal advantage-card--accent" data-delay="400">
+            <div class="advantage-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4v20M4 14h20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="advantage-title">Partner-First Model</h3>
+            <p class="advantage-body">We work closely with OEMs and system integrators — providing deep integration support, customisation, and long-term engineering partnership.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         PRODUCTS
+    ============================= -->
+    <section class="products" id="products">
+      <div class="container">
+        <div class="products-header">
+          <p class="section-eyebrow section-eyebrow--light reveal">Product Portfolio</p>
+          <h2 class="section-headline section-headline--light reveal">
+            Purpose-built for demanding applications.
+          </h2>
+          <p class="products-intro reveal">
+            Four product families — each engineered for a specific application domain, all built on the same foundation of direct conversion precision.
+          </p>
+        </div>
+        <div class="products-grid">
+
+          <article class="product-card reveal">
+            <div class="product-card-image">
+              <img src="images/product-board-studio.png" alt="Athlos UFS dental X-ray scanner" loading="lazy">
+            </div>
+            <div class="product-card-body">
+              <span class="product-market">Dental Imaging</span>
+              <h3 class="product-name">UFS</h3>
+              <p class="product-desc">Ultra-fast, high-sensitivity single-photon-capable scanners for dental panoramic and cephalometric imaging. The gold standard in 2D dental X-ray — and the ideal complement to hybrid 3D/2D cone beam systems.</p>
+              <a href="#" class="product-link">Learn more <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-delay="100">
+            <div class="product-card-image">
+              <img src="images/product-sensor-ufs.png" alt="Athlos UFS IP67 industrial X-ray scanner" loading="lazy">
+            </div>
+            <div class="product-card-body">
+              <span class="product-market">Industrial Imaging</span>
+              <h3 class="product-name">UFS IP67</h3>
+              <p class="product-desc">Ultra-fast, high-sensitivity, high-dynamic-range, single-photon-sensitive TDI scanners for inline industrial inspection. IP67-rated and engineered for continuous operation in demanding environments — with no active cooling required.</p>
+              <a href="#" class="product-link">Learn more <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-delay="200">
+            <div class="product-card-image">
+              <img src="images/product-wios.png" alt="Athlos WIOS wireless intraoral sensor" loading="lazy">
+            </div>
+            <div class="product-card-body">
+              <span class="product-market">Intraoral Dental</span>
+              <h3 class="product-name">WIOS</h3>
+              <p class="product-desc">True Wireless® intraoral sensor. Film-crisp image quality, corded-sensor speed, phosphor plate comfort — without the wire. Featuring Zero Profile® holders for optimised patient positioning and clinical workflow.</p>
+              <a href="#" class="product-link">Learn more <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-delay="300">
+            <div class="product-card-image">
+              <img src="images/product-twain.png" alt="Athlos TWAIN and software tools" loading="lazy">
+            </div>
+            <div class="product-card-body">
+              <span class="product-market">Software &amp; Integration</span>
+              <h3 class="product-name">TWAIN &amp; Tools</h3>
+              <p class="product-desc">Decades of reconstruction and post-processing expertise, now available as licensable software components. TWAIN module, advanced reconstruction algorithms, and image processing filters — as part of an Athlos system or independently licensed.</p>
+              <a href="#" class="product-link">Learn more <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         MANUFACTURING
+    ============================= -->
+    <section class="manufacturing" id="about">
+      <div class="manufacturing-image" aria-hidden="true">
+        <img src="images/hero-facility.png" alt="">
+        <div class="manufacturing-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="manufacturing-content">
+          <p class="section-eyebrow section-eyebrow--light reveal">Manufacturing &amp; Partnership</p>
+          <h2 class="section-headline section-headline--light reveal">
+            Built in Finland.<br>Trusted worldwide.
+          </h2>
+          <p class="manufacturing-body reveal">
+            Athlos sensors are manufactured in-house and inside the VTT Micronova cleanroom facility — one of Europe's leading nanofabrication environments. Our modular, scalable production infrastructure is designed to meet demand at every stage of market growth.
+          </p>
+          <div class="manufacturing-pillars reveal">
+            <div class="pillar">
+              <h4 class="pillar-title">Cleanroom Manufacturing</h4>
+              <p class="pillar-body">In-house and VTT Micronova production under rigorous process controls.</p>
+            </div>
+            <div class="pillar">
+              <h4 class="pillar-title">Global Partner Network</h4>
+              <p class="pillar-body">Shareholders and partners spanning CMOS design, materials, software, and applications.</p>
+            </div>
+            <div class="pillar">
+              <h4 class="pillar-title">ISO 13485:2016</h4>
+              <p class="pillar-body">Certified quality management system ensuring consistent product reliability and regulatory readiness.</p>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-outline reveal">Partner with Athlos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         FINAL CTA
+    ============================= -->
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <div class="cta-inner">
+          <p class="section-eyebrow reveal">Work With Us</p>
+          <h2 class="cta-headline reveal">
+            Ready to move faster<br>and perform better?
+          </h2>
+          <p class="cta-body reveal">
+            Whether you are developing next-generation imaging systems or enhancing existing platforms, Athlos provides the technology, expertise, and long-term support to help you succeed. Let's talk about your application.
+          </p>
+          <div class="cta-actions reveal">
+            <a href="mailto:info@athlos.fi" class="btn btn-primary btn-large">Contact Athlos</a>
+            <span class="cta-detail">info@athlos.fi</span>
+          </div>
+          <p class="cta-location reveal">Espoo, Finland</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================
+       FOOTER
+  ============================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo-wrap">
+            <img src="images/athlos-logo.png" alt="Athlos" class="footer-logo">
+          </div>
+          <p class="footer-tagline">Advanced X-Ray Imaging Sensors<br>Espoo, Finland</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-col">
+            <span class="footer-col-label">Products</span>
+            <a href="#" class="footer-link">UFS Dental</a>
+            <a href="#" class="footer-link">UFS IP67 Industrial</a>
+            <a href="#" class="footer-link">WIOS Intraoral</a>
+            <a href="#" class="footer-link">TWAIN &amp; Software</a>
+          </div>
+          <div class="footer-col">
+            <span class="footer-col-label">Applications</span>
+            <a href="#" class="footer-link">Dental Imaging</a>
+            <a href="#" class="footer-link">Industrial Inspection</a>
+            <a href="#" class="footer-link">Medical Imaging</a>
+          </div>
+          <div class="footer-col">
+            <span class="footer-col-label">Company</span>
+            <a href="#" class="footer-link">About Athlos</a>
+            <a href="#" class="footer-link">Technology</a>
+            <a href="#" class="footer-link">Manufacturing</a>
+            <a href="#" class="footer-link">Careers</a>
+          </div>
+          <div class="footer-col">
+            <span class="footer-col-label">Contact</span>
+            <a href="mailto:info@athlos.fi" class="footer-link">info@athlos.fi</a>
+            <a href="#" class="footer-link">LinkedIn</a>
+            <a href="#" class="footer-link">Privacy Policy</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2024 Athlos Oy. All rights reserved. Made in Finland.</p>
+        <p class="footer-cert">ISO 13485:2016 Certified</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
