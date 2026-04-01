@@ -1,0 +1,78 @@
+/* =====================================================
+   ATHLOS PRODUCTS — JS
+   Extends script.js for product pages.
+   - Nav scroll state
+   - Scroll reveal
+   - Smooth anchor scrolling
+===================================================== */
+(function () {
+  'use strict';
+
+  /* Nav scroll */
+  const nav = document.getElementById('nav');
+  function updateNav() {
+    if (!nav) return;
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }
+  let raf = null;
+  window.addEventListener('scroll', () => {
+    if (raf) return;
+    raf = requestAnimationFrame(() => { updateNav(); raf = null; });
+  }, { passive: true });
+  updateNav();
+
+  /* Mobile nav */
+  const hamburger = document.querySelector('.nav-hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  let menuOpen = false;
+  function toggleMenu(open) {
+    menuOpen = open;
+    if (mobileMenu) mobileMenu.classList.toggle('open', open);
+    if (hamburger) hamburger.setAttribute('aria-expanded', String(open));
+    if (hamburger) {
+      const spans = hamburger.querySelectorAll('span');
+      spans[0].style.transform = open ? 'rotate(45deg) translate(5px, 5px)' : '';
+      spans[1].style.opacity   = open ? '0' : '';
+      spans[2].style.transform = open ? 'rotate(-45deg) translate(5px, -5px)' : '';
+    }
+  }
+  if (hamburger) hamburger.addEventListener('click', () => toggleMenu(!menuOpen));
+  document.querySelectorAll('.nav-mobile-link').forEach(l => l.addEventListener('click', () => toggleMenu(false)));
+  document.addEventListener('click', e => {
+    if (menuOpen && nav && !nav.contains(e.target)) toggleMenu(false);
+  });
+
+  /* Scroll reveal */
+  const targets = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const delay = parseInt(e.target.dataset.delay || '0', 10);
+      setTimeout(() => e.target.classList.add('is-visible'), delay);
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+  targets.forEach(t => io.observe(t));
+
+  /* Smooth scroll with nav+subnav offset */
+  const navH    = (nav ? nav.offsetHeight : 72) + 48 + 2; // nav + subnav + accent bar
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+      const id = this.getAttribute('href');
+      if (id === '#') return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - navH, behavior: 'smooth' });
+    });
+  });
+
+  /* Lazy image fade-in */
+  document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+    img.style.opacity = '0';
+    img.style.transition = 'opacity 400ms ease';
+    if (img.complete) { img.style.opacity = '1'; }
+    else { img.addEventListener('load', () => { img.style.opacity = '1'; }); }
+  });
+
+})();
