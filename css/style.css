@@ -328,6 +328,16 @@ body::before {
   position: relative;
 }
 
+/* Transparent bridge covers the gap so cursor can reach the dropdown */
+.nav-item::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -8px;
+  right: -8px;
+  height: 18px;
+}
+
 .nav-item .nav-link {
   display: flex;
   align-items: center;
