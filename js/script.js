@@ -164,6 +164,34 @@
   });
 
   /* =====================================================
+     3b. PRODUCTS DROPDOWN
+  ===================================================== */
+  const navItem = document.querySelector('.nav-item.has-dropdown');
+  if (navItem) {
+    // Touch / click toggle for mobile
+    const mainLink = navItem.querySelector('.nav-link');
+    mainLink.addEventListener('click', function(e) {
+      // On narrow screens, toggle instead of navigate
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        navItem.classList.toggle('open');
+      }
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navItem.contains(e.target)) {
+        navItem.classList.remove('open');
+      }
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') navItem.classList.remove('open');
+    });
+  }
+
+  /* =====================================================
      4. SCROLL REVEAL
   ===================================================== */
   const revealTargets = document.querySelectorAll('.reveal, [data-animate]');

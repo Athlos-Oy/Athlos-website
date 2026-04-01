@@ -323,6 +323,89 @@ body::before {
   width: 100%;
 }
 
+/* ── Products dropdown ── */
+.nav-item {
+  position: relative;
+}
+
+.nav-item .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+}
+
+/* Chevron icon */
+.nav-link-chevron {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  transition: transform var(--trs-md);
+  flex-shrink: 0;
+}
+
+.nav-item:hover .nav-link-chevron,
+.nav-item.open .nav-link-chevron {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  min-width: 200px;
+  background: var(--white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-md);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--trs-md), transform var(--trs-md);
+  z-index: 50;
+  overflow: hidden;
+}
+
+/* Small top triangle pointer */
+.nav-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 8px;
+  height: 8px;
+  background: var(--white);
+  border-left: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-border);
+}
+
+.nav-item:hover .nav-dropdown,
+.nav-item.open .nav-dropdown {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown-link {
+  display: block;
+  padding: 0.7rem 1.25rem;
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: var(--gray-steel);
+  border-bottom: 1px solid var(--color-border);
+  transition: background var(--trs), color var(--trs);
+  white-space: nowrap;
+}
+
+.nav-dropdown-link:last-child {
+  border-bottom: none;
+}
+
+.nav-dropdown-link:hover {
+  background: var(--off-white);
+  color: var(--charcoal);
+}
+
 /* Nav CTA */
 .nav-cta {
   font-size: var(--text-sm);

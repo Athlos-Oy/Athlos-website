@@ -10,9 +10,15 @@
 
   /* Nav scroll */
   const nav = document.getElementById('nav');
+  const hasSubnav = !!document.querySelector('.product-subnav');
   function updateNav() {
     if (!nav) return;
-    nav.classList.toggle('scrolled', window.scrollY > 40);
+    // Pages with a subnav always keep the white scrolled state
+    if (hasSubnav) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    }
   }
   let raf = null;
   window.addEventListener('scroll', () => {
@@ -41,6 +47,24 @@
   document.addEventListener('click', e => {
     if (menuOpen && nav && !nav.contains(e.target)) toggleMenu(false);
   });
+
+  /* Products dropdown */
+  const navItem = document.querySelector('.nav-item.has-dropdown');
+  if (navItem) {
+    const mainLink = navItem.querySelector('.nav-link');
+    mainLink.addEventListener('click', function(e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        navItem.classList.toggle('open');
+      }
+    });
+    document.addEventListener('click', (e) => {
+      if (!navItem.contains(e.target)) navItem.classList.remove('open');
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') navItem.classList.remove('open');
+    });
+  }
 
   /* Scroll reveal */
   const targets = document.querySelectorAll('.reveal');
