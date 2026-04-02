@@ -904,3 +904,608 @@
   .sdk-callout { flex-direction: column; }
   .products-landing-hero h1 { font-size: clamp(2.25rem, 8vw, 4rem); }
 }
+
+/* =====================================================
+   10. X-RAY IMAGE GALLERY
+===================================================== */
+.xray-gallery-section {
+  padding: var(--section-py) 0;
+  background: var(--charcoal);
+}
+
+.gallery-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 2rem;
+}
+
+.gallery-tab {
+  padding: 0.65rem 1.5rem;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.45);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color var(--trs), border-color var(--trs);
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.gallery-tab:hover { color: rgba(255,255,255,0.75); }
+.gallery-tab.active {
+  color: var(--cyan);
+  border-bottom-color: var(--cyan);
+}
+
+.gallery-panel {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+.gallery-panel.active { display: block; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+}
+
+.gallery-item {
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: #0a0d10;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #0a0d10;
+  transition: transform 0.5s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+.gallery-item img.loaded { opacity: 1; }
+.gallery-item:hover img { transform: scale(1.04); }
+
+/* Lightbox */
+.gallery-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.93);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+.gallery-lightbox.open { display: flex; }
+.gallery-lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
+.gallery-lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--trs);
+}
+.gallery-lightbox-close:hover { background: rgba(255,255,255,0.2); }
+
+/* Simple gallery (no tabs — for UFS / IP67) */
+.simple-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.simple-gallery-item {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: #0a0d10;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.simple-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #0a0d10;
+  transition: transform 0.5s ease;
+  opacity: 0;
+}
+.simple-gallery-item img.loaded { opacity: 1; }
+.simple-gallery-item:hover img { transform: scale(1.04); }
+
+/* =====================================================
+   11. VIDEO SECTION
+===================================================== */
+.video-section {
+  padding: var(--section-py) 0;
+  background: var(--off-white);
+}
+
+.video-embed-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  margin: 2rem auto 0;
+  aspect-ratio: 16/9;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.18);
+}
+
+.video-embed-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* =====================================================
+   12. BROCHURE DOWNLOAD SECTION
+===================================================== */
+.brochure-section {
+  padding: 3rem 0;
+  background: var(--white);
+  border-top: 1px solid var(--color-border);
+}
+
+.brochure-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 560px;
+  padding: 1.5rem 2rem;
+  background: var(--off-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-lg);
+}
+
+.brochure-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(67,161,216,0.1);
+  border-radius: var(--r-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--cyan);
+}
+
+.brochure-info { flex: 1; }
+.brochure-info strong {
+  display: block;
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 0.15rem;
+}
+.brochure-info span {
+  font-size: var(--text-sm);
+  color: var(--gray-steel);
+}
+
+/* =====================================================
+   13. AWARDS SECTION
+===================================================== */
+.awards-section {
+  padding: var(--section-py) 0;
+  background: var(--white);
+}
+
+.awards-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.award-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.award-img-wrap {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: var(--off-white);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.5rem;
+}
+
+.award-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.award-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--gray-steel);
+  max-width: 120px;
+}
+
+/* =====================================================
+   14. MANUFACTURING CAPABILITY CARDS
+===================================================== */
+.capability-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.capability-card {
+  padding: 1.75rem;
+  background: var(--white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-lg);
+}
+
+.capability-card:hover {
+  border-color: rgba(67,161,216,0.3);
+  box-shadow: 0 4px 20px rgba(67,161,216,0.08);
+}
+
+.capability-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(67,161,216,0.1);
+  border-radius: var(--r-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cyan);
+  margin-bottom: 1rem;
+}
+
+.capability-title {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 0.5rem;
+}
+
+.capability-body {
+  font-size: var(--text-sm);
+  color: var(--gray-steel);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* Manufacturing image gallery */
+.mfg-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.mfg-gallery-item {
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--r-md);
+  background: var(--charcoal);
+  cursor: pointer;
+}
+
+.mfg-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+.mfg-gallery-item img.loaded { opacity: 1; }
+.mfg-gallery-item:hover img { transform: scale(1.05); }
+
+.mfg-gallery-item.featured {
+  grid-column: span 2;
+  aspect-ratio: 2/1;
+}
+
+/* =====================================================
+   15. ABOUT / CONTACT / APPLICATIONS PAGE COMPONENTS
+===================================================== */
+/* General page hero (no product subnav) */
+.page-hero {
+  position: relative;
+  min-height: 52vh;
+  display: flex;
+  align-items: flex-end;
+  background: var(--charcoal);
+  overflow: hidden;
+  padding-top: var(--nav-h);
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(10,18,24,0.88) 40%, rgba(20,35,48,0.6) 100%);
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 4rem var(--page-x) 4rem;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* About story / timeline */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: var(--section-py) 0;
+}
+
+.about-grid.reverse { direction: rtl; }
+.about-grid.reverse > * { direction: ltr; }
+
+.about-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: var(--r-lg);
+}
+
+.milestone-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+
+.milestone-item {
+  display: flex;
+  gap: 1.25rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.milestone-item:last-child { border-bottom: none; }
+
+.milestone-year {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--cyan);
+  min-width: 52px;
+  padding-top: 0.1em;
+}
+
+.milestone-text {
+  font-size: var(--text-sm);
+  color: var(--gray-steel);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Stat bar */
+.stat-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--charcoal);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  margin: 2rem 0;
+}
+
+.stat-bar-item {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+.stat-bar-item:last-child { border-right: none; }
+
+.stat-bar-number {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.stat-bar-label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  font-weight: 500;
+}
+
+/* Contact page */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  padding: var(--section-py) 0;
+  align-items: start;
+}
+
+.contact-detail {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.contact-detail:last-child { border-bottom: none; }
+
+.contact-detail-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(67,161,216,0.1);
+  border-radius: var(--r-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cyan);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.contact-detail-body strong {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 0.2rem;
+}
+
+.contact-detail-body span,
+.contact-detail-body a {
+  font-size: var(--text-sm);
+  color: var(--gray-steel);
+  font-weight: 300;
+}
+.contact-detail-body a:hover { color: var(--cyan); }
+
+.contact-form { }
+.contact-form label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--charcoal);
+  margin-bottom: 0.4rem;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-md);
+  font-family: inherit;
+  font-size: var(--text-sm);
+  color: var(--charcoal);
+  background: var(--white);
+  margin-bottom: 1rem;
+  transition: border-color var(--trs);
+  -webkit-appearance: none;
+}
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  outline: none;
+  border-color: var(--cyan);
+}
+.contact-form textarea { resize: vertical; min-height: 120px; }
+
+/* Applications grid */
+.application-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.application-card {
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--color-border);
+  transition: box-shadow var(--trs);
+}
+.application-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+}
+
+.application-card-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  background: var(--off-white);
+  display: block;
+}
+
+.application-card-body {
+  padding: 1.5rem;
+}
+
+.application-card-title {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 0.5rem;
+}
+
+.application-card-text {
+  font-size: var(--text-sm);
+  color: var(--gray-steel);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* =====================================================
+   16. RESPONSIVE ADDITIONS
+===================================================== */
+@media (max-width: 1024px) {
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+  .capability-grid { grid-template-columns: repeat(2, 1fr); }
+  .mfg-gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .mfg-gallery-item.featured { grid-column: span 2; }
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-grid.reverse { direction: ltr; }
+  .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
+  .application-cards-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-bar { grid-template-columns: repeat(2, 1fr); }
+  .stat-bar-item { border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .stat-bar-item:nth-child(2) { border-right: none; }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .simple-gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .capability-grid { grid-template-columns: 1fr; }
+  .mfg-gallery-grid { grid-template-columns: 1fr; }
+  .mfg-gallery-item.featured { grid-column: span 1; aspect-ratio: 1; }
+  .application-cards-grid { grid-template-columns: 1fr; }
+  .stat-bar { grid-template-columns: repeat(2, 1fr); }
+  .awards-grid { gap: 1.25rem; }
+  .award-img-wrap { width: 80px; height: 80px; }
+  .gallery-tabs { overflow-x: auto; }
+}

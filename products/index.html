@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products – Athlos X-Ray Imaging Sensors</title>
-  <meta name="description" content="Athlos product portfolio: WIOS intraoral sensor, UFS dental and industrial scanner, UFS IP67 rugged industrial detector, and software integration tools.">
+  <meta name="description" content="Athlos product portfolio: WIOS wireless intraoral sensor, UFS scanning sensor, UFS IP67 industrial detector, Manufacturing Services, and Software Services.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
@@ -21,30 +21,31 @@
         <span class="nav-logo-text">ATHLOS</span>
       </a>
       <nav class="nav-links">
+        <a href="../index.html" class="nav-link">Home</a>
         <div class="nav-item has-dropdown">
           <a href="index.html" class="nav-link">Products <svg class="nav-link-chevron" viewBox="0 0 10 10" fill="none" width="10" height="10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <div class="nav-dropdown">
             <a href="wios.html" class="nav-dropdown-link">WIOS</a>
             <a href="ufs.html" class="nav-dropdown-link">UFS</a>
             <a href="ufs-ip67.html" class="nav-dropdown-link">UFS IP67</a>
-            <a href="solutions.html" class="nav-dropdown-link">Solutions &amp; Services</a>
+            <a href="manufacturing.html" class="nav-dropdown-link">Manufacturing Services</a>
+            <a href="software.html" class="nav-dropdown-link">Software Services</a>
           </div>
         </div>
-        <a href="#" class="nav-link">Technology</a>
-        <a href="#" class="nav-link">Applications</a>
-        <a href="#" class="nav-link">About</a>
+        <a href="../applications.html" class="nav-link">Applications</a>
+        <a href="../about.html" class="nav-link">About</a>
       </nav>
-      <a href="#contact" class="nav-cta">Contact</a>
+      <a href="../contact.html" class="nav-cta">Contact</a>
       <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="nav-mobile-menu" id="mobileMenu">
+      <a href="../index.html" class="nav-mobile-link">Home</a>
       <a href="index.html" class="nav-mobile-link">Products</a>
-      <a href="#" class="nav-mobile-link">Technology</a>
-      <a href="#" class="nav-mobile-link">Applications</a>
-      <a href="#" class="nav-mobile-link">About</a>
-      <a href="#contact" class="nav-mobile-link nav-mobile-cta">Contact</a>
+      <a href="../applications.html" class="nav-mobile-link">Applications</a>
+      <a href="../about.html" class="nav-mobile-link">About</a>
+      <a href="../contact.html" class="nav-mobile-link nav-mobile-cta">Contact</a>
     </div>
   </header>
 
@@ -58,14 +59,14 @@
         <p class="section-eyebrow section-eyebrow--light reveal">Product Portfolio</p>
         <h1 class="reveal">Products</h1>
         <p class="products-landing-intro reveal">
-          Athlos develops advanced X-ray imaging products for demanding dental, industrial, and integration-focused applications. Our portfolio combines direct conversion sensor technology, high-performance imaging, and practical system-level usability for OEMs, integrators, and clinical environments.
+          Five product and service lines — all built on the same foundation of direct conversion precision and decades of X-ray imaging expertise.
         </p>
       </div>
     </div>
 
     <!-- PRODUCT PANELS -->
     <section class="product-panels">
-      <div class="product-panels-grid">
+      <div class="product-panels-grid" style="grid-template-columns: repeat(3, 1fr);">
 
         <a href="wios.html" class="product-panel">
           <div class="product-panel-bg" style="background-image: url('../images/wios-dock.png'); background-position: center 35%;"></div>
@@ -100,13 +101,24 @@
           </div>
         </a>
 
-        <a href="solutions.html" class="product-panel panel-solutions">
+        <a href="manufacturing.html" class="product-panel">
+          <div class="product-panel-bg" style="background-image: url('../images/manufacturing-wafer-1.png'); background-position: center;"></div>
+          <div class="product-panel-overlay"></div>
+          <div class="product-panel-content">
+            <span class="panel-market">Detector Manufacturing</span>
+            <h2 class="panel-name">Manufacturing Services</h2>
+            <p class="panel-desc">Precision sensor manufacturing — from CMOS bumping and flip chip bonding to full detector assembly.</p>
+            <span class="panel-link">Learn more →</span>
+          </div>
+        </a>
+
+        <a href="software.html" class="product-panel panel-solutions">
           <div class="product-panel-bg" style="background-image: url('../images/solutions-software.png'); background-position: center;"></div>
           <div class="product-panel-overlay"></div>
           <div class="product-panel-content">
             <span class="panel-market">Software &amp; Integration</span>
-            <h2 class="panel-name">Solutions &amp; Services</h2>
-            <p class="panel-desc">Software, integration, and manufacturing-oriented support for demanding imaging workflows.</p>
+            <h2 class="panel-name">Software Services</h2>
+            <p class="panel-desc">TWAIN module, reconstruction algorithms, post-processing filters, and SDK for X-ray imaging integration.</p>
             <span class="panel-link">Learn more →</span>
           </div>
         </a>
@@ -120,6 +132,7 @@
         <p class="section-eyebrow reveal">Product Categories</p>
         <h2 class="section-headline reveal" style="max-width:560px">Find the right product<br>for your application.</h2>
         <div class="categories-grid">
+
           <div class="category-block reveal">
             <span class="category-label">Dental</span>
             <h3 class="category-name">Intraoral &amp;<br>Panoramic Imaging</h3>
@@ -128,6 +141,7 @@
               <li><a href="ufs.html">UFS – Dental Panoramic &amp; Ceph</a></li>
             </ul>
           </div>
+
           <div class="category-block reveal" data-delay="80">
             <span class="category-label">Industrial</span>
             <h3 class="category-name">Inline Inspection &amp;<br>Industrial X-Ray</h3>
@@ -136,15 +150,18 @@
               <li><a href="ufs.html">UFS – Industrial &amp; Medical</a></li>
             </ul>
           </div>
+
           <div class="category-block reveal" data-delay="160">
-            <span class="category-label">Software &amp; Integration</span>
-            <h3 class="category-name">SDK, TWAIN &amp;<br>Processing Tools</h3>
+            <span class="category-label">Software &amp; Manufacturing</span>
+            <h3 class="category-name">Services &amp;<br>Integration</h3>
             <ul class="category-products">
-              <li><a href="solutions.html">Solutions &amp; Services</a></li>
-              <li><a href="solutions.html">TWAIN Module</a></li>
-              <li><a href="solutions.html">Reconstruction &amp; Filters</a></li>
+              <li><a href="software.html">Software Services</a></li>
+              <li><a href="software.html">TWAIN Module</a></li>
+              <li><a href="software.html">Reconstruction &amp; Filters</a></li>
+              <li><a href="manufacturing.html">Manufacturing Services</a></li>
             </ul>
           </div>
+
         </div>
       </div>
     </section>
@@ -157,7 +174,7 @@
           <h2 class="reveal">Not sure which product fits your application?</h2>
           <p class="reveal">Athlos works closely with OEMs and system integrators to identify the right solution. Tell us about your imaging requirements and we'll help you find the right path forward.</p>
           <div class="reveal">
-            <a href="mailto:info@athlos.fi" class="btn btn-primary btn-large">Contact Athlos</a>
+            <a href="../contact.html" class="btn btn-primary btn-large">Contact Athlos</a>
           </div>
         </div>
       </div>
@@ -181,19 +198,20 @@
             <a href="wios.html" class="footer-link">WIOS</a>
             <a href="ufs.html" class="footer-link">UFS</a>
             <a href="ufs-ip67.html" class="footer-link">UFS IP67</a>
-            <a href="solutions.html" class="footer-link">Solutions &amp; Services</a>
+            <a href="manufacturing.html" class="footer-link">Manufacturing Services</a>
+            <a href="software.html" class="footer-link">Software Services</a>
           </div>
           <div class="footer-col">
             <span class="footer-col-label">Applications</span>
-            <a href="#" class="footer-link">Dental Imaging</a>
-            <a href="#" class="footer-link">Industrial Inspection</a>
-            <a href="#" class="footer-link">Medical Imaging</a>
+            <a href="../applications.html" class="footer-link">Dental Imaging</a>
+            <a href="../applications.html" class="footer-link">Industrial Inspection</a>
+            <a href="../applications.html" class="footer-link">Medical Imaging</a>
           </div>
           <div class="footer-col">
             <span class="footer-col-label">Company</span>
-            <a href="#" class="footer-link">About Athlos</a>
+            <a href="../about.html" class="footer-link">About Athlos</a>
             <a href="#" class="footer-link">Technology</a>
-            <a href="#" class="footer-link">Manufacturing</a>
+            <a href="manufacturing.html" class="footer-link">Manufacturing</a>
           </div>
           <div class="footer-col">
             <span class="footer-col-label">Contact</span>
@@ -204,7 +222,7 @@
         </nav>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copy">© 2024 Athlos Oy. All rights reserved. Made in Finland.</p>
+        <p class="footer-copy">© 2025 Athlos Oy. All rights reserved. Made in Finland.</p>
         <p class="footer-cert">ISO 13485:2016 Certified</p>
       </div>
     </div>

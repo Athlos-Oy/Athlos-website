@@ -4,16 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WIOS – Wireless Intraoral Sensor | Athlos</title>
-  <meta name="description" content="WIOS is a fully wireless direct conversion intraoral X-ray sensor. Si-CMOS technology, Bluetooth connectivity, and purpose-built holders for modern dental workflow.">
+  <meta name="description" content="WIOS is a fully wireless direct conversion intraoral X-ray sensor. Si-CMOS technology, Bluetooth 5.0 wireless, Zero Profile® holders. Crystal clear images without the cable.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/products.css">
 </head>
 <body>
 
-  <!-- NAV -->
   <header class="nav scrolled" id="nav">
     <div class="nav-inner">
       <a href="../index.html" class="nav-logo" aria-label="Athlos home">
@@ -21,184 +20,277 @@
         <span class="nav-logo-text">ATHLOS</span>
       </a>
       <nav class="nav-links">
+        <a href="../index.html" class="nav-link">Home</a>
         <div class="nav-item has-dropdown">
           <a href="index.html" class="nav-link">Products <svg class="nav-link-chevron" viewBox="0 0 10 10" fill="none" width="10" height="10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <div class="nav-dropdown">
             <a href="wios.html" class="nav-dropdown-link">WIOS</a>
             <a href="ufs.html" class="nav-dropdown-link">UFS</a>
             <a href="ufs-ip67.html" class="nav-dropdown-link">UFS IP67</a>
-            <a href="solutions.html" class="nav-dropdown-link">Solutions &amp; Services</a>
+            <a href="manufacturing.html" class="nav-dropdown-link">Manufacturing Services</a>
+            <a href="software.html" class="nav-dropdown-link">Software Services</a>
           </div>
         </div>
-        <a href="#" class="nav-link">Technology</a>
-        <a href="#" class="nav-link">Applications</a>
-        <a href="#" class="nav-link">About</a>
+        <a href="../applications.html" class="nav-link">Applications</a>
+        <a href="../about.html" class="nav-link">About</a>
       </nav>
-      <a href="#contact" class="nav-cta">Contact</a>
+      <a href="../contact.html" class="nav-cta">Contact</a>
       <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="nav-mobile-menu" id="mobileMenu">
+      <a href="../index.html" class="nav-mobile-link">Home</a>
       <a href="index.html" class="nav-mobile-link">Products</a>
-      <a href="#" class="nav-mobile-link">Technology</a>
-      <a href="#" class="nav-mobile-link">Applications</a>
-      <a href="#" class="nav-mobile-link">About</a>
-      <a href="#contact" class="nav-mobile-link nav-mobile-cta">Contact</a>
+      <a href="../applications.html" class="nav-mobile-link">Applications</a>
+      <a href="../about.html" class="nav-mobile-link">About</a>
+      <a href="../contact.html" class="nav-mobile-link nav-mobile-cta">Contact</a>
     </div>
   </header>
 
-  <!-- PRODUCT SUBNAV -->
   <nav class="product-subnav" aria-label="Products navigation">
     <div class="product-subnav-inner">
       <a href="index.html" class="subnav-back">← Products</a>
       <a href="wios.html" class="subnav-link active">WIOS</a>
       <a href="ufs.html" class="subnav-link">UFS</a>
       <a href="ufs-ip67.html" class="subnav-link">UFS IP67</a>
-      <a href="solutions.html" class="subnav-link">Solutions &amp; Services</a>
+      <a href="manufacturing.html" class="subnav-link">Manufacturing Services</a>
+      <a href="software.html" class="subnav-link">Software Services</a>
     </div>
   </nav>
 
   <main>
 
-    <!-- HERO -->
-    <section class="product-hero">
-      <div class="product-hero-bg" style="background-image: url('../images/wios-dock.png'); background-position: center 40%;"></div>
-      <div class="product-hero-overlay"></div>
+    <!-- 1. HERO -->
+    <section class="product-hero" style="min-height:75vh;">
+      <div class="product-hero-bg" style="background-image: url('../images/wios-hero.png'); background-position: center 40%;"></div>
+      <div class="product-hero-overlay" style="background:linear-gradient(120deg, rgba(10,18,24,0.90) 35%, rgba(20,35,48,0.55) 100%);"></div>
       <div class="product-hero-gradient"></div>
       <div class="product-hero-content container">
         <span class="product-category">Intraoral Dental</span>
         <h1>WIOS</h1>
-        <p class="product-hero-tagline">
-          Fully wireless, direct conversion intraoral X-ray imaging designed for modern dental workflow.
-        </p>
-        <a href="#contact" class="btn btn-primary">Discuss WIOS</a>
+        <p class="product-hero-tagline">True Wireless® direct conversion intraoral X-ray imaging.<br>Crystal clear images. No wire. No compromise.</p>
+        <div class="product-hero-actions">
+          <a href="#contact" class="btn btn-primary">Discuss WIOS</a>
+          <a href="../downloads/brochure-wios.pdf" class="btn btn-outline" target="_blank" style="border-color:rgba(255,255,255,0.3);">Download Brochure</a>
+        </div>
       </div>
     </section>
 
-    <!-- OVERVIEW -->
-    <section class="product-overview" id="overview">
+    <!-- 2. OVERVIEW -->
+    <section style="padding: var(--section-py) 0; background: var(--white);">
       <div class="container">
-        <div class="overview-grid">
-          <div class="overview-text">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
+          <div>
             <p class="section-eyebrow reveal">Overview</p>
-            <h2 class="overview-headline reveal">Freedom of movement.<br>No compromise on image.</h2>
-            <p class="overview-body reveal">
-              WIOS is a fully wireless intraoral X-ray imaging sensor built around direct conversion technology. It combines cable-free usability with Athlos imaging expertise — giving dental professionals a more flexible workflow without compromising on positioning accuracy or image performance.
+            <h2 class="section-headline reveal" style="font-size:var(--text-2xl);">Freedom of movement.<br>No compromise on image.</h2>
+            <p class="reveal" style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); margin-bottom:1rem;">
+              WIOS — the Wireless Intraoral Sensor — combines Athlos Si-CMOS direct conversion technology with Bluetooth 5.0 wireless connectivity. The result is a truly wireless intraoral sensor that delivers the sharpness of direct conversion, the comfort of a wireless design, and the workflow speed of a corded system.
             </p>
-            <p class="overview-body reveal">
-              By eliminating the intraoral cable entirely, WIOS removes one of the primary sources of patient discomfort and workflow friction. The sensor connects via Bluetooth, captures directly with the WIOS receiver, and delivers images through a clean integration path into the dental workflow.
-            </p>
-            <p class="overview-body reveal">
-              WIOS is distributed through regional partners across multiple markets. Dealer inquiries can be directed to Athlos directly.
+            <p class="reveal" style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel);">
+              The WIOS system includes the sensor, a magnetic docking station, and the complete Zero Profile® holder set — designed together for accurate intraoral positioning without the discomfort caused by a cable.
             </p>
           </div>
-          <div class="overview-visual aspect-portrait reveal">
-            <img src="../images/wios-hero.png" alt="WIOS intraoral sensor – front view" loading="lazy">
+          <div class="reveal">
+            <img src="../images/wios-kit.png" alt="WIOS complete system — sensor, docking station and Zero Profile holders" loading="lazy" style="width:100%; border-radius:var(--r-lg);">
+          </div>
+        </div>
+
+        <!-- Quick specs strip -->
+        <div class="reveal" style="display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; margin-top:3rem; padding-top:2.5rem; border-top:1px solid var(--color-border);">
+          <div>
+            <div style="font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--cyan); font-weight:600; margin-bottom:.3rem;">Technology</div>
+            <div style="font-size:var(--text-sm); color:var(--charcoal); font-weight:500;">Si-CMOS Direct Conversion</div>
+          </div>
+          <div>
+            <div style="font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--cyan); font-weight:600; margin-bottom:.3rem;">Wireless</div>
+            <div style="font-size:var(--text-sm); color:var(--charcoal); font-weight:500;">Bluetooth 5.0 (BLE 5.0)</div>
+          </div>
+          <div>
+            <div style="font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--cyan); font-weight:600; margin-bottom:.3rem;">Active Area</div>
+            <div style="font-size:var(--text-sm); color:var(--charcoal); font-weight:500;">35.1 × 24.7 mm²</div>
+          </div>
+          <div>
+            <div style="font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--cyan); font-weight:600; margin-bottom:.3rem;">Pixel Size</div>
+            <div style="font-size:var(--text-sm); color:var(--charcoal); font-weight:500;">26 µm</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- HIGHLIGHTS -->
-    <section class="highlights-section">
+    <!-- 3. KEY FEATURES -->
+    <section style="padding: var(--section-py) 0; background: var(--off-white);">
       <div class="container">
-        <div class="highlights-header">
-          <p class="section-eyebrow reveal">Key Features</p>
-          <h2 class="section-headline reveal" style="font-size:var(--text-2xl)">Built for the clinic. Engineered for precision.</h2>
-        </div>
+        <p class="section-eyebrow reveal">Features</p>
+        <h2 class="section-headline reveal" style="font-size:var(--text-2xl);">Built for the clinic. Engineered for precision.</h2>
         <div class="highlights-grid">
           <div class="highlight-card reveal">
             <span class="highlight-number">01</span>
-            <h3 class="highlight-title">Fully Wireless Workflow</h3>
-            <p class="highlight-body">No intraoral cable — Bluetooth-based wireless link from sensor to receiver. Reduces patient discomfort and simplifies positioning in every clinical setting.</p>
+            <h3 class="highlight-title">True Wireless® Workflow</h3>
+            <p class="highlight-body">No intraoral cable. Bluetooth 5.0 wireless link from sensor to docking station to PC. Sensor range up to 3 metres. Reduces patient discomfort and simplifies clinical workflow.</p>
           </div>
-          <div class="highlight-card reveal" data-delay="60">
+          <div class="highlight-card reveal">
             <span class="highlight-number">02</span>
             <h3 class="highlight-title">Direct Conversion Imaging</h3>
-            <p class="highlight-body">Athlos Si-CMOS direct conversion technology converts X-ray photons directly into signal — eliminating the scintillator step and the image degradation that comes with it.</p>
+            <p class="highlight-body">Si-CMOS direct conversion technology converts X-ray photons directly into signal — eliminating the scintillator step. The result: sharper detail, better contrast, and more consistent images.</p>
           </div>
-          <div class="highlight-card reveal" data-delay="120">
+          <div class="highlight-card reveal">
             <span class="highlight-number">03</span>
-            <h3 class="highlight-title">Si-CMOS Architecture</h3>
-            <p class="highlight-body">Proprietary silicon CMOS readout designed and manufactured by Athlos. Delivers high sensitivity, excellent contrast resolution, and consistent performance.</p>
+            <h3 class="highlight-title">Zero Profile® Holders</h3>
+            <p class="highlight-body">The purpose-designed Zero Profile® holder set includes Anterior, Posterior, Bitewing, Endodontic and Occlusal holders. Precisely aligns the sensor without relying on the cable for angulation — designed for patient comfort and repeatable positioning.</p>
           </div>
-          <div class="highlight-card reveal" data-delay="60">
+          <div class="highlight-card reveal">
             <span class="highlight-number">04</span>
-            <h3 class="highlight-title">Comfortable Positioning</h3>
-            <p class="highlight-body">Holder system designed for accurate and repeatable intraoral placement. Supports proper angulation without relying on the cable for stability.</p>
+            <h3 class="highlight-title">Battery &amp; Safety</h3>
+            <p class="highlight-body">Up to 300 X-rays per charge. On-sensor safety memory stores one image. Dynamic self-calibration with every capture. Rechargeable Lithium-Ion battery. Magnetic docking for reliable recharging.</p>
           </div>
-          <div class="highlight-card reveal" data-delay="120">
+          <div class="highlight-card reveal">
             <span class="highlight-number">05</span>
-            <h3 class="highlight-title">Unique Sensor Design</h3>
-            <p class="highlight-body">Compact, purpose-designed form factor that considers both patient anatomy and clinical workflow — a sensor designed from the ground up, not adapted from other platforms.</p>
+            <h3 class="highlight-title">IP67 &amp; Durability</h3>
+            <p class="highlight-body">Enhanced IP67 protection. Ultrasonic-bonded PPSU enclosure — a material with exceptional hydrolytic stability and impact resistance. Built for the demanding realities of daily clinical use.</p>
           </div>
-          <div class="highlight-card reveal" data-delay="180">
+          <div class="highlight-card reveal">
             <span class="highlight-number">06</span>
-            <h3 class="highlight-title">Designed for Dental</h3>
-            <p class="highlight-body">Every aspect of WIOS — from sensor geometry to the wireless receiver design to the holder set — is optimised for real-world dental imaging use.</p>
+            <h3 class="highlight-title">Broad Software Compatibility</h3>
+            <p class="highlight-body">The WIOS TWAIN module integrates with Dentrix Ascend, Eaglesoft, Open Dental, Dexis, TigerView, Romexis, Acteon, Apteryx, Dexis, XDR Radiology, and many more TWAIN-enabled imaging platforms.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SYSTEM IMAGE + SPECS -->
-    <section class="product-overview" style="background: var(--off-white);">
+    <!-- 4. VIDEO SECTION -->
+    <section class="video-section">
+      <div class="container" style="text-align:center;">
+        <p class="section-eyebrow reveal">See WIOS in Action</p>
+        <h2 class="section-headline reveal" style="font-size:var(--text-2xl);">The WIOS introduction.</h2>
+        <p class="reveal" style="font-size:var(--text-base); font-weight:300; color:var(--gray-steel); max-width:560px; margin:0 auto 0;">
+          A short overview of the DC-Air wireless intraoral sensor — how it works, what makes it different, and what it delivers for the modern dental practice.
+        </p>
+        <div class="video-embed-wrap reveal">
+          <iframe
+            src="https://www.youtube.com/embed/E5LMPWgQg6E"
+            title="DC-Air WIOS Wireless Intraoral Sensor Introduction"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. X-RAY GALLERY -->
+    <section class="xray-gallery-section">
       <div class="container">
-        <div class="overview-grid reverse">
-          <div class="overview-text">
-            <p class="section-eyebrow reveal">System &amp; Integration</p>
-            <h2 class="overview-headline reveal">The full WIOS system.</h2>
-            <p class="overview-body reveal">
-              WIOS is supplied as a complete system including the intraoral sensor, the wireless receiver base unit, a full holder set for accurate and comfortable positioning, and integration software. The sensor connects through the Athlos WIOS driver layer into standard dental imaging workflows.
-            </p>
+        <p class="section-eyebrow section-eyebrow--light reveal">Image Quality</p>
+        <h2 class="section-headline section-headline--light reveal" style="font-size:var(--text-2xl); margin-bottom:2rem;">Clinical X-ray images.</h2>
 
-            <!-- Spec snapshot -->
-            <div class="specs-table reveal" style="margin-top:2rem; border: 1px solid var(--color-border); border-radius: var(--r-lg); overflow:hidden;">
-              <div class="spec-row" style="--spec-bg: var(--white);">
-                <span class="spec-label" style="color:var(--gray-steel); background:var(--white); border-right:1px solid var(--color-border);">Technology</span>
-                <span class="spec-value" style="color:var(--charcoal); background:var(--white);">Si-CMOS direct conversion</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label" style="color:var(--gray-steel); background:var(--white); border-right:1px solid var(--color-border);">Wireless interface</span>
-                <span class="spec-value" style="color:var(--charcoal); background:var(--white);">Bluetooth</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label" style="color:var(--gray-steel); background:var(--white); border-right:1px solid var(--color-border);">Application</span>
-                <span class="spec-value" style="color:var(--charcoal); background:var(--white);">Intraoral dental X-ray imaging</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label" style="color:var(--gray-steel); background:var(--white); border-right:1px solid var(--color-border);">Distribution</span>
-                <span class="spec-value" style="color:var(--charcoal); background:var(--white);">Regional partners / Athlos direct</span>
-              </div>
-            </div>
+        <!-- Tabs -->
+        <div class="gallery-tabs">
+          <button class="gallery-tab active" data-tab="anterior">Anterior</button>
+          <button class="gallery-tab" data-tab="posterior">Posterior</button>
+          <button class="gallery-tab" data-tab="bitewings">Bitewings</button>
+        </div>
 
+        <!-- Anterior panel -->
+        <div class="gallery-panel active" data-panel="anterior">
+          <div class="gallery-grid">
+            <div class="gallery-item"><img src="../images/wios-anterior-1.png" alt="WIOS anterior X-ray 1" loading="lazy"></div>
+            <div class="gallery-item"><img src="../images/wios-anterior-2.png" alt="WIOS anterior X-ray 2" loading="lazy"></div>
+            <div class="gallery-item"><img src="../images/wios-anterior-3.png" alt="WIOS anterior X-ray 3" loading="lazy"></div>
+            <div class="gallery-item"><img src="../images/wios-anterior-4.png" alt="WIOS anterior X-ray 4" loading="lazy"></div>
+            <div class="gallery-item"><img src="../images/wios-anterior-5.png" alt="WIOS anterior X-ray 5" loading="lazy"></div>
           </div>
-          <div class="overview-visual aspect-portrait reveal">
-            <img src="../images/wios-kit.png" alt="WIOS complete system with sensor, dock, and holder accessories" loading="lazy">
+        </div>
+
+        <!-- Posterior panel -->
+        <div class="gallery-panel" data-panel="posterior">
+          <div class="gallery-grid">
+            <div class="gallery-item"><img src="../images/wios-posterior-1.png" alt="WIOS posterior X-ray 1" loading="lazy"></div>
+            <div class="gallery-item"><img src="../images/wios-posterior-2.png" alt="WIOS posterior X-ray 2" loading="lazy"></div>
+            <div class="gallery-item"><img src="../images/wios-posterior-3.png" alt="WIOS posterior X-ray 3" loading="lazy"></div>
+            <div class="gallery-item"><img src="../images/wios-posterior-4.png" alt="WIOS posterior X-ray 4" loading="lazy"></div>
+            <div class="gallery-item"><img src="../images/wios-posterior-5.png" alt="WIOS posterior X-ray 5" loading="lazy"></div>
+          </div>
+        </div>
+
+        <!-- Bitewings panel -->
+        <div class="gallery-panel" data-panel="bitewings">
+          <div class="gallery-grid">
+            <div class="gallery-item"><img src="../images/wios-bw-1.png" alt="WIOS bitewing X-ray 1" loading="lazy"></div>
+            <div class="gallery-item"><img src="../images/wios-bw-2.png" alt="WIOS bitewing X-ray 2" loading="lazy"></div>
+            <div class="gallery-item"><img src="../images/wios-bw-3.png" alt="WIOS bitewing X-ray 3" loading="lazy"></div>
+            <div class="gallery-item"><img src="../images/wios-bw-4.png" alt="WIOS bitewing X-ray 4" loading="lazy"></div>
+            <div class="gallery-item"><img src="../images/wios-bw-5.png" alt="WIOS bitewing X-ray 5" loading="lazy"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
+    <!-- 6. AWARDS -->
+    <section class="awards-section">
+      <div class="container" style="text-align:center;">
+        <p class="section-eyebrow reveal">Recognition</p>
+        <h2 class="section-headline reveal" style="font-size:var(--text-2xl);">Award-winning technology.</h2>
+        <p class="reveal" style="font-size:var(--text-base); font-weight:300; color:var(--gray-steel); max-width:540px; margin:0 auto 0;">
+          WIOS and the direct conversion technology behind it have been recognised by leading dental and healthcare industry awards programmes.
+        </p>
+        <div class="awards-grid">
+          <div class="award-item reveal">
+            <div class="award-img-wrap">
+              <img src="../images/wios-award-1.png" alt="Athlos WIOS 2024 Top Award" loading="lazy">
+            </div>
+            <span class="award-label">2024 Top Award</span>
+          </div>
+          <div class="award-item reveal" data-delay="80">
+            <div class="award-img-wrap">
+              <img src="../images/wios-award-2.png" alt="Athlos WIOS Award" loading="lazy">
+            </div>
+            <span class="award-label">Industry Recognition</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. BROCHURE DOWNLOAD -->
+    <section class="brochure-section">
+      <div class="container">
+        <div class="brochure-card reveal">
+          <div class="brochure-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <path d="M13 2H6a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V9l-5-7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M13 2v7h7M11 13v5M8.5 15.5l2.5 2.5 2.5-2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="brochure-info">
+            <strong>WIOS Product Brochure</strong>
+            <span>Full specifications, features, and system overview — PDF</span>
+          </div>
+          <a href="../downloads/brochure-wios.pdf" class="btn btn-secondary" target="_blank" style="white-space:nowrap; flex-shrink:0;">Download PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. CTA -->
     <section class="product-cta" id="contact">
       <div class="container">
         <div class="product-cta-inner">
-          <p class="section-eyebrow section-eyebrow--light reveal">Get in Touch</p>
           <h2 class="reveal">Discuss WIOS for your dental workflow.</h2>
-          <p class="reveal">Whether you are evaluating WIOS for a clinical setting or exploring distribution partnership, Athlos is ready to help. Contact us to start the conversation.</p>
-          <div class="reveal" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <p class="reveal">Whether you are evaluating WIOS for a clinical setting or exploring distribution partnership — Athlos is ready to help. Contact us to start the conversation.</p>
+          <div class="reveal" style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
             <a href="mailto:info@athlos.fi" class="btn btn-primary btn-large">Contact Athlos</a>
-            <a href="index.html" class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);">All Products</a>
+            <a href="../downloads/brochure-wios.pdf" class="btn btn-outline" target="_blank" style="border-color:rgba(255,255,255,0.3);">Download Brochure</a>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- LIGHTBOX -->
+    <div class="gallery-lightbox" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+      <button class="gallery-lightbox-close" aria-label="Close">✕</button>
+      <img class="gallery-lightbox-img" src="" alt="X-ray image enlarged">
+    </div>
+
   </main>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
@@ -214,19 +306,20 @@
             <a href="wios.html" class="footer-link">WIOS</a>
             <a href="ufs.html" class="footer-link">UFS</a>
             <a href="ufs-ip67.html" class="footer-link">UFS IP67</a>
-            <a href="solutions.html" class="footer-link">Solutions &amp; Services</a>
+            <a href="manufacturing.html" class="footer-link">Manufacturing Services</a>
+            <a href="software.html" class="footer-link">Software Services</a>
           </div>
           <div class="footer-col">
             <span class="footer-col-label">Applications</span>
-            <a href="#" class="footer-link">Dental Imaging</a>
-            <a href="#" class="footer-link">Industrial Inspection</a>
-            <a href="#" class="footer-link">Medical Imaging</a>
+            <a href="../applications.html" class="footer-link">Dental Imaging</a>
+            <a href="../applications.html" class="footer-link">Industrial Inspection</a>
+            <a href="../applications.html" class="footer-link">Medical Imaging</a>
           </div>
           <div class="footer-col">
             <span class="footer-col-label">Company</span>
-            <a href="#" class="footer-link">About Athlos</a>
+            <a href="../about.html" class="footer-link">About Athlos</a>
             <a href="#" class="footer-link">Technology</a>
-            <a href="#" class="footer-link">Manufacturing</a>
+            <a href="manufacturing.html" class="footer-link">Manufacturing</a>
           </div>
           <div class="footer-col">
             <span class="footer-col-label">Contact</span>
@@ -237,12 +330,13 @@
         </nav>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copy">© 2024 Athlos Oy. All rights reserved. Made in Finland.</p>
+        <p class="footer-copy">© 2025 Athlos Oy. All rights reserved. Made in Finland.</p>
         <p class="footer-cert">ISO 13485:2016 Certified</p>
       </div>
     </div>
   </footer>
 
   <script src="../js/products.js"></script>
+
 </body>
 </html>
