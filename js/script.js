@@ -14,7 +14,7 @@
   ===================================================== */
   const slides   = document.querySelectorAll('.hero-slide');
   const dots     = document.querySelectorAll('.hero-dot');
-  const INTERVAL = 5500;  // ms between slides
+  const INTERVAL = 4000;  // ms between slides
   let   current  = 0;
   let   timer    = null;
   let   isPlaying = true;

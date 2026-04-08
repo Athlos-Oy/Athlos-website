@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UFS – Ultra-Fast Scanning Sensor | Athlos</title>
-  <meta name="description" content="UFS is Athlos's ultra-fast direct conversion linear scanning sensor for dental panoramic, cephalometric, medical, and industrial X-ray imaging. CdTe-CMOS, single-photon sensitivity.">
+  <title>Ultra-Fast Scanning Sensor | Athlos</title>
+  <meta name="description" content="The Ultra-Fast Scanning Sensor is Athlos's ultra-fast direct conversion linear scanning sensor for dental panoramic, cephalometric, medical, and industrial X-ray imaging. CdTe-CMOS, single-photon sensitivity.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
@@ -26,8 +26,8 @@
           <a href="index.html" class="nav-link">Products <svg class="nav-link-chevron" viewBox="0 0 10 10" fill="none" width="10" height="10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <div class="nav-dropdown">
             <a href="wios.html" class="nav-dropdown-link">DC-Air&reg;</a>
-            <a href="ufs.html" class="nav-dropdown-link">UFS</a>
-            <a href="ufs-ip67.html" class="nav-dropdown-link">UFS IP67</a>
+            <a href="ufs.html" class="nav-dropdown-link">Ultra-Fast Scanning Sensor</a>
+            <a href="ufs-ip67.html" class="nav-dropdown-link">Industrial IP67 TDI</a>
             <a href="manufacturing.html" class="nav-dropdown-link">Manufacturing Services</a>
             <a href="software.html" class="nav-dropdown-link">Software Services</a>
           </div>
@@ -54,8 +54,8 @@
     <div class="product-subnav-inner">
       <a href="index.html" class="subnav-back">← Products</a>
       <a href="wios.html" class="subnav-link">DC-Air&reg;</a>
-      <a href="ufs.html" class="subnav-link active">UFS</a>
-      <a href="ufs-ip67.html" class="subnav-link">UFS IP67</a>
+      <a href="ufs.html" class="subnav-link active">Ultra-Fast Scanning Sensor</a>
+      <a href="ufs-ip67.html" class="subnav-link">Industrial IP67 TDI</a>
       <a href="manufacturing.html" class="subnav-link">Manufacturing Services</a>
       <a href="software.html" class="subnav-link">Software Services</a>
     </div>
@@ -69,19 +69,19 @@
       <!-- Left: text content -->
       <div style="position:relative; z-index:2; background:var(--charcoal); display:flex; flex-direction:column; justify-content:flex-end; padding: calc(var(--nav-h) + 48px + 4rem) var(--page-x) 4rem; padding-right:3rem;">
         <span class="product-category">Dental · Medical · Industrial</span>
-        <h1 style="font-size:clamp(3.5rem,6vw,6rem); font-weight:300; letter-spacing:-0.04em; color:var(--white); margin-bottom:1.5rem; line-height:1;">UFS</h1>
+        <h1 style="font-size:clamp(2.5rem,5vw,4.5rem); font-weight:300; letter-spacing:-0.04em; color:var(--white); margin-bottom:1.5rem; line-height:1;">Ultra-Fast<br>Scanning Sensor</h1>
         <p class="product-hero-tagline" style="max-width:480px;">
           Ultra-fast direct conversion scanning sensor for high-speed, high-sensitivity X-ray imaging.
         </p>
         <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-          <a href="#overview" class="btn btn-primary">Explore UFS</a>
+          <a href="#overview" class="btn btn-primary">Explore Ultra-Fast Scanning Sensor</a>
           <a href="#contact" class="btn btn-outline">Discuss integration</a>
         </div>
       </div>
 
       <!-- Right: product image -->
       <div style="position:relative; overflow:hidden; background:#111519; min-height:500px;">
-        <img src="../images/ufs-vertical.png" alt="UFS linear scanning sensor – vertical studio view"
+        <img src="../images/ufs-hero-new.png" alt="Ultra-Fast Scanning Sensor – circuit board detail view"
           style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; opacity:0; transition:opacity 400ms ease;"
           loading="eager"
           onload="this.style.opacity='1'">
@@ -185,7 +185,7 @@
             </p>
           </div>
           <div class="reveal">
-            <img src="../images/ufs-detail.png" alt="Athlos UFS sensor detail – Made in Finland" loading="lazy"
+            <img src="../images/ufs-family-new.png" alt="Ultra-Fast Scanning Sensor family – circuit board studio view" loading="lazy"
               style="border-radius:var(--r-xl); width:100%; object-fit:cover; max-height:360px;">
           </div>
         </div>
@@ -261,18 +261,34 @@
       <div class="container">
         <p class="section-eyebrow section-eyebrow--light reveal">Image Quality</p>
         <h2 class="section-headline section-headline--light reveal" style="font-size:var(--text-2xl); margin-bottom:2rem;">Imaging examples.</h2>
-        <div class="simple-gallery-grid">
-          <div class="simple-gallery-item">
-            <img src="../images/ufs-scan-1.png" alt="UFS X-ray scan example 1" loading="lazy">
+
+        <!-- Tabs -->
+        <div class="gallery-tabs" style="margin-bottom:2rem;">
+          <button class="gallery-tab active" data-tab="panoramic">Panoramic</button>
+          <button class="gallery-tab" data-tab="cephalo">Cephalo</button>
+        </div>
+
+        <!-- Panoramic panel -->
+        <div class="gallery-panel active" data-panel="panoramic">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+            <div class="simple-gallery-item" style="cursor:pointer;">
+              <img src="../images/ufs-scan-1.png" alt="Ultra-Fast Scanning Sensor panoramic X-ray 1" loading="lazy" style="width:100%; border-radius:var(--r-lg);">
+            </div>
+            <div class="simple-gallery-item" style="cursor:pointer;">
+              <img src="../images/ufs-scan-2.png" alt="Ultra-Fast Scanning Sensor panoramic X-ray 2" loading="lazy" style="width:100%; border-radius:var(--r-lg);">
+            </div>
           </div>
-          <div class="simple-gallery-item">
-            <img src="../images/ufs-scan-2.png" alt="UFS X-ray scan example 2" loading="lazy">
-          </div>
-          <div class="simple-gallery-item">
-            <img src="../images/ufs-scan-3.png" alt="UFS X-ray scan example 3" loading="lazy">
-          </div>
-          <div class="simple-gallery-item">
-            <img src="../images/ufs-xray-1.jpg" alt="UFS X-ray imaging example" loading="lazy">
+        </div>
+
+        <!-- Cephalo panel -->
+        <div class="gallery-panel" data-panel="cephalo">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+            <div class="simple-gallery-item" style="cursor:pointer;">
+              <img src="../images/ufs-scan-3.png" alt="Ultra-Fast Scanning Sensor cephalo X-ray 1" loading="lazy" style="width:100%; border-radius:var(--r-lg);">
+            </div>
+            <div class="simple-gallery-item" style="cursor:pointer;">
+              <img src="../images/ufs-xray-1.jpg" alt="Ultra-Fast Scanning Sensor cephalo X-ray 2" loading="lazy" style="width:100%; border-radius:var(--r-lg);">
+            </div>
           </div>
         </div>
       </div>
@@ -289,8 +305,8 @@
       <div class="container">
         <div class="product-cta-inner">
           <p class="section-eyebrow section-eyebrow--light reveal">Get in Touch</p>
-          <h2 class="reveal">Talk with Athlos about UFS integration.</h2>
-          <p class="reveal">Whether you are integrating UFS into a new imaging system or evaluating it for an existing platform, the Athlos team can support you from specification through integration.</p>
+          <h2 class="reveal">Talk with Athlos about Ultra-Fast Scanning Sensor integration.</h2>
+          <p class="reveal">Whether you are integrating the Ultra-Fast Scanning Sensor into a new imaging system or evaluating it for an existing platform, the Athlos team can support you from specification through integration.</p>
           <div class="reveal" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
             <a href="../contact.html" class="btn btn-primary btn-large">Contact Athlos</a>
             <a href="index.html" class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);">All Products</a>
@@ -315,8 +331,8 @@
           <div class="footer-col">
             <span class="footer-col-label">Products</span>
             <a href="wios.html" class="footer-link">DC-Air&reg;</a>
-            <a href="ufs.html" class="footer-link">UFS</a>
-            <a href="ufs-ip67.html" class="footer-link">UFS IP67</a>
+            <a href="ufs.html" class="footer-link">Ultra-Fast Scanning Sensor</a>
+            <a href="ufs-ip67.html" class="footer-link">Industrial IP67 TDI</a>
             <a href="manufacturing.html" class="footer-link">Manufacturing Services</a>
             <a href="software.html" class="footer-link">Software Services</a>
           </div>
@@ -329,7 +345,7 @@
           <div class="footer-col">
             <span class="footer-col-label">Company</span>
             <a href="../about.html" class="footer-link">About Athlos</a>
-            <a href="#" class="footer-link">Technology</a>
+            <a href="../index.html#technology" class="footer-link">Technology</a>
             <a href="manufacturing.html" class="footer-link">Manufacturing</a>
           </div>
           <div class="footer-col">
