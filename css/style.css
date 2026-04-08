@@ -265,17 +265,17 @@ body::before {
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  height: 48px;
+  height: 68px;
 }
 
-/* PNG logo — always visible */
+/* PNG logo — always visible in original colors */
 .nav-logo-png {
-  height: 54px;
+  height: 68px;
   width: auto;
   object-fit: contain;
   display: block;
-  filter: brightness(0) invert(1);
-  transition: filter var(--trs-md);
+  filter: none;
+  transition: opacity var(--trs-md);
 }
 
 /* Text mark — hidden, replaced by logo */
@@ -481,10 +481,7 @@ body::before {
   border-bottom-color: var(--color-border);
 }
 
-/* On white nav: show PNG logo without invert */
-.nav.scrolled .nav-logo-png {
-  filter: none;
-}
+/* Logo always shows in original colors — no filter override needed */
 
 .nav.scrolled .nav-link {
   color: var(--gray-steel);
