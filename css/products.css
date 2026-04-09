@@ -1168,6 +1168,39 @@
 }
 
 /* =====================================================
+   14a. MANUFACTURING IMAGE PAIR
+===================================================== */
+.mfg-image-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-width: 780px;
+  margin: 0 auto 2.75rem;
+}
+
+.mfg-img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  border-radius: 10px;
+  opacity: 0.75;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.07);
+  transition: opacity 0.3s ease;
+  display: block;
+}
+
+.mfg-img:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 640px) {
+  .mfg-image-pair {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+}
+
+/* =====================================================
    14. MANUFACTURING CAPABILITY CARDS
 ===================================================== */
 .capability-grid {

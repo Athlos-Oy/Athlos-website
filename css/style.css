@@ -46,7 +46,7 @@
   --text-hero:  clamp(3rem, 6.5vw, 5.5rem);
 
   /* Spacing */
-  --nav-h:      72px;
+  --nav-h:      100px;
   --page-x:     clamp(1.5rem, 5vw, 5rem);
   --max-w:      1280px;
   --section-py: clamp(5rem, 9vw, 9rem);
@@ -265,12 +265,13 @@ body::before {
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  height: 68px;
+  height: var(--nav-h);
+  padding: 0;
 }
 
 /* PNG logo — always visible in original colors */
 .nav-logo-png {
-  height: 68px;
+  height: 100%;
   width: auto;
   object-fit: contain;
   display: block;
@@ -1226,14 +1227,16 @@ body::before {
   display: flex;
   align-items: center;
   margin-bottom: 1.25rem;
-  height: 52px;
+  height: auto;
 }
 
 .footer-logo {
-  height: 68px;
+  height: 130px;
   width: auto;
   object-fit: contain;
+  object-position: left center;
   filter: none;
+  display: block;
 }
 
 .footer-tagline {
@@ -1299,6 +1302,16 @@ body::before {
   opacity: 0.6;
 }
 
+.footer-legal {
+  width: 100%;
+  font-size: 11px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.22);
+  padding-top: 0.75rem;
+  margin-top: 0.25rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
 /* =====================================================
    13. RESPONSIVE
 ===================================================== */
@@ -1335,7 +1348,7 @@ body::before {
 /* Large mobile */
 @media (max-width: 768px) {
   :root {
-    --nav-h: 60px;
+    --nav-h: 80px;
   }
 
   .nav-links,
