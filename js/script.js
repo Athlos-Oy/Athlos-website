@@ -14,26 +14,21 @@
   ===================================================== */
   const slides   = document.querySelectorAll('.hero-slide');
   const dots     = document.querySelectorAll('.hero-dot');
-  const INTERVAL = 4000;  // ms between slides
+  const INTERVAL = 3500;  // ms between slides
   let   current  = 0;
-  let   timer    = null;
-  let   isPlaying = true;
 
   function goToSlide(index) {
     if (index === current) return;
 
-    // Remove active from current
     slides[current].classList.remove('active');
     slides[current].classList.add('leaving');
     dots[current].classList.remove('active');
 
-    // Set new
     current = index;
     slides[current].classList.remove('leaving');
     slides[current].classList.add('active');
     dots[current].classList.add('active');
 
-    // Clean up leaving after transition
     setTimeout(() => {
       slides.forEach((s, i) => {
         if (i !== current) s.classList.remove('leaving');
@@ -45,53 +40,26 @@
     goToSlide((current + 1) % slides.length);
   }
 
-  function startTimer() {
-    clearInterval(timer);
-    timer = setInterval(nextSlide, INTERVAL);
-  }
-
-  // Dot click handlers
+  // Dot click handlers — do not reset interval, just jump to slide
   dots.forEach((dot, i) => {
     dot.addEventListener('click', () => {
       goToSlide(i);
-      startTimer(); // reset timer on manual interaction
     });
   });
-
-  // Pause on hover
-  const hero = document.getElementById('hero');
-  if (hero) {
-    hero.addEventListener('mouseenter', () => {
-      clearInterval(timer);
-    });
-    hero.addEventListener('mouseleave', () => {
-      if (isPlaying) startTimer();
-    });
-
-    // Pause when tab not visible
-    document.addEventListener('visibilitychange', () => {
-      if (document.hidden) {
-        clearInterval(timer);
-      } else if (isPlaying) {
-        startTimer();
-      }
-    });
-  }
 
   // Hero entry animation
   function initHero() {
     const heroEl = document.querySelector('.hero');
     if (heroEl) {
-      // Small delay for dramatic effect
       setTimeout(() => {
         heroEl.classList.add('hero-loaded');
       }, 150);
     }
   }
 
-  // Start slideshow
+  // Start unconditional slideshow — never pauses, never stops
   if (slides.length > 1) {
-    startTimer();
+    setInterval(nextSlide, INTERVAL);
   }
   initHero();
 
