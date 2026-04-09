@@ -1209,7 +1209,7 @@ body::before {
    12. FOOTER
 ===================================================== */
 .footer {
-  background: var(--charcoal);
+  background: #536872;
   padding: 5rem 0 2.5rem;
   border-top: 1px solid rgba(255,255,255,0.07);
 }
