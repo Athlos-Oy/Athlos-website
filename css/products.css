@@ -93,8 +93,8 @@
   inset: 0;
   background: linear-gradient(
     120deg,
-    rgba(14, 25, 32, 0.82) 40%,
-    rgba(20, 40, 55, 0.45) 100%
+    rgba(14, 25, 32, 0.72) 40%,
+    rgba(20, 40, 55, 0.35) 100%
   );
 }
 
@@ -102,7 +102,7 @@
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 60%;
-  background: linear-gradient(to top, rgba(14,25,32,0.7) 0%, transparent 100%);
+  background: linear-gradient(to top, rgba(14,25,32,0.55) 0%, transparent 100%);
 }
 
 .product-hero-content {
@@ -479,7 +479,7 @@
   gap: 1rem;
   transition: background var(--trs-md);
 }
-.model-card:hover { background: #363f47; }
+.model-card:hover { background: #404B54; }
 
 .model-name {
   font-size: var(--text-lg);
@@ -540,9 +540,9 @@
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(14,25,32,0.7) 0%,
-    rgba(14,25,32,0.3) 55%,
-    rgba(14,25,32,0.15) 100%
+    rgba(14,25,32,0.55) 0%,
+    rgba(14,25,32,0.22) 55%,
+    rgba(14,25,32,0.08) 100%
   );
 }
 
@@ -582,7 +582,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2px;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.35);
 }
 
 .product-panel {
@@ -612,9 +612,9 @@
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(14,25,32,0.88) 0%,
-    rgba(14,25,32,0.35) 60%,
-    rgba(14,25,32,0.15) 100%
+    rgba(14,25,32,0.78) 0%,
+    rgba(14,25,32,0.28) 60%,
+    rgba(14,25,32,0.10) 100%
   );
   transition: background var(--trs-md);
 }
@@ -622,9 +622,9 @@
 .product-panel:hover .product-panel-overlay {
   background: linear-gradient(
     to top,
-    rgba(14,25,32,0.78) 0%,
-    rgba(14,25,32,0.28) 55%,
-    rgba(14,25,32,0.1) 100%
+    rgba(14,25,32,0.68) 0%,
+    rgba(14,25,32,0.20) 55%,
+    rgba(14,25,32,0.06) 100%
   );
 }
 
@@ -682,8 +682,8 @@
 .product-panel.panel-solutions .product-panel-overlay {
   background: linear-gradient(
     to top,
-    rgba(14,25,32,0.92) 0%,
-    rgba(14,25,32,0.6) 100%
+    rgba(14,25,32,0.82) 0%,
+    rgba(14,25,32,0.50) 100%
   );
 }
 
@@ -965,7 +965,7 @@
 .gallery-item {
   aspect-ratio: 3/4;
   overflow: hidden;
-  background: #0a0d10;
+  background: #141B22;
   cursor: pointer;
   border-radius: 3px;
 }
@@ -974,7 +974,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  background: #0a0d10;
+  background: #141B22;
   transition: transform 0.5s ease, opacity 0.3s ease;
   opacity: 0;
 }
@@ -1027,7 +1027,7 @@
 .simple-gallery-item {
   aspect-ratio: 4/3;
   overflow: hidden;
-  background: #0a0d10;
+  background: #141B22;
   border-radius: 3px;
   cursor: pointer;
 }
@@ -1035,7 +1035,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  background: #0a0d10;
+  background: #141B22;
   transition: transform 0.5s ease;
   opacity: 0;
 }

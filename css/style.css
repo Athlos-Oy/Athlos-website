@@ -15,8 +15,8 @@
   --cyan-mist:     #D6EAF5;
   --cyan-deep:     #2B82B8;
   --slate:         #3A6480;
-  --charcoal:      #1E2428;
-  --charcoal-mid:  #2E373D;
+  --charcoal:      #263035;
+  --charcoal-mid:  #364249;
   --gray-steel:    #8C959B;
   --gray-light:    #E2E8EA;
   --off-white:     #F4F7F8;
@@ -557,9 +557,9 @@ body::before {
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(14, 25, 32, 0.72) 0%,
-    rgba(20, 40, 52, 0.58) 60%,
-    rgba(31, 160, 192, 0.12) 100%
+    rgba(14, 25, 32, 0.62) 0%,
+    rgba(20, 40, 52, 0.48) 60%,
+    rgba(31, 160, 192, 0.15) 100%
   );
   z-index: 1;
 }
@@ -570,7 +570,7 @@ body::before {
   left: 0;
   right: 0;
   height: 50%;
-  background: linear-gradient(to top, rgba(14, 25, 32, 0.65) 0%, transparent 100%);
+  background: linear-gradient(to top, rgba(14, 25, 32, 0.50) 0%, transparent 100%);
   z-index: 1;
 }
 
@@ -1004,13 +1004,13 @@ body::before {
 }
 
 .product-card:hover {
-  background: #363f47;
+  background: #404B54;
 }
 
 .product-card-image {
   aspect-ratio: 16/10;
   overflow: hidden;
-  background: #111519;
+  background: #1A2128;
 }
 
 .product-card-image img {
@@ -1101,8 +1101,8 @@ body::before {
   inset: 0;
   background: linear-gradient(
     105deg,
-    rgba(28, 45, 55, 0.95) 45%,
-    rgba(28, 45, 55, 0.7) 100%
+    rgba(28, 45, 55, 0.88) 45%,
+    rgba(28, 45, 55, 0.60) 100%
   );
 }
 
@@ -1210,7 +1210,7 @@ body::before {
    12. FOOTER
 ===================================================== */
 .footer {
-  background: #536872;
+  background: #607882;
   padding: 5rem 0 2.5rem;
   border-top: 1px solid rgba(255,255,255,0.07);
 }
