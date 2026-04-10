@@ -1219,10 +1219,10 @@ body::before {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 4rem;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
   border-bottom: 1px solid rgba(255,255,255,0.08);
   align-items: start;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .footer-brand {
