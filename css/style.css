@@ -1294,7 +1294,6 @@ body::before {
   justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-top: 100px;
 }
 
 .footer-copy {
