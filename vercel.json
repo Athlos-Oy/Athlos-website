@@ -1,0 +1,18 @@
+{
+  "redirects": [
+    { "source": "/ufs",                               "destination": "/products/ufs.html",        "statusCode": 301 },
+    { "source": "/ufs/",                              "destination": "/products/ufs.html",        "statusCode": 301 },
+    { "source": "/industrial-ip67-tdi",               "destination": "/products/ufs-ip67.html",   "statusCode": 301 },
+    { "source": "/industrial-ip67-tdi/",              "destination": "/products/ufs-ip67.html",   "statusCode": 301 },
+    { "source": "/wireless-intraoral-sensor",         "destination": "/products/wios.html",       "statusCode": 301 },
+    { "source": "/wireless-intraoral-sensor/",        "destination": "/products/wios.html",       "statusCode": 301 },
+    { "source": "/applications-and-market-segments",  "destination": "/applications.html",        "statusCode": 301 },
+    { "source": "/applications-and-market-segments/", "destination": "/applications.html",        "statusCode": 301 },
+    { "source": "/athlos",                            "destination": "/about.html",               "statusCode": 301 },
+    { "source": "/athlos/",                           "destination": "/about.html",               "statusCode": 301 },
+    { "source": "/contact",                           "destination": "/contact.html",             "statusCode": 301 },
+    { "source": "/contact/",                          "destination": "/contact.html",             "statusCode": 301 },
+    { "source": "/privacy-policy",                    "destination": "/privacy.html",             "statusCode": 301 },
+    { "source": "/privacy-policy/",                   "destination": "/privacy.html",             "statusCode": 301 }
+  ]
+}
