@@ -112,7 +112,7 @@
         <!-- RIGHT: Simple form -->
         <div class="reveal" data-delay="100">
           <p class="section-eyebrow">Send a Message</p>
-          <form class="contact-form" action="mailto:info@athlos.fi" method="post" enctype="text/plain">
+          <form class="contact-form" id="contactForm" novalidate>
             <label for="cf-name">Name</label>
             <input type="text" id="cf-name" name="name" placeholder="Your name" required>
 
@@ -138,7 +138,9 @@
             <label for="cf-message">Message</label>
             <textarea id="cf-message" name="message" placeholder="Tell us about your project or question..." rows="5"></textarea>
 
-            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Message</button>
+            <div id="cf-error" style="display:none; font-size:var(--text-sm); color:#c0392b; background:#fdf0ef; border:1px solid #f5c6c4; border-radius:8px; padding:0.75rem 1rem; margin-bottom:0.75rem;"></div>
+
+            <button type="submit" id="cf-submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Message</button>
           </form>
         </div>
 
@@ -194,5 +196,160 @@
   </footer>
 
   <script src="js/script.js"></script>
+
+  <!-- SUCCESS MODAL -->
+  <div id="cf-success-modal" role="dialog" aria-modal="true" aria-labelledby="cf-modal-title" style="
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(10, 18, 24, 0.72);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  ">
+    <div style="
+      background: var(--charcoal);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--r-xl);
+      max-width: 480px;
+      width: 100%;
+      padding: clamp(2rem, 5vw, 3rem);
+      text-align: center;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.45);
+      position: relative;
+    ">
+      <!-- Checkmark icon -->
+      <div style="
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: rgba(67, 161, 216, 0.12);
+        border: 1.5px solid var(--cyan);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+      ">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+      <h2 id="cf-modal-title" style="font-size: var(--text-xl); font-weight: 600; color: var(--white); margin-bottom: 0.75rem; letter-spacing: -0.02em;">Message received.</h2>
+      <p style="font-size: var(--text-base); font-weight: 300; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 2rem;">
+        Thank you for reaching out. A member of the Athlos team will review your enquiry and respond within one business day.
+      </p>
+      <button id="cf-modal-close" class="btn btn-primary" style="min-width: 140px; justify-content: center;">Close</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var form     = document.getElementById('contactForm');
+      var submitBtn = document.getElementById('cf-submit');
+      var errorBox  = document.getElementById('cf-error');
+      var modal     = document.getElementById('cf-success-modal');
+      var modalClose = document.getElementById('cf-modal-close');
+
+      // ── Web3Forms access key ──────────────────────────────────────────────
+      // Get a free key at https://web3forms.com — enter info@athlos.fi and
+      // they email you the key. Replace the placeholder below with that key.
+      var WEB3FORMS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY';
+      // ─────────────────────────────────────────────────────────────────────
+
+      function showError(msg) {
+        errorBox.textContent = msg;
+        errorBox.style.display = 'block';
+        errorBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+
+      function clearError() {
+        errorBox.style.display = 'none';
+        errorBox.textContent = '';
+      }
+
+      function openModal() {
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        modalClose.focus();
+      }
+
+      function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+
+      modalClose.addEventListener('click', closeModal);
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) closeModal();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+      });
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        clearError();
+
+        var name    = document.getElementById('cf-name').value.trim();
+        var email   = document.getElementById('cf-email').value.trim();
+        var company = document.getElementById('cf-company').value.trim();
+        var topic   = document.getElementById('cf-topic').value.trim();
+        var message = document.getElementById('cf-message').value.trim();
+
+        // Basic validation
+        if (!name || !email || !message) {
+          showError('Please fill in your name, email address, and message.');
+          return;
+        }
+
+        // Build subject: [topic] - [company]
+        var subjectParts = [];
+        if (topic)   subjectParts.push(topic);
+        else         subjectParts.push('General enquiry');
+        if (company) subjectParts.push(company);
+        var subject = subjectParts.join(' - ');
+
+        // Build email body: message … name … contact email
+        var body = message + '\n\n' + name;
+        if (company) body += '\n' + company;
+        body += '\n\nContact email: ' + email;
+
+        // Submit
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+
+        try {
+          var formData = new FormData();
+          formData.append('access_key',  WEB3FORMS_KEY);
+          formData.append('subject',     subject);
+          formData.append('message',     body);
+          formData.append('from_name',   name);
+          formData.append('replyto',     email);
+          formData.append('redirect',    'false');
+
+          var response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+          });
+          var data = await response.json();
+
+          if (data.success) {
+            form.reset();
+            openModal();
+          } else {
+            showError('Something went wrong. Please try again or email us directly at info@athlos.fi.');
+          }
+        } catch (err) {
+          showError('Unable to send your message. Please try again or email us directly at info@athlos.fi.');
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message';
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
