@@ -140,10 +140,50 @@ The old athlos.fi WordPress site had:
   → Not needed on new site (no tracking)
 
 The NEW site has:
-- No analytics at all
+- No analytics at all currently
 - Cookie consent banner (simple notice, no tracking)
-- If analytics are ever wanted in the future: set up GA4
-  (new property, new tracking ID, different from the old UA one)
+
+
+STEP 7 — ANALYTICS (RECOMMENDED: ADD DURING DOMAIN SWITCH)
+-----------------------------------------------------------
+Athlos wants to collect website data. Recommended tool: Plausible.
+
+WHY PLAUSIBLE OVER GOOGLE ANALYTICS 4:
+- Privacy-focused, built and hosted in the EU
+- GDPR compliant out of the box — no cookies, no consent upgrade needed
+- The existing simple cookie banner stays as-is (no accept/decline flow)
+- Lightweight script (doesn't slow the site)
+- Simple dashboard showing what matters for B2B: page views, traffic
+  sources, which pages get interest, which countries
+- ~$9/month — negligible at company level
+
+WHY NOT GA4:
+- Data goes to Google (US servers)
+- Requires upgrading cookie banner to full accept/decline consent flow
+  with scripts blocked before consent — significant extra work
+- More complex than Athlos needs right now
+- Can always switch later if deeper data is needed
+
+COST COMPARISON:
+  Plausible:  $9/month (~$108/year)   ← recommended
+  Fathom:     $14/month               ← similar to Plausible
+  GA4:        Free (but GDPR overhead + cookie banner rebuild needed)
+  Cloudflare: Free (very basic, page views only)
+
+HOW TO SET UP PLAUSIBLE:
+1. Go to plausible.io → sign up → add site: athlos.fi
+2. Plausible gives you a one-line script tag, e.g.:
+     <script defer data-domain="athlos.fi"
+       src="https://plausible.io/js/script.js"></script>
+3. Tell Claude to add it to all 11 pages before </head>
+   (same pattern as cookie-banner.js was added)
+4. That's it — no cookie banner changes needed
+
+NOTE: If GA4 is preferred instead, tell Claude and it will:
+- Set up GA4 tracking
+- Upgrade the cookie banner to a full accept/decline consent flow
+  (GA4 scripts must only load after user accepts)
+- This takes more work but gives deeper Search Console integration
 
 
 WHAT IS NOT YET DONE (lower priority, post-launch)
