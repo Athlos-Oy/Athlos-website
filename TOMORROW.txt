@@ -1,0 +1,176 @@
+ATHLOS DOMAIN SWITCH — BRIEFING FOR CLAUDE
+===========================================
+Date written: 2026-04-12
+Written by: Claude Code (previous session)
+Repo: Athlos-Oy/Athlos-website (GitHub)
+Current staging URL: athlos-website-pi.vercel.app
+Target production domain: athlos.fi
+Old site: WordPress on GoDaddy at athlos.fi (being replaced)
+
+
+WHAT HAS ALREADY BEEN DONE
+---------------------------
+The new static HTML site is fully built and deployed on Vercel.
+All of the following SEO work is already committed to main:
+
+- sitemap.xml (all 11 pages, athlos.fi domain)
+- robots.txt (points to sitemap)
+- Canonical tags on all pages (pointing to athlos.fi)
+- Open Graph + Twitter Card meta tags on all pages
+- JSON-LD structured data (Organization, Product, BreadcrumbList, Service)
+- Favicon + apple-touch-icon on all pages
+- img width/height attributes (CLS prevention)
+- loading="lazy" on all below-fold images
+- Descriptive alt text on key images
+- H1 fixed: products/index.html → "X-Ray Imaging Products"
+- H1 fixed: applications.html → "X-Ray Imaging Applications"
+- Page titles strengthened: About and Contact pages
+- Cookie consent banner (js/cookie-banner.js) on all pages
+- vercel.json with 301 redirects from old WordPress URLs to new URLs
+- Contact buttons fixed: all go to contact.html, not mailto
+
+
+VERCEL.JSON — 301 REDIRECTS ALREADY IN PLACE
+---------------------------------------------
+The old athlos.fi was WordPress with different URL paths.
+vercel.json already maps all old URLs to new ones:
+
+  /ufs/                              → /products/ufs.html
+  /industrial-ip67-tdi/              → /products/ufs-ip67.html
+  /wireless-intraoral-sensor/        → /products/wios.html
+  /applications-and-market-segments/ → /applications.html
+  /athlos/                           → /about.html
+  /contact/                          → /contact.html
+  /privacy-policy/                   → /privacy.html
+
+Both trailing-slash and non-trailing-slash variants are covered.
+No changes needed here — it's ready to go.
+
+
+STEP 1 — ADD ATHLOS.FI AS CUSTOM DOMAIN IN VERCEL
+--------------------------------------------------
+1. Go to vercel.com → log in → open the Athlos project
+2. Settings → Domains
+3. Add "athlos.fi" and "www.athlos.fi"
+4. Vercel will show DNS records to add (likely an A record and/or CNAME)
+5. Copy these records — you need them for Step 2
+
+Note: When athlos.fi is set as the production domain in Vercel,
+the staging URL (athlos-website-pi.vercel.app) will automatically
+redirect to athlos.fi. No extra config needed.
+
+
+STEP 2 — UPDATE DNS AT GODADDY (or wherever DNS is managed)
+------------------------------------------------------------
+The old site runs on GoDaddy. DNS needs to point to Vercel instead.
+
+1. Log in to GoDaddy DNS manager for athlos.fi
+2. Remove or replace the old A record pointing to GoDaddy hosting
+3. Add the A record and/or CNAME that Vercel provided in Step 1
+4. Save changes
+5. Propagation is usually fast (minutes) but can take up to 48 hours
+
+To check propagation: visit athlos.fi and see if the new site loads.
+Or use: https://dnschecker.org
+
+
+STEP 3 — VERIFY 301 REDIRECTS WORK
+------------------------------------
+Once athlos.fi resolves to the new site, test each old URL:
+
+  https://athlos.fi/ufs/
+  https://athlos.fi/industrial-ip67-tdi/
+  https://athlos.fi/wireless-intraoral-sensor/
+  https://athlos.fi/applications-and-market-segments/
+  https://athlos.fi/athlos/
+  https://athlos.fi/contact/
+  https://athlos.fi/privacy-policy/
+
+Each should redirect to the new URL with a 301. You can verify in
+Chrome DevTools → Network tab → check the status code.
+
+
+STEP 4 — GOOGLE SEARCH CONSOLE (most important SEO action)
+-----------------------------------------------------------
+This is the single highest-impact action of the day.
+
+1. Go to search.google.com/search-console
+2. Add property → choose "Domain" type → enter: athlos.fi
+3. Google will give you a DNS TXT record to verify ownership
+4. Add that TXT record in GoDaddy DNS manager (same place as Step 2)
+5. Click Verify in Search Console
+6. Once verified: Sitemaps → Add sitemap → enter: https://athlos.fi/sitemap.xml
+7. Submit
+
+Then manually request indexing on the most important pages:
+  - URL Inspection tool → paste each URL → Request Indexing
+  Priority order:
+    https://athlos.fi/
+    https://athlos.fi/products/wios.html
+    https://athlos.fi/products/ufs.html
+    https://athlos.fi/products/ufs-ip67.html
+    https://athlos.fi/about.html
+
+
+STEP 5 — LINKEDIN COMPANY PAGE
+--------------------------------
+Update the website URL on Athlos's LinkedIn company page to:
+https://athlos.fi
+
+This is a free, authoritative backlink that Google values.
+Takes 30 seconds in LinkedIn company page admin settings.
+
+
+STEP 6 — VERIFY CANONICALS RESOLVE
+-------------------------------------
+Visit a few pages on athlos.fi, right-click → View Page Source,
+search for "canonical" and confirm it shows:
+  <link rel="canonical" href="https://athlos.fi/[page].html">
+
+All pages already have this set correctly. Just a quick sanity check.
+
+
+IMPORTANT CONTEXT — OLD SITE ANALYTICS
+---------------------------------------
+The old athlos.fi WordPress site had:
+- Google Analytics UA-159053058-1 (Universal Analytics)
+  → THIS IS DEAD. Google shut down UA in July 2024.
+  → No data has been collected for ~1 year.
+- Usercentrics cookie consent platform (paid service)
+  → Not needed on new site (no tracking)
+
+The NEW site has:
+- No analytics at all
+- Cookie consent banner (simple notice, no tracking)
+- If analytics are ever wanted in the future: set up GA4
+  (new property, new tracking ID, different from the old UA one)
+
+
+WHAT IS NOT YET DONE (lower priority, post-launch)
+----------------------------------------------------
+- Homepage H1 still says "Direct Conversion, Direct Advantage."
+  (user wants to keep this for now)
+- No standalone Technology page (user decided against for now)
+- No individual application sub-pages (dental/industrial/medical)
+  These would be the next meaningful SEO improvement after launch.
+- No GA4 analytics set up (user has not requested this)
+
+
+FILE STRUCTURE NOTES
+--------------------
+- All HTML pages: /products/*.html for product pages, root for others
+- CSS: /css/style.css and /css/products.css
+- JS: /js/script.js, /js/products.js, /js/cookie-banner.js
+- Images: /images/
+- Sitemap: /sitemap.xml
+- Robots: /robots.txt
+- Vercel config: /vercel.json
+- Contact form uses Web3Forms (key already configured in contact.html)
+- Deploy: auto-deploys from main branch on GitHub push
+
+
+CURRENT SEO RATING: ~7.5/10
+After domain switch + GSC setup it will effectively be: ~8/10
+Main remaining gap: content depth (application sub-pages)
+===========================================
+END OF BRIEFING
