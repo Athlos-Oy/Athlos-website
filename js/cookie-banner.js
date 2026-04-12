@@ -1,5 +1,8 @@
 (function () {
   if (localStorage.getItem('cookies-accepted')) return;
+  if (sessionStorage.getItem('cookie-banner-seen')) return;
+
+  sessionStorage.setItem('cookie-banner-seen', '1');
 
   var banner = document.createElement('div');
   banner.id = 'cookie-banner';
