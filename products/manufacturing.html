@@ -10,41 +10,80 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://athlos.fi/products/manufacturing.html">
   <meta property="og:image" content="https://athlos.fi/images/manufacturing-wafer-1.png">
+  <meta property="og:image:width" content="2400">
+  <meta property="og:image:height" content="1792">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Manufacturing Services – Athlos">
   <meta name="twitter:description" content="Precision X-ray detector manufacturing — CMOS bumping, flip chip bonding, wire bonding, die bonding, and sensor characterization. VTT Micronova cleanroom access.">
   <meta name="twitter:image" content="https://athlos.fi/images/manufacturing-wafer-1.png">
   <link rel="canonical" href="https://athlos.fi/products/manufacturing.html">
   <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Athlos Oy",
+      "url": "https://athlos.fi",
+      "logo": "https://athlos.fi/images/athlos-logo.png",
+      "email": "info@athlos.fi",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Klovinpellontie 1-3, Tower 2",
+        "addressLocality": "Espoo",
+        "postalCode": "02180",
+        "addressCountry": "FI"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/athlos-oy/"
+      ],
+      "description": "Athlos Oy is a Finnish X-ray imaging technology company specialising in direct conversion CdTe-CMOS and Si-CMOS sensors for dental, medical, and industrial applications.",
+      "areaServed": "Worldwide",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@athlos.fi",
+        "contactType": "sales"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://athlos.fi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Products",
+          "item": "https://athlos.fi/products/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Manufacturing Services",
+          "item": "https://athlos.fi/products/manufacturing.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "X-Ray Detector Manufacturing Services",
+      "description": "Precision X-ray detector manufacturing including CMOS bumping, flip chip bonding, wire bonding, die bonding, and full sensor characterization. Access to VTT Micronova cleanroom facility.",
+      "provider": {
         "@type": "Organization",
         "name": "Athlos Oy",
-        "url": "https://athlos.fi",
-        "logo": "https://athlos.fi/images/athlos-logo.png",
-        "email": "info@athlos.fi",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Klovinpellontie 1-3, Tower 2",
-          "addressLocality": "Espoo",
-          "postalCode": "02180",
-          "addressCountry": "FI"
-        },
-        "sameAs": ["https://www.linkedin.com/company/athlos-oy/"]
+        "url": "https://athlos.fi"
       },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://athlos.fi/" },
-          { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://athlos.fi/products/" },
-          { "@type": "ListItem", "position": 3, "name": "Manufacturing Services", "item": "https://athlos.fi/products/manufacturing.html" }
-        ]
-      }
-    ]
-  }
+      "areaServed": "Worldwide",
+      "serviceType": "Contract Manufacturing"
+    }
+  ]
+}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,7 +97,7 @@
   <header class="nav scrolled" id="nav">
     <div class="nav-inner">
       <a href="../index.html" class="nav-logo" aria-label="Athlos home">
-        <img src="../images/athlos-logo.png" alt="Athlos" class="nav-logo-png">
+        <img src="../images/athlos-logo.png" width="1536" height="1024" alt="Athlos" class="nav-logo-png">
         <span class="nav-logo-text">ATHLOS</span>
       </a>
       <nav class="nav-links">
@@ -131,7 +170,7 @@
             </p>
           </div>
           <div class="reveal">
-            <img src="../images/manufacturing-wafer-1.png" alt="Silicon CMOS wafer with intricate detector grid pattern" loading="lazy" style="width:100%; border-radius:var(--r-lg); aspect-ratio:4/3; object-fit:cover;">
+            <img src="../images/manufacturing-wafer-1.png" width="2400" height="1792" alt="Silicon CMOS wafer with intricate detector grid pattern" loading="lazy" style="width:100%; border-radius:var(--r-lg); aspect-ratio:4/3; object-fit:cover;">
           </div>
         </div>
       </div>
@@ -253,7 +292,7 @@
             </p>
           </div>
           <div class="reveal">
-            <img src="../images/hero-facility.png" alt="Athlos cleanroom manufacturing facility at VTT Micronova, Espoo" loading="lazy" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:var(--r-lg);">
+            <img src="../images/hero-facility.png" width="5504" height="3072" alt="Athlos cleanroom manufacturing facility at VTT Micronova, Espoo" loading="lazy" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:var(--r-lg);">
           </div>
         </div>
       </div>
@@ -281,7 +320,7 @@
       <div class="footer-top">
         <div class="footer-brand">
           <div class="footer-logo-wrap">
-            <img src="../images/athlos-logo.png" alt="Athlos" class="footer-logo">
+            <img src="../images/athlos-logo.png" width="1536" height="1024" alt="Athlos" class="footer-logo">
           </div>
           <p class="footer-tagline">Athlos Oy<br>Klovinpellontie 1-3, Tower 2<br>FIN-02180 Espoo<br>Finland<br><br>Business ID 2752258-9 &nbsp;&middot;&nbsp; VAT FI27522589</p>
         </div>
