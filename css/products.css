@@ -992,12 +992,52 @@
 
 .xray-lightbox.active { display: flex; }
 
+.xray-lightbox-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 92vw;
+  cursor: default;
+}
+
 .xray-lightbox-img {
   max-width: 92vw;
-  max-height: 92vh;
+  max-height: 78vh;
   object-fit: contain;
   border-radius: var(--r-md);
   pointer-events: none;
+  display: block;
+}
+
+.xray-lightbox-caption {
+  text-align: center;
+}
+
+.xray-lightbox-name {
+  display: block;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.6rem;
+}
+
+.xray-lightbox-pills {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.xray-lightbox-pill {
+  padding: 0.25rem 0.7rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 100em;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.65);
 }
 
 .xray-lightbox-close {

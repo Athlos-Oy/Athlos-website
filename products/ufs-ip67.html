@@ -461,17 +461,33 @@
       <!-- Lightbox -->
       <div class="xray-lightbox" id="xrayLightbox" onclick="closeLightbox()">
         <button class="xray-lightbox-close" aria-label="Close">✕</button>
-        <img class="xray-lightbox-img" id="lightboxImg" src="" alt="">
+        <div class="xray-lightbox-inner" onclick="event.stopPropagation()">
+          <img class="xray-lightbox-img" id="lightboxImg" src="" alt="">
+          <div class="xray-lightbox-caption">
+            <span class="xray-lightbox-name" id="lightboxName"></span>
+            <div class="xray-lightbox-pills" id="lightboxPills"></div>
+          </div>
+        </div>
       </div>
     </section>
 
     <script>
       function openLightbox(card) {
         var img = card.querySelector('img');
-        var lb = document.getElementById('xrayLightbox');
+        var name = card.querySelector('.xray-card-name').textContent;
+        var params = card.querySelector('.xray-card-params').textContent;
         document.getElementById('lightboxImg').src = img.src;
         document.getElementById('lightboxImg').alt = img.alt;
-        lb.classList.add('active');
+        document.getElementById('lightboxName').textContent = name;
+        var pillsEl = document.getElementById('lightboxPills');
+        pillsEl.innerHTML = '';
+        params.split('·').forEach(function(p) {
+          var pill = document.createElement('span');
+          pill.className = 'xray-lightbox-pill';
+          pill.textContent = p.trim();
+          pillsEl.appendChild(pill);
+        });
+        document.getElementById('xrayLightbox').classList.add('active');
         document.body.style.overflow = 'hidden';
       }
       function closeLightbox() {
