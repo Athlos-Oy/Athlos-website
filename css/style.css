@@ -1406,7 +1406,13 @@ body::before {
   }
 
   .stat-item {
-    padding: 0 1rem;
+    padding: 0 0.75rem;
+    min-width: 0;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+    white-space: normal;
   }
 
   .advantages-grid {
@@ -1429,10 +1435,6 @@ body::before {
 
 /* Mobile */
 @media (max-width: 480px) {
-  .stat-number {
-    font-size: 1.5rem;
-  }
-
   .tech-features {
     grid-template-columns: 1fr;
   }
