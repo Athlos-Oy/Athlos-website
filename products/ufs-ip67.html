@@ -367,199 +367,120 @@
       </div>
     </section>
 
-    <!-- X-RAY GALLERY — Fish / Chicken -->
+    <!-- X-RAY GALLERY -->
     <section class="xray-gallery-section">
       <div class="container">
         <p class="section-eyebrow section-eyebrow--light reveal">Image Quality</p>
-        <h2 class="section-headline section-headline--light reveal" style="font-size:var(--text-2xl); margin-bottom:2rem;">Inline inspection X-ray examples.</h2>
+        <h2 class="section-headline section-headline--light reveal" style="margin-bottom:2.5rem;">Inline inspection X-ray examples.</h2>
 
-        <!-- Category tabs -->
-        <div class="gallery-tabs" style="margin-bottom:2.5rem;">
-          <button class="gallery-tab active" data-tab="ip67-fish">Fish</button>
-          <button class="gallery-tab" data-tab="ip67-chicken">Chicken</button>
-        </div>
+        <div class="xray-grid">
 
-        <!-- FISH panel -->
-        <div class="gallery-panel active" data-panel="ip67-fish">
-          <div class="ip67-carousel" id="fishCarousel" style="position:relative;">
-            <!-- Slide 1 -->
-            <div class="ip67-slide active" data-index="0">
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; align-items:center;">
-                <div>
-                  <img src="../images/ip67-fish-1.png" width="1280" height="444" alt="Salmon X-ray – 1000 lines/sec" style="width:100%; border-radius:var(--r-lg);" loading="lazy">
-                </div>
-                <div style="padding:1rem 0;">
-                  <h3 style="font-size:var(--text-xl); font-weight:500; color:var(--white); margin-bottom:1.25rem;">Salmon</h3>
-                  <div style="display:flex; flex-direction:column; gap:0.6rem;">
-                    <div style="font-size:var(--text-sm); color:rgba(255,255,255,0.7); font-weight:300; line-height:1.6;">
-                      <span style="color:var(--cyan-light); font-weight:500;">Scan rate:</span> 1000 lines/sec @ 100 µm resolution (10 cm/sec)
-                    </div>
-                    <div style="font-size:var(--text-sm); color:rgba(255,255,255,0.7); font-weight:300; line-height:1.6;">
-                      <span style="color:var(--cyan-light); font-weight:500;">SOD:</span> 64 cm
-                    </div>
-                    <div style="font-size:var(--text-sm); color:rgba(255,255,255,0.7); font-weight:300; line-height:1.6;">
-                      <span style="color:var(--cyan-light); font-weight:500;">X-rays:</span> 40 kV, 5 mA
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="xray-card" onclick="openLightbox(this)">
+            <div class="xray-card-img">
+              <img src="../images/Fish40kVp10mA_46.7cm-s_100um.png" alt="Fish X-ray" loading="lazy">
             </div>
-            <!-- Slide 2 -->
-            <div class="ip67-slide" data-index="1" style="display:none;">
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; align-items:center;">
-                <div>
-                  <img src="../images/ip67-fish-2.png" width="1280" height="445" alt="Salmon X-ray – 3000 lines/sec" style="width:100%; border-radius:var(--r-lg);" loading="lazy">
-                </div>
-                <div style="padding:1rem 0;">
-                  <h3 style="font-size:var(--text-xl); font-weight:500; color:var(--white); margin-bottom:1.25rem;">Salmon</h3>
-                  <div style="display:flex; flex-direction:column; gap:0.6rem;">
-                    <div style="font-size:var(--text-sm); color:rgba(255,255,255,0.7); font-weight:300; line-height:1.6;">
-                      <span style="color:var(--cyan-light); font-weight:500;">Scan rate:</span> 3000 lines/sec @ 100 µm resolution (30 cm/sec)
-                    </div>
-                    <div style="font-size:var(--text-sm); color:rgba(255,255,255,0.7); font-weight:300; line-height:1.6;">
-                      <span style="color:var(--cyan-light); font-weight:500;">SOD:</span> 64 cm
-                    </div>
-                    <div style="font-size:var(--text-sm); color:rgba(255,255,255,0.7); font-weight:300; line-height:1.6;">
-                      <span style="color:var(--cyan-light); font-weight:500;">X-rays:</span> 75 kV, 1 mA
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Navigation arrows -->
-            <button class="ip67-arrow ip67-arrow-prev" aria-label="Previous" onclick="navigateCarousel('fishCarousel',-1)">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <button class="ip67-arrow ip67-arrow-next" aria-label="Next" onclick="navigateCarousel('fishCarousel',1)">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div style="text-align:center; margin-top:1.5rem;">
-              <span class="ip67-counter" style="font-size:var(--text-sm); color:rgba(255,255,255,0.4); font-weight:400;">1 / 2</span>
+            <div class="xray-card-info">
+              <span class="xray-card-name">Fish</span>
+              <span class="xray-card-params">40 kVp · 10 mA · 46.7 cm/s · 100 µm</span>
             </div>
           </div>
-        </div>
 
-        <!-- CHICKEN panel -->
-        <div class="gallery-panel" data-panel="ip67-chicken">
-          <div class="ip67-carousel" id="chickenCarousel" style="position:relative;">
-            <!-- Slide 1 -->
-            <div class="ip67-slide active" data-index="0">
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; align-items:start;">
-                <div>
-                  <img src="../images/ip67-chicken-1-normal.png" width="320" height="240" alt="Chicken fillet – visible light" style="width:100%; border-radius:var(--r-lg); margin-bottom:1rem;" loading="lazy">
-                  <img src="../images/ip67-chicken-1-xray.png" width="706" height="471" alt="Chicken fillet – X-ray" style="width:100%; border-radius:var(--r-lg);" loading="lazy">
-                </div>
-                <div style="padding:1rem 0;">
-                  <h3 style="font-size:var(--text-xl); font-weight:500; color:var(--white); margin-bottom:1.25rem;">Chicken Fillet</h3>
-                  <div style="display:flex; flex-direction:column; gap:0.6rem;">
-                    <div style="font-size:var(--text-sm); color:rgba(255,255,255,0.7); font-weight:300; line-height:1.6;">
-                      <span style="color:var(--cyan-light); font-weight:500;">Scan rate:</span> 3000 lines/sec @ 100 µm resolution (30 cm/sec)
-                    </div>
-                    <div style="font-size:var(--text-sm); color:rgba(255,255,255,0.7); font-weight:300; line-height:1.6;">
-                      <span style="color:var(--cyan-light); font-weight:500;">SOD:</span> 64 cm
-                    </div>
-                    <div style="font-size:var(--text-sm); color:rgba(255,255,255,0.7); font-weight:300; line-height:1.6;">
-                      <span style="color:var(--cyan-light); font-weight:500;">X-rays:</span> 75 kV, 1 mA
-                    </div>
-                  </div>
-                  <p style="font-size:var(--text-xs); color:rgba(255,255,255,0.4); margin-top:1.5rem; font-weight:300;">Top: visible light &nbsp;·&nbsp; Bottom: X-ray</p>
-                </div>
-              </div>
+          <div class="xray-card" onclick="openLightbox(this)">
+            <div class="xray-card-img">
+              <img src="../images/TwoFish40kVp10mA_46.7cm-s_100um.png" alt="Two fish X-ray" loading="lazy">
             </div>
-            <!-- Slide 2 -->
-            <div class="ip67-slide" data-index="1" style="display:none;">
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; align-items:start;">
-                <div>
-                  <img src="../images/ip67-chicken-2-normal.png" width="320" height="240" alt="Chicken fillet 2 – visible light" style="width:100%; border-radius:var(--r-lg); margin-bottom:1rem;" loading="lazy">
-                  <img src="../images/ip67-chicken-2-xray.png" width="688" height="462" alt="Chicken fillet 2 – X-ray" style="width:100%; border-radius:var(--r-lg);" loading="lazy">
-                </div>
-                <div style="padding:1rem 0;">
-                  <h3 style="font-size:var(--text-xl); font-weight:500; color:var(--white); margin-bottom:1.25rem;">Chicken Fillet</h3>
-                  <div style="display:flex; flex-direction:column; gap:0.6rem;">
-                    <div style="font-size:var(--text-sm); color:rgba(255,255,255,0.7); font-weight:300; line-height:1.6;">
-                      <span style="color:var(--cyan-light); font-weight:500;">Scan rate:</span> 4700 lines/sec @ 100 µm resolution (47 cm/sec)
-                    </div>
-                    <div style="font-size:var(--text-sm); color:rgba(255,255,255,0.7); font-weight:300; line-height:1.6;">
-                      <span style="color:var(--cyan-light); font-weight:500;">SOD:</span> 60 cm
-                    </div>
-                    <div style="font-size:var(--text-sm); color:rgba(255,255,255,0.7); font-weight:300; line-height:1.6;">
-                      <span style="color:var(--cyan-light); font-weight:500;">X-rays:</span> 40 kV, 5 mA
-                    </div>
-                  </div>
-                  <p style="font-size:var(--text-xs); color:rgba(255,255,255,0.4); margin-top:1.5rem; font-weight:300;">Top: visible light &nbsp;·&nbsp; Bottom: X-ray</p>
-                </div>
-              </div>
-            </div>
-            <!-- Navigation arrows -->
-            <button class="ip67-arrow ip67-arrow-prev" aria-label="Previous" onclick="navigateCarousel('chickenCarousel',-1)">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <button class="ip67-arrow ip67-arrow-next" aria-label="Next" onclick="navigateCarousel('chickenCarousel',1)">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div style="text-align:center; margin-top:1.5rem;">
-              <span class="ip67-counter" style="font-size:var(--text-sm); color:rgba(255,255,255,0.4); font-weight:400;">1 / 2</span>
+            <div class="xray-card-info">
+              <span class="xray-card-name">Two Fish</span>
+              <span class="xray-card-params">40 kVp · 10 mA · 46.7 cm/s · 100 µm</span>
             </div>
           </div>
+
+          <div class="xray-card" onclick="openLightbox(this)">
+            <div class="xray-card-img">
+              <img src="../images/ChickenFillet%26Bones40kVp10mA_46.7cm-s_100um.png" alt="Chicken fillet and bones X-ray" loading="lazy">
+            </div>
+            <div class="xray-card-info">
+              <span class="xray-card-name">Chicken Fillet &amp; Bones</span>
+              <span class="xray-card-params">40 kVp · 10 mA · 46.7 cm/s · 100 µm</span>
+            </div>
+          </div>
+
+          <div class="xray-card" onclick="openLightbox(this)">
+            <div class="xray-card-img">
+              <img src="../images/Nuts40kVp10mA_46.7cm-s_100um.png" alt="Nuts X-ray" loading="lazy">
+            </div>
+            <div class="xray-card-info">
+              <span class="xray-card-name">Nuts</span>
+              <span class="xray-card-params">40 kVp · 10 mA · 46.7 cm/s · 100 µm</span>
+            </div>
+          </div>
+
+          <div class="xray-card" onclick="openLightbox(this)">
+            <div class="xray-card-img">
+              <img src="../images/Walnuts40kVp10mA_93cms-1_200um.png" alt="Walnuts X-ray" loading="lazy">
+            </div>
+            <div class="xray-card-info">
+              <span class="xray-card-name">Walnuts</span>
+              <span class="xray-card-params">40 kVp · 10 mA · 93 cm/s · 200 µm</span>
+            </div>
+          </div>
+
+          <div class="xray-card" onclick="openLightbox(this)">
+            <div class="xray-card-img">
+              <img src="../images/Chip%26Noodles40kVp10mA_46.7cm-s_100um.png" alt="Chips and noodles X-ray" loading="lazy">
+            </div>
+            <div class="xray-card-info">
+              <span class="xray-card-name">Chips &amp; Noodles</span>
+              <span class="xray-card-params">40 kVp · 10 mA · 46.7 cm/s · 100 µm</span>
+            </div>
+          </div>
+
+          <div class="xray-card" onclick="openLightbox(this)">
+            <div class="xray-card-img">
+              <img src="../images/Chips%26SugarBread40kVp10mA_46.7cm-s_100um.png" alt="Chips and sugar bread X-ray" loading="lazy">
+            </div>
+            <div class="xray-card-info">
+              <span class="xray-card-name">Chips &amp; Sugar Bread</span>
+              <span class="xray-card-params">40 kVp · 10 mA · 46.7 cm/s · 100 µm</span>
+            </div>
+          </div>
+
+          <div class="xray-card" onclick="openLightbox(this)">
+            <div class="xray-card-img">
+              <img src="../images/BankNote40kVp5mA_66.7cm-s_200um.png" alt="Bank note X-ray" loading="lazy">
+            </div>
+            <div class="xray-card-info">
+              <span class="xray-card-name">Bank Note</span>
+              <span class="xray-card-params">40 kVp · 5 mA · 66.7 cm/s · 200 µm</span>
+            </div>
+          </div>
+
         </div>
+      </div>
+
+      <!-- Lightbox -->
+      <div class="xray-lightbox" id="xrayLightbox" onclick="closeLightbox()">
+        <button class="xray-lightbox-close" aria-label="Close">✕</button>
+        <img class="xray-lightbox-img" id="lightboxImg" src="" alt="">
       </div>
     </section>
 
-    <style>
-      .ip67-slide { transition: opacity 400ms ease; }
-      .ip67-arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        background: rgba(255,255,255,0.08);
-        border: 1px solid rgba(255,255,255,0.15);
-        color: rgba(255,255,255,0.7);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: background 200ms ease, color 200ms ease;
-        z-index: 5;
-      }
-      .ip67-arrow:hover {
-        background: rgba(255,255,255,0.16);
-        color: #fff;
-      }
-      .ip67-arrow-prev { left: -60px; }
-      .ip67-arrow-next { right: -60px; }
-      @media (max-width: 1400px) {
-        .ip67-arrow-prev { left: -10px; }
-        .ip67-arrow-next { right: -10px; }
-      }
-      @media (max-width: 768px) {
-        .ip67-slide > div { grid-template-columns: 1fr !important; }
-        .ip67-arrow { width: 40px; height: 40px; }
-        .ip67-arrow-prev { left: 0; }
-        .ip67-arrow-next { right: 0; }
-      }
-    </style>
-
     <script>
-      function navigateCarousel(carouselId, direction) {
-        var carousel = document.getElementById(carouselId);
-        if (!carousel) return;
-        var slides = carousel.querySelectorAll('.ip67-slide');
-        var current = -1;
-        slides.forEach(function(s, i) { if (s.classList.contains('active')) current = i; });
-        if (current === -1) return;
-        var next = current + direction;
-        if (next < 0) next = slides.length - 1;
-        if (next >= slides.length) next = 0;
-        slides[current].classList.remove('active');
-        slides[current].style.display = 'none';
-        slides[next].classList.add('active');
-        slides[next].style.display = 'block';
-        var counter = carousel.querySelector('.ip67-counter');
-        if (counter) counter.textContent = (next + 1) + ' / ' + slides.length;
+      function openLightbox(card) {
+        var img = card.querySelector('img');
+        var lb = document.getElementById('xrayLightbox');
+        document.getElementById('lightboxImg').src = img.src;
+        document.getElementById('lightboxImg').alt = img.alt;
+        lb.classList.add('active');
+        document.body.style.overflow = 'hidden';
       }
+      function closeLightbox() {
+        document.getElementById('xrayLightbox').classList.remove('active');
+        document.body.style.overflow = '';
+      }
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeLightbox();
+      });
     </script>
 
     <!-- MODELS -->
