@@ -1396,10 +1396,8 @@ body::before {
   }
 
   .statement-stats {
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: flex-start;
-    text-align: left;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 0;
     padding: 2rem 0;
   }
 
@@ -1408,8 +1406,7 @@ body::before {
   }
 
   .stat-item {
-    align-items: flex-start;
-    padding: 0;
+    padding: 0 1rem;
   }
 
   .advantages-grid {
@@ -1432,6 +1429,10 @@ body::before {
 
 /* Mobile */
 @media (max-width: 480px) {
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
   .tech-features {
     grid-template-columns: 1fr;
   }
