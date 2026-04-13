@@ -81,6 +81,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -479,6 +480,7 @@ body::before {
 /* Scrolled state */
 .nav.scrolled {
   background: rgba(255,255,255,0.97);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border-bottom-color: var(--color-border);
 }
@@ -878,6 +880,7 @@ body::before {
   bottom: 1.5rem;
   left: 1.5rem;
   background: rgba(14, 25, 32, 0.82);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: var(--r-pill);
