@@ -1354,6 +1354,14 @@ body::before {
     --nav-h: 80px;
   }
 
+  .nav-logo {
+    margin-left: -65px;
+  }
+
+  .nav-logo-png {
+    height: 120px;
+  }
+
   .nav-links,
   .nav-cta {
     display: none;
