@@ -1,5 +1,10 @@
 {
   "redirects": [
+    { "source": "/:path*", "has": [{ "type": "host", "value": "www.athlos.fi" }], "destination": "https://athlos.fi/:path*", "permanent": true },
+
+    { "source": "/downloads",                          "destination": "/products/",                "statusCode": 301 },
+    { "source": "/downloads/",                         "destination": "/products/",                "statusCode": 301 },
+
     { "source": "/ufs",                               "destination": "/products/ufs.html",        "statusCode": 301 },
     { "source": "/ufs/",                              "destination": "/products/ufs.html",        "statusCode": 301 },
     { "source": "/industrial-ip67-tdi",               "destination": "/products/ufs-ip67.html",   "statusCode": 301 },
