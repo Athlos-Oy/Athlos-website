@@ -1,19 +1,31 @@
 (function () {
-  if (localStorage.getItem('cookies-accepted')) return;
-  if (sessionStorage.getItem('cookie-banner-seen')) return;
-
-  sessionStorage.setItem('cookie-banner-seen', '1');
+  if (localStorage.getItem('cookies-accepted') || localStorage.getItem('cookies-declined')) return;
 
   var banner = document.createElement('div');
   banner.id = 'cookie-banner';
   banner.innerHTML =
-    '<p>This site uses cookies for essential functionality. By continuing to use this site, you accept our use of cookies. <a href="/privacy.html">Privacy Policy</a></p>' +
-    '<button id="cookie-accept">Accept</button>';
+    '<p>We use analytics cookies to understand how visitors use this site. <a href="/privacy.html">Privacy Policy</a></p>' +
+    '<div class="cookie-banner-buttons">' +
+    '<button id="cookie-decline">Decline</button>' +
+    '<button id="cookie-accept">Accept</button>' +
+    '</div>';
   document.body.appendChild(banner);
+
+  function hideBanner() {
+    banner.classList.add('cookie-banner--hidden');
+    setTimeout(function () { banner.remove(); }, 400);
+  }
 
   document.getElementById('cookie-accept').addEventListener('click', function () {
     localStorage.setItem('cookies-accepted', '1');
-    banner.classList.add('cookie-banner--hidden');
-    setTimeout(function () { banner.remove(); }, 400);
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {'analytics_storage': 'granted'});
+    }
+    hideBanner();
+  });
+
+  document.getElementById('cookie-decline').addEventListener('click', function () {
+    localStorage.setItem('cookies-declined', '1');
+    hideBanner();
   });
 })();
