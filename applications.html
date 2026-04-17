@@ -21,30 +21,95 @@
   <link rel="apple-touch-icon" href="/images/favicon.png">
   <script type="application/ld+json">
   {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Athlos Oy",
-  "url": "https://athlos.fi",
-  "logo": "https://athlos.fi/images/athlos-logo.png",
-  "email": "info@athlos.fi",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Klovinpellontie 1-3, Tower 2",
-    "addressLocality": "Espoo",
-    "postalCode": "02180",
-    "addressCountry": "FI"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/company/athlos-oy/"
-  ],
-  "description": "Athlos Oy is a Finnish X-ray imaging technology company specialising in direct conversion CdTe-CMOS and Si-CMOS sensors for dental, medical, and industrial applications.",
-  "areaServed": "Worldwide",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "info@athlos.fi",
-    "contactType": "sales"
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://athlos.fi/#organization",
+        "name": "Athlos Oy",
+        "url": "https://athlos.fi",
+        "logo": "https://athlos.fi/images/athlos-logo.png",
+        "email": "info@athlos.fi",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Klovinpellontie 1-3, Tower 2",
+          "addressLocality": "Espoo",
+          "postalCode": "02180",
+          "addressCountry": "FI"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/athlos-oy/"
+        ],
+        "description": "Athlos Oy is a Finnish X-ray imaging technology company specialising in direct conversion CdTe-CMOS and Si-CMOS sensors for dental, medical, and industrial applications.",
+        "areaServed": "Worldwide",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "info@athlos.fi",
+          "contactType": "sales"
+        }
+      },
+      {
+        "@type": "CollectionPage",
+        "url": "https://athlos.fi/applications.html",
+        "name": "X-Ray Imaging Applications – Athlos",
+        "inLanguage": "en",
+        "dateModified": "2026-04-15",
+        "isPartOf": { "@id": "https://athlos.fi/#website" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://athlos.fi/"},
+          {"@type": "ListItem", "position": 2, "name": "Applications", "item": "https://athlos.fi/applications.html"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What applications are Athlos X-ray sensors used for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Athlos direct conversion X-ray sensors are used across three main application areas: dental imaging (intraoral, panoramic, and cephalometric), medical imaging (OPG, cephalometric, and custom medical modalities requiring high sensitivity at low dose), and industrial inspection (food & beverage foreign-object detection, pharmaceutical seal and fill inspection, oil & gas weld inspection, automotive casting inspection, PCB/SMT electronics inspection, and heavy-industry NDT and CT)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which Athlos product fits dental intraoral imaging?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The DC-Air® wireless intraoral sensor is designed for dental intraoral X-ray imaging. It combines Si-CMOS direct conversion, Bluetooth 5.0 wireless connectivity, Zero Profile® holders, and up to 300 X-rays per battery charge, with enhanced IP67 protection. DC-Air® is FDA 510(k) cleared."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which Athlos product fits dental panoramic and cephalometric imaging?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Ultra-Fast Scanning Sensor is an ultra-fast CdTe-CMOS direct conversion linear scanning sensor designed for dental panoramic and cephalometric imaging, as well as medical and industrial X-ray inspection. It offers single-photon sensitivity and is available in three models with selectable active widths."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which Athlos product fits industrial inline inspection?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Industrial IP67 TDI is an IP67-rated ultra-fast TDI (time delay integration) scanning detector for continuous inline inspection in demanding industrial environments. It operates without active cooling and is used for food & beverage foreign-object detection, pharmaceutical fill and seal inspection, oil & gas weld inspection, automotive casting, PCB assembly verification, and large-scale NDT."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does direct conversion matter for these applications?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Conventional X-ray sensors convert X-rays to visible light via a scintillator, then detect the light with a photodiode. Each step introduces blur, signal loss, and energy waste. Direct conversion converts X-ray photons directly into electric charge, removing the scintillator step. The result is sharper images, higher contrast, wider dynamic range, and better performance at low dose — benefits that matter in every dental, medical, and industrial application."
+            }
+          }
+        ]
+      }
+    ]
   }
-}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -291,6 +356,8 @@
         </div>
       </div>
     </section>
+
+    <p class="page-updated">Last updated: <time datetime="2026-04-15">15 April 2026</time></p>
 
   </main>
 

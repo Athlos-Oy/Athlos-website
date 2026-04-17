@@ -21,30 +21,146 @@
   <link rel="apple-touch-icon" href="/images/favicon.png">
   <script type="application/ld+json">
   {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Athlos Oy",
-  "url": "https://athlos.fi",
-  "logo": "https://athlos.fi/images/athlos-logo.png",
-  "email": "info@athlos.fi",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Klovinpellontie 1-3, Tower 2",
-    "addressLocality": "Espoo",
-    "postalCode": "02180",
-    "addressCountry": "FI"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/company/athlos-oy/"
-  ],
-  "description": "Athlos Oy is a Finnish X-ray imaging technology company specialising in direct conversion CdTe-CMOS and Si-CMOS sensors for dental, medical, and industrial applications.",
-  "areaServed": "Worldwide",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "info@athlos.fi",
-    "contactType": "sales"
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://athlos.fi/#organization",
+        "name": "Athlos Oy",
+        "alternateName": "Athlos",
+        "url": "https://athlos.fi",
+        "logo": "https://athlos.fi/images/athlos-logo.png",
+        "email": "info@athlos.fi",
+        "foundingDate": "2019",
+        "foundingLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Espoo",
+            "addressCountry": "FI"
+          }
+        },
+        "founder": {
+          "@type": "Person",
+          "@id": "https://athlos.fi/about.html#konstantinos-spartiotis",
+          "name": "Konstantinos Spartiotis",
+          "jobTitle": "Founder and CEO",
+          "alumniOf": [
+            {"@type": "CollegeOrUniversity", "name": "Johns Hopkins University"},
+            {"@type": "Organization", "name": "CERN"}
+          ]
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Klovinpellontie 1-3, Tower 2",
+          "addressLocality": "Espoo",
+          "postalCode": "02180",
+          "addressCountry": "FI"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/athlos-oy/"
+        ],
+        "description": "Athlos Oy is a Finnish X-ray imaging technology company specialising in direct conversion CdTe-CMOS and Si-CMOS sensors for dental, medical, and industrial applications.",
+        "areaServed": "Worldwide",
+        "knowsAbout": [
+          "Direct conversion X-ray imaging",
+          "CdTe-CMOS sensors",
+          "Si-CMOS sensors",
+          "Dental intraoral X-ray imaging",
+          "Dental panoramic and cephalometric imaging",
+          "Industrial X-ray inspection",
+          "Time delay integration (TDI) detectors",
+          "Flip-chip bonding",
+          "Cleanroom semiconductor manufacturing"
+        ],
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "ISO 13485:2016"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "regulatory clearance",
+            "name": "FDA 510(k) — DC-Air®"
+          }
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "info@athlos.fi",
+          "contactType": "sales",
+          "areaServed": "Worldwide",
+          "availableLanguage": ["en"]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://athlos.fi/#website",
+        "url": "https://athlos.fi",
+        "name": "Athlos Oy",
+        "publisher": { "@id": "https://athlos.fi/#organization" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://athlos.fi/#product-portfolio",
+        "name": "Athlos X-Ray Imaging Product Portfolio",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "DC-Air® Wireless Intraoral Sensor", "url": "https://athlos.fi/products/wios.html"},
+          {"@type": "ListItem", "position": 2, "name": "Ultra-Fast Scanning Sensor", "url": "https://athlos.fi/products/ufs.html"},
+          {"@type": "ListItem", "position": 3, "name": "Industrial IP67 TDI", "url": "https://athlos.fi/products/ufs-ip67.html"},
+          {"@type": "ListItem", "position": 4, "name": "Manufacturing Services", "url": "https://athlos.fi/products/manufacturing.html"},
+          {"@type": "ListItem", "position": 5, "name": "Software Products", "url": "https://athlos.fi/products/software.html"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://athlos.fi/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is direct conversion X-ray imaging?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Direct conversion X-ray imaging converts X-ray photons directly into electrical pulses inside a semiconductor (such as CdTe or Si), without the intermediate scintillator step used in conventional indirect detectors. By eliminating the X-ray-to-light conversion, direct conversion removes the dominant source of blur, signal loss, and DQE loss — yielding sharper images, higher contrast, and better low-dose performance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does Athlos Oy make?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Athlos Oy develops and manufactures direct conversion X-ray imaging sensors based on CdTe-CMOS and Si-CMOS hybrid technology. The portfolio includes the DC-Air® wireless intraoral dental sensor, the Ultra-Fast Scanning Sensor for panoramic, cephalometric, medical and industrial imaging, and the Industrial IP67 TDI for inline industrial inspection. Athlos also offers contract detector manufacturing services and software products (TWAIN module, reconstruction libraries, and SDK)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where is Athlos based, and where are its sensors manufactured?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Athlos Oy is headquartered in Espoo, Finland. Sensors are manufactured in-house and at the VTT Micronova cleanroom in Espoo — one of Europe's leading nanofabrication facilities. Athlos controls the full manufacturing chain from CMOS wafer bumping and flip-chip bonding to detector assembly and characterization."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Athlos FDA-cleared and ISO-certified?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Athlos operates an ISO 13485:2016 certified quality management system. The DC-Air® wireless intraoral sensor is FDA 510(k) cleared for dental intraoral X-ray imaging."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who founded Athlos and what is the team's background?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Athlos was founded by Konstantinos Spartiotis, who previously founded Simage Oy in 1993 and Ajat Oy in 2001. The team invented direct conversion X-ray imaging in 1993 following work at CERN and Johns Hopkins University, and has over 35 years of applied expertise in CdTe and Si direct conversion. Ajat became the global standard for direct conversion CdTe-CMOS dental panoramic and cephalometric imaging and was later acquired by XCounter and subsequently Varex Imaging."
+            }
+          }
+        ]
+      }
+    ]
   }
-}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -392,6 +508,8 @@
         </div>
       </div>
     </section>
+
+    <p class="page-updated">Last updated: <time datetime="2026-04-15">15 April 2026</time></p>
 
   </main>
 
