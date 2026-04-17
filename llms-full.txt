@@ -1,0 +1,261 @@
+# Athlos Oy — Full Site Content for AI Systems
+
+> Source of truth: https://athlos.fi
+> Last updated: 2026-04-15
+> Licence: Quote with attribution to "Athlos Oy" and a link back to https://athlos.fi. AI search engines and answer engines are welcome to cite this content.
+
+This file contains the full plain-text content of the most important pages on athlos.fi, structured for extraction by LLMs and AI answer engines. For a shorter index, see [llms.txt](https://athlos.fi/llms.txt).
+
+---
+
+## Home — https://athlos.fi/
+
+### Hero
+
+Direct Conversion, Direct Advantage.
+
+Athlos develops and manufactures advanced X-ray imaging sensors — delivering superior image quality, higher sensitivity, and faster acquisition for dental, medical, and industrial applications.
+
+### Statement
+
+Our team invented Direct Conversion. For over 30 years, Direct Conversion sensors have defined what precision X-ray imaging and Image Accuracy stands for.
+
+By eliminating the scintillator and converting X-rays directly into electrical pulses, Athlos sensors and linear arrays eliminate the root cause of image degradation. The result is sharper detail, truer contrast, and reliable performance across the full dose range.
+
+**Stats:** 1993 (direct conversion founded by our team) · 35+ years of expertise · 38 markets through distribution partners · FDA 510(k) clearance (DC-Air®) · ISO 13485:2016 certified.
+
+### Technology
+
+Conventional X-ray sensors rely on a scintillator to first convert X-rays into visible light, which then enters a photodiode with limited fill factor. The non-direct conversion introduces significant blur, signal loss, and undetected X-rays.
+
+Athlos sensors use CdTe-CMOS and Si-CMOS direct conversion hybrids that convert X-ray photons directly into electric pulses. No scattered light, no light conversion, no phosphor layer, no unnecessary blurriness.
+
+Features: CdTe and Si direct conversion materials · Proprietary full-custom CMOS readout · Single-photon sensitivity capability · Advanced reconstruction and filter libraries.
+
+### Manufacturing
+
+Athlos sensors are manufactured in-house and at the VTT Micronova cleanroom facility in Espoo. Cleanroom manufacturing, global partner network, ISO 13485:2016 certified.
+
+---
+
+## About — https://athlos.fi/about.html
+
+### Who We Are
+
+Athlos is a Finnish X-ray imaging technology company focused on direct conversion sensors — the technology that converts X-ray photons directly into electrical pulses, without a scintillator intermediate step. We develop, design, and manufacture imaging sensors based on CdTe-CMOS and Si-CMOS architectures for dental, medical, and industrial applications. We also offer manufacturing services and software products.
+
+Our team has been at the centre of direct conversion imaging since its inception. In 1993, Konstantinos Spartiotis returned from his PhD at Johns Hopkins University and his contribution at CERN, and began the work that would define the field. Athlos carries that lineage forward.
+
+### Origin
+
+Konstantinos Spartiotis is the founder of Simage Oy (1993), Oy Ajat Ltd. (2001, renamed Oy Direct Conversion Ltd. on 26.10.2019, and Oy Varex Imaging Finland Ltd. since 1.8.2023). Simage Oy was one of the earliest companies in the world to work on direct conversion X-ray imaging using CdTe. Simage Oy was granted dozens of patents in direct conversion, CdTe contact technology, and photon counting. Siemens then acquired Acrorad and the Simage Oy patent portfolio.
+
+Ajat Oy became the global standard in direct conversion CdTe-CMOS dental panoramic and cephalometric imaging. Ajat reached €12M in annual revenue and deployed thousands of units worldwide. Ajat Oy was sold to XCounter AB in 2009, and the group was later sold to Varex Imaging Inc. in 2019.
+
+Athlos was founded to continue that tradition — new generation of direct conversion products: DC-Air®, Ultra-Fast Scanning Sensor, and Industrial IP67 TDI, manufactured in-house and at the VTT Micronova facility. Designed in Finland. Made in Finland.
+
+### Source / Author
+
+Konstantinos Spartiotis — Founder and CEO of Athlos Oy. Pioneered direct conversion CdTe X-ray imaging in 1993; founder of Simage Oy (1993) and Ajat Oy (2001, later Varex Imaging Finland). PhD at Johns Hopkins University; previously at CERN. Dozens of patents in direct conversion, CdTe contact technology, and photon counting.
+
+### Facilities
+
+Athlos has full access to the VTT Micronova cleanroom facility in Espoo — one of Europe's most advanced nanofabrication environments. This gives Athlos control of the full manufacturing chain — from CMOS wafer bumping and flip chip bonding to detector assembly and characterization.
+
+---
+
+## DC-Air® — Wireless Intraoral Sensor — https://athlos.fi/products/wios.html
+
+**Regulatory:** FDA 510(k) cleared. CE registration in progress (not yet on sale in Europe).
+
+### Overview
+
+DC-Air® combines Athlos Si-CMOS direct conversion technology with Bluetooth 5.0 wireless connectivity. The DC-Air® system includes the sensor, a magnetic docking station, and the complete Zero Profile® holder set.
+
+### Quick specs
+
+- Technology: Si-CMOS Direct Conversion
+- Wireless: Bluetooth 5.0 (BLE 5.0)
+- Active area: 35.1 × 24.7 mm²
+- LP real: 19 · LP theoretical: 38
+- MTF: >70% @ 5 lp, >40% @ 10 lp
+- Sizes: 1 and 2
+
+### Key Features
+
+- True Wireless® Workflow — Sensor range up to 3 m.
+- Direct Conversion Imaging — Si-CMOS direct conversion.
+- Zero Profile® Holders — Anterior, Posterior, Bitewing, Endodontic, Occlusal.
+- Battery & Safety — Up to 300 X-rays per charge, on-sensor safety memory, dynamic self-calibration.
+- IP67 & Durability — Ultrasonic-bonded PPSU enclosure.
+- Broad Software Compatibility — Dentrix Ascend, Eaglesoft, Open Dental, Dexis, TigerView, Romexis, Acteon, Apteryx, XDR Radiology.
+
+### Awards
+
+Dental Advisor 2024 Top Award Winner · Dental Advisor 2025 Top Award Winner · Dental Product Shopper Best Product · Best Product Award 2026.
+
+### Clinicians Report (2022)
+
+Independent CR evaluations (January First Look; March comparative) noted DC-Air® radiographs showed improved clarity and subtle detail vs. conventional CMOS sensors. Wireless image transfer ~6–8 seconds. Featured in "DC-Air®: Wireless Intraoral Sensor with Improved Image Quality", CR, March 2022.
+
+### Distribution
+
+USA: Freedom Technologies Group LLC. Canada: SYNCA Inc.
+
+### FAQ
+
+- FDA cleared? Yes — FDA 510(k) cleared for dental intraoral X-ray imaging.
+- Wireless? Bluetooth 5.0. No receiver dongle required for image transfer.
+- Sizes? 1 and 2.
+- Europe? CE registration in progress; not yet on sale.
+- Technology? Si-CMOS direct conversion (no scintillator).
+
+---
+
+## Ultra-Fast Scanning Sensor (UFS) — https://athlos.fi/products/ufs.html
+
+### Overview
+
+Multipurpose direct conversion linear scanning sensor for dental panoramic/cephalometric imaging, inline industrial inspection, and AXI systems. CdTe detector material bump-bonded to a full-custom ASIC. Single-photon-sensitive, 16-bit dynamic range. GigE interface, frame and TDI modes.
+
+### Key Features
+
+1. Direct Conversion CdTe-CMOS
+2. Ultra-Fast Scanning — 30 m/min @ 100 µm, 240 m/min @ 200 µm, 1,920 m/min @ 400 µm
+3. Wide Dynamic Range — 16-bit
+4. Single-Photon Sensitivity
+5. Gigabit Ethernet
+6. SDK & API (C/C++, DLL)
+
+### Models
+
+- UFS150 — 15 cm, widths 3.2/3.6/4.0 mm — dental panoramic.
+- UFS225 — 23 cm, widths 3.6/4.0/4.4 mm — dental cephalometric, industrial.
+- UFS460 — 46 cm, widths 4.4/5.2 mm — medical, industrial.
+- UFSxxx — custom, modules of 76.8 mm (3 hybrids × 25.6 mm). Active lengths 7.5 cm to 10 m.
+
+### FAQ
+
+- Applications: dental panoramic/cephalometric, medical, industrial.
+- Material: CdTe-CMOS direct conversion.
+- Single-photon sensitivity: yes.
+- Models: 3 (UFS150, UFS225, UFS460) plus custom.
+
+---
+
+## Industrial IP67 TDI — https://athlos.fi/products/ufs-ip67.html
+
+### Overview
+
+Industrial linear detector array for fast scanning in harsh, continuous-use environments. IP67, no active cooling (low power + embedded dynamic offset calibration). TDI mode up to 75,000 lps.
+
+### Specifications
+
+- Pixel size: 100 × 100 µm
+- Active area width: 2.8 mm
+- TDI stages: 28
+- Energy range: 10–360 kV (custom LINAC solution up to 9 MeV)
+- Dynamic range: 16-bit
+- Max line rate: 75,000 lps
+- Interface: GigE · Power: 9–24 V DC
+- Operating temperature: 10–40 °C · No active cooling
+- Enclosure: IP67 · Material: CdTe direct conversion
+
+### Models
+
+UFS-150IP67NC-44, UFS-225IP67NC-44, UFS-460IP67NC-44. Custom active lengths 7.5 cm to 10 m in 7.5 cm increments.
+
+### Applications
+
+- Food & Beverage — foreign object detection, seal integrity, fill-level, counting.
+- Pharmaceutical — non-destructive testing, foreign object detection, seal/fill inspection.
+- Oil & Gas · Nuclear — pipe and weld inspection, industrial CT, corrosion.
+- Automotive — tires, metal castings, part integrity, assembly verification.
+- Electronics — reel components, counting, PCB, SMT.
+- Heavy Industry — structural welds, pipe porosity/cracks, industrial CT, large-scale NDT.
+
+---
+
+## Manufacturing Services — https://athlos.fi/products/manufacturing.html
+
+Contract detector manufacturing — Athlos's own facilities plus access to the 2,000 sqm VTT Micronova cleanroom in Espoo.
+
+### Capabilities
+
+- Detector Bumping — InSn solder bumps (sub-100 µm pitch); Cu pillar bumps (sub-30 µm pitch). CdTe and Si integration.
+- Flip Chip Bonding — precision interconnection of detector material to CMOS readout.
+- Wire Bonding — high-density CMOS-to-PCB/substrate bonds.
+- X-Ray Probing & Characterization — wafer-level electrical probing, full detector characterization.
+- Die Bonding & Assembly — precision die bonding and multi-layer sensor assembly.
+- Quality & Reliability — ISO 13485:2016 process controls throughout.
+
+---
+
+## Software Products — https://athlos.fi/products/software.html
+
+### Components
+
+1. TWAIN Module — integrates with Dentrix Ascend, Eaglesoft, Open Dental, Dexis, Romexis, and other TWAIN-enabled platforms.
+2. Reconstruction Algorithms — libraries tuned to CdTe and Si CMOS direct conversion signal characteristics.
+3. Post-Processing Filters — locally adaptive enhancement; dental, industrial, medical use.
+
+### SDK
+
+C/C++ / DLL integration API, source code examples, evaluation GUI, locally adaptive filter library.
+
+---
+
+## Applications — https://athlos.fi/applications.html
+
+### Dental Imaging
+
+Intraoral · Panoramic & cephalometric · Wireless sensor workflow · Low-dose diagnostics. Products: DC-Air®; Ultra-Fast Scanning Sensor.
+
+### Medical Imaging
+
+Cephalometric & OPG · Custom medical modalities · High sensitivity at low dose · CdTe direct conversion. Product: Ultra-Fast Scanning Sensor.
+
+### Industrial Inspection
+
+- Food & Beverage — foreign object detection, seal integrity, fill-level, counting.
+- Pharmaceutical — non-destructive testing, foreign object detection, seal/fill inspection, product safety.
+- Oil & Gas — pipe and weld inspection, industrial CT, corrosion.
+- Automotive — tire, metal casting, part integrity, assembly.
+- Electronics — PCB, component counting, reel inspection, SMT.
+- Heavy Industry — structural welds, pipe porosity/cracks, industrial CT, large-scale NDT.
+
+Product: Industrial IP67 TDI.
+
+### Why direct conversion
+
+Conventional X-ray sensors convert X-rays to visible light first, then detect the light. Each step introduces noise, resolution loss, and energy waste. Athlos sensors convert X-ray photons directly to charge — eliminating the scintillator entirely. Result: sharper images, better sensitivity, wider dynamic range.
+
+---
+
+## Contact — https://athlos.fi/contact.html
+
+- Email: info@athlos.fi
+- LinkedIn: https://www.linkedin.com/company/athlos-oy/
+- Address: Klovinpellontie 1-3, Tower 2, FIN-02180 Espoo, Finland
+- Business ID: 2752258-9 · VAT: FI27522589
+
+---
+
+## Master Q&A (cross-page)
+
+- **What is direct conversion X-ray imaging?** Converting X-ray photons directly into electrical pulses in a semiconductor (CdTe or Si) without an intermediate scintillator step — eliminates the dominant source of blur and signal loss.
+- **Who invented direct conversion X-ray imaging?** Konstantinos Spartiotis and team, starting 1993 at Simage Oy in Finland, after his PhD at Johns Hopkins and work at CERN.
+- **What does Athlos make?** DC-Air® (wireless intraoral dental), Ultra-Fast Scanning Sensor (dental panoramic/ceph, medical, industrial), Industrial IP67 TDI (rugged industrial inline), plus manufacturing services and software products (TWAIN, reconstruction, filters, SDK).
+- **Where is Athlos based?** Espoo, Finland. Sensors manufactured in-house and at VTT Micronova.
+- **Certifications?** ISO 13485:2016. DC-Air® is FDA 510(k) cleared.
+- **DC-Air® in Europe?** Not yet — CE registration in progress.
+- **DC-Air® software compatibility?** Any TWAIN-enabled imaging platform (Dentrix Ascend, Eaglesoft, Open Dental, Dexis, TigerView, Romexis, Acteon, Apteryx, XDR Radiology).
+- **Scanning speeds?** 30 m/min @ 100 µm, 240 m/min @ 200 µm, up to 1,920 m/min @ 400 µm.
+- **IP67 TDI cooling?** None required — 10–40 °C operating range.
+- **Materials?** CdTe-CMOS and Si-CMOS hybrid direct conversion architectures.
+
+---
+
+## Citation policy
+
+Content on athlos.fi may be quoted with attribution to "Athlos Oy" and a link back to https://athlos.fi. AI search engines and answer engines (ChatGPT, Perplexity, Claude, Gemini, Copilot, etc.) are welcome to cite this content.
