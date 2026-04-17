@@ -1,0 +1,33 @@
+# Exclude oversized PNG originals from Vercel deploys.
+# Most PNGs in /images/ have WebP siblings that are what actually
+# gets rendered. The PNG originals (some 17-27 MB each) bloat the
+# deploy bundle and are never requested by browsers.
+#
+# This file only affects what Vercel uploads at build time. Nothing
+# below is removed from the git repo.
+
+images/*.png
+
+# Keep logo and favicon
+!images/favicon.png
+!images/athlos-logo.png
+
+# Keep PNGs referenced inline in HTML (no WebP sibling used)
+!images/ufs-family-new.png
+!images/ufs-cephalo-2.png
+!images/wios-sensor-docking-black.png
+!images/wios-award-best-product.png
+!images/wios-award-dps.png
+
+# Keep DC-Air X-ray galleries (wios.html)
+!images/wios-anterior-*.png
+!images/wios-posterior-*.png
+!images/wios-bw-*.png
+
+# Keep Industrial IP67 X-ray example PNGs (ufs-ip67.html)
+!images/Fish*.png
+!images/TwoFish*.png
+!images/ChickenFillet*.png
+!images/Nuts*.png
+!images/Walnuts*.png
+!images/Chip*.png
