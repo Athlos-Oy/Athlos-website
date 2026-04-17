@@ -1318,69 +1318,6 @@ body::before {
   display: none;
 }
 
-/* Page freshness line — visible "Last updated" signal for AI/SEO */
-.page-updated {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 var(--page-x) clamp(2rem, 4vw, 3rem);
-  font-size: var(--text-xs);
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  color: var(--gray-steel);
-  text-align: center;
-}
-
-.page-updated time {
-  font-weight: 500;
-  color: var(--charcoal);
-}
-
-/* Author byline — visible authority/E-E-A-T signal */
-.byline {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.25rem 1.5rem;
-  margin: 2rem 0 0;
-  border-left: 3px solid var(--cyan);
-  background: var(--off-white);
-  border-radius: 0 var(--r-md, 6px) var(--r-md, 6px) 0;
-}
-
-.byline-avatar {
-  flex: 0 0 auto;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--cyan-deep);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  font-size: var(--text-sm);
-  letter-spacing: 0.04em;
-}
-
-.byline-body {
-  font-size: var(--text-sm);
-  font-weight: 300;
-  line-height: 1.6;
-  color: var(--gray-steel);
-}
-
-.byline-name {
-  font-weight: 600;
-  color: var(--charcoal);
-}
-
-.byline-meta {
-  display: block;
-  font-size: var(--text-xs);
-  margin-top: 0.15rem;
-  color: var(--gray-steel);
-}
-
 /* =====================================================
    13. RESPONSIVE
 ===================================================== */
