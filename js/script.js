@@ -223,4 +223,61 @@
     }
   });
 
+  // ===================================================
+  // AUTOPLAY VIDEO RESCUE
+  // Some browsers (Safari, low-power mode, bfcache restores,
+  // data-saver) skip autoplay or pause it silently. This kicks
+  // any autoplay <video> back into playback whenever it's
+  // visible, sets the requested playbackRate, and retries on
+  // pause/stalled events.
+  // ===================================================
+  document.querySelectorAll('video[autoplay]').forEach((video) => {
+    const rate = parseFloat(video.dataset.playbackRate) || 1;
+
+    const tryPlay = () => {
+      try { video.playbackRate = rate; } catch (_) {}
+      const p = video.play();
+      if (p && typeof p.catch === 'function') {
+        p.catch(() => { /* autoplay blocked — will retry on next visibility/event */ });
+      }
+    };
+
+    // Initial attempt as soon as data is ready
+    if (video.readyState >= 2) {
+      tryPlay();
+    } else {
+      video.addEventListener('loadeddata', tryPlay, { once: true });
+    }
+
+    // Restart playback whenever the video scrolls into view
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && video.paused) tryPlay();
+        });
+      }, { threshold: 0.1 });
+      io.observe(video);
+    }
+
+    // Retry if the browser pauses/stalls/suspends the video
+    ['pause', 'stalled', 'suspend', 'emptied'].forEach((evt) => {
+      video.addEventListener(evt, () => {
+        if (!document.hidden && video.paused) {
+          // small delay so we don't fight the user/browser intent
+          setTimeout(tryPlay, 250);
+        }
+      });
+    });
+
+    // Re-attempt when the page is restored from back/forward cache
+    window.addEventListener('pageshow', (e) => {
+      if (e.persisted && video.paused) tryPlay();
+    });
+
+    // Re-attempt when the tab becomes visible again
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden && video.paused) tryPlay();
+    });
+  });
+
 })();
