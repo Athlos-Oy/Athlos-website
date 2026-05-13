@@ -21,6 +21,9 @@
     { "source": "/privacy-policy/",                   "destination": "/privacy.html",             "statusCode": 301 },
 
     { "source": "/products/solutions.html",            "destination": "/products/software.html",   "statusCode": 301 },
-    { "source": "/products/solutions",                 "destination": "/products/software.html",   "statusCode": 301 }
+    { "source": "/products/solutions",                 "destination": "/products/software.html",   "statusCode": 301 },
+
+    { "source": "/cefla",                              "destination": "/cefla.html",               "statusCode": 301 },
+    { "source": "/cefla/",                             "destination": "/cefla.html",               "statusCode": 301 }
   ]
 }
