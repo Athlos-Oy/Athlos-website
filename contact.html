@@ -393,6 +393,7 @@
           formData.append('message',     body);
           formData.append('from_name',   name);
           formData.append('replyto',     email);
+          formData.append('cc',          'evangelos.spartiotis@athlos.fi');
           formData.append('redirect',    'false');
 
           var response = await fetch('https://api.web3forms.com/submit', {
