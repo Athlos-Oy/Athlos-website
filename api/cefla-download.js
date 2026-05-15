@@ -45,7 +45,9 @@ export default async function handler(req, res) {
   try {
     const head = await fetch(url, { method: 'HEAD' });
     if (head.status === 200) {
-      return res.status(200).json({ ok: true, url, filename });
+      const lenHeader = head.headers.get('content-length');
+      const size = lenHeader ? Number(lenHeader) : null;
+      return res.status(200).json({ ok: true, url, filename, size });
     }
     if (head.status === 404) {
       return res
