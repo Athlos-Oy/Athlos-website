@@ -30,6 +30,15 @@ export default async function handler(req, res) {
       .json({ ok: false, error: 'Incorrect password.' });
   }
 
+  // Password-only validation step: lets the client unlock the invoice form
+  // before doing any blob lookup.
+  const validateOnly =
+    (req.method === 'POST' ? req.body?.validateOnly : req.query?.validateOnly) === true ||
+    (req.method === 'POST' ? req.body?.validateOnly : req.query?.validateOnly) === 'true';
+  if (validateOnly) {
+    return res.status(200).json({ ok: true });
+  }
+
   const raw =
     (req.method === 'POST' ? req.body?.invoice : req.query?.invoice) ?? '';
   const invoice = String(raw).trim();

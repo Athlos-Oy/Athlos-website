@@ -86,16 +86,27 @@
 
         <p class="section-eyebrow">Document Download</p>
         <h1 class="section-headline" style="font-size: var(--text-2xl); margin-bottom: 0.75rem;">UFS QA Sheet Download</h1>
-        <p style="font-size: var(--text-base); font-weight: 300; line-height: 1.8; color: var(--gray-steel); margin-bottom: 2rem;">
-          Enter the invoice number for your Ultra-Fast Scanning Sensor delivery to retrieve the matching QA sheet.
+        <p id="cf-intro" style="font-size: var(--text-base); font-weight: 300; line-height: 1.8; color: var(--gray-steel); margin-bottom: 2rem;">
+          Enter the access password to continue.
         </p>
 
-        <form class="contact-form" id="ceflaForm" novalidate>
-          <div id="cf-password-row">
-            <label for="cf-password">Access password</label>
-            <input type="password" id="cf-password" name="password" placeholder="Enter access password" autocomplete="current-password" required>
-          </div>
+        <!-- Step 1: Password -->
+        <form class="contact-form" id="cf-password-form" novalidate>
+          <label for="cf-password">Access password</label>
+          <input type="password" id="cf-password" name="password" placeholder="Enter access password" autocomplete="current-password" required>
 
+          <label style="display:flex; align-items:center; gap:0.6rem; font-weight:400; color:var(--gray-steel); margin: 0.25rem 0 1rem; cursor:pointer;">
+            <input type="checkbox" id="cf-remember" style="width:auto; margin:0;">
+            <span>Remember me on this device</span>
+          </label>
+
+          <div id="cf-password-error" style="display:none; font-size:var(--text-sm); color:#c0392b; background:#fdf0ef; border:1px solid #f5c6c4; border-radius:8px; padding:0.75rem 1rem; margin-bottom:0.75rem;"></div>
+
+          <button type="submit" id="cf-password-submit" class="btn btn-primary" style="width:100%; justify-content:center;">Continue</button>
+        </form>
+
+        <!-- Step 2: Invoice lookup -->
+        <form class="contact-form" id="ceflaForm" style="display:none;" novalidate>
           <label for="cf-invoice">Invoice number</label>
           <input type="text" id="cf-invoice" name="invoice" placeholder="e.g. 12345" autocomplete="off" required>
 
@@ -178,23 +189,55 @@
   <script>
     (function () {
       var STORAGE_KEY = 'cefla-pw';
+      var INTRO_PASSWORD = 'Enter the access password to continue.';
+      var INTRO_INVOICE  = 'Enter the invoice number for your Ultra-Fast Scanning Sensor delivery to retrieve the matching QA sheet.';
 
-      var form         = document.getElementById('ceflaForm');
-      var input        = document.getElementById('cf-invoice');
-      var passwordRow  = document.getElementById('cf-password-row');
-      var passwordInput = document.getElementById('cf-password');
-      var submitBtn    = document.getElementById('cf-submit');
-      var errorBox     = document.getElementById('cf-error');
-      var resultBox    = document.getElementById('cf-result');
+      var intro          = document.getElementById('cf-intro');
+      var passwordForm   = document.getElementById('cf-password-form');
+      var passwordInput  = document.getElementById('cf-password');
+      var rememberCheck  = document.getElementById('cf-remember');
+      var passwordSubmit = document.getElementById('cf-password-submit');
+      var passwordError  = document.getElementById('cf-password-error');
 
-      // If the user has already passed the password gate, skip the field
-      // and put focus on the invoice input instead.
-      var storedPassword = '';
-      try { storedPassword = localStorage.getItem(STORAGE_KEY) || ''; } catch (e) {}
-      if (storedPassword) {
-        passwordRow.style.display = 'none';
-        passwordInput.required = false;
-        input.focus();
+      var invoiceForm   = document.getElementById('ceflaForm');
+      var invoiceInput  = document.getElementById('cf-invoice');
+      var invoiceSubmit = document.getElementById('cf-submit');
+      var errorBox      = document.getElementById('cf-error');
+      var resultBox     = document.getElementById('cf-result');
+
+      var downloadLink  = document.getElementById('cf-download-link');
+      var downloadLabel = document.getElementById('cf-download-label');
+      var searchAnother = document.getElementById('cf-search-another');
+
+      // Password kept in memory for the session; persisted only if the user
+      // ticked "Remember me".
+      var sessionPassword = '';
+      try { sessionPassword = localStorage.getItem(STORAGE_KEY) || ''; } catch (e) {}
+
+      function showInvoicePanel() {
+        passwordForm.style.display = 'none';
+        invoiceForm.style.display = '';
+        intro.textContent = INTRO_INVOICE;
+        invoiceInput.focus();
+      }
+
+      function showPasswordPanel(msg) {
+        invoiceForm.style.display = 'none';
+        resultBox.style.display = 'none';
+        passwordForm.style.display = '';
+        intro.textContent = INTRO_PASSWORD;
+        passwordInput.value = '';
+        if (msg) {
+          passwordError.textContent = msg;
+          passwordError.style.display = 'block';
+        } else {
+          passwordError.style.display = 'none';
+        }
+        passwordInput.focus();
+      }
+
+      if (sessionPassword) {
+        showInvoicePanel();
       } else {
         passwordInput.focus();
       }
@@ -205,9 +248,10 @@
         errorBox.style.display = 'block';
       }
 
-      var downloadLink  = document.getElementById('cf-download-link');
-      var downloadLabel = document.getElementById('cf-download-label');
-      var searchAnother = document.getElementById('cf-search-another');
+      function clearMessages() {
+        errorBox.style.display = 'none';
+        resultBox.style.display = 'none';
+      }
 
       function formatSize(bytes) {
         if (!bytes || isNaN(bytes)) return '';
@@ -226,61 +270,90 @@
         resultBox.style.display = 'block';
       }
 
-      function clearMessages() {
-        errorBox.style.display = 'none';
-        resultBox.style.display = 'none';
-      }
-
       searchAnother.addEventListener('click', function (e) {
         e.preventDefault();
         clearMessages();
-        input.value = '';
-        input.focus();
+        invoiceInput.value = '';
+        invoiceInput.focus();
       });
 
-      form.addEventListener('submit', async function (e) {
+      passwordForm.addEventListener('submit', async function (e) {
         e.preventDefault();
-        clearMessages();
+        passwordError.style.display = 'none';
 
-        var password = storedPassword || passwordInput.value;
+        var password = passwordInput.value;
         if (!password) {
-          showError('Please enter the access password.');
+          passwordError.textContent = 'Please enter the access password.';
+          passwordError.style.display = 'block';
           return;
         }
 
-        // Strip spaces, dashes, and dots — users often type "190 551" or "190-551".
-        var invoice = input.value.replace(/[\s.\-]/g, '');
-        if (!invoice) {
-          showError('Please enter your invoice number.');
-          return;
-        }
-
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Checking…';
+        passwordSubmit.disabled = true;
+        passwordSubmit.textContent = 'Checking…';
 
         try {
           var response = await fetch('/api/cefla-download', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ invoice: invoice, password: password })
+            body: JSON.stringify({ password: password, validateOnly: true })
+          });
+          var data = await response.json();
+
+          if (response.ok && data.ok) {
+            sessionPassword = password;
+            if (rememberCheck.checked) {
+              try { localStorage.setItem(STORAGE_KEY, password); } catch (e) {}
+            } else {
+              try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+            }
+            showInvoicePanel();
+          } else {
+            passwordError.textContent = data.error || 'Incorrect password.';
+            passwordError.style.display = 'block';
+            passwordInput.select();
+          }
+        } catch (err) {
+          passwordError.textContent = 'Network error. Please try again.';
+          passwordError.style.display = 'block';
+        } finally {
+          passwordSubmit.disabled = false;
+          passwordSubmit.textContent = 'Continue';
+        }
+      });
+
+      invoiceForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        clearMessages();
+
+        if (!sessionPassword) {
+          showPasswordPanel();
+          return;
+        }
+
+        // Strip spaces, dashes, and dots — users often type "190 551" or "190-551".
+        var invoice = invoiceInput.value.replace(/[\s.\-]/g, '');
+        if (!invoice) {
+          showError('Please enter your invoice number.');
+          return;
+        }
+
+        invoiceSubmit.disabled = true;
+        invoiceSubmit.textContent = 'Checking…';
+
+        try {
+          var response = await fetch('/api/cefla-download', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ invoice: invoice, password: sessionPassword })
           });
           var data = await response.json();
 
           if (response.status === 401) {
-            // Password rejected — wipe any stored copy and re-prompt.
+            // Password was rotated or invalidated server-side. Kick back to step 1.
             try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
-            storedPassword = '';
-            passwordRow.style.display = '';
-            passwordInput.required = true;
-            passwordInput.value = '';
-            passwordInput.focus();
-            showError(data.error || 'Incorrect password.');
+            sessionPassword = '';
+            showPasswordPanel(data.error || 'Password is no longer valid. Please enter it again.');
           } else if (response.ok && data.ok) {
-            // Successful lookup — remember the password for next time.
-            try { localStorage.setItem(STORAGE_KEY, password); } catch (e) {}
-            storedPassword = password;
-            passwordRow.style.display = 'none';
-            passwordInput.required = false;
             var safeName = String(data.filename).replace(/[<>"']/g, '');
             showResult(data.url, safeName, data.size);
           } else {
@@ -289,8 +362,8 @@
         } catch (err) {
           showError('Network error. Please try again.');
         } finally {
-          submitBtn.disabled = false;
-          submitBtn.textContent = 'Find QA Sheet';
+          invoiceSubmit.disabled = false;
+          invoiceSubmit.textContent = 'Find QA Sheet';
         }
       });
     })();
