@@ -91,8 +91,13 @@
         </p>
 
         <form class="contact-form" id="ceflaForm" novalidate>
+          <div id="cf-password-row">
+            <label for="cf-password">Access password</label>
+            <input type="password" id="cf-password" name="password" placeholder="Enter access password" autocomplete="current-password" required>
+          </div>
+
           <label for="cf-invoice">Invoice number</label>
-          <input type="text" id="cf-invoice" name="invoice" placeholder="e.g. 12345" autocomplete="off" autofocus required>
+          <input type="text" id="cf-invoice" name="invoice" placeholder="e.g. 12345" autocomplete="off" required>
 
           <div id="cf-error" style="display:none; font-size:var(--text-sm); color:#c0392b; background:#fdf0ef; border:1px solid #f5c6c4; border-radius:8px; padding:0.75rem 1rem; margin-bottom:0.75rem;"></div>
 
@@ -172,11 +177,27 @@
 
   <script>
     (function () {
-      var form     = document.getElementById('ceflaForm');
-      var input    = document.getElementById('cf-invoice');
-      var submitBtn = document.getElementById('cf-submit');
-      var errorBox  = document.getElementById('cf-error');
-      var resultBox = document.getElementById('cf-result');
+      var STORAGE_KEY = 'cefla-pw';
+
+      var form         = document.getElementById('ceflaForm');
+      var input        = document.getElementById('cf-invoice');
+      var passwordRow  = document.getElementById('cf-password-row');
+      var passwordInput = document.getElementById('cf-password');
+      var submitBtn    = document.getElementById('cf-submit');
+      var errorBox     = document.getElementById('cf-error');
+      var resultBox    = document.getElementById('cf-result');
+
+      // If the user has already passed the password gate, skip the field
+      // and put focus on the invoice input instead.
+      var storedPassword = '';
+      try { storedPassword = localStorage.getItem(STORAGE_KEY) || ''; } catch (e) {}
+      if (storedPassword) {
+        passwordRow.style.display = 'none';
+        passwordInput.required = false;
+        input.focus();
+      } else {
+        passwordInput.focus();
+      }
 
       function showError(msg) {
         resultBox.style.display = 'none';
@@ -221,6 +242,12 @@
         e.preventDefault();
         clearMessages();
 
+        var password = storedPassword || passwordInput.value;
+        if (!password) {
+          showError('Please enter the access password.');
+          return;
+        }
+
         // Strip spaces, dashes, and dots — users often type "190 551" or "190-551".
         var invoice = input.value.replace(/[\s.\-]/g, '');
         if (!invoice) {
@@ -235,11 +262,25 @@
           var response = await fetch('/api/cefla-download', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ invoice: invoice })
+            body: JSON.stringify({ invoice: invoice, password: password })
           });
           var data = await response.json();
 
-          if (response.ok && data.ok) {
+          if (response.status === 401) {
+            // Password rejected — wipe any stored copy and re-prompt.
+            try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+            storedPassword = '';
+            passwordRow.style.display = '';
+            passwordInput.required = true;
+            passwordInput.value = '';
+            passwordInput.focus();
+            showError(data.error || 'Incorrect password.');
+          } else if (response.ok && data.ok) {
+            // Successful lookup — remember the password for next time.
+            try { localStorage.setItem(STORAGE_KEY, password); } catch (e) {}
+            storedPassword = password;
+            passwordRow.style.display = 'none';
+            passwordInput.required = false;
             var safeName = String(data.filename).replace(/[<>"']/g, '');
             showResult(data.url, safeName, data.size);
           } else {

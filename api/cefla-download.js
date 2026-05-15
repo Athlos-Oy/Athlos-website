@@ -1,15 +1,33 @@
 // Vercel serverless function — looks up a UFS QA sheet in Azure Blob Storage
 // by invoice number and returns a time-limited SAS download URL.
 //
-// Required env var: AZURE_SAS_TOKEN  (the read-only, container-scoped SAS,
-//                                     WITHOUT a leading "?")
-// Optional env vars: AZURE_ACCOUNT   (default: "athlosshare")
-//                    AZURE_CONTAINER (default: "ufsqa")
+// Required env vars: AZURE_SAS_TOKEN  (the read-only, container-scoped SAS,
+//                                      WITHOUT a leading "?")
+//                    CEFLA_PASSWORD   (shared password gate for the form)
+// Optional env vars: AZURE_ACCOUNT    (default: "athlosshare")
+//                    AZURE_CONTAINER  (default: "ufsqa")
 
 export default async function handler(req, res) {
   if (req.method !== 'POST' && req.method !== 'GET') {
     res.setHeader('Allow', 'GET, POST');
     return res.status(405).json({ ok: false, error: 'Method not allowed.' });
+  }
+
+  const expectedPassword = process.env.CEFLA_PASSWORD;
+  if (!expectedPassword) {
+    return res.status(500).json({
+      ok: false,
+      error: 'Server is not configured. Please contact info@athlos.fi.',
+    });
+  }
+
+  const providedPassword = String(
+    (req.method === 'POST' ? req.body?.password : req.query?.password) ?? ''
+  );
+  if (providedPassword !== expectedPassword) {
+    return res
+      .status(401)
+      .json({ ok: false, error: 'Incorrect password.' });
   }
 
   const raw =
