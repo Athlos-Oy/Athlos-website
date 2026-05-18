@@ -31,3 +31,18 @@ images/*.png
 !images/Nuts*.png
 !images/Walnuts*.png
 !images/Chip*.png
+
+# ────────────────────────────────────────────────────────────────
+# Eleventy build artefacts and Node dependencies.
+# The Phase 1 multilingual refactor lives in src/ and builds to
+# _site/. Production still serves the repo-root *.html files
+# (vercel.json pins framework/build to null). Excluding the
+# Eleventy artefacts keeps the deploy bundle clean and prevents
+# Vercel from accidentally serving _site/ output.
+# ────────────────────────────────────────────────────────────────
+node_modules/
+_site/
+src/
+eleventy.config.js
+package.json
+package-lock.json

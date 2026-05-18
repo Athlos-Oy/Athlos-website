@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ lang or 'en' }}">
+<head>
+{% include "partials/head-meta.njk" %}
+{% include "partials/jsonld-organization.njk" -%}
+{%- for partial in extraJsonld %}
+{% include partial -%}
+{%- endfor %}
+{% include "partials/head-fonts-styles.njk" %}
+{% include "partials/head-analytics.njk" %}
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.gtmId }}"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- NAVIGATION -->
+{% include "partials/nav.njk" %}
+
+  <main>
+{{ content | safe }}
+  </main>
+
+{% include "partials/footer.njk" %}
+
+  <script src="{{ (nav.prefix or '') }}js/script.js"></script>
+  <script src="/js/cookie-banner.js"></script>
+</body>
+</html>

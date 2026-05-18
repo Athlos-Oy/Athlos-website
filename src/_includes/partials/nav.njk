@@ -1,0 +1,40 @@
+{#
+  Top navigation + mobile menu.
+  Path prefix (e.g. "../" for pages under /products/) is passed in via the
+  `nav.prefix` variable. Defaults to "" (root pages).
+#}
+{% set p = nav.prefix or "" %}
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="{{ p }}index.html" class="nav-logo" aria-label="Athlos home">
+        <img src="{{ p }}images/athlos-logo.png" width="1536" height="1024" alt="Athlos" class="nav-logo-png">
+        <span class="nav-logo-text" aria-hidden="true">ATHLOS</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="{{ p }}index.html" class="nav-link">Home</a>
+        <div class="nav-item has-dropdown">
+          <a href="{{ p }}products/index.html" class="nav-link">Products <svg class="nav-link-chevron" viewBox="0 0 10 10" fill="none" width="10" height="10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="nav-dropdown">
+            <a href="{{ p }}products/wios.html" class="nav-dropdown-link">DC-Air&reg;</a>
+            <a href="{{ p }}products/ufs.html" class="nav-dropdown-link">Ultra-Fast Scanning Sensor</a>
+            <a href="{{ p }}products/ufs-ip67.html" class="nav-dropdown-link">Industrial IP67 TDI</a>
+            <a href="{{ p }}products/manufacturing.html" class="nav-dropdown-link">Manufacturing Services</a>
+            <a href="{{ p }}products/software.html" class="nav-dropdown-link">Software Products</a>
+          </div>
+        </div>
+        <a href="{{ p }}applications.html" class="nav-link">Applications</a>
+        <a href="{{ p }}about.html" class="nav-link">About</a>
+      </nav>
+      <a href="{{ p }}contact.html" class="nav-cta">Contact</a>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile-menu" id="mobileMenu">
+      <a href="{{ p }}index.html" class="nav-mobile-link">Home</a>
+      <a href="{{ p }}products/index.html" class="nav-mobile-link">Products</a>
+      <a href="{{ p }}applications.html" class="nav-mobile-link">Applications</a>
+      <a href="{{ p }}about.html" class="nav-mobile-link">About</a>
+      <a href="{{ p }}contact.html" class="nav-mobile-link nav-mobile-cta">Contact</a>
+    </div>
+  </header>

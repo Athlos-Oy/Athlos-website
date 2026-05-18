@@ -1,0 +1,45 @@
+{% set p = nav.prefix or "" %}
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo-wrap">
+            <img src="{{ p }}images/athlos-logo.png" width="1536" height="1024" alt="Athlos" class="footer-logo" loading="lazy">
+          </div>
+          <p class="footer-tagline">{{ site.legalName }}<br>{{ site.address.street }}<br>{{ site.address.postalDisplay }} {{ site.address.city }}<br>{{ site.address.countryName }}<br><br>Business ID {{ site.businessId }} &nbsp;&middot;&nbsp; VAT {{ site.vat }}</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-col">
+            <span class="footer-col-label">Products</span>
+            <a href="{{ p }}products/wios.html" class="footer-link">DC-Air&reg;</a>
+            <a href="{{ p }}products/ufs.html" class="footer-link">Ultra-Fast Scanning Sensor</a>
+            <a href="{{ p }}products/ufs-ip67.html" class="footer-link">Industrial IP67 TDI</a>
+            <a href="{{ p }}products/manufacturing.html" class="footer-link">Manufacturing Services</a>
+            <a href="{{ p }}products/software.html" class="footer-link">Software Products</a>
+          </div>
+          <div class="footer-col">
+            <span class="footer-col-label">Applications</span>
+            <a href="{{ p }}applications.html#dental" class="footer-link">Dental Imaging</a>
+            <a href="{{ p }}applications.html#industrial" class="footer-link">Industrial Inspection</a>
+            <a href="{{ p }}applications.html#medical" class="footer-link">Medical Imaging</a>
+          </div>
+          <div class="footer-col">
+            <span class="footer-col-label">Company</span>
+            <a href="{{ p }}about.html" class="footer-link">About Athlos</a>
+            <a href="{{ p }}products/manufacturing.html" class="footer-link">Manufacturing</a>
+          </div>
+          <div class="footer-col">
+            <span class="footer-col-label">Contact</span>
+            <a href="mailto:{{ site.email }}" class="footer-link">{{ site.email }}</a>
+            <a href="{{ site.linkedinFull }}" class="footer-link" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="{{ p }}privacy.html" class="footer-link">Privacy Policy</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 {{ site.legalName }}. All rights reserved. Made in Finland.</p>
+        <p class="footer-cert">ISO 13485:2016 Certified</p>
+        <p class="footer-legal">{{ site.address.street }} &nbsp;&middot;&nbsp; {{ site.address.postalDisplay }} {{ site.address.city }}, {{ site.address.countryName }} &nbsp;&middot;&nbsp; Business ID {{ site.businessId }} &nbsp;&middot;&nbsp; VAT {{ site.vat }}</p>
+      </div>
+    </div>
+  </footer>
