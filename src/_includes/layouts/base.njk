@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ lang or 'en' }}">
 <head>
-{% include "partials/head-meta.njk" %}
+{% include "partials/head-meta.njk" -%}
+{%- if includeOrganizationJsonld %}
 {% include "partials/jsonld-organization.njk" -%}
-{%- for partial in extraJsonld %}
-{% include partial -%}
-{%- endfor %}
+{%- endif -%}
+{%- if jsonldHead %}
+{{ jsonldHead | indent(2, true) | safe }}
+{%- endif %}
 {% include "partials/head-fonts-styles.njk" %}
 {% include "partials/head-analytics.njk" %}
 </head>
@@ -15,16 +17,34 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- NAVIGATION -->
+{%- if navComment %}
+  <!-- {{ navComment }} -->
+{%- endif %}
 {% include "partials/nav.njk" %}
 
+{%- if omitMain %}
+{{ content | safe }}
+{%- else %}
   <main>
 {{ content | safe }}
   </main>
+{%- endif %}
+{%- if not omitFooter %}
 
 {% include "partials/footer.njk" %}
+{%- endif %}
+{%- if jsonldBody %}
 
-  <script src="{{ (nav.prefix or '') }}js/script.js"></script>
+{{ jsonldBody | safe }}
+{%- endif %}
+
+  <script src="{{ (nav.prefix or '') }}{{ scriptJs or 'js/script.js' }}"></script>
+{%- if extraScriptsBeforeCookieBanner %}
+{{ extraScriptsBeforeCookieBanner | safe }}
+{%- endif %}
   <script src="/js/cookie-banner.js"></script>
+{%- if trailingScripts %}
+{{ trailingScripts | safe }}
+{%- endif %}
 </body>
 </html>

@@ -10,7 +10,7 @@
         <img src="{{ p }}images/athlos-logo.png" width="1536" height="1024" alt="Athlos" class="nav-logo-png">
         <span class="nav-logo-text" aria-hidden="true">ATHLOS</span>
       </a>
-      <nav class="nav-links" aria-label="Main navigation">
+      <nav class="nav-links"{% if not (nav.prefix) %} aria-label="Main navigation"{% endif %}>
         <a href="{{ p }}index.html" class="nav-link">Home</a>
         <div class="nav-item has-dropdown">
           <a href="{{ p }}products/index.html" class="nav-link">Products <svg class="nav-link-chevron" viewBox="0 0 10 10" fill="none" width="10" height="10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>

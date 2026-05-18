@@ -25,7 +25,6 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("applications.html");
   eleventyConfig.addPassthroughCopy("cefla.html");
   eleventyConfig.addPassthroughCopy("contact.html");
-  eleventyConfig.addPassthroughCopy("privacy.html");
   eleventyConfig.addPassthroughCopy("products");
 
   // Root-level non-HTML assets served as-is.
