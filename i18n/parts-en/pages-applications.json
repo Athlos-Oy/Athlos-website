@@ -1,0 +1,123 @@
+{
+  "pages": {
+    "applications": {
+      "hero": {
+        "eyebrow": "Application Areas",
+        "headline": "X-Ray Imaging Applications",
+        "sub": "Direct conversion X-ray imaging sensors for demanding dental, industrial, and medical workflows."
+      },
+      "intro": {
+        "eyebrow": "Application Areas",
+        "headline": "Proven across key application areas — and beyond.",
+        "body": "Athlos sensors are deployed in demanding environments where image quality, reliability, and precision are non-negotiable. The following are representative application areas — direct conversion technology is suited to a wide range of imaging challenges beyond those shown here."
+      },
+      "cards": {
+        "dental": {
+          "imageAlt": "Direct conversion X-ray sensor application – dental intraoral and panoramic imaging",
+          "title": "Dental Imaging",
+          "uses": {
+            "intraoral": "Intraoral X-ray imaging",
+            "panoramic": "Panoramic &amp; cephalometric",
+            "wireless": "Wireless sensor workflow",
+            "lowDose": "Low-dose diagnostics"
+          },
+          "linkWios": "DC-Air&reg; intraoral sensor &rarr;",
+          "linkUfs": "Ultra-Fast Scanning Sensor &rarr;"
+        },
+        "medical": {
+          "imageAlt": "Direct conversion X-ray sensor application – medical imaging and diagnostics",
+          "title": "Medical Imaging",
+          "uses": {
+            "ceph": "Cephalometric &amp; OPG",
+            "custom": "Custom medical modalities",
+            "sensitivity": "High sensitivity at low dose",
+            "cdte": "CdTe direct conversion"
+          },
+          "linkUfs": "Ultra-Fast Scanning Sensor &rarr;"
+        },
+        "food": {
+          "imageAlt": "Inline X-ray inspection for food and beverage foreign object detection and quality control",
+          "title": "Food &amp; Beverage",
+          "uses": {
+            "foreign": "Foreign object detection",
+            "seal": "Seal integrity inspection",
+            "fill": "Fill-level verification",
+            "count": "Object counting"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "pharma": {
+          "imageAlt": "X-ray inspection for pharmaceutical product safety, fill-level, and seal integrity",
+          "title": "Pharmaceutical",
+          "uses": {
+            "nondestructive": "Non-destructive product testing",
+            "foreign": "Foreign object detection",
+            "seal": "Seal and fill-level inspection",
+            "safety": "Product safety and quality"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "oilGas": {
+          "imageAlt": "X-ray non-destructive testing for oil and gas pipeline weld and corrosion inspection",
+          "title": "Oil &amp; Gas",
+          "uses": {
+            "pipe": "Pipe inspection for cracks",
+            "weld": "Weld inspection",
+            "ct": "Industrial CT",
+            "corrosion": "Corrosion assessment"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "automotive": {
+          "imageAlt": "X-ray non-destructive testing for automotive metal casting and component integrity",
+          "title": "Automotive",
+          "uses": {
+            "tire": "Tire quality inspection",
+            "casting": "Metal casting inspection",
+            "integrity": "Metal part integrity",
+            "assembly": "Assembly verification"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "electronics": {
+          "imageAlt": "X-ray inspection for PCB assembly, SMT verification, and electronics manufacturing",
+          "title": "Electronics",
+          "uses": {
+            "pcb": "PCB inspection",
+            "count": "Component counting",
+            "reel": "Reel component inspection",
+            "smt": "SMT assembly verification"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "heavy": {
+          "imageAlt": "X-ray non-destructive testing for structural welds and heavy industry applications",
+          "title": "Heavy Industry",
+          "uses": {
+            "weld": "Structural weld inspection",
+            "porosity": "Pipe porosity &amp; crack detection",
+            "ct": "Industrial CT applications",
+            "ndt": "Large-scale NDT"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        }
+      },
+      "directConversion": {
+        "eyebrow": "Why Direct Conversion",
+        "headline": "No scintillator. No compromise.",
+        "body": "Conventional X-ray sensors convert X-rays to visible light first, then detect the light. Each step introduces noise, resolution loss, and energy waste. Athlos sensors convert X-ray photons directly to charge — eliminating the scintillator entirely. The result is sharper images, better sensitivity, and wider dynamic range across all applications.",
+        "cta": "Explore the product range"
+      },
+      "cta": {
+        "headline": "Discuss your application.",
+        "body": "Not sure which product fits your imaging requirements? Athlos works with OEMs and system integrators to find the right technical path. Let's start with your application.",
+        "button": "Contact Athlos"
+      },
+      "lastUpdated": {
+        "label": "Last updated:",
+        "date": "15 April 2026",
+        "datetime": "2026-04-15"
+      }
+    }
+  }
+}

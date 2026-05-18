@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="{{ lang or 'en' }}">
+<head>
+{% include "partials/head-meta.njk" -%}
+{%- if includeOrganizationJsonld %}
+{% include "partials/jsonld-organization.njk" -%}
+{%- endif -%}
+{%- if jsonldHead %}
+{{ jsonldHead | indent(2, true) | safe }}
+{%- endif -%}
+{%- if jsonldHeadPartials %}
+{%- for partial in jsonldHeadPartials %}
+{% include partial -%}
+{%- endfor %}
+{%- endif %}
+{% include "partials/head-fonts-styles.njk" %}
+{% include "partials/head-analytics.njk" %}
+{%- if jsonldHeadAfterAnalyticsPartials %}
+{%- for partial in jsonldHeadAfterAnalyticsPartials %}
+
+{% include partial -%}
+{%- endfor %}
+{%- endif %}
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.gtmId }}"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+{%- if navComment %}
+  <!-- {{ navComment }} -->
+{%- endif %}
+{% include "partials/nav.njk" %}
+
+{%- if omitMain %}
+{{ content | safe }}
+{%- else %}
+  <main>
+{{ content | safe }}
+  </main>
+{%- endif %}
+{%- if not omitFooter %}
+
+{% include "partials/footer.njk" %}
+{%- endif %}
+{%- if jsonldBody %}
+
+{{ jsonldBody | safe }}
+{%- endif %}
+
+  <script src="{{ (nav.prefix or '') }}{{ scriptJs or 'js/script.js' }}"></script>
+{%- if extraScriptsBeforeCookieBanner %}
+{{ extraScriptsBeforeCookieBanner | indent(2, true) | safe }}
+{%- endif %}
+  <script src="/js/cookie-banner.js"></script>
+{%- if trailingScripts %}
+{{ trailingScripts | safe }}
+{%- endif %}
+</body>
+</html>

@@ -1,0 +1,27 @@
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ site.legalName }}",
+  "url": "{{ site.url }}",
+  "logo": "{{ site.url }}/images/athlos-logo.png",
+  "email": "{{ site.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.address.street }}",
+    "addressLocality": "{{ site.address.city }}",
+    "postalCode": "{{ site.address.postalCode }}",
+    "addressCountry": "{{ site.address.country }}"
+  },
+  "sameAs": [
+    "{{ site.linkedin }}"
+  ],
+  "description": "Athlos Oy is a Finnish X-ray imaging technology company specialising in direct conversion CdTe-CMOS and Si-CMOS sensors for dental, medical, and industrial applications.",
+  "areaServed": "Worldwide",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "{{ site.email }}",
+    "contactType": "sales"
+  }
+}
+  </script>

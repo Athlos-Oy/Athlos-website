@@ -1,0 +1,226 @@
+---
+layout: layouts/base.njk
+permalink: /applications.html
+lang: en
+pageKey: applications
+canonical: https://athlos.fi/applications.html
+og:
+  type: website
+  image: https://athlos.fi/images/app-hero-applications.webp
+  imageWidth: 5504
+  imageHeight: 3072
+twitter:
+  image: https://athlos.fi/images/app-hero-applications.webp
+stylesheets:
+  - css/style.css
+  - css/products.css
+preloadImage: /images/app-hero-applications.webp
+includeOrganizationJsonld: true
+jsonldHead: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"What applications are Athlos X-ray sensors used for?","acceptedAnswer":{"@type":"Answer","text":"Athlos direct conversion X-ray sensors are used across three main application areas: dental imaging (intraoral, panoramic, and cephalometric), medical imaging (OPG, cephalometric, and custom medical modalities requiring high sensitivity at low dose), and industrial inspection (food & beverage foreign-object detection, pharmaceutical seal and fill inspection, oil & gas weld inspection, automotive casting inspection, PCB/SMT electronics inspection, and heavy-industry NDT and CT)."}},
+      {"@type":"Question","name":"Which Athlos product fits dental intraoral imaging?","acceptedAnswer":{"@type":"Answer","text":"The DC-Air® wireless intraoral sensor — Si-CMOS direct conversion, Bluetooth 5.0 wireless, Zero Profile® holders, up to 300 X-rays per battery charge, enhanced IP67 protection. FDA 510(k) cleared."}},
+      {"@type":"Question","name":"Which Athlos product fits dental panoramic and cephalometric imaging?","acceptedAnswer":{"@type":"Answer","text":"The Ultra-Fast Scanning Sensor — an ultra-fast CdTe-CMOS direct conversion linear scanning sensor for dental panoramic and cephalometric imaging, as well as medical and industrial X-ray inspection. Single-photon sensitivity. Three models with selectable active widths."}},
+      {"@type":"Question","name":"Which Athlos product fits industrial inline inspection?","acceptedAnswer":{"@type":"Answer","text":"The Industrial IP67 TDI — an IP67-rated ultra-fast TDI scanning detector for continuous inline inspection. No active cooling required. Used for food & beverage foreign-object detection, pharmaceutical fill/seal inspection, oil & gas weld inspection, automotive casting, PCB/SMT verification, and large-scale NDT."}},
+      {"@type":"Question","name":"Why does direct conversion matter?","acceptedAnswer":{"@type":"Answer","text":"Conventional X-ray sensors convert X-rays to visible light via a scintillator, then detect the light. Each step introduces blur, signal loss, and energy waste. Direct conversion converts X-ray photons directly into electric charge, removing the scintillator step — yielding sharper images, higher contrast, wider dynamic range, and better low-dose performance."}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://athlos.fi/"},
+      {"@type": "ListItem", "position": 2, "name": "Applications", "item": "https://athlos.fi/applications.html"}
+    ]
+  }
+  </script>
+nav:
+  prefix: ""
+navComment: NAV
+omitMain: true
+---
+  <main>
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="page-hero-bg" style="background-image: url('images/app-hero-applications.webp'); background-position: center;"></div>
+      <div class="page-hero-overlay" style="background: linear-gradient(120deg, rgba(10,18,24,0.70) 40%, rgba(20,35,48,0.35) 100%);"></div>
+      <div class="page-hero-content">
+        <span class="product-category">{{ "pages.applications.hero.eyebrow" | t }}</span>
+        <h1 style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight:700; color:var(--white); line-height:1.1; margin-bottom:1rem;">{{ "pages.applications.hero.headline" | t }}</h1>
+        <p style="font-size:var(--text-md); font-weight:300; color:rgba(255,255,255,0.75); max-width:540px; line-height:1.7;">
+          {{ "pages.applications.hero.sub" | t }}
+        </p>
+      </div>
+    </section>
+
+    <!-- INTRO + APPLICATION CARDS -->
+    <section style="padding: var(--section-py) 0; background: var(--white);">
+      <div class="container">
+        <p class="section-eyebrow reveal">{{ "pages.applications.intro.eyebrow" | t }}</p>
+        <h2 class="section-headline reveal">{{ "pages.applications.intro.headline" | t }}</h2>
+        <p class="reveal" style="font-size:var(--text-base); font-weight:300; color:var(--gray-steel); line-height:1.8; max-width:640px; margin-bottom:3rem;">
+          {{ "pages.applications.intro.body" | t }}
+        </p>
+        <div class="application-cards-grid">
+
+          <!-- Dental Imaging -->
+          <article class="application-card reveal" id="dental">
+            <img src="images/app-dental.webp" width="6000" height="4000" alt="{{ "pages.applications.cards.dental.imageAlt" | t }}" class="application-card-img" loading="lazy">
+            <div class="application-card-body">
+              <h3 class="application-card-title">{{ "pages.applications.cards.dental.title" | t }}</h3>
+              <ul class="application-card-uses">
+                <li>{{ "pages.applications.cards.dental.uses.intraoral" | t }}</li>
+                <li>{{ "pages.applications.cards.dental.uses.panoramic" | t }}</li>
+                <li>{{ "pages.applications.cards.dental.uses.wireless" | t }}</li>
+                <li>{{ "pages.applications.cards.dental.uses.lowDose" | t }}</li>
+              </ul>
+              <a href="products/wios.html" class="product-link" style="margin-top:1rem;display:inline-block;">{{ "pages.applications.cards.dental.linkWios" | t }}</a><br><a href="products/ufs.html" class="product-link" style="display:inline-block;">{{ "pages.applications.cards.dental.linkUfs" | t }}</a>
+            </div>
+          </article>
+
+          <!-- Medical Imaging -->
+          <article class="application-card reveal" id="medical">
+            <img src="images/app-medical.webp" width="5568" height="3712" alt="{{ "pages.applications.cards.medical.imageAlt" | t }}" class="application-card-img" loading="lazy">
+            <div class="application-card-body">
+              <h3 class="application-card-title">{{ "pages.applications.cards.medical.title" | t }}</h3>
+              <ul class="application-card-uses">
+                <li>{{ "pages.applications.cards.medical.uses.ceph" | t }}</li>
+                <li>{{ "pages.applications.cards.medical.uses.custom" | t }}</li>
+                <li>{{ "pages.applications.cards.medical.uses.sensitivity" | t }}</li>
+                <li>{{ "pages.applications.cards.medical.uses.cdte" | t }}</li>
+              </ul>
+              <a href="products/ufs.html" class="product-link" style="margin-top:1rem;display:inline-block;">{{ "pages.applications.cards.medical.linkUfs" | t }}</a>
+            </div>
+          </article>
+
+          <!-- Food & Beverage -->
+          <article class="application-card reveal" id="industrial">
+            <img src="images/app-food.webp" width="4240" height="2832" alt="{{ "pages.applications.cards.food.imageAlt" | t }}" class="application-card-img" loading="lazy">
+            <div class="application-card-body">
+              <h3 class="application-card-title">{{ "pages.applications.cards.food.title" | t }}</h3>
+              <ul class="application-card-uses">
+                <li>{{ "pages.applications.cards.food.uses.foreign" | t }}</li>
+                <li>{{ "pages.applications.cards.food.uses.seal" | t }}</li>
+                <li>{{ "pages.applications.cards.food.uses.fill" | t }}</li>
+                <li>{{ "pages.applications.cards.food.uses.count" | t }}</li>
+              </ul>
+              <a href="products/ufs-ip67.html" class="product-link" style="margin-top:1rem;display:inline-block;">{{ "pages.applications.cards.food.linkIp67" | t }}</a>
+            </div>
+          </article>
+
+          <!-- Pharmaceutical -->
+          <article class="application-card reveal">
+            <img src="images/app-pharma.webp" width="6720" height="4480" alt="{{ "pages.applications.cards.pharma.imageAlt" | t }}" class="application-card-img" loading="lazy">
+            <div class="application-card-body">
+              <h3 class="application-card-title">{{ "pages.applications.cards.pharma.title" | t }}</h3>
+              <ul class="application-card-uses">
+                <li>{{ "pages.applications.cards.pharma.uses.nondestructive" | t }}</li>
+                <li>{{ "pages.applications.cards.pharma.uses.foreign" | t }}</li>
+                <li>{{ "pages.applications.cards.pharma.uses.seal" | t }}</li>
+                <li>{{ "pages.applications.cards.pharma.uses.safety" | t }}</li>
+              </ul>
+              <a href="products/ufs-ip67.html" class="product-link" style="margin-top:1rem;display:inline-block;">{{ "pages.applications.cards.pharma.linkIp67" | t }}</a>
+            </div>
+          </article>
+
+          <!-- Oil & Gas -->
+          <article class="application-card reveal">
+            <img src="images/app-oil-gas.webp" width="5327" height="3545" alt="{{ "pages.applications.cards.oilGas.imageAlt" | t }}" class="application-card-img" loading="lazy">
+            <div class="application-card-body">
+              <h3 class="application-card-title">{{ "pages.applications.cards.oilGas.title" | t }}</h3>
+              <ul class="application-card-uses">
+                <li>{{ "pages.applications.cards.oilGas.uses.pipe" | t }}</li>
+                <li>{{ "pages.applications.cards.oilGas.uses.weld" | t }}</li>
+                <li>{{ "pages.applications.cards.oilGas.uses.ct" | t }}</li>
+                <li>{{ "pages.applications.cards.oilGas.uses.corrosion" | t }}</li>
+              </ul>
+              <a href="products/ufs-ip67.html" class="product-link" style="margin-top:1rem;display:inline-block;">{{ "pages.applications.cards.oilGas.linkIp67" | t }}</a>
+            </div>
+          </article>
+
+          <!-- Automotive -->
+          <article class="application-card reveal">
+            <img src="images/app-automotive.webp" width="5476" height="3651" alt="{{ "pages.applications.cards.automotive.imageAlt" | t }}" class="application-card-img" loading="lazy">
+            <div class="application-card-body">
+              <h3 class="application-card-title">{{ "pages.applications.cards.automotive.title" | t }}</h3>
+              <ul class="application-card-uses">
+                <li>{{ "pages.applications.cards.automotive.uses.tire" | t }}</li>
+                <li>{{ "pages.applications.cards.automotive.uses.casting" | t }}</li>
+                <li>{{ "pages.applications.cards.automotive.uses.integrity" | t }}</li>
+                <li>{{ "pages.applications.cards.automotive.uses.assembly" | t }}</li>
+              </ul>
+              <a href="products/ufs-ip67.html" class="product-link" style="margin-top:1rem;display:inline-block;">{{ "pages.applications.cards.automotive.linkIp67" | t }}</a>
+            </div>
+          </article>
+
+          <!-- Electronics -->
+          <article class="application-card reveal">
+            <img src="images/app-electronics.webp" width="6000" height="4000" alt="{{ "pages.applications.cards.electronics.imageAlt" | t }}" class="application-card-img" loading="lazy">
+            <div class="application-card-body">
+              <h3 class="application-card-title">{{ "pages.applications.cards.electronics.title" | t }}</h3>
+              <ul class="application-card-uses">
+                <li>{{ "pages.applications.cards.electronics.uses.pcb" | t }}</li>
+                <li>{{ "pages.applications.cards.electronics.uses.count" | t }}</li>
+                <li>{{ "pages.applications.cards.electronics.uses.reel" | t }}</li>
+                <li>{{ "pages.applications.cards.electronics.uses.smt" | t }}</li>
+              </ul>
+              <a href="products/ufs-ip67.html" class="product-link" style="margin-top:1rem;display:inline-block;">{{ "pages.applications.cards.electronics.linkIp67" | t }}</a>
+            </div>
+          </article>
+
+          <!-- Heavy Industry -->
+          <article class="application-card reveal">
+            <img src="images/app-heavy-industry.webp" width="4032" height="3024" alt="{{ "pages.applications.cards.heavy.imageAlt" | t }}" class="application-card-img" loading="lazy">
+            <div class="application-card-body">
+              <h3 class="application-card-title">{{ "pages.applications.cards.heavy.title" | t }}</h3>
+              <ul class="application-card-uses">
+                <li>{{ "pages.applications.cards.heavy.uses.weld" | t }}</li>
+                <li>{{ "pages.applications.cards.heavy.uses.porosity" | t }}</li>
+                <li>{{ "pages.applications.cards.heavy.uses.ct" | t }}</li>
+                <li>{{ "pages.applications.cards.heavy.uses.ndt" | t }}</li>
+              </ul>
+              <a href="products/ufs-ip67.html" class="product-link" style="margin-top:1rem;display:inline-block;">{{ "pages.applications.cards.heavy.linkIp67" | t }}</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DIRECT CONVERSION EXPLAINER -->
+    <section style="padding: var(--section-py) 0; background: var(--charcoal);">
+      <div class="container" style="max-width:800px; text-align:center;">
+        <p class="section-eyebrow section-eyebrow--light reveal">{{ "pages.applications.directConversion.eyebrow" | t }}</p>
+        <h2 class="section-headline section-headline--light reveal">{{ "pages.applications.directConversion.headline" | t }}</h2>
+        <p class="reveal" style="font-size:var(--text-md); font-weight:300; line-height:1.8; color:rgba(255,255,255,0.7); margin-bottom:1.5rem;">
+          {{ "pages.applications.directConversion.body" | t }}
+        </p>
+        <a href="products/index.html" class="btn btn-outline">{{ "pages.applications.directConversion.cta" | t }}</a>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-inner">
+          <h2 class="cta-headline reveal">{{ "pages.applications.cta.headline" | t }}</h2>
+          <p class="cta-body reveal">{{ "pages.applications.cta.body" | t }}</p>
+          <div class="cta-actions reveal">
+            <a href="contact.html" class="btn btn-primary btn-large">{{ "pages.applications.cta.button" | t }}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <p style="max-width:1280px;margin:0 auto;padding:0 clamp(1.5rem,5vw,5rem) clamp(2rem,4vw,3rem);font-size:0.75rem;font-weight:400;letter-spacing:0.04em;color:#8C959B;text-align:center;">{{ "pages.applications.lastUpdated.label" | t }} <time datetime="{{ "pages.applications.lastUpdated.datetime" | t }}" style="font-weight:500;color:#263035;">{{ "pages.applications.lastUpdated.date" | t }}</time></p>
+
+  </main>
+
+  <!-- FOOTER -->

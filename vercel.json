@@ -1,4 +1,8 @@
 {
+  "framework": null,
+  "installCommand": "npm install",
+  "buildCommand": "npx @11ty/eleventy",
+  "outputDirectory": "_site",
   "redirects": [
     { "source": "/:path*", "has": [{ "type": "host", "value": "www.athlos.fi" }], "destination": "https://athlos.fi/:path*", "permanent": true },
 

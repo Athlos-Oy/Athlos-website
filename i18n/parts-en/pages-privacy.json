@@ -1,0 +1,142 @@
+{
+  "pages": {
+    "privacy": {
+      "hero": {
+        "category": "Legal",
+        "headline": "Privacy Policy",
+        "sub": "How Athlos Oy collects, processes, and protects your personal data."
+      },
+      "intro": {
+        "updatedLabel": "Updated:",
+        "updatedDate": "15.04.2026",
+        "body1": "In this privacy notice (the \"Privacy Notice\"), we explain how Athlos Oy (\"we\" or \"us\") collects, processes and shares your personal data and what your rights are in relation to your personal data.",
+        "body2": "When processing personal data, we will always act in accordance with the applicable legislation. In particular, we comply with the General Data Protection Regulation (2016/679)."
+      },
+      "controller": {
+        "heading": "Controller",
+        "details": "Athlos Oy<br>\n          Business ID: 2752258-9<br>\n          Klovinpellontie 1–3, 02180 Espoo, Finland<br>\n          Contact: <a href=\"mailto:info@athlos.fi\" style=\"color:var(--gray-steel);\">info@athlos.fi</a>",
+        "subjectScope": "As a data subject, you may be a visitor to our website, a representative of our potential or existing customer or a job applicant.",
+        "contextIntro": "This Privacy Notice concerns the processing of personal data in the following contexts:",
+        "items": [
+          "Visits to <a href=\"https://athlos.fi/\" style=\"color:var(--gray-steel);\">https://athlos.fi/</a>",
+          "The processing of personal data of the representatives of our customers, suppliers and other stakeholders",
+          "The processing of personal data of job applicants"
+        ]
+      },
+      "purposes": {
+        "heading": "Purposes for Processing",
+        "intro": "We will process your personal data only for the purposes described in this Privacy Notice and only to the extent necessary.",
+        "visitors": {
+          "label": "Website visitors:",
+          "items": [
+            "Enabling the use of the website and ensuring its security and functionality",
+            "Improving our website through analytics",
+            "Marketing analytics and personalised marketing",
+            "Other legitimate business interests"
+          ]
+        },
+        "representatives": {
+          "label": "Representatives:",
+          "items": [
+            "Business relationship management",
+            "Complying with requirements of applicable law",
+            "Ensuring and monitoring compliance",
+            "Billing",
+            "Communicating with you and third parties",
+            "Sending marketing communications",
+            "Other legitimate business interests"
+          ]
+        },
+        "applicants": {
+          "label": "Job applicants:",
+          "items": [
+            "Recruitment process",
+            "Future recruitment needs (with consent)"
+          ]
+        }
+      },
+      "categories": {
+        "heading": "Categories of Personal Data",
+        "visitors": {
+          "label": "Website visitors:",
+          "items": [
+            "Information related to the use of the website (IP address, cookies, website activity, time of visit)",
+            "Customer service information",
+            "Contact information (name, email address, phone number)"
+          ]
+        },
+        "representatives": {
+          "label": "Representatives:",
+          "items": [
+            "Contact information",
+            "Specifics related to the business relationship",
+            "Contents of communications with us"
+          ]
+        },
+        "applicants": {
+          "label": "Job applicants:",
+          "items": [
+            "Recruitment information (name, contact details, education, work experience, CV, salary expectations)"
+          ]
+        }
+      },
+      "legalBasis": {
+        "heading": "Legal Basis",
+        "intro": "The processing of personal data is based on the following legal bases:",
+        "items": [
+          "Legitimate interest (Article 6(1)(f) GDPR) for website functionality, business relationship management, compliance, billing, communications, and other business interests",
+          "Consent (Article 6(1)(a) GDPR) for non-essential cookies, marketing analytics, and future recruitment",
+          "Legal obligation (Article 6(1)(c) GDPR) for tax and corporate compliance",
+          "Contractual necessity (Article 6(1)(b) GDPR) for recruitment processes"
+        ]
+      },
+      "cookies": {
+        "heading": "Cookies and Analytics",
+        "body1": "We may use cookies and tags on our website. A cookie is a text file stored on your browser or device. You can change your browser settings regarding cookies.",
+        "body2": "We use <strong>Google Analytics 4</strong> (provided by Google LLC, USA) and <strong>Google Tag Manager</strong> to collect anonymous analytics data about how visitors use our website — such as pages visited, time spent, traffic sources, and device type. This data helps us improve the website. Analytics cookies are only placed after you have given your explicit consent via the cookie banner on our website.",
+        "body3": "Google Analytics data is processed by Google LLC and may be transferred to servers in the United States under Standard Contractual Clauses. You can learn more at <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gray-steel);\">policies.google.com/privacy</a>. You can opt out at any time by clicking \"Decline\" on the cookie banner or by using the <a href=\"https://tools.google.com/dlpage/gaoptout\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gray-steel);\">Google Analytics Opt-out Browser Add-on</a>."
+      },
+      "sources": {
+        "heading": "Sources of Personal Data",
+        "body": "We primarily obtain your personal data directly from you. We may also collect data from publicly available sources and automatically through cookies when you visit our website."
+      },
+      "retention": {
+        "heading": "Retention",
+        "body": "We retain personal data only as long as necessary. For website visitors, data is primarily processed during your visit. Contact inquiries are retained for two years. For representatives, data is retained for the duration of the business relationship. For job applicants, data is processed for the duration of the recruitment process."
+      },
+      "disclosures": {
+        "heading": "Disclosures and Transfers",
+        "body": "We may disclose your personal data to trusted service providers, public authorities where required by law, or in connection with business reorganizations. When transferring data outside the EU/EEA, we comply with applicable legislation including standard contractual clauses (SCCs) adopted by the European Commission. We may transfer personal data to the United States of America."
+      },
+      "security": {
+        "heading": "Data Security",
+        "intro": "We have put in place appropriate technical and organisational measures:",
+        "items": [
+          "Access to data is limited to authorised personnel",
+          "Information systems are protected by firewalls and passwords",
+          "Staff are trained to handle data appropriately",
+          "Electronic files are regularly backed up",
+          "Destruction of personal data is carried out securely"
+        ]
+      },
+      "rights": {
+        "heading": "Your Rights",
+        "intro": "Under GDPR, you have the following rights:",
+        "items": [
+          "Access to your personal data",
+          "Rectification of inaccurate data",
+          "Erasure of your personal data (\"right to be forgotten\")",
+          "Data portability",
+          "Objection to processing",
+          "Restriction of processing",
+          "Withdrawal of consent"
+        ],
+        "contact": "To exercise your rights, contact us at <a href=\"mailto:info@athlos.fi\" style=\"color:var(--gray-steel);\">info@athlos.fi</a>. If you believe our processing violates data protection laws, you have the right to lodge a complaint with a supervisory authority."
+      },
+      "changes": {
+        "heading": "Changes",
+        "body": "We reserve the right to amend or update this Privacy Notice as necessary."
+      }
+    }
+  }
+}

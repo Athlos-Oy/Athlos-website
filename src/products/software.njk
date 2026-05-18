@@ -1,0 +1,116 @@
+---
+navScrolled: true
+layout: layouts/base.njk
+permalink: /products/software.html
+lang: en
+pageKey: productsSoftware
+canonical: https://athlos.fi/products/software.html
+og:
+  type: website
+  image: https://athlos.fi/images/software_image_homepage.webp
+  imageWidth: 5760
+  imageHeight: 3840
+twitter:
+  image: https://athlos.fi/images/software_image_homepage.webp
+fontUrl: https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap
+stylesheets:
+  - css/style.css
+  - css/products.css
+preloadImage: /images/solutions-software.webp
+nav:
+  prefix: "../"
+scriptJs: js/products.js
+jsonldHeadPartials:
+  - partials/product-jsonld/software-1.njk
+jsonldHeadAfterAnalyticsPartials:
+  - partials/product-jsonld/software-2.njk
+activeProduct: software
+omitMain: true
+---
+{% include "partials/product-subnav.njk" %}
+
+  <main>
+
+    <!-- 1. HERO -->
+    <section class="product-hero" style="min-height:55vh;">
+      <div class="product-hero-bg" style="background-image: url('../images/solutions-software.webp'); background-position:center;"></div>
+      <div class="product-hero-overlay" style="background:linear-gradient(120deg, rgba(10,18,24,0.70) 40%, rgba(20,35,48,0.35) 100%);"></div>
+      <div class="product-hero-gradient"></div>
+      <div class="product-hero-content container">
+        <span class="product-category">{{ "pages.productsSoftware.hero.category" | t }}</span>
+        <h1>{{ "pages.productsSoftware.hero.headline" | t }}</h1>
+        <p class="product-hero-tagline">{{ "pages.productsSoftware.hero.tagline" | t }}</p>
+      </div>
+    </section>
+
+    <!-- 2. OVERVIEW -->
+    <section style="padding: var(--section-py) 0; background: var(--white);">
+      <div class="container">
+        <div style="max-width:720px; margin:0 auto;">
+          <span class="section-eyebrow reveal">{{ "pages.productsSoftware.overview.eyebrow" | t }}</span>
+          <h2 class="reveal">{{ "pages.productsSoftware.overview.headline" | t }}</h2>
+          <p class="reveal">{{ "pages.productsSoftware.overview.body1" | t }}</p>
+          <p class="reveal">{{ "pages.productsSoftware.overview.body2" | t }}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SOFTWARE COMPONENTS -->
+    <section style="padding: var(--section-py) 0; background: var(--off-white);">
+      <div class="container">
+        <span class="section-eyebrow reveal">{{ "pages.productsSoftware.components.eyebrow" | t }}</span>
+        <h2 class="reveal">{{ "pages.productsSoftware.components.headline" | t }}</h2>
+        <div class="highlights-grid">
+          <div class="highlight-card reveal" data-delay="0">
+            <span class="highlight-number">01</span>
+            <h3 class="highlight-title">{{ "pages.productsSoftware.components.cards.twain.title" | t }}</h3>
+            <p class="highlight-body">{{ "pages.productsSoftware.components.cards.twain.body" | t }}</p>
+          </div>
+          <div class="highlight-card reveal" data-delay="80">
+            <span class="highlight-number">02</span>
+            <h3 class="highlight-title">{{ "pages.productsSoftware.components.cards.reconstruction.title" | t }}</h3>
+            <p class="highlight-body">{{ "pages.productsSoftware.components.cards.reconstruction.body" | t }}</p>
+          </div>
+          <div class="highlight-card reveal" data-delay="160">
+            <span class="highlight-number">03</span>
+            <h3 class="highlight-title">{{ "pages.productsSoftware.components.cards.postProcessing.title" | t }}</h3>
+            <p class="highlight-body">{{ "pages.productsSoftware.components.cards.postProcessing.body" | t }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SDK CALLOUT -->
+    <section style="padding: var(--section-py) 0; background: var(--white);">
+      <div class="container">
+        <div class="sdk-callout reveal">
+          <div class="sdk-callout-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M8 9l-4 3 4 3M16 9l4 3-4 3M14 6l-4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="sdk-callout-body">
+            <strong>{{ "pages.productsSoftware.sdk.title" | t }}</strong>
+            <span>{{ "pages.productsSoftware.sdk.body" | t }}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CTA -->
+    <section class="product-cta" id="contact">
+      <div class="container">
+        <div class="product-cta-inner">
+          <h2 class="reveal">{{ "pages.productsSoftware.cta.headline" | t }}</h2>
+          <p class="reveal">{{ "pages.productsSoftware.cta.body" | t }}</p>
+          <div class="reveal" style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+            <a href="../contact.html" class="btn btn-primary btn-large">{{ "pages.productsSoftware.cta.buttonContact" | t }}</a>
+            <a href="index.html" class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);">{{ "pages.productsSoftware.cta.buttonAll" | t }}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <p style="max-width:1280px;margin:0 auto;padding:0 clamp(1.5rem,5vw,5rem) clamp(2rem,4vw,3rem);font-size:0.75rem;font-weight:400;letter-spacing:0.04em;color:#8C959B;text-align:center;">{{ "pages.productsSoftware.lastUpdated.label" | t }} <time datetime="{{ "pages.productsSoftware.lastUpdated.datetime" | t }}" style="font-weight:500;color:#263035;">{{ "pages.productsSoftware.lastUpdated.date" | t }}</time></p>
+
+  </main>

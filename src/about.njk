@@ -1,0 +1,199 @@
+---
+layout: layouts/base.njk
+permalink: /about.html
+lang: en
+pageKey: about
+canonical: https://athlos.fi/about.html
+og:
+  type: website
+  image: https://athlos.fi/images/hero-cleanroom-worker.webp
+  imageWidth: 5504
+  imageHeight: 3072
+twitter:
+  image: https://athlos.fi/images/hero-cleanroom-worker.webp
+fontUrl: https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,300;1,14..32,400&display=swap
+stylesheets:
+  - css/style.css
+  - css/products.css
+preloadImage: /images/hero-cleanroom-worker.webp
+includeOrganizationJsonld: true
+jsonldHead: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Konstantinos Spartiotis",
+    "jobTitle": "Founder and CEO, Athlos Oy",
+    "worksFor": {"@type": "Organization", "name": "Athlos Oy", "url": "https://athlos.fi"},
+    "description": "Founder and CEO of Athlos Oy. Pioneered direct conversion CdTe X-ray imaging in 1993. Founder of Simage Oy (1993) and Ajat Oy (2001, later Varex Imaging Finland). Holds dozens of patents in direct conversion, CdTe contact technology, and photon counting.",
+    "alumniOf": [
+      {"@type": "CollegeOrUniversity", "name": "Johns Hopkins University"},
+      {"@type": "Organization", "name": "CERN"}
+    ],
+    "knowsAbout": [
+      "Direct conversion X-ray imaging",
+      "CdTe sensor technology",
+      "Photon counting detectors",
+      "CMOS readout ASICs",
+      "Dental panoramic and cephalometric imaging"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"When was Athlos founded, and what is its heritage?","acceptedAnswer":{"@type":"Answer","text":"Athlos continues a lineage of direct conversion X-ray imaging that started in 1993. Founder Konstantinos Spartiotis launched Simage Oy in 1993 after work at CERN and his PhD at Johns Hopkins University, and later founded Ajat Oy in 2001. Ajat grew into the global standard for direct conversion CdTe-CMOS dental panoramic and cephalometric imaging before being acquired by XCounter and subsequently Varex Imaging."}},
+      {"@type":"Question","name":"Who is Konstantinos Spartiotis?","acceptedAnswer":{"@type":"Answer","text":"Konstantinos Spartiotis is the founder and CEO of Athlos Oy. He founded Simage Oy in 1993 and Ajat Oy in 2001, and is credited with pioneering direct conversion CdTe X-ray imaging. He holds dozens of patents in direct conversion, CdTe contact technology, and photon counting, and previously worked at CERN and completed his PhD at Johns Hopkins University."}},
+      {"@type":"Question","name":"Where does Athlos manufacture its sensors?","acceptedAnswer":{"@type":"Answer","text":"Athlos manufactures in Espoo, Finland — in-house and at the VTT Micronova cleanroom, one of Europe's most advanced nanofabrication facilities. This gives Athlos direct control of the full detector chain: CMOS wafer bumping, flip-chip bonding, detector assembly, and characterization."}},
+      {"@type":"Question","name":"What certifications does Athlos hold?","acceptedAnswer":{"@type":"Answer","text":"Athlos operates an ISO 13485:2016 certified quality management system. The DC-Air® wireless intraoral sensor is FDA 510(k) cleared for dental intraoral X-ray imaging."}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://athlos.fi/"},
+      {"@type": "ListItem", "position": 2, "name": "About", "item": "https://athlos.fi/about.html"}
+    ]
+  }
+  </script>
+nav:
+  prefix: ""
+navComment: NAV
+omitMain: true
+---
+  <main>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('images/hero-cleanroom-worker.webp'); background-position: center 30%;"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <span class="product-category">{{ "pages.about.hero.eyebrow" | t }}</span>
+      <h1 style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight:700; color:var(--white); line-height:1.1; margin-bottom:1rem;">{{ "pages.about.hero.headline" | t }}</h1>
+      <p style="font-size:var(--text-md); font-weight:300; color:rgba(255,255,255,0.75); max-width:580px; line-height:1.7;">
+        {{ "pages.about.hero.sub" | t }}
+      </p>
+    </div>
+  </section>
+
+  <!-- WHO WE ARE -->
+  <section style="padding: var(--section-py) 0; background: var(--white);">
+    <div class="container">
+
+      <div class="stat-bar reveal">
+        <div class="stat-bar-item">
+          <div class="stat-bar-number">{{ "pages.about.stats.invented.number" | t }}</div>
+          <div class="stat-bar-label">{{ "pages.about.stats.invented.label" | t }}</div>
+        </div>
+        <div class="stat-bar-item">
+          <div class="stat-bar-number">{{ "pages.about.stats.expertise.number" | t }}</div>
+          <div class="stat-bar-label">{{ "pages.about.stats.expertise.label" | t }}</div>
+        </div>
+        <div class="stat-bar-item">
+          <div class="stat-bar-number">{{ "pages.about.stats.partners.number" | t }}</div>
+          <div class="stat-bar-label">{{ "pages.about.stats.partners.label" | t }}</div>
+        </div>
+        <div class="stat-bar-item">
+          <div class="stat-bar-number">{{ "pages.about.stats.iso.number" | t }}</div>
+          <div class="stat-bar-label">{{ "pages.about.stats.iso.label" | t }}</div>
+        </div>
+      </div>
+
+      <div style="max-width:760px; margin-top: clamp(3rem, 6vw, 5rem);">
+        <p class="section-eyebrow reveal">{{ "pages.about.whoWeAre.eyebrow" | t }}</p>
+        <h2 class="section-headline reveal" style="font-size:var(--text-2xl);">{{ "pages.about.whoWeAre.headline" | t }}</h2>
+        <p class="reveal" style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); margin-bottom:1.5rem;">
+          {{ "pages.about.whoWeAre.body1" | t }}
+        </p>
+        <p class="reveal" style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel);">
+          {{ "pages.about.whoWeAre.body2" | t }}
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- THE ORIGIN -->
+  <section style="padding: var(--section-py) 0; background: var(--off-white);">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <p class="section-eyebrow reveal">{{ "pages.about.origin.eyebrow" | t }}</p>
+          <h2 class="section-headline reveal" style="font-size:var(--text-2xl);">{{ "pages.about.origin.headline" | t }}</h2>
+          <p class="reveal" style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); margin-bottom:1rem;">
+            {{ "pages.about.origin.body1" | t }}
+          </p>
+          <p class="reveal" style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); margin-bottom:1rem;">
+            {{ "pages.about.origin.body2" | t }}
+          </p>
+          <p class="reveal" style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel);">
+            {{ "pages.about.origin.body3" | t }}
+          </p>
+
+          <aside id="konstantinos-spartiotis" itemscope itemtype="https://schema.org/Person" style="display:flex;align-items:flex-start;gap:1rem;padding:1.25rem 1.5rem;margin:2rem 0 0;border-left:3px solid #43A1D8;background:#F4F7F8;border-radius:0 8px 8px 0;">
+            <div aria-hidden="true" style="flex:0 0 auto;width:44px;height:44px;border-radius:50%;background:#2B82B8;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:0.875rem;letter-spacing:0.04em;">{{ "pages.about.origin.author.initials" | t }}</div>
+            <div style="font-size:0.875rem;font-weight:300;line-height:1.6;color:#8C959B;">
+              {{ "pages.about.origin.author.intro" | t }} <span itemprop="name" style="font-weight:600;color:#263035;">{{ "pages.about.origin.author.name" | t }}</span> &mdash;
+              <span itemprop="jobTitle">{{ "pages.about.origin.author.jobTitle" | t }}</span>.
+              {{ "pages.about.origin.author.bio" | t }} <span itemprop="alumniOf">{{ "pages.about.origin.author.alumniHopkins" | t }}</span>{{ "pages.about.origin.author.alumniMid" | t }} <span itemprop="alumniOf">{{ "pages.about.origin.author.alumniCern" | t }}</span>.
+              {{ "pages.about.origin.author.patents" | t }}
+              <span style="display:block;font-size:0.75rem;margin-top:0.15rem;color:#8C959B;">{{ "pages.about.origin.author.source" | t }}</span>
+            </div>
+          </aside>
+        </div>
+        <img src="images/hero-process.webp" width="5504" height="3072" alt="{{ "pages.about.origin.imageAlt" | t }}" loading="lazy" class="about-img reveal">
+      </div>
+    </div>
+  </section>
+
+  <!-- MANUFACTURING & FACILITIES -->
+  <section style="padding: var(--section-py) 0; background: var(--charcoal);">
+    <div class="container">
+      <p class="section-eyebrow reveal" style="color: var(--cyan);">{{ "pages.about.facilities.eyebrow" | t }}</p>
+      <h2 class="section-headline reveal" style="font-size:var(--text-2xl); color: var(--white);">{{ "pages.about.facilities.headline" | t }}</h2>
+      <p class="reveal" style="font-size:var(--text-base); font-weight:300; line-height:1.8; color: rgba(255,255,255,0.65); margin-bottom:1rem; max-width:760px;">
+        {{ "pages.about.facilities.body1" | t }}
+      </p>
+      <p class="reveal" style="font-size:var(--text-base); font-weight:300; line-height:1.8; color: rgba(255,255,255,0.65); margin-bottom: clamp(2.5rem, 5vw, 4rem); max-width:760px;">
+        {{ "pages.about.facilities.body2" | t }}
+      </p>
+      <div class="highlights-grid">
+        <div class="highlight-card reveal">
+          <h3 class="highlight-title">{{ "pages.about.facilities.pillars.cleanroom.title" | t }}</h3>
+          <p class="highlight-body">{{ "pages.about.facilities.pillars.cleanroom.body" | t }}</p>
+        </div>
+        <div class="highlight-card reveal" data-delay="80">
+          <h3 class="highlight-title">{{ "pages.about.facilities.pillars.expertise.title" | t }}</h3>
+          <p class="highlight-body">{{ "pages.about.facilities.pillars.expertise.body" | t }}</p>
+        </div>
+        <div class="highlight-card reveal" data-delay="160">
+          <h3 class="highlight-title">{{ "pages.about.facilities.pillars.iso.title" | t }}</h3>
+          <p class="highlight-body">{{ "pages.about.facilities.pillars.iso.body" | t }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner">
+        <h2 class="cta-headline reveal">{{ "pages.about.cta.headline" | t }}</h2>
+        <p class="cta-body reveal">{{ "pages.about.cta.body" | t }}</p>
+        <div class="cta-actions reveal">
+          <a href="contact.html" class="btn btn-primary btn-large">{{ "pages.about.cta.button" | t }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <p style="max-width:1280px;margin:0 auto;padding:0 clamp(1.5rem,5vw,5rem) clamp(2rem,4vw,3rem);font-size:0.75rem;font-weight:400;letter-spacing:0.04em;color:#8C959B;text-align:center;">{{ "pages.about.lastUpdated.label" | t }} <time datetime="{{ "pages.about.lastUpdated.datetime" | t }}" style="font-weight:500;color:#263035;">{{ "pages.about.lastUpdated.date" | t }}</time></p>
+
+  </main>
+
+  <!-- FOOTER -->

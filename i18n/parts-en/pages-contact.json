@@ -1,0 +1,58 @@
+{
+  "pages": {
+    "contact": {
+      "hero": {
+        "eyebrow": "Get in Touch",
+        "headline": "Contact Athlos",
+        "sub": "Product enquiries, OEM integration, licensing, or manufacturing partnership — we respond promptly."
+      },
+      "details": {
+        "eyebrow": "Direct Contact",
+        "headline": "We respond to every enquiry.",
+        "intro": "Athlos works directly with OEMs, system integrators, distributors, and clinical partners. Whether you have a specific technical question or just want to start a conversation — reach out.",
+        "emailLabel": "Email",
+        "addressLabel": "Address",
+        "addressValue": "Klovinpellontie 1–3, Tower 2<br>FIN-02180 Espoo, Finland",
+        "responseLabel": "Response time",
+        "responseValue": "We aim to respond within 1 business day."
+      },
+      "form": {
+        "eyebrow": "Send a Message",
+        "nameLabel": "Name",
+        "namePlaceholder": "Your name",
+        "emailLabel": "Email",
+        "emailPlaceholder": "your@email.com",
+        "companyLabel": "Company",
+        "companyPlaceholder": "Company name",
+        "topicLabel": "Topic",
+        "topicPlaceholder": "Select a topic...",
+        "topicOptions": {
+          "dcAir": "Product enquiry — DC-Air®",
+          "ufs": "Product enquiry — Ultra-Fast Scanning Sensor",
+          "ufsIp67": "Product enquiry — Industrial IP67 TDI",
+          "oem": "OEM / System Integration",
+          "software": "Software Licensing",
+          "manufacturing": "Manufacturing Services",
+          "distribution": "Distribution Partnership",
+          "other": "Other"
+        },
+        "messageLabel": "Message",
+        "messagePlaceholder": "Tell us about your project or question...",
+        "submit": "Send Message"
+      },
+      "success": {
+        "title": "Message received.",
+        "body": "Thank you for reaching out. A member of the Athlos team will review your enquiry and respond within one business day.",
+        "close": "Close"
+      },
+      "errors": {
+        "validation": "Please fill in your name, email address, and message.",
+        "generic": "Something went wrong. Please try again or email us directly at info@athlos.fi.",
+        "network": "Unable to send your message. Please try again or email us directly at info@athlos.fi.",
+        "sending": "Sending…",
+        "subjectFallback": "General enquiry",
+        "contactEmailLabel": "Contact email"
+      }
+    }
+  }
+}

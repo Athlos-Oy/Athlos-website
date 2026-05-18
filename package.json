@@ -1,0 +1,24 @@
+{
+  "name": "athlos-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Athlos Oy marketing website",
+  "type": "module",
+  "scripts": {
+    "dev": "eleventy --serve --quiet",
+    "build": "eleventy",
+    "clean": "rm -rf _site",
+    "diff:index": "diff -u index.html _site/index.html || true",
+    "test:visual": "playwright test",
+    "test:visual:update": "playwright test --update-snapshots",
+    "test:visual:report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@playwright/test": "^1.56.0",
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

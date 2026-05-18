@@ -1,0 +1,185 @@
+---
+layout: layouts/base.njk
+permalink: /products/index.html
+lang: en
+pageKey: productsIndex
+canonical: https://athlos.fi/products/
+og:
+  type: website
+  image: https://athlos.fi/images/products-hero-main.webp
+  imageWidth: 5504
+  imageHeight: 3072
+twitter:
+  image: https://athlos.fi/images/products-hero-main.webp
+stylesheets:
+  - css/style.css
+  - css/products.css
+includeOrganizationJsonld: true
+jsonldHead: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Athlos X-Ray Imaging Product Portfolio",
+    "numberOfItems": 5,
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "item": {"@type": "Product", "name": "DC-Air®", "url": "https://athlos.fi/products/wios.html", "category": "Wireless Intraoral Dental X-Ray Sensor", "description": "Fully wireless Si-CMOS direct conversion intraoral X-ray sensor with Bluetooth 5.0, Zero Profile® holders, and FDA 510(k) clearance."}},
+      {"@type": "ListItem", "position": 2, "item": {"@type": "Product", "name": "Ultra-Fast Scanning Sensor", "url": "https://athlos.fi/products/ufs.html", "category": "X-Ray Linear Scanning Sensor", "description": "Single-photon-sensitive CdTe-CMOS linear scanning sensor for dental panoramic, cephalometric, medical, and industrial imaging."}},
+      {"@type": "ListItem", "position": 3, "item": {"@type": "Product", "name": "Industrial IP67 TDI", "url": "https://athlos.fi/products/ufs-ip67.html", "category": "Industrial X-Ray TDI Detector", "description": "IP67-rated ultra-fast TDI scanning detector for continuous inline industrial inspection, with no active cooling required."}},
+      {"@type": "ListItem", "position": 4, "item": {"@type": "Service", "name": "Manufacturing Services", "url": "https://athlos.fi/products/manufacturing.html", "serviceType": "Contract detector manufacturing", "description": "CMOS wafer bumping, flip-chip bonding, wire bonding, die assembly, and detector characterization at Athlos and VTT Micronova."}},
+      {"@type": "ListItem", "position": 5, "item": {"@type": "Product", "name": "Software Products", "url": "https://athlos.fi/products/software.html", "category": "X-Ray Imaging Software", "description": "TWAIN module, reconstruction algorithm libraries, post-processing filters, and SDK for integration with TWAIN-enabled imaging platforms."}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://athlos.fi/"},
+      {"@type": "ListItem", "position": 2, "name": "Products", "item": "https://athlos.fi/products/"}
+    ]
+  }
+  </script>
+nav:
+  prefix: "../"
+navComment: NAV
+omitMain: true
+scriptJs: js/products.js
+---
+  <main>
+
+    <!-- HERO -->
+    <div class="products-landing-hero">
+      <div class="products-landing-hero-bg" style="background-image: url('../images/products-hero-main.webp')"></div>
+      <div class="products-landing-hero-overlay"></div>
+      <div class="products-landing-hero-content">
+        <p class="section-eyebrow section-eyebrow--light reveal">{{ "pages.productsIndex.hero.eyebrow" | t }}</p>
+        <h1 class="reveal">{{ "pages.productsIndex.hero.headline" | t }}</h1>
+        <p class="products-landing-intro reveal">
+          {{ "pages.productsIndex.hero.intro" | t }}
+        </p>
+      </div>
+    </div>
+
+    <!-- PRODUCT PANELS -->
+    <section class="product-panels">
+      <div class="product-panels-grid">
+
+        <a href="wios.html" class="product-panel">
+          <div class="product-panel-bg" style="background-image: url('../images/wios-sensor-docking-black.png'); background-position: center 35%;"></div>
+          <div class="product-panel-overlay"></div>
+          <div class="product-panel-content">
+            <span class="panel-market">{{ "pages.productsIndex.cards.wios.market" | t }}</span>
+            <h2 class="panel-name">{{ "pages.productsIndex.cards.wios.name" | t }}</h2>
+            <p class="panel-desc">{{ "pages.productsIndex.cards.wios.desc" | t }}</p>
+            <span class="panel-link">{{ "pages.productsIndex.cards.wios.link" | t }} →</span>
+          </div>
+        </a>
+
+        <a href="ufs.html" class="product-panel">
+          <div class="product-panel-bg" style="background-image: url('../images/ufs-dark.webp');"></div>
+          <div class="product-panel-overlay"></div>
+          <div class="product-panel-content">
+            <span class="panel-market">{{ "pages.productsIndex.cards.ufs.market" | t }}</span>
+            <h2 class="panel-name">{{ "pages.productsIndex.cards.ufs.name" | t }}</h2>
+            <p class="panel-desc">{{ "pages.productsIndex.cards.ufs.desc" | t }}</p>
+            <span class="panel-link">{{ "pages.productsIndex.cards.ufs.link" | t }} →</span>
+          </div>
+        </a>
+
+        <a href="ufs-ip67.html" class="product-panel">
+          <div class="product-panel-bg" style="background-image: url('../images/ip67-carbon.webp');"></div>
+          <div class="product-panel-overlay"></div>
+          <div class="product-panel-content">
+            <span class="panel-market">{{ "pages.productsIndex.cards.ufsIp67.market" | t }}</span>
+            <h2 class="panel-name">{{ "pages.productsIndex.cards.ufsIp67.name" | t }}</h2>
+            <p class="panel-desc">{{ "pages.productsIndex.cards.ufsIp67.desc" | t }}</p>
+            <span class="panel-link">{{ "pages.productsIndex.cards.ufsIp67.link" | t }} →</span>
+          </div>
+        </a>
+
+        <a href="manufacturing.html" class="product-panel">
+          <div class="product-panel-bg" style="background-image: url('../images/manufacturing-wafer-1.webp'); background-position: center;"></div>
+          <div class="product-panel-overlay"></div>
+          <div class="product-panel-content">
+            <span class="panel-market">{{ "pages.productsIndex.cards.manufacturing.market" | t }}</span>
+            <h2 class="panel-name">{{ "pages.productsIndex.cards.manufacturing.name" | t }}</h2>
+            <p class="panel-desc">{{ "pages.productsIndex.cards.manufacturing.desc" | t }}</p>
+            <span class="panel-link">{{ "pages.productsIndex.cards.manufacturing.link" | t }} →</span>
+          </div>
+        </a>
+
+        <a href="software.html" class="product-panel panel-solutions">
+          <div class="product-panel-bg" style="background-image: url('../images/software_image_homepage.webp'); background-position: center;"></div>
+          <div class="product-panel-overlay"></div>
+          <div class="product-panel-content">
+            <span class="panel-market">{{ "pages.productsIndex.cards.software.market" | t }}</span>
+            <h2 class="panel-name">{{ "pages.productsIndex.cards.software.name" | t }}</h2>
+            <p class="panel-desc">{{ "pages.productsIndex.cards.software.desc" | t }}</p>
+            <span class="panel-link">{{ "pages.productsIndex.cards.software.link" | t }} →</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="categories-section">
+      <div class="container">
+        <p class="section-eyebrow reveal">{{ "pages.productsIndex.categories.eyebrow" | t }}</p>
+        <h2 class="section-headline reveal" style="max-width:560px">{{ "pages.productsIndex.categories.headline" | t }}</h2>
+        <div class="categories-grid">
+
+          <div class="category-block reveal">
+            <span class="category-label">{{ "pages.productsIndex.categories.dental.label" | t }}</span>
+            <h3 class="category-name">{{ "pages.productsIndex.categories.dental.name" | t }}</h3>
+            <ul class="category-products">
+              <li><a href="wios.html">{{ "pages.productsIndex.categories.dental.items.wios" | t }}</a></li>
+              <li><a href="ufs.html">{{ "pages.productsIndex.categories.dental.items.ufs" | t }}</a></li>
+            </ul>
+          </div>
+
+          <div class="category-block reveal" data-delay="80">
+            <span class="category-label">{{ "pages.productsIndex.categories.industrial.label" | t }}</span>
+            <h3 class="category-name">{{ "pages.productsIndex.categories.industrial.name" | t }}</h3>
+            <ul class="category-products">
+              <li><a href="ufs-ip67.html">{{ "pages.productsIndex.categories.industrial.items.ufsIp67" | t }}</a></li>
+              <li><a href="ufs.html">{{ "pages.productsIndex.categories.industrial.items.ufs" | t }}</a></li>
+            </ul>
+          </div>
+
+          <div class="category-block reveal" data-delay="160">
+            <span class="category-label">{{ "pages.productsIndex.categories.services.label" | t }}</span>
+            <h3 class="category-name">{{ "pages.productsIndex.categories.services.name" | t }}</h3>
+            <ul class="category-products">
+              <li><a href="software.html">{{ "pages.productsIndex.categories.services.items.software" | t }}</a></li>
+              <li><a href="software.html">{{ "pages.productsIndex.categories.services.items.twain" | t }}</a></li>
+              <li><a href="software.html">{{ "pages.productsIndex.categories.services.items.filters" | t }}</a></li>
+              <li><a href="manufacturing.html">{{ "pages.productsIndex.categories.services.items.manufacturing" | t }}</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="product-cta" id="contact">
+      <div class="container">
+        <div class="product-cta-inner">
+          <p class="section-eyebrow section-eyebrow--light reveal">{{ "pages.productsIndex.cta.eyebrow" | t }}</p>
+          <h2 class="reveal">{{ "pages.productsIndex.cta.headline" | t }}</h2>
+          <p class="reveal">{{ "pages.productsIndex.cta.body" | t }}</p>
+          <div class="reveal">
+            <a href="../contact.html" class="btn btn-primary btn-large">{{ "pages.productsIndex.cta.button" | t }}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <p style="max-width:1280px;margin:0 auto;padding:0 clamp(1.5rem,5vw,5rem) clamp(2rem,4vw,3rem);font-size:0.75rem;font-weight:400;letter-spacing:0.04em;color:#8C959B;text-align:center;">{{ "pages.productsIndex.lastUpdated.label" | t }} <time datetime="{{ "pages.productsIndex.lastUpdated.datetime" | t }}" style="font-weight:500;color:#263035;">{{ "pages.productsIndex.lastUpdated.date" | t }}</time></p>
+
+  </main>
+
+  <!-- FOOTER -->

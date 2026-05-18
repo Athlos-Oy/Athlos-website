@@ -1,0 +1,85 @@
+{
+  "pages": {
+    "about": {
+      "hero": {
+        "eyebrow": "The Company",
+        "headline": "About Athlos",
+        "sub": "Advanced direct conversion X-ray imaging — built on over 30 years of applied expertise, cleanroom manufacturing, and a deep-rooted passion for sensor physics."
+      },
+      "stats": {
+        "invented": {
+          "number": "1993",
+          "label": "Our team invented direct conversion"
+        },
+        "expertise": {
+          "number": "35+",
+          "label": "Years of expertise"
+        },
+        "partners": {
+          "number": "Partners",
+          "label": "Global partner network"
+        },
+        "iso": {
+          "number": "ISO",
+          "label": "13485:2016 certified"
+        }
+      },
+      "whoWeAre": {
+        "eyebrow": "Who We Are",
+        "headline": "Sensor expertise, built over three and a half decades.",
+        "body1": "Athlos is a Finnish X-ray imaging technology company focused on direct conversion sensors — the technology that converts X-ray photons directly into electrical pulses, without a scintillator intermediate step. We develop, design, and manufacture imaging sensors based on CdTe-CMOS and Si-CMOS architectures for dental, medical, and industrial applications. We also offer manufacturing services and software products.",
+        "body2": "Our team has been at the centre of direct conversion imaging since its inception. In 1993, Konstantinos Spartiotis returned from his PhD at Johns Hopkins University and his contribution at CERN, and began the work that would define the field. Athlos carries that lineage forward."
+      },
+      "origin": {
+        "eyebrow": "Origin",
+        "headline": "We started direct conversion in 1993.",
+        "body1": "Konstantinos Spartiotis is the founder of Simage Oy (1993), Oy Ajat Ltd. in 2001 (renamed Oy Direct Conversion Ltd. on 26.10.2019, and Oy Varex Imaging Finland Ltd. since 1.8.2023). Simage Oy was one of the earliest companies in the world to work on direct conversion X-ray imaging using CdTe. The know-how developed there was foundational. Simage Oy was granted dozens of patents in direct conversion, CdTe contact technology, and photon counting. Simage cooperated closely for years with Acrorad, Japan, to make commercial-quality CdTe. Siemens then acquired Acrorad and the Simage Oy patent portfolio.",
+        "body2": "Ajat Oy became the global standard in direct conversion CdTe-CMOS dental panoramic and cephalometric imaging. Under his leadership, Ajat reached €12M in annual revenue, was highly profitable, and deployed thousands of units worldwide. Ajat Oy was sold to XCounter AB in 2009, and the group was later sold to Varex Imaging Inc. in 2019.",
+        "body3": "Athlos was founded to continue that tradition — with the same core team and new members to ensure continuity, the same technical depth and passion, and a new generation of direct conversion products: DC-Air&reg;, Ultra-Fast Scanning Sensor, and Industrial IP67 TDI, all manufactured in-house and at the VTT Micronova facility. Designed in Finland. Made in Finland.",
+        "author": {
+          "initials": "KS",
+          "intro": "About the author:",
+          "name": "Konstantinos Spartiotis",
+          "jobTitle": "Founder and CEO of Athlos Oy",
+          "bio": "Pioneered direct conversion CdTe X-ray imaging in 1993; founder of Simage Oy (1993) and Ajat Oy (2001, later Varex Imaging Finland).\n              PhD work at",
+          "alumniHopkins": "Johns Hopkins University",
+          "alumniMid": "; previously at",
+          "alumniCern": "CERN",
+          "patents": "Holds dozens of patents in direct conversion, CdTe contact technology, and photon counting.",
+          "source": "Source for the company history above."
+        },
+        "imageAlt": "Athlos sensor manufacturing process"
+      },
+      "facilities": {
+        "eyebrow": "Facilities",
+        "headline": "Built at VTT Micronova. Supported by deep process expertise.",
+        "body1": "Athlos has full access to the VTT Micronova cleanroom facility in Espoo — one of Europe's most advanced nanofabrication environments, located 10 minutes from Athlos headquarters.",
+        "body2": "This gives Athlos the ability to control the full manufacturing chain — from CMOS wafer bumping and flip chip bonding to detector assembly and characterization — without the capital overhead of a standalone cleanroom.",
+        "pillars": {
+          "cleanroom": {
+            "title": "Cleanroom Manufacturing",
+            "body": "In-house production and VTT Micronova access for nanofabrication, bump bonding, and sensor assembly under rigorous process controls."
+          },
+          "expertise": {
+            "title": "Direct CdTe &amp; Si Expertise",
+            "body": "Deep experience in CdTe and Si direct conversion detector integration — the result of 30+ years of applied R&amp;D across multiple product generations."
+          },
+          "iso": {
+            "title": "ISO 13485:2016",
+            "body": "Certified quality management system. Consistent product reliability and regulatory readiness for medical and industrial applications."
+          }
+        }
+      },
+      "cta": {
+        "headline": "Partner with Athlos.",
+        "body": "Whether you are integrating our sensors into your system, exploring distribution, or looking for a long-term manufacturing partner — we are ready to talk.",
+        "button": "Get in Touch"
+      },
+      "lastUpdated": {
+        "label": "Last updated:",
+        "date": "15 April 2026",
+        "datetime": "2026-04-15"
+      }
+    }
+  }
+}

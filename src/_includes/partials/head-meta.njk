@@ -1,0 +1,43 @@
+{#
+  Translatable head meta. Each page sets `pageKey` in front-matter
+  (e.g. pageKey: home); strings come from i18n/<locale>.json:
+    pages.<pageKey>.title
+    pages.<pageKey>.description
+    pages.<pageKey>.og.title
+    pages.<pageKey>.og.description
+    pages.<pageKey>.twitter.title
+    pages.<pageKey>.twitter.description
+  Non-translatable values stay in front-matter:
+    canonical, og.type, og.image[Width/Height], twitter.image
+#}
+{%- set _title = ("pages." + pageKey + ".title") | t -%}
+{%- set _desc  = ("pages." + pageKey + ".description") | t -%}
+{%- set _ogTitle = ("pages." + pageKey + ".og.title") | t -%}
+{%- set _ogDesc  = ("pages." + pageKey + ".og.description") | t -%}
+{%- set _twTitle = ("pages." + pageKey + ".twitter.title") | t -%}
+{%- set _twDesc  = ("pages." + pageKey + ".twitter.description") | t %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{%- if noindex %}
+  <meta name="robots" content="noindex, nofollow">
+{%- endif %}
+  <title>{{ _title | safe }}</title>
+  <meta name="description" content="{{ _desc | safe }}">
+{%- if not omitOg %}
+  <meta property="og:title" content="{{ _ogTitle | safe }}">
+  <meta property="og:description" content="{{ _ogDesc | safe }}">
+  <meta property="og:type" content="{{ og.type or 'website' }}">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:image" content="{{ og.image }}">
+{%- if og.imageWidth %}
+  <meta property="og:image:width" content="{{ og.imageWidth }}">
+  <meta property="og:image:height" content="{{ og.imageHeight }}">
+{%- endif %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ _twTitle | safe }}">
+  <meta name="twitter:description" content="{{ _twDesc | safe }}">
+  <meta name="twitter:image" content="{{ twitter.image or og.image }}">
+{%- endif %}
+  <link rel="canonical" href="{{ canonical }}">
+  <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">

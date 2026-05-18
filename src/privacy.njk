@@ -1,0 +1,188 @@
+---
+layout: layouts/base.njk
+permalink: /privacy.html
+lang: en
+pageKey: privacy
+canonical: https://athlos.fi/privacy.html
+og:
+  type: website
+  image: https://athlos.fi/images/hero-lab-automation.webp
+  imageWidth: 5504
+  imageHeight: 3072
+twitter:
+  image: https://athlos.fi/images/hero-lab-automation.webp
+fontUrl: https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,300;1,14..32,400&display=swap
+stylesheets:
+  - css/style.css
+  - css/products.css
+preloadImage: /images/hero-cleanroom-worker.webp
+includeOrganizationJsonld: true
+nav:
+  prefix: ""
+navComment: NAV
+omitMain: true
+---
+  <!-- PAGE HERO -->
+  <section class="page-hero" style="min-height:35vh;">
+    <div class="page-hero-bg" style="background-image: url('images/hero-cleanroom-worker.webp'); background-position: center 30%;"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <span class="product-category">{{ "pages.privacy.hero.category" | t }}</span>
+      <h1 style="font-size: clamp(2rem, 5vw, 3.5rem); font-weight:700; color:var(--white); line-height:1.1; margin-bottom:1rem;">{{ "pages.privacy.hero.headline" | t }}</h1>
+      <p style="font-size:var(--text-md); font-weight:300; color:rgba(255,255,255,0.75); max-width:580px; line-height:1.7;">
+        {{ "pages.privacy.hero.sub" | t }}
+      </p>
+    </div>
+  </section>
+
+  <!-- PRIVACY POLICY CONTENT -->
+  <section style="padding: var(--section-py) 0; background: var(--white);">
+    <div class="container">
+      <div style="max-width:760px;">
+
+        <p style="font-size:var(--text-sm); font-weight:400; color:var(--gray-steel); margin-bottom:2.5rem;">{{ "pages.privacy.intro.updatedLabel" | t }} {{ "pages.privacy.intro.updatedDate" | t }}</p>
+
+        <p style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); margin-bottom:1.5rem;">
+          {{ "pages.privacy.intro.body1" | t }}
+        </p>
+        <p style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); margin-bottom:3rem;">
+          {{ "pages.privacy.intro.body2" | t }}
+        </p>
+
+        <h2 class="section-headline" style="font-size:var(--text-lg); margin-bottom:1rem;">{{ "pages.privacy.controller.heading" | t }}</h2>
+        <p style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); margin-bottom:0.5rem;">
+          {{ "pages.privacy.controller.details" | t }}
+        </p>
+        <p style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); margin-bottom:1rem;">
+          {{ "pages.privacy.controller.subjectScope" | t }}
+        </p>
+        <p style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); margin-bottom:0.75rem;">
+          {{ "pages.privacy.controller.contextIntro" | t }}
+        </p>
+        <ul style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); padding-left:1.5rem; margin-bottom:3rem;">
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.controller.items.0" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.controller.items.1" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.controller.items.2" | t }}</li>
+        </ul>
+
+        <h2 class="section-headline" style="font-size:var(--text-lg); margin-bottom:1rem;">{{ "pages.privacy.purposes.heading" | t }}</h2>
+        <p style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); margin-bottom:1rem;">
+          {{ "pages.privacy.purposes.intro" | t }}
+        </p>
+        <p style="font-size:var(--text-base); font-weight:400; line-height:1.8; color:var(--gray-steel); margin-bottom:0.5rem;">{{ "pages.privacy.purposes.visitors.label" | t }}</p>
+        <ul style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); padding-left:1.5rem; margin-bottom:1.25rem;">
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.purposes.visitors.items.0" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.purposes.visitors.items.1" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.purposes.visitors.items.2" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.purposes.visitors.items.3" | t }}</li>
+        </ul>
+        <p style="font-size:var(--text-base); font-weight:400; line-height:1.8; color:var(--gray-steel); margin-bottom:0.5rem;">{{ "pages.privacy.purposes.representatives.label" | t }}</p>
+        <ul style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); padding-left:1.5rem; margin-bottom:1.25rem;">
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.purposes.representatives.items.0" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.purposes.representatives.items.1" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.purposes.representatives.items.2" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.purposes.representatives.items.3" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.purposes.representatives.items.4" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.purposes.representatives.items.5" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.purposes.representatives.items.6" | t }}</li>
+        </ul>
+        <p style="font-size:var(--text-base); font-weight:400; line-height:1.8; color:var(--gray-steel); margin-bottom:0.5rem;">{{ "pages.privacy.purposes.applicants.label" | t }}</p>
+        <ul style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); padding-left:1.5rem; margin-bottom:3rem;">
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.purposes.applicants.items.0" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.purposes.applicants.items.1" | t }}</li>
+        </ul>
+
+        <h2 class="section-headline" style="font-size:var(--text-lg); margin-bottom:1rem;">{{ "pages.privacy.categories.heading" | t }}</h2>
+        <p style="font-size:var(--text-base); font-weight:400; line-height:1.8; color:var(--gray-steel); margin-bottom:0.5rem;">{{ "pages.privacy.categories.visitors.label" | t }}</p>
+        <ul style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); padding-left:1.5rem; margin-bottom:1.25rem;">
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.categories.visitors.items.0" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.categories.visitors.items.1" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.categories.visitors.items.2" | t }}</li>
+        </ul>
+        <p style="font-size:var(--text-base); font-weight:400; line-height:1.8; color:var(--gray-steel); margin-bottom:0.5rem;">{{ "pages.privacy.categories.representatives.label" | t }}</p>
+        <ul style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); padding-left:1.5rem; margin-bottom:1.25rem;">
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.categories.representatives.items.0" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.categories.representatives.items.1" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.categories.representatives.items.2" | t }}</li>
+        </ul>
+        <p style="font-size:var(--text-base); font-weight:400; line-height:1.8; color:var(--gray-steel); margin-bottom:0.5rem;">{{ "pages.privacy.categories.applicants.label" | t }}</p>
+        <ul style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); padding-left:1.5rem; margin-bottom:3rem;">
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.categories.applicants.items.0" | t }}</li>
+        </ul>
+
+        <h2 class="section-headline" style="font-size:var(--text-lg); margin-bottom:1rem;">{{ "pages.privacy.legalBasis.heading" | t }}</h2>
+        <p style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); margin-bottom:0.75rem;">
+          {{ "pages.privacy.legalBasis.intro" | t }}
+        </p>
+        <ul style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); padding-left:1.5rem; margin-bottom:3rem;">
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.legalBasis.items.0" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.legalBasis.items.1" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.legalBasis.items.2" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.legalBasis.items.3" | t }}</li>
+        </ul>
+
+        <h2 class="section-headline" style="font-size:var(--text-lg); margin-bottom:1rem;">{{ "pages.privacy.cookies.heading" | t }}</h2>
+        <p style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); margin-bottom:1.5rem;">
+          {{ "pages.privacy.cookies.body1" | t }}
+        </p>
+        <p style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); margin-bottom:1.5rem;">
+          {{ "pages.privacy.cookies.body2" | t }}
+        </p>
+        <p style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); margin-bottom:3rem;">
+          {{ "pages.privacy.cookies.body3" | t }}
+        </p>
+
+        <h2 class="section-headline" style="font-size:var(--text-lg); margin-bottom:1rem;">{{ "pages.privacy.sources.heading" | t }}</h2>
+        <p style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); margin-bottom:3rem;">
+          {{ "pages.privacy.sources.body" | t }}
+        </p>
+
+        <h2 class="section-headline" style="font-size:var(--text-lg); margin-bottom:1rem;">{{ "pages.privacy.retention.heading" | t }}</h2>
+        <p style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); margin-bottom:3rem;">
+          {{ "pages.privacy.retention.body" | t }}
+        </p>
+
+        <h2 class="section-headline" style="font-size:var(--text-lg); margin-bottom:1rem;">{{ "pages.privacy.disclosures.heading" | t }}</h2>
+        <p style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); margin-bottom:3rem;">
+          {{ "pages.privacy.disclosures.body" | t }}
+        </p>
+
+        <h2 class="section-headline" style="font-size:var(--text-lg); margin-bottom:1rem;">{{ "pages.privacy.security.heading" | t }}</h2>
+        <p style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); margin-bottom:0.75rem;">
+          {{ "pages.privacy.security.intro" | t }}
+        </p>
+        <ul style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); padding-left:1.5rem; margin-bottom:3rem;">
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.security.items.0" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.security.items.1" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.security.items.2" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.security.items.3" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.security.items.4" | t }}</li>
+        </ul>
+
+        <h2 class="section-headline" style="font-size:var(--text-lg); margin-bottom:1rem;">{{ "pages.privacy.rights.heading" | t }}</h2>
+        <p style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); margin-bottom:0.75rem;">
+          {{ "pages.privacy.rights.intro" | t }}
+        </p>
+        <ul style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); padding-left:1.5rem; margin-bottom:1.5rem;">
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.rights.items.0" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.rights.items.1" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.rights.items.2" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.rights.items.3" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.rights.items.4" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.rights.items.5" | t }}</li>
+          <li style="margin-bottom:0.4rem;">{{ "pages.privacy.rights.items.6" | t }}</li>
+        </ul>
+        <p style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); margin-bottom:3rem;">
+          {{ "pages.privacy.rights.contact" | t }}
+        </p>
+
+        <h2 class="section-headline" style="font-size:var(--text-lg); margin-bottom:1rem;">{{ "pages.privacy.changes.heading" | t }}</h2>
+        <p style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); margin-bottom:1rem;">
+          {{ "pages.privacy.changes.body" | t }}
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->

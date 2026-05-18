@@ -1,0 +1,321 @@
+---
+layout: layouts/base.njk
+permalink: /index.html
+lang: en
+pageKey: home
+canonical: https://athlos.fi/
+og:
+  type: website
+  image: https://athlos.fi/images/hero-lab-automation.webp
+  imageWidth: 5504
+  imageHeight: 3072
+twitter:
+  image: https://athlos.fi/images/hero-lab-automation.webp
+preloadImage: /images/hero-lab-automation.webp
+includeFoucStyle: true
+includeOrganizationJsonld: true
+jsonldHead: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"What is direct conversion X-ray imaging?","acceptedAnswer":{"@type":"Answer","text":"Direct conversion X-ray imaging converts X-ray photons directly into electrical pulses inside a semiconductor (such as CdTe or Si), without the intermediate scintillator step used in conventional indirect detectors. By eliminating the X-ray-to-light conversion, direct conversion removes the dominant source of blur, signal loss, and DQE loss — yielding sharper images, higher contrast, and better low-dose performance."}},
+      {"@type":"Question","name":"What does Athlos Oy make?","acceptedAnswer":{"@type":"Answer","text":"Athlos Oy develops and manufactures direct conversion X-ray imaging sensors based on CdTe-CMOS and Si-CMOS hybrid technology. The portfolio includes the DC-Air® wireless intraoral dental sensor, the Ultra-Fast Scanning Sensor for panoramic, cephalometric, medical and industrial imaging, and the Industrial IP67 TDI for inline industrial inspection. Athlos also offers contract detector manufacturing services and software products."}},
+      {"@type":"Question","name":"Where is Athlos based, and where are its sensors manufactured?","acceptedAnswer":{"@type":"Answer","text":"Athlos Oy is headquartered in Espoo, Finland. Sensors are manufactured in-house and at the VTT Micronova cleanroom in Espoo — one of Europe's leading nanofabrication facilities."}},
+      {"@type":"Question","name":"Is Athlos FDA-cleared and ISO-certified?","acceptedAnswer":{"@type":"Answer","text":"Athlos operates an ISO 13485:2016 certified quality management system. The DC-Air® wireless intraoral sensor is FDA 510(k) cleared for dental intraoral X-ray imaging."}},
+      {"@type":"Question","name":"Who founded Athlos?","acceptedAnswer":{"@type":"Answer","text":"Athlos was founded by Konstantinos Spartiotis, who previously founded Simage Oy in 1993 and Ajat Oy in 2001 following work at CERN and Johns Hopkins University. The team has over 35 years of applied expertise in CdTe and Si direct conversion."}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Athlos X-Ray Imaging Product Portfolio",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"DC-Air® Wireless Intraoral Sensor","url":"https://athlos.fi/products/wios.html"},
+      {"@type":"ListItem","position":2,"name":"Ultra-Fast Scanning Sensor","url":"https://athlos.fi/products/ufs.html"},
+      {"@type":"ListItem","position":3,"name":"Industrial IP67 TDI","url":"https://athlos.fi/products/ufs-ip67.html"},
+      {"@type":"ListItem","position":4,"name":"Manufacturing Services","url":"https://athlos.fi/products/manufacturing.html"},
+      {"@type":"ListItem","position":5,"name":"Software Products","url":"https://athlos.fi/products/software.html"}
+    ]
+  }
+  </script>
+nav:
+  prefix: ""
+navComment: NAVIGATION
+footerNavAriaLabel: Footer navigation
+---
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-slideshow" aria-hidden="true">
+        <div class="hero-slide active" style="background-image: url('images/hero-lab-automation.webp')"></div>
+        <div class="hero-slide" style="background-image: url('images/hero-cleanroom-worker.webp')"></div>
+        <div class="hero-slide" style="background-image: url('images/hero-facility.webp')"></div>
+        <div class="hero-slide" style="background-image: url('images/hero-process.webp')"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-gradient"></div>
+      </div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">{{ "pages.home.hero.eyebrow" | t }}</p>
+        <h1 class="hero-headline">
+          {{ "pages.home.hero.headline" | t | safe }}
+        </h1>
+        <p class="hero-sub">
+          {{ "pages.home.hero.sub" | t }}
+        </p>
+        <div class="hero-actions">
+          <a href="products/index.html" class="btn btn-primary">{{ "pages.home.hero.ctaProducts" | t }}</a>
+          <a href="about.html" class="btn btn-outline">{{ "pages.home.hero.ctaAbout" | t }}</a>
+        </div>
+      </div>
+      <div class="hero-indicators" aria-hidden="true">
+        <button class="hero-dot active" data-index="0"></button>
+        <button class="hero-dot" data-index="1"></button>
+        <button class="hero-dot" data-index="2"></button>
+        <button class="hero-dot" data-index="3"></button>
+      </div>
+      <div class="hero-scroll-cue" aria-hidden="true">
+        <span class="hero-scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- STATEMENT -->
+    <section class="statement">
+      <div class="container">
+        <div class="statement-inner">
+          <h2 class="statement-headline reveal">
+            {{ "pages.home.statement.headline" | t | safe }}
+          </h2>
+          <p class="statement-body reveal">
+            {{ "pages.home.statement.body" | t }}
+          </p>
+          <div class="statement-stats reveal">
+            <div class="stat-item">
+              <span class="stat-number">{{ "pages.home.statement.stats.invented.number" | t }}</span>
+              <span class="stat-label">{{ "pages.home.statement.stats.invented.label" | t }}</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number">{{ "pages.home.statement.stats.expertise.number" | t }}</span>
+              <span class="stat-label">{{ "pages.home.statement.stats.expertise.label" | t }}</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number">{{ "pages.home.statement.stats.markets.number" | t }}</span>
+              <span class="stat-label">{{ "pages.home.statement.stats.markets.label" | t }}</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number">{{ "pages.home.statement.stats.fda.number" | t }}</span>
+              <span class="stat-label">{{ "pages.home.statement.stats.fda.label" | t }}</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number">{{ "pages.home.statement.stats.iso.number" | t }}</span>
+              <span class="stat-label">{{ "pages.home.statement.stats.iso.label" | t }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNOLOGY -->
+    <section class="technology" id="technology">
+      <div class="container">
+        <div class="tech-grid">
+          <div class="tech-content">
+            <p class="section-eyebrow reveal">{{ "pages.home.tech.eyebrow" | t }}</p>
+            <h2 class="section-headline reveal">{{ "pages.home.tech.headline" | t | safe }}</h2>
+            <p class="tech-body reveal">
+              {{ "pages.home.tech.body1" | t }}
+            </p>
+            <p class="tech-body reveal">
+              {{ "pages.home.tech.body2" | t }}
+            </p>
+          </div>
+          <div class="tech-visual reveal">
+            <div class="tech-image-wrap">
+              <video
+                autoplay
+                loop
+                muted
+                playsinline
+                preload="auto"
+                disablepictureinpicture
+                poster="images/product-macro-1.webp"
+                aria-label="{{ "pages.home.tech.videoAria" | t }}"
+                data-playback-rate="1.5"
+              >
+                <source src="images/direct-conversion.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="tech-bottom">
+            <div class="tech-features reveal">
+              <div class="tech-feature">
+                <span class="tech-feature-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M6 9l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                {{ "pages.home.tech.features.cdte" | t }}
+              </div>
+              <div class="tech-feature">
+                <span class="tech-feature-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M6 9l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                {{ "pages.home.tech.features.cmos" | t }}
+              </div>
+              <div class="tech-feature">
+                <span class="tech-feature-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M6 9l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                {{ "pages.home.tech.features.photon" | t }}
+              </div>
+              <div class="tech-feature">
+                <span class="tech-feature-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M6 9l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                {{ "pages.home.tech.features.libs" | t }}
+              </div>
+            </div>
+            <a href="about.html" class="btn btn-secondary reveal">{{ "pages.home.tech.learnLink" | t }} →</a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products" id="products">
+      <div class="container">
+        <div class="products-header">
+          <p class="section-eyebrow section-eyebrow--light reveal">{{ "pages.home.products.eyebrow" | t }}</p>
+          <h2 class="section-headline section-headline--light reveal">
+            {{ "pages.home.products.headline" | t }}
+          </h2>
+          <p class="products-intro reveal">
+            {{ "pages.home.products.intro" | t }}
+          </p>
+        </div>
+        <div class="products-grid">
+
+          <article class="product-card reveal">
+            <div class="product-card-image">
+              <img src="images/wios-hero.webp" width="1792" height="2400" alt="{{ "pages.home.products.cards.wios.imageAlt" | t }}" loading="lazy">
+            </div>
+            <div class="product-card-body">
+              <span class="product-market">{{ "pages.home.products.cards.wios.market" | t }}</span>
+              <h3 class="product-name">{{ "pages.home.products.cards.wios.name" | t | safe }}</h3>
+              <p class="product-desc">{{ "pages.home.products.cards.wios.desc" | t }}</p>
+              <a href="products/wios.html" class="product-link">{{ "pages.home.products.cards.wios.link" | t | safe }} <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-delay="80">
+            <div class="product-card-image">
+              <img src="images/ufs-dark.webp" width="1792" height="2400" alt="{{ "pages.home.products.cards.ufs.imageAlt" | t }}" loading="lazy">
+            </div>
+            <div class="product-card-body">
+              <span class="product-market">{{ "pages.home.products.cards.ufs.market" | t }}</span>
+              <h3 class="product-name">{{ "pages.home.products.cards.ufs.name" | t }}</h3>
+              <p class="product-desc">{{ "pages.home.products.cards.ufs.desc" | t }}</p>
+              <a href="products/ufs.html" class="product-link">{{ "pages.home.products.cards.ufs.link" | t }} <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-delay="160">
+            <div class="product-card-image">
+              <img src="images/ip67-carbon.webp" width="1792" height="2400" alt="{{ "pages.home.products.cards.ufsIp67.imageAlt" | t }}" loading="lazy">
+            </div>
+            <div class="product-card-body">
+              <span class="product-market">{{ "pages.home.products.cards.ufsIp67.market" | t }}</span>
+              <h3 class="product-name">{{ "pages.home.products.cards.ufsIp67.name" | t }}</h3>
+              <p class="product-desc">{{ "pages.home.products.cards.ufsIp67.desc" | t }}</p>
+              <a href="products/ufs-ip67.html" class="product-link">{{ "pages.home.products.cards.ufsIp67.link" | t }} <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-delay="240">
+            <div class="product-card-image">
+              <img src="images/manufacturing-wafer-1.webp" width="2400" height="1792" alt="{{ "pages.home.products.cards.manufacturing.imageAlt" | t }}" loading="lazy">
+            </div>
+            <div class="product-card-body">
+              <span class="product-market">{{ "pages.home.products.cards.manufacturing.market" | t }}</span>
+              <h3 class="product-name">{{ "pages.home.products.cards.manufacturing.name" | t }}</h3>
+              <p class="product-desc">{{ "pages.home.products.cards.manufacturing.desc" | t }}</p>
+              <a href="products/manufacturing.html" class="product-link">{{ "pages.home.products.cards.manufacturing.link" | t }} <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-delay="320">
+            <div class="product-card-image">
+              <img src="images/software_image_homepage.webp" width="5760" height="3840" alt="{{ "pages.home.products.cards.software.imageAlt" | t }}" loading="lazy">
+            </div>
+            <div class="product-card-body">
+              <span class="product-market">{{ "pages.home.products.cards.software.market" | t | safe }}</span>
+              <h3 class="product-name">{{ "pages.home.products.cards.software.name" | t }}</h3>
+              <p class="product-desc">{{ "pages.home.products.cards.software.desc" | t }}</p>
+              <a href="products/software.html" class="product-link">{{ "pages.home.products.cards.software.link" | t }} <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MANUFACTURING -->
+    <section class="manufacturing" id="manufacturing">
+      <div class="manufacturing-image" aria-hidden="true">
+        <img src="images/hero-facility.webp" width="5504" height="3072" alt="" loading="lazy">
+        <div class="manufacturing-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="manufacturing-content">
+          <p class="section-eyebrow section-eyebrow--light reveal">{{ "pages.home.manufacturing.eyebrow" | t | safe }}</p>
+          <h2 class="section-headline section-headline--light reveal">
+            {{ "pages.home.manufacturing.headline" | t | safe }}
+          </h2>
+          <p class="manufacturing-body reveal">
+            {{ "pages.home.manufacturing.body" | t }}
+          </p>
+          <div class="manufacturing-pillars reveal">
+            <div class="pillar">
+              <h4 class="pillar-title">{{ "pages.home.manufacturing.pillars.cleanroom.title" | t }}</h4>
+              <p class="pillar-body">{{ "pages.home.manufacturing.pillars.cleanroom.body" | t }}</p>
+            </div>
+            <div class="pillar">
+              <h4 class="pillar-title">{{ "pages.home.manufacturing.pillars.partners.title" | t }}</h4>
+              <p class="pillar-body">{{ "pages.home.manufacturing.pillars.partners.body" | t }}</p>
+            </div>
+            <div class="pillar">
+              <h4 class="pillar-title">{{ "pages.home.manufacturing.pillars.iso.title" | t }}</h4>
+              <p class="pillar-body">{{ "pages.home.manufacturing.pillars.iso.body" | t }}</p>
+            </div>
+          </div>
+          <a href="products/manufacturing.html" class="btn btn-outline reveal">{{ "pages.home.manufacturing.cta" | t }} →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <div class="cta-inner">
+          <p class="section-eyebrow reveal">{{ "pages.home.cta.eyebrow" | t }}</p>
+          <h2 class="cta-headline reveal">
+            {{ "pages.home.cta.headline" | t | safe }}
+          </h2>
+          <p class="cta-body reveal">
+            {{ "pages.home.cta.body" | t }}
+          </p>
+          <div class="cta-actions reveal">
+            <a href="contact.html" class="btn btn-primary btn-large">{{ "pages.home.cta.button" | t }}</a>
+            <span class="cta-detail">{{ site.email }}</span>
+          </div>
+          <p class="cta-location reveal">{{ "pages.home.cta.location" | t }}</p>
+        </div>
+      </div>
+    </section>
+
+    <p style="max-width:1280px;margin:0 auto;padding:0 clamp(1.5rem,5vw,5rem) clamp(2rem,4vw,3rem);font-size:0.75rem;font-weight:400;letter-spacing:0.04em;color:#8C959B;text-align:center;">{{ "pages.home.lastUpdated.label" | t }} <time datetime="{{ "pages.home.lastUpdated.datetime" | t }}" style="font-weight:500;color:#263035;">{{ "pages.home.lastUpdated.date" | t }}</time></p>
