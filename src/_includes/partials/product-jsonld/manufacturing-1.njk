@@ -18,12 +18,12 @@
       "sameAs": [
         "https://www.linkedin.com/company/athlos-oy/"
       ],
-      "description": "Athlos Oy is a Finnish X-ray imaging technology company specialising in direct conversion CdTe-CMOS and Si-CMOS sensors for dental, medical, and industrial applications.",
-      "areaServed": "Worldwide",
+      "description": "{{ "jsonld.productsManufacturing.graph.organization.description" | t }}",
+      "areaServed": "{{ "jsonld.productsManufacturing.graph.organization.areaServed" | t }}",
       "contactPoint": {
         "@type": "ContactPoint",
         "email": "info@athlos.fi",
-        "contactType": "sales"
+        "contactType": "{{ "jsonld.productsManufacturing.graph.organization.contactType" | t }}"
       }
     },
     {
@@ -32,34 +32,34 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Home",
+          "name": "{{ "jsonld.productsManufacturing.graph.breadcrumb.home" | t }}",
           "item": "https://athlos.fi/"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Products",
+          "name": "{{ "jsonld.productsManufacturing.graph.breadcrumb.products" | t }}",
           "item": "https://athlos.fi/products/"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Manufacturing Services",
+          "name": "{{ "jsonld.productsManufacturing.graph.breadcrumb.manufacturing" | t }}",
           "item": "https://athlos.fi/products/manufacturing.html"
         }
       ]
     },
     {
       "@type": "Service",
-      "name": "X-Ray Detector Manufacturing Services",
-      "description": "Precision X-ray detector manufacturing including CMOS bumping, flip chip bonding, wire bonding, die bonding, and full sensor characterization. Access to VTT Micronova cleanroom facility.",
+      "name": "{{ "jsonld.productsManufacturing.graph.service.name" | t }}",
+      "description": "{{ "jsonld.productsManufacturing.graph.service.description" | t }}",
       "provider": {
         "@type": "Organization",
         "name": "Athlos Oy",
         "url": "https://athlos.fi"
       },
-      "areaServed": "Worldwide",
-      "serviceType": "Contract Manufacturing"
+      "areaServed": "{{ "jsonld.productsManufacturing.graph.service.areaServed" | t }}",
+      "serviceType": "{{ "jsonld.productsManufacturing.graph.service.serviceType" | t }}"
     }
   ]
 }

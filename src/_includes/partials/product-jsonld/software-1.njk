@@ -18,12 +18,12 @@
       "sameAs": [
         "https://www.linkedin.com/company/athlos-oy/"
       ],
-      "description": "Athlos Oy is a Finnish X-ray imaging technology company specialising in direct conversion CdTe-CMOS and Si-CMOS sensors for dental, medical, and industrial applications.",
-      "areaServed": "Worldwide",
+      "description": "{{ "jsonld.productsSoftware.graph.organization.description" | t }}",
+      "areaServed": "{{ "jsonld.productsSoftware.graph.organization.areaServed" | t }}",
       "contactPoint": {
         "@type": "ContactPoint",
         "email": "info@athlos.fi",
-        "contactType": "sales"
+        "contactType": "{{ "jsonld.productsSoftware.graph.organization.contactType" | t }}"
       }
     },
     {
@@ -32,34 +32,34 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Home",
+          "name": "{{ "jsonld.productsSoftware.graph.breadcrumb.home" | t }}",
           "item": "https://athlos.fi/"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Products",
+          "name": "{{ "jsonld.productsSoftware.graph.breadcrumb.products" | t }}",
           "item": "https://athlos.fi/products/"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Software Products",
+          "name": "{{ "jsonld.productsSoftware.graph.breadcrumb.software" | t }}",
           "item": "https://athlos.fi/products/software.html"
         }
       ]
     },
     {
       "@type": "Service",
-      "name": "X-Ray Imaging Software Products",
-      "description": "TWAIN module, reconstruction algorithm libraries, advanced post-processing filters, and SDK/API integration support for X-ray imaging systems.",
+      "name": "{{ "jsonld.productsSoftware.graph.service.name" | t }}",
+      "description": "{{ "jsonld.productsSoftware.graph.service.description" | t }}",
       "provider": {
         "@type": "Organization",
         "name": "Athlos Oy",
         "url": "https://athlos.fi"
       },
-      "areaServed": "Worldwide",
-      "serviceType": "Software Licensing"
+      "areaServed": "{{ "jsonld.productsSoftware.graph.service.areaServed" | t }}",
+      "serviceType": "{{ "jsonld.productsSoftware.graph.service.serviceType" | t }}"
     }
   ]
 }

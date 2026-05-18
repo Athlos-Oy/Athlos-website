@@ -18,18 +18,18 @@
       "sameAs": [
         "https://www.linkedin.com/company/athlos-oy/"
       ],
-      "description": "Athlos Oy is a Finnish X-ray imaging technology company specialising in direct conversion CdTe-CMOS and Si-CMOS sensors for dental, medical, and industrial applications.",
-      "areaServed": "Worldwide",
+      "description": "{{ "jsonld.organization.description" | t }}",
+      "areaServed": "{{ "jsonld.organization.areaServed" | t }}",
       "contactPoint": {
         "@type": "ContactPoint",
         "email": "info@athlos.fi",
-        "contactType": "sales"
+        "contactType": "{{ "jsonld.organization.contactType" | t }}"
       }
     },
     {
       "@type": "Product",
-      "name": "Ultra-Fast Scanning Sensor",
-      "description": "Ultra-fast direct conversion CdTe-CMOS linear scanning sensor for dental panoramic, cephalometric, medical, and industrial X-ray imaging. Single-photon sensitivity.",
+      "name": "{{ "jsonld.productsUfs.product.name" | t }}",
+      "description": "{{ "jsonld.productsUfs.product.description" | t }}",
       "brand": {
         "@type": "Brand",
         "name": "Athlos"
@@ -40,7 +40,7 @@
         "url": "https://athlos.fi"
       },
       "url": "https://athlos.fi/products/ufs.html",
-      "category": "X-Ray Linear Scanning Sensor",
+      "category": "{{ "jsonld.productsUfs.product.category" | t }}",
       "image": "https://athlos.fi/images/new_ultra-fast.webp",
       "offers": {
         "@type": "Offer",
@@ -50,7 +50,7 @@
         "priceValidUntil": "2027-12-31",
         "url": "https://athlos.fi/contact.html",
         "seller": { "@type": "Organization", "name": "Athlos Oy" },
-        "description": "OEM and system integrator sales. Contact Athlos for quote and integration support."
+        "description": "{{ "jsonld.productsUfs.offer.description" | t }}"
       }
     },
     {
@@ -59,19 +59,19 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Home",
+          "name": "{{ "jsonld.productsUfs.breadcrumbs.home" | t }}",
           "item": "https://athlos.fi/"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Products",
+          "name": "{{ "jsonld.productsUfs.breadcrumbs.products" | t }}",
           "item": "https://athlos.fi/products/"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Ultra-Fast Scanning Sensor",
+          "name": "{{ "jsonld.productsUfs.breadcrumbs.ufs" | t }}",
           "item": "https://athlos.fi/products/ufs.html"
         }
       ]
