@@ -1,0 +1,65 @@
+name: Visual regression (Playwright)
+
+# Layout safety net for the multilingual rollout.
+# Every PR — and every push to main — re-renders all 12 pages at 4
+# viewports and compares pixel-for-pixel against committed baselines.
+# A failing run uploads an HTML report showing the diff; the reviewer
+# either updates the baselines (intentional design change) or fixes
+# the regression.
+#
+# Baselines live in tests/screenshots.spec.js-snapshots/ and are
+# generated on Linux. The CI runner is also Linux (ubuntu-latest)
+# so renders should be bit-identical.
+#
+# To regenerate baselines after an intentional UI change:
+#   npm run test:visual:update
+#   git add tests/screenshots.spec.js-snapshots/
+#   git commit -m "Update visual baselines (reason)"
+#
+# Or run the "Update visual baselines" workflow (dispatch only) to
+# regenerate from CI and open a PR with the new baselines.
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  visual:
+    name: Visual regression
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Cache Playwright browsers
+        id: pw-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: pw-browsers-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+      - name: Install Playwright browsers
+        if: steps.pw-cache.outputs.cache-hit != 'true'
+        run: npx playwright install --with-deps chromium
+
+      - name: Run visual regression tests
+        run: npm run test:visual
+
+      - name: Upload report on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 14

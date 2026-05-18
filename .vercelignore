@@ -46,3 +46,9 @@ images/*.png
 # ────────────────────────────────────────────────────────────────
 node_modules/
 _site/
+
+# Test infrastructure — Vercel doesn't need these.
+tests/
+playwright.config.js
+playwright-report/
+test-results/

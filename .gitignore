@@ -4,3 +4,9 @@ _site/
 .DS_Store
 *.log
 .eleventy-temp/
+
+# Playwright test transient artefacts (baselines under
+# tests/screenshots.spec.js-snapshots/ ARE committed).
+playwright-report/
+test-results/
+playwright/.cache/
