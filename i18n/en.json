@@ -1,0 +1,62 @@
+{
+  "_meta": {
+    "comment": "Source-of-truth English strings. Every translatable string the templates render is keyed here. Site constants (legal name, address, business IDs) stay in src/_data/site.json and are interpolated by templates. HTML entities (&reg;, &middot;, &nbsp;) and tags (<br>) stay in values verbatim — they are markup the translator may relocate but not strip. The t filter throws on missing keys (drift alarm).",
+    "lastLocalised": "2026-05-18"
+  },
+
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "applications": "Applications",
+    "about": "About",
+    "contact": "Contact",
+    "productDropdown": {
+      "dcAir": "DC-Air&reg;",
+      "ufs": "Ultra-Fast Scanning Sensor",
+      "ufsIp67": "Industrial IP67 TDI",
+      "manufacturing": "Manufacturing Services",
+      "software": "Software Products"
+    },
+    "aria": {
+      "homeLogo": "Athlos home",
+      "main": "Main navigation",
+      "openMenu": "Open menu"
+    }
+  },
+
+  "footer": {
+    "businessIdLabel": "Business ID",
+    "vatLabel": "VAT",
+    "columns": {
+      "products": "Products",
+      "applications": "Applications",
+      "company": "Company",
+      "contact": "Contact"
+    },
+    "links": {
+      "dcAir": "DC-Air&reg;",
+      "ufs": "Ultra-Fast Scanning Sensor",
+      "ufsIp67": "Industrial IP67 TDI",
+      "manufacturing": "Manufacturing Services",
+      "software": "Software Products",
+      "dental": "Dental Imaging",
+      "industrial": "Industrial Inspection",
+      "medical": "Medical Imaging",
+      "about": "About Athlos",
+      "manufacturingShort": "Manufacturing",
+      "linkedin": "LinkedIn",
+      "privacy": "Privacy Policy"
+    },
+    "copyAllRights": "All rights reserved.",
+    "copyMadeIn": "Made in Finland.",
+    "cert": "ISO 13485:2016 Certified",
+    "aria": {
+      "nav": "Footer navigation"
+    }
+  },
+
+  "productSubnav": {
+    "back": "← Products",
+    "aria": "Products navigation"
+  }
+}

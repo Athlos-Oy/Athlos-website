@@ -12,6 +12,19 @@
 // output. Pages that have NOT yet been ported to src/ are copied as-is
 // from the repo root, so the preview build serves a complete working site.
 
+import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+import { dirname, resolve } from "node:path";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+// Load translation dictionaries once at config time. The data cascade
+// populates `page.lang` per page; the `t` filter uses that to pick the
+// right dictionary. Phase 1 is English-only; Phase 4 adds de.json etc.
+const I18N = {
+  en: JSON.parse(readFileSync(resolve(__dirname, "i18n/en.json"), "utf8")),
+};
+
 export default async function (eleventyConfig) {
   // Static asset folders — copied 1:1.
   eleventyConfig.addPassthroughCopy("css");
@@ -32,6 +45,31 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addWatchTarget("css/");
   eleventyConfig.addWatchTarget("js/");
+  eleventyConfig.addWatchTarget("i18n/");
+
+  // i18n filter. Usage: {{ "nav.home" | t }}
+  // - Looks up dotted-path keys in I18N[page.lang || "en"].
+  // - Throws if the key is missing — this is the alarm that prevents
+  //   silent drift between locales (Step 24).
+  // - Returns the raw string; templates wrap with | safe when the value
+  //   contains HTML (entities like &reg;, or <br>). We DON'T return
+  //   SafeString automatically because some values are user-visible
+  //   plain text that SHOULD be escaped on output.
+  eleventyConfig.addFilter("t", function (key, locale) {
+    const lang = locale || (this.ctx && this.ctx.page && this.ctx.page.lang) || (this.page && this.page.lang) || "en";
+    const dict = I18N[lang];
+    if (!dict) {
+      throw new Error(`i18n: no dictionary loaded for locale "${lang}"`);
+    }
+    const value = key.split(".").reduce(
+      (o, k) => (o != null && typeof o === "object" ? o[k] : undefined),
+      dict
+    );
+    if (value === undefined) {
+      throw new Error(`i18n: missing key "${key}" in locale "${lang}"`);
+    }
+    return value;
+  });
 
   return {
     dir: {
