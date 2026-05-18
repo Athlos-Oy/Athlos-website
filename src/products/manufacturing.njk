@@ -1,4 +1,5 @@
 ---
+navScrolled: true
 layout: layouts/base.njk
 permalink: /products/manufacturing.html
 lang: en
@@ -20,102 +21,19 @@ stylesheets:
   - css/style.css
   - css/products.css
 preloadImage: /images/manufacturing-wafer-1.webp
-jsonldHead: |
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "name": "Athlos Oy",
-      "url": "https://athlos.fi",
-      "logo": "https://athlos.fi/images/athlos-logo.png",
-      "email": "info@athlos.fi",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Klovinpellontie 1-3, Tower 2",
-        "addressLocality": "Espoo",
-        "postalCode": "02180",
-        "addressCountry": "FI"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/athlos-oy/"
-      ],
-      "description": "Athlos Oy is a Finnish X-ray imaging technology company specialising in direct conversion CdTe-CMOS and Si-CMOS sensors for dental, medical, and industrial applications.",
-      "areaServed": "Worldwide",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "info@athlos.fi",
-        "contactType": "sales"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://athlos.fi/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Products",
-          "item": "https://athlos.fi/products/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Manufacturing Services",
-          "item": "https://athlos.fi/products/manufacturing.html"
-        }
-      ]
-    },
-    {
-      "@type": "Service",
-      "name": "X-Ray Detector Manufacturing Services",
-      "description": "Precision X-ray detector manufacturing including CMOS bumping, flip chip bonding, wire bonding, die bonding, and full sensor characterization. Access to VTT Micronova cleanroom facility.",
-      "provider": {
-        "@type": "Organization",
-        "name": "Athlos Oy",
-        "url": "https://athlos.fi"
-      },
-      "areaServed": "Worldwide",
-      "serviceType": "Contract Manufacturing"
-    }
-  ]
-  }
-  </script>
-jsonldBody: |
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type":"Question","name":"What manufacturing services does Athlos offer?","acceptedAnswer":{"@type":"Answer","text":"Athlos provides precision X-ray detector manufacturing services including CMOS bumping, flip chip bonding, wire bonding, die bonding, and full sensor characterization."}},
-      {"@type":"Question","name":"Does Athlos have cleanroom manufacturing access?","acceptedAnswer":{"@type":"Answer","text":"Yes. Athlos has access to the VTT Micronova nanofabrication facility in Espoo, Finland — one of Europe's leading cleanroom environments for semiconductor and detector manufacturing."}},
-      {"@type":"Question","name":"Is Athlos ISO certified for manufacturing?","acceptedAnswer":{"@type":"Answer","text":"Yes. Athlos is ISO 13485:2016 certified, ensuring consistent quality management for medical device component manufacturing."}}
-    ]
-  }
-  </script>
 nav:
   prefix: "../"
 navComment: NAV
 omitMain: true
 scriptJs: js/products.js
+activeProduct: manufacturing
+jsonldHeadPartials:
+  - partials/product-jsonld/manufacturing-1.njk
+jsonldHeadAfterAnalyticsPartials:
+  - partials/product-jsonld/manufacturing-2.njk
 ---
   <!-- PRODUCT SUBNAV -->
-  <nav class="product-subnav" aria-label="Products navigation">
-    <div class="product-subnav-inner">
-      <a href="index.html" class="subnav-back">← Products</a>
-      <a href="wios.html" class="subnav-link">DC-Air&reg;</a>
-      <a href="ufs.html" class="subnav-link">Ultra-Fast Scanning Sensor</a>
-      <a href="ufs-ip67.html" class="subnav-link">Industrial IP67 TDI</a>
-      <a href="manufacturing.html" class="subnav-link active">Manufacturing Services</a>
-      <a href="software.html" class="subnav-link">Software Products</a>
-    </div>
-  </nav>
+{% include "partials/product-subnav.njk" %}
 
   <main>
 

@@ -1,0 +1,15 @@
+{#
+  Product detail page subnav. One link per product, with `active` class
+  on the link whose `activeProduct` matches.
+  Set activeProduct in the page front-matter (e.g. activeProduct: ufs).
+#}
+  <nav class="product-subnav" aria-label="Products navigation">
+    <div class="product-subnav-inner">
+      <a href="index.html" class="subnav-back">← Products</a>
+      <a href="wios.html" class="subnav-link{% if activeProduct == 'wios' %} active{% endif %}">DC-Air&reg;</a>
+      <a href="ufs.html" class="subnav-link{% if activeProduct == 'ufs' %} active{% endif %}">Ultra-Fast Scanning Sensor</a>
+      <a href="ufs-ip67.html" class="subnav-link{% if activeProduct == 'ufs-ip67' %} active{% endif %}">Industrial IP67 TDI</a>
+      <a href="manufacturing.html" class="subnav-link{% if activeProduct == 'manufacturing' %} active{% endif %}">Manufacturing Services</a>
+      <a href="software.html" class="subnav-link{% if activeProduct == 'software' %} active{% endif %}">Software Products</a>
+    </div>
+  </nav>

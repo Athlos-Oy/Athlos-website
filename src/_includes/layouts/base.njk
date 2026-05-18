@@ -51,7 +51,7 @@
 
   <script src="{{ (nav.prefix or '') }}{{ scriptJs or 'js/script.js' }}"></script>
 {%- if extraScriptsBeforeCookieBanner %}
-{{ extraScriptsBeforeCookieBanner | safe }}
+{{ extraScriptsBeforeCookieBanner | indent(2, true) | safe }}
 {%- endif %}
   <script src="/js/cookie-banner.js"></script>
 {%- if trailingScripts %}

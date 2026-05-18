@@ -23,11 +23,6 @@ export default async function (eleventyConfig) {
   // Stays as a passthrough copy permanently, no .njk template.
   eleventyConfig.addPassthroughCopy("cefla.html");
 
-  // Pages with .njk templates that don't yet produce byte-equivalent output
-  // (work in progress — see commit log). Passthrough overlays the broken
-  // template so the deploy serves the original page meanwhile.
-  eleventyConfig.addPassthroughCopy("contact.html");
-  eleventyConfig.addPassthroughCopy("products");
 
   // Root-level non-HTML assets served as-is.
   eleventyConfig.addPassthroughCopy("robots.txt");

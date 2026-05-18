@@ -1,4 +1,11 @@
-{% set p = nav.prefix or "" %}
+{%- set p = nav.prefix or "" -%}
+{%- if nav.productsPrefix is defined -%}
+  {%- set pp = nav.productsPrefix -%}
+{%- elif p == "" -%}
+  {%- set pp = "products/" -%}
+{%- else -%}
+  {%- set pp = "" -%}
+{%- endif %}
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
@@ -11,11 +18,11 @@
         <nav class="footer-nav"{% if footerNavAriaLabel %} aria-label="{{ footerNavAriaLabel }}"{% endif %}>
           <div class="footer-col">
             <span class="footer-col-label">Products</span>
-            <a href="{{ p }}products/wios.html" class="footer-link">DC-Air&reg;</a>
-            <a href="{{ p }}products/ufs.html" class="footer-link">Ultra-Fast Scanning Sensor</a>
-            <a href="{{ p }}products/ufs-ip67.html" class="footer-link">Industrial IP67 TDI</a>
-            <a href="{{ p }}products/manufacturing.html" class="footer-link">Manufacturing Services</a>
-            <a href="{{ p }}products/software.html" class="footer-link">Software Products</a>
+            <a href="{{ pp }}wios.html" class="footer-link">DC-Air&reg;</a>
+            <a href="{{ pp }}ufs.html" class="footer-link">Ultra-Fast Scanning Sensor</a>
+            <a href="{{ pp }}ufs-ip67.html" class="footer-link">Industrial IP67 TDI</a>
+            <a href="{{ pp }}manufacturing.html" class="footer-link">Manufacturing Services</a>
+            <a href="{{ pp }}software.html" class="footer-link">Software Products</a>
           </div>
           <div class="footer-col">
             <span class="footer-col-label">Applications</span>
@@ -26,7 +33,7 @@
           <div class="footer-col">
             <span class="footer-col-label">Company</span>
             <a href="{{ p }}about.html" class="footer-link">About Athlos</a>
-            <a href="{{ p }}products/manufacturing.html" class="footer-link">Manufacturing</a>
+            <a href="{{ pp }}manufacturing.html" class="footer-link">Manufacturing</a>
           </div>
           <div class="footer-col">
             <span class="footer-col-label">Contact</span>

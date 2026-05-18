@@ -29,17 +29,12 @@ jsonldHeadPartials:
   - partials/product-jsonld/software-1.njk
 jsonldHeadAfterAnalyticsPartials:
   - partials/product-jsonld/software-2.njk
+activeProduct: software
+omitMain: true
 ---
-  <nav class="product-subnav" aria-label="Products navigation">
-    <div class="product-subnav-inner">
-      <a href="index.html" class="subnav-back">← Products</a>
-      <a href="wios.html" class="subnav-link">DC-Air&reg;</a>
-      <a href="ufs.html" class="subnav-link">Ultra-Fast Scanning Sensor</a>
-      <a href="ufs-ip67.html" class="subnav-link">Industrial IP67 TDI</a>
-      <a href="manufacturing.html" class="subnav-link">Manufacturing Services</a>
-      <a href="software.html" class="subnav-link active">Software Products</a>
-    </div>
-  </nav>
+{% include "partials/product-subnav.njk" %}
+
+  <main>
 
     <!-- 1. HERO -->
     <section class="product-hero" style="min-height:55vh;">
@@ -122,3 +117,5 @@ jsonldHeadAfterAnalyticsPartials:
     </section>
 
     <p style="max-width:1280px;margin:0 auto;padding:0 clamp(1.5rem,5vw,5rem) clamp(2rem,4vw,3rem);font-size:0.75rem;font-weight:400;letter-spacing:0.04em;color:#8C959B;text-align:center;">Last updated: <time datetime="2026-04-15" style="font-weight:500;color:#263035;">15 April 2026</time></p>
+
+  </main>
