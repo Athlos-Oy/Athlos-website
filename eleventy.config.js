@@ -12,18 +12,43 @@
 // output. Pages that have NOT yet been ported to src/ are copied as-is
 // from the repo root, so the preview build serves a complete working site.
 
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
-import { dirname, resolve } from "node:path";
+import { dirname, resolve, join } from "node:path";
 import nunjucks from "nunjucks";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-// Load translation dictionaries once at config time. The data cascade
-// populates `page.lang` per page; the `t` filter uses that to pick the
-// right dictionary. Phase 1 is English-only; Phase 4 adds de.json etc.
+// Deep-merge two plain JSON objects: b's values win over a's, recursing
+// into nested objects. Arrays are replaced, not merged.
+function deepMerge(a, b) {
+  if (b == null || typeof b !== "object" || Array.isArray(b)) return b;
+  if (a == null || typeof a !== "object" || Array.isArray(a)) return { ...b };
+  const out = { ...a };
+  for (const k of Object.keys(b)) out[k] = deepMerge(a[k], b[k]);
+  return out;
+}
+
+// Load translation dictionaries once at config time.
+// - i18n/en.json is the base (shared chrome: nav, footer, productSubnav, _meta).
+// - i18n/parts/<pageKey>.json each contribute keys (typically under pages.<key>)
+//   and are deep-merged on top of the base. Parts let parallel-edit workflows
+//   add per-page string sets without racing on a single file.
+// Phase 4 adds de.json + parts-de/ alongside.
+function loadLocale(lang) {
+  let dict = JSON.parse(readFileSync(resolve(__dirname, `i18n/${lang}.json`), "utf8"));
+  const partsDir = resolve(__dirname, `i18n/parts-${lang}`);
+  if (existsSync(partsDir)) {
+    for (const f of readdirSync(partsDir).filter(x => x.endsWith(".json")).sort()) {
+      const part = JSON.parse(readFileSync(join(partsDir, f), "utf8"));
+      dict = deepMerge(dict, part);
+    }
+  }
+  return dict;
+}
+
 const I18N = {
-  en: JSON.parse(readFileSync(resolve(__dirname, "i18n/en.json"), "utf8")),
+  en: loadLocale("en"),
 };
 
 export default async function (eleventyConfig) {
@@ -47,6 +72,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addWatchTarget("css/");
   eleventyConfig.addWatchTarget("js/");
   eleventyConfig.addWatchTarget("i18n/");
+  eleventyConfig.addWatchTarget("i18n/parts-en/");
 
   // i18n filter. Usage: {{ "nav.home" | t }}
   // - Looks up dotted-path keys in I18N[page.lang || "en"].
