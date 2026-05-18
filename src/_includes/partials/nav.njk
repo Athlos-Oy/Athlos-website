@@ -4,7 +4,7 @@
   `nav.prefix` variable. Defaults to "" (root pages).
 #}
 {% set p = nav.prefix or "" %}
-  <header class="nav" id="nav">
+  <header class="nav{% if navScrolled %} scrolled{% endif %}" id="nav">
     <div class="nav-inner">
       <a href="{{ p }}index.html" class="nav-logo" aria-label="Athlos home">
         <img src="{{ p }}images/athlos-logo.png" width="1536" height="1024" alt="Athlos" class="nav-logo-png">

@@ -1,4 +1,5 @@
 ---
+navScrolled: true
 layout: layouts/base.njk
 permalink: /products/software.html
 lang: en
@@ -21,88 +22,13 @@ stylesheets:
   - css/style.css
   - css/products.css
 preloadImage: /images/solutions-software.webp
-jsonldHead: |
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "name": "Athlos Oy",
-      "url": "https://athlos.fi",
-      "logo": "https://athlos.fi/images/athlos-logo.png",
-      "email": "info@athlos.fi",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Klovinpellontie 1-3, Tower 2",
-        "addressLocality": "Espoo",
-        "postalCode": "02180",
-        "addressCountry": "FI"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/athlos-oy/"
-      ],
-      "description": "Athlos Oy is a Finnish X-ray imaging technology company specialising in direct conversion CdTe-CMOS and Si-CMOS sensors for dental, medical, and industrial applications.",
-      "areaServed": "Worldwide",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "info@athlos.fi",
-        "contactType": "sales"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://athlos.fi/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Products",
-          "item": "https://athlos.fi/products/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Software Products",
-          "item": "https://athlos.fi/products/software.html"
-        }
-      ]
-    },
-    {
-      "@type": "Service",
-      "name": "X-Ray Imaging Software Products",
-      "description": "TWAIN module, reconstruction algorithm libraries, advanced post-processing filters, and SDK/API integration support for X-ray imaging systems.",
-      "provider": {
-        "@type": "Organization",
-        "name": "Athlos Oy",
-        "url": "https://athlos.fi"
-      },
-      "areaServed": "Worldwide",
-      "serviceType": "Software Licensing"
-    }
-  ]
-  }
-  </script>
-jsonldBody: |
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type":"Question","name":"What software products does Athlos offer?","acceptedAnswer":{"@type":"Answer","text":"Athlos offers a TWAIN module, reconstruction algorithm libraries, advanced post-processing filters, and SDK/API integration support for X-ray imaging systems."}},
-      {"@type":"Question","name":"Can Athlos software be licensed independently?","acceptedAnswer":{"@type":"Answer","text":"Yes. Software products are available as part of an Athlos sensor system or as independently licensed components for OEM integration."}},
-      {"@type":"Question","name":"What SDK and integration support does Athlos provide?","acceptedAnswer":{"@type":"Answer","text":"Athlos provides SDK and API integration support to help OEM partners and system integrators incorporate Athlos imaging software and algorithms into their own products and workflows."}}
-    ]
-  }
-  </script>
 nav:
   prefix: "../"
 scriptJs: js/products.js
+jsonldHeadPartials:
+  - partials/product-jsonld/software-1.njk
+jsonldHeadAfterAnalyticsPartials:
+  - partials/product-jsonld/software-2.njk
 ---
   <nav class="product-subnav" aria-label="Products navigation">
     <div class="product-subnav-inner">

@@ -1,4 +1,5 @@
 ---
+navScrolled: true
 layout: layouts/base.njk
 permalink: /products/wios.html
 lang: en
@@ -21,133 +22,15 @@ stylesheets:
   - css/style.css
   - css/products.css
 preloadImage: /images/wios-hero.webp
-jsonldHead: |
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "name": "Athlos Oy",
-      "url": "https://athlos.fi",
-      "logo": "https://athlos.fi/images/athlos-logo.png",
-      "email": "info@athlos.fi",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Klovinpellontie 1-3, Tower 2",
-        "addressLocality": "Espoo",
-        "postalCode": "02180",
-        "addressCountry": "FI"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/athlos-oy/"
-      ],
-      "description": "Athlos Oy is a Finnish X-ray imaging technology company specialising in direct conversion CdTe-CMOS and Si-CMOS sensors for dental, medical, and industrial applications.",
-      "areaServed": "Worldwide",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "info@athlos.fi",
-        "contactType": "sales"
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "DC-Air®",
-      "description": "Fully wireless direct conversion intraoral X-ray sensor. Si-CMOS technology, Bluetooth 5.0, Zero Profile® holders. FDA 510(k) cleared.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Athlos"
-      },
-      "manufacturer": {
-        "@type": "Organization",
-        "name": "Athlos Oy",
-        "url": "https://athlos.fi"
-      },
-      "url": "https://athlos.fi/products/wios.html",
-      "category": "Dental X-Ray Sensor",
-      "image": "https://athlos.fi/images/wios-hero.webp",
-      "award": [
-        "Dental Advisor 2024 Top Award Winner",
-        "Dental Advisor 2025 Top Award Winner",
-        "Dental Product Shopper Best Product",
-        "Best Product Award 2026"
-      ],
-      "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock",
-        "priceCurrency": "USD",
-        "price": "0",
-        "priceValidUntil": "2027-12-31",
-        "url": "https://athlos.fi/contact.html",
-        "seller": { "@type": "Organization", "name": "Athlos Oy" },
-        "description": "Available through authorised dental imaging dealers and distributors. Contact Athlos for quote."
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://athlos.fi/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Products",
-          "item": "https://athlos.fi/products/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "DC-Air®",
-          "item": "https://athlos.fi/products/wios.html"
-        }
-      ]
-    }
-  ]
-  }
-  </script>
-jsonldBody: |
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type":"Question","name":"Is DC-Air® FDA cleared?","acceptedAnswer":{"@type":"Answer","text":"Yes. DC-Air® is FDA 510(k) cleared for dental intraoral X-ray imaging."}},
-      {"@type":"Question","name":"How does DC-Air® connect wirelessly?","acceptedAnswer":{"@type":"Answer","text":"DC-Air® uses Bluetooth 5.0 wireless connectivity. No receiver dongle or docking station is required."}},
-      {"@type":"Question","name":"What sensor sizes are available for DC-Air®?","acceptedAnswer":{"@type":"Answer","text":"DC-Air® is available in Size 1 and Size 2."}},
-      {"@type":"Question","name":"Is DC-Air® available in Europe?","acceptedAnswer":{"@type":"Answer","text":"CE registration is currently under way. DC-Air® is not yet on sale in Europe."}},
-      {"@type":"Question","name":"What imaging technology does DC-Air® use?","acceptedAnswer":{"@type":"Answer","text":"DC-Air® uses Si-CMOS direct conversion technology, which converts X-ray photons directly into electrical signals without an intermediate scintillator layer — delivering sharper detail and higher contrast than conventional intraoral sensors."}}
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "DC-Air® Wireless Intraoral Sensor Introduction",
-    "description": "A short overview of the DC-Air®, True Wireless® intraoral sensor — how it works, what makes it different, and what it delivers for the modern dental practice.",
-    "thumbnailUrl": "https://i.ytimg.com/vi/E5LMPWgQg6E/maxresdefault.jpg",
-    "uploadDate": "2022-03-04",
-    "contentUrl": "https://www.youtube.com/watch?v=E5LMPWgQg6E",
-    "embedUrl": "https://www.youtube.com/embed/E5LMPWgQg6E",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Athlos Oy",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://athlos.fi/images/athlos-logo.png"
-      }
-    }
-  }
-  </script>
 nav:
   prefix: "../"
 omitMain: true
 scriptJs: js/products.js
+jsonldHeadPartials:
+  - partials/product-jsonld/wios-1.njk
+jsonldHeadAfterAnalyticsPartials:
+  - partials/product-jsonld/wios-2.njk
+  - partials/product-jsonld/wios-3.njk
 ---
   <nav class="product-subnav" aria-label="Products navigation">
     <div class="product-subnav-inner">

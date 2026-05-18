@@ -1,9 +1,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
-  <meta name="description" content="{{ description }}">
-  <meta property="og:title" content="{{ og.title or title }}">
-  <meta property="og:description" content="{{ og.description or description }}">
+{%- if noindex %}
+  <meta name="robots" content="noindex, nofollow">
+{%- endif %}
+  <title>{{ title | safe }}</title>
+  <meta name="description" content="{{ description | safe }}">
+{%- if not omitOg %}
+  <meta property="og:title" content="{{ (og.title or title) | safe }}">
+  <meta property="og:description" content="{{ (og.description or description) | safe }}">
   <meta property="og:type" content="{{ og.type or 'website' }}">
   <meta property="og:url" content="{{ canonical }}">
   <meta property="og:image" content="{{ og.image }}">
@@ -12,9 +16,10 @@
   <meta property="og:image:height" content="{{ og.imageHeight }}">
 {%- endif %}
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ twitter.title or og.title or title }}">
-  <meta name="twitter:description" content="{{ twitter.description or og.description or description }}">
+  <meta name="twitter:title" content="{{ (twitter.title or og.title or title) | safe }}">
+  <meta name="twitter:description" content="{{ (twitter.description or og.description or description) | safe }}">
   <meta name="twitter:image" content="{{ twitter.image or og.image }}">
+{%- endif %}
   <link rel="canonical" href="{{ canonical }}">
   <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon.png">
   <link rel="apple-touch-icon" href="/images/favicon.png">
