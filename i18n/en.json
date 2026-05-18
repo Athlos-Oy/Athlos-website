@@ -3,7 +3,6 @@
     "comment": "Source-of-truth English strings. Every translatable string the templates render is keyed here. Site constants (legal name, address, business IDs) stay in src/_data/site.json and are interpolated by templates. HTML entities (&reg;, &middot;, &nbsp;) and tags (<br>) stay in values verbatim — they are markup the translator may relocate but not strip. The t filter throws on missing keys (drift alarm).",
     "lastLocalised": "2026-05-18"
   },
-
   "nav": {
     "home": "Home",
     "products": "Products",
@@ -23,7 +22,6 @@
       "openMenu": "Open menu"
     }
   },
-
   "footer": {
     "businessIdLabel": "Business ID",
     "vatLabel": "VAT",
@@ -54,9 +52,142 @@
       "nav": "Footer navigation"
     }
   },
-
   "productSubnav": {
     "back": "← Products",
     "aria": "Products navigation"
+  },
+  "pages": {
+    "home": {
+      "title": "Athlos – Advanced X-Ray Imaging Sensors",
+      "description": "Athlos develops and manufactures advanced direct conversion X-ray imaging sensors for dental, medical, and industrial applications. CdTe and Si CMOS technology, made in Finland.",
+      "og": {
+        "title": "Athlos – Advanced X-Ray Imaging Sensors",
+        "description": "Direct conversion X-ray sensors for dental, medical, and industrial imaging. Superior image quality, higher sensitivity, and faster acquisition."
+      },
+      "twitter": {
+        "title": "Athlos – Advanced X-Ray Imaging Sensors",
+        "description": "Direct conversion X-ray sensors for dental, medical, and industrial imaging. Superior image quality, higher sensitivity, and faster acquisition."
+      }
+    },
+    "about": {
+      "title": "About Athlos – Finnish X-Ray Imaging Technology Company",
+      "description": "Athlos is a Finnish X-ray imaging sensor developer and manufacturer specialising in direct conversion CdTe and Si CMOS technology. Founded on decades of expertise from CERN, Johns Hopkins, and Ajat Oy.",
+      "og": {
+        "title": "About Athlos – Finnish X-Ray Imaging Technology Company",
+        "description": "Athlos is a Finnish X-ray imaging sensor developer and manufacturer specialising in direct conversion CdTe and Si CMOS technology."
+      },
+      "twitter": {
+        "title": "About Athlos – Finnish X-Ray Imaging Technology Company",
+        "description": "Athlos is a Finnish X-ray imaging sensor developer and manufacturer specialising in direct conversion CdTe and Si CMOS technology."
+      }
+    },
+    "applications": {
+      "title": "Applications – Athlos X-Ray Imaging",
+      "description": "Athlos X-ray imaging sensors serve dental, industrial, and medical applications. Direct conversion technology for intraoral, panoramic, inline inspection, and specialized medical imaging.",
+      "og": {
+        "title": "Applications – Athlos X-Ray Imaging",
+        "description": "Athlos X-ray imaging sensors serve dental, industrial, and medical applications. Direct conversion technology for intraoral, panoramic, inline inspection, and specialized medical imaging."
+      },
+      "twitter": {
+        "title": "Applications – Athlos X-Ray Imaging",
+        "description": "Athlos X-ray imaging sensors serve dental, industrial, and medical applications. Direct conversion technology for intraoral, panoramic, inline inspection, and specialized medical imaging."
+      }
+    },
+    "contact": {
+      "title": "Contact Athlos – X-Ray Imaging Sensors",
+      "description": "Contact Athlos for product enquiries, OEM integration, software licensing, or manufacturing partnership. Based in Espoo, Finland.",
+      "og": {
+        "title": "Contact Athlos – X-Ray Imaging Sensors",
+        "description": "Contact Athlos for product enquiries, OEM integration, software licensing, or manufacturing partnership. Based in Espoo, Finland."
+      },
+      "twitter": {
+        "title": "Contact Athlos – X-Ray Imaging Sensors",
+        "description": "Contact Athlos for product enquiries, OEM integration, software licensing, or manufacturing partnership. Based in Espoo, Finland."
+      }
+    },
+    "privacy": {
+      "title": "Privacy Policy – Athlos Oy",
+      "description": "Privacy Notice for Athlos Oy. Learn how we collect, process and share your personal data and what your rights are.",
+      "og": {
+        "title": "Privacy Policy – Athlos Oy",
+        "description": "Privacy Notice for Athlos Oy. Learn how we collect, process and share your personal data and what your rights are."
+      },
+      "twitter": {
+        "title": "Privacy Policy – Athlos Oy",
+        "description": "Privacy Notice for Athlos Oy. Learn how we collect, process and share your personal data and what your rights are."
+      }
+    },
+    "productsIndex": {
+      "title": "X-Ray Imaging Sensors &amp; Detectors | Athlos Direct Conversion",
+      "description": "Athlos product portfolio: DC-Air wireless intraoral sensor, Ultra-Fast Scanning Sensor, Industrial IP67 TDI detector, Manufacturing Services, and Software Products.",
+      "og": {
+        "title": "X-Ray Imaging Sensors &amp; Detectors | Athlos Direct Conversion",
+        "description": "Athlos product portfolio: DC-Air wireless intraoral sensor, Ultra-Fast Scanning Sensor, Industrial IP67 TDI detector, Manufacturing Services, and Software Products."
+      },
+      "twitter": {
+        "title": "X-Ray Imaging Sensors &amp; Detectors | Athlos Direct Conversion",
+        "description": "Athlos product portfolio: DC-Air wireless intraoral sensor, Ultra-Fast Scanning Sensor, Industrial IP67 TDI detector, Manufacturing Services, and Software Products."
+      }
+    },
+    "productsWios": {
+      "title": "DC-Air® – Wireless Intraoral Sensor | Athlos",
+      "description": "DC-Air® is a fully wireless direct conversion intraoral X-ray sensor. Si-CMOS technology, Bluetooth 5.0 wireless, Zero Profile® holders. Crystal clear images without the cable.",
+      "og": {
+        "title": "DC-Air® – Wireless Intraoral Sensor | Athlos",
+        "description": "DC-Air® is a fully wireless direct conversion intraoral X-ray sensor. Si-CMOS technology, Bluetooth 5.0 wireless, Zero Profile® holders. FDA 510(k) cleared."
+      },
+      "twitter": {
+        "title": "DC-Air® – Wireless Intraoral Sensor | Athlos",
+        "description": "Fully wireless direct conversion intraoral X-ray sensor. Si-CMOS technology, Bluetooth 5.0, Zero Profile® holders. FDA 510(k) cleared."
+      }
+    },
+    "productsUfs": {
+      "title": "Ultra-Fast CdTe X-Ray Scanning Sensor | Athlos UFS",
+      "description": "The Ultra-Fast Scanning Sensor is Athlos's ultra-fast direct conversion linear scanning sensor for dental panoramic, cephalometric, medical, and industrial X-ray imaging. CdTe-CMOS, single-photon sensitivity.",
+      "og": {
+        "title": "Ultra-Fast CdTe X-Ray Scanning Sensor | Athlos UFS",
+        "description": "Ultra-fast direct conversion CdTe-CMOS linear scanning sensor for dental panoramic, cephalometric, medical, and industrial X-ray imaging. Single-photon sensitivity."
+      },
+      "twitter": {
+        "title": "Ultra-Fast CdTe X-Ray Scanning Sensor | Athlos UFS",
+        "description": "Ultra-fast direct conversion CdTe-CMOS linear scanning sensor for dental panoramic, cephalometric, medical, and industrial X-ray imaging."
+      }
+    },
+    "productsUfsIp67": {
+      "title": "Industrial IP67 TDI – Industrial X-Ray Detector | Athlos",
+      "description": "Industrial IP67 TDI is a rugged industrial direct conversion X-ray linear detector for high-speed inline inspection. CdTe-CMOS, IP67 enclosure, no active cooling, TDI scanning.",
+      "og": {
+        "title": "Industrial IP67 TDI – Industrial X-Ray Detector | Athlos",
+        "description": "Rugged IP67-rated direct conversion CdTe-CMOS TDI detector for high-speed industrial inline X-ray inspection. No active cooling required."
+      },
+      "twitter": {
+        "title": "Industrial IP67 TDI – Industrial X-Ray Detector | Athlos",
+        "description": "Rugged IP67-rated direct conversion CdTe-CMOS TDI detector for high-speed industrial inline X-ray inspection. No active cooling required."
+      }
+    },
+    "productsManufacturing": {
+      "title": "X-Ray Detector Manufacturing Services | CMOS Bumping | Athlos",
+      "description": "Athlos provides precision X-ray detector manufacturing services — including CMOS bumping, flip chip bonding, wire bonding, die bonding, and full sensor characterization. VTT Micronova cleanroom access.",
+      "og": {
+        "title": "X-Ray Detector Manufacturing Services | CMOS Bumping | Athlos",
+        "description": "Precision X-ray detector manufacturing — CMOS bumping, flip chip bonding, wire bonding, die bonding, and sensor characterization. VTT Micronova cleanroom access, ISO 13485 certified."
+      },
+      "twitter": {
+        "title": "X-Ray Detector Manufacturing Services | CMOS Bumping | Athlos",
+        "description": "Precision X-ray detector manufacturing — CMOS bumping, flip chip bonding, wire bonding, die bonding, and sensor characterization. VTT Micronova cleanroom access."
+      }
+    },
+    "productsSoftware": {
+      "title": "X-Ray Imaging Software — TWAIN, SDK, Reconstruction | Athlos",
+      "description": "Athlos software products: TWAIN module, reconstruction algorithm libraries, advanced post-processing filters, and SDK integration support for X-ray imaging systems.",
+      "og": {
+        "title": "X-Ray Imaging Software — TWAIN, SDK, Reconstruction | Athlos",
+        "description": "Athlos software products: TWAIN module, reconstruction algorithm libraries, advanced post-processing filters, and SDK integration for X-ray imaging systems."
+      },
+      "twitter": {
+        "title": "X-Ray Imaging Software — TWAIN, SDK, Reconstruction | Athlos",
+        "description": "Athlos software products: TWAIN module, reconstruction algorithm libraries, advanced post-processing filters, and SDK integration for X-ray imaging systems."
+      }
+    }
   }
 }
