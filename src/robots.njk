@@ -1,0 +1,24 @@
+---
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+---
+# Athlos Oy — {{ site.url }}
+# All crawlers welcome, including AI answer engines.
+
+User-agent: *
+{%- if not env.isProduction %}
+# This is a non-production build (VERCEL_ENV={{ env.vercelEnv }}) —
+# disallow all crawlers as a belt-and-braces guard alongside Vercel's
+# x-robots-tag: noindex on *.vercel.app preview URLs.
+Disallow: /
+{%- else %}
+Allow: /
+{%- endif %}
+
+# Explicit allow for AI search / answer-engine crawlers
+# (already covered by the wildcard above; listed here for clarity)
+{%- for bot in crawlers %}
+User-agent: {{ bot }}
+Allow: /
+{% endfor %}
+Sitemap: {{ site.url }}/sitemap.xml

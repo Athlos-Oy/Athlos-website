@@ -63,11 +63,10 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("cefla.html");
 
 
-  // Root-level non-HTML assets served as-is.
-  eleventyConfig.addPassthroughCopy("robots.txt");
-  eleventyConfig.addPassthroughCopy("sitemap.xml");
-  eleventyConfig.addPassthroughCopy("llms.txt");
-  eleventyConfig.addPassthroughCopy("llms-full.txt");
+  // robots.txt, sitemap.xml, llms.txt, llms-full.txt are now generated
+  // by src/robots.njk, src/sitemap.njk, src/llms.njk, src/llms-full.njk
+  // (Step 8). The hand-maintained root files stay in git for now until
+  // we confirm the templated output matches them on production.
 
   eleventyConfig.addWatchTarget("css/");
   eleventyConfig.addWatchTarget("js/");
