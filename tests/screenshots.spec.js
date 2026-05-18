@@ -55,7 +55,13 @@ for (const page of PAGES) {
             transition-delay: 0s !important;
           }
           .reveal { opacity: 1 !important; transform: none !important; }
-          .hero-slide:not(.active) { opacity: 0 !important; }
+          /* Lock hero slideshow to slide 1 regardless of which one
+             the JS marks .active. setInterval rotation still ticks
+             but is invisible — keeps the screenshot deterministic. */
+          .hero-slide { opacity: 0 !important; }
+          .hero-slide:first-child { opacity: 1 !important; }
+          .hero-dot { background: rgba(255,255,255,0.3) !important; }
+          .hero-dot:first-of-type { background: rgba(255,255,255,1) !important; }
         `;
         // Inject as soon as <head> exists.
         const inject = () => (document.head || document.documentElement).appendChild(style);
