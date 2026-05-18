@@ -1,0 +1,42 @@
+{
+  "jsonld": {
+    "productsUfsIp67": {
+      "graph": {
+        "organization": {
+          "description": "Athlos Oy is a Finnish X-ray imaging technology company specialising in direct conversion CdTe-CMOS and Si-CMOS sensors for dental, medical, and industrial applications.",
+          "areaServed": "Worldwide",
+          "contactType": "sales"
+        },
+        "product": {
+          "description": "Rugged IP67-rated direct conversion CdTe-CMOS TDI linear detector for high-speed industrial inline X-ray inspection. No active cooling required.",
+          "category": "Industrial X-Ray Detector",
+          "offer": {
+            "description": "Industrial OEM and system integrator sales. Contact Athlos for quote and integration support."
+          }
+        },
+        "breadcrumb": {
+          "home": "Home",
+          "products": "Products"
+        }
+      },
+      "faq": {
+        "q1": {
+          "question": "What does IP67 mean for the Industrial IP67 TDI detector?",
+          "answer": "IP67 means the detector is fully dust-tight and protected against immersion in water to a depth of one metre — making it suitable for wet, dusty, and harsh industrial inspection environments."
+        },
+        "q2": {
+          "question": "Does the Industrial IP67 TDI require active cooling?",
+          "answer": "No. The Industrial IP67 TDI is designed to operate without active cooling, reducing system complexity and maintenance requirements."
+        },
+        "q3": {
+          "question": "What is TDI scanning?",
+          "answer": "TDI (Time Delay Integration) is a scanning technique that accumulates signal across multiple detector rows as an object moves through the X-ray beam — delivering high sensitivity at high conveyor speeds."
+        },
+        "q4": {
+          "question": "What industries is the Industrial IP67 TDI designed for?",
+          "answer": "The Industrial IP67 TDI is used in food and beverage foreign object inspection, pharmaceutical quality control, electronics PCB inspection, automotive part verification, and general industrial non-destructive testing."
+        }
+      }
+    }
+  }
+}

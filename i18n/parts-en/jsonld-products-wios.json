@@ -1,0 +1,56 @@
+{
+  "jsonld": {
+    "productsWios": {
+      "graph": {
+        "organization": {
+          "description": "Athlos Oy is a Finnish X-ray imaging technology company specialising in direct conversion CdTe-CMOS and Si-CMOS sensors for dental, medical, and industrial applications.",
+          "areaServed": "Worldwide",
+          "contactType": "sales"
+        },
+        "product": {
+          "description": "Fully wireless direct conversion intraoral X-ray sensor. Si-CMOS technology, Bluetooth 5.0, Zero Profile® holders. FDA 510(k) cleared.",
+          "category": "Dental X-Ray Sensor",
+          "awards": {
+            "a1": "Dental Advisor 2024 Top Award Winner",
+            "a2": "Dental Advisor 2025 Top Award Winner",
+            "a3": "Dental Product Shopper Best Product",
+            "a4": "Best Product Award 2026"
+          },
+          "offer": {
+            "description": "Available through authorised dental imaging dealers and distributors. Contact Athlos for quote."
+          }
+        },
+        "breadcrumb": {
+          "home": "Home",
+          "products": "Products"
+        }
+      },
+      "faq": {
+        "q1": {
+          "question": "Is DC-Air® FDA cleared?",
+          "answer": "Yes. DC-Air® is FDA 510(k) cleared for dental intraoral X-ray imaging."
+        },
+        "q2": {
+          "question": "How does DC-Air® connect wirelessly?",
+          "answer": "DC-Air® uses Bluetooth 5.0 wireless connectivity. No receiver dongle or docking station is required."
+        },
+        "q3": {
+          "question": "What sensor sizes are available for DC-Air®?",
+          "answer": "DC-Air® is available in Size 1 and Size 2."
+        },
+        "q4": {
+          "question": "Is DC-Air® available in Europe?",
+          "answer": "CE registration is currently under way. DC-Air® is not yet on sale in Europe."
+        },
+        "q5": {
+          "question": "What imaging technology does DC-Air® use?",
+          "answer": "DC-Air® uses Si-CMOS direct conversion technology, which converts X-ray photons directly into electrical signals without an intermediate scintillator layer — delivering sharper detail and higher contrast than conventional intraoral sensors."
+        }
+      },
+      "video": {
+        "name": "DC-Air® Wireless Intraoral Sensor Introduction",
+        "description": "A short overview of the DC-Air®, True Wireless® intraoral sensor — how it works, what makes it different, and what it delivers for the modern dental practice."
+      }
+    }
+  }
+}

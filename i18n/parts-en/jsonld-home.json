@@ -1,0 +1,38 @@
+{
+  "jsonld": {
+    "home": {
+      "faq": {
+        "q1": {
+          "question": "What is direct conversion X-ray imaging?",
+          "answer": "Direct conversion X-ray imaging converts X-ray photons directly into electrical pulses inside a semiconductor (such as CdTe or Si), without the intermediate scintillator step used in conventional indirect detectors. By eliminating the X-ray-to-light conversion, direct conversion removes the dominant source of blur, signal loss, and DQE loss — yielding sharper images, higher contrast, and better low-dose performance."
+        },
+        "q2": {
+          "question": "What does Athlos Oy make?",
+          "answer": "Athlos Oy develops and manufactures direct conversion X-ray imaging sensors based on CdTe-CMOS and Si-CMOS hybrid technology. The portfolio includes the DC-Air® wireless intraoral dental sensor, the Ultra-Fast Scanning Sensor for panoramic, cephalometric, medical and industrial imaging, and the Industrial IP67 TDI for inline industrial inspection. Athlos also offers contract detector manufacturing services and software products."
+        },
+        "q3": {
+          "question": "Where is Athlos based, and where are its sensors manufactured?",
+          "answer": "Athlos Oy is headquartered in Espoo, Finland. Sensors are manufactured in-house and at the VTT Micronova cleanroom in Espoo — one of Europe's leading nanofabrication facilities."
+        },
+        "q4": {
+          "question": "Is Athlos FDA-cleared and ISO-certified?",
+          "answer": "Athlos operates an ISO 13485:2016 certified quality management system. The DC-Air® wireless intraoral sensor is FDA 510(k) cleared for dental intraoral X-ray imaging."
+        },
+        "q5": {
+          "question": "Who founded Athlos?",
+          "answer": "Athlos was founded by Konstantinos Spartiotis, who previously founded Simage Oy in 1993 and Ajat Oy in 2001 following work at CERN and Johns Hopkins University. The team has over 35 years of applied expertise in CdTe and Si direct conversion."
+        }
+      },
+      "itemList": {
+        "name": "Athlos X-Ray Imaging Product Portfolio",
+        "items": {
+          "wios": { "name": "DC-Air® Wireless Intraoral Sensor" },
+          "ufs": { "name": "Ultra-Fast Scanning Sensor" },
+          "ufsIp67": { "name": "Industrial IP67 TDI" },
+          "manufacturing": { "name": "Manufacturing Services" },
+          "software": { "name": "Software Products" }
+        }
+      }
+    }
+  }
+}

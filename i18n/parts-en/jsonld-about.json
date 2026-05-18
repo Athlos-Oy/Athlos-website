@@ -1,0 +1,40 @@
+{
+  "jsonld": {
+    "about": {
+      "person": {
+        "name": "Konstantinos Spartiotis",
+        "jobTitle": "Founder and CEO, Athlos Oy",
+        "description": "Founder and CEO of Athlos Oy. Pioneered direct conversion CdTe X-ray imaging in 1993. Founder of Simage Oy (1993) and Ajat Oy (2001, later Varex Imaging Finland). Holds dozens of patents in direct conversion, CdTe contact technology, and photon counting.",
+        "knowsAbout": [
+          "Direct conversion X-ray imaging",
+          "CdTe sensor technology",
+          "Photon counting detectors",
+          "CMOS readout ASICs",
+          "Dental panoramic and cephalometric imaging"
+        ]
+      },
+      "faq": {
+        "q1": {
+          "question": "When was Athlos founded, and what is its heritage?",
+          "answer": "Athlos continues a lineage of direct conversion X-ray imaging that started in 1993. Founder Konstantinos Spartiotis launched Simage Oy in 1993 after work at CERN and his PhD at Johns Hopkins University, and later founded Ajat Oy in 2001. Ajat grew into the global standard for direct conversion CdTe-CMOS dental panoramic and cephalometric imaging before being acquired by XCounter and subsequently Varex Imaging."
+        },
+        "q2": {
+          "question": "Who is Konstantinos Spartiotis?",
+          "answer": "Konstantinos Spartiotis is the founder and CEO of Athlos Oy. He founded Simage Oy in 1993 and Ajat Oy in 2001, and is credited with pioneering direct conversion CdTe X-ray imaging. He holds dozens of patents in direct conversion, CdTe contact technology, and photon counting, and previously worked at CERN and completed his PhD at Johns Hopkins University."
+        },
+        "q3": {
+          "question": "Where does Athlos manufacture its sensors?",
+          "answer": "Athlos manufactures in Espoo, Finland — in-house and at the VTT Micronova cleanroom, one of Europe's most advanced nanofabrication facilities. This gives Athlos direct control of the full detector chain: CMOS wafer bumping, flip-chip bonding, detector assembly, and characterization."
+        },
+        "q4": {
+          "question": "What certifications does Athlos hold?",
+          "answer": "Athlos operates an ISO 13485:2016 certified quality management system. The DC-Air® wireless intraoral sensor is FDA 510(k) cleared for dental intraoral X-ray imaging."
+        }
+      },
+      "breadcrumbs": {
+        "home": "Home",
+        "about": "About"
+      }
+    }
+  }
+}

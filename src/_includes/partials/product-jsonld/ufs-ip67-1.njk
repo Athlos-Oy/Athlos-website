@@ -18,18 +18,18 @@
       "sameAs": [
         "https://www.linkedin.com/company/athlos-oy/"
       ],
-      "description": "Athlos Oy is a Finnish X-ray imaging technology company specialising in direct conversion CdTe-CMOS and Si-CMOS sensors for dental, medical, and industrial applications.",
-      "areaServed": "Worldwide",
+      "description": "{{ "jsonld.productsUfsIp67.graph.organization.description" | t }}",
+      "areaServed": "{{ "jsonld.productsUfsIp67.graph.organization.areaServed" | t }}",
       "contactPoint": {
         "@type": "ContactPoint",
         "email": "info@athlos.fi",
-        "contactType": "sales"
+        "contactType": "{{ "jsonld.productsUfsIp67.graph.organization.contactType" | t }}"
       }
     },
     {
       "@type": "Product",
       "name": "Industrial IP67 TDI",
-      "description": "Rugged IP67-rated direct conversion CdTe-CMOS TDI linear detector for high-speed industrial inline X-ray inspection. No active cooling required.",
+      "description": "{{ "jsonld.productsUfsIp67.graph.product.description" | t }}",
       "brand": {
         "@type": "Brand",
         "name": "Athlos"
@@ -40,7 +40,7 @@
         "url": "https://athlos.fi"
       },
       "url": "https://athlos.fi/products/ufs-ip67.html",
-      "category": "Industrial X-Ray Detector",
+      "category": "{{ "jsonld.productsUfsIp67.graph.product.category" | t }}",
       "image": "https://athlos.fi/images/ip67-carbon.webp",
       "offers": {
         "@type": "Offer",
@@ -50,7 +50,7 @@
         "priceValidUntil": "2027-12-31",
         "url": "https://athlos.fi/contact.html",
         "seller": { "@type": "Organization", "name": "Athlos Oy" },
-        "description": "Industrial OEM and system integrator sales. Contact Athlos for quote and integration support."
+        "description": "{{ "jsonld.productsUfsIp67.graph.product.offer.description" | t }}"
       }
     },
     {
@@ -59,13 +59,13 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Home",
+          "name": "{{ "jsonld.productsUfsIp67.graph.breadcrumb.home" | t }}",
           "item": "https://athlos.fi/"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Products",
+          "name": "{{ "jsonld.productsUfsIp67.graph.breadcrumb.products" | t }}",
           "item": "https://athlos.fi/products/"
         },
         {

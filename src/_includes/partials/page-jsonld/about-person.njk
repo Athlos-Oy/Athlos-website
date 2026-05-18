@@ -1,0 +1,21 @@
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ "jsonld.about.person.name" | t }}",
+    "jobTitle": "{{ "jsonld.about.person.jobTitle" | t }}",
+    "worksFor": {"@type": "Organization", "name": "Athlos Oy", "url": "https://athlos.fi"},
+    "description": "{{ "jsonld.about.person.description" | t }}",
+    "alumniOf": [
+      {"@type": "CollegeOrUniversity", "name": "Johns Hopkins University"},
+      {"@type": "Organization", "name": "CERN"}
+    ],
+    "knowsAbout": [
+      "{{ "jsonld.about.person.knowsAbout.0" | t }}",
+      "{{ "jsonld.about.person.knowsAbout.1" | t }}",
+      "{{ "jsonld.about.person.knowsAbout.2" | t }}",
+      "{{ "jsonld.about.person.knowsAbout.3" | t }}",
+      "{{ "jsonld.about.person.knowsAbout.4" | t }}"
+    ]
+  }
+  </script>
