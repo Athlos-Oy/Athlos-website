@@ -19,16 +19,13 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy("downloads");
 
-  // Un-ported pages — copied as-is until they move into src/.
-  // Once a page is ported to src/<name>.njk AND truly produces byte-equivalent
-  // output, remove its line from here.
-  //
-  // STATUS: index, privacy, about, applications are templated AND byte-equivalent.
-  // The following pages have .njk templates that DO NOT yet produce byte-equivalent
-  // output (need product-aware nav, product-subnav partial, FAQ-after-analytics
-  // slot, cefla noindex, contact modal placement, etc.). Their passthrough copies
-  // continue to overwrite the templated output, preserving the original page.
+  // cefla.html — English-only by design (gated download page; not translated).
+  // Stays as a passthrough copy permanently, no .njk template.
   eleventyConfig.addPassthroughCopy("cefla.html");
+
+  // Pages with .njk templates that don't yet produce byte-equivalent output
+  // (work in progress — see commit log). Passthrough overlays the broken
+  // template so the deploy serves the original page meanwhile.
   eleventyConfig.addPassthroughCopy("contact.html");
   eleventyConfig.addPassthroughCopy("products");
 
