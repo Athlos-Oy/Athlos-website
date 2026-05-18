@@ -16,12 +16,12 @@
   "sameAs": [
     "{{ site.linkedin }}"
   ],
-  "description": "Athlos Oy is a Finnish X-ray imaging technology company specialising in direct conversion CdTe-CMOS and Si-CMOS sensors for dental, medical, and industrial applications.",
-  "areaServed": "Worldwide",
+  "description": "{{ "jsonld.organization.description" | t }}",
+  "areaServed": "{{ "jsonld.organization.areaServed" | t }}",
   "contactPoint": {
     "@type": "ContactPoint",
     "email": "{{ site.email }}",
-    "contactType": "sales"
+    "contactType": "{{ "jsonld.organization.contactType" | t }}"
   }
 }
   </script>

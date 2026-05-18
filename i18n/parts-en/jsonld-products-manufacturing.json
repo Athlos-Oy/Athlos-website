@@ -1,0 +1,38 @@
+{
+  "jsonld": {
+    "productsManufacturing": {
+      "graph": {
+        "organization": {
+          "description": "Athlos Oy is a Finnish X-ray imaging technology company specialising in direct conversion CdTe-CMOS and Si-CMOS sensors for dental, medical, and industrial applications.",
+          "areaServed": "Worldwide",
+          "contactType": "sales"
+        },
+        "breadcrumb": {
+          "home": "Home",
+          "products": "Products",
+          "manufacturing": "Manufacturing Services"
+        },
+        "service": {
+          "name": "X-Ray Detector Manufacturing Services",
+          "description": "Precision X-ray detector manufacturing including CMOS bumping, flip chip bonding, wire bonding, die bonding, and full sensor characterization. Access to VTT Micronova cleanroom facility.",
+          "areaServed": "Worldwide",
+          "serviceType": "Contract Manufacturing"
+        }
+      },
+      "faq": {
+        "q1": {
+          "question": "What manufacturing services does Athlos offer?",
+          "answer": "Athlos provides precision X-ray detector manufacturing services including CMOS bumping, flip chip bonding, wire bonding, die bonding, and full sensor characterization."
+        },
+        "q2": {
+          "question": "Does Athlos have cleanroom manufacturing access?",
+          "answer": "Yes. Athlos has access to the VTT Micronova nanofabrication facility in Espoo, Finland — one of Europe's leading cleanroom environments for semiconductor and detector manufacturing."
+        },
+        "q3": {
+          "question": "Is Athlos ISO certified for manufacturing?",
+          "answer": "Yes. Athlos is ISO 13485:2016 certified, ensuring consistent quality management for medical device component manufacturing."
+        }
+      }
+    }
+  }
+}

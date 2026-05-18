@@ -1,0 +1,16 @@
+{#
+  Language switcher. Renders one link per active locale (from
+  src/_data/locales.js) pointing to the same page in that locale,
+  not to the locale homepage — that's a common painful UX bug
+  the plan calls out explicitly.
+
+  When only one locale is active (today: en), renders nothing
+  visible. That keeps byte-equivalence with pre-Phase 2 markup.
+#}
+{%- if locales.active | length > 1 %}
+      <div class="lang-switcher" role="group" aria-label="Language">
+{%- for loc in locales.active %}
+        <a href="{{ canonical | localeUrl(loc) }}" hreflang="{{ loc }}" class="lang-switcher-link{% if loc == lang %} active{% endif %}"{% if loc == lang %} aria-current="true"{% endif %}>{{ locales.labels[loc] }}</a>
+{%- endfor %}
+      </div>
+{%- endif %}

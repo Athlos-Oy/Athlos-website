@@ -73,6 +73,33 @@ export default async function (eleventyConfig) {
   eleventyConfig.addWatchTarget("i18n/");
   eleventyConfig.addWatchTarget("i18n/parts-en/");
 
+  // Returns the URL for the same page in a different locale.
+  // Input: a canonical URL or a root-relative path.
+  //   "/about.html"                  | localeUrl("en") → "/about.html"
+  //   "/about.html"                  | localeUrl("de") → "/de/about.html"
+  //   "https://athlos.fi/about.html" | localeUrl("de") → "https://athlos.fi/de/about.html"
+  // Pages already at /xx/... get their existing locale prefix swapped.
+  // The default locale (en) lives at the root, no prefix.
+  eleventyConfig.addFilter("localeUrl", function (input, targetLocale) {
+    if (!input) return input;
+    const isFull = /^https?:\/\//.test(input);
+    let origin = "";
+    let path = input;
+    if (isFull) {
+      const m = input.match(/^(https?:\/\/[^/]+)(.*)$/);
+      origin = m[1];
+      path = m[2] || "/";
+    }
+    const known = ["en", "de", "fr", "it", "es"];
+    const stripRe = new RegExp(`^/(?:${known.join("|")})(/|$)`);
+    const sm = path.match(stripRe);
+    if (sm) path = path.slice(sm[0].length - 1) || "/";
+    if (targetLocale && targetLocale !== "en") {
+      path = "/" + targetLocale + (path === "/" ? "/" : path);
+    }
+    return origin + path;
+  });
+
   // i18n filter. Usage: {{ "nav.home" | t }}
   // - Looks up dotted-path keys in I18N[page.lang || "en"].
   // - Throws if the key is missing — this is the alarm that prevents

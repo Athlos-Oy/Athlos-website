@@ -1,0 +1,38 @@
+{
+  "jsonld": {
+    "productsSoftware": {
+      "graph": {
+        "organization": {
+          "description": "Athlos Oy is a Finnish X-ray imaging technology company specialising in direct conversion CdTe-CMOS and Si-CMOS sensors for dental, medical, and industrial applications.",
+          "areaServed": "Worldwide",
+          "contactType": "sales"
+        },
+        "breadcrumb": {
+          "home": "Home",
+          "products": "Products",
+          "software": "Software Products"
+        },
+        "service": {
+          "name": "X-Ray Imaging Software Products",
+          "description": "TWAIN module, reconstruction algorithm libraries, advanced post-processing filters, and SDK/API integration support for X-ray imaging systems.",
+          "areaServed": "Worldwide",
+          "serviceType": "Software Licensing"
+        }
+      },
+      "faq": {
+        "q1": {
+          "question": "What software products does Athlos offer?",
+          "answer": "Athlos offers a TWAIN module, reconstruction algorithm libraries, advanced post-processing filters, and SDK/API integration support for X-ray imaging systems."
+        },
+        "q2": {
+          "question": "Can Athlos software be licensed independently?",
+          "answer": "Yes. Software products are available as part of an Athlos sensor system or as independently licensed components for OEM integration."
+        },
+        "q3": {
+          "question": "What SDK and integration support does Athlos provide?",
+          "answer": "Athlos provides SDK and API integration support to help OEM partners and system integrators incorporate Athlos imaging software and algorithms into their own products and workflows."
+        }
+      }
+    }
+  }
+}

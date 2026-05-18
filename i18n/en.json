@@ -310,5 +310,12 @@
         "description": "Athlos software products: TWAIN module, reconstruction algorithm libraries, advanced post-processing filters, and SDK integration for X-ray imaging systems."
       }
     }
+  },
+  "jsonld": {
+    "organization": {
+      "description": "Athlos Oy is a Finnish X-ray imaging technology company specialising in direct conversion CdTe-CMOS and Si-CMOS sensors for dental, medical, and industrial applications.",
+      "areaServed": "Worldwide",
+      "contactType": "sales"
+    }
   }
 }

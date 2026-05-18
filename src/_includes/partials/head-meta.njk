@@ -39,5 +39,9 @@
   <meta name="twitter:image" content="{{ twitter.image or og.image }}">
 {%- endif %}
   <link rel="canonical" href="{{ canonical }}">
+{%- for loc in locales.active %}
+  <link rel="alternate" hreflang="{{ loc }}" href="{{ canonical | localeUrl(loc) }}">
+{%- endfor %}
+  <link rel="alternate" hreflang="x-default" href="{{ canonical | localeUrl(locales.default) }}">
   <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon.png">
   <link rel="apple-touch-icon" href="/images/favicon.png">

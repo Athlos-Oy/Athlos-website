@@ -1,0 +1,35 @@
+{
+  "jsonld": {
+    "productsIndex": {
+      "itemList": {
+        "name": "Athlos X-Ray Imaging Product Portfolio",
+        "items": {
+          "wios": {
+            "category": "Wireless Intraoral Dental X-Ray Sensor",
+            "description": "Fully wireless Si-CMOS direct conversion intraoral X-ray sensor with Bluetooth 5.0, Zero Profile® holders, and FDA 510(k) clearance."
+          },
+          "ufs": {
+            "category": "X-Ray Linear Scanning Sensor",
+            "description": "Single-photon-sensitive CdTe-CMOS linear scanning sensor for dental panoramic, cephalometric, medical, and industrial imaging."
+          },
+          "ufsIp67": {
+            "category": "Industrial X-Ray TDI Detector",
+            "description": "IP67-rated ultra-fast TDI scanning detector for continuous inline industrial inspection, with no active cooling required."
+          },
+          "manufacturing": {
+            "serviceType": "Contract detector manufacturing",
+            "description": "CMOS wafer bumping, flip-chip bonding, wire bonding, die assembly, and detector characterization at Athlos and VTT Micronova."
+          },
+          "software": {
+            "category": "X-Ray Imaging Software",
+            "description": "TWAIN module, reconstruction algorithm libraries, post-processing filters, and SDK for integration with TWAIN-enabled imaging platforms."
+          }
+        }
+      },
+      "breadcrumb": {
+        "home": "Home",
+        "products": "Products"
+      }
+    }
+  }
+}
