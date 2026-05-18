@@ -15,6 +15,7 @@
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
+import nunjucks from "nunjucks";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -68,7 +69,11 @@ export default async function (eleventyConfig) {
     if (value === undefined) {
       throw new Error(`i18n: missing key "${key}" in locale "${lang}"`);
     }
-    return value;
+    // Mark as safe — values in en.json are authored strings that may
+    // contain intentional HTML (<br>, <sup>) or entities (&reg;, &middot;).
+    // Translators are trusted to author markup correctly; we don't want
+    // Nunjucks to escape their apostrophes, ampersands, or tags.
+    return new nunjucks.runtime.SafeString(value);
   });
 
   return {

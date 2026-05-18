@@ -58,16 +58,16 @@ footerNavAriaLabel: Footer navigation
         <div class="hero-gradient"></div>
       </div>
       <div class="hero-content">
-        <p class="hero-eyebrow">Direct Conversion X-Ray Imaging</p>
+        <p class="hero-eyebrow">{{ "pages.home.hero.eyebrow" | t }}</p>
         <h1 class="hero-headline">
-          Direct Conversion,<br>Direct Advantage.
+          {{ "pages.home.hero.headline" | t | safe }}
         </h1>
         <p class="hero-sub">
-          Athlos develops and manufactures advanced X-ray imaging sensors — delivering superior image quality, higher sensitivity, and faster acquisition for dental, medical, and industrial applications.
+          {{ "pages.home.hero.sub" | t }}
         </p>
         <div class="hero-actions">
-          <a href="products/index.html" class="btn btn-primary">Explore Products</a>
-          <a href="about.html" class="btn btn-outline">About Athlos</a>
+          <a href="products/index.html" class="btn btn-primary">{{ "pages.home.hero.ctaProducts" | t }}</a>
+          <a href="about.html" class="btn btn-outline">{{ "pages.home.hero.ctaAbout" | t }}</a>
         </div>
       </div>
       <div class="hero-indicators" aria-hidden="true">
@@ -86,35 +86,35 @@ footerNavAriaLabel: Footer navigation
       <div class="container">
         <div class="statement-inner">
           <h2 class="statement-headline reveal">
-            Our team invented Direct Conversion.<br>For over 30 years, Direct Conversion sensors have defined<br>what precision x-ray imaging and Image Accuracy stands for.
+            {{ "pages.home.statement.headline" | t | safe }}
           </h2>
           <p class="statement-body reveal">
-            By eliminating the scintillator and converting X-rays directly into electrical pulses, Athlos sensors and linear arrays eliminate the root cause of image degradation. The result is sharper detail, truer contrast, and reliable performance across the full dose range.
+            {{ "pages.home.statement.body" | t }}
           </p>
           <div class="statement-stats reveal">
             <div class="stat-item">
-              <span class="stat-number">1993</span>
-              <span class="stat-label">Direct conversion founded by our team</span>
+              <span class="stat-number">{{ "pages.home.statement.stats.invented.number" | t }}</span>
+              <span class="stat-label">{{ "pages.home.statement.stats.invented.label" | t }}</span>
             </div>
             <div class="stat-divider" aria-hidden="true"></div>
             <div class="stat-item">
-              <span class="stat-number">35+</span>
-              <span class="stat-label">Years of expertise</span>
+              <span class="stat-number">{{ "pages.home.statement.stats.expertise.number" | t }}</span>
+              <span class="stat-label">{{ "pages.home.statement.stats.expertise.label" | t }}</span>
             </div>
             <div class="stat-divider" aria-hidden="true"></div>
             <div class="stat-item">
-              <span class="stat-number">38</span>
-              <span class="stat-label">Markets through distribution partners</span>
+              <span class="stat-number">{{ "pages.home.statement.stats.markets.number" | t }}</span>
+              <span class="stat-label">{{ "pages.home.statement.stats.markets.label" | t }}</span>
             </div>
             <div class="stat-divider" aria-hidden="true"></div>
             <div class="stat-item">
-              <span class="stat-number">510(k)</span>
-              <span class="stat-label">FDA Clearance</span>
+              <span class="stat-number">{{ "pages.home.statement.stats.fda.number" | t }}</span>
+              <span class="stat-label">{{ "pages.home.statement.stats.fda.label" | t }}</span>
             </div>
             <div class="stat-divider" aria-hidden="true"></div>
             <div class="stat-item">
-              <span class="stat-number">ISO</span>
-              <span class="stat-label">13485:2016 Certified</span>
+              <span class="stat-number">{{ "pages.home.statement.stats.iso.number" | t }}</span>
+              <span class="stat-label">{{ "pages.home.statement.stats.iso.label" | t }}</span>
             </div>
           </div>
         </div>
@@ -126,13 +126,13 @@ footerNavAriaLabel: Footer navigation
       <div class="container">
         <div class="tech-grid">
           <div class="tech-content">
-            <p class="section-eyebrow reveal">The Science Behind Performance</p>
-            <h2 class="section-headline reveal">Direct conversion.<br>No intermediate steps.<br>No compromise.</h2>
+            <p class="section-eyebrow reveal">{{ "pages.home.tech.eyebrow" | t }}</p>
+            <h2 class="section-headline reveal">{{ "pages.home.tech.headline" | t | safe }}</h2>
             <p class="tech-body reveal">
-              Conventional X-ray sensors rely on a scintillator to first convert X-rays into visible light, which then enters a photodiode with limited fill factor and converts to an electric pulse . The non direct conversion of x-rays to light, light to electric pulse, introduces significant blur, signal loss (fill factor which is much less than 100%) and undetected x-rays (due to limited DQE of the scintillators).
+              {{ "pages.home.tech.body1" | t }}
             </p>
             <p class="tech-body reveal">
-              Athlos sensors use CdTe-CMOS and Si-CMOS direct conversion hybrids that convert X-ray photons directly into electric pulses that retain point accuracy. No scattered light means no loss of point accuracy. No light conversion. No phosphor layer. No unnecessary blurriness. No signal and contrast loss.
+              {{ "pages.home.tech.body2" | t }}
             </p>
           </div>
           <div class="tech-visual reveal">
@@ -145,7 +145,7 @@ footerNavAriaLabel: Footer navigation
                 preload="auto"
                 disablepictureinpicture
                 poster="images/product-macro-1.webp"
-                aria-label="Athlos sensor direct conversion process visualization"
+                aria-label="{{ "pages.home.tech.videoAria" | t }}"
                 data-playback-rate="1.5"
               >
                 <source src="images/direct-conversion.mp4" type="video/mp4">
@@ -158,28 +158,28 @@ footerNavAriaLabel: Footer navigation
                 <span class="tech-feature-icon" aria-hidden="true">
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M6 9l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </span>
-                CdTe and Si direct conversion materials
+                {{ "pages.home.tech.features.cdte" | t }}
               </div>
               <div class="tech-feature">
                 <span class="tech-feature-icon" aria-hidden="true">
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M6 9l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </span>
-                Proprietary full-custom CMOS readout
+                {{ "pages.home.tech.features.cmos" | t }}
               </div>
               <div class="tech-feature">
                 <span class="tech-feature-icon" aria-hidden="true">
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M6 9l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </span>
-                Single-photon sensitivity capability
+                {{ "pages.home.tech.features.photon" | t }}
               </div>
               <div class="tech-feature">
                 <span class="tech-feature-icon" aria-hidden="true">
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M6 9l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </span>
-                Advanced reconstruction and filter libraries
+                {{ "pages.home.tech.features.libs" | t }}
               </div>
             </div>
-            <a href="about.html" class="btn btn-secondary reveal">Learn about Athlos →</a>
+            <a href="about.html" class="btn btn-secondary reveal">{{ "pages.home.tech.learnLink" | t }} →</a>
           </div>
           </div>
         </div>
@@ -190,73 +190,73 @@ footerNavAriaLabel: Footer navigation
     <section class="products" id="products">
       <div class="container">
         <div class="products-header">
-          <p class="section-eyebrow section-eyebrow--light reveal">Product Portfolio</p>
+          <p class="section-eyebrow section-eyebrow--light reveal">{{ "pages.home.products.eyebrow" | t }}</p>
           <h2 class="section-headline section-headline--light reveal">
-            Purpose-built for demanding applications.
+            {{ "pages.home.products.headline" | t }}
           </h2>
           <p class="products-intro reveal">
-            Five product and service lines — each built on the same foundation of direct conversion precision and decades of X-ray imaging expertise.
+            {{ "pages.home.products.intro" | t }}
           </p>
         </div>
         <div class="products-grid">
 
           <article class="product-card reveal">
             <div class="product-card-image">
-              <img src="images/wios-hero.webp" width="1792" height="2400" alt="Athlos DC-Air wireless intraoral sensor" loading="lazy">
+              <img src="images/wios-hero.webp" width="1792" height="2400" alt="{{ "pages.home.products.cards.wios.imageAlt" | t }}" loading="lazy">
             </div>
             <div class="product-card-body">
-              <span class="product-market">Intraoral Dental</span>
-              <h3 class="product-name">DC-Air<sup>&reg;</sup></h3>
-              <p class="product-desc">True Wireless® intraoral sensor. Direct conversion image quality, corded-sensor speed, and phosphor plate comfort — without the wire.</p>
-              <a href="products/wios.html" class="product-link">Explore DC-Air&reg; <span aria-hidden="true">→</span></a>
+              <span class="product-market">{{ "pages.home.products.cards.wios.market" | t }}</span>
+              <h3 class="product-name">{{ "pages.home.products.cards.wios.name" | t | safe }}</h3>
+              <p class="product-desc">{{ "pages.home.products.cards.wios.desc" | t }}</p>
+              <a href="products/wios.html" class="product-link">{{ "pages.home.products.cards.wios.link" | t | safe }} <span aria-hidden="true">→</span></a>
             </div>
           </article>
 
           <article class="product-card reveal" data-delay="80">
             <div class="product-card-image">
-              <img src="images/ufs-dark.webp" width="1792" height="2400" alt="Athlos UFS ultra-fast scanning sensor" loading="lazy">
+              <img src="images/ufs-dark.webp" width="1792" height="2400" alt="{{ "pages.home.products.cards.ufs.imageAlt" | t }}" loading="lazy">
             </div>
             <div class="product-card-body">
-              <span class="product-market">Dental · Medical · Industrial</span>
-              <h3 class="product-name">Ultra-Fast Scanning Sensor</h3>
-              <p class="product-desc">Ultra-fast, single-photon-sensitive CdTe-CMOS scanning sensor for dental panoramic, cephalometric, medical, and industrial imaging.</p>
-              <a href="products/ufs.html" class="product-link">Explore Ultra-Fast Scanning Sensor <span aria-hidden="true">→</span></a>
+              <span class="product-market">{{ "pages.home.products.cards.ufs.market" | t }}</span>
+              <h3 class="product-name">{{ "pages.home.products.cards.ufs.name" | t }}</h3>
+              <p class="product-desc">{{ "pages.home.products.cards.ufs.desc" | t }}</p>
+              <a href="products/ufs.html" class="product-link">{{ "pages.home.products.cards.ufs.link" | t }} <span aria-hidden="true">→</span></a>
             </div>
           </article>
 
           <article class="product-card reveal" data-delay="160">
             <div class="product-card-image">
-              <img src="images/ip67-carbon.webp" width="1792" height="2400" alt="Athlos Industrial IP67 TDI rugged industrial detector" loading="lazy">
+              <img src="images/ip67-carbon.webp" width="1792" height="2400" alt="{{ "pages.home.products.cards.ufsIp67.imageAlt" | t }}" loading="lazy">
             </div>
             <div class="product-card-body">
-              <span class="product-market">Industrial Imaging</span>
-              <h3 class="product-name">Industrial IP67 TDI</h3>
-              <p class="product-desc">IP67-rated ultra-fast TDI scanning detector for continuous inline inspection in demanding industrial environments. No active cooling.</p>
-              <a href="products/ufs-ip67.html" class="product-link">Explore Industrial IP67 TDI <span aria-hidden="true">→</span></a>
+              <span class="product-market">{{ "pages.home.products.cards.ufsIp67.market" | t }}</span>
+              <h3 class="product-name">{{ "pages.home.products.cards.ufsIp67.name" | t }}</h3>
+              <p class="product-desc">{{ "pages.home.products.cards.ufsIp67.desc" | t }}</p>
+              <a href="products/ufs-ip67.html" class="product-link">{{ "pages.home.products.cards.ufsIp67.link" | t }} <span aria-hidden="true">→</span></a>
             </div>
           </article>
 
           <article class="product-card reveal" data-delay="240">
             <div class="product-card-image">
-              <img src="images/manufacturing-wafer-1.webp" width="2400" height="1792" alt="Athlos manufacturing services — CMOS wafer" loading="lazy">
+              <img src="images/manufacturing-wafer-1.webp" width="2400" height="1792" alt="{{ "pages.home.products.cards.manufacturing.imageAlt" | t }}" loading="lazy">
             </div>
             <div class="product-card-body">
-              <span class="product-market">Detector Manufacturing</span>
-              <h3 class="product-name">Manufacturing Services</h3>
-              <p class="product-desc">Precision detector manufacturing — CMOS bumping, flip chip bonding, wire bonding, die assembly, and characterization. VTT Micronova access. We offer a wide range of contract manufacturing services.</p>
-              <a href="products/manufacturing.html" class="product-link">Learn more <span aria-hidden="true">→</span></a>
+              <span class="product-market">{{ "pages.home.products.cards.manufacturing.market" | t }}</span>
+              <h3 class="product-name">{{ "pages.home.products.cards.manufacturing.name" | t }}</h3>
+              <p class="product-desc">{{ "pages.home.products.cards.manufacturing.desc" | t }}</p>
+              <a href="products/manufacturing.html" class="product-link">{{ "pages.home.products.cards.manufacturing.link" | t }} <span aria-hidden="true">→</span></a>
             </div>
           </article>
 
           <article class="product-card reveal" data-delay="320">
             <div class="product-card-image">
-              <img src="images/software_image_homepage.webp" width="5760" height="3840" alt="Athlos software products – TWAIN, SDK, and reconstruction algorithm libraries" loading="lazy">
+              <img src="images/software_image_homepage.webp" width="5760" height="3840" alt="{{ "pages.home.products.cards.software.imageAlt" | t }}" loading="lazy">
             </div>
             <div class="product-card-body">
-              <span class="product-market">Software &amp; Integration</span>
-              <h3 class="product-name">Software Products</h3>
-              <p class="product-desc">TWAIN module, reconstruction algorithm libraries, post-processing filters, and SDK — available as part of an Athlos system or independently licensed.</p>
-              <a href="products/software.html" class="product-link">Learn more <span aria-hidden="true">→</span></a>
+              <span class="product-market">{{ "pages.home.products.cards.software.market" | t | safe }}</span>
+              <h3 class="product-name">{{ "pages.home.products.cards.software.name" | t }}</h3>
+              <p class="product-desc">{{ "pages.home.products.cards.software.desc" | t }}</p>
+              <a href="products/software.html" class="product-link">{{ "pages.home.products.cards.software.link" | t }} <span aria-hidden="true">→</span></a>
             </div>
           </article>
 
@@ -272,28 +272,28 @@ footerNavAriaLabel: Footer navigation
       </div>
       <div class="container">
         <div class="manufacturing-content">
-          <p class="section-eyebrow section-eyebrow--light reveal">Manufacturing &amp; Partnership</p>
+          <p class="section-eyebrow section-eyebrow--light reveal">{{ "pages.home.manufacturing.eyebrow" | t | safe }}</p>
           <h2 class="section-headline section-headline--light reveal">
-            Built in Finland.<br>Trusted worldwide.
+            {{ "pages.home.manufacturing.headline" | t | safe }}
           </h2>
           <p class="manufacturing-body reveal">
-            Athlos sensors are manufactured in-house and at the VTT Micronova cleanroom facility in Espoo — one of Europe's leading nanofabrication environments. From CdTe bump bonding to final sensor assembly, we control the full process.
+            {{ "pages.home.manufacturing.body" | t }}
           </p>
           <div class="manufacturing-pillars reveal">
             <div class="pillar">
-              <h4 class="pillar-title">Cleanroom Manufacturing</h4>
-              <p class="pillar-body">In-house and VTT Micronova production under rigorous process controls.</p>
+              <h4 class="pillar-title">{{ "pages.home.manufacturing.pillars.cleanroom.title" | t }}</h4>
+              <p class="pillar-body">{{ "pages.home.manufacturing.pillars.cleanroom.body" | t }}</p>
             </div>
             <div class="pillar">
-              <h4 class="pillar-title">Global Partner Network</h4>
-              <p class="pillar-body">Partners spanning CMOS design, detector materials, software, and applications worldwide.</p>
+              <h4 class="pillar-title">{{ "pages.home.manufacturing.pillars.partners.title" | t }}</h4>
+              <p class="pillar-body">{{ "pages.home.manufacturing.pillars.partners.body" | t }}</p>
             </div>
             <div class="pillar">
-              <h4 class="pillar-title">ISO 13485:2016</h4>
-              <p class="pillar-body">Certified quality management for consistent product reliability and regulatory readiness.</p>
+              <h4 class="pillar-title">{{ "pages.home.manufacturing.pillars.iso.title" | t }}</h4>
+              <p class="pillar-body">{{ "pages.home.manufacturing.pillars.iso.body" | t }}</p>
             </div>
           </div>
-          <a href="products/manufacturing.html" class="btn btn-outline reveal">Manufacturing Services →</a>
+          <a href="products/manufacturing.html" class="btn btn-outline reveal">{{ "pages.home.manufacturing.cta" | t }} →</a>
         </div>
       </div>
     </section>
@@ -302,20 +302,20 @@ footerNavAriaLabel: Footer navigation
     <section class="cta-section" id="contact">
       <div class="container">
         <div class="cta-inner">
-          <p class="section-eyebrow reveal">Work With Us</p>
+          <p class="section-eyebrow reveal">{{ "pages.home.cta.eyebrow" | t }}</p>
           <h2 class="cta-headline reveal">
-            Ready to move faster<br>and perform better?
+            {{ "pages.home.cta.headline" | t | safe }}
           </h2>
           <p class="cta-body reveal">
-            Whether you are developing next-generation imaging systems or enhancing existing platforms, Athlos provides the technology, expertise, and long-term support to help you succeed.
+            {{ "pages.home.cta.body" | t }}
           </p>
           <div class="cta-actions reveal">
-            <a href="contact.html" class="btn btn-primary btn-large">Contact Athlos</a>
-            <span class="cta-detail">info@athlos.fi</span>
+            <a href="contact.html" class="btn btn-primary btn-large">{{ "pages.home.cta.button" | t }}</a>
+            <span class="cta-detail">{{ site.email }}</span>
           </div>
-          <p class="cta-location reveal">Espoo, Finland</p>
+          <p class="cta-location reveal">{{ "pages.home.cta.location" | t }}</p>
         </div>
       </div>
     </section>
 
-    <p style="max-width:1280px;margin:0 auto;padding:0 clamp(1.5rem,5vw,5rem) clamp(2rem,4vw,3rem);font-size:0.75rem;font-weight:400;letter-spacing:0.04em;color:#8C959B;text-align:center;">Last updated: <time datetime="2026-04-15" style="font-weight:500;color:#263035;">15 April 2026</time></p>
+    <p style="max-width:1280px;margin:0 auto;padding:0 clamp(1.5rem,5vw,5rem) clamp(2rem,4vw,3rem);font-size:0.75rem;font-weight:400;letter-spacing:0.04em;color:#8C959B;text-align:center;">{{ "pages.home.lastUpdated.label" | t }} <time datetime="{{ "pages.home.lastUpdated.datetime" | t }}" style="font-weight:500;color:#263035;">{{ "pages.home.lastUpdated.date" | t }}</time></p>

@@ -67,6 +67,127 @@
       "twitter": {
         "title": "Athlos – Advanced X-Ray Imaging Sensors",
         "description": "Direct conversion X-ray sensors for dental, medical, and industrial imaging. Superior image quality, higher sensitivity, and faster acquisition."
+      },
+      "hero": {
+        "eyebrow": "Direct Conversion X-Ray Imaging",
+        "headline": "Direct Conversion,<br>Direct Advantage.",
+        "sub": "Athlos develops and manufactures advanced X-ray imaging sensors — delivering superior image quality, higher sensitivity, and faster acquisition for dental, medical, and industrial applications.",
+        "ctaProducts": "Explore Products",
+        "ctaAbout": "About Athlos"
+      },
+      "statement": {
+        "headline": "Our team invented Direct Conversion.<br>For over 30 years, Direct Conversion sensors have defined<br>what precision x-ray imaging and Image Accuracy stands for.",
+        "body": "By eliminating the scintillator and converting X-rays directly into electrical pulses, Athlos sensors and linear arrays eliminate the root cause of image degradation. The result is sharper detail, truer contrast, and reliable performance across the full dose range.",
+        "stats": {
+          "invented": {
+            "number": "1993",
+            "label": "Direct conversion founded by our team"
+          },
+          "expertise": {
+            "number": "35+",
+            "label": "Years of expertise"
+          },
+          "markets": {
+            "number": "38",
+            "label": "Markets through distribution partners"
+          },
+          "fda": {
+            "number": "510(k)",
+            "label": "FDA Clearance"
+          },
+          "iso": {
+            "number": "ISO",
+            "label": "13485:2016 Certified"
+          }
+        }
+      },
+      "tech": {
+        "eyebrow": "The Science Behind Performance",
+        "headline": "Direct conversion.<br>No intermediate steps.<br>No compromise.",
+        "body1": "Conventional X-ray sensors rely on a scintillator to first convert X-rays into visible light, which then enters a photodiode with limited fill factor and converts to an electric pulse . The non direct conversion of x-rays to light, light to electric pulse, introduces significant blur, signal loss (fill factor which is much less than 100%) and undetected x-rays (due to limited DQE of the scintillators).",
+        "body2": "Athlos sensors use CdTe-CMOS and Si-CMOS direct conversion hybrids that convert X-ray photons directly into electric pulses that retain point accuracy. No scattered light means no loss of point accuracy. No light conversion. No phosphor layer. No unnecessary blurriness. No signal and contrast loss.",
+        "videoAria": "Athlos sensor direct conversion process visualization",
+        "features": {
+          "cdte": "CdTe and Si direct conversion materials",
+          "cmos": "Proprietary full-custom CMOS readout",
+          "photon": "Single-photon sensitivity capability",
+          "libs": "Advanced reconstruction and filter libraries"
+        },
+        "learnLink": "Learn about Athlos"
+      },
+      "products": {
+        "eyebrow": "Product Portfolio",
+        "headline": "Purpose-built for demanding applications.",
+        "intro": "Five product and service lines — each built on the same foundation of direct conversion precision and decades of X-ray imaging expertise.",
+        "cards": {
+          "wios": {
+            "market": "Intraoral Dental",
+            "name": "DC-Air<sup>&reg;</sup>",
+            "desc": "True Wireless® intraoral sensor. Direct conversion image quality, corded-sensor speed, and phosphor plate comfort — without the wire.",
+            "link": "Explore DC-Air&reg;",
+            "imageAlt": "Athlos DC-Air wireless intraoral sensor"
+          },
+          "ufs": {
+            "market": "Dental · Medical · Industrial",
+            "name": "Ultra-Fast Scanning Sensor",
+            "desc": "Ultra-fast, single-photon-sensitive CdTe-CMOS scanning sensor for dental panoramic, cephalometric, medical, and industrial imaging.",
+            "link": "Explore Ultra-Fast Scanning Sensor",
+            "imageAlt": "Athlos UFS ultra-fast scanning sensor"
+          },
+          "ufsIp67": {
+            "market": "Industrial Imaging",
+            "name": "Industrial IP67 TDI",
+            "desc": "IP67-rated ultra-fast TDI scanning detector for continuous inline inspection in demanding industrial environments. No active cooling.",
+            "link": "Explore Industrial IP67 TDI",
+            "imageAlt": "Athlos Industrial IP67 TDI rugged industrial detector"
+          },
+          "manufacturing": {
+            "market": "Detector Manufacturing",
+            "name": "Manufacturing Services",
+            "desc": "Precision detector manufacturing — CMOS bumping, flip chip bonding, wire bonding, die assembly, and characterization. VTT Micronova access. We offer a wide range of contract manufacturing services.",
+            "link": "Learn more",
+            "imageAlt": "Athlos manufacturing services — CMOS wafer"
+          },
+          "software": {
+            "market": "Software &amp; Integration",
+            "name": "Software Products",
+            "desc": "TWAIN module, reconstruction algorithm libraries, post-processing filters, and SDK — available as part of an Athlos system or independently licensed.",
+            "link": "Learn more",
+            "imageAlt": "Athlos software products – TWAIN, SDK, and reconstruction algorithm libraries"
+          }
+        }
+      },
+      "manufacturing": {
+        "eyebrow": "Manufacturing &amp; Partnership",
+        "headline": "Built in Finland.<br>Trusted worldwide.",
+        "body": "Athlos sensors are manufactured in-house and at the VTT Micronova cleanroom facility in Espoo — one of Europe's leading nanofabrication environments. From CdTe bump bonding to final sensor assembly, we control the full process.",
+        "pillars": {
+          "cleanroom": {
+            "title": "Cleanroom Manufacturing",
+            "body": "In-house and VTT Micronova production under rigorous process controls."
+          },
+          "partners": {
+            "title": "Global Partner Network",
+            "body": "Partners spanning CMOS design, detector materials, software, and applications worldwide."
+          },
+          "iso": {
+            "title": "ISO 13485:2016",
+            "body": "Certified quality management for consistent product reliability and regulatory readiness."
+          }
+        },
+        "cta": "Manufacturing Services"
+      },
+      "cta": {
+        "eyebrow": "Work With Us",
+        "headline": "Ready to move faster<br>and perform better?",
+        "body": "Whether you are developing next-generation imaging systems or enhancing existing platforms, Athlos provides the technology, expertise, and long-term support to help you succeed.",
+        "button": "Contact Athlos",
+        "location": "Espoo, Finland"
+      },
+      "lastUpdated": {
+        "label": "Last updated:",
+        "date": "15 April 2026",
+        "datetime": "2026-04-15"
       }
     },
     "about": {
