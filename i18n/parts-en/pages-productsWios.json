@@ -1,0 +1,157 @@
+{
+  "pages": {
+    "productsWios": {
+      "hero": {
+        "category": "Intraoral Dental",
+        "headline": "DC-Air<sup>&reg;</sup> Wireless Intraoral X-Ray Sensor",
+        "tagline": "True Wireless® direct conversion intraoral X-ray imaging.<br>Crystal clear images. No wire. No compromise.",
+        "ctaPrimary": "Distributor enquiry",
+        "ctaBrochure": "Download Brochure"
+      },
+      "overview": {
+        "eyebrow": "Overview",
+        "headline": "Freedom of movement.<br>No compromise on image.",
+        "body1": "DC-Air&reg; — the Wireless Intraoral Sensor — combines Athlos Si-CMOS direct conversion technology with Bluetooth 5.0 wireless connectivity. The result is a True Wireless&reg; intraoral sensor that delivers the sharpness of direct conversion, the comfort of phosphor plates, and the workflow speed of a corded system — without the cord.",
+        "body2": "The DC-Air&reg; system includes the sensor, a magnetic docking station, and the complete Zero Profile&reg; holder set — designed by doctors together with Athlos for accurate intraoral positioning and patient comfort.",
+        "imageAlt": "DC-Air® system — docking station and Zero Profile holder set",
+        "specs": {
+          "technologyLabel": "Technology",
+          "technologyValue": "Si-CMOS Direct Conversion",
+          "wirelessLabel": "Wireless",
+          "wirelessValue": "Bluetooth 5.0 (BLE 5.0)",
+          "activeAreaLabel": "Active Area",
+          "activeAreaValue": "35.1 × 24.7 mm²",
+          "lpRealLabel": "LP real",
+          "lpRealValue": "19",
+          "lpTheoreticalLabel": "LP theoretical",
+          "lpTheoreticalValue": "38",
+          "mtfLabel": "MTF",
+          "mtfValue": "&gt;70% @ 5 lp, &gt;40% @ 10 lp"
+        }
+      },
+      "features": {
+        "eyebrow": "Features",
+        "headline": "Built for the clinic. Engineered for precision.",
+        "cards": {
+          "wireless": {
+            "title": "True Wireless® Workflow",
+            "body": "No intraoral cable. Bluetooth 5.0 wireless link from sensor to docking station to PC. Sensor range up to 3 metres. Reduces patient discomfort and simplifies clinical workflow."
+          },
+          "directConversion": {
+            "title": "Direct Conversion Imaging",
+            "body": "Si-CMOS direct conversion technology converts X-ray photons directly into signal — eliminating the scintillator step. The result: sharper detail, better contrast, and more consistent images."
+          },
+          "zeroProfile": {
+            "title": "Zero Profile® Holders",
+            "body": "The purpose-designed Zero Profile® holder set includes Anterior, Posterior, Bitewing, Endodontic and Occlusal holders. Precisely aligns the sensor without relying on the cable for angulation — designed for patient comfort and repeatable positioning."
+          },
+          "battery": {
+            "title": "Battery &amp; Safety",
+            "body": "Up to 300 X-rays per charge. On-sensor safety memory stores one image. Dynamic self-calibration with every capture. Rechargeable Lithium-Ion battery. Magnetic docking for reliable recharging."
+          },
+          "ip67": {
+            "title": "IP67 &amp; Durability",
+            "body": "Enhanced IP67 protection. Ultrasonic-bonded PPSU enclosure — a material with exceptional hydrolytic stability and impact resistance. Built for the demanding realities of daily clinical use."
+          },
+          "software": {
+            "title": "Broad Software Compatibility",
+            "body": "The DC-Air&reg; TWAIN module integrates with Dentrix Ascend, Eaglesoft, Open Dental, Dexis, TigerView, Romexis, Acteon, Apteryx, Dexis, XDR Radiology, and many more TWAIN-enabled imaging platforms."
+          }
+        }
+      },
+      "video": {
+        "eyebrow": "See DC-Air&reg; in Action",
+        "headline": "The DC-Air&reg; introduction.",
+        "body": "A short overview of the DC-Air&reg;, True Wireless&reg; intraoral sensor — how it works, what makes it different, and what it delivers for the modern dental practice.",
+        "iframeTitle": "DC-Air&reg; Wireless Intraoral Sensor Introduction"
+      },
+      "gallery": {
+        "eyebrow": "Image Quality",
+        "headline": "Clinical X-ray images.",
+        "tabs": {
+          "anterior": "Anterior",
+          "posterior": "Posterior",
+          "bitewings": "Bitewings"
+        },
+        "alts": {
+          "anterior1": "DC-Air anterior X-ray 1",
+          "anterior2": "DC-Air anterior X-ray 2",
+          "anterior3": "DC-Air anterior X-ray 3",
+          "anterior4": "DC-Air anterior X-ray 4",
+          "anterior5": "DC-Air anterior X-ray 5",
+          "anterior6": "DC-Air anterior X-ray 6",
+          "anterior7": "DC-Air anterior X-ray 7",
+          "anterior8": "DC-Air anterior X-ray 8",
+          "posterior1": "DC-Air posterior X-ray 1",
+          "posterior2": "DC-Air posterior X-ray 2",
+          "posterior3": "DC-Air posterior X-ray 3",
+          "posterior4": "DC-Air posterior X-ray 4",
+          "posterior5": "DC-Air posterior X-ray 5",
+          "posterior6": "DC-Air posterior X-ray 6",
+          "posterior7": "DC-Air posterior X-ray 7",
+          "posterior8": "DC-Air posterior X-ray 8",
+          "bw1": "DC-Air bitewing X-ray 1",
+          "bw2": "DC-Air bitewing X-ray 2",
+          "bw3": "DC-Air bitewing X-ray 3",
+          "bw4": "DC-Air bitewing X-ray 4",
+          "bw5": "DC-Air bitewing X-ray 5",
+          "bw6": "DC-Air bitewing X-ray 6",
+          "bw7": "DC-Air bitewing X-ray 7",
+          "bw8": "DC-Air bitewing X-ray 8"
+        }
+      },
+      "awards": {
+        "eyebrow": "Recognition",
+        "headline": "Award-winning technology.",
+        "body": "DC-Air&reg; and the direct conversion technology behind it have been recognised by leading dental and healthcare industry awards programmes.",
+        "items": {
+          "da2024Alt": "Dental Advisor 2024 Top Award Winner",
+          "da2024Label": "Dental Advisor 2024 Top Award Winner",
+          "da2025Alt": "Dental Advisor 2025 Top Award Winner",
+          "da2025Label": "Dental Advisor 2025 Top Award Winner",
+          "dpsBestAlt": "Dental Product Shopper Best Product",
+          "dpsBestLabel": "Dental Product Shopper Best Product",
+          "bestProduct2026Alt": "Best Product Award 2026",
+          "bestProduct2026Label": "Best Product Award 2026"
+        }
+      },
+      "clinicians": {
+        "eyebrow": "Independent Evaluation",
+        "headline": "Evaluated by Clinicians Report.",
+        "body": "Clinicians Report is an independent dental product evaluation foundation trusted by practitioners worldwide. In 2022, DC-Air&reg; was reviewed and highlighted across two dedicated CR evaluations — a First Look in January and a comparative assessment published in March.",
+        "callout": "In the March 2022 comparative evaluation, CR scientists and clinicians observed that DC-Air&reg; radiographs showed improved clarity and subtle detail compared to conventional CMOS sensors — and described direct conversion technology as a significant advancement.",
+        "highlights": {
+          "h1": "High resolution and excellent dynamic range highlighted in the CR First Look evaluation.",
+          "h2": "Wireless image transfer and processing observed at approximately 6–8 seconds — maintaining clinical workflow speed without a cable.",
+          "h3": "Clinicians found the sensor easy to work with and more comfortable than conventional corded sensors.",
+          "h4": "Featured in a dedicated March 2022 CR publication: <em>&ldquo;DC-Air&reg;: Wireless Intraoral Sensor with Improved Image Quality.&rdquo;</em>"
+        },
+        "footnote": "Clinicians Report is published by CR Foundation, an independent non-profit dental product testing organisation. Evaluations referenced: CR First Look, January 2022; CR Comparative Evaluation, March 2022."
+      },
+      "brochure": {
+        "title": "DC-Air&reg; Product Brochure",
+        "subtitle": "Full specifications, features, and system overview — PDF",
+        "button": "Download PDF"
+      },
+      "cta": {
+        "headline": "Become a DC-Air&reg; distribution partner.",
+        "body": "DC-Air&reg; is available through authorised dental imaging dealers and distributors. If you represent a dental product distribution company or dealer network, we would like to hear from you.",
+        "regulatory": "The DC-Air&reg; is FDA 510(k) cleared, and CE registration is under way. The product is not yet on sale in Europe.",
+        "oem": "For OEM licensing or technology integration enquiries, please reach out through the same channel.",
+        "contactBtn": "Contact Athlos",
+        "brochureBtn": "Download Brochure"
+      },
+      "lightbox": {
+        "ariaLabel": "Image viewer",
+        "closeLabel": "Close",
+        "imgAlt": "X-ray image enlarged"
+      },
+      "lastUpdated": {
+        "label": "Last updated:",
+        "datetime": "2026-04-15",
+        "date": "15 April 2026"
+      },
+      "salesNote": "In the USA, the product is sold by Freedom Technologies Group LLC, and in Canada by SYNCA Inc."
+    }
+  }
+}

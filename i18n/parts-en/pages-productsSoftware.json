@@ -1,0 +1,50 @@
+{
+  "pages": {
+    "productsSoftware": {
+      "hero": {
+        "category": "Software &amp; Integration",
+        "headline": "X-Ray Imaging<br>Software Products",
+        "tagline": "Decades of software expertise — available as licensable components or integrated with Athlos imaging systems."
+      },
+      "overview": {
+        "eyebrow": "Overview",
+        "headline": "The software layer behind direct conversion imaging.",
+        "body1": "The Athlos team has been developing X-ray imaging software since the early days of direct conversion — reconstruction algorithms, image processing filters, and TWAIN integration layers that have been deployed in thousands of clinical and industrial installations worldwide.",
+        "body2": "These software capabilities are available as part of a complete Athlos imaging system, or as independently licensable components for integration into third-party platforms. Athlos also provides SDK access and direct integration support for OEM and system integrator customers."
+      },
+      "components": {
+        "eyebrow": "What's Available",
+        "headline": "Software components for imaging system development.",
+        "cards": {
+          "twain": {
+            "title": "TWAIN Module",
+            "body": "The Athlos TWAIN module integrates directly with dental and medical imaging software. Supported applications include Dentrix Ascend, Eaglesoft, Open Dental, Dexis, Romexis, and many more TWAIN-enabled platforms. Available as part of a hardware solution or as a standalone licensed component."
+          },
+          "reconstruction": {
+            "title": "Reconstruction Algorithms",
+            "body": "Advanced reconstruction algorithm libraries developed over decades of direct conversion imaging work. Designed for the specific signal characteristics of CdTe and Si CMOS detectors. Available as a standalone licensable component for integration into imaging system pipelines."
+          },
+          "postProcessing": {
+            "title": "Post-Processing Filters",
+            "body": "Locally adaptive image enhancement and post-processing filter libraries. Developed and refined across dental, industrial, and medical imaging applications. Provided with the Athlos SDK and available for integration and customisation."
+          }
+        }
+      },
+      "sdk": {
+        "title": "Athlos SDK &amp; API",
+        "body": "C/C++ / DLL integration API with source code examples, evaluation GUI, and an advanced locally adaptive filter library. Contact Athlos to discuss SDK access and licensing."
+      },
+      "cta": {
+        "headline": "Software licensing and integration questions.",
+        "body": "Whether you are integrating Athlos software into an existing platform or evaluating it for a new imaging system, the Athlos team can support you. Contact us to discuss licensing, SDK access, and integration paths.",
+        "buttonContact": "Contact Athlos",
+        "buttonAll": "All Products"
+      },
+      "lastUpdated": {
+        "label": "Last updated:",
+        "date": "15 April 2026",
+        "datetime": "2026-04-15"
+      }
+    }
+  }
+}

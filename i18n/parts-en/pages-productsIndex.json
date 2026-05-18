@@ -1,0 +1,84 @@
+{
+  "pages": {
+    "productsIndex": {
+      "hero": {
+        "eyebrow": "Product Portfolio",
+        "headline": "X-Ray Imaging Products",
+        "intro": "Five product and service lines — all built on the same foundation of direct conversion precision and decades of X-ray imaging expertise."
+      },
+      "cards": {
+        "wios": {
+          "market": "Intraoral Dental",
+          "name": "DC-Air&reg;",
+          "desc": "Fully wireless direct conversion intraoral X-ray imaging for modern dental workflow.",
+          "link": "Explore DC-Air&reg;"
+        },
+        "ufs": {
+          "market": "Dental · Medical · Industrial",
+          "name": "Ultra-Fast Scanning Sensor",
+          "desc": "Ultra-fast scanning sensor for applications where speed, sensitivity, and image quality are critical.",
+          "link": "Explore Ultra-Fast Scanning Sensor"
+        },
+        "ufsIp67": {
+          "market": "Industrial Imaging",
+          "name": "Industrial IP67 TDI",
+          "desc": "Rugged industrial ultra-fast scanning detector engineered for demanding inline inspection environments.",
+          "link": "Explore Industrial IP67 TDI"
+        },
+        "manufacturing": {
+          "market": "Detector Manufacturing",
+          "name": "Manufacturing Services",
+          "desc": "Precision sensor manufacturing — from CMOS bumping and flip chip bonding to full detector assembly.",
+          "link": "Learn more"
+        },
+        "software": {
+          "market": "Software &amp; Integration",
+          "name": "Software Products",
+          "desc": "TWAIN module, reconstruction algorithms, post-processing filters, and SDK for X-ray imaging integration.",
+          "link": "Learn more"
+        }
+      },
+      "categories": {
+        "eyebrow": "Product Categories",
+        "headline": "Find the right product<br>for your application.",
+        "dental": {
+          "label": "Dental",
+          "name": "Intraoral &amp;<br>Panoramic Imaging",
+          "items": {
+            "wios": "DC-Air&reg; – Wireless Intraoral Sensor",
+            "ufs": "Ultra-Fast Scanning Sensor – Dental Panoramic &amp; Ceph"
+          }
+        },
+        "industrial": {
+          "label": "Industrial",
+          "name": "Inline Inspection &amp;<br>Industrial X-Ray",
+          "items": {
+            "ufsIp67": "Industrial IP67 TDI – Rugged Industrial Detector",
+            "ufs": "Ultra-Fast Scanning Sensor – Industrial &amp; Medical"
+          }
+        },
+        "services": {
+          "label": "Software &amp; Manufacturing",
+          "name": "Services &amp;<br>Integration",
+          "items": {
+            "software": "Software Products",
+            "twain": "TWAIN Module",
+            "filters": "Reconstruction &amp; Filters",
+            "manufacturing": "Manufacturing Services"
+          }
+        }
+      },
+      "cta": {
+        "eyebrow": "Get in Touch",
+        "headline": "Not sure which product fits your application?",
+        "body": "Athlos works closely with OEMs and system integrators to identify the right solution. Tell us about your imaging requirements and we'll help you find the right path forward.",
+        "button": "Contact Athlos"
+      },
+      "lastUpdated": {
+        "label": "Last updated:",
+        "datetime": "2026-04-15",
+        "date": "15 April 2026"
+      }
+    }
+  }
+}

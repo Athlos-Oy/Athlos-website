@@ -1,0 +1,66 @@
+{
+  "pages": {
+    "productsManufacturing": {
+      "hero": {
+        "category": "Sensor Manufacturing",
+        "headline": "X-Ray Detector<br>Manufacturing Services",
+        "tagline": "In-house detector manufacturing — from CMOS wafer to finished sensor."
+      },
+      "overview": {
+        "eyebrow": "Overview",
+        "headline": "Built in-house, from wafer to sensor.",
+        "body1": "Athlos manufactures its imaging sensors in-house and in partnership with the VTT Micronova cleanroom facility in Espoo — one of Europe's leading nanofabrication environments. This deep manufacturing capability is part of what makes Athlos sensors different: we control the full process, from detector material and bump bonding to final assembly and characterization.",
+        "body2": "The same manufacturing infrastructure that supports our own product lines is available as a service. Athlos can support partner and OEM projects requiring precision detector manufacturing, CMOS bumping, or specialized assembly processes.",
+        "imageAlt": "Silicon CMOS wafer with intricate detector grid pattern"
+      },
+      "capabilities": {
+        "eyebrow": "Capabilities",
+        "headline": "Precision at every process step.",
+        "cards": {
+          "bumping": {
+            "title": "Detector Bumping",
+            "body": "Fine-pitch InSn solder bump deposition on CMOS wafers. Sub-100 µm pitch capability for CdTe and Si detector integration. Fine-pitch Cu pillar bump deposition on CMOS wafers. Sub-30 µm pitch capability for CdTe and Si detector integration."
+          },
+          "flipChip": {
+            "title": "Flip Chip Bonding",
+            "body": "Precision flip chip interconnection of detector material to CMOS readout. Critical for achieving the direct electrical contact that enables direct conversion imaging."
+          },
+          "wire": {
+            "title": "Wire Bonding",
+            "body": "High-density wire bond connections from CMOS die to PCB and packaging substrates. Suitable for fine-pitch and large-format sensor configurations."
+          },
+          "probing": {
+            "title": "X-Ray Probing &amp; Characterization",
+            "body": "Electrical probing at wafer level, including X-ray-based inspection. Full detector characterization for imaging uniformity, sensitivity, and noise performance."
+          },
+          "dieBonding": {
+            "title": "Die Bonding &amp; Assembly",
+            "body": "Precision die bonding and multi-layer sensor assembly in controlled clean environments. Athlos coordinates all assembly stages in-house."
+          },
+          "quality": {
+            "title": "Quality &amp; Reliability",
+            "body": "ISO 13485:2016 quality management. Process controls at every manufacturing stage, from incoming material inspection to final product test and release."
+          }
+        }
+      },
+      "facilities": {
+        "eyebrow": "Facilities",
+        "headline": "VTT Micronova cleanroom access.",
+        "body1": "Athlos has full access to the 2,000 sqm VTT Micronova cleanroom facility in Espoo, Finland — one of Europe's most advanced nanofabrication, thin film, and microsystems cleanroom facilities.",
+        "body2": "This partnership gives Athlos and its manufacturing customers access to a world-class facility, without the capital cost of a standalone cleanroom. Combined with Athlos's own assembly and characterization infrastructure, this enables full end-to-end sensor production.",
+        "imageAlt": "Athlos cleanroom manufacturing facility at VTT Micronova, Espoo"
+      },
+      "cta": {
+        "headline": "Manufacturing partnership enquiries.",
+        "body": "If you are developing a detector-based product and need precision manufacturing support — from bump bonding to full sensor assembly — contact Athlos to discuss your requirements.",
+        "ctaContact": "Contact Athlos",
+        "ctaAll": "All Products"
+      },
+      "lastUpdated": {
+        "label": "Last updated:",
+        "date": "15 April 2026",
+        "datetime": "2026-04-15"
+      }
+    }
+  }
+}

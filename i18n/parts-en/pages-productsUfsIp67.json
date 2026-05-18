@@ -1,0 +1,234 @@
+{
+  "pages": {
+    "productsUfsIp67": {
+      "hero": {
+        "category": "Industrial Imaging",
+        "headline": "Industrial IP67 TDI",
+        "tagline": "Rugged ultra-fast scanning X-ray imaging for demanding industrial inspection environments.",
+        "ctaSpecs": "Technical specs",
+        "ctaDiscuss": "Discuss application"
+      },
+      "overview": {
+        "eyebrow": "Overview",
+        "headline": "Industrial-grade.<br>No cooling required.",
+        "body1": "Industrial IP67 TDI is an industrial linear detector array built for fast scanning applications in harsh and continuous-use environments. IP67 protection, no active cooling, and ruggedized direct conversion CdTe imaging — engineered for inline inspection workflows where uptime, sensitivity, and long-duration stability matter.",
+        "body2": "Unlike detector systems that rely on Peltier cooling to manage sensor temperature, Industrial IP67 TDI operates without active cooling across its full operating range due to its very low power consumption and patented embedded dynamic offset calibration algorithm.",
+        "body3": "TDI mode operation enables line rates up to 75,000 lines per second — supporting scanning speeds that match the demands of high-throughput production inspection.",
+        "imageAlt": "Industrial IP67 TDI product view"
+      },
+      "highlights": {
+        "eyebrow": "Key Features",
+        "headline": "Engineered for the hardest conditions.",
+        "cards": {
+          "01": {
+            "title": "IP67 Rugged Enclosure",
+            "body": "Fully sealed industrial enclosure rated IP67. Designed for environments with dust, moisture, vibration, and continuous operation demands that would disqualify lab-grade detectors."
+          },
+          "02": {
+            "title": "No Active Cooling",
+            "body": "No Peltiers, no cooling circuits. Industrial IP67 TDI operates within its full specification across 10–40 °C without active thermal management — reducing system complexity and failure modes. This is enabled by very low power consumption and the embedded dynamic offset calibration algorithm."
+          },
+          "03": {
+            "title": "Ultra-Fast TDI Scanning",
+            "body": "TDI mode with line rates up to 75,000 lps. Designed for very high scanning speeds — 30 m/min at 100 µm, 240 m/min at 200 µm, and up to 1920 m/min at 400 µm resolution (or 115 km/h scanning speed)."
+          },
+          "04": {
+            "title": "Direct Conversion CdTe",
+            "body": "CdTe direct conversion imaging with 28 TDI stages. Exceptionally high sensitivity, wide energy range (10–360 kV), and 16-bit dynamic range for demanding inspection applications. We also offer a custom solution for LINACs for use at energies up to 9 MeV."
+          },
+          "05": {
+            "title": "High Contrast &amp; Sensitivity",
+            "body": "Single-photon-sensitive TDI performance. Superior contrast resolution enables reliable detection of small foreign objects, fine structural defects, and low-attenuation features."
+          },
+          "06": {
+            "title": "Gigabit Ethernet",
+            "body": "Standard GigE interface. 9–24 V DC power supply range. Straightforward integration into industrial system architectures and control environments."
+          }
+        }
+      },
+      "performance": {
+        "eyebrow": "Scanning Speed",
+        "headline": "Resolution and speed<br>across the full range.",
+        "cards": {
+          "01": {
+            "resolution": "At 100 <span style=\"text-transform:none\">µm</span>",
+            "speed": "30",
+            "unit": "m/min — maximum precision"
+          },
+          "02": {
+            "resolution": "At 200 <span style=\"text-transform:none\">µm</span>",
+            "speed": "240",
+            "unit": "m/min — balanced throughput"
+          },
+          "03": {
+            "resolution": "At 400 <span style=\"text-transform:none\">µm</span>",
+            "speed": "1,920",
+            "unit": "m/min — maximum throughput"
+          }
+        }
+      },
+      "specs": {
+        "eyebrow": "Technical Snapshot",
+        "headline": "Designed around the application.",
+        "body1": "Industrial IP67 TDI is available in three model variants — UFS-150IP67NC-44, UFS-225IP67NC-44, and UFS-460IP67NC-44. All share the same fundamental architecture: direct conversion CdTe imaging with 28 TDI stages, IP67 enclosure, and Gigabit Ethernet interface.",
+        "body2": "Custom solutions available: the modular architecture allows Athlos to provide custom active lengths from 7.5 cm up to 10 m in 7.5 cm increments. Contact us to discuss your active length requirement.",
+        "imageAlt": "Industrial IP67 TDI internal architecture – open enclosure view",
+        "rows": {
+          "pixelSize": { "label": "Pixel size", "value": "100 × 100 µm" },
+          "activeAreaWidth": { "label": "Active area width", "value": "2.8 mm" },
+          "tdiStages": { "label": "TDI stages", "value": "28" },
+          "energyRange": { "label": "Energy range", "value": "10 – 360 kV" },
+          "dynamicRange": { "label": "Dynamic range", "value": "16-bit" },
+          "maxLineRate": { "label": "Max line rate", "value": "75,000 lps" },
+          "interface": { "label": "Interface", "value": "Gigabit Ethernet" },
+          "powerSupply": { "label": "Power supply", "value": "9 – 24 V DC" },
+          "operatingTemperature": { "label": "Operating temperature", "value": "10 – 40 °C" },
+          "activeCooling": { "label": "Active cooling", "value": "None required" },
+          "enclosureRating": { "label": "Enclosure rating", "value": "IP67" },
+          "detectorMaterial": { "label": "Detector material", "value": "CdTe direct conversion" }
+        }
+      },
+      "applications": {
+        "eyebrow": "Applications",
+        "headline": "Where Industrial IP67 TDI performs.",
+        "intro": "Industrial IP67 TDI is deployed in demanding inline inspection environments across multiple industries — wherever speed, image quality, and enclosure durability are all required simultaneously.",
+        "cards": {
+          "food": {
+            "industry": "Food &amp; Beverage",
+            "use1": "Foreign object detection",
+            "use2": "Seal integrity inspection",
+            "use3": "Fill-level verification",
+            "use4": "Object counting"
+          },
+          "pharma": {
+            "industry": "Pharmaceutical",
+            "use1": "Non-destructive product testing",
+            "use2": "Foreign object detection",
+            "use3": "Seal and fill-level inspection",
+            "use4": "Product safety and quality"
+          },
+          "oilGas": {
+            "industry": "Oil &amp; Gas · Nuclear",
+            "use1": "Pipe inspection for cracks and inclusions",
+            "use2": "Weld inspection",
+            "use3": "Industrial CT",
+            "use4": "Corrosion assessment"
+          },
+          "automotive": {
+            "industry": "Automotive",
+            "use1": "Tire quality inspection",
+            "use2": "Metal casting inspection",
+            "use3": "Metal part integrity",
+            "use4": "Assembly verification"
+          },
+          "electronics": {
+            "industry": "Electronics",
+            "use1": "Reel component inspection",
+            "use2": "Component counting",
+            "use3": "PCB inspection",
+            "use4": "Surface-mount assembly verification"
+          },
+          "heavy": {
+            "industry": "Heavy Industry",
+            "use1": "Structural weld inspection",
+            "use2": "Pipe porosity and crack detection",
+            "use3": "Industrial CT applications",
+            "use4": "Large-scale NDT"
+          }
+        }
+      },
+      "gallery": {
+        "eyebrow": "Image Quality",
+        "headline": "Inline inspection X-ray examples.",
+        "lightboxCloseAria": "Close",
+        "cards": {
+          "fish": {
+            "alt": "Fish X-ray",
+            "name": "Fish",
+            "params": "40 kVp · 10 mA · 46.7 cm/s · 100 µm"
+          },
+          "twoFish": {
+            "alt": "Two fish X-ray",
+            "name": "Two Fish",
+            "params": "40 kVp · 10 mA · 46.7 cm/s · 100 µm"
+          },
+          "chickenFillet": {
+            "alt": "Chicken fillet and bones X-ray",
+            "name": "Chicken Fillet &amp; Bones",
+            "params": "40 kVp · 10 mA · 46.7 cm/s · 100 µm"
+          },
+          "nuts": {
+            "alt": "Nuts X-ray",
+            "name": "Nuts",
+            "params": "40 kVp · 10 mA · 46.7 cm/s · 100 µm"
+          },
+          "walnuts": {
+            "alt": "Walnuts X-ray",
+            "name": "Walnuts",
+            "params": "40 kVp · 10 mA · 93 cm/s · 200 µm"
+          },
+          "chipsNoodles": {
+            "alt": "Chips and noodles X-ray",
+            "name": "Chips &amp; Noodles",
+            "params": "40 kVp · 10 mA · 46.7 cm/s · 100 µm"
+          },
+          "chipsSugarBread": {
+            "alt": "Chips and sugar bread X-ray",
+            "name": "Chips &amp; Sugar Bread",
+            "params": "40 kVp · 10 mA · 46.7 cm/s · 100 µm"
+          },
+          "bankNote": {
+            "alt": "Bank note X-ray",
+            "name": "Bank Note",
+            "params": "40 kVp · 5 mA · 66.7 cm/s · 200 µm"
+          }
+        }
+      },
+      "models": {
+        "eyebrow": "Product Family",
+        "headline": "Three variants.<br>Same rugged core.",
+        "cards": {
+          "ufs150": {
+            "name": "UFS-150 IP67NC",
+            "ref": "UFS-150IP67NC-44-TDI-HVS",
+            "desc": "Compact 15 cm active length."
+          },
+          "ufs225": {
+            "name": "UFS-225 IP67NC",
+            "ref": "UFS-225IP67NC-44-TDI-HVS",
+            "desc": "Compact 23 cm active length."
+          },
+          "ufs460": {
+            "name": "UFS-460 IP67NC",
+            "ref": "UFS-460IP67NC-44-TDI-HVS",
+            "desc": "Compact 46 cm active length."
+          },
+          "custom": {
+            "name": "UFS-xxx IP67NC",
+            "ref": "UFS-xxxIP67NC-44-TDI-HVS",
+            "desc": "Custom active length to meet application requirements. One module has three 25.6 mm hybrids; the module's active length is 76.8 mm. Any active length is available from 76.8 mm to 10 m."
+          }
+        },
+        "note": "The three standard configurations are available for near-immediate delivery. Custom active lengths can be manufactured to meet specific application requirements — contact Athlos to discuss your sizing needs."
+      },
+      "brochure": {
+        "title": "Industrial IP67 TDI Product Datasheet",
+        "desc": "Full technical specifications, models, and application data — PDF",
+        "button": "Download PDF"
+      },
+      "cta": {
+        "eyebrow": "Get in Touch",
+        "headline": "Discuss your industrial inspection requirements.",
+        "body": "Industrial IP67 TDI is designed for integration into demanding production environments. Talk with Athlos about your application, speed requirements, and system architecture.",
+        "ctaContact": "Contact Athlos",
+        "ctaAll": "All Products",
+        "ctaDatasheet": "Download Datasheet"
+      },
+      "lastUpdated": {
+        "label": "Last updated:",
+        "datetime": "2026-04-15",
+        "date": "15 April 2026"
+      }
+    }
+  }
+}

@@ -38,9 +38,9 @@ jsonldHeadAfterAnalyticsPartials:
       <div class="product-hero-overlay" style="background:linear-gradient(120deg, rgba(10,18,24,0.70) 40%, rgba(20,35,48,0.35) 100%);"></div>
       <div class="product-hero-gradient"></div>
       <div class="product-hero-content container">
-        <span class="product-category">Sensor Manufacturing</span>
-        <h1>X-Ray Detector<br>Manufacturing Services</h1>
-        <p class="product-hero-tagline">In-house detector manufacturing — from CMOS wafer to finished sensor.</p>
+        <span class="product-category">{{ "pages.productsManufacturing.hero.category" | t }}</span>
+        <h1>{{ "pages.productsManufacturing.hero.headline" | t }}</h1>
+        <p class="product-hero-tagline">{{ "pages.productsManufacturing.hero.tagline" | t }}</p>
       </div>
     </section>
 
@@ -49,17 +49,17 @@ jsonldHeadAfterAnalyticsPartials:
       <div class="container">
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
           <div>
-            <p class="section-eyebrow section-eyebrow--light reveal">Overview</p>
-            <h2 class="section-headline section-headline--light reveal">Built in-house, from wafer to sensor.</h2>
+            <p class="section-eyebrow section-eyebrow--light reveal">{{ "pages.productsManufacturing.overview.eyebrow" | t }}</p>
+            <h2 class="section-headline section-headline--light reveal">{{ "pages.productsManufacturing.overview.headline" | t }}</h2>
             <p class="reveal" style="font-size:var(--text-md); font-weight:300; line-height:1.8; color:rgba(255,255,255,0.7); margin-bottom:1rem;">
-              Athlos manufactures its imaging sensors in-house and in partnership with the VTT Micronova cleanroom facility in Espoo — one of Europe's leading nanofabrication environments. This deep manufacturing capability is part of what makes Athlos sensors different: we control the full process, from detector material and bump bonding to final assembly and characterization.
+              {{ "pages.productsManufacturing.overview.body1" | t }}
             </p>
             <p class="reveal" style="font-size:var(--text-md); font-weight:300; line-height:1.8; color:rgba(255,255,255,0.7);">
-              The same manufacturing infrastructure that supports our own product lines is available as a service. Athlos can support partner and OEM projects requiring precision detector manufacturing, CMOS bumping, or specialized assembly processes.
+              {{ "pages.productsManufacturing.overview.body2" | t }}
             </p>
           </div>
           <div class="reveal">
-            <img src="../images/manufacturing-wafer-1.webp" width="2400" height="1792" alt="Silicon CMOS wafer with intricate detector grid pattern" loading="lazy" style="width:100%; border-radius:var(--r-lg); aspect-ratio:4/3; object-fit:cover;">
+            <img src="../images/manufacturing-wafer-1.webp" width="2400" height="1792" alt="{{ "pages.productsManufacturing.overview.imageAlt" | t }}" loading="lazy" style="width:100%; border-radius:var(--r-lg); aspect-ratio:4/3; object-fit:cover;">
           </div>
         </div>
       </div>
@@ -70,8 +70,8 @@ jsonldHeadAfterAnalyticsPartials:
     <!-- CAPABILITIES -->
     <section style="padding: var(--section-py) 0; background: var(--white);">
       <div class="container">
-        <p class="section-eyebrow reveal">Capabilities</p>
-        <h2 class="section-headline reveal">Precision at every process step.</h2>
+        <p class="section-eyebrow reveal">{{ "pages.productsManufacturing.capabilities.eyebrow" | t }}</p>
+        <h2 class="section-headline reveal">{{ "pages.productsManufacturing.capabilities.headline" | t }}</h2>
         <div class="capability-grid">
 
           <!-- Detector Bumping -->
@@ -89,8 +89,8 @@ jsonldHeadAfterAnalyticsPartials:
                 <circle cx="16" cy="16" r="1.5" fill="currentColor"/>
               </svg>
             </div>
-            <h3 class="capability-title">Detector Bumping</h3>
-            <p class="capability-body">Fine-pitch InSn solder bump deposition on CMOS wafers. Sub-100 µm pitch capability for CdTe and Si detector integration. Fine-pitch Cu pillar bump deposition on CMOS wafers. Sub-30 µm pitch capability for CdTe and Si detector integration.</p>
+            <h3 class="capability-title">{{ "pages.productsManufacturing.capabilities.cards.bumping.title" | t }}</h3>
+            <p class="capability-body">{{ "pages.productsManufacturing.capabilities.cards.bumping.body" | t }}</p>
           </div>
 
           <!-- Flip Chip Bonding -->
@@ -104,8 +104,8 @@ jsonldHeadAfterAnalyticsPartials:
                 <line x1="14" y1="8" x2="14" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3 class="capability-title">Flip Chip Bonding</h3>
-            <p class="capability-body">Precision flip chip interconnection of detector material to CMOS readout. Critical for achieving the direct electrical contact that enables direct conversion imaging.</p>
+            <h3 class="capability-title">{{ "pages.productsManufacturing.capabilities.cards.flipChip.title" | t }}</h3>
+            <p class="capability-body">{{ "pages.productsManufacturing.capabilities.cards.flipChip.body" | t }}</p>
           </div>
 
           <!-- Wire Bonding -->
@@ -117,8 +117,8 @@ jsonldHeadAfterAnalyticsPartials:
                 <path d="M2.5 15 C2.5 4, 17.5 4, 17.5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
               </svg>
             </div>
-            <h3 class="capability-title">Wire Bonding</h3>
-            <p class="capability-body">High-density wire bond connections from CMOS die to PCB and packaging substrates. Suitable for fine-pitch and large-format sensor configurations.</p>
+            <h3 class="capability-title">{{ "pages.productsManufacturing.capabilities.cards.wire.title" | t }}</h3>
+            <p class="capability-body">{{ "pages.productsManufacturing.capabilities.cards.wire.body" | t }}</p>
           </div>
 
           <!-- X-Ray Probing & Characterization -->
@@ -133,8 +133,8 @@ jsonldHeadAfterAnalyticsPartials:
                 <line x1="16" y1="10" x2="19" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3 class="capability-title">X-Ray Probing &amp; Characterization</h3>
-            <p class="capability-body">Electrical probing at wafer level, including X-ray-based inspection. Full detector characterization for imaging uniformity, sensitivity, and noise performance.</p>
+            <h3 class="capability-title">{{ "pages.productsManufacturing.capabilities.cards.probing.title" | t }}</h3>
+            <p class="capability-body">{{ "pages.productsManufacturing.capabilities.cards.probing.body" | t }}</p>
           </div>
 
           <!-- Die Bonding & Assembly -->
@@ -146,8 +146,8 @@ jsonldHeadAfterAnalyticsPartials:
                 <rect x="7" y="2" width="6" height="4" rx="1" stroke="currentColor" stroke-width="1.5" fill="none"/>
               </svg>
             </div>
-            <h3 class="capability-title">Die Bonding &amp; Assembly</h3>
-            <p class="capability-body">Precision die bonding and multi-layer sensor assembly in controlled clean environments. Athlos coordinates all assembly stages in-house.</p>
+            <h3 class="capability-title">{{ "pages.productsManufacturing.capabilities.cards.dieBonding.title" | t }}</h3>
+            <p class="capability-body">{{ "pages.productsManufacturing.capabilities.cards.dieBonding.body" | t }}</p>
           </div>
 
           <!-- Quality & Reliability -->
@@ -158,8 +158,8 @@ jsonldHeadAfterAnalyticsPartials:
                 <path d="M7 10l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <h3 class="capability-title">Quality &amp; Reliability</h3>
-            <p class="capability-body">ISO 13485:2016 quality management. Process controls at every manufacturing stage, from incoming material inspection to final product test and release.</p>
+            <h3 class="capability-title">{{ "pages.productsManufacturing.capabilities.cards.quality.title" | t }}</h3>
+            <p class="capability-body">{{ "pages.productsManufacturing.capabilities.cards.quality.body" | t }}</p>
           </div>
 
         </div>
@@ -171,17 +171,17 @@ jsonldHeadAfterAnalyticsPartials:
       <div class="container">
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
           <div>
-            <p class="section-eyebrow reveal">Facilities</p>
-            <h2 class="section-headline reveal" style="font-size:var(--text-2xl);">VTT Micronova cleanroom access.</h2>
+            <p class="section-eyebrow reveal">{{ "pages.productsManufacturing.facilities.eyebrow" | t }}</p>
+            <h2 class="section-headline reveal" style="font-size:var(--text-2xl);">{{ "pages.productsManufacturing.facilities.headline" | t }}</h2>
             <p class="reveal" style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel); margin-bottom:1rem;">
-              Athlos has full access to the 2,000 sqm VTT Micronova cleanroom facility in Espoo, Finland — one of Europe's most advanced nanofabrication, thin film, and microsystems cleanroom facilities.
+              {{ "pages.productsManufacturing.facilities.body1" | t }}
             </p>
             <p class="reveal" style="font-size:var(--text-base); font-weight:300; line-height:1.8; color:var(--gray-steel);">
-              This partnership gives Athlos and its manufacturing customers access to a world-class facility, without the capital cost of a standalone cleanroom. Combined with Athlos's own assembly and characterization infrastructure, this enables full end-to-end sensor production.
+              {{ "pages.productsManufacturing.facilities.body2" | t }}
             </p>
           </div>
           <div class="reveal">
-            <img src="../images/hero-facility.webp" width="5504" height="3072" alt="Athlos cleanroom manufacturing facility at VTT Micronova, Espoo" loading="lazy" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:var(--r-lg);">
+            <img src="../images/hero-facility.webp" width="5504" height="3072" alt="{{ "pages.productsManufacturing.facilities.imageAlt" | t }}" loading="lazy" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:var(--r-lg);">
           </div>
         </div>
       </div>
@@ -191,17 +191,17 @@ jsonldHeadAfterAnalyticsPartials:
     <section class="product-cta" id="contact">
       <div class="container">
         <div class="product-cta-inner">
-          <h2 class="reveal">Manufacturing partnership enquiries.</h2>
-          <p class="reveal">If you are developing a detector-based product and need precision manufacturing support — from bump bonding to full sensor assembly — contact Athlos to discuss your requirements.</p>
+          <h2 class="reveal">{{ "pages.productsManufacturing.cta.headline" | t }}</h2>
+          <p class="reveal">{{ "pages.productsManufacturing.cta.body" | t }}</p>
           <div class="reveal" style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-            <a href="../contact.html" class="btn btn-primary btn-large">Contact Athlos</a>
-            <a href="index.html" class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);">All Products</a>
+            <a href="../contact.html" class="btn btn-primary btn-large">{{ "pages.productsManufacturing.cta.ctaContact" | t }}</a>
+            <a href="index.html" class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);">{{ "pages.productsManufacturing.cta.ctaAll" | t }}</a>
           </div>
         </div>
       </div>
     </section>
 
-    <p style="max-width:1280px;margin:0 auto;padding:0 clamp(1.5rem,5vw,5rem) clamp(2rem,4vw,3rem);font-size:0.75rem;font-weight:400;letter-spacing:0.04em;color:#8C959B;text-align:center;">Last updated: <time datetime="2026-04-15" style="font-weight:500;color:#263035;">15 April 2026</time></p>
+    <p style="max-width:1280px;margin:0 auto;padding:0 clamp(1.5rem,5vw,5rem) clamp(2rem,4vw,3rem);font-size:0.75rem;font-weight:400;letter-spacing:0.04em;color:#8C959B;text-align:center;">{{ "pages.productsManufacturing.lastUpdated.label" | t }} <time datetime="{{ "pages.productsManufacturing.lastUpdated.datetime" | t }}" style="font-weight:500;color:#263035;">{{ "pages.productsManufacturing.lastUpdated.date" | t }}</time></p>
 
   </main>
 
