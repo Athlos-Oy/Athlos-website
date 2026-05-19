@@ -53,6 +53,16 @@
 {%- if extraScriptsBeforeCookieBanner %}
 {{ extraScriptsBeforeCookieBanner | indent(2, true) | safe }}
 {%- endif %}
+  <script>
+    {#- t filter returns a SafeString; `.val` unwraps to the underlying string so dump JSON-encodes the text, not the wrapper -#}
+    window.cookieBannerStrings = {
+      body: {{ ("cookieBanner.body" | t).val | dump | safe }},
+      privacyLinkText: {{ ("cookieBanner.privacyLinkText" | t).val | dump | safe }},
+      privacyUrl: {{ "/privacy.html" | localeUrl(lang) | dump | safe }},
+      decline: {{ ("cookieBanner.decline" | t).val | dump | safe }},
+      accept: {{ ("cookieBanner.accept" | t).val | dump | safe }}
+    };
+  </script>
   <script src="/js/cookie-banner.js"></script>
 {%- if trailingScripts %}
 {{ trailingScripts | safe }}

@@ -319,5 +319,11 @@
       "areaServed": "Weltweit",
       "contactType": "sales"
     }
+  },
+  "cookieBanner": {
+    "body": "Wir verwenden Analyse-Cookies, um zu verstehen, wie Besucher diese Website nutzen.",
+    "privacyLinkText": "Datenschutzerklärung",
+    "decline": "Ablehnen",
+    "accept": "Akzeptieren"
   }
 }

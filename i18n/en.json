@@ -317,5 +317,11 @@
       "areaServed": "Worldwide",
       "contactType": "sales"
     }
+  },
+  "cookieBanner": {
+    "body": "We use analytics cookies to understand how visitors use this site.",
+    "privacyLinkText": "Privacy Policy",
+    "decline": "Decline",
+    "accept": "Accept"
   }
 }
