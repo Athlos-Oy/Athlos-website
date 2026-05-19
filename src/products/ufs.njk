@@ -1,10 +1,13 @@
 ---
 navScrolled: true
 layout: layouts/base.njk
-permalink: /products/ufs.html
-lang: en
+pagination:
+  data: locales.active
+  size: 1
+  alias: lang
+  addAllPagesToCollections: true
+permalink: "{% if lang == 'en' %}/products/ufs.html{% else %}/{{ lang }}/products/ufs.html{% endif %}"
 pageKey: productsUfs
-canonical: https://athlos.fi/products/ufs.html
 og:
   type: product
   image: https://athlos.fi/images/new_ultra-fast.webp

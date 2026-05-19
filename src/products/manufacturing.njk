@@ -1,10 +1,13 @@
 ---
 navScrolled: true
 layout: layouts/base.njk
-permalink: /products/manufacturing.html
-lang: en
+pagination:
+  data: locales.active
+  size: 1
+  alias: lang
+  addAllPagesToCollections: true
+permalink: "{% if lang == 'en' %}/products/manufacturing.html{% else %}/{{ lang }}/products/manufacturing.html{% endif %}"
 pageKey: productsManufacturing
-canonical: https://athlos.fi/products/manufacturing.html
 og:
   type: website
   image: https://athlos.fi/images/manufacturing-wafer-1.webp

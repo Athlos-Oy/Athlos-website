@@ -110,7 +110,11 @@ export default async function (eleventyConfig) {
   //   SafeString automatically because some values are user-visible
   //   plain text that SHOULD be escaped on output.
   eleventyConfig.addFilter("t", function (key, locale) {
-    const lang = locale || (this.ctx && this.ctx.page && this.ctx.page.lang) || (this.page && this.page.lang) || "en";
+    const lang = locale
+      || (this.ctx && this.ctx.lang)
+      || (this.ctx && this.ctx.page && this.ctx.page.lang)
+      || (this.page && this.page.lang)
+      || "en";
     const dict = I18N[lang];
     if (!dict) {
       throw new Error(`i18n: no dictionary loaded for locale "${lang}"`);

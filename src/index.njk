@@ -1,9 +1,12 @@
 ---
 layout: layouts/base.njk
-permalink: /index.html
-lang: en
+pagination:
+  data: locales.active
+  size: 1
+  alias: lang
+  addAllPagesToCollections: true
+permalink: "{% if lang == 'en' %}/index.html{% else %}/{{ lang }}/index.html{% endif %}"
 pageKey: home
-canonical: https://athlos.fi/
 og:
   type: website
   image: https://athlos.fi/images/hero-lab-automation.webp

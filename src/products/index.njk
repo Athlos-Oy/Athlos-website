@@ -1,9 +1,12 @@
 ---
 layout: layouts/base.njk
-permalink: /products/index.html
-lang: en
+pagination:
+  data: locales.active
+  size: 1
+  alias: lang
+  addAllPagesToCollections: true
+permalink: "{% if lang == 'en' %}/products/index.html{% else %}/{{ lang }}/products/index.html{% endif %}"
 pageKey: productsIndex
-canonical: https://athlos.fi/products/
 og:
   type: website
   image: https://athlos.fi/images/products-hero-main.webp

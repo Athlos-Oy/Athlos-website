@@ -1,10 +1,13 @@
 ---
 navScrolled: true
 layout: layouts/base.njk
-permalink: /products/ufs-ip67.html
-lang: en
+pagination:
+  data: locales.active
+  size: 1
+  alias: lang
+  addAllPagesToCollections: true
+permalink: "{% if lang == 'en' %}/products/ufs-ip67.html{% else %}/{{ lang }}/products/ufs-ip67.html{% endif %}"
 pageKey: productsUfsIp67
-canonical: https://athlos.fi/products/ufs-ip67.html
 og:
   type: product
   image: https://athlos.fi/images/ip67-carbon.webp

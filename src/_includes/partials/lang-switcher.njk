@@ -10,7 +10,7 @@
 {%- if locales.active | length > 1 %}
       <div class="lang-switcher" role="group" aria-label="Language">
 {%- for loc in locales.active %}
-        <a href="{{ canonical | localeUrl(loc) }}" hreflang="{{ loc }}" class="lang-switcher-link{% if loc == lang %} active{% endif %}"{% if loc == lang %} aria-current="true"{% endif %}>{{ locales.labels[loc] }}</a>
+        <a href="{{ page.url | localeUrl(loc) }}" hreflang="{{ loc }}" class="lang-switcher-link{% if loc == lang %} active{% endif %}"{% if loc == lang %} aria-current="true"{% endif %}>{{ locales.labels[loc] }}</a>
 {%- endfor %}
       </div>
 {%- endif %}

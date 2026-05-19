@@ -1,9 +1,12 @@
 ---
 layout: layouts/base.njk
-permalink: /privacy.html
-lang: en
+pagination:
+  data: locales.active
+  size: 1
+  alias: lang
+  addAllPagesToCollections: true
+permalink: "{% if lang == 'en' %}/privacy.html{% else %}/{{ lang }}/privacy.html{% endif %}"
 pageKey: privacy
-canonical: https://athlos.fi/privacy.html
 og:
   type: website
   image: https://athlos.fi/images/hero-lab-automation.webp

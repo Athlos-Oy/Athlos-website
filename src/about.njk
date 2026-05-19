@@ -1,9 +1,12 @@
 ---
 layout: layouts/base.njk
-permalink: /about.html
-lang: en
+pagination:
+  data: locales.active
+  size: 1
+  alias: lang
+  addAllPagesToCollections: true
+permalink: "{% if lang == 'en' %}/about.html{% else %}/{{ lang }}/about.html{% endif %}"
 pageKey: about
-canonical: https://athlos.fi/about.html
 og:
   type: website
   image: https://athlos.fi/images/hero-cleanroom-worker.webp

@@ -1,9 +1,12 @@
 ---
 layout: layouts/base.njk
-permalink: /contact.html
-lang: en
+pagination:
+  data: locales.active
+  size: 1
+  alias: lang
+  addAllPagesToCollections: true
+permalink: "{% if lang == 'en' %}/contact.html{% else %}/{{ lang }}/contact.html{% endif %}"
 pageKey: contact
-canonical: https://athlos.fi/contact.html
 og:
   type: website
   image: https://athlos.fi/images/hero-lab-automation.webp

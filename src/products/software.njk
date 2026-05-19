@@ -1,10 +1,13 @@
 ---
 navScrolled: true
 layout: layouts/base.njk
-permalink: /products/software.html
-lang: en
+pagination:
+  data: locales.active
+  size: 1
+  alias: lang
+  addAllPagesToCollections: true
+permalink: "{% if lang == 'en' %}/products/software.html{% else %}/{{ lang }}/products/software.html{% endif %}"
 pageKey: productsSoftware
-canonical: https://athlos.fi/products/software.html
 og:
   type: website
   image: https://athlos.fi/images/software_image_homepage.webp
