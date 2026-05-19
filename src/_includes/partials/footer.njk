@@ -1,50 +1,43 @@
 {#
-  Footer. Same nav.prefix / nav.productsPrefix system as nav.njk.
-  Translatable strings come from i18n/<locale>.json via the t filter;
-  legal/address constants are interpolated from src/_data/site.json.
+  Footer. All ASSET URLs absolute (/images/...). All INTERNAL LINKS
+  absolute EN-canonical paths run through localeUrl filter using
+  the current `lang`. Site constants (site.legalName, address, etc.)
+  are interpolated from src/_data/site.json.
 #}
-{%- set p = nav.prefix or "" -%}
-{%- if nav.productsPrefix is defined -%}
-  {%- set pp = nav.productsPrefix -%}
-{%- elif p == "" -%}
-  {%- set pp = "products/" -%}
-{%- else -%}
-  {%- set pp = "" -%}
-{%- endif %}
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
           <div class="footer-logo-wrap">
-            <img src="{{ p }}images/athlos-logo.png" width="1536" height="1024" alt="Athlos" class="footer-logo" loading="lazy">
+            <img src="/images/athlos-logo.png" width="1536" height="1024" alt="Athlos" class="footer-logo" loading="lazy">
           </div>
           <p class="footer-tagline">{{ site.legalName }}<br>{{ site.address.street }}<br>{{ site.address.postalDisplay }} {{ site.address.city }}<br>{{ site.address.countryName }}<br><br>{{ "footer.businessIdLabel" | t }} {{ site.businessId }} &nbsp;&middot;&nbsp; {{ "footer.vatLabel" | t }} {{ site.vat }}</p>
         </div>
         <nav class="footer-nav"{% if footerNavAriaLabel %} aria-label="{{ "footer.aria.nav" | t }}"{% endif %}>
           <div class="footer-col">
             <span class="footer-col-label">{{ "footer.columns.products" | t }}</span>
-            <a href="{{ pp }}wios.html" class="footer-link">{{ "footer.links.dcAir" | t | safe }}</a>
-            <a href="{{ pp }}ufs.html" class="footer-link">{{ "footer.links.ufs" | t }}</a>
-            <a href="{{ pp }}ufs-ip67.html" class="footer-link">{{ "footer.links.ufsIp67" | t }}</a>
-            <a href="{{ pp }}manufacturing.html" class="footer-link">{{ "footer.links.manufacturing" | t }}</a>
-            <a href="{{ pp }}software.html" class="footer-link">{{ "footer.links.software" | t }}</a>
+            <a href="{{ "/products/wios.html" | localeUrl(lang) }}" class="footer-link">{{ "footer.links.dcAir" | t | safe }}</a>
+            <a href="{{ "/products/ufs.html" | localeUrl(lang) }}" class="footer-link">{{ "footer.links.ufs" | t }}</a>
+            <a href="{{ "/products/ufs-ip67.html" | localeUrl(lang) }}" class="footer-link">{{ "footer.links.ufsIp67" | t }}</a>
+            <a href="{{ "/products/manufacturing.html" | localeUrl(lang) }}" class="footer-link">{{ "footer.links.manufacturing" | t }}</a>
+            <a href="{{ "/products/software.html" | localeUrl(lang) }}" class="footer-link">{{ "footer.links.software" | t }}</a>
           </div>
           <div class="footer-col">
             <span class="footer-col-label">{{ "footer.columns.applications" | t }}</span>
-            <a href="{{ p }}applications.html#dental" class="footer-link">{{ "footer.links.dental" | t }}</a>
-            <a href="{{ p }}applications.html#industrial" class="footer-link">{{ "footer.links.industrial" | t }}</a>
-            <a href="{{ p }}applications.html#medical" class="footer-link">{{ "footer.links.medical" | t }}</a>
+            <a href="{{ "/applications.html" | localeUrl(lang) }}#dental" class="footer-link">{{ "footer.links.dental" | t }}</a>
+            <a href="{{ "/applications.html" | localeUrl(lang) }}#industrial" class="footer-link">{{ "footer.links.industrial" | t }}</a>
+            <a href="{{ "/applications.html" | localeUrl(lang) }}#medical" class="footer-link">{{ "footer.links.medical" | t }}</a>
           </div>
           <div class="footer-col">
             <span class="footer-col-label">{{ "footer.columns.company" | t }}</span>
-            <a href="{{ p }}about.html" class="footer-link">{{ "footer.links.about" | t }}</a>
-            <a href="{{ pp }}manufacturing.html" class="footer-link">{{ "footer.links.manufacturingShort" | t }}</a>
+            <a href="{{ "/about.html" | localeUrl(lang) }}" class="footer-link">{{ "footer.links.about" | t }}</a>
+            <a href="{{ "/products/manufacturing.html" | localeUrl(lang) }}" class="footer-link">{{ "footer.links.manufacturingShort" | t }}</a>
           </div>
           <div class="footer-col">
             <span class="footer-col-label">{{ "footer.columns.contact" | t }}</span>
             <a href="mailto:{{ site.email }}" class="footer-link">{{ site.email }}</a>
             <a href="{{ site.linkedinFull }}" class="footer-link" target="_blank" rel="noopener">{{ "footer.links.linkedin" | t }}</a>
-            <a href="{{ p }}privacy.html" class="footer-link">{{ "footer.links.privacy" | t }}</a>
+            <a href="{{ "/privacy.html" | localeUrl(lang) }}" class="footer-link">{{ "footer.links.privacy" | t }}</a>
           </div>
         </nav>
       </div>

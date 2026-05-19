@@ -49,7 +49,7 @@
 {{ jsonldBody | safe }}
 {%- endif %}
 
-  <script src="{{ (nav.prefix or '') }}{{ scriptJs or 'js/script.js' }}"></script>
+  <script src="/{{ scriptJs or 'js/script.js' }}"></script>
 {%- if extraScriptsBeforeCookieBanner %}
 {{ extraScriptsBeforeCookieBanner | indent(2, true) | safe }}
 {%- endif %}
