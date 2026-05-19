@@ -1772,7 +1772,6 @@ body::before {
   margin-left: 0.05rem;
   transition: transform var(--trs);
 }
-.lang-switcher:hover .lang-switcher-chevron,
 .lang-switcher[data-open] .lang-switcher-chevron {
   transform: rotate(180deg);
 }
@@ -1794,9 +1793,7 @@ body::before {
   transition: opacity var(--trs-md), transform var(--trs-md);
   z-index: 60;
 }
-.lang-switcher:hover .lang-switcher-menu,
-.lang-switcher[data-open] .lang-switcher-menu,
-.lang-switcher-trigger:focus-visible + .lang-switcher-menu {
+.lang-switcher[data-open] .lang-switcher-menu {
   opacity: 1;
   pointer-events: all;
   transform: translateY(0);
