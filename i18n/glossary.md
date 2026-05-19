@@ -302,3 +302,4 @@ log when re-syncing locale files after a glossary change.
 | Date | Author | Change |
 |---|---|---|
 | 2026-05-18 | initial draft | First version. All DE/FR/IT/ES entries marked PROPOSED pending native technical reviewer pass per locale. |
+| 2026-05-19 | ES first draft | i18n/es.json + i18n/parts-es/ + i18n/es-style-decisions.md added. ES rows here remain PROPOSED — see es-style-decisions.md for the resolved per-locale judgement calls (NIF, Código de empresa, postprocesado, END, etc.). Native Spanish technical reviewer pass still required before public launch. |

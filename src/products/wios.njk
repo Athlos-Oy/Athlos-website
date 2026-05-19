@@ -8,6 +8,7 @@ pagination:
   addAllPagesToCollections: true
 permalink: "{% if lang == 'en' %}/products/wios.html{% else %}/{{ lang }}/products/wios.html{% endif %}"
 pageKey: productsWios
+activeProduct: wios
 og:
   type: product
   image: https://athlos.fi/images/wios-hero.webp
@@ -30,16 +31,7 @@ jsonldHeadAfterAnalyticsPartials:
   - partials/product-jsonld/wios-2.njk
   - partials/product-jsonld/wios-3.njk
 ---
-  <nav class="product-subnav" aria-label="Products navigation">
-    <div class="product-subnav-inner">
-      <a href="index.html" class="subnav-back">← Products</a>
-      <a href="wios.html" class="subnav-link active">DC-Air&reg;</a>
-      <a href="ufs.html" class="subnav-link">Ultra-Fast Scanning Sensor</a>
-      <a href="ufs-ip67.html" class="subnav-link">Industrial IP67 TDI</a>
-      <a href="manufacturing.html" class="subnav-link">Manufacturing Services</a>
-      <a href="software.html" class="subnav-link">Software Products</a>
-    </div>
-  </nav>
+{% include "partials/product-subnav.njk" %}
 
   <main>
 

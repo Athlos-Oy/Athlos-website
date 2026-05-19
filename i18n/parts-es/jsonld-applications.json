@@ -1,0 +1,32 @@
+{
+  "jsonld": {
+    "applications": {
+      "faq": {
+        "q1": {
+          "name": "¿En qué aplicaciones se utilizan los sensores de rayos X de Athlos?",
+          "answer": "Los sensores de rayos X de conversión directa de Athlos se utilizan en tres áreas principales de aplicación: imagen dental (intraoral, panorámica y cefalométrica), imagen médica (OPG, cefalométrica y modalidades médicas personalizadas que requieren alta sensibilidad con dosis baja) e inspección industrial (detección de cuerpos extraños en alimentación y bebidas, inspección de sellado y llenado en farmacéutica, inspección de soldaduras en petróleo y gas, inspección de fundición en automoción, inspección electrónica PCB/SMT y END y tomografía computarizada de gran escala en industria pesada)."
+        },
+        "q2": {
+          "name": "¿Qué producto de Athlos se adapta a la imagen dental intraoral?",
+          "answer": "El sensor intraoral inalámbrico DC-Air®: conversión directa Si-CMOS, conectividad inalámbrica Bluetooth 5.0, soportes Zero Profile®, hasta 300 radiografías por carga de batería y protección IP67 mejorada. Autorizado por la FDA mediante 510(k)."
+        },
+        "q3": {
+          "name": "¿Qué producto de Athlos se adapta a la imagen dental panorámica y cefalométrica?",
+          "answer": "El Ultra-Fast Scanning Sensor: un sensor lineal de escaneo CdTe-CMOS ultrarrápido y de conversión directa para imagen dental panorámica y cefalométrica, así como para inspección médica e industrial por rayos X. Sensibilidad de fotón único. Tres modelos con anchuras activas seleccionables."
+        },
+        "q4": {
+          "name": "¿Qué producto de Athlos se adapta a la inspección industrial en línea?",
+          "answer": "El Industrial IP67 TDI: un detector de escaneo TDI ultrarrápido con grado IP67 para inspección continua en línea. Sin necesidad de refrigeración activa. Se utiliza en la detección de cuerpos extraños en alimentación y bebidas, la inspección de llenado y sellado en farmacéutica, la inspección de soldaduras en petróleo y gas, la fundición en automoción, la verificación PCB/SMT y END de gran escala."
+        },
+        "q5": {
+          "name": "¿Por qué es importante la conversión directa?",
+          "answer": "Los sensores de rayos X convencionales convierten los rayos X en luz visible mediante un centellador y, a continuación, detectan la luz. Cada paso introduce desenfoque, pérdida de señal y desperdicio de energía. La conversión directa convierte los fotones de rayos X directamente en carga eléctrica, eliminando el paso del centellador, lo que se traduce en imágenes más nítidas, mayor contraste, un rango dinámico más amplio y un mejor rendimiento con dosis baja."
+        }
+      },
+      "breadcrumbs": {
+        "home": "Inicio",
+        "applications": "Aplicaciones"
+      }
+    }
+  }
+}

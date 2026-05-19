@@ -13,8 +13,8 @@
 //             Each label is written in the language it represents.
 
 export default {
-  active: ["en", "de", "it"],
-  planned: ["fr", "es"],
+  active: ["en", "de", "it", "es"],
+  planned: ["fr"],
   default: "en",
   labels: {
     en: "English",

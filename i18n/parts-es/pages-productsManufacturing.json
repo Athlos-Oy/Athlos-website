@@ -1,0 +1,66 @@
+{
+  "pages": {
+    "productsManufacturing": {
+      "hero": {
+        "category": "Fabricación de sensores",
+        "headline": "Servicios de fabricación<br>de detectores de rayos X",
+        "tagline": "Fabricación interna de detectores: desde la oblea CMOS hasta el sensor terminado."
+      },
+      "overview": {
+        "eyebrow": "Visión general",
+        "headline": "Fabricado internamente, de la oblea al sensor.",
+        "body1": "Athlos fabrica sus sensores de imagen internamente y en colaboración con la sala limpia de VTT Micronova en Espoo, uno de los entornos de nanofabricación líderes en Europa. Esta sólida capacidad de fabricación es parte de lo que hace diferentes a los sensores de Athlos: controlamos el proceso completo, desde el material detector y la unión por bumping hasta el ensamblaje final y la caracterización.",
+        "body2": "La misma infraestructura de fabricación que respalda nuestras propias líneas de producto está disponible como servicio. Athlos puede dar soporte a proyectos de socios y OEM que requieran fabricación de detectores de precisión, bumping CMOS o procesos de ensamblaje especializados.",
+        "imageAlt": "Oblea de silicio CMOS con un patrón detallado de matriz de detector"
+      },
+      "capabilities": {
+        "eyebrow": "Capacidades",
+        "headline": "Precisión en cada paso del proceso.",
+        "cards": {
+          "bumping": {
+            "title": "Bumping de detectores",
+            "body": "Deposición de bumps de soldadura InSn de paso fino sobre obleas CMOS. Capacidad de paso inferior a 100 µm para la integración de detectores CdTe y Si. Deposición de bumps de pilar de Cu de paso fino sobre obleas CMOS. Capacidad de paso inferior a 30 µm para la integración de detectores CdTe y Si."
+          },
+          "flipChip": {
+            "title": "Unión flip chip",
+            "body": "Interconexión flip chip de precisión entre el material detector y la lectura CMOS. Esencial para lograr el contacto eléctrico directo que hace posible la imagen por conversión directa."
+          },
+          "wire": {
+            "title": "Unión por hilo",
+            "body": "Conexiones por hilo de alta densidad entre el chip CMOS y los sustratos de PCB y encapsulado. Adecuado para configuraciones de sensor de paso fino y gran formato."
+          },
+          "probing": {
+            "title": "Sondeo y caracterización por rayos X",
+            "body": "Sondeo eléctrico a nivel de oblea, incluida la inspección por rayos X. Caracterización completa del detector en cuanto a uniformidad de imagen, sensibilidad y comportamiento frente al ruido."
+          },
+          "dieBonding": {
+            "title": "Unión y ensamblaje de chips",
+            "body": "Unión de chips de precisión y ensamblaje multicapa del sensor en entornos limpios controlados. Athlos coordina internamente todas las etapas de ensamblaje."
+          },
+          "quality": {
+            "title": "Calidad y fiabilidad",
+            "body": "Sistema de gestión de la calidad ISO 13485:2016. Controles de proceso en todas las fases de fabricación, desde la inspección de los materiales entrantes hasta el ensayo final y la liberación del producto."
+          }
+        }
+      },
+      "facilities": {
+        "eyebrow": "Instalaciones",
+        "headline": "Acceso a la sala limpia de VTT Micronova.",
+        "body1": "Athlos dispone de acceso completo a la sala limpia de 2.000 m² de VTT Micronova en Espoo, Finlandia, una de las instalaciones de nanofabricación, capa fina y microsistemas en sala limpia más avanzadas de Europa.",
+        "body2": "Esta colaboración da a Athlos y a sus clientes de fabricación acceso a una instalación de nivel mundial, sin los costes de capital que implica una sala limpia propia independiente. Combinado con la infraestructura de ensamblaje y caracterización propia de Athlos, esto permite una producción de sensores integral, de principio a fin.",
+        "imageAlt": "Sala limpia de fabricación de Athlos en VTT Micronova, Espoo"
+      },
+      "cta": {
+        "headline": "Consultas sobre colaboración en fabricación.",
+        "body": "Si está desarrollando un producto basado en detectores y necesita soporte de fabricación de precisión, desde la unión por bumping hasta el ensamblaje completo del sensor, contacte con Athlos para hablar de sus requisitos.",
+        "ctaContact": "Contactar con Athlos",
+        "ctaAll": "Todos los productos"
+      },
+      "lastUpdated": {
+        "label": "Última actualización:",
+        "date": "15 de abril de 2026",
+        "datetime": "2026-04-15"
+      }
+    }
+  }
+}
