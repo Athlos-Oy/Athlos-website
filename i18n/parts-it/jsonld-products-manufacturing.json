@@ -1,0 +1,38 @@
+{
+  "jsonld": {
+    "productsManufacturing": {
+      "graph": {
+        "organization": {
+          "description": "Athlos Oy è un'azienda finlandese di tecnologie per l'imaging a raggi X, specializzata in sensori CdTe-CMOS e Si-CMOS a conversione diretta per applicazioni dentali, medicali e industriali.",
+          "areaServed": "Mondo intero",
+          "contactType": "sales"
+        },
+        "breadcrumb": {
+          "home": "Home",
+          "products": "Prodotti",
+          "manufacturing": "Servizi di produzione"
+        },
+        "service": {
+          "name": "Servizi di produzione di rivelatori a raggi X",
+          "description": "Produzione di precisione di rivelatori a raggi X, inclusi bumping CMOS, bonding flip chip, wire bonding, die bonding e caratterizzazione completa del sensore. Accesso alla camera bianca VTT Micronova.",
+          "areaServed": "Mondo intero",
+          "serviceType": "Produzione conto terzi"
+        }
+      },
+      "faq": {
+        "q1": {
+          "question": "Quali servizi di produzione offre Athlos?",
+          "answer": "Athlos fornisce servizi di produzione di precisione di rivelatori a raggi X, inclusi bumping CMOS, bonding flip chip, wire bonding, die bonding e caratterizzazione completa del sensore."
+        },
+        "q2": {
+          "question": "Athlos dispone dell'accesso a una produzione in camera bianca?",
+          "answer": "Sì. Athlos ha accesso alla struttura di nanofabbricazione VTT Micronova a Espoo, in Finlandia — uno degli ambienti di camera bianca leader in Europa per la produzione di semiconduttori e rivelatori."
+        },
+        "q3": {
+          "question": "Athlos è certificata ISO per la produzione?",
+          "answer": "Sì. Athlos è certificata ISO 13485:2016, garantendo una gestione della qualità coerente per la produzione di componenti per dispositivi medici."
+        }
+      }
+    }
+  }
+}

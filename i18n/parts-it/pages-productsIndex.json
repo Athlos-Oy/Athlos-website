@@ -1,0 +1,84 @@
+{
+  "pages": {
+    "productsIndex": {
+      "hero": {
+        "eyebrow": "Portfolio prodotti",
+        "headline": "Prodotti per imaging a raggi X",
+        "intro": "Cinque linee di prodotti e servizi — tutte costruite sullo stesso fondamento di precisione a conversione diretta e decenni di esperienza nell'imaging a raggi X."
+      },
+      "cards": {
+        "wios": {
+          "market": "Imaging dentale intraorale",
+          "name": "DC-Air&reg;",
+          "desc": "Imaging intraorale a raggi X a conversione diretta completamente wireless per il moderno flusso di lavoro dentale.",
+          "link": "Scopri DC-Air&reg;"
+        },
+        "ufs": {
+          "market": "Dentale · Medicale · Industriale",
+          "name": "Ultra-Fast Scanning Sensor",
+          "desc": "Sensore di scansione ultra-rapido per applicazioni in cui velocità, sensibilità e qualità dell'immagine sono determinanti.",
+          "link": "Scopri Ultra-Fast Scanning Sensor"
+        },
+        "ufsIp67": {
+          "market": "Imaging industriale",
+          "name": "Industrial IP67 TDI",
+          "desc": "Rivelatore di scansione ultra-rapido industriale e robusto, progettato per ambienti di ispezione in linea esigenti.",
+          "link": "Scopri Industrial IP67 TDI"
+        },
+        "manufacturing": {
+          "market": "Produzione di rivelatori",
+          "name": "Servizi di produzione",
+          "desc": "Produzione di precisione di sensori — dal bumping CMOS e bonding flip chip al montaggio completo del rivelatore.",
+          "link": "Scopri di più"
+        },
+        "software": {
+          "market": "Software &amp; integrazione",
+          "name": "Prodotti software",
+          "desc": "Modulo TWAIN, algoritmi di ricostruzione, filtri di post-elaborazione e SDK per l'integrazione nell'imaging a raggi X.",
+          "link": "Scopri di più"
+        }
+      },
+      "categories": {
+        "eyebrow": "Categorie di prodotti",
+        "headline": "Trovi il prodotto giusto<br>per la sua applicazione.",
+        "dental": {
+          "label": "Dentale",
+          "name": "Imaging intraorale &amp;<br>panoramico",
+          "items": {
+            "wios": "DC-Air&reg; – Sensore intraorale wireless",
+            "ufs": "Ultra-Fast Scanning Sensor – Panoramico dentale &amp; Ceph"
+          }
+        },
+        "industrial": {
+          "label": "Industriale",
+          "name": "Ispezione in linea &amp;<br>raggi X industriali",
+          "items": {
+            "ufsIp67": "Industrial IP67 TDI – Rivelatore industriale robusto",
+            "ufs": "Ultra-Fast Scanning Sensor – Industriale &amp; Medicale"
+          }
+        },
+        "services": {
+          "label": "Software &amp; Produzione",
+          "name": "Servizi &amp;<br>Integrazione",
+          "items": {
+            "software": "Prodotti software",
+            "twain": "Modulo TWAIN",
+            "filters": "Ricostruzione &amp; Filtri",
+            "manufacturing": "Servizi di produzione"
+          }
+        }
+      },
+      "cta": {
+        "eyebrow": "Si metta in contatto",
+        "headline": "Non sa quale prodotto si adatti alla sua applicazione?",
+        "body": "Athlos collabora strettamente con OEM e integratori di sistemi per individuare la soluzione giusta. Ci illustri i suoi requisiti di imaging e la aiuteremo a trovare il percorso più adatto.",
+        "button": "Contatta Athlos"
+      },
+      "lastUpdated": {
+        "label": "Ultimo aggiornamento:",
+        "datetime": "2026-04-15",
+        "date": "15 aprile 2026"
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "jsonld": {
+    "applications": {
+      "faq": {
+        "q1": {
+          "name": "Per quali applicazioni vengono impiegati i sensori a raggi X Athlos?",
+          "answer": "I sensori a raggi X a conversione diretta Athlos sono impiegati in tre principali aree di applicazione: imaging dentale (intraorale, panoramico e cefalometrico), imaging medicale (OPG, cefalometrico e modalità medicali personalizzate che richiedono elevata sensibilità a bassa dose) e ispezione industriale (rilevamento di corpi estranei nel settore alimentare e bevande, ispezione della sigillatura e del riempimento nel settore farmaceutico, ispezione delle saldature nel settore petrolio e gas, ispezione delle fusioni nel settore automotive, ispezione di PCB e SMT nell'elettronica, nonché CND e CT su larga scala nell'industria pesante)."
+        },
+        "q2": {
+          "name": "Quale prodotto Athlos è adatto all'imaging dentale intraorale?",
+          "answer": "Il sensore intraorale wireless DC-Air® — Si-CMOS a conversione diretta, Bluetooth 5.0 wireless, supporti Zero Profile®, fino a 300 radiografie per carica della batteria, protezione IP67 potenziata. Autorizzato dalla FDA tramite procedura 510(k)."
+        },
+        "q3": {
+          "name": "Quale prodotto Athlos è adatto all'imaging dentale panoramico e cefalometrico?",
+          "answer": "L'Ultra-Fast Scanning Sensor — un sensore lineare a scansione ultraveloce CdTe-CMOS a conversione diretta per imaging dentale panoramico e cefalometrico, nonché per ispezione medicale e industriale a raggi X. Sensibilità al singolo fotone. Tre modelli con larghezze attive selezionabili."
+        },
+        "q4": {
+          "name": "Quale prodotto Athlos è adatto all'ispezione industriale in linea?",
+          "answer": "L'Industrial IP67 TDI — un rivelatore a scansione TDI ultraveloce con grado di protezione IP67 per l'ispezione in linea continua. Non richiede raffreddamento attivo. Impiegato per il rilevamento di corpi estranei nel settore alimentare e bevande, l'ispezione della sigillatura e del riempimento nel settore farmaceutico, l'ispezione delle saldature nel settore petrolio e gas, le fusioni nel settore automotive, la verifica di PCB e SMT e i CND su larga scala."
+        },
+        "q5": {
+          "name": "Perché la conversione diretta è importante?",
+          "answer": "I sensori a raggi X convenzionali convertono i raggi X in luce visibile tramite uno scintillatore e poi rilevano la luce. Ogni passaggio introduce sfocatura, perdita di segnale e dispersione di energia. La conversione diretta converte i fotoni X direttamente in carica elettrica, eliminando il passaggio dello scintillatore — con il risultato di immagini più nitide, maggiore contrasto, gamma dinamica più ampia e migliori prestazioni a bassa dose."
+        }
+      },
+      "breadcrumbs": {
+        "home": "Home",
+        "applications": "Applicazioni"
+      }
+    }
+  }
+}

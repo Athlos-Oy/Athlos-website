@@ -1,0 +1,58 @@
+{
+  "pages": {
+    "contact": {
+      "hero": {
+        "eyebrow": "Mettiti in contatto",
+        "headline": "Contatta Athlos",
+        "sub": "Richieste di prodotto, integrazione OEM, licenze o partnership produttive — rispondiamo tempestivamente."
+      },
+      "details": {
+        "eyebrow": "Contatto diretto",
+        "headline": "Rispondiamo a ogni richiesta.",
+        "intro": "Athlos collabora direttamente con OEM, integratori di sistema, distributori e partner clinici. Che abbia una domanda tecnica specifica o desideri semplicemente avviare un dialogo — ci contatti.",
+        "emailLabel": "E-mail",
+        "addressLabel": "Indirizzo",
+        "addressValue": "Klovinpellontie 1–3, Tower 2<br>FIN-02180 Espoo, Finlandia",
+        "responseLabel": "Tempo di risposta",
+        "responseValue": "Cerchiamo di rispondere entro 1 giorno lavorativo."
+      },
+      "form": {
+        "eyebrow": "Invia un messaggio",
+        "nameLabel": "Nome",
+        "namePlaceholder": "Il Suo nome",
+        "emailLabel": "E-mail",
+        "emailPlaceholder": "sua@email.com",
+        "companyLabel": "Azienda",
+        "companyPlaceholder": "Nome dell'azienda",
+        "topicLabel": "Argomento",
+        "topicPlaceholder": "Selezioni un argomento...",
+        "topicOptions": {
+          "dcAir": "Richiesta di prodotto — DC-Air&reg;",
+          "ufs": "Richiesta di prodotto — Ultra-Fast Scanning Sensor",
+          "ufsIp67": "Richiesta di prodotto — Industrial IP67 TDI",
+          "oem": "OEM / Integrazione di sistema",
+          "software": "Licenze software",
+          "manufacturing": "Servizi di produzione",
+          "distribution": "Partnership di distribuzione",
+          "other": "Altro"
+        },
+        "messageLabel": "Messaggio",
+        "messagePlaceholder": "Ci parli del Suo progetto o della Sua domanda...",
+        "submit": "Invia messaggio"
+      },
+      "success": {
+        "title": "Messaggio ricevuto.",
+        "body": "Grazie per averci contattato. Un membro del team Athlos esaminerà la Sua richiesta e risponderà entro un giorno lavorativo.",
+        "close": "Chiudi"
+      },
+      "errors": {
+        "validation": "La preghiamo di inserire il Suo nome, il Suo indirizzo e-mail e il Suo messaggio.",
+        "generic": "Si è verificato un errore. La preghiamo di riprovare o di scriverci direttamente all'indirizzo info@athlos.fi.",
+        "network": "Non è stato possibile inviare il Suo messaggio. La preghiamo di riprovare o di scriverci direttamente all'indirizzo info@athlos.fi.",
+        "sending": "Invio in corso…",
+        "subjectFallback": "Richiesta generale",
+        "contactEmailLabel": "E-mail di contatto"
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "pages": {
+    "productsManufacturing": {
+      "hero": {
+        "category": "Produzione di sensori",
+        "headline": "Servizi di produzione<br>di rivelatori a raggi X",
+        "tagline": "Produzione interna di rivelatori — dal wafer CMOS al sensore finito."
+      },
+      "overview": {
+        "eyebrow": "Panoramica",
+        "headline": "Realizzati internamente, dal wafer al sensore.",
+        "body1": "Athlos produce i propri sensori di imaging internamente e in partnership con la camera bianca VTT Micronova di Espoo — uno degli ambienti di nanofabbricazione leader in Europa. Questa profonda competenza produttiva è uno degli elementi che distinguono i sensori Athlos: controlliamo l'intero processo, dal materiale del rivelatore e il bump bonding fino all'assemblaggio finale e alla caratterizzazione.",
+        "body2": "La stessa infrastruttura produttiva che supporta le nostre linee di prodotto è disponibile anche come servizio. Athlos può supportare progetti di partner e OEM che richiedono produzione di precisione di rivelatori, bumping CMOS o processi di assemblaggio specializzati.",
+        "imageAlt": "Wafer CMOS in silicio con un'intricata griglia di rivelatori"
+      },
+      "capabilities": {
+        "eyebrow": "Competenze",
+        "headline": "Precisione in ogni fase del processo.",
+        "cards": {
+          "bumping": {
+            "title": "Bumping dei rivelatori",
+            "body": "Deposizione di bump di saldatura InSn a passo fine su wafer CMOS. Capacità di passo inferiore a 100 µm per l'integrazione di rivelatori CdTe e Si. Deposizione di bump a pilastro in Cu a passo fine su wafer CMOS. Capacità di passo inferiore a 30 µm per l'integrazione di rivelatori CdTe e Si."
+          },
+          "flipChip": {
+            "title": "Bonding flip chip",
+            "body": "Interconnessione flip chip di precisione tra il materiale del rivelatore e la lettura CMOS. Fondamentale per ottenere il contatto elettrico diretto che abilita l'imaging a conversione diretta."
+          },
+          "wire": {
+            "title": "Wire bonding",
+            "body": "Collegamenti wire bond ad alta densità dal die CMOS al PCB e ai substrati di packaging. Adatto a configurazioni di sensori a passo fine e di grande formato."
+          },
+          "probing": {
+            "title": "Probing a raggi X &amp; caratterizzazione",
+            "body": "Probing elettrico a livello di wafer, inclusa l'ispezione basata su raggi X. Caratterizzazione completa dei rivelatori per uniformità di imaging, sensibilità e prestazioni di rumore."
+          },
+          "dieBonding": {
+            "title": "Die bonding &amp; assemblaggio",
+            "body": "Die bonding di precisione e assemblaggio multistrato di sensori in ambienti puliti controllati. Athlos coordina internamente tutte le fasi di assemblaggio."
+          },
+          "quality": {
+            "title": "Qualità &amp; affidabilità",
+            "body": "Sistema di gestione della qualità ISO 13485:2016. Controlli di processo in ogni fase produttiva, dall'ispezione del materiale in ingresso al collaudo finale del prodotto e al rilascio."
+          }
+        }
+      },
+      "facilities": {
+        "eyebrow": "Strutture",
+        "headline": "Accesso alla camera bianca VTT Micronova.",
+        "body1": "Athlos ha pieno accesso alla camera bianca VTT Micronova di 2.000 m² a Espoo, Finlandia — una delle camere bianche più avanzate d'Europa per nanofabbricazione, film sottili e microsistemi.",
+        "body2": "Questa partnership consente ad Athlos e ai suoi clienti di produzione di accedere a una struttura di livello mondiale, senza i costi di investimento di una camera bianca autonoma. In combinazione con l'infrastruttura di assemblaggio e caratterizzazione di Athlos, ciò permette una produzione end-to-end completa del sensore.",
+        "imageAlt": "Produzione in camera bianca Athlos presso VTT Micronova, Espoo"
+      },
+      "cta": {
+        "headline": "Richieste di partnership produttive.",
+        "body": "Se sta sviluppando un prodotto basato su rivelatori e necessita di un supporto produttivo di precisione — dal bump bonding all'assemblaggio completo del sensore — contatti Athlos per discutere le Sue esigenze.",
+        "ctaContact": "Contatta Athlos",
+        "ctaAll": "Tutti i prodotti"
+      },
+      "lastUpdated": {
+        "label": "Ultimo aggiornamento:",
+        "date": "15 aprile 2026",
+        "datetime": "2026-04-15"
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "jsonld": {
+    "productsIndex": {
+      "itemList": {
+        "name": "Portfolio prodotti Athlos per imaging a raggi X",
+        "items": {
+          "wios": {
+            "category": "Sensore intraorale dentale a raggi X wireless",
+            "description": "Sensore intraorale a raggi X Si-CMOS a conversione diretta completamente wireless, con Bluetooth 5.0, supporti Zero Profile® e autorizzazione FDA 510(k)."
+          },
+          "ufs": {
+            "category": "Sensore di scansione lineare a raggi X",
+            "description": "Sensore di scansione lineare CdTe-CMOS sensibile al singolo fotone per imaging dentale panoramico, cefalometrico, medicale e industriale."
+          },
+          "ufsIp67": {
+            "category": "Rivelatore TDI industriale a raggi X",
+            "description": "Rivelatore di scansione TDI ultra-rapido con grado di protezione IP67 per ispezione industriale in linea continua, senza raffreddamento attivo."
+          },
+          "manufacturing": {
+            "serviceType": "Produzione di rivelatori conto terzi",
+            "description": "Bumping di wafer CMOS, bonding flip chip, wire bonding, assemblaggio dei die e caratterizzazione dei rivelatori presso Athlos e VTT Micronova."
+          },
+          "software": {
+            "category": "Software per imaging a raggi X",
+            "description": "Modulo TWAIN, librerie di algoritmi di ricostruzione, filtri di post-elaborazione e SDK per l'integrazione in piattaforme di imaging compatibili TWAIN."
+          }
+        }
+      },
+      "breadcrumb": {
+        "home": "Home",
+        "products": "Prodotti"
+      }
+    }
+  }
+}

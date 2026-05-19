@@ -1,0 +1,234 @@
+{
+  "pages": {
+    "productsUfsIp67": {
+      "hero": {
+        "category": "Imaging industriale",
+        "headline": "Industrial IP67 TDI",
+        "tagline": "Imaging a raggi X ultraveloce e robusto per ambienti di ispezione industriale più esigenti.",
+        "ctaSpecs": "Specifiche tecniche",
+        "ctaDiscuss": "Discuti l'applicazione"
+      },
+      "overview": {
+        "eyebrow": "Panoramica",
+        "headline": "Adatto all'uso industriale.<br>Senza raffreddamento.",
+        "body1": "Industrial IP67 TDI è un array di rivelatori lineari industriale, progettato per applicazioni di scansione rapida in ambienti gravosi e a uso continuativo. Protezione IP67, senza raffreddamento attivo e imaging robusto a conversione diretta su CdTe — ingegnerizzato per flussi di ispezione in linea in cui contano disponibilità, sensibilità e stabilità a lungo termine.",
+        "body2": "A differenza dei sistemi di rivelazione che si affidano al raffreddamento Peltier per gestire la temperatura del sensore, Industrial IP67 TDI opera senza raffreddamento attivo su tutto l'intervallo operativo, grazie al consumo energetico molto ridotto e all'algoritmo brevettato di calibrazione dinamica dell'offset integrato.",
+        "body3": "L'operatività in modalità TDI consente velocità di linea fino a 75.000 righe al secondo, supportando velocità di scansione all'altezza delle esigenze dell'ispezione in produzione ad alto throughput.",
+        "imageAlt": "Vista del prodotto Industrial IP67 TDI"
+      },
+      "highlights": {
+        "eyebrow": "Caratteristiche principali",
+        "headline": "Progettato per le condizioni più difficili.",
+        "cards": {
+          "01": {
+            "title": "Custodia robusta IP67",
+            "body": "Custodia industriale completamente sigillata con grado IP67. Progettata per ambienti con polvere, umidità, vibrazioni ed esigenze di funzionamento continuo che escluderebbero i rivelatori di tipo da laboratorio."
+          },
+          "02": {
+            "title": "Senza raffreddamento attivo",
+            "body": "Nessun Peltier, nessun circuito di raffreddamento. Industrial IP67 TDI opera entro le specifiche complete tra 10 e 40 °C senza gestione termica attiva, riducendo la complessità del sistema e i modi di guasto. Questo è reso possibile dal consumo energetico molto ridotto e dall'algoritmo di calibrazione dinamica dell'offset integrato."
+          },
+          "03": {
+            "title": "Scansione TDI ultraveloce",
+            "body": "Modalità TDI con velocità di linea fino a 75.000 lps. Progettato per velocità di scansione molto elevate: 30 m/min a 100 µm, 240 m/min a 200 µm e fino a 1.920 m/min a 400 µm di risoluzione (ovvero una velocità di scansione di 115 km/h)."
+          },
+          "04": {
+            "title": "CdTe a conversione diretta",
+            "body": "Imaging a conversione diretta su CdTe con 28 stadi TDI. Sensibilità eccezionalmente elevata, ampio intervallo di energia (10–360 kV) e gamma dinamica a 16 bit per applicazioni di ispezione esigenti. Offriamo anche una soluzione personalizzata per LINAC, per l'impiego con energie fino a 9 MeV."
+          },
+          "05": {
+            "title": "Contrasto e sensibilità elevati",
+            "body": "Prestazioni TDI con sensibilità al singolo fotone. Una risoluzione di contrasto superiore consente la rilevazione affidabile di piccoli corpi estranei, difetti strutturali fini e dettagli a bassa attenuazione."
+          },
+          "06": {
+            "title": "Gigabit Ethernet",
+            "body": "Interfaccia GigE standard. Alimentazione 9–24 V DC. Integrazione semplice nelle architetture di sistema industriali e negli ambienti di controllo."
+          }
+        }
+      },
+      "performance": {
+        "eyebrow": "Velocità di scansione",
+        "headline": "Risoluzione e velocità<br>su tutto l'intervallo.",
+        "cards": {
+          "01": {
+            "resolution": "A 100 <span style=\"text-transform:none\">µm</span>",
+            "speed": "30",
+            "unit": "m/min — massima precisione"
+          },
+          "02": {
+            "resolution": "A 200 <span style=\"text-transform:none\">µm</span>",
+            "speed": "240",
+            "unit": "m/min — throughput bilanciato"
+          },
+          "03": {
+            "resolution": "A 400 <span style=\"text-transform:none\">µm</span>",
+            "speed": "1.920",
+            "unit": "m/min — throughput massimo"
+          }
+        }
+      },
+      "specs": {
+        "eyebrow": "Sintesi tecnica",
+        "headline": "Progettato attorno all'applicazione.",
+        "body1": "Industrial IP67 TDI è disponibile in tre varianti di modello — UFS-150IP67NC-44, UFS-225IP67NC-44 e UFS-460IP67NC-44. Tutte condividono la stessa architettura di base: imaging a conversione diretta su CdTe con 28 stadi TDI, custodia IP67 e interfaccia Gigabit Ethernet.",
+        "body2": "Soluzioni personalizzate disponibili: l'architettura modulare consente ad Athlos di fornire lunghezze attive da 7,5 cm fino a 10 m, con incrementi di 7,5 cm. Ci contatti per discutere il requisito di lunghezza attiva.",
+        "imageAlt": "Architettura interna di Industrial IP67 TDI – vista a custodia aperta",
+        "rows": {
+          "pixelSize": { "label": "Dimensione pixel", "value": "100 × 100 µm" },
+          "activeAreaWidth": { "label": "Larghezza dell'area attiva", "value": "2,8 mm" },
+          "tdiStages": { "label": "Stadi TDI", "value": "28" },
+          "energyRange": { "label": "Intervallo di energia", "value": "10 – 360 kV" },
+          "dynamicRange": { "label": "Gamma dinamica", "value": "16 bit" },
+          "maxLineRate": { "label": "Velocità di linea massima", "value": "75.000 lps" },
+          "interface": { "label": "Interfaccia", "value": "Gigabit Ethernet" },
+          "powerSupply": { "label": "Alimentazione", "value": "9 – 24 V DC" },
+          "operatingTemperature": { "label": "Temperatura di esercizio", "value": "10 – 40 °C" },
+          "activeCooling": { "label": "Raffreddamento attivo", "value": "Non richiesto" },
+          "enclosureRating": { "label": "Grado di protezione custodia", "value": "IP67" },
+          "detectorMaterial": { "label": "Materiale del rivelatore", "value": "CdTe a conversione diretta" }
+        }
+      },
+      "applications": {
+        "eyebrow": "Applicazioni",
+        "headline": "Dove Industrial IP67 TDI dà il massimo.",
+        "intro": "Industrial IP67 TDI è impiegato in ambienti di ispezione in linea esigenti in numerosi settori, ovunque siano richieste contemporaneamente velocità, qualità dell'immagine e robustezza della custodia.",
+        "cards": {
+          "food": {
+            "industry": "Settore alimentare e bevande",
+            "use1": "Rilevazione di corpi estranei",
+            "use2": "Ispezione dell'integrità della sigillatura",
+            "use3": "Verifica del livello di riempimento",
+            "use4": "Conteggio degli oggetti"
+          },
+          "pharma": {
+            "industry": "Farmaceutico",
+            "use1": "Test non distruttivi sul prodotto",
+            "use2": "Rilevazione di corpi estranei",
+            "use3": "Ispezione di sigillatura e livello di riempimento",
+            "use4": "Sicurezza e qualità del prodotto"
+          },
+          "oilGas": {
+            "industry": "Petrolio e gas · Nucleare",
+            "use1": "Ispezione di tubazioni per cricche e inclusioni",
+            "use2": "Ispezione delle saldature",
+            "use3": "CT industriale",
+            "use4": "Valutazione della corrosione"
+          },
+          "automotive": {
+            "industry": "Automotive",
+            "use1": "Ispezione della qualità degli pneumatici",
+            "use2": "Ispezione delle fusioni metalliche",
+            "use3": "Integrità delle parti metalliche",
+            "use4": "Verifica del montaggio"
+          },
+          "electronics": {
+            "industry": "Elettronica",
+            "use1": "Ispezione di componenti su bobina",
+            "use2": "Conteggio dei componenti",
+            "use3": "Ispezione di PCB",
+            "use4": "Verifica del montaggio a montaggio superficiale"
+          },
+          "heavy": {
+            "industry": "Industria pesante",
+            "use1": "Ispezione di saldature strutturali",
+            "use2": "Rilevazione di porosità e cricche nelle tubazioni",
+            "use3": "Applicazioni di CT industriale",
+            "use4": "CND su larga scala"
+          }
+        }
+      },
+      "gallery": {
+        "eyebrow": "Qualità dell'immagine",
+        "headline": "Esempi di radiografie da ispezione in linea.",
+        "lightboxCloseAria": "Chiudi",
+        "cards": {
+          "fish": {
+            "alt": "Radiografia di un pesce",
+            "name": "Pesce",
+            "params": "40 kVp · 10 mA · 46,7 cm/s · 100 µm"
+          },
+          "twoFish": {
+            "alt": "Radiografia di due pesci",
+            "name": "Due pesci",
+            "params": "40 kVp · 10 mA · 46,7 cm/s · 100 µm"
+          },
+          "chickenFillet": {
+            "alt": "Radiografia di filetto di pollo con ossa",
+            "name": "Filetto di pollo e ossa",
+            "params": "40 kVp · 10 mA · 46,7 cm/s · 100 µm"
+          },
+          "nuts": {
+            "alt": "Radiografia di frutta secca",
+            "name": "Frutta secca",
+            "params": "40 kVp · 10 mA · 46,7 cm/s · 100 µm"
+          },
+          "walnuts": {
+            "alt": "Radiografia di noci",
+            "name": "Noci",
+            "params": "40 kVp · 10 mA · 93 cm/s · 200 µm"
+          },
+          "chipsNoodles": {
+            "alt": "Radiografia di patatine e noodle",
+            "name": "Patatine e noodle",
+            "params": "40 kVp · 10 mA · 46,7 cm/s · 100 µm"
+          },
+          "chipsSugarBread": {
+            "alt": "Radiografia di patatine e pane dolce",
+            "name": "Patatine e pane dolce",
+            "params": "40 kVp · 10 mA · 46,7 cm/s · 100 µm"
+          },
+          "bankNote": {
+            "alt": "Radiografia di una banconota",
+            "name": "Banconota",
+            "params": "40 kVp · 5 mA · 66,7 cm/s · 200 µm"
+          }
+        }
+      },
+      "models": {
+        "eyebrow": "Famiglia di prodotti",
+        "headline": "Tre varianti.<br>Lo stesso nucleo robusto.",
+        "cards": {
+          "ufs150": {
+            "name": "UFS-150 IP67NC",
+            "ref": "UFS-150IP67NC-44-TDI-HVS",
+            "desc": "Lunghezza attiva compatta di 15 cm."
+          },
+          "ufs225": {
+            "name": "UFS-225 IP67NC",
+            "ref": "UFS-225IP67NC-44-TDI-HVS",
+            "desc": "Lunghezza attiva compatta di 23 cm."
+          },
+          "ufs460": {
+            "name": "UFS-460 IP67NC",
+            "ref": "UFS-460IP67NC-44-TDI-HVS",
+            "desc": "Lunghezza attiva compatta di 46 cm."
+          },
+          "custom": {
+            "name": "UFS-xxx IP67NC",
+            "ref": "UFS-xxxIP67NC-44-TDI-HVS",
+            "desc": "Lunghezza attiva personalizzata per soddisfare i requisiti dell'applicazione. Un modulo comprende tre ibridi da 25,6 mm; la lunghezza attiva del modulo è di 76,8 mm. Sono disponibili lunghezze attive da 76,8 mm fino a 10 m."
+          }
+        },
+        "note": "Le tre configurazioni standard sono disponibili per consegna pressoché immediata. Le lunghezze attive personalizzate possono essere realizzate per soddisfare requisiti applicativi specifici — contatti Athlos per discutere le sue esigenze dimensionali."
+      },
+      "brochure": {
+        "title": "Scheda tecnica del prodotto Industrial IP67 TDI",
+        "desc": "Specifiche tecniche complete, modelli e dati applicativi — PDF",
+        "button": "Scarica PDF"
+      },
+      "cta": {
+        "eyebrow": "Contattaci",
+        "headline": "Discuta i suoi requisiti di ispezione industriale.",
+        "body": "Industrial IP67 TDI è progettato per l'integrazione in ambienti produttivi esigenti. Parli con Athlos della sua applicazione, dei requisiti di velocità e dell'architettura di sistema.",
+        "ctaContact": "Contatta Athlos",
+        "ctaAll": "Tutti i prodotti",
+        "ctaDatasheet": "Scarica la scheda tecnica"
+      },
+      "lastUpdated": {
+        "label": "Ultimo aggiornamento:",
+        "datetime": "2026-04-15",
+        "date": "15 aprile 2026"
+      }
+    }
+  }
+}

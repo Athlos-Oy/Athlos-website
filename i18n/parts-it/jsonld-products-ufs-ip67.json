@@ -1,0 +1,42 @@
+{
+  "jsonld": {
+    "productsUfsIp67": {
+      "graph": {
+        "organization": {
+          "description": "Athlos Oy è un'azienda finlandese di tecnologia per imaging a raggi X, specializzata in sensori a conversione diretta CdTe-CMOS e Si-CMOS per applicazioni dentali, medicali e industriali.",
+          "areaServed": "Mondo intero",
+          "contactType": "sales"
+        },
+        "product": {
+          "description": "Rivelatore lineare TDI CdTe-CMOS a conversione diretta, robusto e con grado di protezione IP67, per ispezione in linea industriale a raggi X ad alta velocità. Senza raffreddamento attivo.",
+          "category": "Rivelatore industriale a raggi X",
+          "offer": {
+            "description": "Vendite a OEM industriali e integratori di sistema. Contatti Athlos per preventivo e supporto all'integrazione."
+          }
+        },
+        "breadcrumb": {
+          "home": "Home",
+          "products": "Prodotti"
+        }
+      },
+      "faq": {
+        "q1": {
+          "question": "Cosa significa IP67 per il rivelatore Industrial IP67 TDI?",
+          "answer": "IP67 significa che il rivelatore è completamente a tenuta di polvere e protetto contro l'immersione in acqua fino a un metro di profondità — caratteristiche che lo rendono adatto ad ambienti di ispezione industriale umidi, polverosi e gravosi."
+        },
+        "q2": {
+          "question": "Industrial IP67 TDI richiede un raffreddamento attivo?",
+          "answer": "No. Industrial IP67 TDI è progettato per funzionare senza raffreddamento attivo, riducendo la complessità del sistema e i requisiti di manutenzione."
+        },
+        "q3": {
+          "question": "Cos'è la scansione TDI?",
+          "answer": "TDI (Time Delay Integration) è una tecnica di scansione che accumula il segnale su più righe del rivelatore mentre un oggetto si muove attraverso il fascio di raggi X — offrendo elevata sensibilità anche ad alte velocità del nastro trasportatore."
+        },
+        "q4": {
+          "question": "Per quali settori è progettato Industrial IP67 TDI?",
+          "answer": "Industrial IP67 TDI è impiegato nella rilevazione di corpi estranei nel settore alimentare e delle bevande, nel controllo qualità farmaceutico, nell'ispezione di PCB nell'elettronica, nella verifica di componenti automotive e nei controlli non distruttivi industriali in generale."
+        }
+      }
+    }
+  }
+}

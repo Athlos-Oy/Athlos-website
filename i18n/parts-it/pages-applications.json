@@ -1,0 +1,123 @@
+{
+  "pages": {
+    "applications": {
+      "hero": {
+        "eyebrow": "Aree di applicazione",
+        "headline": "Applicazioni di imaging a raggi X",
+        "sub": "Sensori per imaging a raggi X a conversione diretta per flussi di lavoro dentali, industriali e medicali ad alte esigenze."
+      },
+      "intro": {
+        "eyebrow": "Aree di applicazione",
+        "headline": "Affidabili nelle principali aree di applicazione — e oltre.",
+        "body": "I sensori Athlos sono impiegati in ambienti esigenti in cui qualità dell'immagine, affidabilità e precisione non ammettono compromessi. Le aree che seguono sono esempi rappresentativi — la tecnologia a conversione diretta si presta a un'ampia gamma di sfide di imaging oltre a quelle qui mostrate."
+      },
+      "cards": {
+        "dental": {
+          "imageAlt": "Applicazione del sensore a raggi X a conversione diretta – imaging dentale intraorale e panoramico",
+          "title": "Imaging dentale",
+          "uses": {
+            "intraoral": "Imaging a raggi X intraorale",
+            "panoramic": "Panoramico &amp; cefalometrico",
+            "wireless": "Flusso di lavoro con sensore wireless",
+            "lowDose": "Diagnostica a bassa dose"
+          },
+          "linkWios": "Sensore intraorale DC-Air&reg; &rarr;",
+          "linkUfs": "Ultra-Fast Scanning Sensor &rarr;"
+        },
+        "medical": {
+          "imageAlt": "Applicazione del sensore a raggi X a conversione diretta – imaging medicale e diagnostica",
+          "title": "Imaging medicale",
+          "uses": {
+            "ceph": "Cefalometria &amp; OPG",
+            "custom": "Modalità medicali personalizzate",
+            "sensitivity": "Elevata sensibilità a bassa dose",
+            "cdte": "Conversione diretta CdTe"
+          },
+          "linkUfs": "Ultra-Fast Scanning Sensor &rarr;"
+        },
+        "food": {
+          "imageAlt": "Ispezione a raggi X in linea per il settore alimentare e bevande: rilevamento di corpi estranei e controllo qualità",
+          "title": "Alimentare &amp; bevande",
+          "uses": {
+            "foreign": "Rilevamento di corpi estranei",
+            "seal": "Ispezione dell'integrità della sigillatura",
+            "fill": "Verifica del livello di riempimento",
+            "count": "Conteggio degli oggetti"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "pharma": {
+          "imageAlt": "Ispezione a raggi X per la sicurezza dei prodotti farmaceutici, livello di riempimento e integrità della sigillatura",
+          "title": "Farmaceutico",
+          "uses": {
+            "nondestructive": "Test non distruttivi sui prodotti",
+            "foreign": "Rilevamento di corpi estranei",
+            "seal": "Ispezione della sigillatura e del livello di riempimento",
+            "safety": "Sicurezza e qualità del prodotto"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "oilGas": {
+          "imageAlt": "Controllo non distruttivo a raggi X per condotte petrolio e gas: ispezione di saldature e corrosione",
+          "title": "Petrolio &amp; gas",
+          "uses": {
+            "pipe": "Ispezione delle tubazioni per individuare cricche",
+            "weld": "Ispezione delle saldature",
+            "ct": "CT industriale",
+            "corrosion": "Valutazione della corrosione"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "automotive": {
+          "imageAlt": "Controllo non distruttivo a raggi X per fusioni metalliche e integrità dei componenti nel settore automotive",
+          "title": "Automotive",
+          "uses": {
+            "tire": "Controllo qualità degli pneumatici",
+            "casting": "Ispezione delle fusioni metalliche",
+            "integrity": "Integrità dei componenti metallici",
+            "assembly": "Verifica del montaggio"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "electronics": {
+          "imageAlt": "Ispezione a raggi X per assemblaggio PCB, verifica SMT e produzione elettronica",
+          "title": "Elettronica",
+          "uses": {
+            "pcb": "Ispezione PCB",
+            "count": "Conteggio dei componenti",
+            "reel": "Ispezione dei componenti in bobina",
+            "smt": "Verifica dell'assemblaggio SMT"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "heavy": {
+          "imageAlt": "Controllo non distruttivo a raggi X per saldature strutturali e applicazioni dell'industria pesante",
+          "title": "Industria pesante",
+          "uses": {
+            "weld": "Ispezione di saldature strutturali",
+            "porosity": "Rilevamento di porosità &amp; cricche nelle tubazioni",
+            "ct": "Applicazioni di CT industriale",
+            "ndt": "CND su larga scala"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        }
+      },
+      "directConversion": {
+        "eyebrow": "Perché la conversione diretta",
+        "headline": "Nessuno scintillatore. Nessun compromesso.",
+        "body": "I sensori a raggi X convenzionali convertono prima i raggi X in luce visibile e poi rilevano la luce. Ogni passaggio introduce rumore, perdita di risoluzione e dispersione di energia. I sensori Athlos convertono i fotoni X direttamente in carica — eliminando completamente lo scintillatore. Il risultato è immagini più nitide, migliore sensibilità e una gamma dinamica più ampia in tutte le applicazioni.",
+        "cta": "Esplora la gamma di prodotti"
+      },
+      "cta": {
+        "headline": "Parliamo della Sua applicazione.",
+        "body": "Non è sicuro di quale prodotto sia adatto ai Suoi requisiti di imaging? Athlos collabora con OEM e system integrator per individuare il percorso tecnico più adatto. Partiamo dalla Sua applicazione.",
+        "button": "Contatta Athlos"
+      },
+      "lastUpdated": {
+        "label": "Ultimo aggiornamento:",
+        "date": "15 aprile 2026",
+        "datetime": "2026-04-15"
+      }
+    }
+  }
+}

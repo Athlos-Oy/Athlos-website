@@ -50,6 +50,7 @@ function loadLocale(lang) {
 const I18N = {
   en: loadLocale("en"),
   de: loadLocale("de"),
+  it: loadLocale("it"),
 };
 
 export default async function (eleventyConfig) {

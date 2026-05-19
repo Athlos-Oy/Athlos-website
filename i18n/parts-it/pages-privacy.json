@@ -1,0 +1,142 @@
+{
+  "pages": {
+    "privacy": {
+      "hero": {
+        "category": "Note legali",
+        "headline": "Informativa sulla privacy",
+        "sub": "Come Athlos Oy raccoglie, tratta e protegge i Suoi dati personali."
+      },
+      "intro": {
+        "updatedLabel": "Aggiornato:",
+        "updatedDate": "15.04.2026",
+        "body1": "Nella presente informativa sulla privacy («Informativa sulla privacy»), noi, Athlos Oy («noi»), illustriamo come raccogliamo, trattiamo e condividiamo i Suoi dati personali e quali diritti Le spettano in relazione ai Suoi dati personali.",
+        "body2": "Nel trattamento dei dati personali agiamo sempre nel rispetto della normativa applicabile. In particolare, ci attieniamo al Regolamento generale sulla protezione dei dati (Regolamento (UE) 2016/679, GDPR)."
+      },
+      "controller": {
+        "heading": "Titolare del trattamento",
+        "details": "Athlos Oy<br>\n          ID Aziendale: 2752258-9<br>\n          Klovinpellontie 1–3, 02180 Espoo, Finlandia<br>\n          Contatto: <a href=\"mailto:info@athlos.fi\" style=\"color:var(--gray-steel);\">info@athlos.fi</a>",
+        "subjectScope": "In qualità di interessato, Lei può essere un visitatore del nostro sito web, un rappresentante di un nostro cliente attuale o potenziale, oppure un candidato.",
+        "contextIntro": "La presente Informativa sulla privacy riguarda il trattamento dei dati personali nei seguenti contesti:",
+        "items": [
+          "visite a <a href=\"https://athlos.fi/\" style=\"color:var(--gray-steel);\">https://athlos.fi/</a>",
+          "il trattamento dei dati personali dei rappresentanti dei nostri clienti, fornitori e altri stakeholder",
+          "il trattamento dei dati personali dei candidati"
+        ]
+      },
+      "purposes": {
+        "heading": "Finalità del trattamento",
+        "intro": "Trattiamo i Suoi dati personali esclusivamente per le finalità descritte nella presente Informativa sulla privacy e solo nella misura necessaria.",
+        "visitors": {
+          "label": "Visitatori del sito:",
+          "items": [
+            "consentire l'utilizzo del sito web e garantirne la sicurezza e la funzionalità",
+            "migliorare il nostro sito web tramite analisi",
+            "analisi di marketing e marketing personalizzato",
+            "altri legittimi interessi commerciali"
+          ]
+        },
+        "representatives": {
+          "label": "Rappresentanti:",
+          "items": [
+            "gestione della relazione commerciale",
+            "adempimento ai requisiti previsti dalla normativa applicabile",
+            "garanzia e monitoraggio della conformità",
+            "fatturazione",
+            "comunicazione con Lei e con terzi",
+            "invio di comunicazioni di marketing",
+            "altri legittimi interessi commerciali"
+          ]
+        },
+        "applicants": {
+          "label": "Candidati:",
+          "items": [
+            "processo di selezione",
+            "esigenze future di selezione (previo consenso)"
+          ]
+        }
+      },
+      "categories": {
+        "heading": "Categorie di dati personali",
+        "visitors": {
+          "label": "Visitatori del sito:",
+          "items": [
+            "informazioni relative all'utilizzo del sito (indirizzo IP, cookie, attività sul sito, ora della visita)",
+            "informazioni dell'assistenza clienti",
+            "dati di contatto (nome, indirizzo e-mail, numero di telefono)"
+          ]
+        },
+        "representatives": {
+          "label": "Rappresentanti:",
+          "items": [
+            "dati di contatto",
+            "informazioni relative alla relazione commerciale",
+            "contenuti delle comunicazioni con noi"
+          ]
+        },
+        "applicants": {
+          "label": "Candidati:",
+          "items": [
+            "documentazione di candidatura (nome, dati di contatto, formazione, esperienza professionale, curriculum, aspettative retributive)"
+          ]
+        }
+      },
+      "legalBasis": {
+        "heading": "Basi giuridiche",
+        "intro": "Il trattamento dei dati personali si fonda sulle seguenti basi giuridiche:",
+        "items": [
+          "legittimo interesse (art. 6 par. 1 lett. f GDPR) per il funzionamento del sito web, la gestione della relazione commerciale, la conformità, la fatturazione, le comunicazioni e altri interessi commerciali",
+          "consenso (art. 6 par. 1 lett. a GDPR) per i cookie non essenziali, l'analisi di marketing e la selezione futura del personale",
+          "obbligo di legge (art. 6 par. 1 lett. c GDPR) per gli adempimenti fiscali e societari",
+          "necessità contrattuale (art. 6 par. 1 lett. b GDPR) per i processi di selezione del personale"
+        ]
+      },
+      "cookies": {
+        "heading": "Cookie e analisi",
+        "body1": "Utilizziamo eventualmente cookie e tag sul nostro sito web. Un cookie è un file di testo memorizzato nel Suo browser o sul Suo dispositivo. Lei può modificare in qualsiasi momento le impostazioni del browser relative ai cookie.",
+        "body2": "Utilizziamo <strong>Google Analytics 4</strong> (fornito da Google LLC, USA) e <strong>Google Tag Manager</strong> per raccogliere dati di analisi anonimi sull'utilizzo del nostro sito da parte dei visitatori — ad esempio le pagine visitate, il tempo trascorso, le fonti di traffico e il tipo di dispositivo. Questi dati ci aiutano a migliorare il sito. I cookie di analisi vengono attivati solo dopo che Lei ha prestato il proprio consenso esplicito tramite il banner cookie presente sul nostro sito.",
+        "body3": "I dati di Google Analytics sono trattati da Google LLC e possono essere trasferiti a server negli Stati Uniti sulla base delle Clausole contrattuali standard. Per maggiori informazioni può consultare <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gray-steel);\">policies.google.com/privacy</a>. Lei può opporsi in qualsiasi momento cliccando su «Rifiuta» nel banner cookie oppure utilizzando il <a href=\"https://tools.google.com/dlpage/gaoptout\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gray-steel);\">componente aggiuntivo del browser per la disattivazione di Google Analytics</a>."
+      },
+      "sources": {
+        "heading": "Fonti dei dati personali",
+        "body": "Otteniamo i Suoi dati personali principalmente direttamente da Lei. Possiamo inoltre raccogliere dati da fonti pubblicamente accessibili e in modo automatico tramite cookie quando visita il nostro sito web."
+      },
+      "retention": {
+        "heading": "Conservazione",
+        "body": "Conserviamo i dati personali solo per il tempo necessario. Per i visitatori del sito, i dati sono trattati principalmente durante la visita. Le richieste di contatto sono conservate per due anni. Per i rappresentanti, i dati sono conservati per la durata della relazione commerciale. Per i candidati, i dati sono trattati per la durata del processo di selezione."
+      },
+      "disclosures": {
+        "heading": "Comunicazione e trasferimenti",
+        "body": "Possiamo comunicare i Suoi dati personali a fornitori di servizi di fiducia, alle autorità pubbliche ove previsto dalla legge oppure in connessione con riorganizzazioni aziendali. In caso di trasferimento di dati al di fuori dell'UE/SEE rispettiamo la normativa applicabile, comprese le clausole contrattuali standard (SCC) adottate dalla Commissione europea. Possiamo trasferire dati personali verso gli Stati Uniti d'America."
+      },
+      "security": {
+        "heading": "Sicurezza dei dati",
+        "intro": "Abbiamo adottato adeguate misure tecniche e organizzative:",
+        "items": [
+          "l'accesso ai dati è limitato al personale autorizzato",
+          "i sistemi informativi sono protetti da firewall e password",
+          "il personale è formato sul corretto trattamento dei dati",
+          "i file elettronici vengono regolarmente sottoposti a backup",
+          "la distruzione dei dati personali avviene in modo sicuro"
+        ]
+      },
+      "rights": {
+        "heading": "I Suoi diritti",
+        "intro": "In base al GDPR Le spettano i seguenti diritti:",
+        "items": [
+          "accesso ai Suoi dati personali",
+          "rettifica dei dati inesatti",
+          "cancellazione dei Suoi dati personali («diritto all'oblio»)",
+          "portabilità dei dati",
+          "opposizione al trattamento",
+          "limitazione del trattamento",
+          "revoca del consenso prestato"
+        ],
+        "contact": "Per esercitare i Suoi diritti può contattarci all'indirizzo <a href=\"mailto:info@athlos.fi\" style=\"color:var(--gray-steel);\">info@athlos.fi</a>. Se ritiene che il trattamento dei Suoi dati violi la normativa sulla protezione dei dati personali, ha il diritto di presentare reclamo all'autorità di controllo."
+      },
+      "changes": {
+        "heading": "Modifiche",
+        "body": "Ci riserviamo il diritto di modificare o aggiornare la presente Informativa sulla privacy quando necessario."
+      }
+    }
+  }
+}
