@@ -50,6 +50,7 @@
 {%- endif %}
 
   <script src="/{{ scriptJs or 'js/script.js' }}"></script>
+  <script src="/js/lang-switcher.js"></script>
 {%- if extraScriptsBeforeCookieBanner %}
 {{ extraScriptsBeforeCookieBanner | indent(2, true) | safe }}
 {%- endif %}
