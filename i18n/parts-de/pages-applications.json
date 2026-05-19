@@ -1,0 +1,123 @@
+{
+  "pages": {
+    "applications": {
+      "hero": {
+        "eyebrow": "Anwendungsbereiche",
+        "headline": "Anwendungen der Röntgenbildgebung",
+        "sub": "Direktkonversions-Röntgensensoren für anspruchsvolle dentale, industrielle und medizinische Arbeitsabläufe."
+      },
+      "intro": {
+        "eyebrow": "Anwendungsbereiche",
+        "headline": "Bewährt in zentralen Anwendungsbereichen — und darüber hinaus.",
+        "body": "Athlos-Sensoren werden in anspruchsvollen Umgebungen eingesetzt, in denen Bildqualität, Zuverlässigkeit und Präzision keine Kompromisse zulassen. Die folgenden Bereiche sind repräsentative Beispiele — die Direktkonversions-Technologie eignet sich für ein breites Spektrum an Bildgebungsaufgaben über die hier gezeigten hinaus."
+      },
+      "cards": {
+        "dental": {
+          "imageAlt": "Anwendung des Direktkonversions-Röntgensensors – dentale intraorale und Panoramabildgebung",
+          "title": "Dentale Bildgebung",
+          "uses": {
+            "intraoral": "Intraorale Röntgenbildgebung",
+            "panoramic": "Panorama- &amp; Fernröntgenseitenbild",
+            "wireless": "Kabelloser Sensor-Workflow",
+            "lowDose": "Diagnostik bei niedriger Dosis"
+          },
+          "linkWios": "DC-Air&reg; Intraoralsensor &rarr;",
+          "linkUfs": "Ultra-Fast Scanning Sensor &rarr;"
+        },
+        "medical": {
+          "imageAlt": "Anwendung des Direktkonversions-Röntgensensors – medizinische Bildgebung und Diagnostik",
+          "title": "Medizinische Bildgebung",
+          "uses": {
+            "ceph": "Fernröntgenseitenbild &amp; OPG",
+            "custom": "Kundenspezifische medizinische Modalitäten",
+            "sensitivity": "Hohe Empfindlichkeit bei niedriger Dosis",
+            "cdte": "CdTe-Direktkonversion"
+          },
+          "linkUfs": "Ultra-Fast Scanning Sensor &rarr;"
+        },
+        "food": {
+          "imageAlt": "Inline-Röntgeninspektion für Lebensmittel und Getränke zur Fremdkörpererkennung und Qualitätskontrolle",
+          "title": "Lebensmittel &amp; Getränke",
+          "uses": {
+            "foreign": "Fremdkörpererkennung",
+            "seal": "Prüfung der Siegelintegrität",
+            "fill": "Füllstandskontrolle",
+            "count": "Objektzählung"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "pharma": {
+          "imageAlt": "Röntgeninspektion für pharmazeutische Produktsicherheit, Füllstand und Siegelintegrität",
+          "title": "Pharma",
+          "uses": {
+            "nondestructive": "Zerstörungsfreie Produktprüfung",
+            "foreign": "Fremdkörpererkennung",
+            "seal": "Siegel- und Füllstandsprüfung",
+            "safety": "Produktsicherheit und Qualität"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "oilGas": {
+          "imageAlt": "Zerstörungsfreie Röntgenprüfung für Öl- und Gas-Pipelines: Schweißnaht- und Korrosionsinspektion",
+          "title": "Öl &amp; Gas",
+          "uses": {
+            "pipe": "Rohrinspektion auf Risse",
+            "weld": "Schweißnahtprüfung",
+            "ct": "Industrielle CT",
+            "corrosion": "Korrosionsbewertung"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "automotive": {
+          "imageAlt": "Zerstörungsfreie Röntgenprüfung für Metallguss und Bauteilintegrität in der Automobilindustrie",
+          "title": "Automobilindustrie",
+          "uses": {
+            "tire": "Qualitätsprüfung von Reifen",
+            "casting": "Prüfung von Metallgussteilen",
+            "integrity": "Integrität von Metallteilen",
+            "assembly": "Montagekontrolle"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "electronics": {
+          "imageAlt": "Röntgeninspektion für Leiterplattenbestückung, SMT-Prüfung und Elektronikfertigung",
+          "title": "Elektronik",
+          "uses": {
+            "pcb": "Leiterplatteninspektion",
+            "count": "Bauteilzählung",
+            "reel": "Rollenbauteil-Inspektion",
+            "smt": "SMT-Bestückungskontrolle"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "heavy": {
+          "imageAlt": "Zerstörungsfreie Röntgenprüfung für strukturelle Schweißnähte und Anwendungen in der Schwerindustrie",
+          "title": "Schwerindustrie",
+          "uses": {
+            "weld": "Prüfung struktureller Schweißnähte",
+            "porosity": "Erkennung von Porosität &amp; Rissen in Rohren",
+            "ct": "Industrielle CT-Anwendungen",
+            "ndt": "Großvolumige ZfP"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        }
+      },
+      "directConversion": {
+        "eyebrow": "Warum Direktkonversion",
+        "headline": "Kein Szintillator. Kein Kompromiss.",
+        "body": "Herkömmliche Röntgensensoren wandeln Röntgenstrahlung zunächst in sichtbares Licht um und detektieren anschließend das Licht. Jeder Schritt verursacht Rauschen, Auflösungsverluste und Energieverschwendung. Athlos-Sensoren wandeln Röntgenphotonen direkt in Ladung um — und verzichten vollständig auf den Szintillator. Das Ergebnis sind schärfere Bilder, bessere Empfindlichkeit und ein größerer Dynamikumfang über alle Anwendungen hinweg.",
+        "cta": "Produktreihe entdecken"
+      },
+      "cta": {
+        "headline": "Sprechen Sie über Ihre Anwendung.",
+        "body": "Unsicher, welches Produkt zu Ihren Bildgebungsanforderungen passt? Athlos arbeitet mit OEMs und Systemintegratoren zusammen, um den passenden technischen Weg zu finden. Beginnen wir mit Ihrer Anwendung.",
+        "button": "Athlos kontaktieren"
+      },
+      "lastUpdated": {
+        "label": "Zuletzt aktualisiert:",
+        "date": "15. April 2026",
+        "datetime": "2026-04-15"
+      }
+    }
+  }
+}

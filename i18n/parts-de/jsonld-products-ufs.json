@@ -1,0 +1,37 @@
+{
+  "jsonld": {
+    "productsUfs": {
+      "product": {
+        "name": "Ultra-Fast Scanning Sensor",
+        "description": "Ultraschneller CdTe-CMOS-Zeilenscansensor mit Direktkonversion für dentales Panoramaröntgen, Fernröntgenseitenbilder sowie medizinische und industrielle Röntgenbildgebung. Einzelphotonen-Empfindlichkeit.",
+        "category": "Röntgen-Zeilenscansensor"
+      },
+      "offer": {
+        "description": "Vertrieb an OEMs und Systemintegratoren. Kontaktieren Sie Athlos für Angebot und Integrationsunterstützung."
+      },
+      "breadcrumbs": {
+        "home": "Start",
+        "products": "Produkte",
+        "ufs": "Ultra-Fast Scanning Sensor"
+      },
+      "faq": {
+        "q1": {
+          "question": "Für welche Anwendungen ist der Ultra-Fast Scanning Sensor konzipiert?",
+          "answer": "Der Ultra-Fast Scanning Sensor ist für dentales Panoramaröntgen und Fernröntgenseitenbilder sowie für medizinische und industrielle Röntgeninspektionsanwendungen konzipiert."
+        },
+        "q2": {
+          "question": "Welches Detektormaterial verwendet der Ultra-Fast Scanning Sensor?",
+          "answer": "Der Ultra-Fast Scanning Sensor nutzt die CdTe-CMOS-Direktkonversionstechnologie — Cadmiumtellurid, bump-gebondet auf einem vollständig kundenspezifischen CMOS-Auslese-ASIC."
+        },
+        "q3": {
+          "question": "Unterstützt der Ultra-Fast Scanning Sensor Einzelphotonen-Empfindlichkeit?",
+          "answer": "Ja. Die CdTe-CMOS-Direktkonversionsarchitektur ermöglicht Einzelphotonen-Empfindlichkeit über den gesamten Betriebsbereich."
+        },
+        "q4": {
+          "question": "Wie viele Modelle des Ultra-Fast Scanning Sensor sind verfügbar?",
+          "answer": "Drei Modelle sind verfügbar, mit wählbaren aktiven Breiten für spezifische Anwendungsanforderungen."
+        }
+      }
+    }
+  }
+}

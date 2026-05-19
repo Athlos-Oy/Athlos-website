@@ -1,0 +1,50 @@
+{
+  "pages": {
+    "productsSoftware": {
+      "hero": {
+        "category": "Software &amp; Integration",
+        "headline": "Software-Produkte<br>für die Röntgenbildgebung",
+        "tagline": "Jahrzehnte an Software-Expertise – verfügbar als lizenzierbare Komponenten oder integriert in Athlos Bildgebungssysteme."
+      },
+      "overview": {
+        "eyebrow": "Überblick",
+        "headline": "Die Software-Ebene hinter der Direktkonversions-Bildgebung.",
+        "body1": "Das Athlos-Team entwickelt Software für die Röntgenbildgebung seit den Anfängen der Direktkonversion – Rekonstruktionsalgorithmen, Bildverarbeitungsfilter und TWAIN-Integrationsschichten, die weltweit in tausenden klinischen und industriellen Installationen im Einsatz sind.",
+        "body2": "Diese Software-Funktionen sind als Teil eines vollständigen Athlos Bildgebungssystems verfügbar oder als unabhängig lizenzierbare Komponenten zur Integration in Plattformen von Drittanbietern. Athlos bietet zudem SDK-Zugang und direkte Integrationsunterstützung für OEM- und Systemintegrator-Kunden."
+      },
+      "components": {
+        "eyebrow": "Verfügbare Komponenten",
+        "headline": "Software-Komponenten für die Entwicklung von Bildgebungssystemen.",
+        "cards": {
+          "twain": {
+            "title": "TWAIN-Modul",
+            "body": "Das Athlos TWAIN-Modul integriert sich direkt in dentale und medizinische Bildgebungssoftware. Unterstützte Anwendungen umfassen Dentrix Ascend, Eaglesoft, Open Dental, Dexis, Romexis und viele weitere TWAIN-fähige Plattformen. Verfügbar als Teil einer Hardware-Lösung oder als eigenständige lizenzierte Komponente."
+          },
+          "reconstruction": {
+            "title": "Rekonstruktionsalgorithmen",
+            "body": "Fortschrittliche Bibliotheken mit Rekonstruktionsalgorithmen, entwickelt über Jahrzehnte hinweg im Bereich der Direktkonversions-Bildgebung. Ausgelegt auf die spezifischen Signaleigenschaften von CdTe- und Si-CMOS-Detektoren. Verfügbar als eigenständige lizenzierbare Komponente zur Integration in Bildgebungspipelines."
+          },
+          "postProcessing": {
+            "title": "Nachbearbeitungsfilter",
+            "body": "Lokal adaptive Bibliotheken zur Bildverbesserung und Nachbearbeitung. Entwickelt und verfeinert in dentalen, industriellen und medizinischen Bildgebungsanwendungen. Bereitgestellt mit dem Athlos SDK und verfügbar zur Integration und Anpassung."
+          }
+        }
+      },
+      "sdk": {
+        "title": "Athlos SDK &amp; API",
+        "body": "C/C++- / DLL-Integrations-API mit Quellcode-Beispielen, Evaluierungs-GUI und einer fortschrittlichen lokal adaptiven Filterbibliothek. Kontaktieren Sie Athlos, um SDK-Zugang und Lizenzierung zu besprechen."
+      },
+      "cta": {
+        "headline": "Fragen zu Software-Lizenzierung und Integration.",
+        "body": "Ob Sie Athlos-Software in eine bestehende Plattform integrieren oder für ein neues Bildgebungssystem evaluieren – das Athlos-Team unterstützt Sie. Kontaktieren Sie uns, um Lizenzierung, SDK-Zugang und Integrationswege zu besprechen.",
+        "buttonContact": "Athlos kontaktieren",
+        "buttonAll": "Alle Produkte"
+      },
+      "lastUpdated": {
+        "label": "Zuletzt aktualisiert:",
+        "date": "15. April 2026",
+        "datetime": "2026-04-15"
+      }
+    }
+  }
+}

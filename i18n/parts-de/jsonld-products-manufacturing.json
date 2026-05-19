@@ -1,0 +1,38 @@
+{
+  "jsonld": {
+    "productsManufacturing": {
+      "graph": {
+        "organization": {
+          "description": "Athlos Oy ist ein finnisches Unternehmen für Röntgenbildgebungstechnologie, spezialisiert auf CdTe-CMOS- und Si-CMOS-Sensoren mit Direktkonversion für dentale, medizinische und industrielle Anwendungen.",
+          "areaServed": "Weltweit",
+          "contactType": "Vertrieb"
+        },
+        "breadcrumb": {
+          "home": "Start",
+          "products": "Produkte",
+          "manufacturing": "Fertigungsdienstleistungen"
+        },
+        "service": {
+          "name": "Fertigungsdienstleistungen für Röntgendetektoren",
+          "description": "Präzisionsfertigung von Röntgendetektoren einschließlich CMOS-Bumping, Flip-Chip-Bonden, Drahtbonden, Die-Bonding und vollständiger Sensorcharakterisierung. Zugang zum Reinraum von VTT Micronova.",
+          "areaServed": "Weltweit",
+          "serviceType": "Auftragsfertigung"
+        }
+      },
+      "faq": {
+        "q1": {
+          "question": "Welche Fertigungsdienstleistungen bietet Athlos an?",
+          "answer": "Athlos bietet Präzisionsfertigungsdienstleistungen für Röntgendetektoren, einschließlich CMOS-Bumping, Flip-Chip-Bonden, Drahtbonden, Die-Bonding und vollständiger Sensorcharakterisierung."
+        },
+        "q2": {
+          "question": "Hat Athlos Zugang zu einer Reinraumfertigung?",
+          "answer": "Ja. Athlos hat Zugang zur Nanofabrikationsanlage von VTT Micronova in Espoo, Finnland — einer der führenden Reinraumumgebungen Europas für die Halbleiter- und Detektorfertigung."
+        },
+        "q3": {
+          "question": "Ist Athlos für die Fertigung ISO-zertifiziert?",
+          "answer": "Ja. Athlos ist nach ISO 13485:2016 zertifiziert und gewährleistet damit ein konsistentes Qualitätsmanagement für die Fertigung von Komponenten für Medizinprodukte."
+        }
+      }
+    }
+  }
+}

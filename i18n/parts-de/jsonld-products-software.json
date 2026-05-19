@@ -1,0 +1,38 @@
+{
+  "jsonld": {
+    "productsSoftware": {
+      "graph": {
+        "organization": {
+          "description": "Athlos Oy ist ein finnisches Unternehmen für Röntgenbildgebungstechnologie, spezialisiert auf CdTe-CMOS- und Si-CMOS-Sensoren mit Direktkonversion für dentale, medizinische und industrielle Anwendungen.",
+          "areaServed": "Weltweit",
+          "contactType": "Vertrieb"
+        },
+        "breadcrumb": {
+          "home": "Start",
+          "products": "Produkte",
+          "software": "Software-Produkte"
+        },
+        "service": {
+          "name": "Software-Produkte für die Röntgenbildgebung",
+          "description": "TWAIN-Modul, Bibliotheken mit Rekonstruktionsalgorithmen, fortschrittliche Nachbearbeitungsfilter sowie SDK-/API-Integrationsunterstützung für Röntgenbildgebungssysteme.",
+          "areaServed": "Weltweit",
+          "serviceType": "Software-Lizenzierung"
+        }
+      },
+      "faq": {
+        "q1": {
+          "question": "Welche Software-Produkte bietet Athlos an?",
+          "answer": "Athlos bietet ein TWAIN-Modul, Bibliotheken mit Rekonstruktionsalgorithmen, fortschrittliche Nachbearbeitungsfilter sowie SDK-/API-Integrationsunterstützung für Röntgenbildgebungssysteme."
+        },
+        "q2": {
+          "question": "Kann Athlos-Software unabhängig lizenziert werden?",
+          "answer": "Ja. Die Software-Produkte sind als Teil eines Athlos-Sensorsystems oder als unabhängig lizenzierbare Komponenten für die OEM-Integration verfügbar."
+        },
+        "q3": {
+          "question": "Welche SDK- und Integrationsunterstützung bietet Athlos?",
+          "answer": "Athlos bietet SDK- und API-Integrationsunterstützung, um OEM-Partner und Systemintegratoren dabei zu unterstützen, Athlos-Bildgebungssoftware und -Algorithmen in ihre eigenen Produkte und Arbeitsabläufe zu integrieren."
+        }
+      }
+    }
+  }
+}

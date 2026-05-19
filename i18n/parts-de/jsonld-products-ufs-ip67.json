@@ -1,0 +1,42 @@
+{
+  "jsonld": {
+    "productsUfsIp67": {
+      "graph": {
+        "organization": {
+          "description": "Athlos Oy ist ein finnisches Unternehmen für Röntgenbildgebungstechnologie, spezialisiert auf CdTe-CMOS- und Si-CMOS-Sensoren mit Direktkonversion für dentale, medizinische und industrielle Anwendungen.",
+          "areaServed": "Weltweit",
+          "contactType": "Vertrieb"
+        },
+        "product": {
+          "description": "Robuster, IP67-geschützter CdTe-CMOS-TDI-Zeilendetektor mit Direktkonversion für die schnelle industrielle Inline-Röntgeninspektion. Ohne aktive Kühlung.",
+          "category": "Industrieller Röntgendetektor",
+          "offer": {
+            "description": "Vertrieb an industrielle OEMs und Systemintegratoren. Kontaktieren Sie Athlos für Angebot und Integrationsunterstützung."
+          }
+        },
+        "breadcrumb": {
+          "home": "Start",
+          "products": "Produkte"
+        }
+      },
+      "faq": {
+        "q1": {
+          "question": "Was bedeutet IP67 beim Detektor Industrial IP67 TDI?",
+          "answer": "IP67 bedeutet, dass der Detektor vollständig staubdicht und gegen Eintauchen in Wasser bis zu einer Tiefe von einem Meter geschützt ist – damit eignet er sich für nasse, staubige und raue industrielle Inspektionsumgebungen."
+        },
+        "q2": {
+          "question": "Benötigt der Industrial IP67 TDI eine aktive Kühlung?",
+          "answer": "Nein. Der Industrial IP67 TDI ist für den Betrieb ohne aktive Kühlung ausgelegt – das reduziert Systemkomplexität und Wartungsaufwand."
+        },
+        "q3": {
+          "question": "Was ist TDI-Scanning?",
+          "answer": "TDI (Time Delay Integration) ist ein Scanverfahren, das das Signal über mehrere Detektorzeilen akkumuliert, während sich ein Objekt durch den Röntgenstrahl bewegt – das liefert hohe Empfindlichkeit bei hohen Bandgeschwindigkeiten."
+        },
+        "q4": {
+          "question": "Für welche Branchen ist der Industrial IP67 TDI konzipiert?",
+          "answer": "Der Industrial IP67 TDI wird in der Fremdkörpererkennung bei Lebensmitteln und Getränken, in der pharmazeutischen Qualitätskontrolle, in der Leiterplatteninspektion in der Elektronik, in der Prüfung von Automobilteilen sowie in der allgemeinen industriellen zerstörungsfreien Prüfung eingesetzt."
+        }
+      }
+    }
+  }
+}

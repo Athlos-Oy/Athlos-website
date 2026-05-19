@@ -11,7 +11,9 @@
     "diff:index": "diff -u index.html _site/index.html || true",
     "test:visual": "playwright test",
     "test:visual:update": "playwright test --update-snapshots",
-    "test:visual:report": "playwright show-report"
+    "test:visual:report": "playwright show-report",
+    "check:i18n": "node scripts/i18n-check.mjs",
+    "i18n:tasks": "node scripts/i18n-tasks.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",

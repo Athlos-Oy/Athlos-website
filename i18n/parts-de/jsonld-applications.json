@@ -1,0 +1,32 @@
+{
+  "jsonld": {
+    "applications": {
+      "faq": {
+        "q1": {
+          "name": "Für welche Anwendungen werden Athlos-Röntgensensoren eingesetzt?",
+          "answer": "Athlos-Röntgensensoren mit Direktkonversion werden in drei Hauptanwendungsbereichen eingesetzt: dentale Bildgebung (intraoral, Panorama und Fernröntgenseitenbild), medizinische Bildgebung (OPG, Fernröntgenseitenbild sowie kundenspezifische medizinische Modalitäten mit hoher Empfindlichkeit bei niedriger Dosis) und industrielle Inspektion (Fremdkörpererkennung in Lebensmitteln und Getränken, Siegel- und Füllstandsprüfung in der Pharmaindustrie, Schweißnahtprüfung in der Öl- und Gasindustrie, Gussteilprüfung in der Automobilindustrie, Inspektion von Leiterplatten und SMT-Elektronik sowie ZfP und CT in der Schwerindustrie)."
+        },
+        "q2": {
+          "name": "Welches Athlos-Produkt eignet sich für die dentale intraorale Bildgebung?",
+          "answer": "Der kabellose Intraoralsensor DC-Air® — Si-CMOS mit Direktkonversion, Bluetooth 5.0, Zero Profile®-Halter, bis zu 300 Röntgenaufnahmen pro Akkuladung, erweiterter IP67-Schutz. FDA-510(k)-zugelassen."
+        },
+        "q3": {
+          "name": "Welches Athlos-Produkt eignet sich für die dentale Panorama- und Fernröntgenseitenbildgebung?",
+          "answer": "Der Ultra-Fast Scanning Sensor — ein ultraschneller CdTe-CMOS-Zeilenscanner mit Direktkonversion für die dentale Panorama- und Fernröntgenseitenbildgebung sowie für medizinische und industrielle Röntgenprüfung. Einzelphotonen-Empfindlichkeit. Drei Modelle mit wählbaren aktiven Breiten."
+        },
+        "q4": {
+          "name": "Welches Athlos-Produkt eignet sich für die industrielle Inline-Inspektion?",
+          "answer": "Der Industrial IP67 TDI — ein nach IP67 zertifizierter, ultraschneller TDI-Scanning-Detektor für die kontinuierliche Inline-Inspektion. Keine aktive Kühlung erforderlich. Eingesetzt zur Fremdkörpererkennung in Lebensmitteln und Getränken, für Siegel- und Füllstandsprüfungen in der Pharmaindustrie, zur Schweißnahtprüfung in der Öl- und Gasindustrie, für Automobilgussteile, zur SMT- und Leiterplattenkontrolle sowie für großvolumige ZfP."
+        },
+        "q5": {
+          "name": "Warum ist Direktkonversion wichtig?",
+          "answer": "Herkömmliche Röntgensensoren wandeln Röntgenstrahlung über einen Szintillator zunächst in sichtbares Licht um und detektieren anschließend das Licht. Jeder Schritt verursacht Unschärfe, Signalverlust und Energieverluste. Die Direktkonversion wandelt Röntgenphotonen direkt in elektrische Ladung um und verzichtet auf den Szintillator-Schritt — das ergibt schärfere Bilder, höheren Kontrast, einen größeren Dynamikumfang und eine bessere Leistung bei niedriger Dosis."
+        }
+      },
+      "breadcrumbs": {
+        "home": "Start",
+        "applications": "Anwendungen"
+      }
+    }
+  }
+}

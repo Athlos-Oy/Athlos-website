@@ -1,0 +1,157 @@
+{
+  "pages": {
+    "productsWios": {
+      "hero": {
+        "category": "Intraoral Dental",
+        "headline": "DC-Air<sup>&reg;</sup> Kabelloser Intraoral-Röntgensensor",
+        "tagline": "True Wireless® Intraoral-Röntgenbildgebung mit Direktkonversion.<br>Gestochen scharfe Bilder. Ohne Kabel. Ohne Kompromisse.",
+        "ctaPrimary": "Distributor-Anfrage",
+        "ctaBrochure": "Broschüre herunterladen"
+      },
+      "overview": {
+        "eyebrow": "Überblick",
+        "headline": "Bewegungsfreiheit.<br>Ohne Kompromisse beim Bild.",
+        "body1": "DC-Air&reg; — der kabellose Intraoralsensor — vereint die Si-CMOS-Direktkonversions-Technologie von Athlos mit Bluetooth-5.0-Funkverbindung. Das Ergebnis ist ein True Wireless&reg; Intraoralsensor, der die Schärfe der Direktkonversion, den Komfort wie bei Speicherfolien und die Workflow-Geschwindigkeit eines kabelgebundenen Systems liefert — und das ohne Kabel.",
+        "body2": "Das DC-Air&reg;-System umfasst den Sensor, eine magnetische Dockingstation sowie das vollständige Zero Profile&reg;-Halterset — gemeinsam mit Zahnärzten und Athlos entwickelt für eine präzise intraorale Positionierung und hohen Patientenkomfort.",
+        "imageAlt": "DC-Air®-System — Dockingstation und Zero Profile-Halterset",
+        "specs": {
+          "technologyLabel": "Technologie",
+          "technologyValue": "Si-CMOS Direktkonversion",
+          "wirelessLabel": "Wireless",
+          "wirelessValue": "Bluetooth 5.0 (BLE 5.0)",
+          "activeAreaLabel": "Aktive Fläche",
+          "activeAreaValue": "35,1 × 24,7 mm²",
+          "lpRealLabel": "LP real",
+          "lpRealValue": "19",
+          "lpTheoreticalLabel": "LP theoretisch",
+          "lpTheoreticalValue": "38",
+          "mtfLabel": "MTF",
+          "mtfValue": "&gt;70% @ 5 lp, &gt;40% @ 10 lp"
+        }
+      },
+      "features": {
+        "eyebrow": "Merkmale",
+        "headline": "Für die Praxis gebaut. Für Präzision konstruiert.",
+        "cards": {
+          "wireless": {
+            "title": "True Wireless® Workflow",
+            "body": "Kein intraorales Kabel. Bluetooth-5.0-Funkverbindung vom Sensor zur Dockingstation und zum PC. Sensor-Reichweite bis zu 3 Metern. Reduziert die Belastung für Patienten und vereinfacht den klinischen Workflow."
+          },
+          "directConversion": {
+            "title": "Bildgebung mit Direktkonversion",
+            "body": "Die Si-CMOS-Direktkonversions-Technologie wandelt Röntgenphotonen direkt in ein Signal um — ohne den Zwischenschritt des Szintillators. Das Ergebnis: feinere Details, besserer Kontrast und gleichmäßigere Bilder."
+          },
+          "zeroProfile": {
+            "title": "Zero Profile®-Halter",
+            "body": "Das speziell entwickelte Zero Profile®-Halterset umfasst Halter für Front-, Seitenzahn-, Bissflügel-, Endodontie- und Aufbissaufnahmen. Es richtet den Sensor präzise aus, ohne dass die Winkelung vom Kabel abhängt — ausgelegt auf Patientenkomfort und reproduzierbare Positionierung."
+          },
+          "battery": {
+            "title": "Akku &amp; Sicherheit",
+            "body": "Bis zu 300 Röntgenaufnahmen pro Batterieladung. Der Sicherheitsspeicher im Sensor sichert ein Bild. Dynamische Selbstkalibrierung bei jeder Aufnahme. Wiederaufladbarer Lithium-Ionen-Akku. Magnetisches Docking für zuverlässiges Laden."
+          },
+          "ip67": {
+            "title": "IP67 &amp; Robustheit",
+            "body": "Erweiterter IP67-Schutz. Ultraschallverschweißtes PPSU-Gehäuse — ein Material mit außergewöhnlicher Hydrolysebeständigkeit und Stoßfestigkeit. Konstruiert für die anspruchsvollen Anforderungen des täglichen Praxisbetriebs."
+          },
+          "software": {
+            "title": "Breite Softwarekompatibilität",
+            "body": "Das TWAIN-Modul für DC-Air&reg; integriert sich nahtlos in Dentrix Ascend, Eaglesoft, Open Dental, Dexis, TigerView, Romexis, Acteon, Apteryx, Dexis, XDR Radiology und viele weitere TWAIN-fähige Bildgebungsplattformen."
+          }
+        }
+      },
+      "video": {
+        "eyebrow": "DC-Air&reg; in Aktion erleben",
+        "headline": "Die Einführung in den DC-Air&reg;.",
+        "body": "Ein kurzer Überblick über den DC-Air&reg;, den True Wireless&reg; Intraoralsensor — wie er funktioniert, was ihn auszeichnet und was er für die moderne Zahnarztpraxis leistet.",
+        "iframeTitle": "Einführung in den DC-Air&reg; kabellosen Intraoralsensor"
+      },
+      "gallery": {
+        "eyebrow": "Bildqualität",
+        "headline": "Klinische Röntgenaufnahmen.",
+        "tabs": {
+          "anterior": "Frontzähne",
+          "posterior": "Seitenzähne",
+          "bitewings": "Bissflügel"
+        },
+        "alts": {
+          "anterior1": "DC-Air Frontzahn-Röntgenaufnahme 1",
+          "anterior2": "DC-Air Frontzahn-Röntgenaufnahme 2",
+          "anterior3": "DC-Air Frontzahn-Röntgenaufnahme 3",
+          "anterior4": "DC-Air Frontzahn-Röntgenaufnahme 4",
+          "anterior5": "DC-Air Frontzahn-Röntgenaufnahme 5",
+          "anterior6": "DC-Air Frontzahn-Röntgenaufnahme 6",
+          "anterior7": "DC-Air Frontzahn-Röntgenaufnahme 7",
+          "anterior8": "DC-Air Frontzahn-Röntgenaufnahme 8",
+          "posterior1": "DC-Air Seitenzahn-Röntgenaufnahme 1",
+          "posterior2": "DC-Air Seitenzahn-Röntgenaufnahme 2",
+          "posterior3": "DC-Air Seitenzahn-Röntgenaufnahme 3",
+          "posterior4": "DC-Air Seitenzahn-Röntgenaufnahme 4",
+          "posterior5": "DC-Air Seitenzahn-Röntgenaufnahme 5",
+          "posterior6": "DC-Air Seitenzahn-Röntgenaufnahme 6",
+          "posterior7": "DC-Air Seitenzahn-Röntgenaufnahme 7",
+          "posterior8": "DC-Air Seitenzahn-Röntgenaufnahme 8",
+          "bw1": "DC-Air Bissflügel-Röntgenaufnahme 1",
+          "bw2": "DC-Air Bissflügel-Röntgenaufnahme 2",
+          "bw3": "DC-Air Bissflügel-Röntgenaufnahme 3",
+          "bw4": "DC-Air Bissflügel-Röntgenaufnahme 4",
+          "bw5": "DC-Air Bissflügel-Röntgenaufnahme 5",
+          "bw6": "DC-Air Bissflügel-Röntgenaufnahme 6",
+          "bw7": "DC-Air Bissflügel-Röntgenaufnahme 7",
+          "bw8": "DC-Air Bissflügel-Röntgenaufnahme 8"
+        }
+      },
+      "awards": {
+        "eyebrow": "Auszeichnungen",
+        "headline": "Preisgekrönte Technologie.",
+        "body": "DC-Air&reg; und die zugrunde liegende Direktkonversions-Technologie wurden von führenden Auszeichnungsprogrammen der Dental- und Healthcare-Branche gewürdigt.",
+        "items": {
+          "da2024Alt": "Dental Advisor 2024 Top Award Winner",
+          "da2024Label": "Dental Advisor 2024 Top Award Winner",
+          "da2025Alt": "Dental Advisor 2025 Top Award Winner",
+          "da2025Label": "Dental Advisor 2025 Top Award Winner",
+          "dpsBestAlt": "Dental Product Shopper Best Product",
+          "dpsBestLabel": "Dental Product Shopper Best Product",
+          "bestProduct2026Alt": "Best Product Award 2026",
+          "bestProduct2026Label": "Best Product Award 2026"
+        }
+      },
+      "clinicians": {
+        "eyebrow": "Unabhängige Bewertung",
+        "headline": "Bewertet von Clinicians Report.",
+        "body": "Clinicians Report ist eine unabhängige Stiftung zur Bewertung von Dentalprodukten, der Behandler weltweit vertrauen. Im Jahr 2022 wurde DC-Air&reg; in zwei eigenen CR-Bewertungen geprüft und hervorgehoben — einem First Look im Januar und einer vergleichenden Beurteilung, die im März veröffentlicht wurde.",
+        "callout": "In der vergleichenden Bewertung vom März 2022 stellten Wissenschaftler und Kliniker von CR fest, dass Röntgenaufnahmen mit DC-Air&reg; im Vergleich zu herkömmlichen CMOS-Sensoren eine verbesserte Klarheit und feinere Details zeigten — und beschrieben die Direktkonversions-Technologie als bedeutenden Fortschritt.",
+        "highlights": {
+          "h1": "Hohe Auflösung und exzellenter Dynamikumfang wurden in der CR-First-Look-Bewertung hervorgehoben.",
+          "h2": "Kabellose Bildübertragung und -verarbeitung in rund 6–8 Sekunden beobachtet — der klinische Workflow bleibt schnell, ganz ohne Kabel.",
+          "h3": "Behandler empfanden den Sensor als unkompliziert in der Anwendung und komfortabler als herkömmliche kabelgebundene Sensoren.",
+          "h4": "Vorgestellt in einer eigenen CR-Veröffentlichung im März 2022: <em>&ldquo;DC-Air&reg;: Wireless Intraoral Sensor with Improved Image Quality.&rdquo;</em>"
+        },
+        "footnote": "Clinicians Report wird von der CR Foundation herausgegeben, einer unabhängigen, gemeinnützigen Organisation zur Prüfung von Dentalprodukten. Referenzierte Bewertungen: CR First Look, Januar 2022; CR Comparative Evaluation, März 2022."
+      },
+      "brochure": {
+        "title": "DC-Air&reg; Produktbroschüre",
+        "subtitle": "Vollständige Spezifikationen, Funktionen und Systemüberblick — PDF",
+        "button": "PDF herunterladen"
+      },
+      "cta": {
+        "headline": "Werden Sie DC-Air&reg;-Vertriebspartner.",
+        "body": "DC-Air&reg; ist über autorisierte Fachhändler und Distributoren für Dentalbildgebung erhältlich. Wenn Sie ein Vertriebsunternehmen oder ein Händlernetz für Dentalprodukte vertreten, freuen wir uns auf Ihre Kontaktaufnahme.",
+        "regulatory": "Der DC-Air&reg; ist FDA-510(k)-zugelassen; die CE-Registrierung ist in Vorbereitung. Das Produkt ist in Europa noch nicht im Verkauf.",
+        "oem": "Für Anfragen zu OEM-Lizenzierung oder Technologieintegration nutzen Sie bitte denselben Kontaktweg.",
+        "contactBtn": "Athlos kontaktieren",
+        "brochureBtn": "Broschüre herunterladen"
+      },
+      "lightbox": {
+        "ariaLabel": "Bildbetrachter",
+        "closeLabel": "Schließen",
+        "imgAlt": "Vergrößerte Röntgenaufnahme"
+      },
+      "lastUpdated": {
+        "label": "Zuletzt aktualisiert:",
+        "datetime": "2026-04-15",
+        "date": "15. April 2026"
+      },
+      "salesNote": "In den USA wird das Produkt von Freedom Technologies Group LLC vertrieben, in Kanada von SYNCA Inc."
+    }
+  }
+}

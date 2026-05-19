@@ -1,0 +1,145 @@
+{
+  "pages": {
+    "productsUfs": {
+      "hero": {
+        "category": "Dental · Medizin · Industrie",
+        "headline": "Ultra-Fast<br>Scanning Sensor",
+        "tagline": "Ultraschneller Zeilenscansensor mit Direktkonversion für hochsensible Röntgenbildgebung bei hoher Geschwindigkeit.",
+        "ctaExplore": "Ultra-Fast Scanning Sensor entdecken",
+        "ctaDiscuss": "Integration besprechen",
+        "imageAlt": "Ultra-Fast Scanning Sensor – Detailansicht der Leiterplatte"
+      },
+      "overview": {
+        "eyebrow": "Überblick",
+        "headline": "Ein Sensor.<br>Vielfältige Anwendungen.",
+        "body1": "UFS ist ein vielseitiger Zeilenscansensor mit Direktkonversion, konzipiert für dentales Panoramaröntgen und Fernröntgenseitenbilder, industrielle Inline-Inspektion sowie automatisierte Röntgenprüfsysteme. Er basiert auf CdTe-Detektormaterial, das bump-gebondet auf einem vollständig kundenspezifischen ASIC sitzt — eine Konfiguration, die in allen unterstützten Anwendungen eine außergewöhnliche Bildgebungsleistung liefert.",
+        "body2": "Das Ergebnis ist ein Sensor mit sehr hoher Schärfe und Auflösung, exzellenter Empfindlichkeit und Kontrastauflösung, Einzelphotonen-Empfindlichkeit und einem extrem weiten Dynamikumfang. UFS wird über Gigabit Ethernet angebunden und unterstützt sowohl Frame-Modus als auch TDI-Betrieb, wodurch er für ein breites Spektrum an Systemarchitekturen geeignet ist.",
+        "body3": "Alle UFS-Produkte enthalten das Athlos SDK und die API; die Integration wird per DLL unterstützt.",
+        "sdkCallout": {
+          "title": "Athlos SDK &amp; API",
+          "body": "Alle UFS-Produkte enthalten das Athlos SDK &amp; die API. Die Integration wird per DLL unterstützt. Eine grafische Auswerteoberfläche und eine umfangreiche Filterbibliothek zur Nachbearbeitung sind enthalten."
+        },
+        "imageAlt": "Athlos UFS Scanner – Produktansicht auf weißem Hintergrund"
+      },
+      "highlights": {
+        "eyebrow": "Hauptmerkmale",
+        "headline": "Präzision in jeder Dimension.",
+        "cards": {
+          "directConversion": {
+            "title": "Direktkonversion CdTe-CMOS",
+            "body": "CdTe-Detektormaterial, bump-gebondet auf einem proprietären, vollständig kundenspezifischen ASIC. Röntgenstrahlung wird direkt in Signal umgewandelt — ohne Szintillator, ohne zwischengeschalteten Energieverlust."
+          },
+          "ultraFast": {
+            "title": "Ultraschnelles Scannen",
+            "body": "Ausgelegt auf sehr hohe Scangeschwindigkeiten — 30 m/min bei 100 µm, 240 m/min bei 200 µm und bis zu 1.920 m/min bei 400 µm Auflösung."
+          },
+          "dynamicRange": {
+            "title": "Weiter Dynamikumfang",
+            "body": "16 Bit Dynamikumfang sichern eine gleichbleibende Bildgebungsleistung bei sehr unterschiedlichen Schwächungsverhältnissen — entscheidend für dentale wie industrielle Anwendungen."
+          },
+          "singlePhoton": {
+            "title": "Einzelphotonen-Empfindlichkeit",
+            "body": "Einzelphotonen-empfindlicher TDI-Betrieb ermöglicht hochwertige Bildgebung bei reduzierter Dosis — ein spürbarer Vorteil sowohl in dentalen als auch in Inspektions-Workflows."
+          },
+          "gigE": {
+            "title": "Gigabit Ethernet",
+            "body": "Standardisierte GigE-Schnittstelle. Plug-and-Ready-Positionierung, einfache Integration in Systemarchitekturen. Frame-Modus und TDI-Modus werden unterstützt."
+          },
+          "sdk": {
+            "title": "SDK &amp; API bereit",
+            "body": "Vollständiges Athlos SDK mit C/C++-API, Evaluierungs-GUI und Filterbibliothek zur Nachbearbeitung. Integrationsunterstützung für OEM- und Systemintegrator-Kunden."
+          }
+        }
+      },
+      "models": {
+        "eyebrow": "Produktfamilie",
+        "headline": "Drei Modelle.<br>Wählbare aktive Breiten.",
+        "body1": "Die UFS-Familie umfasst drei Modellgrößen — UFS150, UFS225 und UFS460 — mit aktiven Breiten, die je nach Anwendungsanforderung von 3,2 mm bis 5,2 mm wählbar sind.",
+        "body2": "Das modulare Design des UFS erlaubt aktive Längen von 7,5 cm bis 10 m. Kontaktieren Sie uns für weitere Informationen und kundenspezifische Angebote.",
+        "imageAlt": "Ultra-Fast Scanning Sensor Familie – Leiterplatte im Studioformat",
+        "cards": {
+          "ufs150": {
+            "name": "UFS150",
+            "ref": "CdTe-Direktkonversion · ASIC-Auslese",
+            "body": "15 cm aktive Länge. Geeignet für dentales Panoramaröntgen.",
+            "width1": "3,2 mm",
+            "width2": "3,6 mm",
+            "width3": "4,0 mm"
+          },
+          "ufs225": {
+            "name": "UFS225",
+            "ref": "CdTe-Direktkonversion · ASIC-Auslese",
+            "body": "23 cm aktive Länge. Geeignet für dentale Fernröntgenseitenbilder und industrielle Anwendungen.",
+            "width1": "3,6 mm",
+            "width2": "4,0 mm",
+            "width3": "4,4 mm"
+          },
+          "ufs460": {
+            "name": "UFS460",
+            "ref": "CdTe-Direktkonversion · ASIC-Auslese",
+            "body": "46 cm aktive Länge. Geeignet für medizinische und industrielle Anwendungen.",
+            "width1": "4,4 mm",
+            "width2": "5,2 mm"
+          },
+          "ufsxxx": {
+            "name": "UFSxxx",
+            "ref": "Kundenspezifisch angepasst",
+            "body": "Der UFS besteht aus Modulen; jedes Modul umfasst drei Hybride von je 25,6 mm Länge. Ein Modul bietet 76,8 mm aktive Länge. Welche aktive Länge Ihre Anwendung auch erfordert — Athlos kann sie liefern."
+          }
+        }
+      },
+      "performance": {
+        "eyebrow": "Scangeschwindigkeit",
+        "headline": "Geschwindigkeit und Auflösung<br>auf demselben Sensor.",
+        "cards": {
+          "res100": {
+            "resolution": "Bei 100 <span style=\"text-transform:none\">µm</span>",
+            "speed": "30",
+            "unit": "m/min Scangeschwindigkeit"
+          },
+          "res200": {
+            "resolution": "Bei 200 <span style=\"text-transform:none\">µm</span>",
+            "speed": "240",
+            "unit": "m/min Scangeschwindigkeit"
+          },
+          "res400": {
+            "resolution": "Bei 400 <span style=\"text-transform:none\">µm</span>",
+            "speed": "1.920",
+            "unit": "m/min — maximaler Durchsatz"
+          }
+        }
+      },
+      "gallery": {
+        "eyebrow": "Bildqualität",
+        "headline": "Bildbeispiele.",
+        "tabs": {
+          "panoramic": "Panorama",
+          "cephalo": "Fernröntgen"
+        },
+        "images": {
+          "panoramic1Alt": "Ultra-Fast Scanning Sensor Panorama-Röntgenaufnahme 1",
+          "panoramic2Alt": "Ultra-Fast Scanning Sensor Panorama-Röntgenaufnahme 2",
+          "cephalo1Alt": "Ultra-Fast Scanning Sensor Fernröntgenseitenbild 1",
+          "cephalo2Alt": "Ultra-Fast Scanning Sensor Fernröntgenseitenbild 2"
+        },
+        "lightbox": {
+          "ariaLabel": "Bildbetrachter",
+          "closeAria": "Schließen",
+          "imgAlt": "Vergrößerte Röntgenaufnahme"
+        }
+      },
+      "cta": {
+        "eyebrow": "Kontakt aufnehmen",
+        "headline": "Sprechen Sie mit Athlos über die Integration des Ultra-Fast Scanning Sensor.",
+        "body": "Ob Sie den Ultra-Fast Scanning Sensor in ein neues Bildgebungssystem integrieren oder ihn für eine bestehende Plattform evaluieren — das Athlos-Team unterstützt Sie von der Spezifikation bis zur Integration.",
+        "buttonContact": "Athlos kontaktieren",
+        "buttonAll": "Alle Produkte"
+      },
+      "lastUpdated": {
+        "label": "Zuletzt aktualisiert:",
+        "datetime": "2026-04-15",
+        "date": "15. April 2026"
+      }
+    }
+  }
+}

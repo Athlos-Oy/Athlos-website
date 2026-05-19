@@ -1,0 +1,40 @@
+{
+  "jsonld": {
+    "about": {
+      "person": {
+        "name": "Konstantinos Spartiotis",
+        "jobTitle": "Gründer und CEO, Athlos Oy",
+        "description": "Gründer und CEO von Athlos Oy. Pionier der Direktkonversions-CdTe-Röntgenbildgebung seit 1993. Gründer von Simage Oy (1993) und Ajat Oy (2001, später Varex Imaging Finland). Hält Dutzende Patente in den Bereichen Direktkonversion, CdTe-Kontakttechnologie und Photonenzählung.",
+        "knowsAbout": [
+          "Direktkonversions-Röntgenbildgebung",
+          "CdTe-Sensortechnologie",
+          "Photonenzählende Detektoren",
+          "CMOS-Auslese-ASICs",
+          "Dentale Panorama- und Fernröntgenbildgebung"
+        ]
+      },
+      "faq": {
+        "q1": {
+          "question": "Wann wurde Athlos gegründet, und worin liegt das Erbe des Unternehmens?",
+          "answer": "Athlos führt eine Linie der Direktkonversions-Röntgenbildgebung fort, die 1993 begann. Gründer Konstantinos Spartiotis gründete Simage Oy 1993 nach seiner Tätigkeit am CERN und seiner Promotion an der Johns Hopkins University und gründete später Ajat Oy im Jahr 2001. Ajat entwickelte sich zum weltweiten Standard für dentale Panorama- und Fernröntgenbildgebung auf Basis von Direktkonversions-CdTe-CMOS, bevor das Unternehmen von XCounter und anschließend von Varex Imaging übernommen wurde."
+        },
+        "q2": {
+          "question": "Wer ist Konstantinos Spartiotis?",
+          "answer": "Konstantinos Spartiotis ist Gründer und CEO von Athlos Oy. Er gründete Simage Oy 1993 und Ajat Oy 2001 und gilt als Pionier der Direktkonversions-CdTe-Röntgenbildgebung. Er hält Dutzende Patente in den Bereichen Direktkonversion, CdTe-Kontakttechnologie und Photonenzählung. Zuvor war er am CERN tätig und promovierte an der Johns Hopkins University."
+        },
+        "q3": {
+          "question": "Wo fertigt Athlos seine Sensoren?",
+          "answer": "Athlos fertigt in Espoo, Finnland — im eigenen Haus und im Reinraum von VTT Micronova, einer der fortschrittlichsten Nanofabrikationsanlagen Europas. Dadurch hat Athlos die direkte Kontrolle über die gesamte Detektorkette: CMOS-Wafer-Bumping, Flip-Chip-Bonden, Detektormontage und Charakterisierung."
+        },
+        "q4": {
+          "question": "Über welche Zertifizierungen verfügt Athlos?",
+          "answer": "Athlos betreibt ein nach ISO 13485:2016 zertifiziertes Qualitätsmanagementsystem. Der kabellose Intraoralsensor DC-Air® ist FDA-510(k)-zugelassen für die dentale intraorale Röntgenbildgebung."
+        }
+      },
+      "breadcrumbs": {
+        "home": "Start",
+        "about": "Über uns"
+      }
+    }
+  }
+}
