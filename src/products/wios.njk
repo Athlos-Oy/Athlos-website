@@ -32,6 +32,7 @@ jsonldHeadAfterAnalyticsPartials:
   - partials/product-jsonld/wios-3.njk
 ---
 {% include "partials/product-subnav.njk" %}
+{%- set wiosBrochure %}/downloads/brochure-wios{% if lang != "en" %}-{{ lang }}{% endif %}.pdf{% endset %}
 
   <main>
 
@@ -46,7 +47,7 @@ jsonldHeadAfterAnalyticsPartials:
         <p class="product-hero-tagline">{{ "pages.productsWios.hero.tagline" | t }}</p>
         <div class="product-hero-actions">
           <a href="#contact" class="btn btn-primary">{{ "pages.productsWios.hero.ctaPrimary" | t }}</a>
-          <a href="/downloads/brochure-wios.pdf" class="btn btn-outline" target="_blank" style="border-color:rgba(255,255,255,0.3);">{{ "pages.productsWios.hero.ctaBrochure" | t }}</a>
+          <a href="{{ wiosBrochure }}" class="btn btn-outline" target="_blank" style="border-color:rgba(255,255,255,0.3);">{{ "pages.productsWios.hero.ctaBrochure" | t }}</a>
         </div>
       </div>
     </section>
@@ -344,7 +345,7 @@ jsonldHeadAfterAnalyticsPartials:
             <strong>{{ "pages.productsWios.brochure.title" | t }}</strong>
             <span>{{ "pages.productsWios.brochure.subtitle" | t }}</span>
           </div>
-          <a href="/downloads/brochure-wios.pdf" class="btn btn-secondary" target="_blank" style="white-space:nowrap; flex-shrink:0;">{{ "pages.productsWios.brochure.button" | t }}</a>
+          <a href="{{ wiosBrochure }}" class="btn btn-secondary" target="_blank" style="white-space:nowrap; flex-shrink:0;">{{ "pages.productsWios.brochure.button" | t }}</a>
         </div>
       </div>
     </section>
@@ -359,7 +360,7 @@ jsonldHeadAfterAnalyticsPartials:
           <p class="reveal" style="font-size:var(--text-sm); color:rgba(255,255,255,0.55); margin-top:0.5rem;">{{ "pages.productsWios.cta.oem" | t }}</p>
           <div class="reveal" style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
             <a href="../contact.html" class="btn btn-primary btn-large">{{ "pages.productsWios.cta.contactBtn" | t }}</a>
-            <a href="/downloads/brochure-wios.pdf" class="btn btn-outline" target="_blank" style="border-color:rgba(255,255,255,0.3);">{{ "pages.productsWios.cta.brochureBtn" | t }}</a>
+            <a href="{{ wiosBrochure }}" class="btn btn-outline" target="_blank" style="border-color:rgba(255,255,255,0.3);">{{ "pages.productsWios.cta.brochureBtn" | t }}</a>
           </div>
         </div>
       </div>
