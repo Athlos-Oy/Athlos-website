@@ -32,7 +32,16 @@ jsonldHeadAfterAnalyticsPartials:
   - partials/product-jsonld/wios-3.njk
 ---
 {% include "partials/product-subnav.njk" %}
-{%- set wiosBrochure %}/downloads/brochure-wios{% if lang != "en" %}-{{ lang }}{% endif %}.pdf{% endset %}
+{#- DC-Air brochure download, one PDF per locale. Filenames are the
+    originals as supplied (spaces %20-encoded); en keeps the existing
+    repo asset. Files live in downloads/ (passthrough-copied). -#}
+{%- set wiosBrochures = {
+  "en": "/downloads/brochure-wios.pdf",
+  "de": "/downloads/Brochure%20-%20DC-Air_German.pdf",
+  "it": "/downloads/Brochure%20-%20DC-Air_Italian.pdf",
+  "es": "/downloads/Brochure%20-%20DC-Air_Spanish.pdf"
+} -%}
+{%- set wiosBrochure = wiosBrochures[lang] or wiosBrochures["en"] -%}
 
   <main>
 
