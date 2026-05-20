@@ -1,0 +1,145 @@
+{
+  "pages": {
+    "productsUfs": {
+      "hero": {
+        "category": "Dentaire · Médical · Industriel",
+        "headline": "Ultra-Fast<br>Scanning Sensor",
+        "tagline": "Capteur à balayage à conversion directe ultra-rapide pour une imagerie par rayons X à haute vitesse et haute sensibilité.",
+        "ctaExplore": "Découvrir Ultra-Fast Scanning Sensor",
+        "ctaDiscuss": "Discuter de l'intégration",
+        "imageAlt": "Ultra-Fast Scanning Sensor – vue détaillée de la carte électronique"
+      },
+      "overview": {
+        "eyebrow": "Présentation",
+        "headline": "Un seul capteur.<br>De multiples applications.",
+        "body1": "L'UFS est un capteur linéaire à balayage à conversion directe polyvalent, conçu pour l'imagerie dentaire panoramique et céphalométrique, l'inspection industrielle en ligne et les systèmes automatisés d'inspection par rayons X. Il repose sur un matériau détecteur CdTe assemblé par bump bonding à un ASIC entièrement personnalisé — une configuration qui offre des performances d'imagerie exceptionnelles dans toutes les applications prises en charge.",
+        "body2": "Le résultat est un capteur offrant une très grande netteté et résolution, une sensibilité et une résolution de contraste remarquables, des performances sensibles au photon unique et une plage dynamique extrêmement large. L'UFS se connecte via Gigabit Ethernet et prend en charge à la fois le mode trame et le fonctionnement TDI, ce qui le rend adapté à un large éventail d'architectures de systèmes.",
+        "body3": "Tous les produits UFS incluent le SDK et l'API Athlos, et l'intégration est prise en charge via DLL.",
+        "sdkCallout": {
+          "title": "SDK et API Athlos",
+          "body": "Tous les produits UFS incluent le SDK et l'API Athlos. L'intégration est prise en charge via DLL. Une interface graphique d'évaluation et une bibliothèque avancée de filtres de post-traitement sont incluses."
+        },
+        "imageAlt": "Scanner Athlos UFS – vue produit sur fond blanc"
+      },
+      "highlights": {
+        "eyebrow": "Caractéristiques principales",
+        "headline": "La précision dans chaque dimension.",
+        "cards": {
+          "directConversion": {
+            "title": "Conversion directe CdTe-CMOS",
+            "body": "Matériau détecteur CdTe assemblé par bump bonding à un ASIC propriétaire entièrement personnalisé. Les rayons X sont convertis directement en signal — sans scintillateur, sans perte d'énergie intermédiaire."
+          },
+          "ultraFast": {
+            "title": "Balayage ultra-rapide",
+            "body": "Conçu pour des vitesses de balayage très élevées — 30 m/min à 100 µm, 240 m/min à 200 µm et jusqu'à 1&nbsp;920 m/min à une résolution de 400 µm."
+          },
+          "dynamicRange": {
+            "title": "Large plage dynamique",
+            "body": "Une plage dynamique de 16 bits garantit des performances d'imagerie constantes dans des conditions d'atténuation très variées — un point essentiel pour les applications dentaires comme industrielles."
+          },
+          "singlePhoton": {
+            "title": "Sensibilité au photon unique",
+            "body": "Les performances TDI sensibles au photon unique permettent une imagerie de haute qualité à dose réduite — un avantage significatif dans les flux de travail dentaires comme d'inspection."
+          },
+          "gigE": {
+            "title": "Gigabit Ethernet",
+            "body": "Interface GigE standard. Positionnement prêt à l'emploi, intégration simple dans les architectures de systèmes. Mode trame et mode TDI tous deux pris en charge."
+          },
+          "sdk": {
+            "title": "SDK et API prêts à l'emploi",
+            "body": "SDK Athlos complet avec API C/C++, interface graphique d'évaluation et bibliothèque de filtres de post-traitement. Accompagnement à l'intégration pour les clients OEM et intégrateurs de systèmes."
+          }
+        }
+      },
+      "models": {
+        "eyebrow": "Famille de produits",
+        "headline": "Trois modèles.<br>Largeurs actives au choix.",
+        "body1": "La famille UFS compte trois tailles de modèles — UFS150, UFS225 et UFS460 — avec des largeurs actives sélectionnables de 3,2 mm à 5,2 mm selon les besoins de l'application.",
+        "body2": "La conception modulaire de l'UFS permet des longueurs actives de 7,5 cm jusqu'à 10 m. Contactez-nous pour plus d'informations et des offres sur mesure.",
+        "imageAlt": "Famille Ultra-Fast Scanning Sensor – vue studio de la carte électronique",
+        "cards": {
+          "ufs150": {
+            "name": "UFS150",
+            "ref": "Conversion directe CdTe · lecture ASIC",
+            "body": "Longueur active de 15 cm. Adapté à l'imagerie dentaire panoramique.",
+            "width1": "3,2 mm",
+            "width2": "3,6 mm",
+            "width3": "4,0 mm"
+          },
+          "ufs225": {
+            "name": "UFS225",
+            "ref": "Conversion directe CdTe · lecture ASIC",
+            "body": "Longueur active de 23 cm. Adapté aux applications dentaires céphalométriques et industrielles.",
+            "width1": "3,6 mm",
+            "width2": "4,0 mm",
+            "width3": "4,4 mm"
+          },
+          "ufs460": {
+            "name": "UFS460",
+            "ref": "Conversion directe CdTe · lecture ASIC",
+            "body": "Longueur active de 46 cm. Adapté aux applications médicales et industrielles.",
+            "width1": "4,4 mm",
+            "width2": "5,2 mm"
+          },
+          "ufsxxx": {
+            "name": "UFSxxx",
+            "ref": "Personnalisé selon les besoins du client",
+            "body": "L'UFS est constitué de modules, chaque module comprenant trois hybrides de 25,6 mm de long chacun. Un module offre 76,8 mm de longueur active. Quelle que soit la longueur active requise par votre application, Athlos peut la fournir."
+          }
+        }
+      },
+      "performance": {
+        "eyebrow": "Vitesse de balayage",
+        "headline": "Vitesse et résolution<br>sur un même capteur.",
+        "cards": {
+          "res100": {
+            "resolution": "À 100 <span style=\"text-transform:none\">µm</span>",
+            "speed": "30",
+            "unit": "m/min de vitesse de balayage"
+          },
+          "res200": {
+            "resolution": "À 200 <span style=\"text-transform:none\">µm</span>",
+            "speed": "240",
+            "unit": "m/min de vitesse de balayage"
+          },
+          "res400": {
+            "resolution": "À 400 <span style=\"text-transform:none\">µm</span>",
+            "speed": "1&nbsp;920",
+            "unit": "m/min — débit maximal"
+          }
+        }
+      },
+      "gallery": {
+        "eyebrow": "Qualité d'image",
+        "headline": "Exemples d'imagerie.",
+        "tabs": {
+          "panoramic": "Panoramique",
+          "cephalo": "Céphalo"
+        },
+        "images": {
+          "panoramic1Alt": "Radiographie panoramique Ultra-Fast Scanning Sensor 1",
+          "panoramic2Alt": "Radiographie panoramique Ultra-Fast Scanning Sensor 2",
+          "cephalo1Alt": "Radiographie céphalométrique Ultra-Fast Scanning Sensor 1",
+          "cephalo2Alt": "Radiographie céphalométrique Ultra-Fast Scanning Sensor 2"
+        },
+        "lightbox": {
+          "ariaLabel": "Visionneuse d'images",
+          "closeAria": "Fermer",
+          "imgAlt": "Image radiographique agrandie"
+        }
+      },
+      "cta": {
+        "eyebrow": "Nous contacter",
+        "headline": "Échangez avec Athlos sur l'intégration de l'Ultra-Fast Scanning Sensor.",
+        "body": "Que vous intégriez l'Ultra-Fast Scanning Sensor dans un nouveau système d'imagerie ou que vous l'évaluiez pour une plateforme existante, l'équipe Athlos peut vous accompagner, de la spécification à l'intégration.",
+        "buttonContact": "Contacter Athlos",
+        "buttonAll": "Tous les produits"
+      },
+      "lastUpdated": {
+        "label": "Dernière mise à jour&nbsp;:",
+        "datetime": "2026-04-15",
+        "date": "15 avril 2026"
+      }
+    }
+  }
+}

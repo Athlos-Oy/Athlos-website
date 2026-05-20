@@ -1,0 +1,157 @@
+{
+  "pages": {
+    "productsWios": {
+      "hero": {
+        "category": "Dentaire intraoral",
+        "headline": "DC-Air<sup>&reg;</sup> Capteur intraoral à rayons X sans fil",
+        "tagline": "Imagerie intraorale par rayons X à conversion directe True Wireless®.<br>Des images d'une parfaite netteté. Aucun fil. Aucun compromis.",
+        "ctaPrimary": "Demande de distribution",
+        "ctaBrochure": "Télécharger la brochure"
+      },
+      "overview": {
+        "eyebrow": "Présentation",
+        "headline": "Liberté de mouvement.<br>Aucun compromis sur l'image.",
+        "body1": "DC-Air&reg; — le capteur intraoral sans fil — associe la technologie de conversion directe Si-CMOS d'Athlos à une connectivité sans fil Bluetooth 5.0. Le résultat est un capteur intraoral True Wireless&reg; qui offre la netteté de la conversion directe, le confort des plaques au phosphore et la rapidité de flux de travail d'un système filaire — sans le câble.",
+        "body2": "Le système DC-Air&reg; comprend le capteur, une station d'accueil magnétique et le jeu complet de porte-capteurs Zero Profile&reg; — conçu par des praticiens en collaboration avec Athlos pour un positionnement intraoral précis et le confort du patient.",
+        "imageAlt": "Système DC-Air® — station d'accueil et jeu de porte-capteurs Zero Profile",
+        "specs": {
+          "technologyLabel": "Technologie",
+          "technologyValue": "Conversion directe Si-CMOS",
+          "wirelessLabel": "Sans fil",
+          "wirelessValue": "Bluetooth 5.0 (BLE 5.0)",
+          "activeAreaLabel": "Zone active",
+          "activeAreaValue": "35,1 × 24,7 mm²",
+          "lpRealLabel": "LP réelles",
+          "lpRealValue": "19",
+          "lpTheoreticalLabel": "LP théoriques",
+          "lpTheoreticalValue": "38",
+          "mtfLabel": "MTF",
+          "mtfValue": "&gt;70&nbsp;% à 5 lp, &gt;40&nbsp;% à 10 lp"
+        }
+      },
+      "features": {
+        "eyebrow": "Caractéristiques",
+        "headline": "Pensé pour le cabinet. Conçu pour la précision.",
+        "cards": {
+          "wireless": {
+            "title": "Flux de travail True Wireless®",
+            "body": "Aucun câble intraoral. Liaison sans fil Bluetooth 5.0 du capteur à la station d'accueil puis au PC. Portée du capteur jusqu'à 3 mètres. Réduit l'inconfort du patient et simplifie le flux de travail clinique."
+          },
+          "directConversion": {
+            "title": "Imagerie à conversion directe",
+            "body": "La technologie de conversion directe Si-CMOS convertit les photons X directement en signal — supprimant l'étape du scintillateur. Résultat&nbsp;: des détails plus nets, un meilleur contraste et des images plus régulières."
+          },
+          "zeroProfile": {
+            "title": "Porte-capteurs Zero Profile®",
+            "body": "Le jeu de porte-capteurs Zero Profile®, spécialement conçu, comprend les porte-capteurs antérieur, postérieur, rétrocoronaire, endodontique et occlusal. Il aligne précisément le capteur sans dépendre du câble pour l'angulation — pensé pour le confort du patient et un positionnement reproductible."
+          },
+          "battery": {
+            "title": "Batterie et sécurité",
+            "body": "Jusqu'à 300 radiographies par charge. Une mémoire de sécurité intégrée au capteur conserve une image. Auto-calibrage dynamique à chaque acquisition. Batterie lithium-ion rechargeable. Station d'accueil magnétique pour une recharge fiable."
+          },
+          "ip67": {
+            "title": "IP67 et durabilité",
+            "body": "Protection IP67 renforcée. Boîtier en PPSU assemblé par soudure ultrasonique — un matériau doté d'une stabilité hydrolytique et d'une résistance aux chocs exceptionnelles. Conçu pour les réalités exigeantes d'une utilisation clinique quotidienne."
+          },
+          "software": {
+            "title": "Large compatibilité logicielle",
+            "body": "Le module TWAIN du DC-Air&reg; s'intègre avec Dentrix Ascend, Eaglesoft, Open Dental, Dexis, TigerView, Romexis, Acteon, Apteryx, Dexis, XDR Radiology et bien d'autres plateformes d'imagerie compatibles TWAIN."
+          }
+        }
+      },
+      "video": {
+        "eyebrow": "Découvrez DC-Air&reg; en action",
+        "headline": "La présentation du DC-Air&reg;.",
+        "body": "Un bref aperçu du DC-Air&reg;, le capteur intraoral True Wireless&reg; — son fonctionnement, ce qui le distingue et ce qu'il apporte au cabinet dentaire moderne.",
+        "iframeTitle": "Présentation du capteur intraoral sans fil DC-Air&reg;"
+      },
+      "gallery": {
+        "eyebrow": "Qualité d'image",
+        "headline": "Radiographies cliniques.",
+        "tabs": {
+          "anterior": "Antérieur",
+          "posterior": "Postérieur",
+          "bitewings": "Rétrocoronaires"
+        },
+        "alts": {
+          "anterior1": "Radiographie antérieure DC-Air 1",
+          "anterior2": "Radiographie antérieure DC-Air 2",
+          "anterior3": "Radiographie antérieure DC-Air 3",
+          "anterior4": "Radiographie antérieure DC-Air 4",
+          "anterior5": "Radiographie antérieure DC-Air 5",
+          "anterior6": "Radiographie antérieure DC-Air 6",
+          "anterior7": "Radiographie antérieure DC-Air 7",
+          "anterior8": "Radiographie antérieure DC-Air 8",
+          "posterior1": "Radiographie postérieure DC-Air 1",
+          "posterior2": "Radiographie postérieure DC-Air 2",
+          "posterior3": "Radiographie postérieure DC-Air 3",
+          "posterior4": "Radiographie postérieure DC-Air 4",
+          "posterior5": "Radiographie postérieure DC-Air 5",
+          "posterior6": "Radiographie postérieure DC-Air 6",
+          "posterior7": "Radiographie postérieure DC-Air 7",
+          "posterior8": "Radiographie postérieure DC-Air 8",
+          "bw1": "Radiographie rétrocoronaire DC-Air 1",
+          "bw2": "Radiographie rétrocoronaire DC-Air 2",
+          "bw3": "Radiographie rétrocoronaire DC-Air 3",
+          "bw4": "Radiographie rétrocoronaire DC-Air 4",
+          "bw5": "Radiographie rétrocoronaire DC-Air 5",
+          "bw6": "Radiographie rétrocoronaire DC-Air 6",
+          "bw7": "Radiographie rétrocoronaire DC-Air 7",
+          "bw8": "Radiographie rétrocoronaire DC-Air 8"
+        }
+      },
+      "awards": {
+        "eyebrow": "Distinctions",
+        "headline": "Une technologie primée.",
+        "body": "DC-Air&reg; et la technologie de conversion directe qui le sous-tend ont été distingués par d'importants programmes de récompenses des secteurs dentaire et de la santé.",
+        "items": {
+          "da2024Alt": "Lauréat du Dental Advisor Top Award 2024",
+          "da2024Label": "Lauréat du Dental Advisor Top Award 2024",
+          "da2025Alt": "Lauréat du Dental Advisor Top Award 2025",
+          "da2025Label": "Lauréat du Dental Advisor Top Award 2025",
+          "dpsBestAlt": "Meilleur produit – Dental Product Shopper",
+          "dpsBestLabel": "Meilleur produit – Dental Product Shopper",
+          "bestProduct2026Alt": "Prix du meilleur produit 2026",
+          "bestProduct2026Label": "Prix du meilleur produit 2026"
+        }
+      },
+      "clinicians": {
+        "eyebrow": "Évaluation indépendante",
+        "headline": "Évalué par Clinicians Report.",
+        "body": "Clinicians Report est une fondation indépendante d'évaluation de produits dentaires, à laquelle les praticiens font confiance dans le monde entier. En 2022, DC-Air&reg; a fait l'objet de deux évaluations CR dédiées — un First Look en janvier et une évaluation comparative publiée en mars.",
+        "callout": "Lors de l'évaluation comparative de mars 2022, les scientifiques et cliniciens de CR ont observé que les radiographies réalisées avec DC-Air&reg; présentaient une clarté et des détails subtils améliorés par rapport aux capteurs CMOS classiques — et ont décrit la technologie de conversion directe comme une avancée significative.",
+        "highlights": {
+          "h1": "Haute résolution et excellente plage dynamique mises en avant dans l'évaluation CR First Look.",
+          "h2": "Transfert et traitement d'image sans fil observés en 6 à 8 secondes environ — préservant la rapidité du flux de travail clinique sans câble.",
+          "h3": "Les cliniciens ont trouvé le capteur facile à utiliser et plus confortable que les capteurs filaires classiques.",
+          "h4": "Mis en avant dans une publication CR dédiée de mars 2022&nbsp;: <em>«&nbsp;DC-Air&reg;: Wireless Intraoral Sensor with Improved Image Quality.&nbsp;»</em>"
+        },
+        "footnote": "Clinicians Report est publié par CR Foundation, une organisation indépendante et à but non lucratif de test de produits dentaires. Évaluations citées&nbsp;: CR First Look, janvier 2022&nbsp;; CR Comparative Evaluation, mars 2022."
+      },
+      "brochure": {
+        "title": "Brochure produit DC-Air&reg;",
+        "subtitle": "Spécifications complètes, caractéristiques et présentation du système — PDF",
+        "button": "Télécharger le PDF"
+      },
+      "cta": {
+        "headline": "Devenez partenaire de distribution DC-Air&reg;.",
+        "body": "DC-Air&reg; est disponible auprès de revendeurs et distributeurs agréés en imagerie dentaire. Si vous représentez une entreprise de distribution de produits dentaires ou un réseau de revendeurs, nous serions ravis d'échanger avec vous.",
+        "regulatory": "Le DC-Air&reg; est autorisé par la FDA au titre du 510(k), et l'enregistrement CE est en cours. Le produit n'est pas encore commercialisé en Europe.",
+        "oem": "Pour toute demande de licence OEM ou d'intégration technologique, veuillez nous contacter par le même canal.",
+        "contactBtn": "Contacter Athlos",
+        "brochureBtn": "Télécharger la brochure"
+      },
+      "lightbox": {
+        "ariaLabel": "Visionneuse d'images",
+        "closeLabel": "Fermer",
+        "imgAlt": "Image radiographique agrandie"
+      },
+      "lastUpdated": {
+        "label": "Dernière mise à jour&nbsp;:",
+        "datetime": "2026-04-15",
+        "date": "15 avril 2026"
+      },
+      "salesNote": "Aux États-Unis, le produit est commercialisé par Freedom Technologies Group LLC, et au Canada par SYNCA Inc."
+    }
+  }
+}

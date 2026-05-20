@@ -1,0 +1,37 @@
+{
+  "jsonld": {
+    "productsUfs": {
+      "product": {
+        "name": "Ultra-Fast Scanning Sensor",
+        "description": "Capteur linéaire à balayage CdTe-CMOS à conversion directe ultra-rapide pour l'imagerie par rayons X dentaire panoramique et céphalométrique, médicale et industrielle. Sensibilité au photon unique.",
+        "category": "Capteur linéaire à balayage pour rayons X"
+      },
+      "offer": {
+        "description": "Ventes aux fabricants OEM et aux intégrateurs de systèmes. Contactez Athlos pour un devis et un accompagnement à l'intégration."
+      },
+      "breadcrumbs": {
+        "home": "Accueil",
+        "products": "Produits",
+        "ufs": "Ultra-Fast Scanning Sensor"
+      },
+      "faq": {
+        "q1": {
+          "question": "Pour quelles applications l'Ultra-Fast Scanning Sensor est-il conçu ?",
+          "answer": "L'Ultra-Fast Scanning Sensor est conçu pour l'imagerie dentaire panoramique et céphalométrique, ainsi que pour les applications d'inspection médicale et industrielle par rayons X."
+        },
+        "q2": {
+          "question": "Quel matériau détecteur l'Ultra-Fast Scanning Sensor utilise-t-il ?",
+          "answer": "L'Ultra-Fast Scanning Sensor utilise la technologie de conversion directe CdTe-CMOS — du tellurure de cadmium assemblé par bump bonding à un ASIC de lecture CMOS entièrement personnalisé."
+        },
+        "q3": {
+          "question": "L'Ultra-Fast Scanning Sensor prend-il en charge la sensibilité au photon unique ?",
+          "answer": "Oui. L'architecture à conversion directe CdTe-CMOS permet une sensibilité au photon unique sur toute la plage de fonctionnement."
+        },
+        "q4": {
+          "question": "Combien de modèles de l'Ultra-Fast Scanning Sensor sont disponibles ?",
+          "answer": "Trois modèles sont disponibles, avec des largeurs actives sélectionnables pour répondre à des besoins d'application spécifiques."
+        }
+      }
+    }
+  }
+}

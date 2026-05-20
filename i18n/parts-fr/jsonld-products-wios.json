@@ -1,0 +1,56 @@
+{
+  "jsonld": {
+    "productsWios": {
+      "graph": {
+        "organization": {
+          "description": "Athlos Oy est une entreprise finlandaise de technologie d'imagerie par rayons X, spécialisée dans les capteurs à conversion directe CdTe-CMOS et Si-CMOS pour les applications dentaires, médicales et industrielles.",
+          "areaServed": "Monde entier",
+          "contactType": "sales"
+        },
+        "product": {
+          "description": "Capteur intraoral à rayons X à conversion directe entièrement sans fil. Technologie Si-CMOS, Bluetooth 5.0, porte-capteurs Zero Profile®. Autorisé par la FDA au titre du 510(k).",
+          "category": "Capteur dentaire à rayons X",
+          "awards": {
+            "a1": "Lauréat du Dental Advisor Top Award 2024",
+            "a2": "Lauréat du Dental Advisor Top Award 2025",
+            "a3": "Meilleur produit Dental Product Shopper",
+            "a4": "Prix du meilleur produit 2026"
+          },
+          "offer": {
+            "description": "Disponible auprès de revendeurs et distributeurs agréés en imagerie dentaire. Contactez Athlos pour un devis."
+          }
+        },
+        "breadcrumb": {
+          "home": "Accueil",
+          "products": "Produits"
+        }
+      },
+      "faq": {
+        "q1": {
+          "question": "DC-Air® est-il autorisé par la FDA ?",
+          "answer": "Oui. DC-Air® est autorisé par la FDA au titre du 510(k) pour l'imagerie dentaire intraorale par rayons X."
+        },
+        "q2": {
+          "question": "Comment DC-Air® se connecte-t-il sans fil ?",
+          "answer": "DC-Air® utilise une connectivité sans fil Bluetooth 5.0. Aucun dongle récepteur ni station d'accueil n'est requis."
+        },
+        "q3": {
+          "question": "Quelles tailles de capteur sont disponibles pour DC-Air® ?",
+          "answer": "DC-Air® est disponible en taille 1 et taille 2."
+        },
+        "q4": {
+          "question": "DC-Air® est-il disponible en Europe ?",
+          "answer": "L'enregistrement CE est actuellement en cours. DC-Air® n'est pas encore commercialisé en Europe."
+        },
+        "q5": {
+          "question": "Quelle technologie d'imagerie DC-Air® utilise-t-il ?",
+          "answer": "DC-Air® utilise la technologie de conversion directe Si-CMOS, qui convertit les photons X directement en signaux électriques sans couche intermédiaire de scintillateur — offrant des détails plus nets et un contraste plus élevé que les capteurs intraoraux classiques."
+        }
+      },
+      "video": {
+        "name": "Présentation du capteur intraoral sans fil DC-Air®",
+        "description": "Un bref aperçu du DC-Air®, le capteur intraoral True Wireless® — son fonctionnement, ce qui le distingue et ce qu'il apporte au cabinet dentaire moderne."
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "pages": {
+    "productsIndex": {
+      "hero": {
+        "eyebrow": "Gamme de produits",
+        "headline": "Produits d'imagerie par rayons X",
+        "intro": "Cinq gammes de produits et de services — toutes fondées sur la même précision de la conversion directe et des décennies d'expertise en imagerie par rayons X."
+      },
+      "cards": {
+        "wios": {
+          "market": "Dentaire intraoral",
+          "name": "DC-Air&reg;",
+          "desc": "Imagerie intraorale par rayons X à conversion directe entièrement sans fil pour les flux de travail dentaires modernes.",
+          "link": "Découvrir DC-Air&reg;"
+        },
+        "ufs": {
+          "market": "Dentaire · Médical · Industriel",
+          "name": "Ultra-Fast Scanning Sensor",
+          "desc": "Capteur à balayage ultra-rapide pour les applications où la vitesse, la sensibilité et la qualité d'image sont déterminantes.",
+          "link": "Découvrir Ultra-Fast Scanning Sensor"
+        },
+        "ufsIp67": {
+          "market": "Imagerie industrielle",
+          "name": "Industrial IP67 TDI",
+          "desc": "Détecteur à balayage ultra-rapide industriel et robuste, conçu pour les environnements d'inspection en ligne exigeants.",
+          "link": "Découvrir Industrial IP67 TDI"
+        },
+        "manufacturing": {
+          "market": "Fabrication de détecteurs",
+          "name": "Services de fabrication",
+          "desc": "Fabrication de capteurs de précision — du bumping CMOS et de l'assemblage flip chip jusqu'à l'assemblage complet des détecteurs.",
+          "link": "En savoir plus"
+        },
+        "software": {
+          "market": "Logiciels et intégration",
+          "name": "Produits logiciels",
+          "desc": "Module TWAIN, algorithmes de reconstruction, filtres de post-traitement et SDK pour l'intégration de l'imagerie par rayons X.",
+          "link": "En savoir plus"
+        }
+      },
+      "categories": {
+        "eyebrow": "Catégories de produits",
+        "headline": "Trouvez le produit adapté<br>à votre application.",
+        "dental": {
+          "label": "Dentaire",
+          "name": "Imagerie intraorale et<br>panoramique",
+          "items": {
+            "wios": "DC-Air&reg; – Capteur intraoral sans fil",
+            "ufs": "Ultra-Fast Scanning Sensor – Panoramique et céphalométrie dentaires"
+          }
+        },
+        "industrial": {
+          "label": "Industriel",
+          "name": "Inspection en ligne et<br>rayons X industriels",
+          "items": {
+            "ufsIp67": "Industrial IP67 TDI – Détecteur industriel robuste",
+            "ufs": "Ultra-Fast Scanning Sensor – Industriel et médical"
+          }
+        },
+        "services": {
+          "label": "Logiciels et fabrication",
+          "name": "Services et<br>intégration",
+          "items": {
+            "software": "Produits logiciels",
+            "twain": "Module TWAIN",
+            "filters": "Reconstruction et filtres",
+            "manufacturing": "Services de fabrication"
+          }
+        }
+      },
+      "cta": {
+        "eyebrow": "Nous contacter",
+        "headline": "Vous hésitez sur le produit adapté à votre application&nbsp;?",
+        "body": "Athlos collabore étroitement avec les fabricants OEM et les intégrateurs de systèmes pour identifier la bonne solution. Décrivez-nous vos besoins d'imagerie et nous vous aiderons à définir la meilleure approche.",
+        "button": "Contacter Athlos"
+      },
+      "lastUpdated": {
+        "label": "Dernière mise à jour&nbsp;:",
+        "datetime": "2026-04-15",
+        "date": "15 avril 2026"
+      }
+    }
+  }
+}

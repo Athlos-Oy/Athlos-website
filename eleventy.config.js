@@ -34,7 +34,8 @@ function deepMerge(a, b) {
 // - i18n/parts/<pageKey>.json each contribute keys (typically under pages.<key>)
 //   and are deep-merged on top of the base. Parts let parallel-edit workflows
 //   add per-page string sets without racing on a single file.
-// Phase 4 adds de.json + parts-de/ alongside; subsequent Phase 4 batches add it/es.
+// Phase 4 adds de.json + parts-de/ alongside; subsequent Phase 4 batches add
+// it/es. Phase 5 adds fr.json + parts-fr/.
 function loadLocale(lang) {
   let dict = JSON.parse(readFileSync(resolve(__dirname, `i18n/${lang}.json`), "utf8"));
   const partsDir = resolve(__dirname, `i18n/parts-${lang}`);
@@ -52,6 +53,7 @@ const I18N = {
   de: loadLocale("de"),
   it: loadLocale("it"),
   es: loadLocale("es"),
+  fr: loadLocale("fr"),
 };
 
 export default async function (eleventyConfig) {

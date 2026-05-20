@@ -1,0 +1,142 @@
+{
+  "pages": {
+    "privacy": {
+      "hero": {
+        "category": "Légal",
+        "headline": "Politique de confidentialité",
+        "sub": "Comment Athlos Oy collecte, traite et protège vos données personnelles."
+      },
+      "intro": {
+        "updatedLabel": "Mise à jour&nbsp;:",
+        "updatedDate": "15.04.2026",
+        "body1": "Dans la présente politique de confidentialité (la «&nbsp;Politique de confidentialité&nbsp;»), nous expliquons comment Athlos Oy («&nbsp;nous&nbsp;») collecte, traite et partage vos données personnelles, ainsi que les droits dont vous disposez à l'égard de vos données personnelles.",
+        "body2": "Lors du traitement des données personnelles, nous agissons toujours conformément à la législation applicable. En particulier, nous respectons le Règlement général sur la protection des données (2016/679)."
+      },
+      "controller": {
+        "heading": "Responsable du traitement",
+        "details": "Athlos Oy<br>\n          Numéro d'entreprise&nbsp;: 2752258-9<br>\n          Klovinpellontie 1–3, 02180 Espoo, Finland<br>\n          Contact&nbsp;: <a href=\"mailto:info@athlos.fi\" style=\"color:var(--gray-steel);\">info@athlos.fi</a>",
+        "subjectScope": "En tant que personne concernée, vous pouvez être un visiteur de notre site web, un représentant d'un client potentiel ou existant, ou un candidat à un emploi.",
+        "contextIntro": "La présente Politique de confidentialité concerne le traitement des données personnelles dans les contextes suivants&nbsp;:",
+        "items": [
+          "Les visites de <a href=\"https://athlos.fi/\" style=\"color:var(--gray-steel);\">https://athlos.fi/</a>",
+          "Le traitement des données personnelles des représentants de nos clients, fournisseurs et autres parties prenantes",
+          "Le traitement des données personnelles des candidats à un emploi"
+        ]
+      },
+      "purposes": {
+        "heading": "Finalités du traitement",
+        "intro": "Nous traitons vos données personnelles uniquement aux fins décrites dans la présente Politique de confidentialité et seulement dans la mesure nécessaire.",
+        "visitors": {
+          "label": "Visiteurs du site web&nbsp;:",
+          "items": [
+            "Permettre l'utilisation du site web et assurer sa sécurité et son bon fonctionnement",
+            "Améliorer notre site web grâce à la mesure d'audience",
+            "Analyse marketing et marketing personnalisé",
+            "Autres intérêts commerciaux légitimes"
+          ]
+        },
+        "representatives": {
+          "label": "Représentants&nbsp;:",
+          "items": [
+            "Gestion de la relation commerciale",
+            "Respect des exigences de la législation applicable",
+            "Garantir et contrôler la conformité",
+            "Facturation",
+            "Communiquer avec vous et avec des tiers",
+            "Envoi de communications marketing",
+            "Autres intérêts commerciaux légitimes"
+          ]
+        },
+        "applicants": {
+          "label": "Candidats à un emploi&nbsp;:",
+          "items": [
+            "Processus de recrutement",
+            "Besoins de recrutement futurs (avec consentement)"
+          ]
+        }
+      },
+      "categories": {
+        "heading": "Catégories de données personnelles",
+        "visitors": {
+          "label": "Visiteurs du site web&nbsp;:",
+          "items": [
+            "Informations liées à l'utilisation du site web (adresse IP, cookies, activité sur le site, heure de la visite)",
+            "Informations relatives au service client",
+            "Coordonnées (nom, adresse e-mail, numéro de téléphone)"
+          ]
+        },
+        "representatives": {
+          "label": "Représentants&nbsp;:",
+          "items": [
+            "Coordonnées",
+            "Éléments spécifiques liés à la relation commerciale",
+            "Contenu des communications échangées avec nous"
+          ]
+        },
+        "applicants": {
+          "label": "Candidats à un emploi&nbsp;:",
+          "items": [
+            "Informations de recrutement (nom, coordonnées, formation, expérience professionnelle, CV, prétentions salariales)"
+          ]
+        }
+      },
+      "legalBasis": {
+        "heading": "Base juridique",
+        "intro": "Le traitement des données personnelles repose sur les bases juridiques suivantes&nbsp;:",
+        "items": [
+          "L'intérêt légitime (article 6(1)(f) du RGPD) pour le fonctionnement du site web, la gestion de la relation commerciale, la conformité, la facturation, les communications et d'autres intérêts commerciaux",
+          "Le consentement (article 6(1)(a) du RGPD) pour les cookies non essentiels, l'analyse marketing et le recrutement futur",
+          "L'obligation légale (article 6(1)(c) du RGPD) pour la conformité fiscale et sociétaire",
+          "La nécessité contractuelle (article 6(1)(b) du RGPD) pour les processus de recrutement"
+        ]
+      },
+      "cookies": {
+        "heading": "Cookies et mesure d'audience",
+        "body1": "Nous pouvons utiliser des cookies et des balises sur notre site web. Un cookie est un fichier texte stocké sur votre navigateur ou votre appareil. Vous pouvez modifier les paramètres de votre navigateur relatifs aux cookies.",
+        "body2": "Nous utilisons <strong>Google Analytics 4</strong> (fourni par Google LLC, États-Unis) et <strong>Google Tag Manager</strong> pour collecter des données d'audience anonymes sur la manière dont les visiteurs utilisent notre site web — telles que les pages consultées, le temps passé, les sources de trafic et le type d'appareil. Ces données nous aident à améliorer le site web. Les cookies de mesure d'audience ne sont déposés qu'après que vous avez donné votre consentement explicite via le bandeau de cookies de notre site web.",
+        "body3": "Les données de Google Analytics sont traitées par Google LLC et peuvent être transférées vers des serveurs situés aux États-Unis dans le cadre des Clauses contractuelles types. Pour en savoir plus, consultez <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gray-steel);\">policies.google.com/privacy</a>. Vous pouvez vous y opposer à tout moment en cliquant sur «&nbsp;Refuser&nbsp;» dans le bandeau de cookies ou en utilisant le <a href=\"https://tools.google.com/dlpage/gaoptout\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gray-steel);\">module complémentaire de navigateur pour la désactivation de Google Analytics</a>."
+      },
+      "sources": {
+        "heading": "Sources des données personnelles",
+        "body": "Nous obtenons principalement vos données personnelles directement auprès de vous. Nous pouvons également collecter des données à partir de sources accessibles au public et automatiquement au moyen de cookies lorsque vous visitez notre site web."
+      },
+      "retention": {
+        "heading": "Conservation",
+        "body": "Nous conservons les données personnelles uniquement le temps nécessaire. Pour les visiteurs du site web, les données sont principalement traitées pendant votre visite. Les demandes de contact sont conservées pendant deux ans. Pour les représentants, les données sont conservées pendant la durée de la relation commerciale. Pour les candidats à un emploi, les données sont traitées pendant la durée du processus de recrutement."
+      },
+      "disclosures": {
+        "heading": "Communications et transferts",
+        "body": "Nous pouvons communiquer vos données personnelles à des prestataires de services de confiance, à des autorités publiques lorsque la loi l'exige, ou dans le cadre de réorganisations d'entreprise. Lors d'un transfert de données en dehors de l'UE/EEE, nous respectons la législation applicable, y compris les clauses contractuelles types (CCT) adoptées par la Commission européenne. Nous pouvons transférer des données personnelles vers les États-Unis d'Amérique."
+      },
+      "security": {
+        "heading": "Sécurité des données",
+        "intro": "Nous avons mis en place des mesures techniques et organisationnelles appropriées&nbsp;:",
+        "items": [
+          "L'accès aux données est limité au personnel autorisé",
+          "Les systèmes d'information sont protégés par des pare-feu et des mots de passe",
+          "Le personnel est formé au traitement approprié des données",
+          "Les fichiers électroniques font l'objet de sauvegardes régulières",
+          "La destruction des données personnelles est effectuée de manière sécurisée"
+        ]
+      },
+      "rights": {
+        "heading": "Vos droits",
+        "intro": "En vertu du RGPD, vous disposez des droits suivants&nbsp;:",
+        "items": [
+          "L'accès à vos données personnelles",
+          "La rectification des données inexactes",
+          "L'effacement de vos données personnelles («&nbsp;droit à l'oubli&nbsp;»)",
+          "La portabilité des données",
+          "L'opposition au traitement",
+          "La limitation du traitement",
+          "Le retrait du consentement"
+        ],
+        "contact": "Pour exercer vos droits, contactez-nous à l'adresse <a href=\"mailto:info@athlos.fi\" style=\"color:var(--gray-steel);\">info@athlos.fi</a>. Si vous estimez que notre traitement enfreint la législation sur la protection des données, vous avez le droit d'introduire une réclamation auprès d'une autorité de contrôle."
+      },
+      "changes": {
+        "heading": "Modifications",
+        "body": "Nous nous réservons le droit de modifier ou de mettre à jour la présente Politique de confidentialité si nécessaire."
+      }
+    }
+  }
+}

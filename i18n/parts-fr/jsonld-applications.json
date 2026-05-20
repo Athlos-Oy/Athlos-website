@@ -1,0 +1,32 @@
+{
+  "jsonld": {
+    "applications": {
+      "faq": {
+        "q1": {
+          "name": "Pour quelles applications les capteurs à rayons X Athlos sont-ils utilisés ?",
+          "answer": "Les capteurs à rayons X à conversion directe d'Athlos sont utilisés dans trois grands domaines d'application : l'imagerie dentaire (intraorale, panoramique et céphalométrique), l'imagerie médicale (OPG, céphalométrie et modalités médicales sur mesure exigeant une haute sensibilité à faible dose) et l'inspection industrielle (détection de corps étrangers dans l'agroalimentaire, contrôle des scellages et du remplissage dans le secteur pharmaceutique, contrôle des soudures dans le pétrole et le gaz, inspection des pièces moulées automobiles, inspection électronique des circuits imprimés et SMT, ainsi que CND et CT dans l'industrie lourde)."
+        },
+        "q2": {
+          "name": "Quel produit Athlos convient à l'imagerie dentaire intraorale ?",
+          "answer": "Le capteur intraoral sans fil DC-Air® — conversion directe Si-CMOS, sans fil Bluetooth 5.0, porte-capteurs Zero Profile®, jusqu'à 300 radiographies par charge de batterie, protection IP67 renforcée. Autorisé par la FDA au titre du 510(k)."
+        },
+        "q3": {
+          "name": "Quel produit Athlos convient à l'imagerie dentaire panoramique et céphalométrique ?",
+          "answer": "L'Ultra-Fast Scanning Sensor — un capteur linéaire à balayage à conversion directe CdTe-CMOS ultra-rapide pour l'imagerie dentaire panoramique et céphalométrique, ainsi que pour l'inspection médicale et industrielle par rayons X. Sensibilité au photon unique. Trois modèles avec largeurs actives au choix."
+        },
+        "q4": {
+          "name": "Quel produit Athlos convient à l'inspection industrielle en ligne ?",
+          "answer": "L'Industrial IP67 TDI — un détecteur à balayage TDI ultra-rapide certifié IP67 pour l'inspection en ligne continue. Aucun refroidissement actif requis. Utilisé pour la détection de corps étrangers dans l'agroalimentaire, le contrôle du remplissage et des scellages dans le secteur pharmaceutique, le contrôle des soudures dans le pétrole et le gaz, l'inspection des pièces moulées automobiles, la vérification des circuits imprimés et SMT, ainsi que le CND à grande échelle."
+        },
+        "q5": {
+          "name": "Pourquoi la conversion directe est-elle importante ?",
+          "answer": "Les capteurs à rayons X classiques convertissent les rayons X en lumière visible au moyen d'un scintillateur, puis détectent cette lumière. Chaque étape introduit du flou, une perte de signal et une dissipation d'énergie. La conversion directe convertit les photons X directement en charge électrique, en supprimant l'étape du scintillateur — ce qui donne des images plus nettes, un contraste plus élevé, une plage dynamique plus large et de meilleures performances à faible dose."
+        }
+      },
+      "breadcrumbs": {
+        "home": "Accueil",
+        "applications": "Applications"
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "jsonld": {
+    "productsSoftware": {
+      "graph": {
+        "organization": {
+          "description": "Athlos Oy est une entreprise finlandaise de technologie d'imagerie par rayons X, spécialisée dans les capteurs à conversion directe CdTe-CMOS et Si-CMOS pour les applications dentaires, médicales et industrielles.",
+          "areaServed": "Monde entier",
+          "contactType": "sales"
+        },
+        "breadcrumb": {
+          "home": "Accueil",
+          "products": "Produits",
+          "software": "Produits logiciels"
+        },
+        "service": {
+          "name": "Produits logiciels d'imagerie par rayons X",
+          "description": "Module TWAIN, bibliothèques d'algorithmes de reconstruction, filtres avancés de post-traitement et accompagnement à l'intégration SDK/API pour les systèmes d'imagerie par rayons X.",
+          "areaServed": "Monde entier",
+          "serviceType": "Licences logicielles"
+        }
+      },
+      "faq": {
+        "q1": {
+          "question": "Quels produits logiciels Athlos propose-t-elle ?",
+          "answer": "Athlos propose un module TWAIN, des bibliothèques d'algorithmes de reconstruction, des filtres avancés de post-traitement et un accompagnement à l'intégration SDK/API pour les systèmes d'imagerie par rayons X."
+        },
+        "q2": {
+          "question": "Les logiciels Athlos peuvent-ils être concédés sous licence indépendamment ?",
+          "answer": "Oui. Les produits logiciels sont disponibles dans le cadre d'un système de capteur Athlos ou sous forme de composants concédés sous licence indépendamment en vue d'une intégration OEM."
+        },
+        "q3": {
+          "question": "Quel accompagnement SDK et intégration Athlos fournit-elle ?",
+          "answer": "Athlos fournit un accompagnement à l'intégration SDK et API pour aider les partenaires OEM et les intégrateurs de systèmes à incorporer les logiciels et algorithmes d'imagerie Athlos dans leurs propres produits et flux de travail."
+        }
+      }
+    }
+  }
+}

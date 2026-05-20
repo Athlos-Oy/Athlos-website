@@ -1,0 +1,85 @@
+{
+  "pages": {
+    "about": {
+      "hero": {
+        "eyebrow": "L'entreprise",
+        "headline": "À propos d'Athlos",
+        "sub": "Une imagerie par rayons X à conversion directe de pointe — fondée sur plus de 30 ans d'expertise appliquée, une fabrication en salle blanche et une passion profonde pour la physique des capteurs."
+      },
+      "stats": {
+        "invented": {
+          "number": "1993",
+          "label": "Notre équipe a inventé la conversion directe"
+        },
+        "expertise": {
+          "number": "35+",
+          "label": "Années d'expertise"
+        },
+        "partners": {
+          "number": "Partenaires",
+          "label": "Réseau mondial de partenaires"
+        },
+        "iso": {
+          "number": "ISO",
+          "label": "Certifié 13485:2016"
+        }
+      },
+      "whoWeAre": {
+        "eyebrow": "Qui nous sommes",
+        "headline": "Une expertise des capteurs bâtie sur trois décennies et demie.",
+        "body1": "Athlos est une entreprise finlandaise de technologie d'imagerie par rayons X spécialisée dans les capteurs à conversion directe — la technologie qui convertit les photons X directement en impulsions électriques, sans étape intermédiaire de scintillateur. Nous concevons, développons et fabriquons des capteurs d'imagerie reposant sur des architectures CdTe-CMOS et Si-CMOS pour les applications dentaires, médicales et industrielles. Nous proposons également des services de fabrication et des produits logiciels.",
+        "body2": "Notre équipe est au cœur de l'imagerie à conversion directe depuis ses origines. En 1993, Konstantinos Spartiotis revient de son doctorat à la Johns Hopkins University et de sa contribution au CERN, et entreprend les travaux qui allaient définir ce domaine. Athlos perpétue cet héritage."
+      },
+      "origin": {
+        "eyebrow": "Origines",
+        "headline": "Nous avons lancé la conversion directe en 1993.",
+        "body1": "Konstantinos Spartiotis est le fondateur de Simage Oy (1993) et d'Oy Ajat Ltd. en 2001 (renommée Oy Direct Conversion Ltd. le 26.10.2019, puis Oy Varex Imaging Finland Ltd. depuis le 1.8.2023). Simage Oy fut l'une des toutes premières entreprises au monde à travailler sur l'imagerie par rayons X à conversion directe à base de CdTe. Le savoir-faire qui y a été développé a été fondateur. Simage Oy s'est vu accorder des dizaines de brevets en conversion directe, en technologie de contact CdTe et en comptage de photons. Pendant des années, Simage a collaboré étroitement avec Acrorad, au Japon, pour produire du CdTe de qualité commerciale. Siemens a ensuite acquis Acrorad ainsi que le portefeuille de brevets de Simage Oy.",
+        "body2": "Ajat Oy est devenue la référence mondiale de l'imagerie dentaire panoramique et céphalométrique à conversion directe CdTe-CMOS. Sous sa direction, Ajat a atteint 12 M€ de chiffre d'affaires annuel, s'est révélée très rentable et a déployé des milliers d'unités dans le monde entier. Ajat Oy a été cédée à XCounter AB en 2009, et le groupe a ensuite été cédé à Varex Imaging Inc. en 2019.",
+        "body3": "Athlos a été fondée pour perpétuer cette tradition — avec la même équipe centrale et de nouveaux membres pour assurer la continuité, la même profondeur technique et la même passion, et une nouvelle génération de produits à conversion directe&nbsp;: DC-Air&reg;, Ultra-Fast Scanning Sensor et Industrial IP67 TDI, tous fabriqués en interne et au sein du site VTT Micronova. Conçus en Finlande. Fabriqués en Finlande.",
+        "author": {
+          "initials": "KS",
+          "intro": "À propos de l'auteur&nbsp;:",
+          "name": "Konstantinos Spartiotis",
+          "jobTitle": "Fondateur et PDG d'Athlos Oy",
+          "bio": "Pionnier de l'imagerie par rayons X à conversion directe à base de CdTe en 1993&nbsp;; fondateur de Simage Oy (1993) et d'Ajat Oy (2001, devenue ensuite Varex Imaging Finland).\n              Doctorat à la",
+          "alumniHopkins": "Johns Hopkins University",
+          "alumniMid": "&nbsp;; auparavant au",
+          "alumniCern": "CERN",
+          "patents": "Détenteur de dizaines de brevets en conversion directe, en technologie de contact CdTe et en comptage de photons.",
+          "source": "Source de l'historique de l'entreprise ci-dessus."
+        },
+        "imageAlt": "Processus de fabrication des capteurs Athlos"
+      },
+      "facilities": {
+        "eyebrow": "Installations",
+        "headline": "Fabriqués chez VTT Micronova. Portés par une profonde expertise des procédés.",
+        "body1": "Athlos dispose d'un accès complet à la salle blanche VTT Micronova à Espoo — l'un des environnements de nanofabrication les plus avancés d'Europe, situé à 10 minutes du siège d'Athlos.",
+        "body2": "Athlos peut ainsi maîtriser l'ensemble de la chaîne de fabrication — du bumping des wafers CMOS et de l'assemblage flip chip jusqu'à l'assemblage et la caractérisation des détecteurs — sans le coût d'investissement d'une salle blanche autonome.",
+        "pillars": {
+          "cleanroom": {
+            "title": "Fabrication en salle blanche",
+            "body": "Production en interne et accès à VTT Micronova pour la nanofabrication, le bump bonding et l'assemblage des capteurs, sous des contrôles de processus rigoureux."
+          },
+          "expertise": {
+            "title": "Expertise CdTe et Si en conversion directe",
+            "body": "Une expérience approfondie de l'intégration de détecteurs à conversion directe CdTe et Si — fruit de plus de 30 ans de R&amp;D appliquée sur plusieurs générations de produits."
+          },
+          "iso": {
+            "title": "ISO 13485:2016",
+            "body": "Système de management de la qualité certifié. Une fiabilité produit constante et une conformité réglementaire pour les applications médicales et industrielles."
+          }
+        }
+      },
+      "cta": {
+        "headline": "Devenez partenaire d'Athlos.",
+        "body": "Que vous intégriez nos capteurs dans votre système, que vous envisagiez la distribution ou que vous recherchiez un partenaire de fabrication à long terme — nous sommes prêts à en discuter.",
+        "button": "Nous contacter"
+      },
+      "lastUpdated": {
+        "label": "Dernière mise à jour&nbsp;:",
+        "date": "15 avril 2026",
+        "datetime": "2026-04-15"
+      }
+    }
+  }
+}

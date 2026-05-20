@@ -1,0 +1,50 @@
+{
+  "pages": {
+    "productsSoftware": {
+      "hero": {
+        "category": "Logiciels et intégration",
+        "headline": "Produits logiciels<br>d'imagerie par rayons X",
+        "tagline": "Des décennies d'expertise logicielle — disponibles sous forme de composants sous licence ou intégrées aux systèmes d'imagerie Athlos."
+      },
+      "overview": {
+        "eyebrow": "Présentation",
+        "headline": "La couche logicielle au cœur de l'imagerie à conversion directe.",
+        "body1": "L'équipe Athlos développe des logiciels d'imagerie par rayons X depuis les débuts de la conversion directe — algorithmes de reconstruction, filtres de traitement d'image et couches d'intégration TWAIN déployés dans des milliers d'installations cliniques et industrielles à travers le monde.",
+        "body2": "Ces capacités logicielles sont disponibles dans le cadre d'un système d'imagerie Athlos complet, ou sous forme de composants disponibles séparément sous licence en vue d'une intégration dans des plateformes tierces. Athlos fournit également un accès au SDK et un accompagnement direct à l'intégration aux clients OEM et intégrateurs de systèmes."
+      },
+      "components": {
+        "eyebrow": "Ce qui est disponible",
+        "headline": "Des composants logiciels pour le développement de systèmes d'imagerie.",
+        "cards": {
+          "twain": {
+            "title": "Module TWAIN",
+            "body": "Le module TWAIN d'Athlos s'intègre directement aux logiciels d'imagerie dentaire et médicale. Les applications prises en charge incluent Dentrix Ascend, Eaglesoft, Open Dental, Dexis, Romexis et bien d'autres plateformes compatibles TWAIN. Disponible dans le cadre d'une solution matérielle ou en tant que composant indépendant sous licence."
+          },
+          "reconstruction": {
+            "title": "Algorithmes de reconstruction",
+            "body": "Des bibliothèques avancées d'algorithmes de reconstruction développées au fil de décennies de travaux sur l'imagerie à conversion directe. Conçues pour les caractéristiques de signal spécifiques des détecteurs CdTe et Si CMOS. Disponibles en tant que composant indépendant sous licence en vue d'une intégration dans les chaînes de traitement des systèmes d'imagerie."
+          },
+          "postProcessing": {
+            "title": "Filtres de post-traitement",
+            "body": "Des bibliothèques de filtres d'amélioration d'image et de post-traitement à adaptation locale. Développées et affinées au fil des applications d'imagerie dentaire, industrielle et médicale. Fournies avec le SDK Athlos et disponibles pour l'intégration et la personnalisation."
+          }
+        }
+      },
+      "sdk": {
+        "title": "SDK et API Athlos",
+        "body": "API d'intégration C/C++ / DLL avec exemples de code source, interface graphique d'évaluation et bibliothèque avancée de filtres à adaptation locale. Contactez Athlos pour discuter de l'accès au SDK et des licences."
+      },
+      "cta": {
+        "headline": "Questions de licences logicielles et d'intégration.",
+        "body": "Que vous intégriez les logiciels Athlos à une plateforme existante ou que vous les évaluiez pour un nouveau système d'imagerie, l'équipe Athlos peut vous accompagner. Contactez-nous pour discuter des licences, de l'accès au SDK et des voies d'intégration.",
+        "buttonContact": "Contacter Athlos",
+        "buttonAll": "Tous les produits"
+      },
+      "lastUpdated": {
+        "label": "Dernière mise à jour&nbsp;:",
+        "date": "15 avril 2026",
+        "datetime": "2026-04-15"
+      }
+    }
+  }
+}

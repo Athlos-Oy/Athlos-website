@@ -1,0 +1,66 @@
+{
+  "pages": {
+    "productsManufacturing": {
+      "hero": {
+        "category": "Fabrication de capteurs",
+        "headline": "Services de fabrication<br>de détecteurs de rayons X",
+        "tagline": "Fabrication de détecteurs en interne — du wafer CMOS au capteur fini."
+      },
+      "overview": {
+        "eyebrow": "Présentation",
+        "headline": "Fabriqués en interne, du wafer au capteur.",
+        "body1": "Athlos fabrique ses capteurs d'imagerie en interne et en partenariat avec la salle blanche VTT Micronova à Espoo — l'un des principaux environnements de nanofabrication d'Europe. Cette capacité de fabrication approfondie fait partie de ce qui distingue les capteurs Athlos&nbsp;: nous maîtrisons l'ensemble du processus, du matériau détecteur et du bump bonding jusqu'à l'assemblage final et la caractérisation.",
+        "body2": "La même infrastructure de fabrication qui soutient nos propres gammes de produits est disponible en tant que service. Athlos peut accompagner les projets de partenaires et de fabricants OEM nécessitant une fabrication de détecteurs de précision, du bumping CMOS ou des procédés d'assemblage spécialisés.",
+        "imageAlt": "Wafer CMOS en silicium présentant un motif de grille de détecteur complexe"
+      },
+      "capabilities": {
+        "eyebrow": "Capacités",
+        "headline": "La précision à chaque étape du processus.",
+        "cards": {
+          "bumping": {
+            "title": "Bumping de détecteurs",
+            "body": "Dépôt de bumps de soudure InSn à pas fin sur wafers CMOS. Capacité de pas inférieur à 100 µm pour l'intégration de détecteurs CdTe et Si. Dépôt de bumps à pilier de cuivre à pas fin sur wafers CMOS. Capacité de pas inférieur à 30 µm pour l'intégration de détecteurs CdTe et Si."
+          },
+          "flipChip": {
+            "title": "Assemblage flip chip",
+            "body": "Interconnexion flip chip de précision entre le matériau détecteur et la lecture CMOS. Essentielle pour obtenir le contact électrique direct qui rend possible l'imagerie à conversion directe."
+          },
+          "wire": {
+            "title": "Câblage filaire",
+            "body": "Connexions par câblage filaire à haute densité, de la puce CMOS vers les circuits imprimés et les substrats de boîtier. Adapté aux configurations de capteurs à pas fin et de grand format."
+          },
+          "probing": {
+            "title": "Test sous pointes et caractérisation par rayons X",
+            "body": "Test électrique sous pointes au niveau du wafer, y compris l'inspection par rayons X. Caractérisation complète des détecteurs pour l'uniformité d'image, la sensibilité et le comportement en bruit."
+          },
+          "dieBonding": {
+            "title": "Die bonding et assemblage",
+            "body": "Die bonding de précision et assemblage multicouche de capteurs dans des environnements propres et contrôlés. Athlos coordonne toutes les étapes d'assemblage en interne."
+          },
+          "quality": {
+            "title": "Qualité et fiabilité",
+            "body": "Management de la qualité ISO 13485:2016. Des contrôles de processus à chaque étape de fabrication, du contrôle des matériaux entrants jusqu'au test final du produit et à sa libération."
+          }
+        }
+      },
+      "facilities": {
+        "eyebrow": "Installations",
+        "headline": "Accès à la salle blanche VTT Micronova.",
+        "body1": "Athlos dispose d'un accès complet à la salle blanche VTT Micronova de 2&nbsp;000 m² à Espoo, en Finlande — l'une des salles blanches de nanofabrication, de couches minces et de microsystèmes les plus avancées d'Europe.",
+        "body2": "Ce partenariat donne à Athlos et à ses clients de fabrication l'accès à une installation de classe mondiale, sans le coût d'investissement d'une salle blanche autonome. Associé à l'infrastructure d'assemblage et de caractérisation propre à Athlos, il permet une production de capteurs entièrement intégrée, de bout en bout.",
+        "imageAlt": "Installation de fabrication en salle blanche d'Athlos chez VTT Micronova, à Espoo"
+      },
+      "cta": {
+        "headline": "Demandes de partenariat de fabrication.",
+        "body": "Si vous développez un produit à base de détecteur et avez besoin d'un accompagnement en fabrication de précision — du bump bonding à l'assemblage complet du capteur — contactez Athlos pour discuter de vos besoins.",
+        "ctaContact": "Contacter Athlos",
+        "ctaAll": "Tous les produits"
+      },
+      "lastUpdated": {
+        "label": "Dernière mise à jour&nbsp;:",
+        "date": "15 avril 2026",
+        "datetime": "2026-04-15"
+      }
+    }
+  }
+}
