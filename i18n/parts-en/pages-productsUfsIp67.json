@@ -30,7 +30,7 @@
           },
           "03": {
             "title": "Ultra-Fast TDI Scanning",
-            "body": "TDI mode with line rates up to 75,000 lps. Designed for very high scanning speeds — 30 m/min at 100 µm, 240 m/min at 200 µm, and up to 1920 m/min at 400 µm resolution (or 115 km/h scanning speed)."
+            "body": "TDI mode with line rates up to 75,000 lps. Designed for very high scanning speeds — 28 m/min at 100 µm, 180 m/min at 200 µm, and up to 1700 m/min at 400 µm resolution."
           },
           "04": {
             "title": "Direct Conversion CdTe",
@@ -52,17 +52,17 @@
         "cards": {
           "01": {
             "resolution": "At 100 <span style=\"text-transform:none\">µm</span>",
-            "speed": "30",
+            "speed": "28",
             "unit": "m/min — maximum precision"
           },
           "02": {
             "resolution": "At 200 <span style=\"text-transform:none\">µm</span>",
-            "speed": "240",
+            "speed": "180",
             "unit": "m/min — balanced throughput"
           },
           "03": {
             "resolution": "At 400 <span style=\"text-transform:none\">µm</span>",
-            "speed": "1,920",
+            "speed": "1,700",
             "unit": "m/min — maximum throughput"
           }
         }
@@ -71,7 +71,7 @@
         "eyebrow": "Technical Snapshot",
         "headline": "Designed around the application.",
         "body1": "Industrial IP67 TDI is available in three model variants — UFS-150IP67NC-44, UFS-225IP67NC-44, and UFS-460IP67NC-44. All share the same fundamental architecture: direct conversion CdTe imaging with 28 TDI stages, IP67 enclosure, and Gigabit Ethernet interface.",
-        "body2": "Custom solutions available: the modular architecture allows Athlos to provide custom active lengths from 7.5 cm up to 10 m in 7.5 cm increments. Contact us to discuss your active length requirement.",
+        "body2": "Custom solutions available: the modular architecture allows Athlos to provide custom active lengths from 7.5 cm up to 12 m in 7.5 cm increments. Contact us to discuss your active length requirement.",
         "imageAlt": "Industrial IP67 TDI internal architecture – open enclosure view",
         "rows": {
           "pixelSize": { "label": "Pixel size", "value": "100 × 100 µm" },
@@ -206,7 +206,7 @@
           "custom": {
             "name": "UFS-xxx IP67NC",
             "ref": "UFS-xxxIP67NC-44-TDI-HVS",
-            "desc": "Custom active length to meet application requirements. One module has three 25.6 mm hybrids; the module's active length is 76.8 mm. Any active length is available from 76.8 mm to 10 m."
+            "desc": "Custom active length to meet application requirements. One module has three 25.6 mm hybrids; the module's active length is 76.8 mm. Any active length is available from 76.8 mm to 12 m."
           }
         },
         "note": "The three standard configurations are available for near-immediate delivery. Custom active lengths can be manufactured to meet specific application requirements — contact Athlos to discuss your sizing needs."
