@@ -31,7 +31,7 @@
           },
           "ultraFast": {
             "title": "Ultra-Fast Scanning",
-            "body": "Designed for very high scanning speeds — 30 m/min at 100 µm, 240 m/min at 200 µm, and up to 1,920 m/min at 400 µm resolution."
+            "body": "Designed for very high scanning speeds — 28 m/min at 100 µm, 180 m/min at 200 µm, and up to 1,700 m/min at 400 µm resolution."
           },
           "dynamicRange": {
             "title": "Wide Dynamic Range",
@@ -53,33 +53,25 @@
       },
       "models": {
         "eyebrow": "Product Family",
-        "headline": "Three models.<br>Selectable active widths.",
-        "body1": "The UFS family spans three model sizes — UFS150, UFS225, and UFS460 — with active widths selectable from 3.2 mm to 5.2 mm depending on application requirements.",
-        "body2": "The modular design of the UFS allows active lengths from 7.5 cm up to 10 m. Contact us for more information and customized offerings.",
+        "headline": "Three models.<br>Differentiated by active length.",
+        "body1": "The UFS family spans three standard model sizes — UFS150, UFS225, and UFS460 — differentiated by active length. UFS and the Industrial IP67 TDI are the same direct conversion detector platform; the standard UFS is the non-IP67 version, intended for controlled and integrated environments.",
+        "body2": "The modular design of the UFS allows active lengths from 7.5 cm up to 12 m. Contact us for more information and customized offerings.",
         "imageAlt": "Ultra-Fast Scanning Sensor family – circuit board studio view",
         "cards": {
           "ufs150": {
             "name": "UFS150",
             "ref": "CdTe direct conversion · ASIC readout",
-            "body": "15 cm active length. Suited for dental panoramic imaging.",
-            "width1": "3.2 mm",
-            "width2": "3.6 mm",
-            "width3": "4.0 mm"
+            "body": "15 cm active length. Suited for dental panoramic imaging."
           },
           "ufs225": {
             "name": "UFS225",
             "ref": "CdTe direct conversion · ASIC readout",
-            "body": "23 cm active length. Suited for dental cephalometric and industrial applications.",
-            "width1": "3.6 mm",
-            "width2": "4.0 mm",
-            "width3": "4.4 mm"
+            "body": "23 cm active length. Suited for dental cephalometric and industrial applications."
           },
           "ufs460": {
             "name": "UFS460",
             "ref": "CdTe direct conversion · ASIC readout",
-            "body": "46 cm active length. Suited for medical and industrial applications.",
-            "width1": "4.4 mm",
-            "width2": "5.2 mm"
+            "body": "46 cm active length. Suited for medical and industrial applications."
           },
           "ufsxxx": {
             "name": "UFSxxx",
@@ -94,19 +86,39 @@
         "cards": {
           "res100": {
             "resolution": "At 100 <span style=\"text-transform:none\">µm</span>",
-            "speed": "30",
+            "speed": "28",
             "unit": "m/min scanning speed"
           },
           "res200": {
             "resolution": "At 200 <span style=\"text-transform:none\">µm</span>",
-            "speed": "240",
+            "speed": "180",
             "unit": "m/min scanning speed"
           },
           "res400": {
             "resolution": "At 400 <span style=\"text-transform:none\">µm</span>",
-            "speed": "1,920",
+            "speed": "1,700",
             "unit": "m/min — maximum throughput"
           }
+        }
+      },
+      "specs": {
+        "eyebrow": "Technical Snapshot",
+        "headline": "One platform.<br>Two protection levels.",
+        "body1": "The Ultra-Fast Scanning Sensor and the Industrial IP67 TDI are two versions of the same direct conversion detector platform — identical imaging performance, sensor technology, scan speed, resolution, and TDI capability. The standard UFS is the non-IP67 version, intended for controlled and integrated imaging environments.",
+        "body2": "For dust-tight, water-immersion-rated (IP67) protection in harsh, wet, or washdown environments, see the <a href=\"ufs-ip67.html\" style=\"color:var(--cyan);\">Industrial IP67 TDI</a>.",
+        "rows": {
+          "pixelSize": { "label": "Pixel size", "value": "100 × 100 µm" },
+          "activeAreaWidth": { "label": "Active area width", "value": "2.8 mm" },
+          "tdiStages": { "label": "TDI stages", "value": "28" },
+          "energyRange": { "label": "Energy range", "value": "10 – 360 kV" },
+          "dynamicRange": { "label": "Dynamic range", "value": "16-bit" },
+          "maxLineRate": { "label": "Max line rate", "value": "75,000 lps" },
+          "interface": { "label": "Interface", "value": "Gigabit Ethernet" },
+          "powerSupply": { "label": "Power supply", "value": "9 – 24 V DC" },
+          "operatingTemperature": { "label": "Operating temperature", "value": "10 – 40 °C" },
+          "activeCooling": { "label": "Active cooling", "value": "None required" },
+          "enclosureRating": { "label": "Enclosure rating", "value": "Standard (non-IP67)" },
+          "detectorMaterial": { "label": "Detector material", "value": "CdTe direct conversion" }
         }
       },
       "gallery": {

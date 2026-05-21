@@ -168,11 +168,6 @@ activeProduct: ufs
             <p style="font-size:var(--text-sm);font-weight:300;line-height:1.65;color:rgba(255,255,255,0.55);">
               {{ "pages.productsUfs.models.cards.ufs150.body" | t }}
             </p>
-            <div class="model-widths">
-              <span class="model-width-tag">{{ "pages.productsUfs.models.cards.ufs150.width1" | t }}</span>
-              <span class="model-width-tag">{{ "pages.productsUfs.models.cards.ufs150.width2" | t }}</span>
-              <span class="model-width-tag">{{ "pages.productsUfs.models.cards.ufs150.width3" | t }}</span>
-            </div>
           </div>
           <div class="model-card reveal" data-delay="80">
             <span class="model-name">{{ "pages.productsUfs.models.cards.ufs225.name" | t }}</span>
@@ -180,11 +175,6 @@ activeProduct: ufs
             <p style="font-size:var(--text-sm);font-weight:300;line-height:1.65;color:rgba(255,255,255,0.55);">
               {{ "pages.productsUfs.models.cards.ufs225.body" | t }}
             </p>
-            <div class="model-widths">
-              <span class="model-width-tag">{{ "pages.productsUfs.models.cards.ufs225.width1" | t }}</span>
-              <span class="model-width-tag">{{ "pages.productsUfs.models.cards.ufs225.width2" | t }}</span>
-              <span class="model-width-tag">{{ "pages.productsUfs.models.cards.ufs225.width3" | t }}</span>
-            </div>
           </div>
           <div class="model-card reveal" data-delay="160">
             <span class="model-name">{{ "pages.productsUfs.models.cards.ufs460.name" | t }}</span>
@@ -192,10 +182,6 @@ activeProduct: ufs
             <p style="font-size:var(--text-sm);font-weight:300;line-height:1.65;color:rgba(255,255,255,0.55);">
               {{ "pages.productsUfs.models.cards.ufs460.body" | t }}
             </p>
-            <div class="model-widths">
-              <span class="model-width-tag">{{ "pages.productsUfs.models.cards.ufs460.width1" | t }}</span>
-              <span class="model-width-tag">{{ "pages.productsUfs.models.cards.ufs460.width2" | t }}</span>
-            </div>
           </div>
           <div class="model-card reveal" data-delay="240">
             <span class="model-name">{{ "pages.productsUfs.models.cards.ufsxxx.name" | t }}</span>
@@ -230,6 +216,40 @@ activeProduct: ufs
             <span class="perf-resolution">{{ "pages.productsUfs.performance.cards.res400.resolution" | t }}</span>
             <span class="perf-speed">{{ "pages.productsUfs.performance.cards.res400.speed" | t }}</span>
             <span class="perf-unit">{{ "pages.productsUfs.performance.cards.res400.unit" | t }}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECS -->
+    <section class="specs-section" id="specs">
+      <div class="container">
+        <div class="specs-grid">
+          <div class="specs-intro">
+            <p class="section-eyebrow section-eyebrow--light reveal">{{ "pages.productsUfs.specs.eyebrow" | t }}</p>
+            <h2 class="specs-headline reveal">{{ "pages.productsUfs.specs.headline" | t }}</h2>
+            <p class="specs-body reveal">
+              {{ "pages.productsUfs.specs.body1" | t }}
+            </p>
+            <p class="specs-body reveal" style="margin-top:1rem;">
+              {{ "pages.productsUfs.specs.body2" | t }}
+            </p>
+          </div>
+          <div class="reveal">
+            <div class="specs-table">
+              <div class="spec-row"><span class="spec-label">{{ "pages.productsUfs.specs.rows.pixelSize.label" | t }}</span><span class="spec-value">{{ "pages.productsUfs.specs.rows.pixelSize.value" | t }}</span></div>
+              <div class="spec-row"><span class="spec-label">{{ "pages.productsUfs.specs.rows.activeAreaWidth.label" | t }}</span><span class="spec-value">{{ "pages.productsUfs.specs.rows.activeAreaWidth.value" | t }}</span></div>
+              <div class="spec-row"><span class="spec-label">{{ "pages.productsUfs.specs.rows.tdiStages.label" | t }}</span><span class="spec-value">{{ "pages.productsUfs.specs.rows.tdiStages.value" | t }}</span></div>
+              <div class="spec-row"><span class="spec-label">{{ "pages.productsUfs.specs.rows.energyRange.label" | t }}</span><span class="spec-value">{{ "pages.productsUfs.specs.rows.energyRange.value" | t }}</span></div>
+              <div class="spec-row"><span class="spec-label">{{ "pages.productsUfs.specs.rows.dynamicRange.label" | t }}</span><span class="spec-value">{{ "pages.productsUfs.specs.rows.dynamicRange.value" | t }}</span></div>
+              <div class="spec-row"><span class="spec-label">{{ "pages.productsUfs.specs.rows.maxLineRate.label" | t }}</span><span class="spec-value">{{ "pages.productsUfs.specs.rows.maxLineRate.value" | t }}</span></div>
+              <div class="spec-row"><span class="spec-label">{{ "pages.productsUfs.specs.rows.interface.label" | t }}</span><span class="spec-value">{{ "pages.productsUfs.specs.rows.interface.value" | t }}</span></div>
+              <div class="spec-row"><span class="spec-label">{{ "pages.productsUfs.specs.rows.powerSupply.label" | t }}</span><span class="spec-value">{{ "pages.productsUfs.specs.rows.powerSupply.value" | t }}</span></div>
+              <div class="spec-row"><span class="spec-label">{{ "pages.productsUfs.specs.rows.operatingTemperature.label" | t }}</span><span class="spec-value">{{ "pages.productsUfs.specs.rows.operatingTemperature.value" | t }}</span></div>
+              <div class="spec-row"><span class="spec-label">{{ "pages.productsUfs.specs.rows.activeCooling.label" | t }}</span><span class="spec-value">{{ "pages.productsUfs.specs.rows.activeCooling.value" | t }}</span></div>
+              <div class="spec-row"><span class="spec-label">{{ "pages.productsUfs.specs.rows.enclosureRating.label" | t }}</span><span class="spec-value">{{ "pages.productsUfs.specs.rows.enclosureRating.value" | t }}</span></div>
+              <div class="spec-row" style="border-bottom:none;"><span class="spec-label">{{ "pages.productsUfs.specs.rows.detectorMaterial.label" | t }}</span><span class="spec-value">{{ "pages.productsUfs.specs.rows.detectorMaterial.value" | t }}</span></div>
+            </div>
           </div>
         </div>
       </div>
