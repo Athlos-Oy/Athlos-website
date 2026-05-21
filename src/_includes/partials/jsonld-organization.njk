@@ -2,10 +2,18 @@
   {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "{{ site.url }}/#organization",
   "name": "{{ site.legalName }}",
+  "legalName": "{{ site.legalName }}",
   "url": "{{ site.url }}",
   "logo": "{{ site.url }}/images/athlos-logo.png",
   "email": "{{ site.email }}",
+  "foundingDate": "{{ site.foundingYear }}",
+  "founder": {
+    "@type": "Person",
+    "@id": "{{ site.url }}/about.html#konstantinos-spartiotis",
+    "name": "Konstantinos Spartiotis"
+  },
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "{{ site.address.street }}",
@@ -13,10 +21,24 @@
     "postalCode": "{{ site.address.postalCode }}",
     "addressCountry": "{{ site.address.country }}"
   },
+  "vatID": "{{ site.vat }}",
+  "taxID": "{{ site.businessId }}",
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "Finnish Business ID",
+    "value": "{{ site.businessId }}"
+  },
   "sameAs": [
     "{{ site.linkedin }}"
   ],
   "description": "{{ "jsonld.organization.description" | t }}",
+  "knowsAbout": [
+    "Direct conversion X-ray imaging",
+    "CdTe-CMOS detectors",
+    "Si-CMOS detectors",
+    "TDI line-scan detectors",
+    "Wireless intraoral X-ray sensors"
+  ],
   "areaServed": "{{ "jsonld.organization.areaServed" | t }}",
   "contactPoint": {
     "@type": "ContactPoint",

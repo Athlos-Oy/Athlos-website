@@ -25,6 +25,7 @@
   "@graph": [
     {
       "@type": "Organization",
+      "@id": "https://athlos.fi/#organization",
       "name": "Athlos Oy",
       "url": "https://athlos.fi",
       "logo": "https://athlos.fi/images/athlos-logo.png",
@@ -91,6 +92,7 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap"></noscript>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/products.css">
+  <noscript><style>.reveal,[data-animate]{opacity:1!important;transform:none!important}</style></noscript>
   <link rel="preload" as="image" href="/images/manufacturing-wafer-1.webp" fetchpriority="high">
   <!-- Consent Mode defaults (must precede GTM) -->
   <script>
@@ -136,14 +138,14 @@
   <!-- NAV -->
   <header class="nav scrolled" id="nav">
     <div class="nav-inner">
-      <a href="../index.html" class="nav-logo" aria-label="Athlos home">
+      <a href="/" class="nav-logo" aria-label="Athlos home">
         <img src="../images/athlos-logo.png" width="1536" height="1024" alt="Athlos" class="nav-logo-png">
         <span class="nav-logo-text">ATHLOS</span>
       </a>
       <nav class="nav-links">
-        <a href="../index.html" class="nav-link">Home</a>
+        <a href="/" class="nav-link">Home</a>
         <div class="nav-item has-dropdown">
-          <a href="index.html" class="nav-link">Products <svg class="nav-link-chevron" viewBox="0 0 10 10" fill="none" width="10" height="10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="/products/" class="nav-link">Products <svg class="nav-link-chevron" viewBox="0 0 10 10" fill="none" width="10" height="10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <div class="nav-dropdown">
             <a href="wios.html" class="nav-dropdown-link">DC-Air&reg;</a>
             <a href="ufs.html" class="nav-dropdown-link">Ultra-Fast Scanning Sensor</a>
@@ -161,8 +163,8 @@
       </button>
     </div>
     <div class="nav-mobile-menu" id="mobileMenu">
-      <a href="../index.html" class="nav-mobile-link">Home</a>
-      <a href="index.html" class="nav-mobile-link">Products</a>
+      <a href="/" class="nav-mobile-link">Home</a>
+      <a href="/products/" class="nav-mobile-link">Products</a>
       <a href="../applications.html" class="nav-mobile-link">Applications</a>
       <a href="../about.html" class="nav-mobile-link">About</a>
       <a href="../contact.html" class="nav-mobile-link nav-mobile-cta">Contact</a>
@@ -172,7 +174,7 @@
   <!-- PRODUCT SUBNAV -->
   <nav class="product-subnav" aria-label="Products navigation">
     <div class="product-subnav-inner">
-      <a href="index.html" class="subnav-back">← Products</a>
+      <a href="/products/" class="subnav-back">← Products</a>
       <a href="wios.html" class="subnav-link">DC-Air&reg;</a>
       <a href="ufs.html" class="subnav-link">Ultra-Fast Scanning Sensor</a>
       <a href="ufs-ip67.html" class="subnav-link">Industrial IP67 TDI</a>
@@ -346,7 +348,7 @@
           <p class="reveal">If you are developing a detector-based product and need precision manufacturing support — from bump bonding to full sensor assembly — contact Athlos to discuss your requirements.</p>
           <div class="reveal" style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
             <a href="../contact.html" class="btn btn-primary btn-large">Contact Athlos</a>
-            <a href="index.html" class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);">All Products</a>
+            <a href="/products/" class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);">All Products</a>
           </div>
         </div>
       </div>

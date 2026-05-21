@@ -2,9 +2,10 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://athlos.fi/about.html#konstantinos-spartiotis",
     "name": "{{ "jsonld.about.person.name" | t }}",
     "jobTitle": "{{ "jsonld.about.person.jobTitle" | t }}",
-    "worksFor": {"@type": "Organization", "name": "Athlos Oy", "url": "https://athlos.fi"},
+    "worksFor": {"@type": "Organization", "@id": "https://athlos.fi/#organization", "name": "Athlos Oy", "url": "https://athlos.fi"},
     "description": "{{ "jsonld.about.person.description" | t }}",
     "alumniOf": [
       {"@type": "CollegeOrUniversity", "name": "Johns Hopkins University"},

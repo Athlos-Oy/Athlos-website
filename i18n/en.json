@@ -58,19 +58,19 @@
   },
   "pages": {
     "home": {
-      "title": "Athlos – Advanced X-Ray Imaging Sensors",
+      "title": "Direct Conversion X-Ray Imaging Sensors — CdTe &amp; Si-CMOS | Athlos Oy",
       "description": "Athlos develops and manufactures advanced direct conversion X-ray imaging sensors for dental, medical, and industrial applications. CdTe and Si CMOS technology, made in Finland.",
       "og": {
-        "title": "Athlos – Advanced X-Ray Imaging Sensors",
+        "title": "Direct Conversion X-Ray Imaging Sensors | Athlos Oy",
         "description": "Direct conversion X-ray sensors for dental, medical, and industrial imaging. Superior image quality, higher sensitivity, and faster acquisition."
       },
       "twitter": {
-        "title": "Athlos – Advanced X-Ray Imaging Sensors",
+        "title": "Direct Conversion X-Ray Imaging Sensors | Athlos Oy",
         "description": "Direct conversion X-ray sensors for dental, medical, and industrial imaging. Superior image quality, higher sensitivity, and faster acquisition."
       },
       "hero": {
         "eyebrow": "Direct Conversion X-Ray Imaging",
-        "headline": "Direct Conversion,<br>Direct Advantage.",
+        "headline": "Direct Conversion X-Ray Imaging.<br>Direct Advantage.",
         "sub": "Athlos develops and manufactures advanced X-ray imaging sensors — delivering superior image quality, higher sensitivity, and faster acquisition for dental, medical, and industrial applications.",
         "ctaProducts": "Explore Products",
         "ctaAbout": "About Athlos"
@@ -275,14 +275,14 @@
       }
     },
     "productsUfsIp67": {
-      "title": "Industrial IP67 TDI – Industrial X-Ray Detector | Athlos",
+      "title": "IP67 TDI Line-Scan X-Ray Detector — CdTe, No Cooling | Athlos",
       "description": "Industrial IP67 TDI is a rugged industrial direct conversion X-ray linear detector for high-speed inline inspection. CdTe-CMOS, IP67 enclosure, no active cooling, TDI scanning.",
       "og": {
-        "title": "Industrial IP67 TDI – Industrial X-Ray Detector | Athlos",
+        "title": "IP67 TDI Line-Scan X-Ray Detector | Athlos",
         "description": "Rugged IP67-rated direct conversion CdTe-CMOS TDI detector for high-speed industrial inline X-ray inspection. No active cooling required."
       },
       "twitter": {
-        "title": "Industrial IP67 TDI – Industrial X-Ray Detector | Athlos",
+        "title": "IP67 TDI Line-Scan X-Ray Detector | Athlos",
         "description": "Rugged IP67-rated direct conversion CdTe-CMOS TDI detector for high-speed industrial inline X-ray inspection. No active cooling required."
       }
     },

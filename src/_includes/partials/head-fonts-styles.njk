@@ -8,6 +8,7 @@
 {%- for sheet in _sheets %}
   <link rel="stylesheet" href="{{ _p }}{{ sheet }}">
 {%- endfor %}
+  <noscript><style>.reveal,[data-animate]{opacity:1!important;transform:none!important}</style></noscript>
 {%- if includeFoucStyle %}
   <style>
     /* Critical inline: prevent FOUC on nav */

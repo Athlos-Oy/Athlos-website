@@ -23,6 +23,7 @@
   {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://athlos.fi/#organization",
   "name": "Athlos Oy",
   "url": "https://athlos.fi",
   "logo": "https://athlos.fi/images/athlos-logo.png",
@@ -77,6 +78,7 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap"></noscript>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/products.css">
+  <noscript><style>.reveal,[data-animate]{opacity:1!important;transform:none!important}</style></noscript>
   <!-- Consent Mode defaults (must precede GTM) -->
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -109,14 +111,14 @@
   <!-- NAV -->
   <header class="nav" id="nav">
     <div class="nav-inner">
-      <a href="../index.html" class="nav-logo" aria-label="Athlos home">
+      <a href="/" class="nav-logo" aria-label="Athlos home">
         <img src="../images/athlos-logo.png" width="1536" height="1024" alt="Athlos" class="nav-logo-png">
         <span class="nav-logo-text">ATHLOS</span>
       </a>
       <nav class="nav-links">
-        <a href="../index.html" class="nav-link">Home</a>
+        <a href="/" class="nav-link">Home</a>
         <div class="nav-item has-dropdown">
-          <a href="index.html" class="nav-link">Products <svg class="nav-link-chevron" viewBox="0 0 10 10" fill="none" width="10" height="10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="/products/" class="nav-link">Products <svg class="nav-link-chevron" viewBox="0 0 10 10" fill="none" width="10" height="10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <div class="nav-dropdown">
             <a href="wios.html" class="nav-dropdown-link">DC-Air&reg;</a>
             <a href="ufs.html" class="nav-dropdown-link">Ultra-Fast Scanning Sensor</a>
@@ -134,8 +136,8 @@
       </button>
     </div>
     <div class="nav-mobile-menu" id="mobileMenu">
-      <a href="../index.html" class="nav-mobile-link">Home</a>
-      <a href="index.html" class="nav-mobile-link">Products</a>
+      <a href="/" class="nav-mobile-link">Home</a>
+      <a href="/products/" class="nav-mobile-link">Products</a>
       <a href="../applications.html" class="nav-mobile-link">Applications</a>
       <a href="../about.html" class="nav-mobile-link">About</a>
       <a href="../contact.html" class="nav-mobile-link nav-mobile-cta">Contact</a>

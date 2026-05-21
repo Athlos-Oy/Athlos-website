@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Athlos – Advanced X-Ray Imaging Sensors</title>
+  <title>Direct Conversion X-Ray Imaging Sensors — CdTe &amp; Si-CMOS | Athlos Oy</title>
   <meta name="description" content="Athlos develops and manufactures advanced direct conversion X-ray imaging sensors for dental, medical, and industrial applications. CdTe and Si CMOS technology, made in Finland.">
-  <meta property="og:title" content="Athlos – Advanced X-Ray Imaging Sensors">
+  <meta property="og:title" content="Direct Conversion X-Ray Imaging Sensors | Athlos Oy">
   <meta property="og:description" content="Direct conversion X-ray sensors for dental, medical, and industrial imaging. Superior image quality, higher sensitivity, and faster acquisition.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://athlos.fi/">
@@ -13,7 +13,7 @@
   <meta property="og:image:width" content="5504">
   <meta property="og:image:height" content="3072">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Athlos – Advanced X-Ray Imaging Sensors">
+  <meta name="twitter:title" content="Direct Conversion X-Ray Imaging Sensors | Athlos Oy">
   <meta name="twitter:description" content="Direct conversion X-ray sensors for dental, medical, and industrial imaging. Superior image quality, higher sensitivity, and faster acquisition.">
   <meta name="twitter:image" content="https://athlos.fi/images/hero-lab-automation.webp">
   <link rel="canonical" href="https://athlos.fi/">
@@ -23,10 +23,18 @@
   {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://athlos.fi/#organization",
   "name": "Athlos Oy",
+  "legalName": "Athlos Oy",
   "url": "https://athlos.fi",
   "logo": "https://athlos.fi/images/athlos-logo.png",
   "email": "info@athlos.fi",
+  "foundingDate": "2017",
+  "founder": {
+    "@type": "Person",
+    "@id": "https://athlos.fi/about.html#konstantinos-spartiotis",
+    "name": "Konstantinos Spartiotis"
+  },
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Klovinpellontie 1-3, Tower 2",
@@ -34,10 +42,24 @@
     "postalCode": "02180",
     "addressCountry": "FI"
   },
+  "vatID": "FI27522589",
+  "taxID": "2752258-9",
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "Finnish Business ID",
+    "value": "2752258-9"
+  },
   "sameAs": [
     "https://www.linkedin.com/company/athlos-oy/"
   ],
   "description": "Athlos Oy is a Finnish X-ray imaging technology company specialising in direct conversion CdTe-CMOS and Si-CMOS sensors for dental, medical, and industrial applications.",
+  "knowsAbout": [
+    "Direct conversion X-ray imaging",
+    "CdTe-CMOS detectors",
+    "Si-CMOS detectors",
+    "TDI line-scan detectors",
+    "Wireless intraoral X-ray sensors"
+  ],
   "areaServed": "Worldwide",
   "contactPoint": {
     "@type": "ContactPoint",
@@ -82,6 +104,7 @@
     /* Critical inline: prevent FOUC on nav */
     .nav { background: transparent; }
   </style>
+  <noscript><style>.reveal,[data-animate]{opacity:1!important;transform:none!important}</style></noscript>
   <link rel="preload" as="image" href="/images/hero-lab-automation.webp" fetchpriority="high">
   <!-- Consent Mode defaults (must precede GTM) -->
   <script>
@@ -115,14 +138,14 @@
   <!-- NAVIGATION -->
   <header class="nav" id="nav">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo" aria-label="Athlos home">
+      <a href="/" class="nav-logo" aria-label="Athlos home">
         <img src="images/athlos-logo.png" width="1536" height="1024" alt="Athlos" class="nav-logo-png">
         <span class="nav-logo-text" aria-hidden="true">ATHLOS</span>
       </a>
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="index.html" class="nav-link">Home</a>
+        <a href="/" class="nav-link">Home</a>
         <div class="nav-item has-dropdown">
-          <a href="products/index.html" class="nav-link">Products <svg class="nav-link-chevron" viewBox="0 0 10 10" fill="none" width="10" height="10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="/products/" class="nav-link">Products <svg class="nav-link-chevron" viewBox="0 0 10 10" fill="none" width="10" height="10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <div class="nav-dropdown">
             <a href="products/wios.html" class="nav-dropdown-link">DC-Air&reg;</a>
             <a href="products/ufs.html" class="nav-dropdown-link">Ultra-Fast Scanning Sensor</a>
@@ -140,8 +163,8 @@
       </button>
     </div>
     <div class="nav-mobile-menu" id="mobileMenu">
-      <a href="index.html" class="nav-mobile-link">Home</a>
-      <a href="products/index.html" class="nav-mobile-link">Products</a>
+      <a href="/" class="nav-mobile-link">Home</a>
+      <a href="/products/" class="nav-mobile-link">Products</a>
       <a href="applications.html" class="nav-mobile-link">Applications</a>
       <a href="about.html" class="nav-mobile-link">About</a>
       <a href="contact.html" class="nav-mobile-link nav-mobile-cta">Contact</a>
@@ -163,13 +186,13 @@
       <div class="hero-content">
         <p class="hero-eyebrow">Direct Conversion X-Ray Imaging</p>
         <h1 class="hero-headline">
-          Direct Conversion,<br>Direct Advantage.
+          Direct Conversion X-Ray Imaging.<br>Direct Advantage.
         </h1>
         <p class="hero-sub">
           Athlos develops and manufactures advanced X-ray imaging sensors — delivering superior image quality, higher sensitivity, and faster acquisition for dental, medical, and industrial applications.
         </p>
         <div class="hero-actions">
-          <a href="products/index.html" class="btn btn-primary">Explore Products</a>
+          <a href="/products/" class="btn btn-primary">Explore Products</a>
           <a href="about.html" class="btn btn-outline">About Athlos</a>
         </div>
       </div>
@@ -245,7 +268,7 @@
                 loop
                 muted
                 playsinline
-                preload="auto"
+                preload="metadata"
                 disablepictureinpicture
                 poster="images/product-macro-1.webp"
                 aria-label="Athlos sensor direct conversion process visualization"
