@@ -79,9 +79,14 @@ extraScriptsBeforeCookieBanner: |
       var modalClose = document.getElementById('cf-modal-close');
 
       // ── Web3Forms access key ──────────────────────────────────────────────
-      // Get a free key at https://web3forms.com — enter info@athlos.fi and
-      // they email you the key. Replace the placeholder below with that key.
-      var WEB3FORMS_KEY = '888296f4-31a1-4744-9ed7-81c91fc5cefe';
+      // The contact form is delivered to every Web3Forms account below so
+      // the inquiry reaches all recipient inboxes. Web3Forms' cc field is
+      // Pro-only and silently ignored on the free plan, so each recipient
+      // needs its own free account/key.
+      var WEB3FORMS_KEYS = [
+        '888296f4-31a1-4744-9ed7-81c91fc5cefe',  // info@athlos.fi
+        '9f337c43-0578-4540-9d6f-9d77722bd3d0'   // evangelos.spartiotis@athlos.fi
+      ];
       // ─────────────────────────────────────────────────────────────────────
 
       function showError(msg) {
@@ -142,36 +147,38 @@ extraScriptsBeforeCookieBanner: |
         if (company) body += '\n' + company;
         body += '\n\nContact email: ' + email;
 
-        // Submit
+        // Submit — deliver to every Web3Forms account so the inquiry
+        // reaches all recipient inboxes. A submission counts as delivered
+        // when at least one account accepts it.
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending…';
 
-        try {
+        function submitToWeb3Forms(key) {
           var formData = new FormData();
-          formData.append('access_key',  WEB3FORMS_KEY);
-          formData.append('subject',     subject);
-          formData.append('message',     body);
-          formData.append('from_name',   name);
-          formData.append('replyto',     email);
-          formData.append('redirect',    'false');
-
-          var response = await fetch('https://api.web3forms.com/submit', {
+          formData.append('access_key', key);
+          formData.append('subject',    subject);
+          formData.append('message',    body);
+          formData.append('from_name',  name);
+          formData.append('replyto',    email);
+          formData.append('redirect',   'false');
+          return fetch('https://api.web3forms.com/submit', {
             method: 'POST',
             body: formData
-          });
-          var data = await response.json();
+          })
+            .then(function (r) { return r.json(); })
+            .then(function (d) { return d && d.success === true; })
+            .catch(function () { return false; });
+        }
 
-          if (data.success) {
-            form.reset();
-            openModal();
-          } else {
-            showError('Something went wrong. Please try again or email us directly at info@athlos.fi.');
-          }
-        } catch (err) {
+        var results = await Promise.all(WEB3FORMS_KEYS.map(submitToWeb3Forms));
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+
+        if (results.some(function (ok) { return ok; })) {
+          form.reset();
+          openModal();
+        } else {
           showError('Unable to send your message. Please try again or email us directly at info@athlos.fi.');
-        } finally {
-          submitBtn.disabled = false;
-          submitBtn.textContent = 'Send Message';
         }
       });
     })();
