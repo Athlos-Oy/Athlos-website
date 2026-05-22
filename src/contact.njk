@@ -131,6 +131,8 @@ extraScriptsBeforeCookieBanner: |
 
         // Basic validation
         if (!name || !email || !message) {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ event: 'contact_form_error', error_type: 'validation', form_topic: topic || 'general_enquiry' });
           showError('Please fill in your name, email address, and message.');
           return;
         }
@@ -175,9 +177,13 @@ extraScriptsBeforeCookieBanner: |
         submitBtn.textContent = 'Send Message';
 
         if (results.some(function (ok) { return ok; })) {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ event: 'contact_form_submit', form_topic: topic || 'general_enquiry' });
           form.reset();
           openModal();
         } else {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ event: 'contact_form_error', error_type: 'send_failed', form_topic: topic || 'general_enquiry' });
           showError('Unable to send your message. Please try again or email us directly at info@athlos.fi.');
         }
       });

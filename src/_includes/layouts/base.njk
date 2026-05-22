@@ -50,6 +50,7 @@
 {%- endif %}
 
   <script src="{{ (nav.prefix or '') }}{{ scriptJs or 'js/script.js' }}"></script>
+  <script src="/js/analytics.js"></script>
 {%- if extraScriptsBeforeCookieBanner %}
 {{ extraScriptsBeforeCookieBanner | indent(2, true) | safe }}
 {%- endif %}
