@@ -95,6 +95,15 @@ extraScriptsBeforeCookieBanner: |
         errorBox.textContent = '';
       }
 
+      // Stable, language-independent topic key derived from the select
+      // index. Order must match the <option> list in the form markup.
+      // Sends a product category only — never any personal data.
+      function topicKey() {
+        var sel = document.getElementById('cf-topic');
+        var keys = ['none','dc-air','ufs','ufs-ip67','oem','software','manufacturing','distribution','other'];
+        return (sel && keys[sel.selectedIndex]) || 'other';
+      }
+
       function openModal() {
         modal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
@@ -164,11 +173,20 @@ extraScriptsBeforeCookieBanner: |
           if (data.success) {
             form.reset();
             openModal();
+            if (window.athlosAnalytics) {
+              window.athlosAnalytics.track('contact_form_submit', { form_name: 'contact', form_topic: topicKey() });
+            }
           } else {
             showError('Something went wrong. Please try again or email us directly at info@athlos.fi.');
+            if (window.athlosAnalytics) {
+              window.athlosAnalytics.track('contact_form_error', { form_name: 'contact', error_type: 'api' });
+            }
           }
         } catch (err) {
           showError('Unable to send your message. Please try again or email us directly at info@athlos.fi.');
+          if (window.athlosAnalytics) {
+            window.athlosAnalytics.track('contact_form_error', { form_name: 'contact', error_type: 'network' });
+          }
         } finally {
           submitBtn.disabled = false;
           submitBtn.textContent = 'Send Message';

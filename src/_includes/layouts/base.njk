@@ -53,6 +53,7 @@
 {%- if extraScriptsBeforeCookieBanner %}
 {{ extraScriptsBeforeCookieBanner | indent(2, true) | safe }}
 {%- endif %}
+  <script src="/js/analytics.js"></script>
   <script src="/js/cookie-banner.js"></script>
 {%- if trailingScripts %}
 {{ trailingScripts | safe }}
