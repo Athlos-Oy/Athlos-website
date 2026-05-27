@@ -27,12 +27,12 @@
           "postProcessing": {
             "title": "Post-Processing Filters",
             "body": "Locally adaptive image enhancement and post-processing filter libraries. Developed and refined across dental, industrial, and medical imaging applications. Provided with the Athlos SDK and available for integration and customisation."
+          },
+          "sdkApi": {
+            "title": "Athlos SDK &amp; API",
+            "body": "C/C++ and DLL integration APIs with source-code examples, an evaluation GUI, and an advanced locally adaptive filter library. Contact Athlos for SDK access and licensing terms."
           }
         }
-      },
-      "sdk": {
-        "title": "Athlos SDK &amp; API",
-        "body": "C/C++ / DLL integration API with source code examples, evaluation GUI, and an advanced locally adaptive filter library. Contact Athlos to discuss SDK access and licensing."
       },
       "cta": {
         "headline": "Software licensing and integration questions.",

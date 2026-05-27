@@ -10,7 +10,7 @@
         "eyebrow": "Présentation",
         "headline": "Fabriqués en interne, du wafer au capteur.",
         "body1": "Athlos fabrique ses capteurs d'imagerie en interne et en partenariat avec la salle blanche VTT Micronova à Espoo — l'un des principaux environnements de nanofabrication d'Europe. Cette expertise de fabrication approfondie fait partie de ce qui distingue les capteurs Athlos&nbsp;: nous maîtrisons l'ensemble du processus, du matériau détecteur et du bump bonding jusqu'à l'assemblage final et la caractérisation.",
-        "body2": "La même infrastructure de fabrication qui soutient nos propres gammes de produits est disponible en tant que service. Athlos peut accompagner les projets de projets de partenaires et de clients OEM nécessitant une fabrication de détecteurs de précision, du bumping CMOS ou des procédés d'assemblage spécialisés.",
+        "body2": "La même infrastructure de fabrication qui soutient nos propres gammes de produits est disponible en tant que service. Athlos peut accompagner les projets de partenaires et de clients OEM nécessitant une fabrication de détecteurs de précision, du bumping CMOS ou des procédés d'assemblage spécialisés.",
         "imageAlt": "Wafer CMOS en silicium présentant un motif de grille de détecteur complexe"
       },
       "capabilities": {
@@ -27,7 +27,7 @@
           },
           "wire": {
             "title": "Câblage filaire",
-            "body": "Connexions par câblage filaire à haute densité, de la puce CMOS vers les circuits imprimés et les substrats de boîtier. Adapté aux configurations de capteurs à pas fin et de grand format."
+            "body": "Connexions par wire bonding à haute densité à haute densité, de la puce CMOS vers les circuits imprimés et les substrats de boîtier. Adapté aux configurations de capteurs à pas fin et de grand format."
           },
           "probing": {
             "title": "Test sous pointes et caractérisation par rayons X",

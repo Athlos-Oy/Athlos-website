@@ -10,7 +10,7 @@
         "eyebrow": "Panoramica",
         "headline": "Il livello software alla base dell'imaging a conversione diretta.",
         "body1": "Il team Athlos sviluppa software per imaging a raggi X sin dagli albori della conversione diretta — algoritmi di ricostruzione, filtri di elaborazione delle immagini e livelli di integrazione TWAIN, impiegati in migliaia di installazioni cliniche e industriali in tutto il mondo.",
-        "body2": "Queste funzionalità software sono disponibili come parte di un sistema di imaging Athlos completo, oppure come componenti disponibili in licenza in modo indipendente per l'integrazione in piattaforme di terze parti. Athlos fornisce inoltre accesso all'SDK e supporto diretto all'integrazione per clienti OEM e system integrator."
+        "body2": "Queste funzionalità software sono disponibili come parte di un sistema di imaging Athlos completo, oppure come componenti concessi in licenza separatamente per l'integrazione in piattaforme di terze parti. Athlos fornisce inoltre accesso all'SDK e supporto diretto all'integrazione per clienti OEM e system integrator."
       },
       "components": {
         "eyebrow": "Cosa è disponibile",
@@ -27,12 +27,12 @@
           "postProcessing": {
             "title": "Filtri di post-elaborazione",
             "body": "Librerie di filtri di miglioramento dell'immagine e post-elaborazione adattivi a livello locale. Sviluppate e perfezionate in applicazioni di imaging dentale, industriale e medicale. Fornite con l'Athlos SDK e disponibili per integrazione e personalizzazione."
+          },
+          "sdkApi": {
+            "title": "SDK e API Athlos",
+            "body": "API di integrazione C/C++ e DLL con esempi di codice sorgente, GUI di valutazione e una libreria avanzata di filtri adattivi a livello locale. Contatta Athlos per informazioni su accesso SDK e licenze software."
           }
         }
-      },
-      "sdk": {
-        "title": "Athlos SDK &amp; API",
-        "body": "API di integrazione C/C++ / DLL con esempi di codice sorgente, GUI di valutazione e un'avanzata libreria di filtri adattivi a livello locale. Contatta Athlos per discutere l'accesso all'SDK e le condizioni di licenza."
       },
       "cta": {
         "headline": "Domande su licenze software e integrazione.",

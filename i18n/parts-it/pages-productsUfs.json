@@ -17,7 +17,7 @@
         "body3": "Tutti i prodotti UFS includono l'SDK e le API Athlos, con integrazione tramite DLL.",
         "sdkCallout": {
           "title": "SDK e API Athlos",
-          "body": "Tutti i prodotti UFS includono l'SDK e API Athlos, con integrazione tramite DLL. Sono incluse un'interfaccia grafica di valutazione e una libreria avanzata di filtri di post-elaborazione."
+          "body": "Tutti i prodotti UFS includono l'SDK e le API Athlos, con integrazione tramite DLL. Sono incluse un'interfaccia grafica di valutazione e una libreria avanzata di filtri di post-elaborazione."
         },
         "imageAlt": "Scanner Athlos UFS – vista del prodotto su sfondo bianco"
       },
@@ -46,8 +46,8 @@
             "body": "Interfaccia GigE standard. Integrazione plug-and-play, adatta alle principali architetture di sistema. Supporta sia la modalità frame sia la modalità TDI."
           },
           "sdk": {
-            "title": "SDK &amp; API per integrazione OEM",
-            "body": "Athlos SDK completo con API C/C++, GUI di valutazione e libreria di filtri di post-elaborazione. Supporto all'integrazione per clienti OEM e system integrator."
+            "title": "SDK e API per integrazione OEM",
+            "body": "SDK Athlos completo con API C/C++, GUI di valutazione e libreria di filtri di post-elaborazione. Supporto all'integrazione per clienti OEM e system integrator."
           }
         }
       },
@@ -178,7 +178,7 @@
       },
       "cta": {
         "eyebrow": "Contattaci",
-        "headline": "Parla con Athlos dell'integrazione di Ultra-Fast Scanning Sensor.",
+        "headline": "Richiedi informazioni sull'integrazione dell'Ultra-Fast Scanning Sensor.",
         "body": "Per integrare Ultra-Fast Scanning Sensor in un nuovo sistema di imaging o per valutarne l'integrazione in una piattaforma esistente, il team Athlos offre supporto dalla definizione delle specifiche fino all'integrazione.",
         "buttonContact": "Contatta Athlos",
         "buttonAll": "Tutti i prodotti"

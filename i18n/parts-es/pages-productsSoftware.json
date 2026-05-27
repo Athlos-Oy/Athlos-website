@@ -27,12 +27,12 @@
           "postProcessing": {
             "title": "Filtros de postprocesado",
             "body": "Bibliotecas de filtros de mejora de imagen y postprocesado localmente adaptativos. Desarrolladas y refinadas a lo largo de aplicaciones de imagen dental, industrial y médica. Se proporcionan con el SDK de Athlos y están disponibles para integración y personalización."
+          },
+          "sdkApi": {
+            "title": "SDK y API de Athlos",
+            "body": "API de integración C/C++ y DLL con ejemplos de código fuente, interfaz gráfica de evaluación y una biblioteca avanzada de filtros con adaptación local. Contacte con Athlos para acceso al SDK y condiciones de licencia."
           }
         }
-      },
-      "sdk": {
-        "title": "SDK y API de Athlos",
-        "body": "API de integración C/C++/DLL con ejemplos de código fuente, GUI de evaluación y una biblioteca avanzada de filtros localmente adaptativos. Contacte con Athlos para hablar del acceso al SDK y las licencias."
       },
       "cta": {
         "headline": "Preguntas sobre licencias de software e integración.",

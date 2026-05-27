@@ -6,14 +6,14 @@
         "headline": "Industrial IP67 TDI – detector lineal de rayos X",
         "tagline": "Sistema radiográfico de escaneo ultrarrápido y alta robustez para los entornos de inspección industrial más exigentes.",
         "ctaSpecs": "Especificaciones técnicas",
-        "ctaDiscuss": "Hablar sobre su aplicación"
+        "ctaDiscuss": "Comentar su aplicación"
       },
       "overview": {
         "eyebrow": "Visión general",
         "headline": "Grado industrial.<br>Sin refrigeración.",
         "body1": "Industrial IP67 TDI es un array industrial de detectores lineales, diseñado para aplicaciones de escaneo rápido en entornos exigentes y de uso continuo. Protección IP67, sin refrigeración activa e imagen CdTe de conversión directa diseñada para entornos industriales: pensado para flujos de trabajo de inspección en línea en los que el tiempo de actividad, la sensibilidad y la estabilidad a largo plazo son determinantes.",
         "body2": "A diferencia de los sistemas detectores que dependen de refrigeración Peltier para gestionar la temperatura del sensor, Industrial IP67 TDI funciona sin refrigeración activa en todo su rango operativo gracias a su muy bajo consumo de energía y a su algoritmo patentado de calibración dinámica de offset integrado.",
-        "body3": "El modo TDI permite velocidades de línea de hasta 75.000 líneas por segundo, lo que admite velocidades de escaneo a la altura de las exigencias de la inspección de producción de alto rendimiento.",
+        "body3": "El modo TDI permite velocidades de línea de hasta 75.000 líneas por segundo, lo que admite velocidades de escaneo a la altura de las exigencias de la inspección en línea de alto rendimiento.",
         "imageAlt": "Vista de producto Industrial IP67 TDI"
       },
       "highlights": {
@@ -26,7 +26,7 @@
           },
           "02": {
             "title": "Sin refrigeración activa",
-            "body": "Sin células Peltier ni circuitos de refrigeración. Industrial IP67 TDI funciona dentro de su especificación completa entre 10 y 40 °C sin gestión térmica activa, lo que reduce la complejidad del sistema y los puntos de fallo. Esto es posible gracias al muy bajo consumo de energía y al algoritmo integrado de calibración dinámica de offset."
+            "body": "Sin células Peltier ni circuitos de refrigeración. Industrial IP67 TDI funciona dentro de su especificación completa entre 10 y 40 °C sin gestión térmica activa, lo que reduce la complejidad del sistema y los posibles puntos de fallo. Esto es posible gracias al muy bajo consumo de energía y al algoritmo integrado de calibración dinámica de offset."
           },
           "03": {
             "title": "Escaneo TDI ultrarrápido",
@@ -245,7 +245,7 @@
             "desc": "Longitud activa personalizada según los requisitos de la aplicación. Un módulo cuenta con tres híbridos de 25,6 mm; la longitud activa del módulo es de 76,8 mm. Hay longitudes activas disponibles desde 76,8 mm hasta 12 m."
           }
         },
-        "note": "Las tres configuraciones estándar están disponibles para plazos de entrega muy cortos. Pueden fabricarse longitudes activas personalizadas para cumplir requisitos específicos de aplicación: contacte con Athlos para hablar de sus requisitos dimensionales."
+        "note": "Las tres configuraciones estándar están disponibles con plazos de entrega muy cortos. Pueden fabricarse longitudes activas personalizadas para cumplir requisitos específicos de aplicación: contacte con Athlos para definir la configuración más adecuada para su aplicación."
       },
       "brochure": {
         "title": "Ficha técnica del producto Industrial IP67 TDI",

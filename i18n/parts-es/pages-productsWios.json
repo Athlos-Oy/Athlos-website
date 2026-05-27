@@ -5,13 +5,13 @@
         "category": "Dental intraoral",
         "headline": "DC-Air<sup>&reg;</sup>: sensor intraoral inalámbrico de rayos X",
         "tagline": "Imagen intraoral por rayos X de conversión directa True Wireless®.<br>Imágenes nítidas. Sin cable. Sin concesiones.",
-        "ctaPrimary": "Consulta para distribuidores",
+        "ctaPrimary": "Consultas de distribución",
         "ctaBrochure": "Descargar folleto"
       },
       "overview": {
         "eyebrow": "Visión general",
         "headline": "Libertad de movimiento.<br>Sin concesiones en la imagen.",
-        "body1": "DC-Air&reg;, el sensor intraoral inalámbrico, combina la tecnología Si-CMOS de conversión directa de Athlos con la conectividad inalámbrica Bluetooth 5.0. El resultado es un sensor intraoral True Wireless&reg; que aporta la nitidez de la conversión directa, la comodidad de las placas de fósforo y la agilidad del flujo de trabajo de un sistema con cable, sin el cable.",
+        "body1": "DC-Air&reg;, el sensor intraoral inalámbrico, combina la tecnología Si-CMOS de conversión directa de Athlos con la conectividad inalámbrica Bluetooth 5.0. El resultado es un sensor intraoral True Wireless&reg; que aporta la nitidez de la conversión directa, la comodidad de las placas de fósforo y la fluidez de trabajo de los sensores con cable, sin el cable.",
         "body2": "El sistema DC-Air&reg; incluye el sensor, una estación de carga magnética y el conjunto completo de soportes Zero Profile&reg;, desarrollados por odontólogos en colaboración con Athlos para un posicionamiento intraoral preciso y para la comodidad del paciente.",
         "imageAlt": "Sistema DC-Air® – estación de carga y conjunto de soportes Zero Profile",
         "specs": {
@@ -35,7 +35,7 @@
         "cards": {
           "wireless": {
             "title": "Flujo de trabajo True Wireless®",
-            "body": "Sin cable intraoral. Enlace inalámbrico Bluetooth 5.0 desde el sensor a la estación de carga y al PC. Alcance del sensor de hasta 3 metros. Reduce las molestias del paciente y simplifica el flujo de trabajo clínico."
+            "body": "Sin cable intraoral. Enlace inalámbrico Bluetooth 5.0 desde el sensor hasta la estación de carga y el PC y al PC. Alcance del sensor de hasta 3 metros. Reduce las molestias del paciente y simplifica el flujo de trabajo clínico."
           },
           "directConversion": {
             "title": "Imagen por conversión directa",
@@ -43,7 +43,7 @@
           },
           "zeroProfile": {
             "title": "Soportes Zero Profile®",
-            "body": "El conjunto de soportes Zero Profile®, diseñado a propósito, incluye soportes anteriores, posteriores, de aleta de mordida, endodónticos y oclusales. Alinea el sensor con precisión sin depender del cable para la angulación, diseñado para la comodidad del paciente y un posicionamiento repetible."
+            "body": "El conjunto de soportes Zero Profile®, diseñado a propósito, incluye soportes anteriores, posteriores, de aleta de mordida, endodónticos y oclusales. Facilita un posicionamiento preciso del sensor sin depender del cable para la angulación, diseñado para la comodidad del paciente y un posicionamiento repetible."
           },
           "battery": {
             "title": "Batería y seguridad",
@@ -55,7 +55,7 @@
           },
           "software": {
             "title": "Amplia compatibilidad de software",
-            "body": "El módulo TWAIN de DC-Air&reg; se integra con Dentrix Ascend, Eaglesoft, Open Dental, Dexis, TigerView, Romexis, Acteon, Apteryx, Dexis, XDR Radiology y muchas otras plataformas de imagen con soporte TWAIN."
+            "body": "El módulo TWAIN de DC-Air&reg; se integra con Dentrix Ascend, Eaglesoft, Open Dental, Dexis, TigerView, Romexis, Acteon, Apteryx, XDR Radiology y muchas otras plataformas de imagen con soporte TWAIN."
           }
         }
       },
@@ -134,7 +134,7 @@
         "button": "Descargar PDF"
       },
       "cta": {
-        "headline": "Sea distribuidor de DC-Air&reg;.",
+        "headline": "Conviértase en distribuidor de DC-Air&reg;.",
         "body": "DC-Air&reg; se distribuye a través de distribuidores y revendedores autorizados de imagen dental. Si representa a una empresa de distribución de productos dentales o a una red de distribuidores, nos gustaría evaluar una posible colaboración.",
         "regulatory": "DC-Air&reg; cuenta con autorización FDA 510(k) y el marcado CE está en proceso. El producto aún no se comercializa en Europa.",
         "oem": "Para consultas sobre licencias OEM o integración tecnológica, póngase en contacto con nosotros a través del mismo canal.",

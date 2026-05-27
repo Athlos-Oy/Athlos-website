@@ -13,8 +13,8 @@
         "eyebrow": "Überblick",
         "headline": "Ein Sensor.<br>Vielfältige Anwendungen.",
         "body1": "UFS ist ein vielseitiger Zeilenscansensor mit Direktkonversion, konzipiert für dentales Panoramaröntgen und Fernröntgenseitenbilder, industrielle Inline-Inspektion sowie automatisierte Röntgenprüfsysteme. Der Detektor besteht aus CdTe-Detektormaterial, das per Bump Bonding mit einem vollständig kundenspezifischen ASIC verbunden ist — eine Konfiguration, die in allen unterstützten Anwendungen eine außergewöhnliche Bildgebungsleistung liefert.",
-        "body2": "Das Ergebnis ist ein Sensor mit sehr hoher Schärfe und Auflösung, exzellenter Empfindlichkeit und Kontrastauflösung, Einzelphotonen-Empfindlichkeit und einem extrem weiten Dynamikumfang. UFS wird über Gigabit Ethernet angebunden und unterstützt sowohl Frame-Modus als auch TDI-Betrieb, wodurch er für ein breites Spektrum an Systemarchitekturen geeignet ist.",
-        "body3": "Alle UFS-Produkte enthalten das Athlos SDK und die API; die Integration über DLL.",
+        "body2": "Das Ergebnis ist ein Sensor mit sehr hoher Schärfe und Auflösung, exzellenter Empfindlichkeit und Kontrastauflösung, Einzelphotonen-Detektion und einem extrem weiten Dynamikumfang. UFS wird über Gigabit Ethernet angebunden und unterstützt sowohl Frame-Modus als auch TDI-Betrieb, wodurch er für ein breites Spektrum an Systemarchitekturen geeignet ist.",
+        "body3": "Alle UFS-Produkte enthalten das Athlos SDK und die API; die Integration erfolgt über DLL.",
         "sdkCallout": {
           "title": "Athlos SDK &amp; API",
           "body": "Alle UFS-Produkte enthalten das Athlos SDK &amp; die API. Die Integration über DLL. Eine grafische Auswerteoberfläche und eine umfangreiche Filterbibliothek zur Nachbearbeitung sind enthalten."
@@ -35,10 +35,10 @@
           },
           "dynamicRange": {
             "title": "Großer Dynamikumfang",
-            "body": "16 Bit Dynamikumfang sichern eine gleichbleibende Bildgebungsleistung bei sehr unterschiedlichen Schwächungsverhältnissen — entscheidend für dentale wie industrielle Anwendungen."
+            "body": "Ein Dynamikumfang von 16 Bit gewährleistet eine gleichbleibende Bildgebungsleistung bei sehr unterschiedlichen Schwächungsverhältnissen — entscheidend für dentale wie industrielle Anwendungen."
           },
           "singlePhoton": {
-            "title": "Einzelphotonen-Empfindlichkeit",
+            "title": "Einzelphotonen-Detektion",
             "body": "TDI-Betrieb mit Einzelphotonen-Detektion ermöglicht hochwertige Bildgebung bei reduzierter Dosis — ein spürbarer Vorteil sowohl in dentalen als auch in Inspektions-Workflows."
           },
           "gigE": {
@@ -54,7 +54,7 @@
       "models": {
         "eyebrow": "Produktfamilie",
         "headline": "Drei Modelle.<br>Unterschiedliche aktive Längen.",
-        "body1": "Die UFS-Familie umfasst drei Standard-Modellgrößen – UFS150, UFS225 und UFS460 – differenziert nach aktiver Länge. UFS und Industrial IP67 TDI sind dieselbe Direktkonversions-Detektorplattform; der Standard-UFS ist die Nicht-IP67-Version, vorgesehen für kontrollierte und integrierte Umgebungen.",
+        "body1": "Die UFS-Familie umfasst drei Standard-Modellgrößen – UFS150, UFS225 und UFS460 – differenziert nach aktiver Länge. UFS und Industrial IP67 TDI basieren auf derselben Detektorplattform mit Direktkonversion; der Standard-UFS ist die Nicht-IP67-Version, vorgesehen für kontrollierte und integrierte Umgebungen.",
         "body2": "Das modulare Design des UFS ermöglicht aktive Längen von 7,5 cm bis 12 m. Kontaktieren Sie uns für weitere Informationen und kundenspezifische Lösungen.",
         "imageAlt": "Ultra-Fast Scanning Sensor Familie – Leiterplatte im Studioformat",
         "cards": {

@@ -2,7 +2,7 @@
   "pages": {
     "productsWios": {
       "hero": {
-        "category": "Intraoral Dental",
+        "category": "Dental · intraoral",
         "headline": "DC-Air<sup>&reg;</sup>: Kabelloser Intraoral-Röntgensensor",
         "tagline": "True Wireless® Intraoral-Röntgenbildgebung mit Direktkonversion.<br>Gestochen scharfe Bilder. Ohne Kabel. Ohne Kompromisse.",
         "ctaPrimary": "Distributor-Anfrage",
@@ -55,7 +55,7 @@
           },
           "software": {
             "title": "Breite Softwarekompatibilität",
-            "body": "Das TWAIN-Modul für DC-Air&reg; integriert sich nahtlos in Dentrix Ascend, Eaglesoft, Open Dental, Dexis, TigerView, Romexis, Acteon, Apteryx, Dexis, XDR Radiology und viele weitere TWAIN-fähige Bildgebungsplattformen."
+            "body": "Das TWAIN-Modul für DC-Air&reg; integriert sich nahtlos in Dentrix Ascend, Eaglesoft, Open Dental, Dexis, TigerView, Romexis, Acteon, Apteryx, XDR Radiology und viele weitere TWAIN-fähige Bildgebungsplattformen."
           }
         }
       },
@@ -103,7 +103,7 @@
       "awards": {
         "eyebrow": "Auszeichnungen",
         "headline": "Preisgekrönte Technologie.",
-        "body": "DC-Air&reg; und die zugrunde liegende Direktkonversionstechnologie wurden mit anerkannten Auszeichnungen im Dental- und Gesundheitsbereich prämiert.",
+        "body": "DC-Air&reg; und die zugrunde liegende Direktkonversionstechnologie haben anerkannte Auszeichnungen im Dental- und Gesundheitsbereich erhalten.",
         "items": {
           "da2024Alt": "Dental Advisor 2024 Top Award Winner",
           "da2024Label": "Dental Advisor 2024 Top Award Winner",
@@ -136,7 +136,7 @@
       "cta": {
         "headline": "Werden Sie DC-Air&reg;-Vertriebspartner.",
         "body": "DC-Air&reg; ist über autorisierte Fachhändler und Distributoren für Dentalbildgebung erhältlich. Wenn Sie ein Vertriebsunternehmen oder ein Händlernetz für Dentalprodukte vertreten, freuen wir uns auf Ihre Kontaktaufnahme.",
-        "regulatory": "Der DC-Air&reg; ist FDA 510(k)-Freigabe; die CE-Kennzeichnung ist in Vorbereitung. Das Produkt ist in Europa noch nicht im Verkauf.",
+        "regulatory": "DC-Air&reg; verfügt über eine FDA 510(k)-Freigabe; die CE-Kennzeichnung ist in Vorbereitung. Das Produkt ist in Europa noch nicht erhältlich.",
         "oem": "Für Anfragen zu OEM-Lizenzierung oder Technologieintegration nutzen Sie bitte denselben Kontaktweg.",
         "contactBtn": "Athlos kontaktieren",
         "brochureBtn": "Broschüre herunterladen"

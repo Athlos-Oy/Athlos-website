@@ -18,7 +18,7 @@
         "cards": {
           "twain": {
             "title": "TWAIN-Modul",
-            "body": "Das Athlos-TWAIN-Modul integriert sich direkt in dentale und medizinische Bildgebungssoftware. Unterstützte Anwendungen umfassen Dentrix Ascend, Eaglesoft, Open Dental, Dexis, Romexis und viele weitere TWAIN-fähige Plattformen. Verfügbar als Teil einer Hardware-Lösung oder als eigenständige lizenzierte Komponente."
+            "body": "Das Athlos-TWAIN-Modul lässt sich direkt in dentale und medizinische Bildgebungssoftware integrieren. Unterstützte Anwendungen umfassen Dentrix Ascend, Eaglesoft, Open Dental, Dexis, Romexis und viele weitere TWAIN-fähige Plattformen. Verfügbar als Teil einer Hardware-Lösung oder als eigenständige lizenzierte Komponente."
           },
           "reconstruction": {
             "title": "Rekonstruktionsalgorithmen",
@@ -27,12 +27,12 @@
           "postProcessing": {
             "title": "Nachbearbeitungsfilter",
             "body": "Lokal adaptive Bibliotheken zur Bildverbesserung und Nachbearbeitung. Entwickelt und verfeinert in dentalen, industriellen und medizinischen Bildgebungsanwendungen. Bereitgestellt mit dem Athlos SDK und verfügbar zur Integration und Anpassung."
+          },
+          "sdkApi": {
+            "title": "Athlos SDK und API",
+            "body": "C/C++- und DLL-Integrations-APIs mit Quellcode-Beispielen, einer Evaluierungs-GUI und einer fortschrittlichen lokal adaptiven Filterbibliothek. Sprechen Sie Athlos auf SDK-Zugang und Lizenzbedingungen an."
           }
         }
-      },
-      "sdk": {
-        "title": "Athlos SDK &amp; API",
-        "body": "C/C++- / DLL-Integrations-API mit Quellcode-Beispielen, Evaluierungs-GUI und einer fortschrittlichen lokal adaptiven Filterbibliothek. Kontaktieren Sie Athlos, um SDK-Zugang und Lizenzierung zu besprechen."
       },
       "cta": {
         "headline": "Fragen zu Software-Lizenzierung und Integration.",

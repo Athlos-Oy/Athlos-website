@@ -27,15 +27,15 @@
           "postProcessing": {
             "title": "Filtres de post-traitement",
             "body": "Des bibliothèques de filtres d'amélioration d'image et de post-traitement à adaptation locale. Développées et affinées au fil des applications d'imagerie dentaire, industrielle et médicale. Fournies avec le SDK Athlos et disponibles pour l'intégration et la personnalisation."
+          },
+          "sdkApi": {
+            "title": "SDK et API Athlos",
+            "body": "API d'intégration C/C++ et DLL avec exemples de code source, interface graphique d'évaluation et bibliothèque avancée de filtres à adaptation locale. Contactez Athlos pour l'accès au SDK et les conditions de licence."
           }
         }
       },
-      "sdk": {
-        "title": "SDK et API Athlos",
-        "body": "API d'intégration C/C++ / DLL avec exemples de code source, interface graphique d'évaluation et bibliothèque avancée de filtres à adaptation locale. Contactez Athlos pour discuter de l'accès au SDK et des licences."
-      },
       "cta": {
-        "headline": "Questions sur les licences logicielles et d'intégration.",
+        "headline": "Questions sur les licences logicielles et l'intégration.",
         "body": "Que vous intégriez les logiciels Athlos à une plateforme existante ou que vous les évaluiez pour un nouveau système d'imagerie, l'équipe Athlos peut vous accompagner. Contactez-nous pour discuter des licences, de l'accès au SDK et des voies d'intégration.",
         "buttonContact": "Contacter Athlos",
         "buttonAll": "Tous les produits"

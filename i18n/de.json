@@ -133,7 +133,7 @@
           "ufs": {
             "market": "Dental · Medizin · Industrie",
             "name": "Ultra-Fast Scanning Sensor",
-            "desc": "Ultraschneller, einzelphotonenempfindlicher CdTe-CMOS-Scansensor für dentales Panoramaröntgen, Fernröntgenseitenbilder, medizinische und industrielle Bildgebung.",
+            "desc": "Ultraschneller, CdTe-CMOS-Scansensor mit Einzelphotonen-Detektion für dentales Panoramaröntgen, Fernröntgenseitenbilder, medizinische und industrielle Bildgebung.",
             "link": "Ultra-Fast Scanning Sensor ansehen",
             "imageAlt": "Athlos UFS ultraschneller Scansensor"
           },
@@ -163,7 +163,7 @@
       "manufacturing": {
         "eyebrow": "Fertigung &amp; Partnerschaft",
         "headline": "Gefertigt in Finnland.<br>Weltweit vertraut.",
-        "body": "Athlos-Sensoren werden im eigenen Werk und im Reinraum von VTT Micronova in Espoo gefertigt — einer der führenden Nanofabrikationsanlagen Europas. Vom CdTe-Bump-Bonden bis zur finalen Sensormontage kontrollieren wir den gesamten Prozess.",
+        "body": "Athlos-Sensoren werden im eigenen Werk und im Reinraum von VTT Micronova in Espoo gefertigt — einem der führenden Nanofabrikationsumfelder Europas. Vom CdTe-Bump-Bonden bis zur finalen Sensormontage kontrollieren wir den gesamten Prozess.",
         "pillars": {
           "cleanroom": {
             "title": "Reinraumfertigung",

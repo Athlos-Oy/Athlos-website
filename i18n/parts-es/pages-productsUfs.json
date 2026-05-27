@@ -12,9 +12,9 @@
       "overview": {
         "eyebrow": "Visión general",
         "headline": "Un sensor.<br>Múltiples aplicaciones.",
-        "body1": "UFS es un sensor lineal de escaneo de conversión directa multipropósito diseñado para imagen dental panorámica y cefalométrica, inspección industrial en línea y sistemas automatizados de inspección por rayos X. Está construido sobre material detector de CdTe unido al ASIC mediante bump bonding totalmente personalizado, una configuración que ofrece un rendimiento de imagen excepcional en todas las aplicaciones admitidas.",
-        "body2": "El resultado es un sensor con muy alta nitidez y resolución, sensibilidad y resolución de contraste excepcionales, capacidad de detección de fotón único y un rango dinámico extremadamente amplio. UFS se conecta mediante Gigabit Ethernet y admite tanto el modo frame como el modo TDI, lo que lo hace adecuado para una amplia variedad de arquitecturas de sistema.",
-        "body3": "Todos los productos UFS incluyen el SDK y la API de Athlos, y integración mediante DLL.",
+        "body1": "UFS es un sensor lineal de escaneo de conversión directa multipropósito diseñado para imagen dental panorámica y cefalométrica, inspección industrial en línea y sistemas automatizados de inspección por rayos X. Está construido sobre material detector CdTe unido mediante bump bonding a un ASIC totalmente personalizado y propietario totalmente personalizado, una configuración que ofrece un rendimiento de imagen excepcional en todas las aplicaciones admitidas.",
+        "body2": "El resultado es un sensor con muy alta nitidez y resolución, sensibilidad excepcional y alta resolución de contraste, capacidad de detección de fotón único y un rango dinámico extremadamente amplio. UFS se conecta mediante Gigabit Ethernet y admite tanto el modo frame como el modo TDI, lo que lo hace adecuado para una amplia variedad de arquitecturas de sistema.",
+        "body3": "Todos los productos UFS incluyen el SDK y la API de Athlos; la integración se realiza mediante DLL.",
         "sdkCallout": {
           "title": "SDK y API de Athlos",
           "body": "Todos los productos UFS incluyen el SDK y la API de Athlos. La integración se realiza mediante DLL. Se incluyen una interfaz gráfica de evaluación y una biblioteca avanzada de filtros de postprocesado."
@@ -27,11 +27,11 @@
         "cards": {
           "directConversion": {
             "title": "Conversión directa CdTe-CMOS",
-            "body": "Material detector de CdTe unido por bumping a un ASIC totalmente personalizado y propietario. Los rayos X se convierten directamente en señal, sin centellador y sin conversiones energéticas intermedias."
+            "body": "Material detector de CdTe unido mediante bump bonding a un ASIC totalmente personalizado y propietario. Los rayos X se convierten directamente en señal, sin centellador y sin conversiones energéticas intermedias."
           },
           "ultraFast": {
             "title": "Escaneo ultrarrápido",
-            "body": "Diseñado para velocidades de escaneo muy altas — 28 m/min a 100 µm, 180 m/min a 200 µm y hasta 1.700 m/min a 400 µm de resolución."
+            "body": "Diseñado para velocidades de escaneo muy altas — 28 m/min a 100 µm, 180 m/min a 200 µm y hasta 1.700 m/min con resolución de 400 µm."
           },
           "dynamicRange": {
             "title": "Amplio rango dinámico",
@@ -55,7 +55,7 @@
         "eyebrow": "Familia de productos",
         "headline": "Tres modelos.<br>Diferenciados por longitud activa.",
         "body1": "La familia UFS abarca tres modelos estándar — UFS150, UFS225 y UFS460 — diferenciados por longitud activa. UFS e Industrial IP67 TDI son dos versiones de la misma plataforma de detector de conversión directa; el UFS estándar es la versión no IP67, pensada para entornos controlados e integrados.",
-        "body2": "El diseño modular del UFS permite longitudes activas de 7,5 cm hasta 12 m. Póngase en contacto con nosotros para más información y propuestas personalizadas.",
+        "body2": "El diseño modular del UFS permite longitudes activas desde 7,5 cm hasta 12 m. Póngase en contacto con nosotros para más información y propuestas personalizadas.",
         "imageAlt": "Familia Ultra-Fast Scanning Sensor – placa de circuito en vista de estudio",
         "cards": {
           "ufs150": {
@@ -105,7 +105,7 @@
         "eyebrow": "Resumen técnico",
         "headline": "Una plataforma.<br>Dos niveles de protección.",
         "body1": "El Ultra-Fast Scanning Sensor e Industrial IP67 TDI son dos versiones de la misma plataforma de detector de conversión directa: idéntico rendimiento de adquisición, tecnología de sensor, velocidad de escaneo, resolución y capacidad TDI. El UFS estándar es la versión no IP67, pensada para entornos de imagen controlados e integrados.",
-        "body2": "Para protección IP67 — protegida contra el polvo y la inmersión temporal según IP67 — en entornos exigentes, húmedos o de lavado, consulte <a href=\"ufs-ip67.html\" style=\"color:var(--cyan);\">Industrial IP67 TDI</a>.",
+        "body2": "Para aplicaciones que requieren protección IP67 contra polvo e inmersión temporal en entornos exigentes, húmedos o de lavado, consulte <a href=\"ufs-ip67.html\" style=\"color:var(--cyan);\">Industrial IP67 TDI</a>.",
         "rows": {
           "pixelSize": {
             "label": "Tamaño de píxel",

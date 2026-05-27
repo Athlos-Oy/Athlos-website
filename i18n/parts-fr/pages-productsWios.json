@@ -3,7 +3,7 @@
     "productsWios": {
       "hero": {
         "category": "Dentaire intraoral",
-        "headline": "DC-Air<sup>&reg;</sup> Capteur intraoral à rayons X sans fil",
+        "headline": "DC-Air<sup>&reg;</sup> : capteur intraoral à rayons X sans fil",
         "tagline": "Imagerie intraorale par rayons X à conversion directe True Wireless®.<br>Des images d'une grande netteté. Aucun fil. Aucun compromis.",
         "ctaPrimary": "Demande de distribution",
         "ctaBrochure": "Télécharger la brochure"
@@ -43,7 +43,7 @@
           },
           "zeroProfile": {
             "title": "Porte-capteurs Zero Profile®",
-            "body": "Le jeu de porte-capteurs Zero Profile®, spécialement conçu, comprend les porte-capteurs antérieur, postérieur, rétrocoronaire, endodontique et occlusal. Il permet un positionnement précis du capteur sans dépendre du câble pour l'angulation — pensé pour le confort du patient et un positionnement reproductible."
+            "body": "Le jeu de porte-capteurs Zero Profile®, spécialement conçu, comprend des porte-capteurs pour vues antérieures, postérieures, rétrocoronaires, endodontiques et occlusales. Il permet un positionnement précis du capteur sans dépendre du câble pour l'angulation — pensé pour le confort du patient et un positionnement reproductible."
           },
           "battery": {
             "title": "Batterie et sécurité",
@@ -55,7 +55,7 @@
           },
           "software": {
             "title": "Large compatibilité logicielle",
-            "body": "Le module TWAIN du DC-Air&reg; s'intègre avec Dentrix Ascend, Eaglesoft, Open Dental, Dexis, TigerView, Romexis, Acteon, Apteryx, Dexis, XDR Radiology et bien d'autres plateformes d'imagerie compatibles TWAIN."
+            "body": "Le module TWAIN du DC-Air&reg; s'intègre avec Dentrix Ascend, Eaglesoft, Open Dental, Dexis, TigerView, Romexis, Acteon, Apteryx, XDR Radiology et bien d'autres plateformes d'imagerie compatibles TWAIN."
           }
         }
       },
@@ -136,7 +136,7 @@
       "cta": {
         "headline": "Devenez partenaire de distribution DC-Air&reg;.",
         "body": "DC-Air&reg; est disponible auprès de revendeurs et distributeurs agréés en imagerie dentaire. Si vous représentez une entreprise de distribution de produits dentaires ou un réseau de revendeurs, nous serions ravis d'échanger avec vous.",
-        "regulatory": "Le DC-Air&reg; est bénéficie d'une autorisation FDA 510(k), et le marquage CE est en cours. Le produit n'est pas encore commercialisé en Europe.",
+        "regulatory": "Le DC-Air&reg; bénéficie d'une autorisation FDA 510(k) ; le marquage CE est en cours. Le produit n'est pas encore commercialisé en Europe.",
         "oem": "Pour toute demande de licence OEM ou d'intégration technologique, veuillez nous contacter par le même canal.",
         "contactBtn": "Contacter Athlos",
         "brochureBtn": "Télécharger la brochure"

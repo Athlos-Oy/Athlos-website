@@ -133,14 +133,14 @@
           "ufs": {
             "market": "Dentaire · Médical · Industriel",
             "name": "Ultra-Fast Scanning Sensor",
-            "desc": "Capteur à balayage CdTe-CMOS ultra-rapide et avec détection du photon unique pour l'imagerie dentaire panoramique et céphalométrique, médicale et industrielle.",
+            "desc": "Capteur à balayage CdTe-CMOS ultra-rapide avec détection du photon unique pour l'imagerie dentaire panoramique et céphalométrique, médicale et industrielle.",
             "link": "Découvrir Ultra-Fast Scanning Sensor",
             "imageAlt": "Capteur à balayage ultra-rapide Athlos UFS"
           },
           "ufsIp67": {
             "market": "Imagerie industrielle",
             "name": "Industrial IP67 TDI",
-            "desc": "Détecteur à balayage TDI ultra-rapide certifié IP67 pour l'inspection en ligne continue dans les environnements industriels exigeants. Sans refroidissement actif.",
+            "desc": "Détecteur à balayage TDI ultra-rapide avec indice de protection IP67 pour l'inspection en ligne continue dans les environnements industriels exigeants. Sans refroidissement actif.",
             "link": "Découvrir Industrial IP67 TDI",
             "imageAlt": "Détecteur industriel robuste Athlos Industrial IP67 TDI"
           },

@@ -14,7 +14,7 @@
         "headline": "Un seul capteur.<br>De multiples applications.",
         "body1": "L'UFS est un capteur linéaire à balayage à conversion directe polyvalent, conçu pour l'imagerie dentaire panoramique et céphalométrique, l'inspection industrielle en ligne et les systèmes automatisés d'inspection par rayons X. Il repose sur un matériau détecteur CdTe assemblé par bump bonding à un ASIC entièrement personnalisé — une configuration qui offre des performances d'imagerie exceptionnelles dans toutes les applications prises en charge.",
         "body2": "Le résultat est un capteur offrant une très grande netteté et résolution, une sensibilité et une résolution de contraste remarquables, une capacité de détection du photon unique et une plage dynamique extrêmement large. L'UFS se connecte via Gigabit Ethernet et prend en charge à la fois le mode trame et le fonctionnement TDI, ce qui le rend adapté à un large éventail d'architectures de systèmes.",
-        "body3": "Tous les produits UFS incluent le SDK et l'API Athlos, et l'intégration via DLL.",
+        "body3": "Tous les produits UFS incluent le SDK et l'API Athlos ; l'intégration s'effectue via DLL.",
         "sdkCallout": {
           "title": "SDK et API Athlos",
           "body": "Tous les produits UFS incluent le SDK et l'API Athlos. L'intégration via DLL. Une interface graphique d'évaluation et une bibliothèque avancée de filtres de post-traitement sont incluses."
@@ -54,7 +54,7 @@
       "models": {
         "eyebrow": "Famille de produits",
         "headline": "Trois modèles.<br>Différenciés par longueur active.",
-        "body1": "La famille UFS comprend trois tailles de modèles standard — UFS150, UFS225 et UFS460 — différenciées par la longueur active. UFS et Industrial IP67 TDI sont deux versions de la même plateforme de détecteur à conversion directe ; le UFS standard est la version non-IP67, destinée aux environnements contrôlés et intégrés.",
+        "body1": "La famille UFS comprend trois modèles standard — UFS150, UFS225 et UFS460 — différenciées par la longueur active. UFS et Industrial IP67 TDI sont deux versions de la même plateforme de détecteur à conversion directe ; le UFS standard est la version non-IP67, destinée aux environnements contrôlés et intégrés.",
         "body2": "La conception modulaire de l'UFS permet des longueurs actives de 7,5 cm jusqu'à 12 m. Contactez-nous pour plus d'informations et des offres sur mesure.",
         "imageAlt": "Famille Ultra-Fast Scanning Sensor – vue studio de la carte électronique",
         "cards": {
@@ -159,7 +159,7 @@
       },
       "gallery": {
         "eyebrow": "Qualité d'image",
-        "headline": "Exemples d'imagerie.",
+        "headline": "Images d'exemple.",
         "tabs": {
           "panoramic": "Panoramique",
           "cephalo": "Céphalo"

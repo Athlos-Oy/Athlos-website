@@ -9,7 +9,7 @@
       "overview": {
         "eyebrow": "Visión general",
         "headline": "Fabricado internamente, de la oblea al sensor.",
-        "body1": "Athlos fabrica sus sensores de imagen internamente y en colaboración con la sala limpia de VTT Micronova en Espoo, uno de los entornos de nanofabricación líderes en Europa. Esta sólida capacidad de fabricación es parte de lo que diferencia a los sensores Athlos: controlamos el proceso completo, desde el material detector y la unión por bumping hasta el ensamblaje final y la caracterización.",
+        "body1": "Athlos fabrica sus sensores de imagen internamente y en colaboración con la sala limpia de VTT Micronova en Espoo, uno de los principales entornos de nanofabricación de Europa. Esta sólida capacidad de fabricación es parte de lo que diferencia a los sensores Athlos: controlamos el proceso completo, desde el material detector y la unión por bumping hasta el ensamblaje final y la caracterización.",
         "body2": "La misma infraestructura de fabricación que respalda nuestras propias líneas de producto está disponible como servicio. Athlos puede dar soporte a proyectos de socios y OEM que requieran fabricación de detectores de precisión, bumping CMOS o procesos de ensamblaje especializados.",
         "imageAlt": "Oblea de silicio CMOS con un patrón detallado de matriz de detector"
       },
@@ -26,7 +26,7 @@
             "body": "Interconexión flip chip de precisión entre el material detector y la lectura CMOS. Esencial para lograr el contacto eléctrico directo que hace posible la imagen por conversión directa."
           },
           "wire": {
-            "title": "Unión por hilo",
+            "title": "Wire bonding (unión por hilo)",
             "body": "Conexiones por hilo de alta densidad entre el chip CMOS y los sustratos de PCB y encapsulado. Adecuado para configuraciones de sensor de paso fino y gran formato."
           },
           "probing": {

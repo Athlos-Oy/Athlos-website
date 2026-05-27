@@ -11,9 +11,9 @@
       "overview": {
         "eyebrow": "Panoramica",
         "headline": "Adatto all'uso industriale.<br>Senza raffreddamento.",
-        "body1": "Industrial IP67 TDI è un array industriale di rivelatori lineari, progettato per applicazioni di scansione rapida in ambienti gravosi e a uso continuativo. Protezione IP67, assenza di raffreddamento attivo e acquisizione a conversione diretta basata su CdTe progettato per ambienti industriali — ingegnerizzato per flussi di ispezione in linea in cui contano disponibilità, sensibilità e stabilità a lungo termine.",
+        "body1": "Industrial IP67 TDI è un array industriale di rivelatori lineari, progettato per applicazioni di scansione rapida in ambienti gravosi e a uso continuativo. Protezione IP67, assenza di raffreddamento attivo e tecnologia di acquisizione a conversione diretta basata su CdTe, progettata per ambienti industriali — ingegnerizzato per flussi di ispezione in linea in cui contano disponibilità, sensibilità e stabilità a lungo termine.",
         "body2": "A differenza dei sistemi di rivelazione che si affidano al raffreddamento Peltier per gestire la temperatura del sensore, Industrial IP67 TDI opera senza raffreddamento attivo su tutto l'intervallo operativo, grazie al consumo energetico molto ridotto e all'algoritmo brevettato di calibrazione dinamica dell'offset integrato.",
-        "body3": "L'operatività in modalità TDI consente velocità di linea fino a 75.000 righe al secondo, supportando velocità di scansione all'altezza delle esigenze dell'ispezione in produzione ad alto throughput.",
+        "body3": "L'operatività in modalità TDI consente velocità di linea fino a 75.000 righe al secondo, supportando velocità di scansione all'altezza delle esigenze dell'ispezione in linea ad alto rendimento.",
         "imageAlt": "Vista del prodotto Industrial IP67 TDI"
       },
       "highlights": {
@@ -134,7 +134,7 @@
             "use1": "Rilevamento di corpi estranei",
             "use2": "Ispezione dell'integrità della sigillatura",
             "use3": "Verifica del livello di riempimento",
-            "use4": "Conteggio degli oggetti"
+            "use4": "Conteggio dei pezzi"
           },
           "pharma": {
             "industry": "Farmaceutico",
@@ -167,7 +167,7 @@
           "heavy": {
             "industry": "Industria pesante",
             "use1": "Ispezione di saldature strutturali",
-            "use2": "Rilevazione di porosità e cricche nelle tubazioni",
+            "use2": "Rilevamento di porosità e cricche nelle tubazioni",
             "use3": "Applicazioni di CT industriale",
             "use4": "CND su larga scala"
           }

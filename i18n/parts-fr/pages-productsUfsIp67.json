@@ -34,11 +34,11 @@
           },
           "04": {
             "title": "Conversion directe CdTe",
-            "body": "Imagerie à conversion directe CdTe avec 28 étages TDI. Une sensibilité exceptionnellement élevée, une large plage d'énergie (10–360 kV) et une plage dynamique de 16 bits pour les applications d'inspection exigeantes. Nous proposons également une solution sur mesure pour les LINAC, pour une utilisation à des énergies allant jusqu'à 9 MeV."
+            "body": "Imagerie à conversion directe CdTe avec 28 étages TDI. Le système offre une sensibilité exceptionnellement élevée, une large plage d'énergie (10–360 kV) et une plage dynamique de 16 bits pour les applications d'inspection exigeantes. Nous proposons également une solution sur mesure pour les LINAC, pour une utilisation à des énergies allant jusqu'à 9 MeV."
           },
           "05": {
             "title": "Contraste et sensibilité élevés",
-            "body": "Un fonctionnement TDI avec détection du photon unique. Une résolution de contraste supérieure permet la détection fiable de petits corps étrangers, de défauts structurels fins et d'éléments à faible atténuation."
+            "body": "Le fonctionnement TDI avec détection du photon unique permet une détection fiable de petits corps étrangers, de défauts structurels fins et d'éléments à faible atténuation grâce à une résolution de contraste supérieure."
           },
           "06": {
             "title": "Gigabit Ethernet",
@@ -167,7 +167,7 @@
           "heavy": {
             "industry": "Industrie lourde",
             "use1": "Contrôle des soudures structurelles",
-            "use2": "Détection de la porosité et des fissures des conduites",
+            "use2": "Détection de la porosité et des fissures dans les conduites",
             "use3": "Applications de CT industriel",
             "use4": "CND à grande échelle"
           }
@@ -245,7 +245,7 @@
             "desc": "Longueur active personnalisée selon les besoins de l'application. Un module comporte trois hybrides de 25,6 mm ; la longueur active du module est de 76,8 mm. Toute longueur active est disponible de 76,8 mm jusqu'à 12 m."
           }
         },
-        "note": "Les trois configurations standard sont disponibles pour une livraison quasi immédiate. Des longueurs actives personnalisées peuvent être fabriquées pour répondre à des besoins d'application spécifiques — contactez Athlos pour discuter de vos besoins de dimensionnement."
+        "note": "Les trois configurations standard sont disponibles pour une délais de livraison très courts. Des longueurs actives personnalisées peuvent être fabriquées pour répondre à des besoins d'application spécifiques — contactez Athlos pour discuter de vos besoins de dimensionnement."
       },
       "brochure": {
         "title": "Fiche technique du produit Industrial IP67 TDI",

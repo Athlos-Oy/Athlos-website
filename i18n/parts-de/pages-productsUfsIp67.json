@@ -4,14 +4,14 @@
       "hero": {
         "category": "Industrielle Bildgebung",
         "headline": "Industrial IP67 TDI – Zeilen-Scan-Röntgendetektor",
-        "tagline": "Robustes Röntgenscansystem für industrielle Hochgeschwindigkeitsprüfung für anspruchsvolle industrielle Inspektionsumgebungen.",
+        "tagline": "Robustes Hochgeschwindigkeits-Röntgenscansystem für anspruchsvolle industrielle Inspektionsumgebungen für anspruchsvolle industrielle Inspektionsumgebungen.",
         "ctaSpecs": "Technische Daten",
         "ctaDiscuss": "Anwendung mit Athlos besprechen"
       },
       "overview": {
         "eyebrow": "Überblick",
         "headline": "Industrietauglich.<br>Ohne Kühlung.",
-        "body1": "Industrial IP67 TDI ist ein industrielles Zeilendetektor-Array für schnelle Scananwendungen in rauen Umgebungen und im Dauerbetrieb. IP67-Schutz, ohne aktive Kühlung und CdTe-Direktkonversion in industrietauglicher Ausführung – ausgelegt für Inline-Inspektionsprozesse, in denen Verfügbarkeit, Empfindlichkeit und Langzeitstabilität entscheidend sind.",
+        "body1": "Industrial IP67 TDI ist ein industrielles Zeilendetektor-Array für schnelle Scananwendungen in rauen Umgebungen und im Dauerbetrieb. Mit IP67-Schutz, Betrieb ohne aktive Kühlung und CdTe-Direktkonversion in industrietauglicher Ausführung ist das System für Inline-Inspektionsprozesse ausgelegt, in denen Verfügbarkeit, Empfindlichkeit und Langzeitstabilität entscheidend sind.",
         "body2": "Anders als Detektorsysteme, die zur Regelung der Sensortemperatur auf Peltier-Kühlung angewiesen sind, arbeitet Industrial IP67 TDI über den gesamten Betriebsbereich ohne aktive Kühlung. Möglich machen dies die sehr geringe Leistungsaufnahme und ein patentierter, integrierter dynamischer Offset-Kalibrierungsalgorithmus.",
         "body3": "Der Betrieb im TDI-Modus ermöglicht Zeilenraten bis zu 75.000 Zeilen pro Sekunde – und damit Scangeschwindigkeiten, die den Anforderungen der Inspektion in Produktionslinien mit hohem Durchsatz gerecht werden.",
         "imageAlt": "Produktansicht Industrial IP67 TDI"
@@ -58,7 +58,7 @@
           "02": {
             "resolution": "Bei 200 <span style=\"text-transform:none\">µm</span>",
             "speed": "180",
-            "unit": "m/min – ausgewogener Durchsatz"
+            "unit": "m/min – ausgewogenes Verhältnis aus Geschwindigkeit und Auflösung"
           },
           "03": {
             "resolution": "Bei 400 <span style=\"text-transform:none\">µm</span>",
@@ -242,7 +242,7 @@
           "custom": {
             "name": "UFS-xxx IP67NC",
             "ref": "UFS-xxxIP67NC-44-TDI-HVS",
-            "desc": "Kundenspezifische aktive Länge nach Anwendungsanforderung. Ein Modul enthält drei 25,6-mm-Hybride; die aktive Länge eines Moduls beträgt 76,8 mm. Jede aktive Länge von 76,8 mm bis 12 m ist verfügbar."
+            "desc": "Kundenspezifische aktive Länge nach Anwendungsanforderung. Ein Modul enthält drei 25,6-mm-Hybride; die aktive Länge eines Moduls beträgt 76,8 mm. Aktive Längen von 76,8 mm bis 12 m sind verfügbar."
           }
         },
         "note": "Die drei Standardkonfigurationen sind sehr kurzfristig lieferbar. Kundenspezifische aktive Längen lassen sich nach den jeweiligen Anwendungsanforderungen fertigen – sprechen Sie mit Athlos über Ihre Längenanforderungen."
