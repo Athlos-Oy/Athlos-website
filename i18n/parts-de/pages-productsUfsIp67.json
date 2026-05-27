@@ -4,14 +4,14 @@
       "hero": {
         "category": "Industrielle Bildgebung",
         "headline": "Industrial IP67 TDI",
-        "tagline": "Robuste, ultraschnelle Scanning-Röntgenbildgebung für anspruchsvolle industrielle Inspektionsumgebungen.",
+        "tagline": "Robustes, ultraschnelles Scanning-Röntgensystem für anspruchsvolle industrielle Inspektionsumgebungen.",
         "ctaSpecs": "Technische Daten",
         "ctaDiscuss": "Anwendung besprechen"
       },
       "overview": {
         "eyebrow": "Überblick",
         "headline": "Industrietauglich.<br>Ohne Kühlung.",
-        "body1": "Industrial IP67 TDI ist ein industrielles Zeilendetektor-Array für schnelle Scananwendungen in rauen Umgebungen und im Dauerbetrieb. IP67-Schutz, ohne aktive Kühlung und robuste CdTe-Bildgebung mit Direktkonversion – ausgelegt für Inline-Inspektionsprozesse, in denen Verfügbarkeit, Empfindlichkeit und Langzeitstabilität entscheidend sind.",
+        "body1": "Industrial IP67 TDI ist ein industrielles Zeilendetektor-Array für schnelle Scananwendungen in rauen Umgebungen und im Dauerbetrieb. IP67-Schutz, ohne aktive Kühlung und CdTe-Direktkonversion in industrietauglicher Ausführung – ausgelegt für Inline-Inspektionsprozesse, in denen Verfügbarkeit, Empfindlichkeit und Langzeitstabilität entscheidend sind.",
         "body2": "Anders als Detektorsysteme, die zur Regelung der Sensortemperatur auf Peltier-Kühlung angewiesen sind, arbeitet Industrial IP67 TDI über den gesamten Betriebsbereich ohne aktive Kühlung. Möglich machen dies die sehr geringe Leistungsaufnahme und ein patentierter, integrierter dynamischer Offset-Kalibrierungsalgorithmus.",
         "body3": "Der Betrieb im TDI-Modus ermöglicht Zeilenraten bis zu 75.000 Zeilen pro Sekunde – und damit Scangeschwindigkeiten, die den Anforderungen der Inspektion in Produktionslinien mit hohem Durchsatz gerecht werden.",
         "imageAlt": "Produktansicht Industrial IP67 TDI"
@@ -186,7 +186,7 @@
       },
       "models": {
         "eyebrow": "Produktfamilie",
-        "headline": "Drei Varianten.<br>Derselbe robuste Kern.",
+        "headline": "Drei Varianten.<br>Dieselbe robuste Plattform.",
         "cards": {
           "ufs150": {
             "name": "UFS-150 IP67NC",

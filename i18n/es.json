@@ -78,7 +78,7 @@
         "ctaAbout": "Sobre Athlos"
       },
       "statement": {
-        "headline": "Nuestro equipo inventó la Conversión Directa.<br>Durante más de 30 años, los sensores de conversión directa han definido<br>el significado de imagen por rayos X de precisión e Image Accuracy.",
+        "headline": "Nuestro equipo inventó la Conversión Directa.<br>Durante más de 30 años, los sensores de conversión directa han definido<br>el significado de imagen por rayos X de precisión y de fidelidad de imagen.",
         "body": "Al eliminar el centellador y convertir los rayos X directamente en pulsos eléctricos, los sensores y arrays lineales de Athlos eliminan la causa principal del deterioro de la imagen. El resultado: mayor nitidez en los detalles, contraste más fiel y rendimiento fiable en todo el rango de dosis.",
         "stats": {
           "invented": {
@@ -107,7 +107,7 @@
         "eyebrow": "La ciencia detrás del rendimiento",
         "headline": "Conversión directa.<br>Sin pasos intermedios.<br>Sin concesiones.",
         "body1": "Los sensores de rayos X convencionales dependen de un centellador que convierte primero los rayos X en luz visible, la cual entra a continuación en un fotodiodo con un factor de llenado limitado y se transforma en un pulso eléctrico. Esta conversión no directa, de rayos X a luz y de luz a pulso eléctrico, introduce un desenfoque importante, pérdida de señal (factor de llenado muy inferior al 100 %) y fotones de rayos X no detectados (debido a la DQE limitada de los centelladores).",
-        "body2": "Los sensores de Athlos utilizan híbridos CdTe-CMOS y Si-CMOS de conversión directa que transforman los fotones de rayos X directamente en pulsos eléctricos manteniendo la precisión puntual. Sin luz dispersa no hay pérdida de precisión puntual. Sin conversión a luz. Sin capa de fósforo. Sin desenfoque innecesario. Sin pérdida de señal ni de contraste.",
+        "body2": "Los sensores de Athlos utilizan híbridos CdTe-CMOS y Si-CMOS de conversión directa que transforman los fotones de rayos X directamente en pulsos eléctricos manteniendo la precisión espacial. Sin luz dispersa no hay pérdida de fidelidad espacial. Sin conversión a luz. Sin capa de fósforo. Sin desenfoque innecesario. Sin pérdida de señal ni de contraste.",
         "videoAria": "Visualización del proceso de conversión directa de los sensores Athlos",
         "features": {
           "cdte": "Materiales de conversión directa CdTe y Si",

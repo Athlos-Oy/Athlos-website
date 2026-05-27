@@ -107,7 +107,7 @@
         "eyebrow": "La science derrière la performance",
         "headline": "Conversion directe.<br>Aucune étape intermédiaire.<br>Aucun compromis.",
         "body1": "Les capteurs à rayons X classiques utilisent un scintillateur pour convertir d'abord les rayons X en lumière visible, laquelle pénètre ensuite dans une photodiode au facteur de remplissage limité avant d'être convertie en impulsion électrique. Cette conversion indirecte — des rayons X vers la lumière, puis de la lumière vers l'impulsion électrique — introduit un flou important, une perte de signal (un facteur de remplissage bien inférieur à 100&nbsp;%) et des rayons X non détectés (en raison de la DQE limitée des scintillateurs).",
-        "body2": "Les capteurs Athlos reposent sur des hybrides à conversion directe CdTe-CMOS et Si-CMOS qui convertissent les photons X directement en impulsions électriques tout en préservant la précision ponctuelle. Sans lumière diffusée, aucune perte de précision ponctuelle. Aucune conversion lumineuse. Aucune couche de phosphore. Aucun flou superflu. Aucune perte de signal ni de contraste.",
+        "body2": "Les capteurs Athlos reposent sur des hybrides à conversion directe CdTe-CMOS et Si-CMOS qui convertissent les photons X directement en impulsions électriques tout en préservant la précision spatiale. Sans lumière diffusée, aucune perte de fidélité spatiale. Aucune conversion lumineuse. Aucune couche de phosphore. Aucun flou superflu. Aucune perte de signal ni de contraste.",
         "videoAria": "Visualisation du processus de conversion directe d'un capteur Athlos",
         "features": {
           "cdte": "Matériaux à conversion directe CdTe et Si",

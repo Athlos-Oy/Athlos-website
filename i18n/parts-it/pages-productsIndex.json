@@ -40,7 +40,7 @@
       },
       "categories": {
         "eyebrow": "Categorie di prodotti",
-        "headline": "Trovi il prodotto giusto<br>per la sua applicazione.",
+        "headline": "Trova il prodotto giusto<br>per la tua applicazione.",
         "dental": {
           "label": "Dentale",
           "name": "Imaging intraorale &amp;<br>panoramico",
@@ -69,9 +69,9 @@
         }
       },
       "cta": {
-        "eyebrow": "Si metta in contatto",
-        "headline": "Non sa quale prodotto si adatti alla sua applicazione?",
-        "body": "Athlos collabora strettamente con OEM e integratori di sistemi per individuare la soluzione giusta. Ci illustri i suoi requisiti di imaging e la aiuteremo a trovare il percorso più adatto.",
+        "eyebrow": "Mettiti in contatto",
+        "headline": "Non sai quale prodotto si adatta alla tua applicazione?",
+        "body": "Athlos collabora strettamente con OEM e integratori di sistemi per individuare la soluzione giusta. Raccontaci i tuoi requisiti di imaging e ti aiuteremo a trovare il percorso più adatto.",
         "button": "Contatta Athlos"
       },
       "lastUpdated": {

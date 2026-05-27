@@ -78,13 +78,13 @@
       },
       "hero": {
         "eyebrow": "Imaging a raggi X a conversione diretta",
-        "headline": "Conversione diretta,<br>vantaggio diretto.",
+        "headline": "Conversione diretta.<br>Prestazioni superiori.",
         "sub": "Athlos sviluppa e produce sensori avanzati per imaging a raggi X — con qualità d'immagine superiore, maggiore sensibilità e acquisizione più rapida per applicazioni dentali, medicali e industriali.",
         "ctaProducts": "Scopri i prodotti",
         "ctaAbout": "Chi è Athlos"
       },
       "statement": {
-        "headline": "Il nostro team ha inventato la Conversione Diretta.<br>Da oltre 30 anni, i sensori a conversione diretta definiscono<br>cosa significhino imaging a raggi X preciso e Image Accuracy.",
+        "headline": "Il nostro team ha inventato la Conversione Diretta.<br>Da oltre 30 anni, i sensori a conversione diretta definiscono<br>cosa significhino diagnostica a raggi X di precisione e fedeltà dell'immagine.",
         "body": "Eliminando lo scintillatore e convertendo i raggi X direttamente in impulsi elettrici, i sensori e gli array lineari Athlos eliminano la causa principale del degrado dell'immagine. Il risultato: dettagli più nitidi, contrasto più fedele e prestazioni affidabili su tutto l'intervallo di dose.",
         "stats": {
           "invented": {
@@ -113,7 +113,7 @@
         "eyebrow": "La scienza dietro le prestazioni",
         "headline": "Conversione diretta.<br>Nessun passaggio intermedio.<br>Nessun compromesso.",
         "body1": "I sensori a raggi X convenzionali si affidano a uno scintillatore che converte prima i raggi X in luce visibile, la quale entra poi in un fotodiodo con fattore di riempimento limitato e viene convertita in un impulso elettrico. Questa conversione non diretta — da raggi X a luce e da luce a impulso elettrico — introduce sfocatura significativa, perdita di segnale (fattore di riempimento molto inferiore al 100%) e fotoni X non rilevati (a causa della DQE limitata degli scintillatori).",
-        "body2": "I sensori Athlos utilizzano ibridi CdTe-CMOS e Si-CMOS a conversione diretta che convertono i fotoni X direttamente in impulsi elettrici, mantenendo l'accuratezza puntuale. Nessuna luce diffusa significa nessuna perdita di accuratezza puntuale. Nessuna conversione di luce. Nessuno strato di fosforo. Nessuna sfocatura inutile. Nessuna perdita di segnale e di contrasto.",
+        "body2": "I sensori Athlos utilizzano ibridi CdTe-CMOS e Si-CMOS a conversione diretta che convertono i fotoni X direttamente in impulsi elettrici, mantenendo la fedeltà spaziale. Nessuna luce diffusa significa nessuna perdita di precisione spaziale. Nessuna conversione di luce. Nessuno strato di fosforo. Nessuna sfocatura inutile. Nessuna perdita di segnale e di contrasto.",
         "videoAria": "Visualizzazione del processo di conversione diretta dei sensori Athlos",
         "features": {
           "cdte": "Materiali a conversione diretta CdTe e Si",
@@ -138,7 +138,7 @@
           "ufs": {
             "market": "Dentale · Medicale · Industriale",
             "name": "Ultra-Fast Scanning Sensor",
-            "desc": "Sensore di scansione CdTe-CMOS ultra-rapido e sensibile al singolo fotone per imaging dentale panoramico, cefalometrico, medicale e industriale.",
+            "desc": "Sensore di scansione CdTe-CMOS ultra-rapido con rilevamento del singolo fotone per radiografia dentale panoramica, cefalometrica, medicale e industriale.",
             "link": "Scopri Ultra-Fast Scanning Sensor",
             "imageAlt": "Sensore di scansione ultra-rapido Athlos UFS"
           },
@@ -188,7 +188,7 @@
       "cta": {
         "eyebrow": "Collabora con Athlos",
         "headline": "Pronto a muoversi più rapidamente<br>e a ottenere prestazioni migliori?",
-        "body": "Che stia sviluppando sistemi di imaging di nuova generazione o potenziando piattaforme esistenti, Athlos offre la tecnologia, l'esperienza e il supporto a lungo termine per il Suo successo.",
+        "body": "Che si tratti di sviluppare sistemi di imaging di nuova generazione o di potenziare piattaforme esistenti, Athlos offre la tecnologia, l'esperienza e il supporto a lungo termine necessari per portare avanti il progetto con successo.",
         "button": "Contatta Athlos",
         "location": "Espoo, Finlandia"
       },
@@ -224,26 +224,26 @@
     },
     "contact": {
       "title": "Contatta Athlos – Sensori per imaging a raggi X",
-      "description": "Contatti Athlos per richieste di prodotto, integrazione OEM, licenze software o partnership produttive. Sede a Espoo, Finlandia.",
+      "description": "Contatta Athlos per richieste di prodotto, integrazione OEM, licenze software o partnership produttive. Sede a Espoo, Finlandia.",
       "og": {
         "title": "Contatta Athlos – Sensori per imaging a raggi X",
-        "description": "Contatti Athlos per richieste di prodotto, integrazione OEM, licenze software o partnership produttive. Sede a Espoo, Finlandia."
+        "description": "Contatta Athlos per richieste di prodotto, integrazione OEM, licenze software o partnership produttive. Sede a Espoo, Finlandia."
       },
       "twitter": {
         "title": "Contatta Athlos – Sensori per imaging a raggi X",
-        "description": "Contatti Athlos per richieste di prodotto, integrazione OEM, licenze software o partnership produttive. Sede a Espoo, Finlandia."
+        "description": "Contatta Athlos per richieste di prodotto, integrazione OEM, licenze software o partnership produttive. Sede a Espoo, Finlandia."
       }
     },
     "privacy": {
       "title": "Informativa sulla privacy – Athlos Oy",
-      "description": "Informativa sulla privacy di Athlos Oy. Scopra come raccogliamo, trattiamo e condividiamo i Suoi dati personali e quali sono i Suoi diritti.",
+      "description": "Informativa sulla privacy di Athlos Oy. Scopri come raccogliamo, trattiamo e condividiamo i dati personali e quali sono i diritti dell'utente.",
       "og": {
         "title": "Informativa sulla privacy – Athlos Oy",
-        "description": "Informativa sulla privacy di Athlos Oy. Scopra come raccogliamo, trattiamo e condividiamo i Suoi dati personali e quali sono i Suoi diritti."
+        "description": "Informativa sulla privacy di Athlos Oy. Scopri come raccogliamo, trattiamo e condividiamo i dati personali e quali sono i diritti dell'utente."
       },
       "twitter": {
         "title": "Informativa sulla privacy – Athlos Oy",
-        "description": "Informativa sulla privacy di Athlos Oy. Scopra come raccogliamo, trattiamo e condividiamo i Suoi dati personali e quali sono i Suoi diritti."
+        "description": "Informativa sulla privacy di Athlos Oy. Scopri come raccogliamo, trattiamo e condividiamo i dati personali e quali sono i diritti dell'utente."
       }
     },
     "productsIndex": {

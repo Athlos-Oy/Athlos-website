@@ -4,20 +4,20 @@
       "hero": {
         "category": "Dentale · Medicale · Industriale",
         "headline": "Ultra-Fast<br>Scanning Sensor",
-        "tagline": "Sensore di scansione a conversione diretta ultrarapido per imaging a raggi X ad alta velocità e alta sensibilità.",
+        "tagline": "Sensore di scansione a conversione diretta ultrarapido per acquisizione radiografica ad alta velocità e alta sensibilità.",
         "ctaExplore": "Scopri Ultra-Fast Scanning Sensor",
-        "ctaDiscuss": "Discuti l'integrazione",
+        "ctaDiscuss": "Parla con noi dell'integrazione",
         "imageAlt": "Ultra-Fast Scanning Sensor – vista in dettaglio del circuito stampato"
       },
       "overview": {
         "eyebrow": "Panoramica",
         "headline": "Un sensore.<br>Molteplici applicazioni.",
-        "body1": "UFS è un sensore di scansione lineare a conversione diretta multifunzione, progettato per radiografia panoramica e cefalometria dentale, ispezione industriale in linea e sistemi automatizzati di ispezione a raggi X. È realizzato con materiale rivelatore CdTe bump-bonded su un ASIC full-custom — una configurazione che offre prestazioni di imaging eccezionali in tutte le applicazioni supportate.",
-        "body2": "Il risultato è un sensore con nitidezza e risoluzione molto elevate, sensibilità e risoluzione di contrasto eccellenti, prestazioni con sensibilità al singolo fotone e una gamma dinamica estremamente ampia. UFS si collega tramite Gigabit Ethernet e supporta sia la modalità frame sia il funzionamento TDI, risultando adatto a un'ampia gamma di architetture di sistema.",
-        "body3": "Tutti i prodotti UFS includono l'Athlos SDK e l'API; l'integrazione è supportata tramite DLL.",
+        "body1": "UFS è un sensore di scansione lineare a conversione diretta multifunzione, progettato per radiografia panoramica e cefalometria dentale, ispezione industriale in linea e sistemi automatizzati di ispezione a raggi X. È realizzato con rivelatore in CdTe con bump bonding su un ASIC full-custom — una configurazione che offre prestazioni di acquisizione eccezionali in tutte le applicazioni supportate.",
+        "body2": "Il risultato è un sensore con nitidezza e risoluzione molto elevate, sensibilità e risoluzione di contrasto eccellenti, capacità di rilevare singoli fotoni e una gamma dinamica estremamente ampia. UFS si collega tramite Gigabit Ethernet e supporta sia la modalità frame sia il funzionamento TDI, risultando adatto a un'ampia gamma di architetture di sistema.",
+        "body3": "Tutti i prodotti UFS includono l'Athlos SDK e l'API, con integrazione tramite DLL.",
         "sdkCallout": {
           "title": "Athlos SDK &amp; API",
-          "body": "Tutti i prodotti UFS includono l'Athlos SDK &amp; API. L'integrazione è supportata tramite DLL. Sono incluse un'interfaccia grafica di valutazione e una libreria avanzata di filtri di post-elaborazione."
+          "body": "Tutti i prodotti UFS includono l'Athlos SDK &amp; API, con integrazione tramite DLL. Sono incluse un'interfaccia grafica di valutazione e una libreria avanzata di filtri di post-elaborazione."
         },
         "imageAlt": "Scanner Athlos UFS – vista del prodotto su sfondo bianco"
       },
@@ -27,7 +27,7 @@
         "cards": {
           "directConversion": {
             "title": "Conversione diretta CdTe-CMOS",
-            "body": "Materiale rivelatore CdTe bump-bonded su un ASIC full-custom proprietario. I raggi X vengono convertiti direttamente in segnale — senza scintillatore, senza perdita di energia intermedia."
+            "body": "Rivelatore in CdTe con bump bonding su un ASIC full-custom proprietario. I raggi X vengono convertiti direttamente in segnale — senza scintillatore, senza conversioni energetiche intermedie."
           },
           "ultraFast": {
             "title": "Scansione ultrarapida",
@@ -38,15 +38,15 @@
             "body": "Una gamma dinamica a 16 bit garantisce prestazioni di imaging costanti in condizioni di attenuazione molto diverse — fondamentale per le applicazioni dentali e industriali."
           },
           "singlePhoton": {
-            "title": "Sensibilità al singolo fotone",
-            "body": "Le prestazioni TDI con sensibilità al singolo fotone consentono un imaging di alta qualità a dose ridotta — un vantaggio significativo sia nei flussi di lavoro dentali sia in quelli di ispezione."
+            "title": "Rilevamento del singolo fotone",
+            "body": "Le prestazioni TDI con rilevamento del singolo fotone consentono immagini di alta qualità a dose ridotta — un vantaggio significativo sia nei flussi di lavoro dentali sia in quelli di ispezione."
           },
           "gigE": {
             "title": "Gigabit Ethernet",
-            "body": "Interfaccia GigE standard. Posizionamento plug-and-ready, integrazione semplice nelle architetture di sistema. Supporta sia la modalità frame sia la modalità TDI."
+            "body": "Interfaccia GigE standard. Integrazione plug-and-play, semplice in qualsiasi architettura di sistema. Supporta sia la modalità frame sia la modalità TDI."
           },
           "sdk": {
-            "title": "SDK &amp; API pronti",
+            "title": "SDK &amp; API per integrazione OEM",
             "body": "Athlos SDK completo con API C/C++, GUI di valutazione e libreria di filtri di post-elaborazione. Supporto all'integrazione per clienti OEM e system integrator."
           }
         }
@@ -55,7 +55,7 @@
         "eyebrow": "Famiglia di prodotti",
         "headline": "Tre modelli.<br>Larghezze attive selezionabili.",
         "body1": "La famiglia UFS comprende tre dimensioni di modello — UFS150, UFS225 e UFS460 — con larghezze attive selezionabili da 3,2 mm a 5,2 mm a seconda dei requisiti applicativi.",
-        "body2": "Il design modulare dell'UFS consente lunghezze attive da 7,5 cm fino a 10 m. Ci contatti per ulteriori informazioni e proposte personalizzate.",
+        "body2": "Il design modulare dell'UFS consente lunghezze attive da 7,5 cm fino a 10 m. Contattaci per ulteriori informazioni e proposte personalizzate.",
         "imageAlt": "Famiglia Ultra-Fast Scanning Sensor – vista studio del circuito stampato",
         "cards": {
           "ufs150": {
@@ -84,7 +84,7 @@
           "ufsxxx": {
             "name": "UFSxxx",
             "ref": "Personalizzato in base alle esigenze del cliente",
-            "body": "L'UFS è composto da moduli; ogni modulo comprende tre ibridi, ciascuno lungo 25,6 mm. Un modulo offre 76,8 mm di lunghezza attiva. Qualunque sia il requisito di lunghezza attiva della Sua applicazione, Athlos è in grado di fornirla."
+            "body": "L'UFS è composto da moduli; ogni modulo comprende tre ibridi, ciascuno lungo 25,6 mm. Un modulo offre 76,8 mm di lunghezza attiva. Qualunque sia la lunghezza attiva richiesta dall'applicazione, Athlos è in grado di fornirla."
           }
         }
       },
@@ -111,7 +111,7 @@
       },
       "gallery": {
         "eyebrow": "Qualità dell'immagine",
-        "headline": "Esempi di imaging.",
+        "headline": "Esempi di acquisizione.",
         "tabs": {
           "panoramic": "Panoramica",
           "cephalo": "Cefalometrica"
@@ -130,8 +130,8 @@
       },
       "cta": {
         "eyebrow": "Contattaci",
-        "headline": "Parli con Athlos dell'integrazione di Ultra-Fast Scanning Sensor.",
-        "body": "Sia che stia integrando Ultra-Fast Scanning Sensor in un nuovo sistema di imaging, sia che lo stia valutando per una piattaforma esistente, il team di Athlos può supportarLa dalla specifica fino all'integrazione.",
+        "headline": "Parla con Athlos dell'integrazione di Ultra-Fast Scanning Sensor.",
+        "body": "Per integrare Ultra-Fast Scanning Sensor in un nuovo sistema di imaging o per valutarlo su una piattaforma esistente, il team Athlos offre supporto dalla definizione delle specifiche fino all'integrazione.",
         "buttonContact": "Contatta Athlos",
         "buttonAll": "Tutti i prodotti"
       },

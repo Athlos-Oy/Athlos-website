@@ -4,14 +4,14 @@
       "hero": {
         "category": "Imaging industriale",
         "headline": "Industrial IP67 TDI",
-        "tagline": "Imaging a raggi X ultraveloce e robusto per ambienti di ispezione industriale più esigenti.",
+        "tagline": "Sistema radiografico ultraveloce e ad alta robustezza per gli ambienti di ispezione industriale più esigenti.",
         "ctaSpecs": "Specifiche tecniche",
-        "ctaDiscuss": "Discuti l'applicazione"
+        "ctaDiscuss": "Parla con Athlos della tua applicazione"
       },
       "overview": {
         "eyebrow": "Panoramica",
         "headline": "Adatto all'uso industriale.<br>Senza raffreddamento.",
-        "body1": "Industrial IP67 TDI è un array di rivelatori lineari industriale, progettato per applicazioni di scansione rapida in ambienti gravosi e a uso continuativo. Protezione IP67, senza raffreddamento attivo e imaging robusto a conversione diretta su CdTe — ingegnerizzato per flussi di ispezione in linea in cui contano disponibilità, sensibilità e stabilità a lungo termine.",
+        "body1": "Industrial IP67 TDI è un array industriale di rivelatori lineari, progettato per applicazioni di scansione rapida in ambienti gravosi e a uso continuativo. Protezione IP67, assenza di raffreddamento attivo e imaging a conversione diretta su CdTe progettato per ambienti industriali — ingegnerizzato per flussi di ispezione in linea in cui contano disponibilità, sensibilità e stabilità a lungo termine.",
         "body2": "A differenza dei sistemi di rivelazione che si affidano al raffreddamento Peltier per gestire la temperatura del sensore, Industrial IP67 TDI opera senza raffreddamento attivo su tutto l'intervallo operativo, grazie al consumo energetico molto ridotto e all'algoritmo brevettato di calibrazione dinamica dell'offset integrato.",
         "body3": "L'operatività in modalità TDI consente velocità di linea fino a 75.000 righe al secondo, supportando velocità di scansione all'altezza delle esigenze dell'ispezione in produzione ad alto throughput.",
         "imageAlt": "Vista del prodotto Industrial IP67 TDI"
@@ -22,11 +22,11 @@
         "cards": {
           "01": {
             "title": "Custodia robusta IP67",
-            "body": "Custodia industriale completamente sigillata con grado IP67. Progettata per ambienti con polvere, umidità, vibrazioni ed esigenze di funzionamento continuo che escluderebbero i rivelatori di tipo da laboratorio."
+            "body": "Custodia industriale completamente sigillata con grado IP67. Progettata per ambienti con polvere, umidità, vibrazioni ed esigenze di funzionamento continuo incompatibili con sistemi di laboratorio convenzionali."
           },
           "02": {
             "title": "Senza raffreddamento attivo",
-            "body": "Nessun Peltier, nessun circuito di raffreddamento. Industrial IP67 TDI opera entro le specifiche complete tra 10 e 40 °C senza gestione termica attiva, riducendo la complessità del sistema e i modi di guasto. Questo è reso possibile dal consumo energetico molto ridotto e dall'algoritmo di calibrazione dinamica dell'offset integrato."
+            "body": "Nessun Peltier, nessun circuito di raffreddamento. Industrial IP67 TDI opera entro le specifiche complete tra 10 e 40 °C senza gestione termica attiva, riducendo la complessità del sistema e le possibili cause di guasto. Questo è reso possibile dal consumo energetico molto ridotto e dall'algoritmo di calibrazione dinamica dell'offset integrato."
           },
           "03": {
             "title": "Scansione TDI ultraveloce",
@@ -34,11 +34,11 @@
           },
           "04": {
             "title": "CdTe a conversione diretta",
-            "body": "Imaging a conversione diretta su CdTe con 28 stadi TDI. Sensibilità eccezionalmente elevata, ampio intervallo di energia (10–360 kV) e gamma dinamica a 16 bit per applicazioni di ispezione esigenti. Offriamo anche una soluzione personalizzata per LINAC, per l'impiego con energie fino a 9 MeV."
+            "body": "Acquisizione a conversione diretta su CdTe con 28 stadi TDI. Sensibilità eccezionalmente elevata, ampio intervallo di energia (10–360 kV) e gamma dinamica a 16 bit per applicazioni di ispezione esigenti. Offriamo anche una soluzione personalizzata per LINAC, per l'impiego con energie fino a 9 MeV."
           },
           "05": {
             "title": "Contrasto e sensibilità elevati",
-            "body": "Prestazioni TDI con sensibilità al singolo fotone. Una risoluzione di contrasto superiore consente la rilevazione affidabile di piccoli corpi estranei, difetti strutturali fini e dettagli a bassa attenuazione."
+            "body": "Prestazioni TDI con rilevamento del singolo fotone. Una risoluzione di contrasto superiore consente la rilevazione affidabile di piccoli corpi estranei, difetti strutturali fini e dettagli a bassa attenuazione."
           },
           "06": {
             "title": "Gigabit Ethernet",
@@ -69,9 +69,9 @@
       },
       "specs": {
         "eyebrow": "Sintesi tecnica",
-        "headline": "Progettato attorno all'applicazione.",
-        "body1": "Industrial IP67 TDI è disponibile in tre varianti di modello — UFS-150IP67NC-44, UFS-225IP67NC-44 e UFS-460IP67NC-44. Tutte condividono la stessa architettura di base: imaging a conversione diretta su CdTe con 28 stadi TDI, custodia IP67 e interfaccia Gigabit Ethernet.",
-        "body2": "Soluzioni personalizzate disponibili: l'architettura modulare consente ad Athlos di fornire lunghezze attive da 7,5 cm fino a 10 m, con incrementi di 7,5 cm. Ci contatti per discutere il requisito di lunghezza attiva.",
+        "headline": "Progettato in funzione dell'applicazione.",
+        "body1": "Industrial IP67 TDI è disponibile in tre varianti di modello — UFS-150IP67NC-44, UFS-225IP67NC-44 e UFS-460IP67NC-44. Tutte condividono la stessa architettura di base: acquisizione a conversione diretta su CdTe con 28 stadi TDI, custodia IP67 e interfaccia Gigabit Ethernet.",
+        "body2": "Soluzioni personalizzate disponibili: l'architettura modulare consente ad Athlos di fornire lunghezze attive da 7,5 cm fino a 10 m, con incrementi di 7,5 cm. Contattaci per definire la lunghezza attiva richiesta.",
         "imageAlt": "Architettura interna di Industrial IP67 TDI – vista a custodia aperta",
         "rows": {
           "pixelSize": { "label": "Dimensione pixel", "value": "100 × 100 µm" },
@@ -126,7 +126,7 @@
             "use1": "Ispezione di componenti su bobina",
             "use2": "Conteggio dei componenti",
             "use3": "Ispezione di PCB",
-            "use4": "Verifica del montaggio a montaggio superficiale"
+            "use4": "Ispezione di assemblaggi SMT"
           },
           "heavy": {
             "industry": "Industria pesante",
@@ -186,7 +186,7 @@
       },
       "models": {
         "eyebrow": "Famiglia di prodotti",
-        "headline": "Tre varianti.<br>Lo stesso nucleo robusto.",
+        "headline": "Tre varianti.<br>La stessa architettura robusta.",
         "cards": {
           "ufs150": {
             "name": "UFS-150 IP67NC",
@@ -209,7 +209,7 @@
             "desc": "Lunghezza attiva personalizzata per soddisfare i requisiti dell'applicazione. Un modulo comprende tre ibridi da 25,6 mm; la lunghezza attiva del modulo è di 76,8 mm. Sono disponibili lunghezze attive da 76,8 mm fino a 10 m."
           }
         },
-        "note": "Le tre configurazioni standard sono disponibili per consegna pressoché immediata. Le lunghezze attive personalizzate possono essere realizzate per soddisfare requisiti applicativi specifici — contatti Athlos per discutere le sue esigenze dimensionali."
+        "note": "Le tre configurazioni standard sono disponibili con tempi di consegna molto rapidi. Le lunghezze attive personalizzate possono essere realizzate per soddisfare requisiti applicativi specifici — contatta Athlos per definire la configurazione più adatta."
       },
       "brochure": {
         "title": "Scheda tecnica del prodotto Industrial IP67 TDI",
@@ -218,8 +218,8 @@
       },
       "cta": {
         "eyebrow": "Contattaci",
-        "headline": "Discuta i suoi requisiti di ispezione industriale.",
-        "body": "Industrial IP67 TDI è progettato per l'integrazione in ambienti produttivi esigenti. Parli con Athlos della sua applicazione, dei requisiti di velocità e dell'architettura di sistema.",
+        "headline": "Parla con Athlos delle tue esigenze di ispezione industriale.",
+        "body": "Industrial IP67 TDI è progettato per l'integrazione in ambienti produttivi esigenti. Contatta Athlos per discutere la tua applicazione, i requisiti di velocità e l'architettura di sistema.",
         "ctaContact": "Contatta Athlos",
         "ctaAll": "Tutti i prodotti",
         "ctaDatasheet": "Scarica la scheda tecnica"

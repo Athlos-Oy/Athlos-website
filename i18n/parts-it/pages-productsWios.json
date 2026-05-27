@@ -4,7 +4,7 @@
       "hero": {
         "category": "Dentale intraorale",
         "headline": "DC-Air<sup>&reg;</sup> sensore intraorale wireless a raggi X",
-        "tagline": "Imaging intraorale a raggi X con conversione diretta True Wireless®.<br>Immagini di una nitidezza cristallina. Senza cavo. Senza compromessi.",
+        "tagline": "Radiografia intraorale a conversione diretta True Wireless®.<br>Immagini di una nitidezza cristallina. Senza cavo. Senza compromessi.",
         "ctaPrimary": "Richiesta distributori",
         "ctaBrochure": "Scarica la brochure"
       },
@@ -43,11 +43,11 @@
           },
           "zeroProfile": {
             "title": "Supporti Zero Profile®",
-            "body": "Il set di supporti Zero Profile®, sviluppato appositamente, include supporti per radiografie frontali, posteriori, bitewing, endodontiche e occlusali. Allinea con precisione il sensore senza affidarsi al cavo per l'angolazione — pensato per il comfort del paziente e per un posizionamento ripetibile."
+            "body": "Il set di supporti Zero Profile®, sviluppato appositamente, include supporti per radiografie anteriori, posteriori, bitewing, endodontiche e occlusali. Garantisce un posizionamento preciso del sensore senza affidarsi al cavo per l'angolazione — pensato per il comfort del paziente e per un posizionamento ripetibile."
           },
           "battery": {
             "title": "Batteria e sicurezza",
-            "body": "Fino a 300 radiografie per carica. La memoria di sicurezza a bordo del sensore conserva un'immagine. Autocalibrazione dinamica a ogni acquisizione. Batteria ricaricabile agli ioni di litio. Docking magnetico per una ricarica affidabile."
+            "body": "Fino a 300 radiografie per carica. La memoria buffer integrata nel sensore conserva un'immagine. Autocalibrazione dinamica a ogni acquisizione. Batteria ricaricabile agli ioni di litio. Docking magnetico per una ricarica affidabile."
           },
           "ip67": {
             "title": "IP67 e robustezza",
@@ -61,7 +61,7 @@
       },
       "video": {
         "eyebrow": "DC-Air&reg; in azione",
-        "headline": "La presentazione di DC-Air&reg;.",
+        "headline": "Scopri DC-Air&reg;.",
         "body": "Una breve panoramica di DC-Air&reg;, il sensore intraorale True Wireless&reg; — come funziona, cosa lo distingue e cosa offre allo studio odontoiatrico moderno.",
         "iframeTitle": "Presentazione del sensore intraorale wireless DC-Air&reg;"
       },
@@ -103,7 +103,7 @@
       "awards": {
         "eyebrow": "Riconoscimenti",
         "headline": "Una tecnologia premiata.",
-        "body": "DC-Air&reg; e la tecnologia a conversione diretta che lo anima sono stati riconosciuti da importanti programmi di premiazione del settore dentale e della sanità.",
+        "body": "DC-Air&reg; e la tecnologia a conversione diretta che lo anima hanno ottenuto importanti riconoscimenti nel settore dentale e sanitario.",
         "items": {
           "da2024Alt": "Dental Advisor 2024 Top Award Winner",
           "da2024Label": "Dental Advisor 2024 Top Award Winner",
@@ -119,7 +119,7 @@
         "eyebrow": "Valutazione indipendente",
         "headline": "Valutato da Clinicians Report.",
         "body": "Clinicians Report è una fondazione indipendente di valutazione dei prodotti dentali, di cui si fidano gli odontoiatri di tutto il mondo. Nel 2022 DC-Air&reg; è stato esaminato e messo in evidenza in due valutazioni CR dedicate — un First Look a gennaio e una valutazione comparativa pubblicata a marzo.",
-        "callout": "Nella valutazione comparativa del marzo 2022, scienziati e clinici di CR hanno osservato che le radiografie ottenute con DC-Air&reg; mostravano una chiarezza e un dettaglio fine superiori rispetto ai sensori CMOS convenzionali — e hanno descritto la tecnologia a conversione diretta come un progresso significativo.",
+        "callout": "Nella valutazione comparativa del marzo 2022, scienziati e clinici di CR hanno osservato che le radiografie ottenute con DC-Air&reg; mostravano maggiore nitidezza e migliore resa dei dettagli rispetto ai sensori CMOS convenzionali — e hanno descritto la tecnologia a conversione diretta come un progresso significativo.",
         "highlights": {
           "h1": "Risoluzione elevata ed eccellente gamma dinamica messe in evidenza nella valutazione CR First Look.",
           "h2": "Trasferimento ed elaborazione wireless delle immagini osservati in circa 6–8 secondi — preservando la rapidità del flusso di lavoro clinico senza cavo.",
@@ -134,10 +134,10 @@
         "button": "Scarica il PDF"
       },
       "cta": {
-        "headline": "Diventi partner di distribuzione DC-Air&reg;.",
-        "body": "DC-Air&reg; è disponibile tramite rivenditori e distributori autorizzati di imaging dentale. Se rappresenta un'azienda di distribuzione di prodotti dentali o una rete di rivenditori, saremo lieti di ricevere il Suo contatto.",
+        "headline": "Diventa distributore DC-Air&reg;.",
+        "body": "DC-Air&reg; è disponibile tramite rivenditori e distributori autorizzati nel settore dell'imaging dentale. Le aziende di distribuzione di prodotti dentali e le reti di rivenditori interessate sono invitate a contattarci.",
         "regulatory": "DC-Air&reg; è autorizzato dalla FDA tramite procedura 510(k); la registrazione CE è in corso. Il prodotto non è ancora in vendita in Europa.",
-        "oem": "Per richieste di licenza OEM o integrazione tecnologica, utilizzi lo stesso canale di contatto.",
+        "oem": "Per richieste di licenza OEM o integrazione tecnologica, scrivici attraverso lo stesso canale.",
         "contactBtn": "Contatta Athlos",
         "brochureBtn": "Scarica la brochure"
       },

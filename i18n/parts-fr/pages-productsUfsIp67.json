@@ -4,14 +4,14 @@
       "hero": {
         "category": "Imagerie industrielle",
         "headline": "Industrial IP67 TDI",
-        "tagline": "Imagerie par rayons X à balayage ultra-rapide et robuste pour les environnements d'inspection industrielle exigeants.",
+        "tagline": "Système d'imagerie par rayons X à balayage ultra-rapide et robuste, pour les environnements d'inspection industrielle les plus exigeants.",
         "ctaSpecs": "Caractéristiques techniques",
-        "ctaDiscuss": "Discuter de votre application"
+        "ctaDiscuss": "Parler de votre application"
       },
       "overview": {
         "eyebrow": "Présentation",
         "headline": "Qualité industrielle.<br>Aucun refroidissement requis.",
-        "body1": "L'Industrial IP67 TDI est une barrette de détection linéaire industrielle conçue pour les applications de balayage rapide dans les environnements difficiles et à usage continu. Protection IP67, aucun refroidissement actif et imagerie CdTe à conversion directe robuste — pensée pour les flux d'inspection en ligne où la disponibilité, la sensibilité et la stabilité sur de longues durées sont déterminantes.",
+        "body1": "L'Industrial IP67 TDI est une barrette de détection linéaire industrielle conçue pour les applications de balayage rapide dans les environnements difficiles et à usage continu. Protection IP67, aucun refroidissement actif et imagerie CdTe à conversion directe pensée pour les environnements industriels — adaptée aux flux d'inspection en ligne où la disponibilité, la sensibilité et la stabilité sur de longues durées sont déterminantes.",
         "body2": "Contrairement aux systèmes de détecteurs qui recourent à un refroidissement Peltier pour gérer la température du capteur, l'Industrial IP67 TDI fonctionne sans refroidissement actif sur toute sa plage de fonctionnement, grâce à sa très faible consommation électrique et à son algorithme breveté et embarqué de calibrage dynamique de l'offset.",
         "body3": "Le fonctionnement en mode TDI permet des cadences ligne allant jusqu'à 75&nbsp;000 lignes par seconde — pour des vitesses de balayage à la hauteur des exigences de l'inspection de production à haut débit.",
         "imageAlt": "Industrial IP67 TDI – vue produit"
@@ -69,7 +69,7 @@
       },
       "specs": {
         "eyebrow": "Aperçu technique",
-        "headline": "Conçu autour de l'application.",
+        "headline": "Conçu en fonction de l'application.",
         "body1": "L'Industrial IP67 TDI est disponible en trois variantes de modèle — UFS-150IP67NC-44, UFS-225IP67NC-44 et UFS-460IP67NC-44. Toutes partagent la même architecture fondamentale&nbsp;: imagerie à conversion directe CdTe avec 28 étages TDI, boîtier IP67 et interface Gigabit Ethernet.",
         "body2": "Solutions sur mesure disponibles&nbsp;: l'architecture modulaire permet à Athlos de proposer des longueurs actives personnalisées de 7,5 cm jusqu'à 10 m, par incréments de 7,5 cm. Contactez-nous pour discuter de votre besoin en longueur active.",
         "imageAlt": "Architecture interne de l'Industrial IP67 TDI – vue du boîtier ouvert",
@@ -186,7 +186,7 @@
       },
       "models": {
         "eyebrow": "Famille de produits",
-        "headline": "Trois variantes.<br>Le même cœur robuste.",
+        "headline": "Trois variantes.<br>La même architecture robuste.",
         "cards": {
           "ufs150": {
             "name": "UFS-150 IP67NC",

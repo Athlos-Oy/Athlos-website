@@ -32,11 +32,11 @@
       },
       "sdk": {
         "title": "Athlos SDK &amp; API",
-        "body": "API di integrazione C/C++ / DLL con esempi di codice sorgente, GUI di valutazione e un'avanzata libreria di filtri localmente adattivi. Contatti Athlos per discutere l'accesso all'SDK e le condizioni di licenza."
+        "body": "API di integrazione C/C++ / DLL con esempi di codice sorgente, GUI di valutazione e un'avanzata libreria di filtri localmente adattivi. Contatta Athlos per discutere l'accesso all'SDK e le condizioni di licenza."
       },
       "cta": {
         "headline": "Domande su licenze software e integrazione.",
-        "body": "Sia che stia integrando il software Athlos in una piattaforma esistente, sia che lo stia valutando per un nuovo sistema di imaging, il team Athlos è a Sua disposizione. Ci contatti per discutere licenze, accesso all'SDK e percorsi di integrazione.",
+        "body": "Per integrare il software Athlos in una piattaforma esistente o per valutarlo per un nuovo sistema di imaging, il team Athlos è a disposizione. Contattaci per discutere licenze, accesso all'SDK e percorsi di integrazione.",
         "buttonContact": "Contatta Athlos",
         "buttonAll": "Tutti i prodotti"
       },
