@@ -17,7 +17,7 @@
         "body3": "Tous les produits UFS incluent le SDK et l'API Athlos ; l'intégration s'effectue via DLL.",
         "sdkCallout": {
           "title": "SDK et API Athlos",
-          "body": "Tous les produits UFS incluent le SDK et l'API Athlos. L'intégration via DLL. Une interface graphique d'évaluation et une bibliothèque avancée de filtres de post-traitement sont incluses."
+          "body": "Tous les produits UFS incluent le SDK et l'API Athlos ; l'intégration s'effectue via DLL. Une interface graphique d'évaluation et une bibliothèque avancée de filtres de post-traitement sont incluses."
         },
         "imageAlt": "Scanner Athlos UFS – vue produit sur fond blanc"
       },
@@ -38,7 +38,7 @@
             "body": "Une plage dynamique de 16 bits garantit des performances d'imagerie constantes dans des conditions d'atténuation très variées — un point essentiel pour les applications dentaires comme industrielles."
           },
           "singlePhoton": {
-            "title": "Sensibilité au photon unique",
+            "title": "Détection du photon unique",
             "body": "Les performances TDI avec détection du photon unique permettent une imagerie de haute qualité à dose réduite — un avantage significatif dans les flux de travail dentaires comme d'inspection."
           },
           "gigE": {

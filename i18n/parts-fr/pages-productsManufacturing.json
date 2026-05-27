@@ -27,7 +27,7 @@
           },
           "wire": {
             "title": "Câblage filaire",
-            "body": "Connexions par wire bonding à haute densité à haute densité, de la puce CMOS vers les circuits imprimés et les substrats de boîtier. Adapté aux configurations de capteurs à pas fin et de grand format."
+            "body": "Connexions par wire bonding à haute densité, de la puce CMOS vers les circuits imprimés et les substrats de boîtier. Adapté aux configurations de capteurs à pas fin et de grand format."
           },
           "probing": {
             "title": "Test sous pointes et caractérisation par rayons X",

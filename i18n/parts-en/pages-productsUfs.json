@@ -27,7 +27,7 @@
         "cards": {
           "directConversion": {
             "title": "Direct Conversion CdTe-CMOS",
-            "body": "CdTe detector material bump-bonded to a proprietary full-custom ASIC. X-rays convert directly to signal — no scintillator, no intermediate energy loss."
+            "body": "CdTe detector material bump-bonded to a proprietary full-custom ASIC. X-rays convert directly to signal — no scintillator, without intermediate energy conversion."
           },
           "ultraFast": {
             "title": "Ultra-Fast Scanning",
@@ -43,10 +43,10 @@
           },
           "gigE": {
             "title": "Gigabit Ethernet",
-            "body": "Standard GigE interface. Plug-and-ready positioning, simple integration into system architectures. Frame mode and TDI mode both supported."
+            "body": "Standard GigE interface. Plug-and-play integration, simple to deploy into system architectures. Frame mode and TDI mode both supported."
           },
           "sdk": {
-            "title": "SDK &amp; API Ready",
+            "title": "SDK &amp; API for OEM integration",
             "body": "Full Athlos SDK with C/C++ API, evaluation GUI, and post-processing filter library. Integration support for OEM and system integrator customers."
           }
         }
@@ -107,18 +107,54 @@
         "body1": "The Ultra-Fast Scanning Sensor and the Industrial IP67 TDI are two versions of the same direct conversion detector platform — identical imaging performance, sensor technology, scan speed, resolution, and TDI capability. The standard UFS is the non-IP67 version, intended for controlled and integrated imaging environments.",
         "body2": "For dust-tight, water-immersion-rated (IP67) protection in harsh, wet, or washdown environments, see the <a href=\"ufs-ip67.html\" style=\"color:var(--cyan);\">Industrial IP67 TDI</a>.",
         "rows": {
-          "pixelSize": { "label": "Pixel size", "value": "100 × 100 µm" },
-          "activeAreaWidth": { "label": "Active area width", "value": "2.8 mm" },
-          "tdiStages": { "label": "TDI stages", "value": "28" },
-          "energyRange": { "label": "Energy range", "value": "10 – 360 kV" },
-          "dynamicRange": { "label": "Dynamic range", "value": "16-bit" },
-          "maxLineRate": { "label": "Max line rate", "value": "75,000 lps" },
-          "interface": { "label": "Interface", "value": "Gigabit Ethernet" },
-          "powerSupply": { "label": "Power supply", "value": "9 – 24 V DC" },
-          "operatingTemperature": { "label": "Operating temperature", "value": "10 – 40 °C" },
-          "activeCooling": { "label": "Active cooling", "value": "None required" },
-          "enclosureRating": { "label": "Enclosure rating", "value": "Standard (non-IP67)" },
-          "detectorMaterial": { "label": "Detector material", "value": "CdTe direct conversion" }
+          "pixelSize": {
+            "label": "Pixel size",
+            "value": "100 × 100 µm"
+          },
+          "activeAreaWidth": {
+            "label": "Active area width",
+            "value": "2.8 mm"
+          },
+          "tdiStages": {
+            "label": "TDI stages",
+            "value": "28"
+          },
+          "energyRange": {
+            "label": "Energy range",
+            "value": "10 – 360 kV"
+          },
+          "dynamicRange": {
+            "label": "Dynamic range",
+            "value": "16-bit"
+          },
+          "maxLineRate": {
+            "label": "Max line rate",
+            "value": "75,000 lps"
+          },
+          "interface": {
+            "label": "Interface",
+            "value": "Gigabit Ethernet"
+          },
+          "powerSupply": {
+            "label": "Power supply",
+            "value": "9 – 24 V DC"
+          },
+          "operatingTemperature": {
+            "label": "Operating temperature",
+            "value": "10 – 40 °C"
+          },
+          "activeCooling": {
+            "label": "Active cooling",
+            "value": "None required"
+          },
+          "enclosureRating": {
+            "label": "Enclosure rating",
+            "value": "Standard (non-IP67)"
+          },
+          "detectorMaterial": {
+            "label": "Detector material",
+            "value": "CdTe direct conversion"
+          }
         }
       },
       "gallery": {

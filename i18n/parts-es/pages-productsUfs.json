@@ -12,7 +12,7 @@
       "overview": {
         "eyebrow": "Visión general",
         "headline": "Un sensor.<br>Múltiples aplicaciones.",
-        "body1": "UFS es un sensor lineal de escaneo de conversión directa multipropósito diseñado para imagen dental panorámica y cefalométrica, inspección industrial en línea y sistemas automatizados de inspección por rayos X. Está construido sobre material detector CdTe unido mediante bump bonding a un ASIC totalmente personalizado y propietario totalmente personalizado, una configuración que ofrece un rendimiento de imagen excepcional en todas las aplicaciones admitidas.",
+        "body1": "UFS es un sensor lineal de escaneo de conversión directa multipropósito diseñado para imagen dental panorámica y cefalométrica, inspección industrial en línea y sistemas automatizados de inspección por rayos X. Está construido sobre material detector CdTe unido mediante bump bonding a un ASIC propietario totalmente personalizado, una configuración que ofrece un rendimiento de imagen excepcional en todas las aplicaciones admitidas.",
         "body2": "El resultado es un sensor con muy alta nitidez y resolución, sensibilidad excepcional y alta resolución de contraste, capacidad de detección de fotón único y un rango dinámico extremadamente amplio. UFS se conecta mediante Gigabit Ethernet y admite tanto el modo frame como el modo TDI, lo que lo hace adecuado para una amplia variedad de arquitecturas de sistema.",
         "body3": "Todos los productos UFS incluyen el SDK y la API de Athlos; la integración se realiza mediante DLL.",
         "sdkCallout": {
@@ -43,7 +43,7 @@
           },
           "gigE": {
             "title": "Gigabit Ethernet",
-            "body": "Interfaz GigE estándar. Integración plug-and-play e integración sencilla en arquitecturas de sistema. Se admiten tanto el modo frame como el modo TDI."
+            "body": "Interfaz GigE estándar. Integración plug-and-play sencilla en arquitecturas de sistema. Se admiten tanto el modo frame como el modo TDI."
           },
           "sdk": {
             "title": "SDK y API para integración OEM",

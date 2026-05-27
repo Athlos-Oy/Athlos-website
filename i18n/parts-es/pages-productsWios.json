@@ -5,7 +5,7 @@
         "category": "Dental intraoral",
         "headline": "DC-Air<sup>&reg;</sup>: sensor intraoral inalámbrico de rayos X",
         "tagline": "Imagen intraoral por rayos X de conversión directa True Wireless®.<br>Imágenes nítidas. Sin cable. Sin concesiones.",
-        "ctaPrimary": "Consultas de distribución",
+        "ctaPrimary": "Consulta sobre distribución",
         "ctaBrochure": "Descargar folleto"
       },
       "overview": {
@@ -35,7 +35,7 @@
         "cards": {
           "wireless": {
             "title": "Flujo de trabajo True Wireless®",
-            "body": "Sin cable intraoral. Enlace inalámbrico Bluetooth 5.0 desde el sensor hasta la estación de carga y el PC y al PC. Alcance del sensor de hasta 3 metros. Reduce las molestias del paciente y simplifica el flujo de trabajo clínico."
+            "body": "Sin cable intraoral. Enlace inalámbrico Bluetooth 5.0 del sensor a la estación de carga y al PC. Alcance del sensor de hasta 3 metros. Reduce las molestias del paciente y simplifica el flujo de trabajo clínico."
           },
           "directConversion": {
             "title": "Imagen por conversión directa",

@@ -77,7 +77,7 @@
         "ctaAbout": "About Athlos"
       },
       "statement": {
-        "headline": "Our team invented Direct Conversion.<br>For over 30 years, Direct Conversion sensors have defined<br>what precision x-ray imaging and Image Accuracy stands for.",
+        "headline": "Our team invented Direct Conversion.<br>For over 30 years, direct conversion sensors have set new standards<br>for precision and image accuracy in X-ray imaging.",
         "body": "By eliminating the scintillator and converting X-rays directly into electrical pulses, Athlos sensors and linear arrays eliminate the root cause of image degradation. The result is sharper detail, truer contrast, and reliable performance across the full dose range.",
         "stats": {
           "invented": {
@@ -105,7 +105,7 @@
       "tech": {
         "eyebrow": "The Science Behind Performance",
         "headline": "Direct conversion.<br>No intermediate steps.<br>No compromise.",
-        "body1": "Conventional X-ray sensors rely on a scintillator to first convert X-rays into visible light, which then enters a photodiode with limited fill factor and converts to an electric pulse . The non direct conversion of x-rays to light, light to electric pulse, introduces significant blur, signal loss (fill factor which is much less than 100%) and undetected x-rays (due to limited DQE of the scintillators).",
+        "body1": "Conventional X-ray sensors rely on a scintillator to first convert X-rays into visible light, which then enters a photodiode with limited fill factor and converts to electrical pulses. This indirect conversion — from X-rays to light, then from light to electrical signal — introduces significant blur, signal loss (fill factor well below 100%) and undetected X-rays due to the limited DQE of scintillators.",
         "body2": "Athlos sensors use CdTe-CMOS and Si-CMOS direct conversion hybrids that convert X-ray photons directly into electric pulses that retain point accuracy. No scattered light means no loss of point accuracy. No light conversion. No phosphor layer. No unnecessary blurriness. No signal and contrast loss.",
         "videoAria": "Athlos sensor direct conversion process visualization",
         "features": {
