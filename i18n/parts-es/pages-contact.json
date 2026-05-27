@@ -1,0 +1,58 @@
+{
+  "pages": {
+    "contact": {
+      "hero": {
+        "eyebrow": "Póngase en contacto",
+        "headline": "Contacto Athlos",
+        "sub": "Consultas de producto, integración OEM, licencias o colaboración en fabricación: respondemos con rapidez."
+      },
+      "details": {
+        "eyebrow": "Contacto directo",
+        "headline": "Respondemos a cada consulta.",
+        "intro": "Athlos colabora directamente con OEM, integradores de sistemas, distribuidores y socios clínicos. Tanto si tiene una pregunta técnica concreta como si solo desea iniciar una conversación, póngase en contacto con nosotros.",
+        "emailLabel": "Correo electrónico",
+        "addressLabel": "Dirección",
+        "addressValue": "Klovinpellontie 1–3, Tower 2<br>FIN-02180 Espoo, Finlandia",
+        "responseLabel": "Tiempo de respuesta",
+        "responseValue": "Nuestro objetivo es responder en un plazo de un día laborable."
+      },
+      "form": {
+        "eyebrow": "Envíe un mensaje",
+        "nameLabel": "Nombre",
+        "namePlaceholder": "Su nombre",
+        "emailLabel": "Correo electrónico",
+        "emailPlaceholder": "su@correo.com",
+        "companyLabel": "Empresa",
+        "companyPlaceholder": "Nombre de la empresa",
+        "topicLabel": "Tema",
+        "topicPlaceholder": "Seleccione un tema...",
+        "topicOptions": {
+          "dcAir": "Consulta de producto: DC-Air®",
+          "ufs": "Consulta de producto: Ultra-Fast Scanning Sensor",
+          "ufsIp67": "Consulta de producto: Industrial IP67 TDI",
+          "oem": "OEM / Integración de sistemas",
+          "software": "Licencias de software",
+          "manufacturing": "Servicios de fabricación",
+          "distribution": "Colaboración en distribución",
+          "other": "Otro"
+        },
+        "messageLabel": "Mensaje",
+        "messagePlaceholder": "Cuéntenos sobre su proyecto o pregunta...",
+        "submit": "Enviar mensaje"
+      },
+      "success": {
+        "title": "Mensaje recibido.",
+        "body": "Gracias por escribirnos. Un miembro del equipo de Athlos revisará su consulta y le responderá en un plazo de un día laborable.",
+        "close": "Cerrar"
+      },
+      "errors": {
+        "validation": "Por favor, indique su nombre, correo electrónico y mensaje.",
+        "generic": "Algo ha ido mal. Inténtelo de nuevo o escríbanos directamente a info@athlos.fi.",
+        "network": "No se ha podido enviar su mensaje. Inténtelo de nuevo o escríbanos directamente a info@athlos.fi.",
+        "sending": "Enviando…",
+        "subjectFallback": "Consulta general",
+        "contactEmailLabel": "Correo de contacto"
+      }
+    }
+  }
+}

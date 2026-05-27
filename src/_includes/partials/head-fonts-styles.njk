@@ -1,12 +1,11 @@
 {%- set _font = fontUrl or "https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" -%}
-{%- set _sheets = stylesheets or ["css/style.css"] -%}
-{%- set _p = nav.prefix or "" %}
+{%- set _sheets = stylesheets or ["css/style.css"] %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="{{ _font | safe }}" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="{{ _font | safe }}"></noscript>
 {%- for sheet in _sheets %}
-  <link rel="stylesheet" href="{{ _p }}{{ sheet }}">
+  <link rel="stylesheet" href="/{{ sheet }}">
 {%- endfor %}
   <noscript><style>.reveal,[data-animate]{opacity:1!important;transform:none!important}</style></noscript>
 {%- if includeFoucStyle %}

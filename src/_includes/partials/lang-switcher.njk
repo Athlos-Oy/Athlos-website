@@ -1,16 +1,42 @@
 {#
-  Language switcher. Renders one link per active locale (from
-  src/_data/locales.js) pointing to the same page in that locale,
-  not to the locale homepage — that's a common painful UX bug
-  the plan calls out explicitly.
+  Language switcher with a hover-reveal dropdown.
 
-  When only one locale is active (today: en), renders nothing
-  visible. That keeps byte-equivalence with pre-Phase 2 markup.
+  Trigger shows the current locale (flag + 2-letter code).
+  On hover (desktop) / click (mobile + keyboard) the dropdown reveals
+  the other active locales. Clicking a row navigates to the same page
+  in that locale.
+
+  Renders nothing when only one locale is active (no choice to offer).
+
+  Flag SVGs are inline so they render identically across browsers
+  without depending on emoji fonts (which look out of place in B2B copy).
 #}
+{%- macro flag(loc) -%}
+{%- if loc == "en" -%}
+<svg class="lang-flag" viewBox="0 0 60 30" aria-hidden="true" width="18" height="12" preserveAspectRatio="xMidYMid slice" style="overflow:hidden"><rect width="60" height="30" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></svg>
+{%- elif loc == "de" -%}
+<svg class="lang-flag" viewBox="0 0 30 18" aria-hidden="true" width="18" height="12"><rect width="30" height="6" y="0" fill="#000"/><rect width="30" height="6" y="6" fill="#DD0000"/><rect width="30" height="6" y="12" fill="#FFCE00"/></svg>
+{%- elif loc == "fr" -%}
+<svg class="lang-flag" viewBox="0 0 30 18" aria-hidden="true" width="18" height="12"><rect width="10" height="18" x="0" fill="#002395"/><rect width="10" height="18" x="10" fill="#fff"/><rect width="10" height="18" x="20" fill="#ED2939"/></svg>
+{%- elif loc == "it" -%}
+<svg class="lang-flag" viewBox="0 0 30 18" aria-hidden="true" width="18" height="12"><rect width="10" height="18" x="0" fill="#009246"/><rect width="10" height="18" x="10" fill="#fff"/><rect width="10" height="18" x="20" fill="#CE2B37"/></svg>
+{%- elif loc == "es" -%}
+<svg class="lang-flag" viewBox="0 0 30 18" aria-hidden="true" width="18" height="12"><rect width="30" height="18" fill="#AA151B"/><rect width="30" height="9" y="4.5" fill="#F1BF00"/></svg>
+{%- endif -%}
+{%- endmacro -%}
 {%- if locales.active | length > 1 %}
-      <div class="lang-switcher" role="group" aria-label="Language">
+      <div class="lang-switcher" data-lang-switcher>
+        <button class="lang-switcher-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-label="{{ locales.labels[lang] }}">
+          {{ flag(lang) }}
+          <span class="lang-switcher-code">{{ lang | upper }}</span>
+          <svg class="lang-switcher-chevron" viewBox="0 0 10 10" fill="none" width="10" height="10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="lang-switcher-menu" role="menu">
 {%- for loc in locales.active %}
-        <a href="{{ canonical | localeUrl(loc) }}" hreflang="{{ loc }}" class="lang-switcher-link{% if loc == lang %} active{% endif %}"{% if loc == lang %} aria-current="true"{% endif %}>{{ locales.labels[loc] }}</a>
+{%- if loc != lang %}
+          <li role="none"><a role="menuitem" href="{{ page.url | localeUrl(loc) }}" hreflang="{{ loc }}" class="lang-switcher-item">{{ flag(loc) }}<span class="lang-switcher-item-label">{{ locales.labels[loc] }}</span></a></li>
+{%- endif -%}
 {%- endfor %}
+        </ul>
       </div>
 {%- endif %}

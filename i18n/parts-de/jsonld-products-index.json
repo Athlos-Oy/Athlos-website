@@ -1,0 +1,35 @@
+{
+  "jsonld": {
+    "productsIndex": {
+      "itemList": {
+        "name": "Athlos Produktportfolio für Röntgenbildgebung",
+        "items": {
+          "wios": {
+            "category": "Kabelloser intraoraler Dental-Röntgensensor",
+            "description": "Vollständig kabelloser Si-CMOS-Direktkonversions-Intraoralsensor mit Bluetooth 5.0, Zero Profile® Haltern und FDA-510(k)-Zulassung."
+          },
+          "ufs": {
+            "category": "Linearer Röntgen-Scansensor",
+            "description": "Einzelphotonenempfindlicher CdTe-CMOS-Linear-Scansensor für dentales Panoramaröntgen, Fernröntgenseitenbilder, medizinische und industrielle Bildgebung."
+          },
+          "ufsIp67": {
+            "category": "Industrieller Röntgen-TDI-Detektor",
+            "description": "Ultraschneller TDI-Scandetektor mit IP67-Schutz für die kontinuierliche industrielle Inline-Inspektion, ohne aktive Kühlung."
+          },
+          "manufacturing": {
+            "serviceType": "Auftragsfertigung von Detektoren",
+            "description": "CMOS-Wafer-Bumping, Flip-Chip-Bonden, Drahtbonden, Die-Assembly und Detektor-Charakterisierung bei Athlos und VTT Micronova."
+          },
+          "software": {
+            "category": "Software für Röntgenbildgebung",
+            "description": "TWAIN-Modul, Bibliotheken mit Rekonstruktionsalgorithmen, Nachbearbeitungsfilter und SDK für die Integration in TWAIN-fähige Bildgebungsplattformen."
+          }
+        }
+      },
+      "breadcrumb": {
+        "home": "Start",
+        "products": "Produkte"
+      }
+    }
+  }
+}

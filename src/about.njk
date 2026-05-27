@@ -1,9 +1,12 @@
 ---
 layout: layouts/base.njk
-permalink: /about.html
-lang: en
+pagination:
+  data: locales.active
+  size: 1
+  alias: lang
+  addAllPagesToCollections: true
+permalink: "{% if lang == 'en' %}/about.html{% else %}/{{ lang }}/about.html{% endif %}"
 pageKey: about
-canonical: https://athlos.fi/about.html
 og:
   type: website
   image: https://athlos.fi/images/hero-cleanroom-worker.webp
@@ -30,7 +33,7 @@ omitMain: true
 
   <!-- PAGE HERO -->
   <section class="page-hero">
-    <div class="page-hero-bg" style="background-image: url('images/hero-cleanroom-worker.webp'); background-position: center 30%;"></div>
+    <div class="page-hero-bg" style="background-image: url('/images/hero-cleanroom-worker.webp'); background-position: center 30%;"></div>
     <div class="page-hero-overlay"></div>
     <div class="page-hero-content">
       <span class="product-category">{{ "pages.about.hero.eyebrow" | t }}</span>
@@ -106,7 +109,7 @@ omitMain: true
             </div>
           </aside>
         </div>
-        <img src="images/hero-process.webp" width="5504" height="3072" alt="{{ "pages.about.origin.imageAlt" | t }}" loading="lazy" class="about-img reveal">
+        <img src="/images/hero-process.webp" width="5504" height="3072" alt="{{ "pages.about.origin.imageAlt" | t }}" loading="lazy" class="about-img reveal">
       </div>
     </div>
   </section>

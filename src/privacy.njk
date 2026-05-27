@@ -1,9 +1,12 @@
 ---
 layout: layouts/base.njk
-permalink: /privacy.html
-lang: en
+pagination:
+  data: locales.active
+  size: 1
+  alias: lang
+  addAllPagesToCollections: true
+permalink: "{% if lang == 'en' %}/privacy.html{% else %}/{{ lang }}/privacy.html{% endif %}"
 pageKey: privacy
-canonical: https://athlos.fi/privacy.html
 og:
   type: website
   image: https://athlos.fi/images/hero-lab-automation.webp
@@ -24,7 +27,7 @@ omitMain: true
 ---
   <!-- PAGE HERO -->
   <section class="page-hero" style="min-height:35vh;">
-    <div class="page-hero-bg" style="background-image: url('images/hero-cleanroom-worker.webp'); background-position: center 30%;"></div>
+    <div class="page-hero-bg" style="background-image: url('/images/hero-cleanroom-worker.webp'); background-position: center 30%;"></div>
     <div class="page-hero-overlay"></div>
     <div class="page-hero-content">
       <span class="product-category">{{ "pages.privacy.hero.category" | t }}</span>

@@ -1,0 +1,142 @@
+{
+  "pages": {
+    "privacy": {
+      "hero": {
+        "category": "Rechtliches",
+        "headline": "Datenschutzerklärung",
+        "sub": "Wie Athlos Oy Ihre personenbezogenen Daten erhebt, verarbeitet und schützt."
+      },
+      "intro": {
+        "updatedLabel": "Aktualisiert:",
+        "updatedDate": "15.04.2026",
+        "body1": "In dieser Datenschutzerklärung („Datenschutzerklärung”) informieren wir, Athlos Oy („wir” oder „uns”), darüber, wie wir Ihre personenbezogenen Daten erheben, verarbeiten und weitergeben und welche Rechte Ihnen in Bezug auf Ihre personenbezogenen Daten zustehen.",
+        "body2": "Bei der Verarbeitung personenbezogener Daten halten wir uns stets an die geltenden Rechtsvorschriften. Insbesondere beachten wir die Datenschutz-Grundverordnung (Verordnung (EU) 2016/679, DSGVO)."
+      },
+      "controller": {
+        "heading": "Verantwortlicher",
+        "details": "Athlos Oy<br>\n          Geschäfts-ID: 2752258-9<br>\n          Klovinpellontie 1–3, 02180 Espoo, Finnland<br>\n          Kontakt: <a href=\"mailto:info@athlos.fi\" style=\"color:var(--gray-steel);\">info@athlos.fi</a>",
+        "subjectScope": "Als betroffene Person können Sie Besucherin oder Besucher unserer Website sein, Vertreterin oder Vertreter eines bestehenden oder potenziellen Kunden oder Bewerberin oder Bewerber.",
+        "contextIntro": "Diese Datenschutzerklärung betrifft die Verarbeitung personenbezogener Daten in folgenden Zusammenhängen:",
+        "items": [
+          "Besuche von <a href=\"https://athlos.fi/\" style=\"color:var(--gray-steel);\">https://athlos.fi/</a>",
+          "die Verarbeitung personenbezogener Daten von Vertretern unserer Kunden, Lieferanten und weiterer Interessenträger",
+          "die Verarbeitung personenbezogener Daten von Bewerberinnen und Bewerbern"
+        ]
+      },
+      "purposes": {
+        "heading": "Zwecke der Verarbeitung",
+        "intro": "Wir verarbeiten Ihre personenbezogenen Daten ausschließlich zu den in dieser Datenschutzerklärung beschriebenen Zwecken und nur im erforderlichen Umfang.",
+        "visitors": {
+          "label": "Website-Besucher:",
+          "items": [
+            "Ermöglichung der Nutzung der Website sowie Gewährleistung ihrer Sicherheit und Funktionsfähigkeit",
+            "Verbesserung unserer Website durch Analytics",
+            "Marketing-Analytik und personalisiertes Marketing",
+            "Sonstige berechtigte Geschäftsinteressen"
+          ]
+        },
+        "representatives": {
+          "label": "Vertreter:",
+          "items": [
+            "Verwaltung der Geschäftsbeziehung",
+            "Einhaltung der Anforderungen geltenden Rechts",
+            "Sicherstellung und Überwachung der Compliance",
+            "Rechnungsstellung",
+            "Kommunikation mit Ihnen und Dritten",
+            "Versand von Marketing-Mitteilungen",
+            "Sonstige berechtigte Geschäftsinteressen"
+          ]
+        },
+        "applicants": {
+          "label": "Bewerberinnen und Bewerber:",
+          "items": [
+            "Bewerbungsprozess",
+            "Künftiger Personalbedarf (mit Einwilligung)"
+          ]
+        }
+      },
+      "categories": {
+        "heading": "Kategorien personenbezogener Daten",
+        "visitors": {
+          "label": "Website-Besucher:",
+          "items": [
+            "Informationen zur Nutzung der Website (IP-Adresse, Cookies, Aktivität auf der Website, Zeitpunkt des Besuchs)",
+            "Informationen aus dem Kundenservice",
+            "Kontaktdaten (Name, E-Mail-Adresse, Telefonnummer)"
+          ]
+        },
+        "representatives": {
+          "label": "Vertreter:",
+          "items": [
+            "Kontaktdaten",
+            "Angaben zur Geschäftsbeziehung",
+            "Inhalte der Kommunikation mit uns"
+          ]
+        },
+        "applicants": {
+          "label": "Bewerberinnen und Bewerber:",
+          "items": [
+            "Bewerbungsunterlagen (Name, Kontaktdaten, Ausbildung, Berufserfahrung, Lebenslauf, Gehaltsvorstellungen)"
+          ]
+        }
+      },
+      "legalBasis": {
+        "heading": "Rechtsgrundlagen",
+        "intro": "Die Verarbeitung personenbezogener Daten stützt sich auf folgende Rechtsgrundlagen:",
+        "items": [
+          "Berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO) für Funktionsfähigkeit der Website, Verwaltung der Geschäftsbeziehung, Compliance, Rechnungsstellung, Kommunikation und sonstige Geschäftsinteressen",
+          "Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) für nicht erforderliche Cookies, Marketing-Analytik und künftige Personalauswahl",
+          "Rechtliche Verpflichtung (Art. 6 Abs. 1 lit. c DSGVO) für steuerliche und gesellschaftsrechtliche Verpflichtungen",
+          "Vertragliche Erforderlichkeit (Art. 6 Abs. 1 lit. b DSGVO) für Bewerbungsverfahren"
+        ]
+      },
+      "cookies": {
+        "heading": "Cookies und Analytics",
+        "body1": "Wir setzen auf unserer Website ggf. Cookies und Tags ein. Ein Cookie ist eine Textdatei, die in Ihrem Browser oder auf Ihrem Endgerät gespeichert wird. Sie können die Cookie-Einstellungen in Ihrem Browser jederzeit anpassen.",
+        "body2": "Wir verwenden <strong>Google Analytics 4</strong> (Anbieter: Google LLC, USA) und <strong>Google Tag Manager</strong>, um anonyme Analysedaten darüber zu erheben, wie Besucher unsere Website nutzen — etwa besuchte Seiten, Verweildauer, Quellen des Traffics und Gerätetyp. Diese Daten helfen uns, die Website zu verbessern. Analyse-Cookies werden erst gesetzt, nachdem Sie über das Cookie-Banner auf unserer Website ausdrücklich eingewilligt haben.",
+        "body3": "Die Daten von Google Analytics werden von Google LLC verarbeitet und können auf Server in den Vereinigten Staaten übermittelt werden, gestützt auf Standardvertragsklauseln. Weitere Informationen finden Sie unter <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gray-steel);\">policies.google.com/privacy</a>. Sie können der Verarbeitung jederzeit widersprechen, indem Sie im Cookie-Banner auf „Ablehnen” klicken oder das <a href=\"https://tools.google.com/dlpage/gaoptout\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gray-steel);\">Google Analytics Opt-out Browser-Add-on</a> verwenden."
+      },
+      "sources": {
+        "heading": "Quellen personenbezogener Daten",
+        "body": "Wir erheben Ihre personenbezogenen Daten in erster Linie direkt bei Ihnen. Daneben erheben wir Daten aus öffentlich zugänglichen Quellen sowie automatisiert über Cookies, wenn Sie unsere Website besuchen."
+      },
+      "retention": {
+        "heading": "Speicherdauer",
+        "body": "Wir speichern personenbezogene Daten nur so lange, wie es erforderlich ist. Daten von Website-Besuchern werden in der Regel während des Besuchs verarbeitet. Kontaktanfragen werden zwei Jahre lang aufbewahrt. Daten von Vertretern werden für die Dauer der Geschäftsbeziehung gespeichert. Daten von Bewerberinnen und Bewerbern werden für die Dauer des Bewerbungsverfahrens verarbeitet."
+      },
+      "disclosures": {
+        "heading": "Weitergabe und Übermittlung",
+        "body": "Wir können Ihre personenbezogenen Daten an vertrauenswürdige Dienstleister, an Behörden — sofern gesetzlich vorgeschrieben — oder im Zusammenhang mit Umstrukturierungen weitergeben. Bei einer Übermittlung in Länder außerhalb des EU-/EWR-Raums halten wir die geltenden Vorschriften ein, einschließlich der von der Europäischen Kommission verabschiedeten Standardvertragsklauseln (SCCs). Es ist möglich, dass personenbezogene Daten in die Vereinigten Staaten von Amerika übermittelt werden."
+      },
+      "security": {
+        "heading": "Datensicherheit",
+        "intro": "Wir haben angemessene technische und organisatorische Maßnahmen umgesetzt:",
+        "items": [
+          "Der Zugriff auf Daten ist auf befugte Personen beschränkt",
+          "Informationssysteme sind durch Firewalls und Passwörter geschützt",
+          "Mitarbeitende werden im sachgerechten Umgang mit Daten geschult",
+          "Elektronische Dateien werden regelmäßig gesichert",
+          "Die Vernichtung personenbezogener Daten erfolgt auf sichere Weise"
+        ]
+      },
+      "rights": {
+        "heading": "Ihre Rechte",
+        "intro": "Nach der DSGVO stehen Ihnen folgende Rechte zu:",
+        "items": [
+          "Auskunft über Ihre personenbezogenen Daten",
+          "Berichtigung unrichtiger Daten",
+          "Löschung Ihrer personenbezogenen Daten („Recht auf Vergessenwerden”)",
+          "Datenübertragbarkeit",
+          "Widerspruch gegen die Verarbeitung",
+          "Einschränkung der Verarbeitung",
+          "Widerruf einer erteilten Einwilligung"
+        ],
+        "contact": "Zur Ausübung Ihrer Rechte wenden Sie sich bitte an <a href=\"mailto:info@athlos.fi\" style=\"color:var(--gray-steel);\">info@athlos.fi</a>. Sind Sie der Auffassung, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt, steht Ihnen das Recht zu, Beschwerde bei einer Aufsichtsbehörde einzulegen."
+      },
+      "changes": {
+        "heading": "Änderungen",
+        "body": "Wir behalten uns das Recht vor, diese Datenschutzerklärung bei Bedarf zu ändern oder zu ergänzen."
+      }
+    }
+  }
+}

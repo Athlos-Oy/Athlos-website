@@ -1,10 +1,13 @@
 ---
 navScrolled: true
 layout: layouts/base.njk
-permalink: /products/software.html
-lang: en
+pagination:
+  data: locales.active
+  size: 1
+  alias: lang
+  addAllPagesToCollections: true
+permalink: "{% if lang == 'en' %}/products/software.html{% else %}/{{ lang }}/products/software.html{% endif %}"
 pageKey: productsSoftware
-canonical: https://athlos.fi/products/software.html
 og:
   type: website
   image: https://athlos.fi/images/software_image_homepage.webp
@@ -33,7 +36,7 @@ omitMain: true
 
     <!-- 1. HERO -->
     <section class="product-hero" style="min-height:55vh;">
-      <div class="product-hero-bg" style="background-image: url('../images/solutions-software.webp'); background-position:center;"></div>
+      <div class="product-hero-bg" style="background-image: url('/images/solutions-software.webp'); background-position:center;"></div>
       <div class="product-hero-overlay" style="background:linear-gradient(120deg, rgba(10,18,24,0.70) 40%, rgba(20,35,48,0.35) 100%);"></div>
       <div class="product-hero-gradient"></div>
       <div class="product-hero-content container">
@@ -90,7 +93,7 @@ omitMain: true
             </svg>
           </div>
           <div class="sdk-callout-body">
-            <strong>{{ "pages.productsSoftware.sdk.title" | t }}</strong>
+            <strong style="display:block; margin-bottom:0.4rem;">{{ "pages.productsSoftware.sdk.title" | t }}</strong>
             <span>{{ "pages.productsSoftware.sdk.body" | t }}</span>
           </div>
         </div>

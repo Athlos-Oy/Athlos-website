@@ -1,58 +1,54 @@
 {#
   Top navigation + mobile menu.
 
-  Link prefixes (see eleventy.config.js / per-page front-matter):
-    nav.prefix          — prefix for "up to root" links (Home, About, etc.).
-                          Root pages: "". Pages under /products/: "../".
-    nav.productsPrefix  — prefix for links to product pages.
-                          Defaults: root → "products/", products → "".
+  All ASSET URLs (logo image, etc.) are absolute (/images/...). This
+  way they resolve identically regardless of where the rendered page
+  lives in the URL tree (root, /products/, /de/, /de/products/).
+
+  All INTERNAL LINK URLs are absolute EN-canonical paths run through
+  the localeUrl filter using the current `lang` (set by pagination
+  alias). For EN pages this is a no-op; for DE pages it prepends /de/.
 
   Per-page flags:
-    navScrolled            — adds "scrolled" class to <header>. Product detail pages only.
+    navScrolled — adds "scrolled" class to <header>. Product detail
+                  pages only.
 
-  Strings come from i18n/<locale>.json via the t filter. Throws if a
-  key is missing (drift alarm).
+  Strings come from i18n/<locale>.json via the t filter (throws on
+  missing keys).
 #}
-{%- set p = nav.prefix or "" -%}
-{%- if nav.productsPrefix is defined -%}
-  {%- set pp = nav.productsPrefix -%}
-{%- elif p == "" -%}
-  {%- set pp = "products/" -%}
-{%- else -%}
-  {%- set pp = "" -%}
-{%- endif %}
   <header class="nav{% if navScrolled %} scrolled{% endif %}" id="nav">
     <div class="nav-inner">
-      <a href="{{ p }}index.html" class="nav-logo" aria-label="{{ "nav.aria.homeLogo" | t }}">
-        <img src="{{ p }}images/athlos-logo.png" width="1536" height="1024" alt="Athlos" class="nav-logo-png">
-        <span class="nav-logo-text"{% if not p %} aria-hidden="true"{% endif %}>ATHLOS</span>
+      <a href="{{ "/index.html" | localeUrl(lang) }}" class="nav-logo" aria-label="{{ "nav.aria.homeLogo" | t }}">
+        <img src="/images/athlos-logo.png" width="1536" height="1024" alt="Athlos" class="nav-logo-png">
+        <span class="nav-logo-text"{% if lang == "en" and not nav.prefix %} aria-hidden="true"{% endif %}>ATHLOS</span>
       </a>
-      <nav class="nav-links"{% if not p %} aria-label="{{ "nav.aria.main" | t }}"{% endif %}>
-        <a href="{{ p }}index.html" class="nav-link">{{ "nav.home" | t }}</a>
+      <nav class="nav-links"{% if lang == "en" and not nav.prefix %} aria-label="{{ "nav.aria.main" | t }}"{% endif %}>
+        <a href="{{ "/index.html" | localeUrl(lang) }}" class="nav-link">{{ "nav.home" | t }}</a>
         <div class="nav-item has-dropdown">
-          <a href="{{ pp }}index.html" class="nav-link">{{ "nav.products" | t }} <svg class="nav-link-chevron" viewBox="0 0 10 10" fill="none" width="10" height="10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="{{ "/products/index.html" | localeUrl(lang) }}" class="nav-link">{{ "nav.products" | t }} <svg class="nav-link-chevron" viewBox="0 0 10 10" fill="none" width="10" height="10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <div class="nav-dropdown">
-            <a href="{{ pp }}wios.html" class="nav-dropdown-link">{{ "nav.productDropdown.dcAir" | t | safe }}</a>
-            <a href="{{ pp }}ufs.html" class="nav-dropdown-link">{{ "nav.productDropdown.ufs" | t }}</a>
-            <a href="{{ pp }}ufs-ip67.html" class="nav-dropdown-link">{{ "nav.productDropdown.ufsIp67" | t }}</a>
-            <a href="{{ pp }}manufacturing.html" class="nav-dropdown-link">{{ "nav.productDropdown.manufacturing" | t }}</a>
-            <a href="{{ pp }}software.html" class="nav-dropdown-link">{{ "nav.productDropdown.software" | t }}</a>
+            <a href="{{ "/products/wios.html" | localeUrl(lang) }}" class="nav-dropdown-link">{{ "nav.productDropdown.dcAir" | t | safe }}</a>
+            <a href="{{ "/products/ufs.html" | localeUrl(lang) }}" class="nav-dropdown-link">{{ "nav.productDropdown.ufs" | t }}</a>
+            <a href="{{ "/products/ufs-ip67.html" | localeUrl(lang) }}" class="nav-dropdown-link">{{ "nav.productDropdown.ufsIp67" | t }}</a>
+            <a href="{{ "/products/manufacturing.html" | localeUrl(lang) }}" class="nav-dropdown-link">{{ "nav.productDropdown.manufacturing" | t }}</a>
+            <a href="{{ "/products/software.html" | localeUrl(lang) }}" class="nav-dropdown-link">{{ "nav.productDropdown.software" | t }}</a>
           </div>
         </div>
-        <a href="{{ p }}applications.html" class="nav-link">{{ "nav.applications" | t }}</a>
-        <a href="{{ p }}about.html" class="nav-link">{{ "nav.about" | t }}</a>
+        <a href="{{ "/applications.html" | localeUrl(lang) }}" class="nav-link">{{ "nav.applications" | t }}</a>
+        <a href="{{ "/about.html" | localeUrl(lang) }}" class="nav-link">{{ "nav.about" | t }}</a>
       </nav>
-      <a href="{{ p }}contact.html" class="nav-cta">{{ "nav.contact" | t }}</a>
+      <a href="{{ "/contact.html" | localeUrl(lang) }}" class="nav-cta">{{ "nav.contact" | t }}</a>
 {% include "partials/lang-switcher.njk" %}
       <button class="nav-hamburger" aria-label="{{ "nav.aria.openMenu" | t }}" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="nav-mobile-menu" id="mobileMenu">
-      <a href="{{ p }}index.html" class="nav-mobile-link">{{ "nav.home" | t }}</a>
-      <a href="{{ pp }}index.html" class="nav-mobile-link">{{ "nav.products" | t }}</a>
-      <a href="{{ p }}applications.html" class="nav-mobile-link">{{ "nav.applications" | t }}</a>
-      <a href="{{ p }}about.html" class="nav-mobile-link">{{ "nav.about" | t }}</a>
-      <a href="{{ p }}contact.html" class="nav-mobile-link nav-mobile-cta">{{ "nav.contact" | t }}</a>
+      <a href="{{ "/index.html" | localeUrl(lang) }}" class="nav-mobile-link">{{ "nav.home" | t }}</a>
+      <a href="{{ "/products/index.html" | localeUrl(lang) }}" class="nav-mobile-link">{{ "nav.products" | t }}</a>
+      <a href="{{ "/applications.html" | localeUrl(lang) }}" class="nav-mobile-link">{{ "nav.applications" | t }}</a>
+      <a href="{{ "/about.html" | localeUrl(lang) }}" class="nav-mobile-link">{{ "nav.about" | t }}</a>
+      <a href="{{ "/contact.html" | localeUrl(lang) }}" class="nav-mobile-link nav-mobile-cta">{{ "nav.contact" | t }}</a>
+{% include "partials/lang-switcher.njk" %}
     </div>
   </header>

@@ -280,4 +280,6 @@
     });
   });
 
+  // Lang-switcher logic now lives in js/lang-switcher.js (loaded on every page).
+
 })();

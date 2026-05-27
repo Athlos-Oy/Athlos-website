@@ -1,0 +1,38 @@
+{
+  "jsonld": {
+    "home": {
+      "faq": {
+        "q1": {
+          "question": "¿Qué es la imagen por rayos X de conversión directa?",
+          "answer": "La imagen por rayos X de conversión directa convierte los fotones de rayos X directamente en pulsos eléctricos dentro de un semiconductor (como CdTe o Si), sin el paso intermedio del centellador utilizado en los detectores indirectos convencionales. Al eliminar la conversión de rayos X a luz, la conversión directa elimina la principal fuente de desenfoque, pérdida de señal y pérdida de DQE, lo que se traduce en imágenes más nítidas, mayor contraste y mejor rendimiento con dosis baja."
+        },
+        "q2": {
+          "question": "¿Qué fabrica Athlos Oy?",
+          "answer": "Athlos Oy desarrolla y fabrica sensores de imagen por rayos X de conversión directa basados en tecnología híbrida CdTe-CMOS y Si-CMOS. El catálogo incluye el sensor intraoral dental inalámbrico DC-Air®, el Ultra-Fast Scanning Sensor para imagen panorámica, cefalométrica, médica e industrial, y el Industrial IP67 TDI para inspección industrial en línea. Athlos también ofrece servicios de fabricación de detectores por contrato y productos de software."
+        },
+        "q3": {
+          "question": "¿Dónde tiene su sede Athlos y dónde fabrica sus sensores?",
+          "answer": "Athlos Oy tiene su sede en Espoo, Finlandia. Los sensores se fabrican internamente y en la sala limpia de VTT Micronova en Espoo, una de las instalaciones de nanofabricación líderes en Europa."
+        },
+        "q4": {
+          "question": "¿Athlos cuenta con autorización de la FDA y certificación ISO?",
+          "answer": "Athlos opera con un sistema de gestión de la calidad certificado ISO 13485:2016. El sensor intraoral inalámbrico DC-Air® está autorizado por la FDA mediante 510(k) para imagen intraoral dental por rayos X."
+        },
+        "q5": {
+          "question": "¿Quién fundó Athlos?",
+          "answer": "Athlos fue fundada por Konstantinos Spartiotis, quien previamente fundó Simage Oy en 1993 y Ajat Oy en 2001 tras trabajar en el CERN y en la Johns Hopkins University. El equipo cuenta con más de 35 años de experiencia aplicada en conversión directa con CdTe y Si."
+        }
+      },
+      "itemList": {
+        "name": "Catálogo de productos de imagen por rayos X de Athlos",
+        "items": {
+          "wios": { "name": "Sensor intraoral inalámbrico DC-Air®" },
+          "ufs": { "name": "Ultra-Fast Scanning Sensor" },
+          "ufsIp67": { "name": "Industrial IP67 TDI" },
+          "manufacturing": { "name": "Servicios de fabricación" },
+          "software": { "name": "Productos de software" }
+        }
+      }
+    }
+  }
+}

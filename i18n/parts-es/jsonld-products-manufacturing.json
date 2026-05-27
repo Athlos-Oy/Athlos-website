@@ -1,0 +1,38 @@
+{
+  "jsonld": {
+    "productsManufacturing": {
+      "graph": {
+        "organization": {
+          "description": "Athlos Oy es una empresa finlandesa de tecnología para imagen por rayos X especializada en sensores de conversión directa CdTe-CMOS y Si-CMOS para aplicaciones dentales, médicas e industriales.",
+          "areaServed": "En todo el mundo",
+          "contactType": "sales"
+        },
+        "breadcrumb": {
+          "home": "Inicio",
+          "products": "Productos",
+          "manufacturing": "Servicios de fabricación"
+        },
+        "service": {
+          "name": "Servicios de fabricación de detectores de rayos X",
+          "description": "Fabricación de precisión de detectores de rayos X, incluidos bumping CMOS, unión flip chip, unión por hilo, unión de chips y caracterización completa del sensor. Acceso a la sala limpia VTT Micronova.",
+          "areaServed": "En todo el mundo",
+          "serviceType": "Fabricación por contrato"
+        }
+      },
+      "faq": {
+        "q1": {
+          "question": "¿Qué servicios de fabricación ofrece Athlos?",
+          "answer": "Athlos ofrece servicios de fabricación de precisión para detectores de rayos X, incluidos bumping CMOS, unión flip chip, unión por hilo, unión de chips y caracterización completa del sensor."
+        },
+        "q2": {
+          "question": "¿Athlos dispone de acceso a fabricación en sala limpia?",
+          "answer": "Sí. Athlos tiene acceso a las instalaciones de nanofabricación de VTT Micronova en Espoo, Finlandia, uno de los entornos de sala limpia líderes en Europa para la fabricación de semiconductores y detectores."
+        },
+        "q3": {
+          "question": "¿Athlos cuenta con certificación ISO para la fabricación?",
+          "answer": "Sí. Athlos está certificada según la norma ISO 13485:2016, lo que garantiza una gestión de la calidad constante en la fabricación de componentes para dispositivos médicos."
+        }
+      }
+    }
+  }
+}

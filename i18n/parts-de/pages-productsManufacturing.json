@@ -1,0 +1,66 @@
+{
+  "pages": {
+    "productsManufacturing": {
+      "hero": {
+        "category": "Sensorfertigung",
+        "headline": "Fertigungsdienstleistungen<br>für Röntgendetektoren",
+        "tagline": "Detektorfertigung im eigenen Haus — vom CMOS-Wafer bis zum fertigen Sensor."
+      },
+      "overview": {
+        "eyebrow": "Überblick",
+        "headline": "Im eigenen Haus gefertigt, vom Wafer bis zum Sensor.",
+        "body1": "Athlos fertigt seine Bildsensoren im eigenen Haus und in Partnerschaft mit dem Reinraum von VTT Micronova in Espoo — einer der führenden Nanofabrikationsanlagen Europas. Diese tiefe Fertigungskompetenz ist ein Grund, warum Athlos-Sensoren anders sind: Wir kontrollieren den gesamten Prozess, vom Detektormaterial und Bump-Bonden bis hin zur finalen Montage und Charakterisierung.",
+        "body2": "Dieselbe Fertigungsinfrastruktur, die unsere eigenen Produktlinien trägt, steht auch als Dienstleistung zur Verfügung. Athlos kann Partner- und OEM-Projekte unterstützen, die Präzisionsfertigung von Detektoren, CMOS-Bumping oder spezialisierte Montageprozesse erfordern.",
+        "imageAlt": "Silizium-CMOS-Wafer mit feinem Detektorraster"
+      },
+      "capabilities": {
+        "eyebrow": "Kompetenzen",
+        "headline": "Präzision in jedem Prozessschritt.",
+        "cards": {
+          "bumping": {
+            "title": "Detektor-Bumping",
+            "body": "Abscheidung von InSn-Lötbumps mit feinem Raster auf CMOS-Wafern. Rastermaß unter 100 µm für die Integration von CdTe- und Si-Detektoren. Abscheidung von Cu-Pillar-Bumps mit feinem Raster auf CMOS-Wafern. Rastermaß unter 30 µm für die Integration von CdTe- und Si-Detektoren."
+          },
+          "flipChip": {
+            "title": "Flip-Chip-Bonden",
+            "body": "Präzise Flip-Chip-Verbindung zwischen Detektormaterial und CMOS-Auslese. Entscheidend für den direkten elektrischen Kontakt, der eine Bildgebung mittels Direktkonversion ermöglicht."
+          },
+          "wire": {
+            "title": "Drahtbonden",
+            "body": "Dichte Drahtbondverbindungen vom CMOS-Die zur Leiterplatte und zu Gehäusesubstraten. Geeignet für feines Raster und großformatige Sensorkonfigurationen."
+          },
+          "probing": {
+            "title": "Röntgen-Probing &amp; Charakterisierung",
+            "body": "Elektrisches Probing auf Waferebene, einschließlich röntgenbasierter Prüfung. Vollständige Detektorcharakterisierung hinsichtlich Bildhomogenität, Empfindlichkeit und Rauschverhalten."
+          },
+          "dieBonding": {
+            "title": "Die-Bonding und Chipmontage",
+            "body": "Präzises Die-Bonding und mehrlagige Sensormontage in kontrollierten Reinraumumgebungen. Athlos koordiniert alle Montageschritte im eigenen Haus."
+          },
+          "quality": {
+            "title": "Qualität &amp; Zuverlässigkeit",
+            "body": "Qualitätsmanagement nach ISO 13485:2016. Prozesskontrollen in jeder Fertigungsstufe — von der Wareneingangsprüfung bis zur finalen Produktprüfung und Freigabe."
+          }
+        }
+      },
+      "facilities": {
+        "eyebrow": "Standorte",
+        "headline": "Zugang zum Reinraum von VTT Micronova.",
+        "body1": "Athlos hat vollen Zugang zum 2.000 m² großen Reinraum von VTT Micronova in Espoo, Finnland — einer der modernsten Reinraumanlagen Europas für Nanofabrikation, Dünnschichttechnik und Mikrosystemtechnik.",
+        "body2": "Diese Partnerschaft eröffnet Athlos und seinen Fertigungskunden Zugang zu einer erstklassigen Anlage, ohne die Investitionskosten eines eigenständigen Reinraums. In Kombination mit der eigenen Montage- und Charakterisierungsinfrastruktur von Athlos ermöglicht dies eine vollständige End-to-End-Sensorproduktion.",
+        "imageAlt": "Reinraumfertigung von Athlos bei VTT Micronova, Espoo"
+      },
+      "cta": {
+        "headline": "Anfragen zu Fertigungspartnerschaften.",
+        "body": "Wenn Sie ein detektorbasiertes Produkt entwickeln und Präzisionsfertigung benötigen — vom Bump-Bonden bis zur kompletten Sensormontage — wenden Sie sich an Athlos, um Ihre Anforderungen zu besprechen.",
+        "ctaContact": "Athlos kontaktieren",
+        "ctaAll": "Alle Produkte"
+      },
+      "lastUpdated": {
+        "label": "Zuletzt aktualisiert:",
+        "date": "15. April 2026",
+        "datetime": "2026-04-15"
+      }
+    }
+  }
+}

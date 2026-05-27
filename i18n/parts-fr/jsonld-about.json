@@ -1,0 +1,40 @@
+{
+  "jsonld": {
+    "about": {
+      "person": {
+        "name": "Konstantinos Spartiotis",
+        "jobTitle": "Fondateur et PDG, Athlos Oy",
+        "description": "Fondateur et PDG d'Athlos Oy. Pionnier de l'imagerie par rayons X à conversion directe à base de CdTe en 1993. Fondateur de Simage Oy (1993) et d'Ajat Oy (2001, devenue ensuite Varex Imaging Finland). Détenteur de dizaines de brevets en conversion directe, en technologie de contact CdTe et en comptage de photons.",
+        "knowsAbout": [
+          "Imagerie par rayons X à conversion directe",
+          "Technologie de capteurs CdTe",
+          "Détecteurs à comptage de photons",
+          "ASIC de lecture CMOS",
+          "Imagerie dentaire panoramique et céphalométrique"
+        ]
+      },
+      "faq": {
+        "q1": {
+          "question": "Quand Athlos a-t-elle été fondée, et quel est son héritage ?",
+          "answer": "Athlos perpétue une lignée d'imagerie par rayons X à conversion directe qui a débuté en 1993. Le fondateur Konstantinos Spartiotis a lancé Simage Oy en 1993, après des travaux au CERN et son doctorat à la Johns Hopkins University, puis a fondé Ajat Oy en 2001. Ajat est devenue la référence mondiale de l'imagerie dentaire panoramique et céphalométrique à conversion directe CdTe-CMOS avant d'être rachetée par XCounter, puis par Varex Imaging."
+        },
+        "q2": {
+          "question": "Qui est Konstantinos Spartiotis ?",
+          "answer": "Konstantinos Spartiotis est le fondateur et PDG d'Athlos Oy. Il a fondé Simage Oy en 1993 et Ajat Oy en 2001, et est reconnu comme un pionnier de l'imagerie par rayons X à conversion directe à base de CdTe. Il détient des dizaines de brevets en conversion directe, en technologie de contact CdTe et en comptage de photons ; il a auparavant travaillé au CERN et obtenu son doctorat à la Johns Hopkins University."
+        },
+        "q3": {
+          "question": "Où Athlos fabrique-t-elle ses capteurs ?",
+          "answer": "Athlos fabrique à Espoo, en Finlande — en interne et au sein de la salle blanche VTT Micronova, l'une des installations de nanofabrication les plus avancées d'Europe. Athlos maîtrise ainsi directement l'ensemble de la chaîne du détecteur : bumping des wafers CMOS, assemblage flip chip, assemblage des détecteurs et caractérisation."
+        },
+        "q4": {
+          "question": "Quelles certifications Athlos détient-elle ?",
+          "answer": "Athlos exploite un système de management de la qualité certifié ISO 13485:2016. Le capteur intraoral sans fil DC-Air® est autorisé par la FDA au titre du 510(k) pour l'imagerie dentaire intraorale par rayons X."
+        }
+      },
+      "breadcrumbs": {
+        "home": "Accueil",
+        "about": "À propos"
+      }
+    }
+  }
+}

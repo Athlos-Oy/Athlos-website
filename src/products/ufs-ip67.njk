@@ -1,10 +1,13 @@
 ---
 navScrolled: true
 layout: layouts/base.njk
-permalink: /products/ufs-ip67.html
-lang: en
+pagination:
+  data: locales.active
+  size: 1
+  alias: lang
+  addAllPagesToCollections: true
+permalink: "{% if lang == 'en' %}/products/ufs-ip67.html{% else %}/{{ lang }}/products/ufs-ip67.html{% endif %}"
 pageKey: productsUfsIp67
-canonical: https://athlos.fi/products/ufs-ip67.html
 og:
   type: product
   image: https://athlos.fi/images/ip67-carbon.webp
@@ -34,7 +37,7 @@ activeProduct: ufs-ip67
 
     <!-- HERO — full-bleed carbon fiber image, text bottom-left -->
     <section class="product-hero" style="min-height:85vh;">
-      <div class="product-hero-bg" style="background-image: url('../images/ip67-carbon.webp'); background-position: center 40%;"></div>
+      <div class="product-hero-bg" style="background-image: url('/images/ip67-carbon.webp'); background-position: center 40%;"></div>
       <div class="product-hero-overlay" style="background: linear-gradient(120deg, rgba(10,18,24,0.70) 35%, rgba(14,25,32,0.30) 100%);"></div>
       <div class="product-hero-gradient"></div>
       <div class="product-hero-content container">
@@ -44,7 +47,7 @@ activeProduct: ufs-ip67
           {{ "pages.productsUfsIp67.hero.tagline" | t }}
         </p>
         <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-          <a href="../downloads/brochure-ufs-ip67.pdf" class="btn btn-primary" target="_blank">{{ "pages.productsUfsIp67.hero.ctaSpecs" | t }}</a>
+          <a href="/downloads/brochure-ufs-ip67.pdf" class="btn btn-primary" target="_blank">{{ "pages.productsUfsIp67.hero.ctaSpecs" | t }}</a>
           <a href="#contact" class="btn btn-outline">{{ "pages.productsUfsIp67.hero.ctaDiscuss" | t }}</a>
         </div>
       </div>
@@ -68,7 +71,7 @@ activeProduct: ufs-ip67
             </p>
           </div>
           <div class="overview-visual aspect-portrait reveal">
-            <img src="../images/Product_Photography_A_black_rectangular_electronic_device_with_a_H4FpPj-9.webp" width="1792" height="2400" alt="{{ "pages.productsUfsIp67.overview.imageAlt" | t }}" loading="lazy">
+            <img src="/images/Product_Photography_A_black_rectangular_electronic_device_with_a_H4FpPj-9.webp" width="1792" height="2400" alt="{{ "pages.productsUfsIp67.overview.imageAlt" | t }}" loading="lazy">
           </div>
         </div>
       </div>
@@ -157,7 +160,7 @@ activeProduct: ufs-ip67
               {{ "pages.productsUfsIp67.specs.body2" | t }}
             </p>
             <div class="reveal" style="margin-top:2.5rem;">
-              <img src="../images/ip67-internal.webp" width="1792" height="2400" alt="{{ "pages.productsUfsIp67.specs.imageAlt" | t }}" loading="lazy"
+              <img src="/images/ip67-internal.webp" width="1792" height="2400" alt="{{ "pages.productsUfsIp67.specs.imageAlt" | t }}" loading="lazy"
                 style="border-radius:var(--r-lg); width:100%; object-fit:cover; max-height:280px; opacity:0; transition:opacity 400ms ease;"
                 onload="this.style.opacity='1'">
             </div>
@@ -261,7 +264,7 @@ activeProduct: ufs-ip67
 
           <div class="xray-card" onclick="openLightbox(this)">
             <div class="xray-card-img">
-              <img src="../images/Fish40kVp10mA_46.7cm-s_100um.png" alt="{{ "pages.productsUfsIp67.gallery.cards.fish.alt" | t }}" loading="lazy">
+              <img src="/images/Fish40kVp10mA_46.7cm-s_100um.png" alt="{{ "pages.productsUfsIp67.gallery.cards.fish.alt" | t }}" loading="lazy">
             </div>
             <div class="xray-card-info">
               <span class="xray-card-name">{{ "pages.productsUfsIp67.gallery.cards.fish.name" | t }}</span>
@@ -271,7 +274,7 @@ activeProduct: ufs-ip67
 
           <div class="xray-card" onclick="openLightbox(this)">
             <div class="xray-card-img">
-              <img src="../images/TwoFish40kVp10mA_46.7cm-s_100um.png" alt="{{ "pages.productsUfsIp67.gallery.cards.twoFish.alt" | t }}" loading="lazy">
+              <img src="/images/TwoFish40kVp10mA_46.7cm-s_100um.png" alt="{{ "pages.productsUfsIp67.gallery.cards.twoFish.alt" | t }}" loading="lazy">
             </div>
             <div class="xray-card-info">
               <span class="xray-card-name">{{ "pages.productsUfsIp67.gallery.cards.twoFish.name" | t }}</span>
@@ -281,7 +284,7 @@ activeProduct: ufs-ip67
 
           <div class="xray-card" onclick="openLightbox(this)">
             <div class="xray-card-img">
-              <img src="../images/ChickenFillet%26Bones40kVp10mA_46.7cm-s_100um.png" alt="{{ "pages.productsUfsIp67.gallery.cards.chickenFillet.alt" | t }}" loading="lazy">
+              <img src="/images/ChickenFillet%26Bones40kVp10mA_46.7cm-s_100um.png" alt="{{ "pages.productsUfsIp67.gallery.cards.chickenFillet.alt" | t }}" loading="lazy">
             </div>
             <div class="xray-card-info">
               <span class="xray-card-name">{{ "pages.productsUfsIp67.gallery.cards.chickenFillet.name" | t }}</span>
@@ -291,7 +294,7 @@ activeProduct: ufs-ip67
 
           <div class="xray-card" onclick="openLightbox(this)">
             <div class="xray-card-img">
-              <img src="../images/Nuts40kVp10mA_46.7cm-s_100um.png" alt="{{ "pages.productsUfsIp67.gallery.cards.nuts.alt" | t }}" loading="lazy">
+              <img src="/images/Nuts40kVp10mA_46.7cm-s_100um.png" alt="{{ "pages.productsUfsIp67.gallery.cards.nuts.alt" | t }}" loading="lazy">
             </div>
             <div class="xray-card-info">
               <span class="xray-card-name">{{ "pages.productsUfsIp67.gallery.cards.nuts.name" | t }}</span>
@@ -301,7 +304,7 @@ activeProduct: ufs-ip67
 
           <div class="xray-card" onclick="openLightbox(this)">
             <div class="xray-card-img">
-              <img src="../images/Walnuts40kVp10mA_93cms-1_200um.png" alt="{{ "pages.productsUfsIp67.gallery.cards.walnuts.alt" | t }}" loading="lazy">
+              <img src="/images/Walnuts40kVp10mA_93cms-1_200um.png" alt="{{ "pages.productsUfsIp67.gallery.cards.walnuts.alt" | t }}" loading="lazy">
             </div>
             <div class="xray-card-info">
               <span class="xray-card-name">{{ "pages.productsUfsIp67.gallery.cards.walnuts.name" | t }}</span>
@@ -311,7 +314,7 @@ activeProduct: ufs-ip67
 
           <div class="xray-card" onclick="openLightbox(this)">
             <div class="xray-card-img">
-              <img src="../images/Chip%26Noodles40kVp10mA_46.7cm-s_100um.png" alt="{{ "pages.productsUfsIp67.gallery.cards.chipsNoodles.alt" | t }}" loading="lazy">
+              <img src="/images/Chip%26Noodles40kVp10mA_46.7cm-s_100um.png" alt="{{ "pages.productsUfsIp67.gallery.cards.chipsNoodles.alt" | t }}" loading="lazy">
             </div>
             <div class="xray-card-info">
               <span class="xray-card-name">{{ "pages.productsUfsIp67.gallery.cards.chipsNoodles.name" | t }}</span>
@@ -321,7 +324,7 @@ activeProduct: ufs-ip67
 
           <div class="xray-card" onclick="openLightbox(this)">
             <div class="xray-card-img">
-              <img src="../images/Chips%26SugarBread40kVp10mA_46.7cm-s_100um.png" alt="{{ "pages.productsUfsIp67.gallery.cards.chipsSugarBread.alt" | t }}" loading="lazy">
+              <img src="/images/Chips%26SugarBread40kVp10mA_46.7cm-s_100um.png" alt="{{ "pages.productsUfsIp67.gallery.cards.chipsSugarBread.alt" | t }}" loading="lazy">
             </div>
             <div class="xray-card-info">
               <span class="xray-card-name">{{ "pages.productsUfsIp67.gallery.cards.chipsSugarBread.name" | t }}</span>
@@ -331,7 +334,7 @@ activeProduct: ufs-ip67
 
           <div class="xray-card" onclick="openLightbox(this)">
             <div class="xray-card-img">
-              <img src="../images/BankNote40kVp5mA_66.7cm-s_200um.webp" alt="{{ "pages.productsUfsIp67.gallery.cards.bankNote.alt" | t }}" loading="lazy">
+              <img src="/images/BankNote40kVp5mA_66.7cm-s_200um.webp" alt="{{ "pages.productsUfsIp67.gallery.cards.bankNote.alt" | t }}" loading="lazy">
             </div>
             <div class="xray-card-info">
               <span class="xray-card-name">{{ "pages.productsUfsIp67.gallery.cards.bankNote.name" | t }}</span>
@@ -438,7 +441,7 @@ activeProduct: ufs-ip67
             <strong>{{ "pages.productsUfsIp67.brochure.title" | t }}</strong>
             <span>{{ "pages.productsUfsIp67.brochure.desc" | t }}</span>
           </div>
-          <a href="../downloads/brochure-ufs-ip67.pdf" class="btn btn-secondary" target="_blank" style="white-space:nowrap; flex-shrink:0;">{{ "pages.productsUfsIp67.brochure.button" | t }}</a>
+          <a href="/downloads/brochure-ufs-ip67.pdf" class="btn btn-secondary" target="_blank" style="white-space:nowrap; flex-shrink:0;">{{ "pages.productsUfsIp67.brochure.button" | t }}</a>
         </div>
       </div>
     </section>
@@ -453,7 +456,7 @@ activeProduct: ufs-ip67
           <div class="reveal" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
             <a href="../contact.html" class="btn btn-primary btn-large">{{ "pages.productsUfsIp67.cta.ctaContact" | t }}</a>
             <a href="index.html" class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);">{{ "pages.productsUfsIp67.cta.ctaAll" | t }}</a>
-            <a href="../downloads/brochure-ufs-ip67.pdf" class="btn btn-outline" target="_blank" style="border-color:rgba(255,255,255,0.3);">{{ "pages.productsUfsIp67.cta.ctaDatasheet" | t }}</a>
+            <a href="/downloads/brochure-ufs-ip67.pdf" class="btn btn-outline" target="_blank" style="border-color:rgba(255,255,255,0.3);">{{ "pages.productsUfsIp67.cta.ctaDatasheet" | t }}</a>
           </div>
         </div>
       </div>

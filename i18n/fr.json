@@ -1,0 +1,330 @@
+{
+  "_meta": {
+    "comment": "French translation of Athlos website strings. First-draft by AI under glossary + fr-style-decisions.md binding constraints. Target locale: fr-FR (France), formal register (vous). EVERY value requires native French technical reviewer pass before public launch. See i18n/glossary.md and i18n/fr-style-decisions.md for terminology rules.",
+    "locale": "fr",
+    "lastLocalised": "2026-05-20",
+    "status": "draft-needs-native-review"
+  },
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "applications": "Applications",
+    "about": "À propos",
+    "contact": "Contact",
+    "productDropdown": {
+      "dcAir": "DC-Air&reg;",
+      "ufs": "Ultra-Fast Scanning Sensor",
+      "ufsIp67": "Industrial IP67 TDI",
+      "manufacturing": "Services de fabrication",
+      "software": "Produits logiciels"
+    },
+    "aria": {
+      "homeLogo": "Accueil Athlos",
+      "main": "Navigation principale",
+      "openMenu": "Ouvrir le menu"
+    }
+  },
+  "footer": {
+    "businessIdLabel": "Numéro d'entreprise",
+    "vatLabel": "Numéro de TVA",
+    "columns": {
+      "products": "Produits",
+      "applications": "Applications",
+      "company": "Entreprise",
+      "contact": "Contact"
+    },
+    "links": {
+      "dcAir": "DC-Air&reg;",
+      "ufs": "Ultra-Fast Scanning Sensor",
+      "ufsIp67": "Industrial IP67 TDI",
+      "manufacturing": "Services de fabrication",
+      "software": "Produits logiciels",
+      "dental": "Imagerie dentaire",
+      "industrial": "Inspection industrielle",
+      "medical": "Imagerie médicale",
+      "about": "À propos d'Athlos",
+      "manufacturingShort": "Fabrication",
+      "linkedin": "LinkedIn",
+      "privacy": "Politique de confidentialité"
+    },
+    "copyAllRights": "Tous droits réservés.",
+    "copyMadeIn": "Fabriqué en Finlande.",
+    "country": "Finlande",
+    "cert": "Certifié ISO 13485:2016",
+    "aria": {
+      "nav": "Navigation du pied de page"
+    }
+  },
+  "productSubnav": {
+    "back": "← Produits",
+    "aria": "Navigation des produits"
+  },
+  "pages": {
+    "home": {
+      "title": "Athlos – Capteurs avancés d'imagerie par rayons X",
+      "description": "Athlos conçoit et fabrique des capteurs avancés d'imagerie par rayons X à conversion directe pour les applications dentaires, médicales et industrielles. Technologie CdTe et Si CMOS, fabriqués en Finlande.",
+      "og": {
+        "title": "Athlos – Capteurs avancés d'imagerie par rayons X",
+        "description": "Capteurs à conversion directe pour l'imagerie par rayons X dentaire, médicale et industrielle. Qualité d'image supérieure, sensibilité accrue et acquisition plus rapide."
+      },
+      "twitter": {
+        "title": "Athlos – Capteurs avancés d'imagerie par rayons X",
+        "description": "Capteurs à conversion directe pour l'imagerie par rayons X dentaire, médicale et industrielle. Qualité d'image supérieure, sensibilité accrue et acquisition plus rapide."
+      },
+      "hero": {
+        "eyebrow": "Imagerie à rayons X par conversion directe",
+        "headline": "Conversion directe.<br>Performances supérieures.",
+        "sub": "Athlos conçoit et fabrique des capteurs avancés d'imagerie par rayons X — offrant une qualité d'image supérieure, une sensibilité accrue et une acquisition plus rapide pour les applications dentaires, médicales et industrielles.",
+        "ctaProducts": "Voir les produits",
+        "ctaAbout": "À propos d'Athlos"
+      },
+      "statement": {
+        "headline": "Notre équipe a inventé la conversion directe.<br>Depuis plus de 30 ans, les capteurs à conversion directe<br>définissent la précision et la fidélité de l'imagerie par rayons X.",
+        "body": "En supprimant le scintillateur et en convertissant les rayons X directement en impulsions électriques, les capteurs et les barrettes linéaires Athlos éliminent la cause première de la dégradation de l'image. Résultat&nbsp;: des détails plus nets, un contraste plus fidèle et des performances fiables sur toute la plage de dose.",
+        "stats": {
+          "invented": {
+            "number": "1993",
+            "label": "Conversion directe initiée par notre équipe"
+          },
+          "expertise": {
+            "number": "35+",
+            "label": "Années d'expertise"
+          },
+          "markets": {
+            "number": "38",
+            "label": "Marchés via nos partenaires de distribution"
+          },
+          "fda": {
+            "number": "510(k)",
+            "label": "Autorisation FDA"
+          },
+          "iso": {
+            "number": "ISO",
+            "label": "Certifié 13485:2016"
+          }
+        }
+      },
+      "tech": {
+        "eyebrow": "La science derrière la performance",
+        "headline": "Conversion directe.<br>Aucune étape intermédiaire.<br>Aucun compromis.",
+        "body1": "Les capteurs à rayons X classiques utilisent un scintillateur pour convertir d'abord les rayons X en lumière visible, laquelle pénètre ensuite dans une photodiode au facteur de remplissage limité avant d'être convertie en impulsion électrique. Cette conversion indirecte — des rayons X vers la lumière, puis de la lumière vers l'impulsion électrique — introduit un flou important, une perte de signal (un facteur de remplissage bien inférieur à 100&nbsp;%) et des rayons X non détectés (en raison de la DQE limitée des scintillateurs).",
+        "body2": "Les capteurs Athlos reposent sur des hybrides à conversion directe CdTe-CMOS et Si-CMOS qui convertissent les photons X directement en impulsions électriques tout en préservant la précision spatiale. Sans lumière diffusée, aucune perte de fidélité spatiale. Aucune conversion lumineuse. Aucune couche de phosphore. Aucun flou superflu. Aucune perte de signal ni de contraste.",
+        "videoAria": "Visualisation du processus de conversion directe d'un capteur Athlos",
+        "features": {
+          "cdte": "Matériaux à conversion directe CdTe et Si",
+          "cmos": "Lecture CMOS propriétaire entièrement personnalisée",
+          "photon": "Détection du photon unique",
+          "libs": "Bibliothèques avancées de reconstruction et de filtrage"
+        },
+        "learnLink": "En savoir plus sur Athlos"
+      },
+      "products": {
+        "eyebrow": "Gamme de produits",
+        "headline": "Conçus pour les applications les plus exigeantes.",
+        "intro": "Cinq gammes de produits et de services — toutes fondées sur la même précision de la conversion directe et des décennies d'expertise en imagerie par rayons X.",
+        "cards": {
+          "wios": {
+            "market": "Dentaire intraoral",
+            "name": "DC-Air<sup>&reg;</sup>",
+            "desc": "Capteur intraoral True Wireless®. La qualité d'image de la conversion directe, la rapidité d'un capteur filaire et le confort des plaques au phosphore — sans le fil.",
+            "link": "Découvrir DC-Air&reg;",
+            "imageAlt": "Capteur intraoral sans fil Athlos DC-Air"
+          },
+          "ufs": {
+            "market": "Dentaire · Médical · Industriel",
+            "name": "Ultra-Fast Scanning Sensor",
+            "desc": "Capteur à balayage CdTe-CMOS ultra-rapide et avec détection du photon unique pour l'imagerie dentaire panoramique et céphalométrique, médicale et industrielle.",
+            "link": "Découvrir Ultra-Fast Scanning Sensor",
+            "imageAlt": "Capteur à balayage ultra-rapide Athlos UFS"
+          },
+          "ufsIp67": {
+            "market": "Imagerie industrielle",
+            "name": "Industrial IP67 TDI",
+            "desc": "Détecteur à balayage TDI ultra-rapide certifié IP67 pour l'inspection en ligne continue dans les environnements industriels exigeants. Sans refroidissement actif.",
+            "link": "Découvrir Industrial IP67 TDI",
+            "imageAlt": "Détecteur industriel robuste Athlos Industrial IP67 TDI"
+          },
+          "manufacturing": {
+            "market": "Fabrication de détecteurs",
+            "name": "Services de fabrication",
+            "desc": "Fabrication de détecteurs de précision — bumping CMOS, assemblage flip chip, câblage filaire, assemblage de puces et caractérisation. Accès à VTT Micronova. Nous proposons une large gamme de services de fabrication sous contrat.",
+            "link": "En savoir plus",
+            "imageAlt": "Services de fabrication Athlos — wafer CMOS"
+          },
+          "software": {
+            "market": "Logiciels et intégration",
+            "name": "Produits logiciels",
+            "desc": "Module TWAIN, bibliothèques d'algorithmes de reconstruction, filtres de post-traitement et SDK — disponibles dans le cadre d'un système Athlos ou sous licence indépendante.",
+            "link": "En savoir plus",
+            "imageAlt": "Produits logiciels Athlos – TWAIN, SDK et bibliothèques d'algorithmes de reconstruction"
+          }
+        }
+      },
+      "manufacturing": {
+        "eyebrow": "Fabrication et partenariat",
+        "headline": "Fabriqués en Finlande.<br>Reconnus dans le monde entier.",
+        "body": "Les capteurs Athlos sont fabriqués en interne et au sein de la salle blanche VTT Micronova à Espoo — l'un des principaux environnements de nanofabrication d'Europe. Du bump bonding du CdTe à l'assemblage final du capteur, nous maîtrisons l'ensemble du processus.",
+        "pillars": {
+          "cleanroom": {
+            "title": "Fabrication en salle blanche",
+            "body": "Production en interne et chez VTT Micronova, sous des contrôles de processus rigoureux."
+          },
+          "partners": {
+            "title": "Réseau mondial de partenaires",
+            "body": "Des partenaires couvrant la conception CMOS, les matériaux pour détecteurs, les logiciels et les applications dans le monde entier."
+          },
+          "iso": {
+            "title": "ISO 13485:2016",
+            "body": "Système de management de la qualité certifié, pour une fiabilité produit constante et une conformité réglementaire."
+          }
+        },
+        "cta": "Services de fabrication"
+      },
+      "cta": {
+        "eyebrow": "Travailler avec nous",
+        "headline": "Prêt à gagner en rapidité<br>et en performance&nbsp;?",
+        "body": "Que vous développiez des systèmes d'imagerie de nouvelle génération ou que vous amélioriez des plateformes existantes, Athlos vous apporte la technologie, l'expertise et le soutien à long terme nécessaires à votre réussite.",
+        "button": "Contacter Athlos",
+        "location": "Espoo, Finlande"
+      },
+      "lastUpdated": {
+        "label": "Dernière mise à jour&nbsp;:",
+        "date": "15 avril 2026",
+        "datetime": "2026-04-15"
+      }
+    },
+    "about": {
+      "title": "À propos d'Athlos – Société finlandaise de technologie d'imagerie par rayons X",
+      "description": "Athlos est un concepteur et fabricant finlandais de capteurs d'imagerie par rayons X, spécialisé dans la technologie à conversion directe CdTe et Si CMOS. Fondée sur des décennies d'expertise issues du CERN, de Johns Hopkins et d'Ajat Oy.",
+      "og": {
+        "title": "À propos d'Athlos – Société finlandaise de technologie d'imagerie par rayons X",
+        "description": "Athlos est un concepteur et fabricant finlandais de capteurs d'imagerie par rayons X, spécialisé dans la technologie à conversion directe CdTe et Si CMOS."
+      },
+      "twitter": {
+        "title": "À propos d'Athlos – Société finlandaise de technologie d'imagerie par rayons X",
+        "description": "Athlos est un concepteur et fabricant finlandais de capteurs d'imagerie par rayons X, spécialisé dans la technologie à conversion directe CdTe et Si CMOS."
+      }
+    },
+    "applications": {
+      "title": "Applications – Imagerie par rayons X Athlos",
+      "description": "Les capteurs d'imagerie par rayons X Athlos répondent aux applications dentaires, industrielles et médicales. Technologie à conversion directe pour l'imagerie intraorale, panoramique, l'inspection en ligne et l'imagerie médicale spécialisée.",
+      "og": {
+        "title": "Applications – Imagerie par rayons X Athlos",
+        "description": "Les capteurs d'imagerie par rayons X Athlos répondent aux applications dentaires, industrielles et médicales. Technologie à conversion directe pour l'imagerie intraorale, panoramique, l'inspection en ligne et l'imagerie médicale spécialisée."
+      },
+      "twitter": {
+        "title": "Applications – Imagerie par rayons X Athlos",
+        "description": "Les capteurs d'imagerie par rayons X Athlos répondent aux applications dentaires, industrielles et médicales. Technologie à conversion directe pour l'imagerie intraorale, panoramique, l'inspection en ligne et l'imagerie médicale spécialisée."
+      }
+    },
+    "contact": {
+      "title": "Contacter Athlos – Capteurs d'imagerie par rayons X",
+      "description": "Contactez Athlos pour toute demande produit, intégration OEM, licence logicielle ou partenariat de fabrication. Basée à Espoo, en Finlande.",
+      "og": {
+        "title": "Contacter Athlos – Capteurs d'imagerie par rayons X",
+        "description": "Contactez Athlos pour toute demande produit, intégration OEM, licence logicielle ou partenariat de fabrication. Basée à Espoo, en Finlande."
+      },
+      "twitter": {
+        "title": "Contacter Athlos – Capteurs d'imagerie par rayons X",
+        "description": "Contactez Athlos pour toute demande produit, intégration OEM, licence logicielle ou partenariat de fabrication. Basée à Espoo, en Finlande."
+      }
+    },
+    "privacy": {
+      "title": "Politique de confidentialité – Athlos Oy",
+      "description": "Politique de confidentialité d'Athlos Oy. Découvrez comment nous collectons, traitons et partageons vos données personnelles, et quels sont vos droits.",
+      "og": {
+        "title": "Politique de confidentialité – Athlos Oy",
+        "description": "Politique de confidentialité d'Athlos Oy. Découvrez comment nous collectons, traitons et partageons vos données personnelles, et quels sont vos droits."
+      },
+      "twitter": {
+        "title": "Politique de confidentialité – Athlos Oy",
+        "description": "Politique de confidentialité d'Athlos Oy. Découvrez comment nous collectons, traitons et partageons vos données personnelles, et quels sont vos droits."
+      }
+    },
+    "productsIndex": {
+      "title": "Capteurs et détecteurs d'imagerie par rayons X | Athlos Conversion Directe",
+      "description": "La gamme Athlos comprend le capteur intraoral sans fil DC-Air, l'Ultra-Fast Scanning Sensor, le détecteur Industrial IP67 TDI, des services de fabrication et des produits logiciels.",
+      "og": {
+        "title": "Capteurs et détecteurs d'imagerie par rayons X | Athlos Conversion Directe",
+        "description": "La gamme Athlos comprend le capteur intraoral sans fil DC-Air, l'Ultra-Fast Scanning Sensor, le détecteur Industrial IP67 TDI, des services de fabrication et des produits logiciels."
+      },
+      "twitter": {
+        "title": "Capteurs et détecteurs d'imagerie par rayons X | Athlos Conversion Directe",
+        "description": "La gamme Athlos comprend le capteur intraoral sans fil DC-Air, l'Ultra-Fast Scanning Sensor, le détecteur Industrial IP67 TDI, des services de fabrication et des produits logiciels."
+      }
+    },
+    "productsWios": {
+      "title": "DC-Air® – Capteur intraoral sans fil | Athlos",
+      "description": "DC-Air® est un capteur intraoral à rayons X entièrement sans fil à conversion directe. Technologie Si-CMOS, liaison sans fil Bluetooth 5.0, porte-capteurs Zero Profile®. Des images d'une parfaite netteté, sans câble.",
+      "og": {
+        "title": "DC-Air® – Capteur intraoral sans fil | Athlos",
+        "description": "DC-Air® est un capteur intraoral à rayons X entièrement sans fil à conversion directe. Technologie Si-CMOS, liaison sans fil Bluetooth 5.0, porte-capteurs Zero Profile®. Autorisé FDA 510(k)."
+      },
+      "twitter": {
+        "title": "DC-Air® – Capteur intraoral sans fil | Athlos",
+        "description": "Capteur intraoral à rayons X entièrement sans fil à conversion directe. Technologie Si-CMOS, Bluetooth 5.0, porte-capteurs Zero Profile®. Autorisé FDA 510(k)."
+      }
+    },
+    "productsUfs": {
+      "title": "Capteur à balayage CdTe ultra-rapide pour rayons X | Athlos UFS",
+      "description": "L'Ultra-Fast Scanning Sensor est le capteur linéaire à balayage à conversion directe ultra-rapide d'Athlos, destiné à l'imagerie par rayons X dentaire panoramique et céphalométrique, médicale et industrielle. CdTe-CMOS, sensibilité au photon unique.",
+      "og": {
+        "title": "Capteur à balayage CdTe ultra-rapide pour rayons X | Athlos UFS",
+        "description": "Capteur linéaire à balayage CdTe-CMOS à conversion directe ultra-rapide pour l'imagerie par rayons X dentaire panoramique et céphalométrique, médicale et industrielle. Détection du photon unique."
+      },
+      "twitter": {
+        "title": "Capteur à balayage CdTe ultra-rapide pour rayons X | Athlos UFS",
+        "description": "Capteur linéaire à balayage CdTe-CMOS à conversion directe ultra-rapide pour l'imagerie par rayons X dentaire panoramique et céphalométrique, médicale et industrielle."
+      }
+    },
+    "productsUfsIp67": {
+      "title": "Industrial IP67 TDI – Détecteur de rayons X industriel | Athlos",
+      "description": "L'Industrial IP67 TDI est un détecteur linéaire industriel à rayons X à conversion directe, robuste, pour l'inspection en ligne à haute vitesse. CdTe-CMOS, boîtier IP67, sans refroidissement actif, balayage TDI.",
+      "og": {
+        "title": "Industrial IP67 TDI – Détecteur de rayons X industriel | Athlos",
+        "description": "Détecteur TDI CdTe-CMOS à conversion directe robuste, certifié IP67, pour l'inspection en ligne industrielle à haute vitesse par rayons X. Aucun refroidissement actif requis."
+      },
+      "twitter": {
+        "title": "Industrial IP67 TDI – Détecteur de rayons X industriel | Athlos",
+        "description": "Détecteur TDI CdTe-CMOS à conversion directe robuste, certifié IP67, pour l'inspection en ligne industrielle à haute vitesse par rayons X. Aucun refroidissement actif requis."
+      }
+    },
+    "productsManufacturing": {
+      "title": "Services de fabrication de détecteurs de rayons X | Bumping CMOS | Athlos",
+      "description": "Athlos propose des services de fabrication de détecteurs de rayons X de précision — bumping CMOS, assemblage flip chip, câblage filaire, die bonding et caractérisation complète des capteurs. Accès à la salle blanche VTT Micronova.",
+      "og": {
+        "title": "Services de fabrication de détecteurs de rayons X | Bumping CMOS | Athlos",
+        "description": "Fabrication de précision de détecteurs de rayons X — bumping CMOS, assemblage flip chip, câblage filaire, die bonding et caractérisation des capteurs. Accès à la salle blanche VTT Micronova, certifié ISO 13485."
+      },
+      "twitter": {
+        "title": "Services de fabrication de détecteurs de rayons X | Bumping CMOS | Athlos",
+        "description": "Fabrication de précision de détecteurs de rayons X — bumping CMOS, assemblage flip chip, câblage filaire, die bonding et caractérisation des capteurs. Accès à la salle blanche VTT Micronova."
+      }
+    },
+    "productsSoftware": {
+      "title": "Logiciels d'imagerie par rayons X — TWAIN, SDK, reconstruction | Athlos",
+      "description": "Athlos propose un module TWAIN, des bibliothèques d'algorithmes de reconstruction, des filtres avancés de post-traitement et un accompagnement à l'intégration SDK pour les systèmes d'imagerie par rayons X.",
+      "og": {
+        "title": "Logiciels d'imagerie par rayons X — TWAIN, SDK, reconstruction | Athlos",
+        "description": "Logiciels Athlos pour systèmes d'imagerie par rayons X — module TWAIN, bibliothèques d'algorithmes de reconstruction, filtres avancés de post-traitement et intégration SDK."
+      },
+      "twitter": {
+        "title": "Logiciels d'imagerie par rayons X — TWAIN, SDK, reconstruction | Athlos",
+        "description": "Logiciels Athlos pour systèmes d'imagerie par rayons X — module TWAIN, bibliothèques d'algorithmes de reconstruction, filtres avancés de post-traitement et intégration SDK."
+      }
+    }
+  },
+  "jsonld": {
+    "organization": {
+      "description": "Athlos Oy est une entreprise finlandaise de technologie d'imagerie par rayons X, spécialisée dans les capteurs à conversion directe CdTe-CMOS et Si-CMOS pour les applications dentaires, médicales et industrielles.",
+      "areaServed": "Monde entier",
+      "contactType": "sales"
+    }
+  },
+  "cookieBanner": {
+    "body": "Nous utilisons des cookies de mesure d'audience pour comprendre comment les visiteurs utilisent ce site.",
+    "privacyLinkText": "Politique de confidentialité",
+    "decline": "Refuser",
+    "accept": "Accepter"
+  }
+}

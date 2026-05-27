@@ -1,0 +1,50 @@
+{
+  "pages": {
+    "productsSoftware": {
+      "hero": {
+        "category": "Software &amp; integrazione",
+        "headline": "Prodotti software<br>per imaging a raggi X",
+        "tagline": "Decenni di competenza software — disponibili come componenti concedibili in licenza o integrati nei sistemi di imaging Athlos."
+      },
+      "overview": {
+        "eyebrow": "Panoramica",
+        "headline": "Il livello software alla base dell'imaging a conversione diretta.",
+        "body1": "Il team Athlos sviluppa software per imaging a raggi X sin dagli albori della conversione diretta — algoritmi di ricostruzione, filtri di elaborazione delle immagini e livelli di integrazione TWAIN, impiegati in migliaia di installazioni cliniche e industriali in tutto il mondo.",
+        "body2": "Queste funzionalità software sono disponibili come parte di un sistema di imaging Athlos completo, oppure come componenti concedibili in licenza in modo indipendente per l'integrazione in piattaforme di terze parti. Athlos fornisce inoltre accesso all'SDK e supporto diretto all'integrazione per clienti OEM e system integrator."
+      },
+      "components": {
+        "eyebrow": "Cosa è disponibile",
+        "headline": "Componenti software per lo sviluppo di sistemi di imaging.",
+        "cards": {
+          "twain": {
+            "title": "Modulo TWAIN",
+            "body": "Il modulo TWAIN Athlos si integra direttamente con i software di imaging dentale e medicale. Le applicazioni supportate includono Dentrix Ascend, Eaglesoft, Open Dental, Dexis, Romexis e molte altre piattaforme compatibili con TWAIN. Disponibile come parte di una soluzione hardware o come componente in licenza autonomo."
+          },
+          "reconstruction": {
+            "title": "Algoritmi di ricostruzione",
+            "body": "Librerie avanzate di algoritmi di ricostruzione, sviluppate nel corso di decenni di lavoro sull'imaging a conversione diretta. Progettate per le caratteristiche di segnale specifiche dei rivelatori CdTe e Si CMOS. Disponibili come componente autonomo concedibile in licenza per l'integrazione in flussi di elaborazione dei sistemi di imaging."
+          },
+          "postProcessing": {
+            "title": "Filtri di post-elaborazione",
+            "body": "Librerie di filtri di miglioramento dell'immagine e post-elaborazione adattivi a livello locale. Sviluppate e perfezionate in applicazioni di imaging dentale, industriale e medicale. Fornite con l'Athlos SDK e disponibili per integrazione e personalizzazione."
+          }
+        }
+      },
+      "sdk": {
+        "title": "Athlos SDK &amp; API",
+        "body": "API di integrazione C/C++ / DLL con esempi di codice sorgente, GUI di valutazione e un'avanzata libreria di filtri adattivi a livello locale. Contatta Athlos per discutere l'accesso all'SDK e le condizioni di licenza."
+      },
+      "cta": {
+        "headline": "Domande su licenze software e integrazione.",
+        "body": "Per integrare il software Athlos in una piattaforma esistente o per valutarlo per un nuovo sistema di imaging, il team Athlos è a disposizione. Contattaci per discutere licenze, accesso all'SDK e percorsi di integrazione.",
+        "buttonContact": "Contatta Athlos",
+        "buttonAll": "Tutti i prodotti"
+      },
+      "lastUpdated": {
+        "label": "Ultimo aggiornamento:",
+        "date": "15 aprile 2026",
+        "datetime": "2026-04-15"
+      }
+    }
+  }
+}

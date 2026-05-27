@@ -1,9 +1,12 @@
 ---
 layout: layouts/base.njk
-permalink: /index.html
-lang: en
+pagination:
+  data: locales.active
+  size: 1
+  alias: lang
+  addAllPagesToCollections: true
+permalink: "{% if lang == 'en' %}/index.html{% else %}/{{ lang }}/index.html{% endif %}"
 pageKey: home
-canonical: https://athlos.fi/
 og:
   type: website
   image: https://athlos.fi/images/hero-lab-automation.webp
@@ -25,10 +28,10 @@ footerNavAriaLabel: Footer navigation
     <!-- HERO -->
     <section class="hero" id="hero">
       <div class="hero-slideshow" aria-hidden="true">
-        <div class="hero-slide active" style="background-image: url('images/hero-lab-automation.webp')"></div>
-        <div class="hero-slide" style="background-image: url('images/hero-cleanroom-worker.webp')"></div>
-        <div class="hero-slide" style="background-image: url('images/hero-facility.webp')"></div>
-        <div class="hero-slide" style="background-image: url('images/hero-process.webp')"></div>
+        <div class="hero-slide active" style="background-image: url('/images/hero-lab-automation.webp')"></div>
+        <div class="hero-slide" style="background-image: url('/images/hero-cleanroom-worker.webp')"></div>
+        <div class="hero-slide" style="background-image: url('/images/hero-facility.webp')"></div>
+        <div class="hero-slide" style="background-image: url('/images/hero-process.webp')"></div>
         <div class="hero-overlay"></div>
         <div class="hero-gradient"></div>
       </div>
@@ -119,11 +122,11 @@ footerNavAriaLabel: Footer navigation
                 playsinline
                 preload="metadata"
                 disablepictureinpicture
-                poster="images/product-macro-1.webp"
+                poster="/images/product-macro-1.webp"
                 aria-label="{{ "pages.home.tech.videoAria" | t }}"
                 data-playback-rate="1.5"
               >
-                <source src="images/direct-conversion.mp4" type="video/mp4">
+                <source src="/images/direct-conversion.mp4" type="video/mp4">
               </video>
             </div>
           </div>
@@ -177,7 +180,7 @@ footerNavAriaLabel: Footer navigation
 
           <article class="product-card reveal">
             <div class="product-card-image">
-              <img src="images/wios-hero.webp" width="1792" height="2400" alt="{{ "pages.home.products.cards.wios.imageAlt" | t }}" loading="lazy">
+              <img src="/images/wios-hero.webp" width="1792" height="2400" alt="{{ "pages.home.products.cards.wios.imageAlt" | t }}" loading="lazy">
             </div>
             <div class="product-card-body">
               <span class="product-market">{{ "pages.home.products.cards.wios.market" | t }}</span>
@@ -189,7 +192,7 @@ footerNavAriaLabel: Footer navigation
 
           <article class="product-card reveal" data-delay="80">
             <div class="product-card-image">
-              <img src="images/ufs-dark.webp" width="1792" height="2400" alt="{{ "pages.home.products.cards.ufs.imageAlt" | t }}" loading="lazy">
+              <img src="/images/ufs-dark.webp" width="1792" height="2400" alt="{{ "pages.home.products.cards.ufs.imageAlt" | t }}" loading="lazy">
             </div>
             <div class="product-card-body">
               <span class="product-market">{{ "pages.home.products.cards.ufs.market" | t }}</span>
@@ -201,7 +204,7 @@ footerNavAriaLabel: Footer navigation
 
           <article class="product-card reveal" data-delay="160">
             <div class="product-card-image">
-              <img src="images/ip67-carbon.webp" width="1792" height="2400" alt="{{ "pages.home.products.cards.ufsIp67.imageAlt" | t }}" loading="lazy">
+              <img src="/images/ip67-carbon.webp" width="1792" height="2400" alt="{{ "pages.home.products.cards.ufsIp67.imageAlt" | t }}" loading="lazy">
             </div>
             <div class="product-card-body">
               <span class="product-market">{{ "pages.home.products.cards.ufsIp67.market" | t }}</span>
@@ -213,7 +216,7 @@ footerNavAriaLabel: Footer navigation
 
           <article class="product-card reveal" data-delay="240">
             <div class="product-card-image">
-              <img src="images/manufacturing-wafer-1.webp" width="2400" height="1792" alt="{{ "pages.home.products.cards.manufacturing.imageAlt" | t }}" loading="lazy">
+              <img src="/images/manufacturing-wafer-1.webp" width="2400" height="1792" alt="{{ "pages.home.products.cards.manufacturing.imageAlt" | t }}" loading="lazy">
             </div>
             <div class="product-card-body">
               <span class="product-market">{{ "pages.home.products.cards.manufacturing.market" | t }}</span>
@@ -225,7 +228,7 @@ footerNavAriaLabel: Footer navigation
 
           <article class="product-card reveal" data-delay="320">
             <div class="product-card-image">
-              <img src="images/software_image_homepage.webp" width="5760" height="3840" alt="{{ "pages.home.products.cards.software.imageAlt" | t }}" loading="lazy">
+              <img src="/images/software_image_homepage.webp" width="5760" height="3840" alt="{{ "pages.home.products.cards.software.imageAlt" | t }}" loading="lazy">
             </div>
             <div class="product-card-body">
               <span class="product-market">{{ "pages.home.products.cards.software.market" | t | safe }}</span>
@@ -242,7 +245,7 @@ footerNavAriaLabel: Footer navigation
     <!-- MANUFACTURING -->
     <section class="manufacturing" id="manufacturing">
       <div class="manufacturing-image" aria-hidden="true">
-        <img src="images/hero-facility.webp" width="5504" height="3072" alt="" loading="lazy">
+        <img src="/images/hero-facility.webp" width="5504" height="3072" alt="" loading="lazy">
         <div class="manufacturing-overlay"></div>
       </div>
       <div class="container">

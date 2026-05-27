@@ -47,6 +47,7 @@
     },
     "copyAllRights": "All rights reserved.",
     "copyMadeIn": "Made in Finland.",
+    "country": "Finland",
     "cert": "ISO 13485:2016 Certified",
     "aria": {
       "nav": "Footer navigation"
@@ -317,5 +318,11 @@
       "areaServed": "Worldwide",
       "contactType": "sales"
     }
+  },
+  "cookieBanner": {
+    "body": "We use analytics cookies to understand how visitors use this site.",
+    "privacyLinkText": "Privacy Policy",
+    "decline": "Decline",
+    "accept": "Accept"
   }
 }

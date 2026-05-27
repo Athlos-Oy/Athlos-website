@@ -1,0 +1,84 @@
+{
+  "pages": {
+    "productsIndex": {
+      "hero": {
+        "eyebrow": "Produktportfolio",
+        "headline": "Röntgenbildgebungs-Produkte",
+        "intro": "Fünf Produkt- und Servicelinien — alle aufgebaut auf demselben Fundament aus Direktkonversionspräzision und jahrzehntelanger Erfahrung in der Röntgenbildgebung."
+      },
+      "cards": {
+        "wios": {
+          "market": "Intraorale Dentalbildgebung",
+          "name": "DC-Air&reg;",
+          "desc": "Vollständig kabellose Direktkonversions-Röntgenbildgebung für den intraoralen Einsatz im modernen Dental-Workflow.",
+          "link": "DC-Air&reg; ansehen"
+        },
+        "ufs": {
+          "market": "Dental · Medizin · Industrie",
+          "name": "Ultra-Fast Scanning Sensor",
+          "desc": "Ultraschneller Scansensor für Anwendungen, bei denen Geschwindigkeit, Empfindlichkeit und Bildqualität entscheidend sind.",
+          "link": "Ultra-Fast Scanning Sensor ansehen"
+        },
+        "ufsIp67": {
+          "market": "Industrielle Bildgebung",
+          "name": "Industrial IP67 TDI",
+          "desc": "Robuster industrieller Ultraschnell-Scandetektor, entwickelt für anspruchsvolle Inline-Inspektionsumgebungen.",
+          "link": "Industrial IP67 TDI ansehen"
+        },
+        "manufacturing": {
+          "market": "Detektorfertigung",
+          "name": "Fertigungsdienstleistungen",
+          "desc": "Präzisionsfertigung von Sensoren — von CMOS-Bumping und Flip-Chip-Bonden bis zur kompletten Detektor-Assembly.",
+          "link": "Mehr erfahren"
+        },
+        "software": {
+          "market": "Software &amp; Integration",
+          "name": "Software-Produkte",
+          "desc": "TWAIN-Modul, Rekonstruktionsalgorithmen, Nachbearbeitungsfilter und SDK für die Integration in Röntgenbildgebungs-Systeme.",
+          "link": "Mehr erfahren"
+        }
+      },
+      "categories": {
+        "eyebrow": "Produktkategorien",
+        "headline": "Finden Sie das richtige Produkt<br>für Ihre Anwendung.",
+        "dental": {
+          "label": "Dental",
+          "name": "Intraorale &amp;<br>Panorama-Bildgebung",
+          "items": {
+            "wios": "DC-Air&reg; – Kabelloser Intraoralsensor",
+            "ufs": "Ultra-Fast Scanning Sensor – Dentales Panoramaröntgen &amp; FRS"
+          }
+        },
+        "industrial": {
+          "label": "Industrie",
+          "name": "Inline-Inspektion &amp;<br>industrielles Röntgen",
+          "items": {
+            "ufsIp67": "Industrial IP67 TDI – Robuster Industriedetektor",
+            "ufs": "Ultra-Fast Scanning Sensor – Industrie &amp; Medizin"
+          }
+        },
+        "services": {
+          "label": "Software &amp; Fertigung",
+          "name": "Services &amp;<br>Integration",
+          "items": {
+            "software": "Software-Produkte",
+            "twain": "TWAIN-Modul",
+            "filters": "Rekonstruktion &amp; Filter",
+            "manufacturing": "Fertigungsdienstleistungen"
+          }
+        }
+      },
+      "cta": {
+        "eyebrow": "Kontakt aufnehmen",
+        "headline": "Sie sind unsicher, welches Produkt zu Ihrer Anwendung passt?",
+        "body": "Athlos arbeitet eng mit OEMs und Systemintegratoren zusammen, um die passende Lösung zu finden. Schildern Sie uns Ihre Anforderungen an die Bildgebung, und wir helfen Ihnen, den richtigen Weg zu finden.",
+        "button": "Athlos kontaktieren"
+      },
+      "lastUpdated": {
+        "label": "Zuletzt aktualisiert:",
+        "datetime": "2026-04-15",
+        "date": "15. April 2026"
+      }
+    }
+  }
+}

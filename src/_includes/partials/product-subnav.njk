@@ -2,15 +2,16 @@
   Product detail page subnav. One link per product, with `active` class
   on the link whose `activeProduct` matches.
   Set activeProduct in the page front-matter (e.g. activeProduct: ufs).
-  Strings come from i18n/<locale>.json.
+  Strings come from i18n/<locale>.json. Links are absolute EN-canonical
+  paths run through localeUrl filter using the current `lang`.
 #}
   <nav class="product-subnav" aria-label="{{ "productSubnav.aria" | t }}">
     <div class="product-subnav-inner">
-      <a href="index.html" class="subnav-back">{{ "productSubnav.back" | t }}</a>
-      <a href="wios.html" class="subnav-link{% if activeProduct == 'wios' %} active{% endif %}">{{ "nav.productDropdown.dcAir" | t | safe }}</a>
-      <a href="ufs.html" class="subnav-link{% if activeProduct == 'ufs' %} active{% endif %}">{{ "nav.productDropdown.ufs" | t }}</a>
-      <a href="ufs-ip67.html" class="subnav-link{% if activeProduct == 'ufs-ip67' %} active{% endif %}">{{ "nav.productDropdown.ufsIp67" | t }}</a>
-      <a href="manufacturing.html" class="subnav-link{% if activeProduct == 'manufacturing' %} active{% endif %}">{{ "nav.productDropdown.manufacturing" | t }}</a>
-      <a href="software.html" class="subnav-link{% if activeProduct == 'software' %} active{% endif %}">{{ "nav.productDropdown.software" | t }}</a>
+      <a href="{{ "/products/index.html" | localeUrl(lang) }}" class="subnav-back">{{ "productSubnav.back" | t }}</a>
+      <a href="{{ "/products/wios.html" | localeUrl(lang) }}" class="subnav-link{% if activeProduct == 'wios' %} active{% endif %}">{{ "nav.productDropdown.dcAir" | t | safe }}</a>
+      <a href="{{ "/products/ufs.html" | localeUrl(lang) }}" class="subnav-link{% if activeProduct == 'ufs' %} active{% endif %}">{{ "nav.productDropdown.ufs" | t }}</a>
+      <a href="{{ "/products/ufs-ip67.html" | localeUrl(lang) }}" class="subnav-link{% if activeProduct == 'ufs-ip67' %} active{% endif %}">{{ "nav.productDropdown.ufsIp67" | t }}</a>
+      <a href="{{ "/products/manufacturing.html" | localeUrl(lang) }}" class="subnav-link{% if activeProduct == 'manufacturing' %} active{% endif %}">{{ "nav.productDropdown.manufacturing" | t }}</a>
+      <a href="{{ "/products/software.html" | localeUrl(lang) }}" class="subnav-link{% if activeProduct == 'software' %} active{% endif %}">{{ "nav.productDropdown.software" | t }}</a>
     </div>
   </nav>

@@ -34,7 +34,8 @@ function deepMerge(a, b) {
 // - i18n/parts/<pageKey>.json each contribute keys (typically under pages.<key>)
 //   and are deep-merged on top of the base. Parts let parallel-edit workflows
 //   add per-page string sets without racing on a single file.
-// Phase 4 adds de.json + parts-de/ alongside.
+// Phase 4 adds de.json + parts-de/ alongside; subsequent Phase 4 batches add
+// it/es. Phase 5 adds fr.json + parts-fr/.
 function loadLocale(lang) {
   let dict = JSON.parse(readFileSync(resolve(__dirname, `i18n/${lang}.json`), "utf8"));
   const partsDir = resolve(__dirname, `i18n/parts-${lang}`);
@@ -49,6 +50,10 @@ function loadLocale(lang) {
 
 const I18N = {
   en: loadLocale("en"),
+  de: loadLocale("de"),
+  it: loadLocale("it"),
+  es: loadLocale("es"),
+  fr: loadLocale("fr"),
 };
 
 export default async function (eleventyConfig) {
@@ -109,7 +114,11 @@ export default async function (eleventyConfig) {
   //   SafeString automatically because some values are user-visible
   //   plain text that SHOULD be escaped on output.
   eleventyConfig.addFilter("t", function (key, locale) {
-    const lang = locale || (this.ctx && this.ctx.page && this.ctx.page.lang) || (this.page && this.page.lang) || "en";
+    const lang = locale
+      || (this.ctx && this.ctx.lang)
+      || (this.ctx && this.ctx.page && this.ctx.page.lang)
+      || (this.page && this.page.lang)
+      || "en";
     const dict = I18N[lang];
     if (!dict) {
       throw new Error(`i18n: no dictionary loaded for locale "${lang}"`);

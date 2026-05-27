@@ -1,0 +1,123 @@
+{
+  "pages": {
+    "applications": {
+      "hero": {
+        "eyebrow": "Domaines d'application",
+        "headline": "Applications de l'imagerie par rayons X",
+        "sub": "Des capteurs d'imagerie par rayons X à conversion directe pour les flux de travail dentaires, industriels et médicaux les plus exigeants."
+      },
+      "intro": {
+        "eyebrow": "Domaines d'application",
+        "headline": "Éprouvés dans les applications clés, et au-delà.",
+        "body": "Les capteurs Athlos sont déployés dans des environnements exigeants où la qualité d'image, la fiabilité et la précision ne sont pas négociables. Les domaines présentés ci-dessous sont représentatifs — la technologie à conversion directe convient à un large éventail de défis d'imagerie au-delà de ceux illustrés ici."
+      },
+      "cards": {
+        "dental": {
+          "imageAlt": "Application de capteur à rayons X à conversion directe – imagerie dentaire intraorale et panoramique",
+          "title": "Imagerie dentaire",
+          "uses": {
+            "intraoral": "Imagerie intraorale par rayons X",
+            "panoramic": "Panoramique et céphalométrique",
+            "wireless": "Flux de travail avec capteur sans fil",
+            "lowDose": "Diagnostic à faible dose"
+          },
+          "linkWios": "Capteur intraoral DC-Air&reg; &rarr;",
+          "linkUfs": "Ultra-Fast Scanning Sensor &rarr;"
+        },
+        "medical": {
+          "imageAlt": "Application de capteur à rayons X à conversion directe – imagerie et diagnostic médicaux",
+          "title": "Imagerie médicale",
+          "uses": {
+            "ceph": "Céphalométrie et OPG",
+            "custom": "Modalités médicales sur mesure",
+            "sensitivity": "Haute sensibilité à faible dose",
+            "cdte": "Conversion directe CdTe"
+          },
+          "linkUfs": "Ultra-Fast Scanning Sensor &rarr;"
+        },
+        "food": {
+          "imageAlt": "Inspection en ligne par rayons X pour la détection de corps étrangers et le contrôle qualité dans l'agroalimentaire",
+          "title": "Agroalimentaire",
+          "uses": {
+            "foreign": "Détection de corps étrangers",
+            "seal": "Contrôle de l'intégrité des scellages",
+            "fill": "Vérification du niveau de remplissage",
+            "count": "Comptage d'objets"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "pharma": {
+          "imageAlt": "Inspection par rayons X pour la sécurité des produits pharmaceutiques, le niveau de remplissage et l'intégrité des scellages",
+          "title": "Pharmaceutique",
+          "uses": {
+            "nondestructive": "Contrôle non destructif des produits",
+            "foreign": "Détection de corps étrangers",
+            "seal": "Contrôle des scellages et du niveau de remplissage",
+            "safety": "Sécurité et qualité des produits"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "oilGas": {
+          "imageAlt": "Contrôle non destructif par rayons X pour l'inspection des soudures et de la corrosion des pipelines pétroliers et gaziers",
+          "title": "Pétrole et gaz",
+          "uses": {
+            "pipe": "Inspection des conduites à la recherche de fissures",
+            "weld": "Contrôle des soudures",
+            "ct": "CT industriel",
+            "corrosion": "Évaluation de la corrosion"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "automotive": {
+          "imageAlt": "Contrôle non destructif par rayons X pour les pièces moulées et l'intégrité des composants automobiles",
+          "title": "Automobile",
+          "uses": {
+            "tire": "Contrôle qualité des pneumatiques",
+            "casting": "Inspection des pièces moulées métalliques",
+            "integrity": "Intégrité des pièces métalliques",
+            "assembly": "Vérification des assemblages"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "electronics": {
+          "imageAlt": "Inspection par rayons X pour l'assemblage de circuits imprimés, la vérification SMT et la fabrication électronique",
+          "title": "Électronique",
+          "uses": {
+            "pcb": "Inspection des circuits imprimés",
+            "count": "Comptage de composants",
+            "reel": "Inspection des composants en bobine",
+            "smt": "Inspection d'assemblages SMT"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "heavy": {
+          "imageAlt": "Contrôle non destructif par rayons X pour les soudures structurelles et les applications de l'industrie lourde",
+          "title": "Industrie lourde",
+          "uses": {
+            "weld": "Contrôle des soudures structurelles",
+            "porosity": "Détection de la porosité et des fissures des conduites",
+            "ct": "Applications de CT industriel",
+            "ndt": "CND à grande échelle"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        }
+      },
+      "directConversion": {
+        "eyebrow": "Pourquoi la conversion directe",
+        "headline": "Aucun scintillateur. Aucun compromis.",
+        "body": "Les capteurs à rayons X classiques convertissent d'abord les rayons X en lumière visible, puis détectent cette lumière. Chaque étape introduit du bruit, une perte de résolution et une dissipation d'énergie. Les capteurs Athlos convertissent les photons X directement en charge électrique — supprimant entièrement le scintillateur. Résultat&nbsp;: des images plus nettes, une meilleure sensibilité et une plage dynamique plus large dans toutes les applications.",
+        "cta": "Découvrir la gamme de produits"
+      },
+      "cta": {
+        "headline": "Parlons de votre application.",
+        "body": "Vous ne savez pas quel produit répond à vos besoins d'imagerie&nbsp;? Athlos collabore avec les fabricants OEM et les intégrateurs de systèmes pour définir la solution technique adaptée. Commençons par votre application.",
+        "button": "Contacter Athlos"
+      },
+      "lastUpdated": {
+        "label": "Dernière mise à jour&nbsp;:",
+        "date": "15 avril 2026",
+        "datetime": "2026-04-15"
+      }
+    }
+  }
+}

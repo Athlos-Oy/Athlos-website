@@ -1,0 +1,35 @@
+{
+  "jsonld": {
+    "productsIndex": {
+      "itemList": {
+        "name": "Catálogo de productos de imagen por rayos X de Athlos",
+        "items": {
+          "wios": {
+            "category": "Sensor dental intraoral inalámbrico de rayos X",
+            "description": "Sensor intraoral de rayos X Si-CMOS de conversión directa totalmente inalámbrico con Bluetooth 5.0, soportes Zero Profile® y autorización de la FDA mediante 510(k)."
+          },
+          "ufs": {
+            "category": "Sensor lineal de escaneo de rayos X",
+            "description": "Sensor lineal de escaneo CdTe-CMOS sensible al fotón único para imagen dental panorámica, cefalométrica, médica e industrial."
+          },
+          "ufsIp67": {
+            "category": "Detector industrial TDI de rayos X",
+            "description": "Detector de escaneo TDI ultrarrápido con grado IP67 para inspección industrial continua en línea, sin necesidad de refrigeración activa."
+          },
+          "manufacturing": {
+            "serviceType": "Fabricación de detectores por contrato",
+            "description": "Bumping de obleas CMOS, unión flip chip, unión por hilo, ensamblaje de chips y caracterización de detectores en Athlos y VTT Micronova."
+          },
+          "software": {
+            "category": "Software de imagen por rayos X",
+            "description": "Módulo TWAIN, bibliotecas de algoritmos de reconstrucción, filtros de postprocesado y SDK para integración con plataformas de imagen con soporte TWAIN."
+          }
+        }
+      },
+      "breadcrumb": {
+        "home": "Inicio",
+        "products": "Productos"
+      }
+    }
+  }
+}

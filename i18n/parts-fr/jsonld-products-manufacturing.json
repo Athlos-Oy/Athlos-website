@@ -1,0 +1,38 @@
+{
+  "jsonld": {
+    "productsManufacturing": {
+      "graph": {
+        "organization": {
+          "description": "Athlos Oy est une entreprise finlandaise de technologie d'imagerie par rayons X, spécialisée dans les capteurs à conversion directe CdTe-CMOS et Si-CMOS pour les applications dentaires, médicales et industrielles.",
+          "areaServed": "Monde entier",
+          "contactType": "sales"
+        },
+        "breadcrumb": {
+          "home": "Accueil",
+          "products": "Produits",
+          "manufacturing": "Services de fabrication"
+        },
+        "service": {
+          "name": "Services de fabrication de détecteurs de rayons X",
+          "description": "Fabrication de précision de détecteurs de rayons X comprenant le bumping CMOS, l'assemblage flip chip, le câblage filaire, le die bonding et la caractérisation complète des capteurs. Accès à la salle blanche VTT Micronova.",
+          "areaServed": "Monde entier",
+          "serviceType": "Fabrication sous contrat"
+        }
+      },
+      "faq": {
+        "q1": {
+          "question": "Quels services de fabrication Athlos propose-t-elle ?",
+          "answer": "Athlos propose des services de fabrication de précision de détecteurs de rayons X comprenant le bumping CMOS, l'assemblage flip chip, le câblage filaire, le die bonding et la caractérisation complète des capteurs."
+        },
+        "q2": {
+          "question": "Athlos dispose-t-elle d'un accès à la fabrication en salle blanche ?",
+          "answer": "Oui. Athlos a accès à l'installation de nanofabrication VTT Micronova à Espoo, en Finlande — l'un des principaux environnements de salle blanche d'Europe pour la fabrication de semi-conducteurs et de détecteurs."
+        },
+        "q3": {
+          "question": "Athlos est-elle certifiée ISO pour la fabrication ?",
+          "answer": "Oui. Athlos est certifiée ISO 13485:2016, ce qui garantit un management de la qualité constant pour la fabrication de composants de dispositifs médicaux."
+        }
+      }
+    }
+  }
+}

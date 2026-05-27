@@ -1,0 +1,31 @@
+name: i18n drift check
+
+# Step 24 of the multilingual rollout plan: fail the build if any
+# locale's key structure diverges from the English source. Catches
+# the common drift modes:
+#   - Translator adds an EN string without filing a translation ticket
+#   - Translator updates a translation but stops mid-file (null leaves)
+#   - English source key gets renamed; translations get orphaned
+#   - Translation file picks up keys that aren't (no longer) in en
+#
+# Runs on every PR to main + every push to main. Cheap (~1s).
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  drift:
+    name: i18n drift
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Check locale key parity + null scaffolds
+        run: node scripts/i18n-check.mjs

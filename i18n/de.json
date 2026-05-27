@@ -1,0 +1,330 @@
+{
+  "_meta": {
+    "comment": "German translation of Athlos website strings. First-draft by AI under glossary + de-style-decisions.md binding constraints. EVERY value requires native German technical reviewer pass before public launch. See i18n/glossary.md and i18n/de-style-decisions.md for terminology rules.",
+    "locale": "de",
+    "lastLocalised": "2026-05-18",
+    "status": "draft-needs-native-review"
+  },
+  "nav": {
+    "home": "Start",
+    "products": "Produkte",
+    "applications": "Anwendungen",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "productDropdown": {
+      "dcAir": "DC-Air&reg;",
+      "ufs": "Ultra-Fast Scanning Sensor",
+      "ufsIp67": "Industrial IP67 TDI",
+      "manufacturing": "Fertigungsdienstleistungen",
+      "software": "Software-Produkte"
+    },
+    "aria": {
+      "homeLogo": "Athlos Startseite",
+      "main": "Hauptnavigation",
+      "openMenu": "Menü öffnen"
+    }
+  },
+  "footer": {
+    "businessIdLabel": "Geschäfts-ID",
+    "vatLabel": "USt-IdNr.",
+    "columns": {
+      "products": "Produkte",
+      "applications": "Anwendungen",
+      "company": "Unternehmen",
+      "contact": "Kontakt"
+    },
+    "links": {
+      "dcAir": "DC-Air&reg;",
+      "ufs": "Ultra-Fast Scanning Sensor",
+      "ufsIp67": "Industrial IP67 TDI",
+      "manufacturing": "Fertigungsdienstleistungen",
+      "software": "Software-Produkte",
+      "dental": "Dentale Bildgebung",
+      "industrial": "Industrielle Inspektion",
+      "medical": "Medizinische Bildgebung",
+      "about": "Über Athlos",
+      "manufacturingShort": "Fertigung",
+      "linkedin": "LinkedIn",
+      "privacy": "Datenschutzerklärung"
+    },
+    "copyAllRights": "Alle Rechte vorbehalten.",
+    "copyMadeIn": "Hergestellt in Finnland.",
+    "country": "Finnland",
+    "cert": "ISO 13485:2016 zertifiziert",
+    "aria": {
+      "nav": "Fußzeilen-Navigation"
+    }
+  },
+  "productSubnav": {
+    "back": "← Produkte",
+    "aria": "Produkt-Navigation"
+  },
+  "pages": {
+    "home": {
+      "title": "Athlos – Fortschrittliche Röntgensensoren für die Bildgebung",
+      "description": "Athlos entwickelt und fertigt fortschrittliche Direktkonversions-Röntgensensoren für dentale, medizinische und industrielle Anwendungen. CdTe- und Si-CMOS-Technologie, hergestellt in Finnland.",
+      "og": {
+        "title": "Athlos – Fortschrittliche Röntgensensoren für die Bildgebung",
+        "description": "Direktkonversions-Röntgensensoren für dentale, medizinische und industrielle Bildgebung. Höhere Bildqualität, höhere Empfindlichkeit und schnellere Aufnahme."
+      },
+      "twitter": {
+        "title": "Athlos – Fortschrittliche Röntgensensoren für die Bildgebung",
+        "description": "Direktkonversions-Röntgensensoren für dentale, medizinische und industrielle Bildgebung. Höhere Bildqualität, höhere Empfindlichkeit und schnellere Aufnahme."
+      },
+      "hero": {
+        "eyebrow": "Direktkonversions-Röntgenbildgebung",
+        "headline": "Direktkonversion.<br>Präzisere Bildgebung.",
+        "sub": "Athlos entwickelt und fertigt fortschrittliche Röntgensensoren — mit überlegener Bildqualität, höherer Empfindlichkeit und schnellerer Aufnahme für dentale, medizinische und industrielle Anwendungen.",
+        "ctaProducts": "Produkte ansehen",
+        "ctaAbout": "Über Athlos"
+      },
+      "statement": {
+        "headline": "Unser Team hat die Direktkonversion erfunden.<br>Seit über 30 Jahren definieren Direktkonversionssensoren,<br>was Präzision und Bildgenauigkeit in der Röntgenbildgebung bedeuten.",
+        "body": "Durch den Verzicht auf den Szintillator und die direkte Umwandlung von Röntgenstrahlung in elektrische Impulse beseitigen Athlos-Sensoren und Zeilenarrays die Hauptursache für Bildqualitätsverluste. Das Ergebnis: schärfere Details, naturgetreuerer Kontrast und zuverlässige Leistung über den gesamten Dosisbereich.",
+        "stats": {
+          "invented": {
+            "number": "1993",
+            "label": "Direktkonversion wurde von unserem Team begründet"
+          },
+          "expertise": {
+            "number": "35+",
+            "label": "Jahre Erfahrung"
+          },
+          "markets": {
+            "number": "38",
+            "label": "Märkte über Vertriebspartner"
+          },
+          "fda": {
+            "number": "510(k)",
+            "label": "FDA-Zulassung"
+          },
+          "iso": {
+            "number": "ISO",
+            "label": "13485:2016 zertifiziert"
+          }
+        }
+      },
+      "tech": {
+        "eyebrow": "Die Wissenschaft hinter der Leistung",
+        "headline": "Direktkonversion.<br>Keine Zwischenschritte.<br>Keine Kompromisse.",
+        "body1": "Herkömmliche Röntgensensoren benötigen einen Szintillator, der Röntgenstrahlung zunächst in sichtbares Licht umwandelt, das dann in eine Photodiode mit begrenztem Füllfaktor gelangt und in einen elektrischen Impuls umgesetzt wird. Diese indirekte Umwandlung von Röntgenstrahlung in Licht und Licht in elektrische Impulse führt zu deutlicher Unschärfe, Signalverlust (Füllfaktor weit unter 100 %) und nicht erfassten Röntgenphotonen (aufgrund der begrenzten DQE der Szintillatoren).",
+        "body2": "Athlos-Sensoren nutzen CdTe-CMOS- und Si-CMOS-Hybride mit Direktkonversion, die Röntgenphotonen direkt in elektrische Impulse mit punktgenauer Lokalisierung umwandeln. Kein gestreutes Licht bedeutet keinen Verlust an Lokalisationsgenauigkeit. Keine Lichtumwandlung. Keine Phosphorschicht. Keine unnötige Unschärfe. Kein Signal- und Kontrastverlust.",
+        "videoAria": "Visualisierung des Direktkonversionsprozesses bei Athlos-Sensoren",
+        "features": {
+          "cdte": "CdTe- und Si-Materialien mit Direktkonversion",
+          "cmos": "Proprietäre, vollständig kundenspezifische CMOS-Auslese",
+          "photon": "Einzelphotonen-Empfindlichkeit",
+          "libs": "Fortschrittliche Rekonstruktions- und Filterbibliotheken"
+        },
+        "learnLink": "Mehr über Athlos erfahren"
+      },
+      "products": {
+        "eyebrow": "Produktportfolio",
+        "headline": "Speziell entwickelt für anspruchsvolle Anwendungen.",
+        "intro": "Fünf Produkt- und Servicelinien — alle aufgebaut auf demselben Fundament aus Präzision der Direktkonversion und jahrzehntelanger Erfahrung in der Röntgenbildgebung.",
+        "cards": {
+          "wios": {
+            "market": "Intraorale Dentalbildgebung",
+            "name": "DC-Air<sup>&reg;</sup>",
+            "desc": "True Wireless® Intraoralsensor. Direktkonversions-Bildqualität, Geschwindigkeit kabelgebundener Sensoren und Komfort wie bei Speicherfolien — ohne Kabel.",
+            "link": "DC-Air&reg; ansehen",
+            "imageAlt": "Athlos DC-Air kabelloser Intraoralsensor"
+          },
+          "ufs": {
+            "market": "Dental · Medizin · Industrie",
+            "name": "Ultra-Fast Scanning Sensor",
+            "desc": "Ultraschneller, einzelphotonenempfindlicher CdTe-CMOS-Scansensor für dentales Panoramaröntgen, Fernröntgenseitenbilder, medizinische und industrielle Bildgebung.",
+            "link": "Ultra-Fast Scanning Sensor ansehen",
+            "imageAlt": "Athlos UFS ultraschneller Scansensor"
+          },
+          "ufsIp67": {
+            "market": "Industrielle Bildgebung",
+            "name": "Industrial IP67 TDI",
+            "desc": "Ultraschneller TDI-Scandetektor mit IP67-Schutz für kontinuierliche Inline-Inspektion in anspruchsvollen Industrieumgebungen. Ohne aktive Kühlung.",
+            "link": "Industrial IP67 TDI ansehen",
+            "imageAlt": "Athlos Industrial IP67 TDI robuster Industriedetektor"
+          },
+          "manufacturing": {
+            "market": "Detektorfertigung",
+            "name": "Fertigungsdienstleistungen",
+            "desc": "Präzisionsfertigung von Detektoren — CMOS-Bumping, Flip-Chip-Bonden, Drahtbonden, Die-Assembly und Charakterisierung. Zugang zu VTT Micronova. Wir bieten ein breites Spektrum an Auftragsfertigungsdienstleistungen.",
+            "link": "Mehr erfahren",
+            "imageAlt": "Athlos Fertigungsdienstleistungen — CMOS-Wafer"
+          },
+          "software": {
+            "market": "Software &amp; Integration",
+            "name": "Software-Produkte",
+            "desc": "TWAIN-Modul, Bibliotheken mit Rekonstruktionsalgorithmen, Nachbearbeitungsfilter und SDK — verfügbar als Teil eines Athlos-Systems oder unabhängig lizenzierbar.",
+            "link": "Mehr erfahren",
+            "imageAlt": "Athlos Software-Produkte – TWAIN, SDK und Bibliotheken mit Rekonstruktionsalgorithmen"
+          }
+        }
+      },
+      "manufacturing": {
+        "eyebrow": "Fertigung &amp; Partnerschaft",
+        "headline": "Gefertigt in Finnland.<br>Weltweit vertraut.",
+        "body": "Athlos-Sensoren werden im eigenen Werk und im Reinraum von VTT Micronova in Espoo gefertigt — einer der führenden Nanofabrikationsanlagen Europas. Vom CdTe-Bump-Bonden bis zur finalen Sensormontage kontrollieren wir den gesamten Prozess.",
+        "pillars": {
+          "cleanroom": {
+            "title": "Reinraumfertigung",
+            "body": "Eigene Fertigung und Produktion bei VTT Micronova unter strenger Prozesskontrolle."
+          },
+          "partners": {
+            "title": "Globales Partnernetzwerk",
+            "body": "Partner weltweit aus den Bereichen CMOS-Design, Detektormaterialien, Software und Anwendungen."
+          },
+          "iso": {
+            "title": "ISO 13485:2016",
+            "body": "Zertifiziertes Qualitätsmanagement für konstante Produktzuverlässigkeit und regulatorische Konformität."
+          }
+        },
+        "cta": "Fertigungsdienstleistungen"
+      },
+      "cta": {
+        "eyebrow": "Zusammenarbeit mit Athlos",
+        "headline": "Bereit für mehr Geschwindigkeit<br>und bessere Leistung?",
+        "body": "Ob Sie Bildgebungssysteme der nächsten Generation entwickeln oder bestehende Plattformen erweitern — Athlos liefert die Technologie, das Know-how und den langfristigen Support für Ihren Erfolg.",
+        "button": "Athlos kontaktieren",
+        "location": "Espoo, Finnland"
+      },
+      "lastUpdated": {
+        "label": "Zuletzt aktualisiert:",
+        "date": "15. April 2026",
+        "datetime": "2026-04-15"
+      }
+    },
+    "about": {
+      "title": "Über Athlos – Finnisches Technologieunternehmen für Röntgenbildgebung",
+      "description": "Athlos ist ein finnischer Entwickler und Hersteller von Röntgensensoren mit Spezialisierung auf CdTe- und Si-CMOS-Technologie mit Direktkonversion. Gegründet auf jahrzehntelanger Erfahrung von CERN, Johns Hopkins und Ajat Oy.",
+      "og": {
+        "title": "Über Athlos – Finnisches Technologieunternehmen für Röntgenbildgebung",
+        "description": "Athlos ist ein finnischer Entwickler und Hersteller von Röntgensensoren mit Spezialisierung auf CdTe- und Si-CMOS-Technologie mit Direktkonversion."
+      },
+      "twitter": {
+        "title": "Über Athlos – Finnisches Technologieunternehmen für Röntgenbildgebung",
+        "description": "Athlos ist ein finnischer Entwickler und Hersteller von Röntgensensoren mit Spezialisierung auf CdTe- und Si-CMOS-Technologie mit Direktkonversion."
+      }
+    },
+    "applications": {
+      "title": "Anwendungen – Athlos Röntgenbildgebung",
+      "description": "Athlos-Röntgensensoren für dentale, industrielle und medizinische Anwendungen. Direktkonversions-Technologie für intraorale und panoramische Bildgebung, Inline-Inspektion und spezialisierte medizinische Bildgebung.",
+      "og": {
+        "title": "Anwendungen – Athlos Röntgenbildgebung",
+        "description": "Athlos-Röntgensensoren für dentale, industrielle und medizinische Anwendungen. Direktkonversions-Technologie für intraorale und panoramische Bildgebung, Inline-Inspektion und spezialisierte medizinische Bildgebung."
+      },
+      "twitter": {
+        "title": "Anwendungen – Athlos Röntgenbildgebung",
+        "description": "Athlos-Röntgensensoren für dentale, industrielle und medizinische Anwendungen. Direktkonversions-Technologie für intraorale und panoramische Bildgebung, Inline-Inspektion und spezialisierte medizinische Bildgebung."
+      }
+    },
+    "contact": {
+      "title": "Athlos kontaktieren – Röntgensensoren",
+      "description": "Kontaktieren Sie Athlos für Produktanfragen, OEM-Integration, Softwarelizenzen oder Fertigungspartnerschaften. Sitz in Espoo, Finnland.",
+      "og": {
+        "title": "Athlos kontaktieren – Röntgensensoren",
+        "description": "Kontaktieren Sie Athlos für Produktanfragen, OEM-Integration, Softwarelizenzen oder Fertigungspartnerschaften. Sitz in Espoo, Finnland."
+      },
+      "twitter": {
+        "title": "Athlos kontaktieren – Röntgensensoren",
+        "description": "Kontaktieren Sie Athlos für Produktanfragen, OEM-Integration, Softwarelizenzen oder Fertigungspartnerschaften. Sitz in Espoo, Finnland."
+      }
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung – Athlos Oy",
+      "description": "Datenschutzhinweise von Athlos Oy. Erfahren Sie, wie wir Ihre personenbezogenen Daten erheben, verarbeiten und weitergeben und welche Rechte Sie haben.",
+      "og": {
+        "title": "Datenschutzerklärung – Athlos Oy",
+        "description": "Datenschutzhinweise von Athlos Oy. Erfahren Sie, wie wir Ihre personenbezogenen Daten erheben, verarbeiten und weitergeben und welche Rechte Sie haben."
+      },
+      "twitter": {
+        "title": "Datenschutzerklärung – Athlos Oy",
+        "description": "Datenschutzhinweise von Athlos Oy. Erfahren Sie, wie wir Ihre personenbezogenen Daten erheben, verarbeiten und weitergeben und welche Rechte Sie haben."
+      }
+    },
+    "productsIndex": {
+      "title": "Röntgensensoren &amp; Detektoren | Athlos Direktkonversion",
+      "description": "Athlos-Produktportfolio: DC-Air kabelloser Intraoralsensor, Ultra-Fast Scanning Sensor, Industrial IP67 TDI Detektor, Fertigungsdienstleistungen und Software-Produkte.",
+      "og": {
+        "title": "Röntgensensoren &amp; Detektoren | Athlos Direktkonversion",
+        "description": "Athlos-Produktportfolio: DC-Air kabelloser Intraoralsensor, Ultra-Fast Scanning Sensor, Industrial IP67 TDI Detektor, Fertigungsdienstleistungen und Software-Produkte."
+      },
+      "twitter": {
+        "title": "Röntgensensoren &amp; Detektoren | Athlos Direktkonversion",
+        "description": "Athlos-Produktportfolio: DC-Air kabelloser Intraoralsensor, Ultra-Fast Scanning Sensor, Industrial IP67 TDI Detektor, Fertigungsdienstleistungen und Software-Produkte."
+      }
+    },
+    "productsWios": {
+      "title": "DC-Air® – Kabelloser Intraoralsensor | Athlos",
+      "description": "DC-Air® ist ein vollständig kabelloser Direktkonversions-Intraoralröntgensensor. Si-CMOS-Technologie, Bluetooth 5.0, Zero Profile®-Halter. Gestochen scharfe Bilder ohne Kabel.",
+      "og": {
+        "title": "DC-Air® – Kabelloser Intraoralsensor | Athlos",
+        "description": "DC-Air® ist ein vollständig kabelloser Direktkonversions-Intraoralröntgensensor. Si-CMOS-Technologie, Bluetooth 5.0, Zero Profile®-Halter. FDA-510(k)-zugelassen."
+      },
+      "twitter": {
+        "title": "DC-Air® – Kabelloser Intraoralsensor | Athlos",
+        "description": "Vollständig kabelloser Direktkonversions-Intraoralröntgensensor. Si-CMOS-Technologie, Bluetooth 5.0, Zero Profile®-Halter. FDA-510(k)-zugelassen."
+      }
+    },
+    "productsUfs": {
+      "title": "Ultraschneller CdTe-Röntgenscansensor | Athlos UFS",
+      "description": "Der Ultra-Fast Scanning Sensor ist der ultraschnelle Direktkonversions-Zeilenscansensor von Athlos für dentale Panorama- und Fernröntgenaufnahmen sowie medizinische und industrielle Röntgenbildgebung. CdTe-CMOS, Einzelphotonen-Empfindlichkeit.",
+      "og": {
+        "title": "Ultraschneller CdTe-Röntgenscansensor | Athlos UFS",
+        "description": "Ultraschneller CdTe-CMOS-Direktkonversions-Zeilenscansensor für dentale Panorama- und Fernröntgenaufnahmen sowie medizinische und industrielle Röntgenbildgebung. Einzelphotonen-Empfindlichkeit."
+      },
+      "twitter": {
+        "title": "Ultraschneller CdTe-Röntgenscansensor | Athlos UFS",
+        "description": "Ultraschneller CdTe-CMOS-Direktkonversions-Zeilenscansensor für dentale Panorama- und Fernröntgenaufnahmen sowie medizinische und industrielle Röntgenbildgebung."
+      }
+    },
+    "productsUfsIp67": {
+      "title": "Industrial IP67 TDI – Industrieller Röntgendetektor | Athlos",
+      "description": "Industrial IP67 TDI ist ein robuster industrieller Direktkonversions-Zeilenröntgendetektor für die Hochgeschwindigkeits-Inline-Inspektion. CdTe-CMOS, IP67-Gehäuse, ohne aktive Kühlung, TDI-Scanning.",
+      "og": {
+        "title": "Industrial IP67 TDI – Industrieller Röntgendetektor | Athlos",
+        "description": "Robuster CdTe-CMOS-Direktkonversions-TDI-Detektor mit IP67-Schutz für die industrielle Hochgeschwindigkeits-Inline-Röntgeninspektion. Ohne aktive Kühlung."
+      },
+      "twitter": {
+        "title": "Industrial IP67 TDI – Industrieller Röntgendetektor | Athlos",
+        "description": "Robuster CdTe-CMOS-Direktkonversions-TDI-Detektor mit IP67-Schutz für die industrielle Hochgeschwindigkeits-Inline-Röntgeninspektion. Ohne aktive Kühlung."
+      }
+    },
+    "productsManufacturing": {
+      "title": "Fertigungsdienstleistungen für Röntgendetektoren | CMOS-Bumping | Athlos",
+      "description": "Athlos bietet Präzisions-Fertigungsdienstleistungen für Röntgendetektoren — darunter CMOS-Bumping, Flip-Chip-Bonden, Drahtbonden, Die-Bonden und vollständige Sensorcharakterisierung. Zugang zum Reinraum von VTT Micronova.",
+      "og": {
+        "title": "Fertigungsdienstleistungen für Röntgendetektoren | CMOS-Bumping | Athlos",
+        "description": "Präzisionsfertigung von Röntgendetektoren — CMOS-Bumping, Flip-Chip-Bonden, Drahtbonden, Die-Bonden und Sensorcharakterisierung. Zugang zum Reinraum von VTT Micronova, nach ISO 13485 zertifiziert."
+      },
+      "twitter": {
+        "title": "Fertigungsdienstleistungen für Röntgendetektoren | CMOS-Bumping | Athlos",
+        "description": "Präzisionsfertigung von Röntgendetektoren — CMOS-Bumping, Flip-Chip-Bonden, Drahtbonden, Die-Bonden und Sensorcharakterisierung. Zugang zum Reinraum von VTT Micronova."
+      }
+    },
+    "productsSoftware": {
+      "title": "Röntgenbildgebungs-Software — TWAIN, SDK, Rekonstruktion | Athlos",
+      "description": "Athlos Software-Produkte: TWAIN-Modul, Bibliotheken mit Rekonstruktionsalgorithmen, fortschrittliche Nachbearbeitungsfilter und SDK-Integrationssupport für Röntgenbildgebungssysteme.",
+      "og": {
+        "title": "Röntgenbildgebungs-Software — TWAIN, SDK, Rekonstruktion | Athlos",
+        "description": "Athlos Software-Produkte: TWAIN-Modul, Bibliotheken mit Rekonstruktionsalgorithmen, fortschrittliche Nachbearbeitungsfilter und SDK-Integration für Röntgenbildgebungssysteme."
+      },
+      "twitter": {
+        "title": "Röntgenbildgebungs-Software — TWAIN, SDK, Rekonstruktion | Athlos",
+        "description": "Athlos Software-Produkte: TWAIN-Modul, Bibliotheken mit Rekonstruktionsalgorithmen, fortschrittliche Nachbearbeitungsfilter und SDK-Integration für Röntgenbildgebungssysteme."
+      }
+    }
+  },
+  "jsonld": {
+    "organization": {
+      "description": "Athlos Oy ist ein finnisches Technologieunternehmen für Röntgenbildgebung mit Spezialisierung auf CdTe-CMOS- und Si-CMOS-Sensoren mit Direktkonversion für dentale, medizinische und industrielle Anwendungen.",
+      "areaServed": "Weltweit",
+      "contactType": "sales"
+    }
+  },
+  "cookieBanner": {
+    "body": "Wir verwenden Analyse-Cookies, um zu verstehen, wie Besucher diese Website nutzen.",
+    "privacyLinkText": "Datenschutzerklärung",
+    "decline": "Ablehnen",
+    "accept": "Akzeptieren"
+  }
+}

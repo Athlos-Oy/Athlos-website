@@ -1,0 +1,85 @@
+{
+  "pages": {
+    "about": {
+      "hero": {
+        "eyebrow": "La empresa",
+        "headline": "Sobre Athlos",
+        "sub": "Imagen por rayos X de conversión directa avanzada, fundamentada en más de 30 años de experiencia aplicada, fabricación en sala limpia y una profunda dedicación a la física de sensores."
+      },
+      "stats": {
+        "invented": {
+          "number": "1993",
+          "label": "Nuestro equipo inventó la conversión directa"
+        },
+        "expertise": {
+          "number": "35+",
+          "label": "Años de experiencia"
+        },
+        "partners": {
+          "number": "Socios",
+          "label": "Red global de socios"
+        },
+        "iso": {
+          "number": "ISO",
+          "label": "13485:2016 certificado"
+        }
+      },
+      "whoWeAre": {
+        "eyebrow": "Quiénes somos",
+        "headline": "Experiencia en sensores, desarrollada durante más de tres décadas.",
+        "body1": "Athlos es una empresa finlandesa de tecnología para imagen por rayos X centrada en sensores de conversión directa: la tecnología que convierte los fotones de rayos X directamente en pulsos eléctricos, sin el paso intermedio del centellador. Desarrollamos, diseñamos y fabricamos sensores de imagen basados en arquitecturas CdTe-CMOS y Si-CMOS para aplicaciones dentales, médicas e industriales. También ofrecemos servicios de fabricación y productos de software.",
+        "body2": "Nuestro equipo ha estado en el centro de la imagen por conversión directa desde sus inicios. En 1993, Konstantinos Spartiotis regresó tras finalizar su doctorado en la Johns Hopkins University y su colaboración en el CERN, y emprendió el trabajo que definiría este campo. Athlos continúa ese legado."
+      },
+      "origin": {
+        "eyebrow": "Orígenes",
+        "headline": "Iniciamos la conversión directa en 1993.",
+        "body1": "Konstantinos Spartiotis es el fundador de Simage Oy (1993) y de Oy Ajat Ltd. en 2001 (renombrada Oy Direct Conversion Ltd. el 26.10.2019 y Oy Varex Imaging Finland Ltd. desde el 1.8.2023). Simage Oy fue una de las primeras empresas del mundo en trabajar en imagen por rayos X de conversión directa con CdTe. Los conocimientos desarrollados allí fueron fundacionales. Simage Oy obtuvo decenas de patentes en conversión directa, tecnología de contactos para CdTe y conteo de fotones. Simage colaboró estrechamente durante años con Acrorad, Japón, para producir CdTe de calidad comercial. Posteriormente, Siemens adquirió Acrorad y la cartera de patentes de Simage Oy.",
+        "body2": "Ajat Oy se convirtió en el estándar mundial de imagen dental panorámica y cefalométrica con conversión directa CdTe-CMOS. Bajo su dirección, Ajat alcanzó unos ingresos anuales de 12 millones de euros, con una rentabilidad elevada, y desplegó miles de unidades en todo el mundo. Ajat Oy fue vendida a XCounter AB en 2009 y, posteriormente, el grupo fue adquirido por Varex Imaging Inc. en 2019.",
+        "body3": "Athlos se fundó para continuar esa tradición, con el mismo equipo principal y nuevos miembros que garantizan la continuidad, la misma profundidad técnica y dedicación, y una nueva generación de productos de conversión directa: DC-Air&reg;, Ultra-Fast Scanning Sensor e Industrial IP67 TDI, todos fabricados internamente y en las instalaciones de VTT Micronova. Diseñado en Finlandia. Fabricado en Finlandia.",
+        "author": {
+          "initials": "KS",
+          "intro": "Sobre el autor:",
+          "name": "Konstantinos Spartiotis",
+          "jobTitle": "Fundador y CEO de Athlos Oy",
+          "bio": "Pionero en la imagen por rayos X de conversión directa con CdTe en 1993; fundador de Simage Oy (1993) y Ajat Oy (2001, posteriormente Varex Imaging Finland).\n              Tesis doctoral en",
+          "alumniHopkins": "Johns Hopkins University",
+          "alumniMid": "; previamente en",
+          "alumniCern": "CERN",
+          "patents": "Es titular de decenas de patentes en conversión directa, tecnología de contactos para CdTe y conteo de fotones.",
+          "source": "Fuente de la historia de la empresa presentada arriba."
+        },
+        "imageAlt": "Proceso de fabricación de sensores Athlos"
+      },
+      "facilities": {
+        "eyebrow": "Instalaciones",
+        "headline": "Fabricado en VTT Micronova. Respaldado por una profunda experiencia de proceso.",
+        "body1": "Athlos dispone de acceso completo a la sala limpia de VTT Micronova en Espoo, uno de los entornos de nanofabricación más avanzados de Europa, situado a 10 minutos de la sede central de Athlos.",
+        "body2": "Esto otorga a Athlos la capacidad de controlar toda la cadena de fabricación, desde el bumping de obleas CMOS y la unión flip chip hasta el ensamblaje y la caracterización del detector, sin los costes de capital que implica una sala limpia propia independiente.",
+        "pillars": {
+          "cleanroom": {
+            "title": "Fabricación en sala limpia",
+            "body": "Producción propia y acceso a VTT Micronova para nanofabricación, unión por bumping y ensamblaje de sensores con controles de proceso rigurosos."
+          },
+          "expertise": {
+            "title": "Experiencia en CdTe y Si directo",
+            "body": "Profunda experiencia en la integración de detectores de conversión directa de CdTe y Si, resultado de más de 30 años de I+D aplicada en múltiples generaciones de productos."
+          },
+          "iso": {
+            "title": "ISO 13485:2016",
+            "body": "Sistema de gestión de la calidad certificado. Fiabilidad de producto constante y preparación regulatoria para aplicaciones médicas e industriales."
+          }
+        }
+      },
+      "cta": {
+        "headline": "Colabore con Athlos.",
+        "body": "Tanto si integra nuestros sensores en su sistema, explora la distribución o busca un socio de fabricación a largo plazo, estamos listos para hablar.",
+        "button": "Contactar"
+      },
+      "lastUpdated": {
+        "label": "Última actualización:",
+        "date": "15 de abril de 2026",
+        "datetime": "2026-04-15"
+      }
+    }
+  }
+}

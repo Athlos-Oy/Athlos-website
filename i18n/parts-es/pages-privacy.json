@@ -1,0 +1,142 @@
+{
+  "pages": {
+    "privacy": {
+      "hero": {
+        "category": "Legal",
+        "headline": "Política de privacidad",
+        "sub": "Cómo Athlos Oy recoge, trata y protege sus datos personales."
+      },
+      "intro": {
+        "updatedLabel": "Actualizado:",
+        "updatedDate": "15.04.2026",
+        "body1": "En este aviso de privacidad (el «Aviso de privacidad»), explicamos cómo Athlos Oy («nosotros» o «nos») recoge, trata y comparte sus datos personales y cuáles son sus derechos en relación con sus datos personales.",
+        "body2": "Al tratar datos personales, actuaremos siempre de conformidad con la legislación aplicable. En particular, cumplimos el Reglamento General de Protección de Datos (2016/679)."
+      },
+      "controller": {
+        "heading": "Responsable del tratamiento",
+        "details": "Athlos Oy<br>\n          Código de empresa: 2752258-9<br>\n          Klovinpellontie 1–3, 02180 Espoo, Finlandia<br>\n          Contacto: <a href=\"mailto:info@athlos.fi\" style=\"color:var(--gray-steel);\">info@athlos.fi</a>",
+        "subjectScope": "Como interesado, puede ser un visitante de nuestro sitio web, el representante de un cliente actual o potencial, o un candidato a un puesto de trabajo.",
+        "contextIntro": "Este Aviso de privacidad se refiere al tratamiento de datos personales en los siguientes contextos:",
+        "items": [
+          "Visitas a <a href=\"https://athlos.fi/\" style=\"color:var(--gray-steel);\">https://athlos.fi/</a>",
+          "El tratamiento de datos personales de los representantes de nuestros clientes, proveedores y otras partes interesadas",
+          "El tratamiento de datos personales de los candidatos a empleo"
+        ]
+      },
+      "purposes": {
+        "heading": "Finalidades del tratamiento",
+        "intro": "Trataremos sus datos personales únicamente para los fines descritos en este Aviso de privacidad y solo en la medida en que sea necesario.",
+        "visitors": {
+          "label": "Visitantes del sitio web:",
+          "items": [
+            "Permitir el uso del sitio web y garantizar su seguridad y funcionalidad",
+            "Mejorar nuestro sitio web mediante analítica",
+            "Analítica de marketing y marketing personalizado",
+            "Otros intereses comerciales legítimos"
+          ]
+        },
+        "representatives": {
+          "label": "Representantes:",
+          "items": [
+            "Gestión de la relación comercial",
+            "Cumplimiento de los requisitos de la normativa aplicable",
+            "Garantizar y supervisar el cumplimiento",
+            "Facturación",
+            "Comunicación con usted y con terceros",
+            "Envío de comunicaciones de marketing",
+            "Otros intereses comerciales legítimos"
+          ]
+        },
+        "applicants": {
+          "label": "Candidatos a empleo:",
+          "items": [
+            "Proceso de selección",
+            "Necesidades futuras de selección (con consentimiento)"
+          ]
+        }
+      },
+      "categories": {
+        "heading": "Categorías de datos personales",
+        "visitors": {
+          "label": "Visitantes del sitio web:",
+          "items": [
+            "Información relativa al uso del sitio web (dirección IP, cookies, actividad en el sitio, hora de la visita)",
+            "Información de atención al cliente",
+            "Datos de contacto (nombre, dirección de correo electrónico, número de teléfono)"
+          ]
+        },
+        "representatives": {
+          "label": "Representantes:",
+          "items": [
+            "Datos de contacto",
+            "Detalles relacionados con la relación comercial",
+            "Contenido de las comunicaciones con nosotros"
+          ]
+        },
+        "applicants": {
+          "label": "Candidatos a empleo:",
+          "items": [
+            "Información de selección (nombre, datos de contacto, formación, experiencia laboral, CV, expectativas salariales)"
+          ]
+        }
+      },
+      "legalBasis": {
+        "heading": "Base jurídica",
+        "intro": "El tratamiento de datos personales se basa en las siguientes bases jurídicas:",
+        "items": [
+          "Interés legítimo (artículo 6.1.f del RGPD) para la funcionalidad del sitio web, la gestión de la relación comercial, el cumplimiento, la facturación, las comunicaciones y otros intereses de negocio",
+          "Consentimiento (artículo 6.1.a del RGPD) para cookies no esenciales, analítica de marketing y necesidades futuras de selección",
+          "Obligación legal (artículo 6.1.c del RGPD) para el cumplimiento fiscal y societario",
+          "Necesidad contractual (artículo 6.1.b del RGPD) para los procesos de selección"
+        ]
+      },
+      "cookies": {
+        "heading": "Cookies y analítica",
+        "body1": "Podemos utilizar cookies y etiquetas en nuestro sitio web. Una cookie es un archivo de texto almacenado en su navegador o dispositivo. Puede modificar la configuración de cookies de su navegador.",
+        "body2": "Utilizamos <strong>Google Analytics 4</strong> (proporcionado por Google LLC, EE. UU.) y <strong>Google Tag Manager</strong> para recopilar datos analíticos anónimos sobre el uso de nuestro sitio web, como las páginas visitadas, el tiempo de permanencia, las fuentes de tráfico y el tipo de dispositivo. Estos datos nos ayudan a mejorar el sitio web. Las cookies de analítica solo se instalan después de que usted haya otorgado su consentimiento explícito mediante el aviso de cookies de nuestro sitio web.",
+        "body3": "Los datos de Google Analytics son tratados por Google LLC y pueden transferirse a servidores en los Estados Unidos bajo cláusulas contractuales tipo. Puede obtener más información en <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gray-steel);\">policies.google.com/privacy</a>. Puede oponerse en cualquier momento haciendo clic en «Rechazar» en el aviso de cookies o utilizando el <a href=\"https://tools.google.com/dlpage/gaoptout\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gray-steel);\">complemento de inhabilitación de Google Analytics para navegadores</a>."
+      },
+      "sources": {
+        "heading": "Origen de los datos personales",
+        "body": "Principalmente obtenemos sus datos personales directamente de usted. También podemos recoger datos de fuentes de acceso público y de manera automática a través de cookies cuando visita nuestro sitio web."
+      },
+      "retention": {
+        "heading": "Conservación",
+        "body": "Conservamos los datos personales solo durante el tiempo necesario. En el caso de los visitantes del sitio web, los datos se tratan principalmente durante su visita. Las consultas de contacto se conservan durante dos años. En el caso de los representantes, los datos se conservan mientras dure la relación comercial. En el caso de los candidatos a empleo, los datos se tratan durante el proceso de selección."
+      },
+      "disclosures": {
+        "heading": "Comunicaciones y transferencias",
+        "body": "Podemos comunicar sus datos personales a proveedores de servicios de confianza, a autoridades públicas cuando lo exija la ley, o en el marco de reorganizaciones empresariales. Al transferir datos fuera de la UE/EEE, cumplimos la legislación aplicable, incluidas las cláusulas contractuales tipo adoptadas por la Comisión Europea. Podemos transferir datos personales a los Estados Unidos de América."
+      },
+      "security": {
+        "heading": "Seguridad de los datos",
+        "intro": "Hemos implantado las medidas técnicas y organizativas adecuadas:",
+        "items": [
+          "El acceso a los datos está limitado al personal autorizado",
+          "Los sistemas de información están protegidos por cortafuegos y contraseñas",
+          "El personal recibe formación para tratar los datos adecuadamente",
+          "Los archivos electrónicos se copian de forma periódica",
+          "La destrucción de los datos personales se lleva a cabo de manera segura"
+        ]
+      },
+      "rights": {
+        "heading": "Sus derechos",
+        "intro": "Con arreglo al RGPD, dispone de los siguientes derechos:",
+        "items": [
+          "Acceso a sus datos personales",
+          "Rectificación de los datos inexactos",
+          "Supresión de sus datos personales («derecho al olvido»)",
+          "Portabilidad de los datos",
+          "Oposición al tratamiento",
+          "Limitación del tratamiento",
+          "Retirada del consentimiento"
+        ],
+        "contact": "Para ejercer sus derechos, póngase en contacto con nosotros en <a href=\"mailto:info@athlos.fi\" style=\"color:var(--gray-steel);\">info@athlos.fi</a>. Si considera que nuestro tratamiento vulnera la normativa de protección de datos, tiene derecho a presentar una reclamación ante una autoridad de control."
+      },
+      "changes": {
+        "heading": "Cambios",
+        "body": "Nos reservamos el derecho a modificar o actualizar este Aviso de privacidad cuando sea necesario."
+      }
+    }
+  }
+}

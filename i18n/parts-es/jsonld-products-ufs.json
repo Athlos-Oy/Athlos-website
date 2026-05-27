@@ -1,0 +1,37 @@
+{
+  "jsonld": {
+    "productsUfs": {
+      "product": {
+        "name": "Ultra-Fast Scanning Sensor",
+        "description": "Sensor lineal de escaneo CdTe-CMOS de conversión directa ultrarrápido para imagen dental panorámica, cefalométrica, médica e industrial por rayos X. Sensibilidad de fotón único.",
+        "category": "Sensor lineal de escaneo de rayos X"
+      },
+      "offer": {
+        "description": "Ventas a OEM e integradores de sistemas. Contacte con Athlos para presupuesto y soporte de integración."
+      },
+      "breadcrumbs": {
+        "home": "Inicio",
+        "products": "Productos",
+        "ufs": "Ultra-Fast Scanning Sensor"
+      },
+      "faq": {
+        "q1": {
+          "question": "¿Para qué aplicaciones está diseñado el Ultra-Fast Scanning Sensor?",
+          "answer": "El Ultra-Fast Scanning Sensor está diseñado para imagen dental panorámica y cefalométrica, así como para aplicaciones de inspección médica e industrial por rayos X."
+        },
+        "q2": {
+          "question": "¿Qué material detector utiliza el Ultra-Fast Scanning Sensor?",
+          "answer": "El Ultra-Fast Scanning Sensor utiliza tecnología CdTe-CMOS de conversión directa: telururo de cadmio unido por bumping a un ASIC de lectura CMOS totalmente personalizado."
+        },
+        "q3": {
+          "question": "¿Admite el Ultra-Fast Scanning Sensor sensibilidad de fotón único?",
+          "answer": "Sí. La arquitectura CdTe-CMOS de conversión directa permite sensibilidad de fotón único en todo el rango operativo."
+        },
+        "q4": {
+          "question": "¿Cuántos modelos del Ultra-Fast Scanning Sensor están disponibles?",
+          "answer": "Hay tres modelos disponibles, con anchuras activas seleccionables para adaptarse a los requisitos específicos de la aplicación."
+        }
+      }
+    }
+  }
+}

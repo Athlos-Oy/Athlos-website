@@ -82,7 +82,7 @@ weakens the claim and is technically incorrect.
 | Locale | Form |
 |---|---|
 | DE | FDA-zugelassen *(PROPOSED — reviewer to confirm against medical-device industry usage in DE)* |
-| FR | homologué par la FDA *(PROPOSED)* |
+| FR | autorisé par la FDA *(PROPOSED — chosen for conservatism; see fr-style-decisions.md)* |
 | IT | autorizzato dalla FDA *(PROPOSED)* |
 | ES | autorizado por la FDA *(PROPOSED)* |
 
@@ -104,7 +104,7 @@ these, the entire technical pitch loses coherence.
 | X-ray photon | Röntgenphoton | photon X | fotone X | fotón de rayos X | PROPOSED |
 | X-ray | Röntgenstrahlung *(physical phenomenon)* / Röntgen- *(compound prefix, e.g. Röntgenbild)* | rayons X | raggi X | rayos X | PROPOSED — DE reviewer must confirm context-sensitive use; "X-ray imaging" → "Röntgenbildgebung", "X-ray sensor" → "Röntgensensor". |
 | X-ray imaging | Röntgenbildgebung | imagerie par rayons X | imaging a raggi X / radiografia | imagen por rayos X | PROPOSED |
-| X-ray sensor | Röntgensensor | capteur de rayons X | sensore a raggi X | sensor de rayos X | PROPOSED |
+| X-ray sensor | Röntgensensor | capteur à rayons X | sensore a raggi X | sensor de rayos X | PROPOSED — FR updated to "à" per the Phase 5 terminology brief |
 | photon counting | Photonenzählung | comptage de photons | conteggio dei fotoni | conteo de fotones | PROPOSED |
 | single-photon sensitivity | Einzelphotonen-Empfindlichkeit | sensibilité au photon unique | sensibilità al singolo fotone | sensibilidad de fotón único | PROPOSED |
 | pixel | Pixel | pixel | pixel | píxel | PROPOSED |
@@ -302,3 +302,5 @@ log when re-syncing locale files after a glossary change.
 | Date | Author | Change |
 |---|---|---|
 | 2026-05-18 | initial draft | First version. All DE/FR/IT/ES entries marked PROPOSED pending native technical reviewer pass per locale. |
+| 2026-05-19 | ES first draft | i18n/es.json + i18n/parts-es/ + i18n/es-style-decisions.md added. ES rows here remain PROPOSED — see es-style-decisions.md for the resolved per-locale judgement calls (NIF, Código de empresa, postprocesado, END, etc.). Native Spanish technical reviewer pass still required before public launch. |
+| 2026-05-20 | FR first draft | i18n/fr.json + i18n/parts-fr/ + i18n/fr-style-decisions.md added (Phase 5). FR rows remain PROPOSED — see fr-style-decisions.md for the resolved per-locale judgement calls. Two FR cells updated here: "X-ray sensor" → "capteur à rayons X" (per the Phase 5 terminology brief), and "FDA-cleared" → "autorisé par la FDA" (conservatism + ES consistency). Native French technical reviewer pass still required before public launch. |

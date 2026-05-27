@@ -1,0 +1,42 @@
+{
+  "jsonld": {
+    "productsUfsIp67": {
+      "graph": {
+        "organization": {
+          "description": "Athlos Oy est une entreprise finlandaise de technologie d'imagerie par rayons X, spécialisée dans les capteurs à conversion directe CdTe-CMOS et Si-CMOS pour les applications dentaires, médicales et industrielles.",
+          "areaServed": "Monde entier",
+          "contactType": "sales"
+        },
+        "product": {
+          "description": "Détecteur linéaire TDI CdTe-CMOS à conversion directe robuste, certifié IP67, pour l'inspection industrielle en ligne par rayons X à haute vitesse. Aucun refroidissement actif requis.",
+          "category": "Détecteur de rayons X industriel",
+          "offer": {
+            "description": "Ventes aux fabricants OEM industriels et aux intégrateurs de systèmes. Contactez Athlos pour un devis et un accompagnement à l'intégration."
+          }
+        },
+        "breadcrumb": {
+          "home": "Accueil",
+          "products": "Produits"
+        }
+      },
+      "faq": {
+        "q1": {
+          "question": "Que signifie IP67 pour le détecteur Industrial IP67 TDI ?",
+          "answer": "IP67 signifie que le détecteur est totalement étanche à la poussière et protégé contre l'immersion dans l'eau jusqu'à une profondeur d'un mètre — ce qui le rend adapté aux environnements d'inspection industrielle humides, poussiéreux et difficiles."
+        },
+        "q2": {
+          "question": "L'Industrial IP67 TDI nécessite-t-il un refroidissement actif ?",
+          "answer": "Non. L'Industrial IP67 TDI est conçu pour fonctionner sans refroidissement actif, ce qui réduit la complexité du système et les besoins de maintenance."
+        },
+        "q3": {
+          "question": "Qu'est-ce que le balayage TDI ?",
+          "answer": "Le TDI (Time Delay Integration, intégration à retard temporel) est une technique de balayage qui accumule le signal sur plusieurs rangées de détecteurs à mesure qu'un objet traverse le faisceau de rayons X — offrant une haute sensibilité à des vitesses de convoyage élevées."
+        },
+        "q4": {
+          "question": "Pour quels secteurs l'Industrial IP67 TDI est-il conçu ?",
+          "answer": "L'Industrial IP67 TDI est utilisé pour l'inspection de corps étrangers dans l'agroalimentaire, le contrôle qualité pharmaceutique, l'inspection des circuits imprimés en électronique, la vérification des pièces automobiles et le contrôle non destructif industriel en général."
+        }
+      }
+    }
+  }
+}

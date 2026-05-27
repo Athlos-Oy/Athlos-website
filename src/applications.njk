@@ -1,9 +1,12 @@
 ---
 layout: layouts/base.njk
-permalink: /applications.html
-lang: en
+pagination:
+  data: locales.active
+  size: 1
+  alias: lang
+  addAllPagesToCollections: true
+permalink: "{% if lang == 'en' %}/applications.html{% else %}/{{ lang }}/applications.html{% endif %}"
 pageKey: applications
-canonical: https://athlos.fi/applications.html
 og:
   type: website
   image: https://athlos.fi/images/app-hero-applications.webp
@@ -28,7 +31,7 @@ omitMain: true
 
     <!-- HERO -->
     <section class="page-hero">
-      <div class="page-hero-bg" style="background-image: url('images/app-hero-applications.webp'); background-position: center;"></div>
+      <div class="page-hero-bg" style="background-image: url('/images/app-hero-applications.webp'); background-position: center;"></div>
       <div class="page-hero-overlay" style="background: linear-gradient(120deg, rgba(10,18,24,0.70) 40%, rgba(20,35,48,0.35) 100%);"></div>
       <div class="page-hero-content">
         <span class="product-category">{{ "pages.applications.hero.eyebrow" | t }}</span>
@@ -51,7 +54,7 @@ omitMain: true
 
           <!-- Dental Imaging -->
           <article class="application-card reveal" id="dental">
-            <img src="images/app-dental.webp" width="6000" height="4000" alt="{{ "pages.applications.cards.dental.imageAlt" | t }}" class="application-card-img" loading="lazy">
+            <img src="/images/app-dental.webp" width="6000" height="4000" alt="{{ "pages.applications.cards.dental.imageAlt" | t }}" class="application-card-img" loading="lazy">
             <div class="application-card-body">
               <h3 class="application-card-title">{{ "pages.applications.cards.dental.title" | t }}</h3>
               <ul class="application-card-uses">
@@ -66,7 +69,7 @@ omitMain: true
 
           <!-- Medical Imaging -->
           <article class="application-card reveal" id="medical">
-            <img src="images/app-medical.webp" width="5568" height="3712" alt="{{ "pages.applications.cards.medical.imageAlt" | t }}" class="application-card-img" loading="lazy">
+            <img src="/images/app-medical.webp" width="5568" height="3712" alt="{{ "pages.applications.cards.medical.imageAlt" | t }}" class="application-card-img" loading="lazy">
             <div class="application-card-body">
               <h3 class="application-card-title">{{ "pages.applications.cards.medical.title" | t }}</h3>
               <ul class="application-card-uses">
@@ -81,7 +84,7 @@ omitMain: true
 
           <!-- Food & Beverage -->
           <article class="application-card reveal" id="industrial">
-            <img src="images/app-food.webp" width="4240" height="2832" alt="{{ "pages.applications.cards.food.imageAlt" | t }}" class="application-card-img" loading="lazy">
+            <img src="/images/app-food.webp" width="4240" height="2832" alt="{{ "pages.applications.cards.food.imageAlt" | t }}" class="application-card-img" loading="lazy">
             <div class="application-card-body">
               <h3 class="application-card-title">{{ "pages.applications.cards.food.title" | t }}</h3>
               <ul class="application-card-uses">
@@ -96,7 +99,7 @@ omitMain: true
 
           <!-- Pharmaceutical -->
           <article class="application-card reveal">
-            <img src="images/app-pharma.webp" width="6720" height="4480" alt="{{ "pages.applications.cards.pharma.imageAlt" | t }}" class="application-card-img" loading="lazy">
+            <img src="/images/app-pharma.webp" width="6720" height="4480" alt="{{ "pages.applications.cards.pharma.imageAlt" | t }}" class="application-card-img" loading="lazy">
             <div class="application-card-body">
               <h3 class="application-card-title">{{ "pages.applications.cards.pharma.title" | t }}</h3>
               <ul class="application-card-uses">
@@ -111,7 +114,7 @@ omitMain: true
 
           <!-- Oil & Gas -->
           <article class="application-card reveal">
-            <img src="images/app-oil-gas.webp" width="5327" height="3545" alt="{{ "pages.applications.cards.oilGas.imageAlt" | t }}" class="application-card-img" loading="lazy">
+            <img src="/images/app-oil-gas.webp" width="5327" height="3545" alt="{{ "pages.applications.cards.oilGas.imageAlt" | t }}" class="application-card-img" loading="lazy">
             <div class="application-card-body">
               <h3 class="application-card-title">{{ "pages.applications.cards.oilGas.title" | t }}</h3>
               <ul class="application-card-uses">
@@ -126,7 +129,7 @@ omitMain: true
 
           <!-- Automotive -->
           <article class="application-card reveal">
-            <img src="images/app-automotive.webp" width="5476" height="3651" alt="{{ "pages.applications.cards.automotive.imageAlt" | t }}" class="application-card-img" loading="lazy">
+            <img src="/images/app-automotive.webp" width="5476" height="3651" alt="{{ "pages.applications.cards.automotive.imageAlt" | t }}" class="application-card-img" loading="lazy">
             <div class="application-card-body">
               <h3 class="application-card-title">{{ "pages.applications.cards.automotive.title" | t }}</h3>
               <ul class="application-card-uses">
@@ -141,7 +144,7 @@ omitMain: true
 
           <!-- Electronics -->
           <article class="application-card reveal">
-            <img src="images/app-electronics.webp" width="6000" height="4000" alt="{{ "pages.applications.cards.electronics.imageAlt" | t }}" class="application-card-img" loading="lazy">
+            <img src="/images/app-electronics.webp" width="6000" height="4000" alt="{{ "pages.applications.cards.electronics.imageAlt" | t }}" class="application-card-img" loading="lazy">
             <div class="application-card-body">
               <h3 class="application-card-title">{{ "pages.applications.cards.electronics.title" | t }}</h3>
               <ul class="application-card-uses">
@@ -156,7 +159,7 @@ omitMain: true
 
           <!-- Heavy Industry -->
           <article class="application-card reveal">
-            <img src="images/app-heavy-industry.webp" width="4032" height="3024" alt="{{ "pages.applications.cards.heavy.imageAlt" | t }}" class="application-card-img" loading="lazy">
+            <img src="/images/app-heavy-industry.webp" width="4032" height="3024" alt="{{ "pages.applications.cards.heavy.imageAlt" | t }}" class="application-card-img" loading="lazy">
             <div class="application-card-body">
               <h3 class="application-card-title">{{ "pages.applications.cards.heavy.title" | t }}</h3>
               <ul class="application-card-uses">

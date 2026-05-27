@@ -1,0 +1,193 @@
+{
+  "pages": {
+    "productsUfs": {
+      "hero": {
+        "category": "Dental · Medizin · Industrie",
+        "headline": "Ultra-Fast<br>Scanning Sensor",
+        "tagline": "Ultraschneller Zeilenscansensor mit Direktkonversion für hochsensible Röntgenbildgebung bei hoher Geschwindigkeit.",
+        "ctaExplore": "Ultra-Fast Scanning Sensor entdecken",
+        "ctaDiscuss": "Integration anfragen",
+        "imageAlt": "Ultra-Fast Scanning Sensor – Detailansicht der Leiterplatte"
+      },
+      "overview": {
+        "eyebrow": "Überblick",
+        "headline": "Ein Sensor.<br>Vielfältige Anwendungen.",
+        "body1": "UFS ist ein vielseitiger Zeilenscansensor mit Direktkonversion, konzipiert für dentales Panoramaröntgen und Fernröntgenseitenbilder, industrielle Inline-Inspektion sowie automatisierte Röntgenprüfsysteme. Er basiert auf CdTe-Detektormaterial, das per Bump Bonding verbunden auf einem vollständig kundenspezifischen ASIC sitzt — eine Konfiguration, die in allen unterstützten Anwendungen eine außergewöhnliche Bildgebungsleistung liefert.",
+        "body2": "Das Ergebnis ist ein Sensor mit sehr hoher Schärfe und Auflösung, exzellenter Empfindlichkeit und Kontrastauflösung, Einzelphotonen-Empfindlichkeit und einem extrem weiten Dynamikumfang. UFS wird über Gigabit Ethernet angebunden und unterstützt sowohl Frame-Modus als auch TDI-Betrieb, wodurch er für ein breites Spektrum an Systemarchitekturen geeignet ist.",
+        "body3": "Alle UFS-Produkte enthalten das Athlos SDK und die API; die Integration über DLL.",
+        "sdkCallout": {
+          "title": "Athlos SDK &amp; API",
+          "body": "Alle UFS-Produkte enthalten das Athlos SDK &amp; die API. Die Integration über DLL. Eine grafische Auswerteoberfläche und eine umfangreiche Filterbibliothek zur Nachbearbeitung sind enthalten."
+        },
+        "imageAlt": "Athlos UFS Scanner – Produktansicht auf weißem Hintergrund"
+      },
+      "highlights": {
+        "eyebrow": "Hauptmerkmale",
+        "headline": "Präzision in jeder Dimension.",
+        "cards": {
+          "directConversion": {
+            "title": "Direktkonversion CdTe-CMOS",
+            "body": "CdTe-Detektormaterial, per Bump Bonding verbunden auf einem proprietären, vollständig kundenspezifischen ASIC. Röntgenstrahlung wird direkt in Signal umgewandelt — ohne Szintillator, ohne energetische Zwischenschritte."
+          },
+          "ultraFast": {
+            "title": "Ultraschnelles Scannen",
+            "body": "Ausgelegt für sehr hohe Scangeschwindigkeiten – 28 m/min bei 100 µm, 180 m/min bei 200 µm und bis zu 1.700 m/min bei 400 µm Auflösung."
+          },
+          "dynamicRange": {
+            "title": "Großer Dynamikumfang",
+            "body": "16 Bit Dynamikumfang sichern eine gleichbleibende Bildgebungsleistung bei sehr unterschiedlichen Schwächungsverhältnissen — entscheidend für dentale wie industrielle Anwendungen."
+          },
+          "singlePhoton": {
+            "title": "Einzelphotonen-Empfindlichkeit",
+            "body": "TDI-Betrieb mit Einzelphotonen-Detektion ermöglicht hochwertige Bildgebung bei reduzierter Dosis — ein spürbarer Vorteil sowohl in dentalen als auch in Inspektions-Workflows."
+          },
+          "gigE": {
+            "title": "Gigabit Ethernet",
+            "body": "Standardisierte GigE-Schnittstelle. Plug-and-Play-Integration, einfache Integration in Systemarchitekturen. Frame-Modus und TDI-Modus werden unterstützt."
+          },
+          "sdk": {
+            "title": "SDK und API verfügbar",
+            "body": "Vollständiges Athlos SDK mit C/C++-API, Evaluierungs-GUI und Filterbibliothek zur Nachbearbeitung. Integrationsunterstützung für OEM- und Systemintegrator-Kunden."
+          }
+        }
+      },
+      "models": {
+        "eyebrow": "Produktfamilie",
+        "headline": "Drei Modelle.<br>Unterschiedliche aktive Längen.",
+        "body1": "Die UFS-Familie umfasst drei Standard-Modellgrößen – UFS150, UFS225 und UFS460 – differenziert nach aktiver Länge. UFS und Industrial IP67 TDI sind dieselbe Direktkonversions-Detektorplattform; der Standard-UFS ist die Nicht-IP67-Version, vorgesehen für kontrollierte und integrierte Umgebungen.",
+        "body2": "Das modulare Design des UFS ermöglicht aktive Längen von 7,5 cm bis 12 m. Kontaktieren Sie uns für weitere Informationen und kundenspezifische Lösungen.",
+        "imageAlt": "Ultra-Fast Scanning Sensor Familie – Leiterplatte im Studioformat",
+        "cards": {
+          "ufs150": {
+            "name": "UFS150",
+            "ref": "CdTe-Direktkonversion · ASIC-Auslese",
+            "body": "15 cm aktive Länge. Geeignet für dentales Panoramaröntgen."
+          },
+          "ufs225": {
+            "name": "UFS225",
+            "ref": "CdTe-Direktkonversion · ASIC-Auslese",
+            "body": "23 cm aktive Länge. Geeignet für dentale Fernröntgenseitenbilder und industrielle Anwendungen."
+          },
+          "ufs460": {
+            "name": "UFS460",
+            "ref": "CdTe-Direktkonversion · ASIC-Auslese",
+            "body": "46 cm aktive Länge. Geeignet für medizinische und industrielle Anwendungen."
+          },
+          "ufsxxx": {
+            "name": "UFSxxx",
+            "ref": "Kundenspezifisch angepasst",
+            "body": "Der UFS besteht aus Modulen; jedes Modul umfasst drei Hybride von je 25,6 mm Länge. Ein Modul bietet 76,8 mm aktive Länge. Welche aktive Länge Ihre Anwendung auch erfordert — Athlos kann sie liefern."
+          }
+        }
+      },
+      "performance": {
+        "eyebrow": "Scangeschwindigkeit",
+        "headline": "Geschwindigkeit und Auflösung<br>auf demselben Sensor.",
+        "cards": {
+          "res100": {
+            "resolution": "Bei 100 <span style=\"text-transform:none\">µm</span>",
+            "speed": "28",
+            "unit": "m/min Scangeschwindigkeit"
+          },
+          "res200": {
+            "resolution": "Bei 200 <span style=\"text-transform:none\">µm</span>",
+            "speed": "180",
+            "unit": "m/min Scangeschwindigkeit"
+          },
+          "res400": {
+            "resolution": "Bei 400 <span style=\"text-transform:none\">µm</span>",
+            "speed": "1.700",
+            "unit": "m/min — maximaler Durchsatz"
+          }
+        }
+      },
+      "specs": {
+        "eyebrow": "Technische Übersicht",
+        "headline": "Eine Plattform.<br>Zwei Schutzklassen.",
+        "body1": "Der Ultra-Fast Scanning Sensor und Industrial IP67 TDI sind zwei Versionen derselben Direktkonversions-Detektorplattform – identische Bildleistung, Sensortechnologie, Scangeschwindigkeit, Auflösung und TDI-Fähigkeit. Der Standard-UFS ist die Nicht-IP67-Version, vorgesehen für kontrollierte und integrierte Bildgebungsumgebungen.",
+        "body2": "Für staubdichten, wasserdichten (IP67) Schutz in rauen, nassen oder Reinigungsumgebungen siehe <a href=\"ufs-ip67.html\" style=\"color:var(--cyan);\">Industrial IP67 TDI</a>.",
+        "rows": {
+          "pixelSize": {
+            "label": "Pixelgröße",
+            "value": "100 × 100 µm"
+          },
+          "activeAreaWidth": {
+            "label": "Breite der aktiven Fläche",
+            "value": "2,8 mm"
+          },
+          "tdiStages": {
+            "label": "TDI-Stufen",
+            "value": "28"
+          },
+          "energyRange": {
+            "label": "Energiebereich",
+            "value": "10 – 360 kV"
+          },
+          "dynamicRange": {
+            "label": "Dynamikumfang",
+            "value": "16 Bit"
+          },
+          "maxLineRate": {
+            "label": "Maximale Zeilenrate",
+            "value": "75.000 lps"
+          },
+          "interface": {
+            "label": "Schnittstelle",
+            "value": "Gigabit Ethernet"
+          },
+          "powerSupply": {
+            "label": "Stromversorgung",
+            "value": "9 – 24 V DC"
+          },
+          "operatingTemperature": {
+            "label": "Betriebstemperatur",
+            "value": "10 – 40 °C"
+          },
+          "activeCooling": {
+            "label": "Aktive Kühlung",
+            "value": "Nicht erforderlich"
+          },
+          "enclosureRating": {
+            "label": "Gehäuseschutzart",
+            "value": "Standard (nicht IP67)"
+          },
+          "detectorMaterial": {
+            "label": "Detektormaterial",
+            "value": "CdTe mit Direktkonversion"
+          }
+        }
+      },
+      "gallery": {
+        "eyebrow": "Bildqualität",
+        "headline": "Bildbeispiele.",
+        "tabs": {
+          "panoramic": "Panorama",
+          "cephalo": "Fernröntgen"
+        },
+        "images": {
+          "panoramic1Alt": "Ultra-Fast Scanning Sensor Panorama-Röntgenaufnahme 1",
+          "panoramic2Alt": "Ultra-Fast Scanning Sensor Panorama-Röntgenaufnahme 2",
+          "cephalo1Alt": "Ultra-Fast Scanning Sensor Fernröntgenseitenbild 1",
+          "cephalo2Alt": "Ultra-Fast Scanning Sensor Fernröntgenseitenbild 2"
+        },
+        "lightbox": {
+          "ariaLabel": "Bildbetrachter",
+          "closeAria": "Schließen",
+          "imgAlt": "Vergrößerte Röntgenaufnahme"
+        }
+      },
+      "cta": {
+        "eyebrow": "Kontakt aufnehmen",
+        "headline": "Sprechen Sie mit Athlos über die Integration des Ultra-Fast Scanning Sensors.",
+        "body": "Ob Sie den Ultra-Fast Scanning Sensor in ein neues Bildgebungssystem integrieren oder ihn für eine bestehende Plattform evaluieren — das Athlos-Team unterstützt Sie von der Definition der Anforderungen bis zur Integration.",
+        "buttonContact": "Athlos kontaktieren",
+        "buttonAll": "Alle Produkte"
+      },
+      "lastUpdated": {
+        "label": "Zuletzt aktualisiert:",
+        "datetime": "2026-04-15",
+        "date": "15. April 2026"
+      }
+    }
+  }
+}

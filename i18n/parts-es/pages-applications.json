@@ -1,0 +1,123 @@
+{
+  "pages": {
+    "applications": {
+      "hero": {
+        "eyebrow": "Áreas de aplicación",
+        "headline": "Aplicaciones de imagen por rayos X",
+        "sub": "Sensores de imagen por rayos X de conversión directa para flujos de trabajo exigentes en los ámbitos dental, industrial y médico."
+      },
+      "intro": {
+        "eyebrow": "Áreas de aplicación",
+        "headline": "Probados en aplicaciones clave, y mucho más.",
+        "body": "Los sensores de Athlos se utilizan en entornos exigentes en los que la calidad de imagen, la fiabilidad y la precisión son innegociables. A continuación se muestran áreas representativas; la tecnología de conversión directa es adecuada para una amplia variedad de retos de adquisición radiográfica además de los aquí mostrados."
+      },
+      "cards": {
+        "dental": {
+          "imageAlt": "Aplicación del sensor de rayos X de conversión directa: imagen intraoral y panorámica dental",
+          "title": "Imagen dental",
+          "uses": {
+            "intraoral": "Radiografía intraoral",
+            "panoramic": "Panorámica y cefalométrica",
+            "wireless": "Flujo de trabajo con sensor inalámbrico",
+            "lowDose": "Diagnóstico con dosis baja"
+          },
+          "linkWios": "Sensor intraoral DC-Air&reg; &rarr;",
+          "linkUfs": "Ultra-Fast Scanning Sensor &rarr;"
+        },
+        "medical": {
+          "imageAlt": "Aplicación del sensor de rayos X de conversión directa: imagen y diagnóstico médicos",
+          "title": "Imagen médica",
+          "uses": {
+            "ceph": "Cefalometría y OPG",
+            "custom": "Modalidades médicas personalizadas",
+            "sensitivity": "Alta sensibilidad con dosis baja",
+            "cdte": "Conversión directa con CdTe"
+          },
+          "linkUfs": "Ultra-Fast Scanning Sensor &rarr;"
+        },
+        "food": {
+          "imageAlt": "Inspección en línea por rayos X para detección de cuerpos extraños y control de calidad en alimentación y bebidas",
+          "title": "Alimentación y bebidas",
+          "uses": {
+            "foreign": "Detección de cuerpos extraños",
+            "seal": "Inspección de integridad del sellado",
+            "fill": "Verificación del nivel de llenado",
+            "count": "Recuento de unidades"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "pharma": {
+          "imageAlt": "Inspección por rayos X para seguridad del producto farmacéutico, nivel de llenado e integridad del sellado",
+          "title": "Farmacéutica",
+          "uses": {
+            "nondestructive": "Ensayo no destructivo del producto",
+            "foreign": "Detección de cuerpos extraños",
+            "seal": "Inspección de sellado y nivel de llenado",
+            "safety": "Seguridad y calidad del producto"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "oilGas": {
+          "imageAlt": "Ensayos no destructivos por rayos X para inspección de soldaduras y corrosión en tuberías de petróleo y gas",
+          "title": "Petróleo y gas",
+          "uses": {
+            "pipe": "Inspección de tuberías para detección de grietas",
+            "weld": "Inspección de soldaduras",
+            "ct": "Tomografía computarizada industrial",
+            "corrosion": "Evaluación de corrosión"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "automotive": {
+          "imageAlt": "Ensayos no destructivos por rayos X para fundición de metal e integridad de componentes en automoción",
+          "title": "Automoción",
+          "uses": {
+            "tire": "Inspección de calidad de neumáticos",
+            "casting": "Inspección de fundición de metal",
+            "integrity": "Integridad de piezas metálicas",
+            "assembly": "Verificación de ensamblaje"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "electronics": {
+          "imageAlt": "Inspección por rayos X para ensamblaje de PCB, verificación SMT y fabricación electrónica",
+          "title": "Electrónica",
+          "uses": {
+            "pcb": "Inspección de PCB",
+            "count": "Recuento de componentes",
+            "reel": "Inspección de componentes en bobina",
+            "smt": "Inspección de ensamblajes SMT"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        },
+        "heavy": {
+          "imageAlt": "Ensayos no destructivos por rayos X para soldaduras estructurales y aplicaciones de industria pesada",
+          "title": "Industria pesada",
+          "uses": {
+            "weld": "Inspección de soldaduras estructurales",
+            "porosity": "Detección de porosidad y grietas en tuberías",
+            "ct": "Aplicaciones de tomografía computarizada industrial",
+            "ndt": "END a gran escala"
+          },
+          "linkIp67": "Industrial IP67 TDI &rarr;"
+        }
+      },
+      "directConversion": {
+        "eyebrow": "Por qué conversión directa",
+        "headline": "Sin centellador. Sin concesiones.",
+        "body": "Los sensores de rayos X convencionales convierten primero los rayos X en luz visible y, a continuación, detectan la luz. Cada paso introduce ruido, pérdida de resolución y desperdicio de energía. Los sensores de Athlos convierten los fotones de rayos X directamente en carga, eliminando por completo el centellador. El resultado: imágenes más nítidas, mejor sensibilidad y mayor rango dinámico en todas las aplicaciones.",
+        "cta": "Ver la gama de productos"
+      },
+      "cta": {
+        "headline": "Hablemos de su aplicación.",
+        "body": "¿No tiene claro qué producto se ajusta a sus requisitos de imagen? Athlos colabora con OEM e integradores de sistemas para encontrar la solución técnica adecuada. Empecemos por su aplicación.",
+        "button": "Contactar con Athlos"
+      },
+      "lastUpdated": {
+        "label": "Última actualización:",
+        "date": "15 de abril de 2026",
+        "datetime": "2026-04-15"
+      }
+    }
+  }
+}

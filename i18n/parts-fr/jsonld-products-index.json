@@ -1,0 +1,35 @@
+{
+  "jsonld": {
+    "productsIndex": {
+      "itemList": {
+        "name": "Gamme de produits d'imagerie par rayons X Athlos",
+        "items": {
+          "wios": {
+            "category": "Capteur dentaire intraoral à rayons X sans fil",
+            "description": "Capteur intraoral à rayons X à conversion directe Si-CMOS entièrement sans fil, avec Bluetooth 5.0, porte-capteurs Zero Profile® et autorisation FDA 510(k)."
+          },
+          "ufs": {
+            "category": "Capteur linéaire à balayage pour rayons X",
+            "description": "Capteur linéaire à balayage CdTe-CMOS sensible au photon unique pour l'imagerie dentaire panoramique et céphalométrique, médicale et industrielle."
+          },
+          "ufsIp67": {
+            "category": "Détecteur TDI à rayons X industriel",
+            "description": "Détecteur à balayage TDI ultra-rapide certifié IP67 pour l'inspection industrielle en ligne continue, sans refroidissement actif requis."
+          },
+          "manufacturing": {
+            "serviceType": "Fabrication de détecteurs sous contrat",
+            "description": "Bumping des wafers CMOS, assemblage flip chip, câblage filaire, assemblage de puces et caractérisation des détecteurs, chez Athlos et VTT Micronova."
+          },
+          "software": {
+            "category": "Logiciels d'imagerie par rayons X",
+            "description": "Module TWAIN, bibliothèques d'algorithmes de reconstruction, filtres de post-traitement et SDK pour l'intégration avec des plateformes d'imagerie compatibles TWAIN."
+          }
+        }
+      },
+      "breadcrumb": {
+        "home": "Accueil",
+        "products": "Produits"
+      }
+    }
+  }
+}

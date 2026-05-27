@@ -1,9 +1,12 @@
 ---
 layout: layouts/base.njk
-permalink: /products/index.html
-lang: en
+pagination:
+  data: locales.active
+  size: 1
+  alias: lang
+  addAllPagesToCollections: true
+permalink: "{% if lang == 'en' %}/products/index.html{% else %}/{{ lang }}/products/index.html{% endif %}"
 pageKey: productsIndex
-canonical: https://athlos.fi/products/
 og:
   type: website
   image: https://athlos.fi/images/products-hero-main.webp
@@ -28,7 +31,7 @@ scriptJs: js/products.js
 
     <!-- HERO -->
     <div class="products-landing-hero">
-      <div class="products-landing-hero-bg" style="background-image: url('../images/products-hero-main.webp')"></div>
+      <div class="products-landing-hero-bg" style="background-image: url('/images/products-hero-main.webp')"></div>
       <div class="products-landing-hero-overlay"></div>
       <div class="products-landing-hero-content">
         <p class="section-eyebrow section-eyebrow--light reveal">{{ "pages.productsIndex.hero.eyebrow" | t }}</p>
@@ -44,7 +47,7 @@ scriptJs: js/products.js
       <div class="product-panels-grid">
 
         <a href="wios.html" class="product-panel">
-          <div class="product-panel-bg" style="background-image: url('../images/wios-sensor-docking-black.png'); background-position: center 35%;"></div>
+          <div class="product-panel-bg" style="background-image: url('/images/wios-sensor-docking-black.png'); background-position: center 35%;"></div>
           <div class="product-panel-overlay"></div>
           <div class="product-panel-content">
             <span class="panel-market">{{ "pages.productsIndex.cards.wios.market" | t }}</span>
@@ -55,7 +58,7 @@ scriptJs: js/products.js
         </a>
 
         <a href="ufs.html" class="product-panel">
-          <div class="product-panel-bg" style="background-image: url('../images/ufs-dark.webp');"></div>
+          <div class="product-panel-bg" style="background-image: url('/images/ufs-dark.webp');"></div>
           <div class="product-panel-overlay"></div>
           <div class="product-panel-content">
             <span class="panel-market">{{ "pages.productsIndex.cards.ufs.market" | t }}</span>
@@ -66,7 +69,7 @@ scriptJs: js/products.js
         </a>
 
         <a href="ufs-ip67.html" class="product-panel">
-          <div class="product-panel-bg" style="background-image: url('../images/ip67-carbon.webp');"></div>
+          <div class="product-panel-bg" style="background-image: url('/images/ip67-carbon.webp');"></div>
           <div class="product-panel-overlay"></div>
           <div class="product-panel-content">
             <span class="panel-market">{{ "pages.productsIndex.cards.ufsIp67.market" | t }}</span>
@@ -77,7 +80,7 @@ scriptJs: js/products.js
         </a>
 
         <a href="manufacturing.html" class="product-panel">
-          <div class="product-panel-bg" style="background-image: url('../images/manufacturing-wafer-1.webp'); background-position: center;"></div>
+          <div class="product-panel-bg" style="background-image: url('/images/manufacturing-wafer-1.webp'); background-position: center;"></div>
           <div class="product-panel-overlay"></div>
           <div class="product-panel-content">
             <span class="panel-market">{{ "pages.productsIndex.cards.manufacturing.market" | t }}</span>
@@ -88,7 +91,7 @@ scriptJs: js/products.js
         </a>
 
         <a href="software.html" class="product-panel panel-solutions">
-          <div class="product-panel-bg" style="background-image: url('../images/software_image_homepage.webp'); background-position: center;"></div>
+          <div class="product-panel-bg" style="background-image: url('/images/software_image_homepage.webp'); background-position: center;"></div>
           <div class="product-panel-overlay"></div>
           <div class="product-panel-content">
             <span class="panel-market">{{ "pages.productsIndex.cards.software.market" | t }}</span>

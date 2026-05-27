@@ -1,0 +1,38 @@
+{
+  "jsonld": {
+    "home": {
+      "faq": {
+        "q1": {
+          "question": "Qu'est-ce que l'imagerie par rayons X à conversion directe ?",
+          "answer": "L'imagerie par rayons X à conversion directe convertit les photons X directement en impulsions électriques au sein d'un semi-conducteur (tel que le CdTe ou le Si), sans l'étape intermédiaire de scintillateur utilisée dans les détecteurs indirects classiques. En supprimant la conversion des rayons X en lumière, la conversion directe élimine la principale source de flou, de perte de signal et de perte de DQE — ce qui donne des images plus nettes, un contraste plus élevé et de meilleures performances à faible dose."
+        },
+        "q2": {
+          "question": "Que fabrique Athlos Oy ?",
+          "answer": "Athlos Oy conçoit et fabrique des capteurs d'imagerie par rayons X à conversion directe reposant sur une technologie hybride CdTe-CMOS et Si-CMOS. La gamme comprend le capteur dentaire intraoral sans fil DC-Air®, l'Ultra-Fast Scanning Sensor pour l'imagerie panoramique, céphalométrique, médicale et industrielle, et l'Industrial IP67 TDI pour l'inspection industrielle en ligne. Athlos propose également des services de fabrication de détecteurs sous contrat et des produits logiciels."
+        },
+        "q3": {
+          "question": "Où Athlos est-elle implantée, et où ses capteurs sont-ils fabriqués ?",
+          "answer": "Athlos Oy a son siège à Espoo, en Finlande. Les capteurs sont fabriqués en interne et au sein de la salle blanche VTT Micronova à Espoo — l'une des principales installations de nanofabrication d'Europe."
+        },
+        "q4": {
+          "question": "Athlos est-elle autorisée par la FDA et certifiée ISO ?",
+          "answer": "Athlos exploite un système de management de la qualité certifié ISO 13485:2016. Le capteur intraoral sans fil DC-Air® est autorisé par la FDA au titre du 510(k) pour l'imagerie dentaire intraorale par rayons X."
+        },
+        "q5": {
+          "question": "Qui a fondé Athlos ?",
+          "answer": "Athlos a été fondée par Konstantinos Spartiotis, qui avait auparavant fondé Simage Oy en 1993 et Ajat Oy en 2001, à la suite de travaux au CERN et à la Johns Hopkins University. L'équipe cumule plus de 35 ans d'expertise appliquée en conversion directe CdTe et Si."
+        }
+      },
+      "itemList": {
+        "name": "Gamme de produits d'imagerie par rayons X Athlos",
+        "items": {
+          "wios": { "name": "Capteur intraoral sans fil DC-Air®" },
+          "ufs": { "name": "Ultra-Fast Scanning Sensor" },
+          "ufsIp67": { "name": "Industrial IP67 TDI" },
+          "manufacturing": { "name": "Services de fabrication" },
+          "software": { "name": "Produits logiciels" }
+        }
+      }
+    }
+  }
+}

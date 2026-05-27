@@ -1,10 +1,13 @@
 ---
 navScrolled: true
 layout: layouts/base.njk
-permalink: /products/ufs.html
-lang: en
+pagination:
+  data: locales.active
+  size: 1
+  alias: lang
+  addAllPagesToCollections: true
+permalink: "{% if lang == 'en' %}/products/ufs.html{% else %}/{{ lang }}/products/ufs.html{% endif %}"
 pageKey: productsUfs
-canonical: https://athlos.fi/products/ufs.html
 og:
   type: product
   image: https://athlos.fi/images/new_ultra-fast.webp
@@ -50,7 +53,7 @@ activeProduct: ufs
 
       <!-- Right: product image -->
       <div style="position:relative; overflow:hidden; background:#1A2128; min-height:500px;">
-        <img src="../images/new_ultra-fast.webp" width="1792" height="2400" alt="{{ "pages.productsUfs.hero.imageAlt" | t }}"
+        <img src="/images/new_ultra-fast.webp" width="1792" height="2400" alt="{{ "pages.productsUfs.hero.imageAlt" | t }}"
           style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; opacity:0; transition:opacity 400ms ease;"
           loading="eager"
           onload="this.style.opacity='1'">
@@ -94,7 +97,7 @@ activeProduct: ufs
             </div>
           </div>
           <div class="overview-visual aspect-portrait reveal">
-            <img src="../images/ufs-white-bg.webp" width="1792" height="2400" alt="{{ "pages.productsUfs.overview.imageAlt" | t }}" loading="lazy">
+            <img src="/images/ufs-white-bg.webp" width="1792" height="2400" alt="{{ "pages.productsUfs.overview.imageAlt" | t }}" loading="lazy">
           </div>
         </div>
       </div>
@@ -157,7 +160,7 @@ activeProduct: ufs
             </p>
           </div>
           <div class="reveal">
-            <img src="../images/ufs-family-new.png" width="1792" height="2400" alt="{{ "pages.productsUfs.models.imageAlt" | t }}" loading="lazy"
+            <img src="/images/ufs-family-new.png" width="1792" height="2400" alt="{{ "pages.productsUfs.models.imageAlt" | t }}" loading="lazy"
               style="border-radius:var(--r-xl); width:100%; object-fit:cover; max-height:360px;">
           </div>
         </div>
@@ -271,10 +274,10 @@ activeProduct: ufs
         <div class="gallery-panel active" data-panel="panoramic">
           <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
             <div class="simple-gallery-item" style="cursor:pointer;">
-              <img src="../images/ufs-scan-1.webp" width="945" height="510" alt="{{ "pages.productsUfs.gallery.images.panoramic1Alt" | t }}" loading="lazy" style="width:100%; border-radius:var(--r-lg);">
+              <img src="/images/ufs-scan-1.webp" width="945" height="510" alt="{{ "pages.productsUfs.gallery.images.panoramic1Alt" | t }}" loading="lazy" style="width:100%; border-radius:var(--r-lg);">
             </div>
             <div class="simple-gallery-item" style="cursor:pointer;">
-              <img src="../images/ufs-scan-2.webp" width="927" height="519" alt="{{ "pages.productsUfs.gallery.images.panoramic2Alt" | t }}" loading="lazy" style="width:100%; border-radius:var(--r-lg);">
+              <img src="/images/ufs-scan-2.webp" width="927" height="519" alt="{{ "pages.productsUfs.gallery.images.panoramic2Alt" | t }}" loading="lazy" style="width:100%; border-radius:var(--r-lg);">
             </div>
           </div>
         </div>
@@ -283,10 +286,10 @@ activeProduct: ufs
         <div class="gallery-panel" data-panel="cephalo">
           <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
             <div class="simple-gallery-item" style="cursor:pointer;">
-              <img src="../images/Picture3.webp" width="612" height="516" alt="{{ "pages.productsUfs.gallery.images.cephalo1Alt" | t }}" loading="lazy" style="width:100%; border-radius:var(--r-lg);">
+              <img src="/images/Picture3.webp" width="612" height="516" alt="{{ "pages.productsUfs.gallery.images.cephalo1Alt" | t }}" loading="lazy" style="width:100%; border-radius:var(--r-lg);">
             </div>
             <div class="simple-gallery-item" style="cursor:pointer;">
-              <img src="../images/ufs-cephalo-2.png" width="2722" height="2253" alt="{{ "pages.productsUfs.gallery.images.cephalo2Alt" | t }}" loading="lazy" style="width:100%; border-radius:var(--r-lg);">
+              <img src="/images/ufs-cephalo-2.png" width="2722" height="2253" alt="{{ "pages.productsUfs.gallery.images.cephalo2Alt" | t }}" loading="lazy" style="width:100%; border-radius:var(--r-lg);">
             </div>
           </div>
         </div>

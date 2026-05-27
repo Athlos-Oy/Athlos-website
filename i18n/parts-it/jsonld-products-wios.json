@@ -1,0 +1,56 @@
+{
+  "jsonld": {
+    "productsWios": {
+      "graph": {
+        "organization": {
+          "description": "Athlos Oy è un'azienda finlandese di tecnologie per imaging a raggi X, specializzata in sensori CdTe-CMOS e Si-CMOS a conversione diretta per applicazioni dentali, medicali e industriali.",
+          "areaServed": "Mondo intero",
+          "contactType": "sales"
+        },
+        "product": {
+          "description": "Sensore intraorale a raggi X a conversione diretta completamente wireless. Tecnologia Si-CMOS, Bluetooth 5.0, supporti Zero Profile®. Autorizzato FDA 510(k).",
+          "category": "Sensore dentale a raggi X",
+          "awards": {
+            "a1": "Dental Advisor 2024 Top Award Winner",
+            "a2": "Dental Advisor 2025 Top Award Winner",
+            "a3": "Dental Product Shopper Best Product",
+            "a4": "Best Product Award 2026"
+          },
+          "offer": {
+            "description": "Disponibile tramite rivenditori e distributori autorizzati di imaging dentale. Contatti Athlos per un preventivo."
+          }
+        },
+        "breadcrumb": {
+          "home": "Home",
+          "products": "Prodotti"
+        }
+      },
+      "faq": {
+        "q1": {
+          "question": "DC-Air® è autorizzato dalla FDA?",
+          "answer": "Sì. DC-Air® è autorizzato dalla FDA tramite procedura 510(k) per l'imaging dentale intraorale a raggi X."
+        },
+        "q2": {
+          "question": "Come si collega DC-Air® in modalità wireless?",
+          "answer": "DC-Air® utilizza la connettività wireless Bluetooth 5.0. Non sono necessari dongle ricevitori né stazioni di docking."
+        },
+        "q3": {
+          "question": "Quali dimensioni di sensore sono disponibili per DC-Air®?",
+          "answer": "DC-Air® è disponibile nelle taglie 1 e 2."
+        },
+        "q4": {
+          "question": "DC-Air® è disponibile in Europa?",
+          "answer": "La registrazione CE è attualmente in corso. DC-Air® non è ancora in vendita in Europa."
+        },
+        "q5": {
+          "question": "Quale tecnologia di imaging utilizza DC-Air®?",
+          "answer": "DC-Air® utilizza la tecnologia Si-CMOS a conversione diretta, che converte i fotoni X direttamente in segnali elettrici senza uno strato scintillatore intermedio — offrendo dettagli più nitidi e un contrasto più elevato rispetto ai sensori intraorali convenzionali."
+        }
+      },
+      "video": {
+        "name": "Presentazione del sensore intraorale wireless DC-Air®",
+        "description": "Una breve panoramica di DC-Air®, il sensore intraorale True Wireless® — come funziona, cosa lo distingue e cosa offre allo studio odontoiatrico moderno."
+      }
+    }
+  }
+}

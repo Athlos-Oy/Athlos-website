@@ -1,0 +1,38 @@
+{
+  "jsonld": {
+    "home": {
+      "faq": {
+        "q1": {
+          "question": "Was ist Direktkonversions-Röntgenbildgebung?",
+          "answer": "Bei der Direktkonversions-Röntgenbildgebung werden Röntgenphotonen direkt in einem Halbleiter (etwa CdTe oder Si) in elektrische Impulse umgewandelt — ohne den Umweg über einen Szintillator, wie er bei herkömmlichen indirekten Detektoren genutzt wird. Durch den Wegfall der Umwandlung von Röntgenstrahlung in Licht entfällt die wichtigste Ursache von Unschärfe, Signalverlust und DQE-Verlust. Das Ergebnis: schärfere Bilder, höherer Kontrast und bessere Leistung bei niedriger Dosis."
+        },
+        "q2": {
+          "question": "Was stellt Athlos Oy her?",
+          "answer": "Athlos Oy entwickelt und fertigt Direktkonversions-Röntgensensoren auf Basis von CdTe-CMOS- und Si-CMOS-Hybridtechnologie. Das Portfolio umfasst den kabellosen DC-Air®-Intraoralsensor für die Zahnmedizin, den Ultra-Fast Scanning Sensor für Panorama-, Fernröntgenseitenbild-, medizinische und industrielle Bildgebung sowie den Industrial IP67 TDI für die industrielle Inline-Inspektion. Darüber hinaus bietet Athlos Auftragsfertigungsdienstleistungen für Detektoren sowie Software-Produkte an."
+        },
+        "q3": {
+          "question": "Wo hat Athlos seinen Sitz und wo werden die Sensoren gefertigt?",
+          "answer": "Athlos Oy hat seinen Hauptsitz in Espoo, Finnland. Die Sensoren werden im eigenen Werk sowie im Reinraum von VTT Micronova in Espoo gefertigt — einer der führenden Nanofabrikationsanlagen Europas."
+        },
+        "q4": {
+          "question": "Ist Athlos FDA-zugelassen und ISO-zertifiziert?",
+          "answer": "Athlos betreibt ein nach ISO 13485:2016 zertifiziertes Qualitätsmanagementsystem. Der kabellose Intraoralsensor DC-Air® ist FDA-510(k)-zugelassen für die dentale intraorale Röntgenbildgebung."
+        },
+        "q5": {
+          "question": "Wer hat Athlos gegründet?",
+          "answer": "Athlos wurde von Konstantinos Spartiotis gegründet, der zuvor 1993 Simage Oy und 2001 Ajat Oy gründete, nach Tätigkeiten am CERN und an der Johns Hopkins University. Das Team verfügt über mehr als 35 Jahre angewandter Expertise in CdTe- und Si-Direktkonversion."
+        }
+      },
+      "itemList": {
+        "name": "Athlos Produktportfolio für Röntgenbildgebung",
+        "items": {
+          "wios": { "name": "DC-Air® kabelloser Intraoralsensor" },
+          "ufs": { "name": "Ultra-Fast Scanning Sensor" },
+          "ufsIp67": { "name": "Industrial IP67 TDI" },
+          "manufacturing": { "name": "Fertigungsdienstleistungen" },
+          "software": { "name": "Software-Produkte" }
+        }
+      }
+    }
+  }
+}
