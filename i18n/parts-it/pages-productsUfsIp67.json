@@ -11,7 +11,7 @@
       "overview": {
         "eyebrow": "Panoramica",
         "headline": "Adatto all'uso industriale.<br>Senza raffreddamento.",
-        "body1": "Industrial IP67 TDI è un array industriale di rivelatori lineari, progettato per applicazioni di scansione rapida in ambienti gravosi e a uso continuativo. Protezione IP67, assenza di raffreddamento attivo e imaging a conversione diretta su CdTe progettato per ambienti industriali — ingegnerizzato per flussi di ispezione in linea in cui contano disponibilità, sensibilità e stabilità a lungo termine.",
+        "body1": "Industrial IP67 TDI è un array industriale di rivelatori lineari, progettato per applicazioni di scansione rapida in ambienti gravosi e a uso continuativo. Protezione IP67, assenza di raffreddamento attivo e acquisizione a conversione diretta basata su CdTe progettato per ambienti industriali — ingegnerizzato per flussi di ispezione in linea in cui contano disponibilità, sensibilità e stabilità a lungo termine.",
         "body2": "A differenza dei sistemi di rivelazione che si affidano al raffreddamento Peltier per gestire la temperatura del sensore, Industrial IP67 TDI opera senza raffreddamento attivo su tutto l'intervallo operativo, grazie al consumo energetico molto ridotto e all'algoritmo brevettato di calibrazione dinamica dell'offset integrato.",
         "body3": "L'operatività in modalità TDI consente velocità di linea fino a 75.000 righe al secondo, supportando velocità di scansione all'altezza delle esigenze dell'ispezione in produzione ad alto throughput.",
         "imageAlt": "Vista del prodotto Industrial IP67 TDI"
@@ -26,7 +26,7 @@
           },
           "02": {
             "title": "Senza raffreddamento attivo",
-            "body": "Nessun Peltier, nessun circuito di raffreddamento. Industrial IP67 TDI opera entro le specifiche complete tra 10 e 40 °C senza gestione termica attiva, riducendo la complessità del sistema e le possibili cause di guasto. Questo è reso possibile dal consumo energetico molto ridotto e dall'algoritmo di calibrazione dinamica dell'offset integrato."
+            "body": "Nessun elemento Peltier, nessun circuito di raffreddamento. Industrial IP67 TDI opera entro le specifiche complete tra 10 e 40 °C senza gestione termica attiva, riducendo la complessità del sistema e le possibili cause di guasto. Questo è reso possibile dal consumo energetico molto ridotto e dall'algoritmo di calibrazione dinamica dell'offset integrato."
           },
           "03": {
             "title": "Scansione TDI ultraveloce",
@@ -34,7 +34,7 @@
           },
           "04": {
             "title": "CdTe a conversione diretta",
-            "body": "Acquisizione a conversione diretta su CdTe con 28 stadi TDI. Sensibilità eccezionalmente elevata, ampio intervallo di energia (10–360 kV) e gamma dinamica a 16 bit per applicazioni di ispezione esigenti. Offriamo anche una soluzione personalizzata per LINAC, per l'impiego con energie fino a 9 MeV."
+            "body": "Acquisizione a conversione diretta su CdTe con 28 stadi TDI. Sensibilità eccezionalmente elevata, ampio intervallo di energia (10–360 kV) e gamma dinamica a 16 bit per applicazioni di ispezione esigenti. Offriamo anche una soluzione personalizzata per LINAC, per energie fino a 9 MeV."
           },
           "05": {
             "title": "Contrasto e sensibilità elevati",

@@ -43,7 +43,7 @@
           },
           "gigE": {
             "title": "Gigabit Ethernet",
-            "body": "Interface GigE standard. Intégration plug-and-play, intégration simple dans les architectures de systèmes. Mode trame et mode TDI tous deux pris en charge."
+            "body": "Interface GigE standard. Intégration plug-and-play et mise en service simplifiée. Mode trame et mode TDI tous deux pris en charge."
           },
           "sdk": {
             "title": "SDK et API disponibles",
@@ -105,7 +105,7 @@
         "eyebrow": "Aperçu technique",
         "headline": "Une plateforme.<br>Deux niveaux de protection.",
         "body1": "L'Ultra-Fast Scanning Sensor et l'Industrial IP67 TDI sont deux versions de la même plateforme de détecteur à conversion directe — performances d'acquisition, technologie de capteur, vitesse de balayage, résolution et capacités TDI identiques. Le UFS standard est la version non-IP67, destinée aux environnements d'imagerie contrôlés et intégrés.",
-        "body2": "Pour une protection IP67 — étanche à la poussière et à l'immersion — en environnements industriels, humides ou de lavage, consultez l'<a href=\"ufs-ip67.html\" style=\"color:var(--cyan);\">Industrial IP67 TDI</a>.",
+        "body2": "Pour une protection IP67 — protégé contre la poussière et l'immersion temporaire selon IP67 — en environnements industriels, humides ou de lavage, consultez l'<a href=\"ufs-ip67.html\" style=\"color:var(--cyan);\">Industrial IP67 TDI</a>.",
         "rows": {
           "pixelSize": {
             "label": "Taille de pixel",

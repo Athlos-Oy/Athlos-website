@@ -9,7 +9,7 @@
       "overview": {
         "eyebrow": "Visión general",
         "headline": "La capa de software detrás de la imagen por conversión directa.",
-        "body1": "El equipo de Athlos lleva desarrollando software de imagen por rayos X desde los primeros días de la conversión directa: algoritmos de reconstrucción, filtros de procesado de imagen y módulos de integración TWAIN desplegadas en miles de instalaciones clínicas e industriales en todo el mundo.",
+        "body1": "El equipo de Athlos lleva desarrollando software de imagen por rayos X desde los primeros días de la conversión directa: algoritmos de reconstrucción, filtros de procesado de imagen y módulos de integración TWAIN desplegados en miles de instalaciones clínicas e industriales en todo el mundo.",
         "body2": "Estas capacidades de software están disponibles como parte de un sistema de imagen Athlos completo o como componentes bajo licencia de forma independiente para su integración en plataformas de terceros. Athlos también ofrece acceso a su SDK y soporte de integración directa para clientes OEM e integradores de sistemas."
       },
       "components": {

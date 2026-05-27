@@ -147,7 +147,7 @@
           "manufacturing": {
             "market": "Fabricación de detectores",
             "name": "Servicios de fabricación",
-            "desc": "Fabricación de detectores de precisión: bumping CMOS, unión flip chip, unión por hilo, montaje de chips y caracterización. Acceso a VTT Micronova. Ofrecemos una amplia gama de servicios de fabricación por contrato.",
+            "desc": "Fabricación de detectores de precisión: bumping CMOS, unión flip chip, wire bonding, montaje de chips y caracterización. Acceso a VTT Micronova. Ofrecemos una amplia gama de servicios de fabricación por contrato.",
             "link": "Más información",
             "imageAlt": "Servicios de fabricación de Athlos: oblea CMOS"
           },
@@ -175,7 +175,7 @@
           },
           "iso": {
             "title": "ISO 13485:2016",
-            "body": "Sistema de gestión de la calidad certificado para una fiabilidad de producto constante y preparación regulatoria."
+            "body": "Sistema de gestión de la calidad certificado para una fiabilidad de producto constante y cumplimiento de requisitos regulatorios."
           }
         },
         "cta": "Servicios de fabricación"
@@ -291,14 +291,14 @@
     },
     "productsManufacturing": {
       "title": "Servicios de fabricación de detectores de rayos X | Bumping CMOS | Athlos",
-      "description": "Athlos ofrece servicios de fabricación de precisión para detectores de rayos X, incluidos bumping CMOS, unión flip chip, unión por hilo, unión de chips y caracterización completa del sensor. Acceso a la sala limpia VTT Micronova.",
+      "description": "Athlos ofrece servicios de fabricación de precisión para detectores de rayos X, incluidos bumping CMOS, unión flip chip, wire bonding, unión de chips y caracterización completa del sensor. Acceso a la sala limpia VTT Micronova.",
       "og": {
         "title": "Servicios de fabricación de detectores de rayos X | Bumping CMOS | Athlos",
-        "description": "Fabricación de precisión de detectores de rayos X: bumping CMOS, unión flip chip, unión por hilo, unión de chips y caracterización del sensor. Acceso a VTT Micronova, certificado ISO 13485."
+        "description": "Fabricación de precisión de detectores de rayos X: bumping CMOS, unión flip chip, wire bonding, unión de chips y caracterización del sensor. Acceso a VTT Micronova, certificado ISO 13485."
       },
       "twitter": {
         "title": "Servicios de fabricación de detectores de rayos X | Bumping CMOS | Athlos",
-        "description": "Fabricación de precisión de detectores de rayos X: bumping CMOS, unión flip chip, unión por hilo, unión de chips y caracterización del sensor. Acceso a VTT Micronova."
+        "description": "Fabricación de precisión de detectores de rayos X: bumping CMOS, unión flip chip, wire bonding, unión de chips y caracterización del sensor. Acceso a VTT Micronova."
       }
     },
     "productsSoftware": {

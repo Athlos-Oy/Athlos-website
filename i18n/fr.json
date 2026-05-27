@@ -147,7 +147,7 @@
           "manufacturing": {
             "market": "Fabrication de détecteurs",
             "name": "Services de fabrication",
-            "desc": "Fabrication de détecteurs de précision — bumping CMOS, assemblage flip chip, câblage filaire, assemblage de puces et caractérisation. Accès à VTT Micronova. Nous proposons une large gamme de services de fabrication sous contrat.",
+            "desc": "Fabrication de détecteurs de précision — bumping CMOS, assemblage flip chip, wire bonding, assemblage de puces et caractérisation. Accès à VTT Micronova. Nous proposons une large gamme de services de fabrication sous contrat.",
             "link": "En savoir plus",
             "imageAlt": "Services de fabrication Athlos — wafer CMOS"
           },
@@ -175,7 +175,7 @@
           },
           "iso": {
             "title": "ISO 13485:2016",
-            "body": "Système de management de la qualité certifié, pour une fiabilité produit constante et une conformité réglementaire."
+            "body": "Système de management de la qualité certifié, pour une fiabilité produit constante et une préparation aux exigences réglementaires."
           }
         },
         "cta": "Services de fabrication"
@@ -291,14 +291,14 @@
     },
     "productsManufacturing": {
       "title": "Services de fabrication de détecteurs de rayons X | Bumping CMOS | Athlos",
-      "description": "Athlos propose des services de fabrication de détecteurs de rayons X de précision — bumping CMOS, assemblage flip chip, câblage filaire, die bonding et caractérisation complète des capteurs. Accès à la salle blanche VTT Micronova.",
+      "description": "Athlos propose des services de fabrication de détecteurs de rayons X de précision — bumping CMOS, assemblage flip chip, wire bonding, die bonding et caractérisation complète des capteurs. Accès à la salle blanche VTT Micronova.",
       "og": {
         "title": "Services de fabrication de détecteurs de rayons X | Bumping CMOS | Athlos",
-        "description": "Fabrication de précision de détecteurs de rayons X — bumping CMOS, assemblage flip chip, câblage filaire, die bonding et caractérisation des capteurs. Accès à la salle blanche VTT Micronova, certifié ISO 13485."
+        "description": "Fabrication de précision de détecteurs de rayons X — bumping CMOS, assemblage flip chip, wire bonding, die bonding et caractérisation des capteurs. Accès à la salle blanche VTT Micronova, certifié ISO 13485."
       },
       "twitter": {
         "title": "Services de fabrication de détecteurs de rayons X | Bumping CMOS | Athlos",
-        "description": "Fabrication de précision de détecteurs de rayons X — bumping CMOS, assemblage flip chip, câblage filaire, die bonding et caractérisation des capteurs. Accès à la salle blanche VTT Micronova."
+        "description": "Fabrication de précision de détecteurs de rayons X — bumping CMOS, assemblage flip chip, wire bonding, die bonding et caractérisation des capteurs. Accès à la salle blanche VTT Micronova."
       }
     },
     "productsSoftware": {

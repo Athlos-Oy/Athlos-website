@@ -14,7 +14,7 @@
         "headline": "Un sensore.<br>Molteplici applicazioni.",
         "body1": "UFS è un sensore di scansione lineare a conversione diretta multifunzione, progettato per radiografia panoramica e cefalometria dentale, ispezione industriale in linea e sistemi automatizzati di ispezione a raggi X. È realizzato con rivelatore in CdTe con bump bonding su un ASIC full-custom — una configurazione che offre prestazioni di acquisizione eccezionali in tutte le applicazioni previste.",
         "body2": "Il risultato è un sensore con nitidezza e risoluzione molto elevate, sensibilità e risoluzione di contrasto eccellenti, capacità di rilevare singoli fotoni e una gamma dinamica estremamente ampia. UFS si collega tramite Gigabit Ethernet e supporta sia la modalità frame sia il funzionamento TDI, risultando adatto a un'ampia gamma di architetture di sistema.",
-        "body3": "Tutti i prodotti UFS includono l'Athlos SDK e l'API, con integrazione tramite DLL.",
+        "body3": "Tutti i prodotti UFS includono l'SDK e le API Athlos, con integrazione tramite DLL.",
         "sdkCallout": {
           "title": "SDK e API Athlos",
           "body": "Tutti i prodotti UFS includono l'SDK e API Athlos, con integrazione tramite DLL. Sono incluse un'interfaccia grafica di valutazione e una libreria avanzata di filtri di post-elaborazione."
@@ -43,7 +43,7 @@
           },
           "gigE": {
             "title": "Gigabit Ethernet",
-            "body": "Interfaccia GigE standard. Integrazione plug-and-play, integrabile con semplicità in qualsiasi architettura di sistema. Supporta sia la modalità frame sia la modalità TDI."
+            "body": "Interfaccia GigE standard. Integrazione plug-and-play, adatta alle principali architetture di sistema. Supporta sia la modalità frame sia la modalità TDI."
           },
           "sdk": {
             "title": "SDK &amp; API per integrazione OEM",
@@ -105,7 +105,7 @@
         "eyebrow": "Sintesi tecnica",
         "headline": "Una piattaforma.<br>Due livelli di protezione.",
         "body1": "L'Ultra-Fast Scanning Sensor e Industrial IP67 TDI sono due versioni della stessa piattaforma di rivelatori a conversione diretta — prestazioni di acquisizione, tecnologia del sensore, velocità di scansione, risoluzione e funzionalità TDI identiche. UFS è la versione standard non-IP67, pensata per ambienti di imaging controllati e integrati.",
-        "body2": "Per la protezione IP67 — a tenuta di polvere e con resistenza all'immersione — in ambienti gravosi, umidi o soggetti a lavaggio, consulta la pagina di <a href=\"ufs-ip67.html\" style=\"color:var(--cyan);\">Industrial IP67 TDI</a>.",
+        "body2": "Per la protezione IP67 — protezione contro la polvere e l'immersione temporanea secondo IP67 — in ambienti gravosi, umidi o soggetti a lavaggio, consulta la pagina di <a href=\"ufs-ip67.html\" style=\"color:var(--cyan);\">Industrial IP67 TDI</a>.",
         "rows": {
           "pixelSize": {
             "label": "Dimensione pixel",
@@ -179,7 +179,7 @@
       "cta": {
         "eyebrow": "Contattaci",
         "headline": "Parla con Athlos dell'integrazione di Ultra-Fast Scanning Sensor.",
-        "body": "Per integrare Ultra-Fast Scanning Sensor in un nuovo sistema di imaging o per valutarlo su una piattaforma esistente, il team Athlos offre supporto dalla definizione delle specifiche fino all'integrazione.",
+        "body": "Per integrare Ultra-Fast Scanning Sensor in un nuovo sistema di imaging o per valutarne l'integrazione in una piattaforma esistente, il team Athlos offre supporto dalla definizione delle specifiche fino all'integrazione.",
         "buttonContact": "Contatta Athlos",
         "buttonAll": "Tutti i prodotti"
       },

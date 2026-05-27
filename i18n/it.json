@@ -85,7 +85,7 @@
         "ctaAbout": "Chi è Athlos"
       },
       "statement": {
-        "headline": "Il nostro team ha inventato la Conversione Diretta.<br>Da oltre 30 anni, i sensori a conversione diretta<br>ridefiniscono gli standard di precisione e fedeltà nella diagnostica a raggi X.",
+        "headline": "Il nostro team ha inventato la conversione diretta.<br>Da oltre 30 anni, i sensori a conversione diretta<br>ridefiniscono gli standard di precisione e fedeltà nella diagnostica a raggi X.",
         "body": "Eliminando lo scintillatore e convertendo i raggi X direttamente in impulsi elettrici, i sensori e gli array lineari Athlos eliminano la causa principale del degrado dell'immagine. Il risultato: dettagli più nitidi, contrasto più fedele e prestazioni affidabili su tutto l'intervallo di dose.",
         "stats": {
           "invented": {
@@ -119,7 +119,7 @@
         "features": {
           "cdte": "Materiali a conversione diretta CdTe e Si",
           "cmos": "Lettura CMOS proprietaria full-custom",
-          "photon": "Sensibilità al singolo fotone",
+          "photon": "Rilevamento del singolo fotone",
           "libs": "Librerie avanzate di ricostruzione e filtri"
         },
         "learnLink": "Scopri Athlos"
@@ -127,7 +127,7 @@
       "products": {
         "eyebrow": "Portfolio prodotti",
         "headline": "Progettati per applicazioni esigenti.",
-        "intro": "Cinque linee di prodotti e servizi — tutte costruite sullo la stessa piattaforma di conversione diretta e decenni di esperienza nell'imaging a raggi X.",
+        "intro": "Cinque linee di prodotti e servizi — tutte basate sulla stessa piattaforma di conversione diretta e su decenni di esperienza nell'imaging a raggi X.",
         "cards": {
           "wios": {
             "market": "Imaging dentale intraorale",
@@ -181,7 +181,7 @@
           },
           "iso": {
             "title": "ISO 13485:2016",
-            "body": "Sistema di gestione della qualità certificato per affidabilità costante del prodotto e prontezza normativa."
+            "body": "Sistema di gestione della qualità certificato per affidabilità costante del prodotto e conformità ai requisiti regolatori."
           }
         },
         "cta": "Servizi di produzione"
@@ -276,7 +276,7 @@
       "description": "L'Ultra-Fast Scanning Sensor è il sensore di scansione lineare a conversione diretta ultra-rapido di Athlos per imaging a raggi X dentale panoramico, cefalometrico, medicale e industriale. CdTe-CMOS, sensibilità al singolo fotone.",
       "og": {
         "title": "Sensore di scansione ultra-rapido CdTe per raggi X | Athlos UFS",
-        "description": "Sensore di scansione lineare CdTe-CMOS a conversione diretta ultra-rapido per imaging a raggi X dentale panoramico, cefalometrico, medicale e industriale. Sensibilità al singolo fotone."
+        "description": "Sensore di scansione lineare CdTe-CMOS a conversione diretta ultra-rapido per imaging a raggi X dentale panoramico, cefalometrico, medicale e industriale. Rilevamento del singolo fotone."
       },
       "twitter": {
         "title": "Sensore di scansione ultra-rapido CdTe per raggi X | Athlos UFS",

@@ -47,7 +47,7 @@
           },
           "battery": {
             "title": "Akku &amp; Sicherheit",
-            "body": "Bis zu 300 Röntgenaufnahmen pro Batterieladung. Der Ein integrierter Pufferspeicher im Sensor speichert ein Bild temporär. Dynamische Selbstkalibrierung bei jeder Aufnahme. Wiederaufladbarer Lithium-Ionen-Akku. Magnetisches Docking für zuverlässiges Laden."
+            "body": "Bis zu 300 Röntgenaufnahmen pro Batterieladung. Ein integrierter Pufferspeicher im Sensor speichert das letzte Bild temporär. Dynamische Selbstkalibrierung bei jeder Aufnahme. Wiederaufladbarer Lithium-Ionen-Akku. Magnetisches Docking für zuverlässiges Laden."
           },
           "ip67": {
             "title": "IP67 &amp; Robustheit",
@@ -103,7 +103,7 @@
       "awards": {
         "eyebrow": "Auszeichnungen",
         "headline": "Preisgekrönte Technologie.",
-        "body": "DC-Air&reg; und die zugrunde liegende Direktkonversions-Technologie wurden von führenden renommierten Auszeichnungen der Dental- und Healthcare-Branche gewürdigt.",
+        "body": "DC-Air&reg; und die zugrunde liegende Direktkonversionstechnologie wurden mit anerkannten Auszeichnungen im Dental- und Gesundheitsbereich prämiert.",
         "items": {
           "da2024Alt": "Dental Advisor 2024 Top Award Winner",
           "da2024Label": "Dental Advisor 2024 Top Award Winner",
@@ -136,7 +136,7 @@
       "cta": {
         "headline": "Werden Sie DC-Air&reg;-Vertriebspartner.",
         "body": "DC-Air&reg; ist über autorisierte Fachhändler und Distributoren für Dentalbildgebung erhältlich. Wenn Sie ein Vertriebsunternehmen oder ein Händlernetz für Dentalprodukte vertreten, freuen wir uns auf Ihre Kontaktaufnahme.",
-        "regulatory": "Der DC-Air&reg; ist FDA-510(k)-zugelassen; die CE-Registrierung ist in Vorbereitung. Das Produkt ist in Europa noch nicht im Verkauf.",
+        "regulatory": "Der DC-Air&reg; ist FDA 510(k)-Freigabe; die CE-Kennzeichnung ist in Vorbereitung. Das Produkt ist in Europa noch nicht im Verkauf.",
         "oem": "Für Anfragen zu OEM-Lizenzierung oder Technologieintegration nutzen Sie bitte denselben Kontaktweg.",
         "contactBtn": "Athlos kontaktieren",
         "brochureBtn": "Broschüre herunterladen"

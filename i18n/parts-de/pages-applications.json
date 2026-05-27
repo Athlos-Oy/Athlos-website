@@ -28,7 +28,7 @@
           "imageAlt": "Anwendung des Direktkonversions-Röntgensensors – medizinische Bildgebung und Diagnostik",
           "title": "Medizinische Bildgebung",
           "uses": {
-            "ceph": "Fernröntgenseitenbild &amp; OPG",
+            "ceph": "Fernröntgenseitenbild und OPG",
             "custom": "Kundenspezifische medizinische Modalitäten",
             "sensitivity": "Hohe Empfindlichkeit bei niedriger Dosis",
             "cdte": "CdTe-Direktkonversion"
@@ -110,7 +110,7 @@
       },
       "cta": {
         "headline": "Sprechen Sie mit Athlos über Ihre Anwendung.",
-        "body": "Unsicher, welches Produkt zu Ihren Bildgebungsanforderungen passt? Athlos arbeitet mit OEMs und Systemintegratoren zusammen, um den passenden technischen Weg zu finden. Beginnen wir mit Ihrer Anwendung.",
+        "body": "Unsicher, welches Produkt zu Ihren Bildgebungsanforderungen passt? Athlos arbeitet mit OEMs und Systemintegratoren zusammen, um den passenden technischen Weg zu finden. Lassen Sie uns mit Ihrer Anwendung beginnen.",
         "button": "Athlos kontaktieren"
       },
       "lastUpdated": {

@@ -8,7 +8,7 @@
           "contactType": "Vertrieb"
         },
         "product": {
-          "description": "Vollständig kabelloser Intraoral-Röntgensensor mit Direktkonversion. Si-CMOS-Technologie, Bluetooth 5.0, Zero Profile®-Halter. FDA-510(k)-zugelassen.",
+          "description": "Vollständig kabelloser Intraoral-Röntgensensor mit Direktkonversion. Si-CMOS-Technologie, Bluetooth 5.0, Zero Profile®-Halter. mit FDA 510(k)-Freigabe.",
           "category": "Dentaler Röntgensensor",
           "awards": {
             "a1": "Dental Advisor 2024 Top Award Winner",
@@ -28,7 +28,7 @@
       "faq": {
         "q1": {
           "question": "Ist DC-Air® FDA-zugelassen?",
-          "answer": "Ja. DC-Air® ist FDA-510(k)-zugelassen für die dentale intraorale Röntgenbildgebung."
+          "answer": "Ja. DC-Air® ist verfügt über die FDA 510(k)-Freigabe für die dentale intraorale Röntgenbildgebung."
         },
         "q2": {
           "question": "Wie verbindet sich DC-Air® kabellos?",

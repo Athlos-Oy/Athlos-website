@@ -4,7 +4,7 @@
       "hero": {
         "category": "Dentaire intraoral",
         "headline": "DC-Air<sup>&reg;</sup> Capteur intraoral à rayons X sans fil",
-        "tagline": "Imagerie intraorale par rayons X à conversion directe True Wireless®.<br>Des images d'une parfaite netteté. Aucun fil. Aucun compromis.",
+        "tagline": "Imagerie intraorale par rayons X à conversion directe True Wireless®.<br>Des images d'une grande netteté. Aucun fil. Aucun compromis.",
         "ctaPrimary": "Demande de distribution",
         "ctaBrochure": "Télécharger la brochure"
       },
@@ -47,7 +47,7 @@
           },
           "battery": {
             "title": "Batterie et sécurité",
-            "body": "Jusqu'à 300 radiographies par charge. Une mémoire tampon intégrée intégrée au capteur conserve une image. Auto-calibrage dynamique à chaque acquisition. Batterie lithium-ion rechargeable. Station d'accueil magnétique pour une recharge fiable."
+            "body": "Jusqu'à 300 radiographies par charge. Une mémoire tampon intégrée au capteur conserve temporairement une image. Auto-calibrage dynamique à chaque acquisition. Batterie lithium-ion rechargeable. Station d'accueil magnétique pour une recharge fiable."
           },
           "ip67": {
             "title": "IP67 et durabilité",
@@ -103,7 +103,7 @@
       "awards": {
         "eyebrow": "Distinctions",
         "headline": "Une technologie primée.",
-        "body": "DC-Air&reg; et la technologie de conversion directe qui le sous-tend ont été distingués par des distinctions reconnues dans les secteurs dentaire et médical des secteurs dentaire et de la santé.",
+        "body": "DC-Air&reg; et la technologie de conversion directe qui le sous-tend ont reçu des distinctions reconnues dans les secteurs dentaire et médical.",
         "items": {
           "da2024Alt": "Lauréat du Dental Advisor Top Award 2024",
           "da2024Label": "Lauréat du Dental Advisor Top Award 2024",
@@ -136,7 +136,7 @@
       "cta": {
         "headline": "Devenez partenaire de distribution DC-Air&reg;.",
         "body": "DC-Air&reg; est disponible auprès de revendeurs et distributeurs agréés en imagerie dentaire. Si vous représentez une entreprise de distribution de produits dentaires ou un réseau de revendeurs, nous serions ravis d'échanger avec vous.",
-        "regulatory": "Le DC-Air&reg; est autorisé par la FDA au titre du 510(k), et l'enregistrement CE est en cours. Le produit n'est pas encore commercialisé en Europe.",
+        "regulatory": "Le DC-Air&reg; est bénéficie d'une autorisation FDA 510(k), et le marquage CE est en cours. Le produit n'est pas encore commercialisé en Europe.",
         "oem": "Pour toute demande de licence OEM ou d'intégration technologique, veuillez nous contacter par le même canal.",
         "contactBtn": "Contacter Athlos",
         "brochureBtn": "Télécharger la brochure"

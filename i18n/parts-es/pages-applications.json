@@ -50,7 +50,7 @@
           "imageAlt": "Inspección por rayos X para seguridad del producto farmacéutico, nivel de llenado e integridad del sellado",
           "title": "Farmacéutica",
           "uses": {
-            "nondestructive": "Ensayo no destructivo del producto",
+            "nondestructive": "Ensayos no destructivos",
             "foreign": "Detección de cuerpos extraños",
             "seal": "Inspección de sellado y nivel de llenado",
             "safety": "Seguridad y calidad del producto"

@@ -30,7 +30,7 @@
             "body": "Conexiones por hilo de alta densidad entre el chip CMOS y los sustratos de PCB y encapsulado. Adecuado para configuraciones de sensor de paso fino y gran formato."
           },
           "probing": {
-            "title": "Probing eléctrico y caracterización por rayos X",
+            "title": "Probing eléctrico a nivel de oblea y caracterización por rayos X",
             "body": "Sondeo eléctrico a nivel de oblea, incluida la inspección por rayos X. Caracterización completa del detector en cuanto a uniformidad de imagen, sensibilidad y comportamiento frente al ruido."
           },
           "dieBonding": {

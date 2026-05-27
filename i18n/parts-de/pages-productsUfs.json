@@ -12,7 +12,7 @@
       "overview": {
         "eyebrow": "Überblick",
         "headline": "Ein Sensor.<br>Vielfältige Anwendungen.",
-        "body1": "UFS ist ein vielseitiger Zeilenscansensor mit Direktkonversion, konzipiert für dentales Panoramaröntgen und Fernröntgenseitenbilder, industrielle Inline-Inspektion sowie automatisierte Röntgenprüfsysteme. Er basiert auf CdTe-Detektormaterial, das per Bump Bonding verbunden auf einem vollständig kundenspezifischen ASIC sitzt — eine Konfiguration, die in allen unterstützten Anwendungen eine außergewöhnliche Bildgebungsleistung liefert.",
+        "body1": "UFS ist ein vielseitiger Zeilenscansensor mit Direktkonversion, konzipiert für dentales Panoramaröntgen und Fernröntgenseitenbilder, industrielle Inline-Inspektion sowie automatisierte Röntgenprüfsysteme. Der Detektor besteht aus CdTe-Detektormaterial, das per Bump Bonding mit einem vollständig kundenspezifischen ASIC verbunden ist — eine Konfiguration, die in allen unterstützten Anwendungen eine außergewöhnliche Bildgebungsleistung liefert.",
         "body2": "Das Ergebnis ist ein Sensor mit sehr hoher Schärfe und Auflösung, exzellenter Empfindlichkeit und Kontrastauflösung, Einzelphotonen-Empfindlichkeit und einem extrem weiten Dynamikumfang. UFS wird über Gigabit Ethernet angebunden und unterstützt sowohl Frame-Modus als auch TDI-Betrieb, wodurch er für ein breites Spektrum an Systemarchitekturen geeignet ist.",
         "body3": "Alle UFS-Produkte enthalten das Athlos SDK und die API; die Integration über DLL.",
         "sdkCallout": {
@@ -43,7 +43,7 @@
           },
           "gigE": {
             "title": "Gigabit Ethernet",
-            "body": "Standardisierte GigE-Schnittstelle. Plug-and-Play-Integration, einfache Integration in Systemarchitekturen. Frame-Modus und TDI-Modus werden unterstützt."
+            "body": "Standardisierte GigE-Schnittstelle. Plug-and-Play-Integration und einfache Systemanbindung. Frame-Modus und TDI-Modus werden unterstützt."
           },
           "sdk": {
             "title": "SDK und API verfügbar",
@@ -105,7 +105,7 @@
         "eyebrow": "Technische Übersicht",
         "headline": "Eine Plattform.<br>Zwei Schutzklassen.",
         "body1": "Der Ultra-Fast Scanning Sensor und Industrial IP67 TDI sind zwei Versionen derselben Direktkonversions-Detektorplattform – identische Bildleistung, Sensortechnologie, Scangeschwindigkeit, Auflösung und TDI-Fähigkeit. Der Standard-UFS ist die Nicht-IP67-Version, vorgesehen für kontrollierte und integrierte Bildgebungsumgebungen.",
-        "body2": "Für staubdichten, wasserdichten (IP67) Schutz in rauen, nassen oder Reinigungsumgebungen siehe <a href=\"ufs-ip67.html\" style=\"color:var(--cyan);\">Industrial IP67 TDI</a>.",
+        "body2": "Für staubdichten Schutz und Schutz gegen zeitweiliges Untertauchen gemäß IP67 in rauen, nassen oder Reinigungsumgebungen siehe <a href=\"ufs-ip67.html\" style=\"color:var(--cyan);\">Industrial IP67 TDI</a>.",
         "rows": {
           "pixelSize": {
             "label": "Pixelgröße",

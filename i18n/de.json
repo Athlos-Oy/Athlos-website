@@ -96,7 +96,7 @@
           },
           "fda": {
             "number": "510(k)",
-            "label": "FDA-Zulassung"
+            "label": "FDA 510(k)-Freigabe"
           },
           "iso": {
             "number": "ISO",
@@ -108,12 +108,12 @@
         "eyebrow": "Die Wissenschaft hinter der Leistung",
         "headline": "Direktkonversion.<br>Keine Zwischenschritte.<br>Keine Kompromisse.",
         "body1": "Herkömmliche Röntgensensoren benötigen einen Szintillator, der Röntgenstrahlung zunächst in sichtbares Licht umwandelt, das dann in eine Photodiode mit begrenztem Füllfaktor gelangt und in einen elektrischen Impuls umgesetzt wird. Diese indirekte Umwandlung von Röntgenstrahlung in Licht und Licht in elektrische Impulse führt zu deutlicher Unschärfe, Signalverlust (Füllfaktor weit unter 100 %) und nicht erfassten Röntgenphotonen (aufgrund der begrenzten DQE der Szintillatoren).",
-        "body2": "Athlos-Sensoren nutzen CdTe-CMOS- und Si-CMOS-Hybride mit Direktkonversion, die Röntgenphotonen direkt in elektrische Impulse mit punktgenauer Lokalisierung umwandeln. Kein gestreutes Licht bedeutet keinen Verlust an Lokalisationsgenauigkeit. Keine Lichtumwandlung. Keine Phosphorschicht. Keine unnötige Unschärfe. Kein Signal- und Kontrastverlust.",
+        "body2": "Athlos-Sensoren nutzen CdTe-CMOS- und Si-CMOS-Hybride mit Direktkonversion, die Röntgenphotonen direkt in elektrische Impulse mit hoher räumlicher Präzision umwandeln. Kein gestreutes Licht bedeutet keinen Verlust an Lokalisationsgenauigkeit. Keine Lichtumwandlung. Keine Phosphorschicht. Keine unnötige Unschärfe. Kein Signal- und Kontrastverlust.",
         "videoAria": "Visualisierung des Direktkonversionsprozesses bei Athlos-Sensoren",
         "features": {
           "cdte": "CdTe- und Si-Materialien mit Direktkonversion",
           "cmos": "Proprietäre, vollständig kundenspezifische CMOS-Auslese",
-          "photon": "Einzelphotonen-Empfindlichkeit",
+          "photon": "Einzelphotonen-Detektion",
           "libs": "Fortschrittliche Rekonstruktions- und Filterbibliotheken"
         },
         "learnLink": "Mehr über Athlos erfahren"
@@ -258,19 +258,19 @@
       "description": "DC-Air® ist ein vollständig kabelloser Direktkonversions-Intraoralröntgensensor. Si-CMOS-Technologie, Bluetooth 5.0, Zero Profile®-Halter. Gestochen scharfe Bilder ohne Kabel.",
       "og": {
         "title": "DC-Air® – Kabelloser Intraoralsensor | Athlos",
-        "description": "DC-Air® ist ein vollständig kabelloser Direktkonversions-Intraoralröntgensensor. Si-CMOS-Technologie, Bluetooth 5.0, Zero Profile®-Halter. FDA-510(k)-zugelassen."
+        "description": "DC-Air® ist ein vollständig kabelloser Direktkonversions-Intraoralröntgensensor. Si-CMOS-Technologie, Bluetooth 5.0, Zero Profile®-Halter. mit FDA 510(k)-Freigabe."
       },
       "twitter": {
         "title": "DC-Air® – Kabelloser Intraoralsensor | Athlos",
-        "description": "Vollständig kabelloser Direktkonversions-Intraoralröntgensensor. Si-CMOS-Technologie, Bluetooth 5.0, Zero Profile®-Halter. FDA-510(k)-zugelassen."
+        "description": "Vollständig kabelloser Direktkonversions-Intraoralröntgensensor. Si-CMOS-Technologie, Bluetooth 5.0, Zero Profile®-Halter. mit FDA 510(k)-Freigabe."
       }
     },
     "productsUfs": {
       "title": "Ultraschneller CdTe-Röntgenscansensor | Athlos UFS",
-      "description": "Der Ultra-Fast Scanning Sensor ist der ultraschnelle Direktkonversions-Zeilenscansensor von Athlos für dentale Panorama- und Fernröntgenaufnahmen sowie medizinische und industrielle Röntgenbildgebung. CdTe-CMOS, Einzelphotonen-Empfindlichkeit.",
+      "description": "Der Ultra-Fast Scanning Sensor ist der ultraschnelle Direktkonversions-Zeilenscansensor von Athlos für dentale Panorama- und Fernröntgenaufnahmen sowie medizinische und industrielle Röntgenbildgebung. CdTe-CMOS, Einzelphotonen-Detektion.",
       "og": {
         "title": "Ultraschneller CdTe-Röntgenscansensor | Athlos UFS",
-        "description": "Ultraschneller CdTe-CMOS-Direktkonversions-Zeilenscansensor für dentale Panorama- und Fernröntgenaufnahmen sowie medizinische und industrielle Röntgenbildgebung. Einzelphotonen-Empfindlichkeit."
+        "description": "Ultraschneller CdTe-CMOS-Direktkonversions-Zeilenscansensor für dentale Panorama- und Fernröntgenaufnahmen sowie medizinische und industrielle Röntgenbildgebung. Einzelphotonen-Detektion."
       },
       "twitter": {
         "title": "Ultraschneller CdTe-Röntgenscansensor | Athlos UFS",

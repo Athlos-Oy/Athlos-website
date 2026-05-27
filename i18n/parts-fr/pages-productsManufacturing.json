@@ -10,7 +10,7 @@
         "eyebrow": "Présentation",
         "headline": "Fabriqués en interne, du wafer au capteur.",
         "body1": "Athlos fabrique ses capteurs d'imagerie en interne et en partenariat avec la salle blanche VTT Micronova à Espoo — l'un des principaux environnements de nanofabrication d'Europe. Cette expertise de fabrication approfondie fait partie de ce qui distingue les capteurs Athlos&nbsp;: nous maîtrisons l'ensemble du processus, du matériau détecteur et du bump bonding jusqu'à l'assemblage final et la caractérisation.",
-        "body2": "La même infrastructure de fabrication qui soutient nos propres gammes de produits est disponible en tant que service. Athlos peut accompagner les projets de partenaires et de partenaires OEM nécessitant une fabrication de détecteurs de précision, du bumping CMOS ou des procédés d'assemblage spécialisés.",
+        "body2": "La même infrastructure de fabrication qui soutient nos propres gammes de produits est disponible en tant que service. Athlos peut accompagner les projets de projets de partenaires et de clients OEM nécessitant une fabrication de détecteurs de précision, du bumping CMOS ou des procédés d'assemblage spécialisés.",
         "imageAlt": "Wafer CMOS en silicium présentant un motif de grille de détecteur complexe"
       },
       "capabilities": {
@@ -39,7 +39,7 @@
           },
           "quality": {
             "title": "Qualité et fiabilité",
-            "body": "Management de la qualité ISO 13485:2016. Des contrôles de processus à chaque étape de fabrication, du contrôle des matériaux entrants jusqu'au test final du produit et à sa libération."
+            "body": "Système de management de la qualité certifié ISO 13485:2016. Des contrôles de processus à chaque étape de fabrication, du contrôle des matériaux entrants jusqu'au test final du produit et à sa libération."
           }
         }
       },

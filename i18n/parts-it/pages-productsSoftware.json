@@ -4,13 +4,13 @@
       "hero": {
         "category": "Software &amp; integrazione",
         "headline": "Prodotti software<br>per imaging a raggi X",
-        "tagline": "Decenni di competenza software — disponibili come componenti concedibili in licenza o integrati nei sistemi di imaging Athlos."
+        "tagline": "Decenni di competenza software — disponibili come componenti disponibili in licenza o integrati nei sistemi di imaging Athlos."
       },
       "overview": {
         "eyebrow": "Panoramica",
         "headline": "Il livello software alla base dell'imaging a conversione diretta.",
         "body1": "Il team Athlos sviluppa software per imaging a raggi X sin dagli albori della conversione diretta — algoritmi di ricostruzione, filtri di elaborazione delle immagini e livelli di integrazione TWAIN, impiegati in migliaia di installazioni cliniche e industriali in tutto il mondo.",
-        "body2": "Queste funzionalità software sono disponibili come parte di un sistema di imaging Athlos completo, oppure come componenti concedibili in licenza in modo indipendente per l'integrazione in piattaforme di terze parti. Athlos fornisce inoltre accesso all'SDK e supporto diretto all'integrazione per clienti OEM e system integrator."
+        "body2": "Queste funzionalità software sono disponibili come parte di un sistema di imaging Athlos completo, oppure come componenti disponibili in licenza in modo indipendente per l'integrazione in piattaforme di terze parti. Athlos fornisce inoltre accesso all'SDK e supporto diretto all'integrazione per clienti OEM e system integrator."
       },
       "components": {
         "eyebrow": "Cosa è disponibile",

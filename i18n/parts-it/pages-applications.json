@@ -37,7 +37,7 @@
         },
         "food": {
           "imageAlt": "Ispezione a raggi X in linea per il settore alimentare e bevande: rilevamento di corpi estranei e controllo qualità",
-          "title": "Alimentare e bevande",
+          "title": "Settore alimentare e bevande",
           "uses": {
             "foreign": "Rilevamento di corpi estranei",
             "seal": "Ispezione dell'integrità della sigillatura",
@@ -50,7 +50,7 @@
           "imageAlt": "Ispezione a raggi X per la sicurezza dei prodotti farmaceutici, livello di riempimento e integrità della sigillatura",
           "title": "Farmaceutico",
           "uses": {
-            "nondestructive": "Test non distruttivi sui prodotti",
+            "nondestructive": "Controlli non distruttivi",
             "foreign": "Rilevamento di corpi estranei",
             "seal": "Ispezione della sigillatura e del livello di riempimento",
             "safety": "Sicurezza e qualità del prodotto"

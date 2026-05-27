@@ -17,7 +17,7 @@
           "title": "Imagerie dentaire",
           "uses": {
             "intraoral": "Imagerie intraorale par rayons X",
-            "panoramic": "Panoramique et céphalométrique",
+            "panoramic": "Imagerie panoramique et céphalométrique",
             "wireless": "Flux de travail avec capteur sans fil",
             "lowDose": "Diagnostic à faible dose"
           },
@@ -110,7 +110,7 @@
       },
       "cta": {
         "headline": "Parlons de votre application.",
-        "body": "Vous ne savez pas quel produit répond à vos besoins d'imagerie&nbsp;? Athlos collabore avec les fabricants OEM et les intégrateurs de systèmes pour définir la solution technique adaptée. Commençons par votre application.",
+        "body": "Vous ne savez pas quel produit répond à vos besoins d'imagerie&nbsp;? Athlos collabore avec les fabricants OEM et les intégrateurs de systèmes pour définir la solution technique adaptée. Votre application est le meilleur point de départ.",
         "button": "Contacter Athlos"
       },
       "lastUpdated": {
