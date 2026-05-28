@@ -51,10 +51,10 @@
 
   <script src="/{{ scriptJs or 'js/script.js' }}"></script>
   <script src="/js/lang-switcher.js"></script>
+  <script src="/js/analytics.js"></script>
 {%- if extraScriptsBeforeCookieBanner %}
 {{ extraScriptsBeforeCookieBanner | indent(2, true) | safe }}
 {%- endif %}
-  <script src="/js/analytics.js"></script>
   <script>
     {#- t filter returns a SafeString; `.val` unwraps to the underlying string so dump JSON-encodes the text, not the wrapper -#}
     window.cookieBannerStrings = {
