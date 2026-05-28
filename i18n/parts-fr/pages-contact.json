@@ -21,7 +21,7 @@
         "nameLabel": "Nom",
         "namePlaceholder": "Votre nom",
         "emailLabel": "E-mail",
-        "emailPlaceholder": "your@email.com",
+        "emailPlaceholder": "votre@email.com",
         "companyLabel": "Entreprise",
         "companyPlaceholder": "Nom de l'entreprise",
         "topicLabel": "Sujet",
