@@ -1,146 +1,83 @@
-// Sitemap configuration. The src/sitemap.njk template walks
-// collections.all, looks up each rendered URL here, and emits <url>
-// entries in priority order.
+// Sitemap configuration. src/sitemap.njk walks `order` and emits one
+// <url> entry per path, looking metadata up in `pages`.
 //
-// Add a new URL by adding it to `pages` below. URLs not listed are
-// silently excluded (cefla.html, etc.).
+// Maintenance:
+//   - Add a new public page → add it to PAGES below. It is emitted
+//     once for the default locale (root) and once under /<locale>/
+//     for every other active locale automatically.
+//   - Add a new locale → add it to src/_data/locales.js. The sitemap
+//     picks it up automatically; nothing to edit here.
+//   - Single-locale extras (llms.txt etc.) → add to EXTRA below.
+//   - Excluded pages (cefla.html, etc.) → don't list them anywhere.
+//
+// Priority decays by one tier (-0.1) for localized variants of a page,
+// matching the hand-maintained byte-for-byte file shape from before
+// the locale-aware refactor.
 
-export default {
-  // Crawl priorities and change frequencies, indexed by output URL.
-  // lastmod = last meaningful content change for the URL.
-  // priority is stored as a string so the rendered XML always has one
-  // decimal place ("1.0" not "1") — matches the original hand-maintained
-  // sitemap byte-for-byte.
-  pages: {
-    "/":                                 { priority: "1.0", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/products/":                        { priority: "0.9", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/products/wios.html":               { priority: "0.9", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/products/ufs.html":                { priority: "0.9", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/products/ufs-ip67.html":           { priority: "0.9", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/products/manufacturing.html":      { priority: "0.8", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/products/software.html":           { priority: "0.8", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/applications.html":                { priority: "0.8", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/about.html":                       { priority: "0.7", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/contact.html":                     { priority: "0.7", changefreq: "yearly",  lastmod: "2026-04-15" },
-    "/privacy.html":                     { priority: "0.3", changefreq: "yearly",  lastmod: "2026-04-15" },
+import locales from "./locales.js";
 
-    "/de/":                              { priority: "0.9", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/de/products/":                     { priority: "0.8", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/de/products/wios.html":            { priority: "0.8", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/de/products/ufs.html":             { priority: "0.8", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/de/products/ufs-ip67.html":        { priority: "0.8", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/de/products/manufacturing.html":   { priority: "0.7", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/de/products/software.html":        { priority: "0.7", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/de/applications.html":             { priority: "0.7", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/de/about.html":                    { priority: "0.6", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/de/contact.html":                  { priority: "0.6", changefreq: "yearly",  lastmod: "2026-04-15" },
-    "/de/privacy.html":                  { priority: "0.3", changefreq: "yearly",  lastmod: "2026-04-15" },
+// One row per public page, in the order it should appear in the
+// English block. priority/changefreq/lastmod apply to the EN URL;
+// localized variants get priority - 0.1.
+const PAGES = [
+  { path: "/",                            priority: "1.0", changefreq: "monthly", lastmod: "2026-04-15" },
+  { path: "/products/",                   priority: "0.9", changefreq: "monthly", lastmod: "2026-04-15" },
+  { path: "/products/wios.html",          priority: "0.9", changefreq: "monthly", lastmod: "2026-04-15" },
+  { path: "/products/ufs.html",           priority: "0.9", changefreq: "monthly", lastmod: "2026-04-15" },
+  { path: "/products/ufs-ip67.html",      priority: "0.9", changefreq: "monthly", lastmod: "2026-04-15" },
+  { path: "/products/manufacturing.html", priority: "0.8", changefreq: "monthly", lastmod: "2026-04-15" },
+  { path: "/products/software.html",      priority: "0.8", changefreq: "monthly", lastmod: "2026-04-15" },
+  { path: "/applications.html",           priority: "0.8", changefreq: "monthly", lastmod: "2026-04-15" },
+  { path: "/about.html",                  priority: "0.7", changefreq: "monthly", lastmod: "2026-04-15" },
+  { path: "/contact.html",                priority: "0.7", changefreq: "yearly",  lastmod: "2026-04-15" },
+  { path: "/privacy.html",                priority: "0.3", changefreq: "yearly",  lastmod: "2026-04-15" },
+];
 
-    "/it/":                              { priority: "0.9", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/it/products/":                     { priority: "0.8", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/it/products/wios.html":            { priority: "0.8", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/it/products/ufs.html":             { priority: "0.8", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/it/products/ufs-ip67.html":        { priority: "0.8", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/it/products/manufacturing.html":   { priority: "0.7", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/it/products/software.html":        { priority: "0.7", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/it/applications.html":             { priority: "0.7", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/it/about.html":                    { priority: "0.6", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/it/contact.html":                  { priority: "0.6", changefreq: "yearly",  lastmod: "2026-04-15" },
-    "/it/privacy.html":                  { priority: "0.3", changefreq: "yearly",  lastmod: "2026-04-15" },
+// Single-locale URLs that don't have localized variants.
+const EXTRA = [
+  { path: "/llms.txt",      priority: "0.5", changefreq: "monthly", lastmod: "2026-04-17" },
+  { path: "/llms-full.txt", priority: "0.5", changefreq: "monthly", lastmod: "2026-04-17" },
+];
 
-    "/es/":                              { priority: "0.9", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/es/products/":                     { priority: "0.8", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/es/products/wios.html":            { priority: "0.8", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/es/products/ufs.html":             { priority: "0.8", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/es/products/ufs-ip67.html":        { priority: "0.8", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/es/products/manufacturing.html":   { priority: "0.7", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/es/products/software.html":        { priority: "0.7", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/es/applications.html":             { priority: "0.7", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/es/about.html":                    { priority: "0.6", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/es/contact.html":                  { priority: "0.6", changefreq: "yearly",  lastmod: "2026-04-15" },
-    "/es/privacy.html":                  { priority: "0.3", changefreq: "yearly",  lastmod: "2026-04-15" },
+// Decay priority by one tier for localized variants ("1.0" → "0.9",
+// "0.3" → "0.3" floor). Keeps one decimal place, like the original
+// hand-maintained file.
+function decayPriority(p) {
+  const v = Math.max(0.3, parseFloat(p) - 0.1);
+  return v.toFixed(1);
+}
 
-    "/fr/":                              { priority: "0.9", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/fr/products/":                     { priority: "0.8", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/fr/products/wios.html":            { priority: "0.8", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/fr/products/ufs.html":             { priority: "0.8", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/fr/products/ufs-ip67.html":        { priority: "0.8", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/fr/products/manufacturing.html":   { priority: "0.7", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/fr/products/software.html":        { priority: "0.7", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/fr/applications.html":             { priority: "0.7", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/fr/about.html":                    { priority: "0.6", changefreq: "monthly", lastmod: "2026-04-15" },
-    "/fr/contact.html":                  { priority: "0.6", changefreq: "yearly",  lastmod: "2026-04-15" },
-    "/fr/privacy.html":                  { priority: "0.3", changefreq: "yearly",  lastmod: "2026-04-15" },
+function localePath(locale, path) {
+  return path === "/" ? `/${locale}/` : `/${locale}${path}`;
+}
 
-    "/llms.txt":                         { priority: "0.5", changefreq: "monthly", lastmod: "2026-04-17" },
-    "/llms-full.txt":                    { priority: "0.5", changefreq: "monthly", lastmod: "2026-04-17" },
-  },
+const pages = {};
+const order = [];
 
-  // Display order in the sitemap. EN block first (preserved verbatim
-  // from the original hand-maintained file), then DE/IT/ES/FR locale
-  // blocks mirroring the EN order, then the llms.txt entries last.
-  order: [
-    "/",
-    "/products/",
-    "/products/wios.html",
-    "/products/ufs.html",
-    "/products/ufs-ip67.html",
-    "/products/manufacturing.html",
-    "/products/software.html",
-    "/applications.html",
-    "/about.html",
-    "/contact.html",
-    "/privacy.html",
+// EN block first (root-level URLs, full priority).
+for (const p of PAGES) {
+  pages[p.path] = { priority: p.priority, changefreq: p.changefreq, lastmod: p.lastmod };
+  order.push(p.path);
+}
 
-    "/de/",
-    "/de/products/",
-    "/de/products/wios.html",
-    "/de/products/ufs.html",
-    "/de/products/ufs-ip67.html",
-    "/de/products/manufacturing.html",
-    "/de/products/software.html",
-    "/de/applications.html",
-    "/de/about.html",
-    "/de/contact.html",
-    "/de/privacy.html",
+// Then one block per non-default active locale, in locales.active order.
+for (const loc of locales.active) {
+  if (loc === locales.default) continue;
+  for (const p of PAGES) {
+    const url = localePath(loc, p.path);
+    pages[url] = {
+      priority: decayPriority(p.priority),
+      changefreq: p.changefreq,
+      lastmod: p.lastmod,
+    };
+    order.push(url);
+  }
+}
 
-    "/it/",
-    "/it/products/",
-    "/it/products/wios.html",
-    "/it/products/ufs.html",
-    "/it/products/ufs-ip67.html",
-    "/it/products/manufacturing.html",
-    "/it/products/software.html",
-    "/it/applications.html",
-    "/it/about.html",
-    "/it/contact.html",
-    "/it/privacy.html",
+// Extras (single-locale, e.g. llms.txt) last.
+for (const p of EXTRA) {
+  pages[p.path] = { priority: p.priority, changefreq: p.changefreq, lastmod: p.lastmod };
+  order.push(p.path);
+}
 
-    "/es/",
-    "/es/products/",
-    "/es/products/wios.html",
-    "/es/products/ufs.html",
-    "/es/products/ufs-ip67.html",
-    "/es/products/manufacturing.html",
-    "/es/products/software.html",
-    "/es/applications.html",
-    "/es/about.html",
-    "/es/contact.html",
-    "/es/privacy.html",
-
-    "/fr/",
-    "/fr/products/",
-    "/fr/products/wios.html",
-    "/fr/products/ufs.html",
-    "/fr/products/ufs-ip67.html",
-    "/fr/products/manufacturing.html",
-    "/fr/products/software.html",
-    "/fr/applications.html",
-    "/fr/about.html",
-    "/fr/contact.html",
-    "/fr/privacy.html",
-
-    "/llms.txt",
-    "/llms-full.txt",
-  ],
-};
+export default { pages, order };

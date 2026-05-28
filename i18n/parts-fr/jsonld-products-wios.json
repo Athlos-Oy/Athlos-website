@@ -2,11 +2,6 @@
   "jsonld": {
     "productsWios": {
       "graph": {
-        "organization": {
-          "description": "Athlos Oy est une entreprise finlandaise de technologie d'imagerie par rayons X, spécialisée dans les capteurs à conversion directe CdTe-CMOS et Si-CMOS pour les applications dentaires, médicales et industrielles.",
-          "areaServed": "Monde entier",
-          "contactType": "sales"
-        },
         "product": {
           "description": "Capteur intraoral à rayons X à conversion directe entièrement sans fil. Technologie Si-CMOS, Bluetooth 5.0, porte-capteurs Zero Profile®. Autorisé par la FDA au titre du 510(k).",
           "category": "Capteur dentaire à rayons X",

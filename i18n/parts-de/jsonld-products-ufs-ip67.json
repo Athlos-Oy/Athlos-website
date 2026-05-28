@@ -2,11 +2,6 @@
   "jsonld": {
     "productsUfsIp67": {
       "graph": {
-        "organization": {
-          "description": "Athlos Oy ist ein finnisches Unternehmen für Röntgenbildgebungstechnologie, spezialisiert auf CdTe-CMOS- und Si-CMOS-Sensoren mit Direktkonversion für dentale, medizinische und industrielle Anwendungen.",
-          "areaServed": "Weltweit",
-          "contactType": "Vertrieb"
-        },
         "product": {
           "description": "Robuster, IP67-geschützter CdTe-CMOS-TDI-Zeilendetektor mit Direktkonversion für die schnelle industrielle Inline-Röntgeninspektion. Ohne aktive Kühlung.",
           "category": "Industrieller Röntgendetektor",

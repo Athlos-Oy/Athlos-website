@@ -1,16 +1,61 @@
-// Eleventy configuration — Phase 1 refactor.
+// Eleventy configuration.
 //
-// Input directory: src/  (new templating tree)
-// Output directory: _site/  (gitignored locally; on this feature branch,
-//   served by Vercel preview deploys via vercel.json buildCommand. The
-//   production branch (main) has its own vercel.json that does NOT build
-//   Eleventy — production continues to serve the repo-root *.html files
-//   until the rebuild is deliberately promoted.)
+// Input:  src/      — templating tree (single source of truth)
+// Output: _site/    — gitignored; served by Vercel via vercel.json
+//                     buildCommand "npx @11ty/eleventy".
 //
-// Passthrough copy mirrors the existing repo layout so that relative paths
-// in templates (e.g. href="css/style.css") resolve identically in the build
-// output. Pages that have NOT yet been ported to src/ are copied as-is
-// from the repo root, so the preview build serves a complete working site.
+// ─── Architecture (read this before editing) ──────────────────────────
+// Every public page is a single .njk file under src/ that paginates
+// over locales.active (see src/_data/locales.js). For each active
+// locale, Eleventy renders the page once and writes it to:
+//   /<page>.html               for the default locale (en)
+//   /<locale>/<page>.html      for every other active locale
+//
+// Shared chrome (head meta, nav, footer, lang switcher, JSON-LD
+// org block) lives in src/_includes/partials/. Each page just sets
+// pageKey in its front-matter; meta and breadcrumbs are derived from
+// the i18n dictionary keyed by that pageKey.
+//
+// i18n loader: i18n/<locale>.json is the base; i18n/parts-<locale>/
+// JSON files are deep-merged on top in alpha order so per-page strings
+// can be edited without merge contention on a single file. The `t`
+// filter throws on missing keys — that is the alarm that prevents
+// silent drift. scripts/i18n-check.mjs enforces leaf-count parity.
+//
+// ─── How to: add a new page ───────────────────────────────────────────
+// 1. Add the page template under src/ (or src/products/).
+// 2. Set pageKey in its front-matter.
+// 3. Add pages.<pageKey>.* keys to i18n/parts-en/pages-<key>.json AND
+//    to the matching file in every other parts-<locale>/ dir.
+// 4. Add the canonical URL to src/_data/sitemap.js PAGES array; the
+//    sitemap script will emit localized variants automatically.
+// 5. npm run check:i18n && npm run build.
+//
+// ─── How to: add a new locale ─────────────────────────────────────────
+// 1. Add "xx" to locales.active in src/_data/locales.js, plus a label.
+// 2. Create i18n/xx.json + i18n/parts-xx/ with every key the other
+//    locales have. scripts/i18n-check.mjs will list any missing keys.
+// 3. Build. The sitemap, hreflang tags, language switcher, footer,
+//    and nav pick the new locale up automatically. No template edits.
+//
+// ─── How to: update shared content centrally ──────────────────────────
+//   Site constants (legal name, address, business ID, GTM ID, email):
+//     src/_data/site.json — used by footer.njk, head-meta.njk, JSON-LD.
+//   Organization JSON-LD (description / areaServed / contactType):
+//     jsonld.organization.* in i18n/<locale>.json — single source of
+//     truth for all per-product JSON-LD partials.
+//   Nav, footer, head meta, JSON-LD partials:
+//     src/_includes/partials/ — one file each, not duplicated per
+//     locale.
+//
+// ─── Legacy root *.html files (to delete post-merge) ──────────────────
+// The repo root still contains pre-Eleventy artifacts: index.html,
+// about.html, applications.html, contact.html, privacy.html, cefla.html,
+// sitemap.xml, robots.txt, llms.txt, llms-full.txt, products/*.html.
+// These are NOT used by this build (cefla.html is the only one
+// passthrough-copied; the others are dead weight) — but the main
+// branch's vercel.json currently serves them. They should be deleted
+// in the same commit that promotes this Eleventy build to production.
 
 import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";

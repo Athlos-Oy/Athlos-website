@@ -2,11 +2,6 @@
   "jsonld": {
     "productsUfsIp67": {
       "graph": {
-        "organization": {
-          "description": "Athlos Oy è un'azienda finlandese di tecnologia per imaging a raggi X, specializzata in sensori a conversione diretta CdTe-CMOS e Si-CMOS per applicazioni dentali, medicali e industriali.",
-          "areaServed": "Mondo intero",
-          "contactType": "sales"
-        },
         "product": {
           "description": "Rivelatore lineare TDI CdTe-CMOS a conversione diretta, robusto e con grado di protezione IP67, per ispezione in linea industriale a raggi X ad alta velocità. Senza raffreddamento attivo.",
           "category": "Rivelatore industriale a raggi X",

@@ -2,11 +2,6 @@
   "jsonld": {
     "productsManufacturing": {
       "graph": {
-        "organization": {
-          "description": "Athlos Oy is a Finnish X-ray imaging technology company specialising in direct conversion CdTe-CMOS and Si-CMOS sensors for dental, medical, and industrial applications.",
-          "areaServed": "Worldwide",
-          "contactType": "sales"
-        },
         "breadcrumb": {
           "home": "Home",
           "products": "Products",

@@ -2,11 +2,6 @@
   "jsonld": {
     "productsUfsIp67": {
       "graph": {
-        "organization": {
-          "description": "Athlos Oy est une entreprise finlandaise de technologie d'imagerie par rayons X, spécialisée dans les capteurs à conversion directe CdTe-CMOS et Si-CMOS pour les applications dentaires, médicales et industrielles.",
-          "areaServed": "Monde entier",
-          "contactType": "sales"
-        },
         "product": {
           "description": "Détecteur linéaire TDI CdTe-CMOS à conversion directe robuste, certifié IP67, pour l'inspection industrielle en ligne par rayons X à haute vitesse. Aucun refroidissement actif requis.",
           "category": "Détecteur de rayons X industriel",
