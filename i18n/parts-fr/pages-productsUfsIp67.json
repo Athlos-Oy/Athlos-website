@@ -120,7 +120,7 @@
           },
           "detectorMaterial": {
             "label": "Matériau détecteur",
-            "value": "CdTe à conversion directe"
+            "value": "en CdTe à conversion directe"
           }
         }
       },

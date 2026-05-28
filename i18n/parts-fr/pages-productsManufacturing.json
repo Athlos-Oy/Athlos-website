@@ -19,7 +19,7 @@
         "cards": {
           "bumping": {
             "title": "Bumping de détecteurs",
-            "body": "Dépôt de bumps de soudure InSn sur wafers CMOS pour interconnexions avancées, avec capacité de pas inférieurs à 100 µm pour l'intégration de détecteurs CdTe et Si. Bumps à piliers Cu pour composants microélectroniques et optoélectroniques spécialisés, avec capacité de pas inférieurs à 30 µm."
+            "body": "Dépôt de bumps de soudure InSn sur wafers CMOS pour interconnexions avancées, avec des pas inférieurs à 100 µm pour l'intégration de détecteurs CdTe et Si. Bumps à piliers Cu pour composants microélectroniques et optoélectroniques spécialisés, avec des pas inférieurs à 30 µm."
           },
           "flipChip": {
             "title": "Assemblage flip chip",
