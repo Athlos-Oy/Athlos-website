@@ -48,14 +48,14 @@
 //     src/_includes/partials/ — one file each, not duplicated per
 //     locale.
 //
-// ─── Legacy root *.html files (to delete post-merge) ──────────────────
-// The repo root still contains pre-Eleventy artifacts: index.html,
-// about.html, applications.html, contact.html, privacy.html, cefla.html,
-// sitemap.xml, robots.txt, llms.txt, llms-full.txt, products/*.html.
-// These are NOT used by this build (cefla.html is the only one
-// passthrough-copied; the others are dead weight) — but the main
-// branch's vercel.json currently serves them. They should be deleted
-// in the same commit that promotes this Eleventy build to production.
+// ─── Repo-root files ──────────────────────────────────────────────────
+// The only HTML at the repo root is cefla.html (English-only gated
+// partner landing page; passthrough-copied below). Every other public
+// page is generated from src/. robots.txt / sitemap.xml / llms*.txt
+// are generated from their respective src/*.njk templates — there is
+// no hand-maintained root copy. Do not check in static HTML or text
+// files at the repo root; they will be ignored by Vercel (which only
+// serves _site/), and they create confusion about source of truth.
 
 import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
