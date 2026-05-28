@@ -108,7 +108,7 @@
         "eyebrow": "Die Wissenschaft hinter der Leistung",
         "headline": "Direktkonversion.<br>Keine Zwischenschritte.<br>Keine Kompromisse.",
         "body1": "Herkömmliche Röntgensensoren benötigen einen Szintillator, der Röntgenstrahlung zunächst in sichtbares Licht umwandelt, das dann in eine Photodiode mit begrenztem Füllfaktor gelangt und in einen elektrischen Impuls umgesetzt wird. Diese indirekte Umwandlung von Röntgenstrahlung in Licht und Licht in elektrische Impulse führt zu deutlicher Unschärfe, Signalverlust (Füllfaktor weit unter 100 %) und nicht erfassten Röntgenphotonen (aufgrund der begrenzten DQE der Szintillatoren).",
-        "body2": "Athlos-Sensoren nutzen CdTe-CMOS- und Si-CMOS-Hybride mit Direktkonversion, die Röntgenphotonen direkt in elektrische Impulse mit hoher räumlicher Präzision umwandeln. Kein gestreutes Licht bedeutet keinen Verlust an Lokalisationsgenauigkeit. Keine Lichtumwandlung. Keine Phosphorschicht. Keine unnötige Unschärfe. Kein Signal- und Kontrastverlust.",
+        "body2": "Athlos-Sensoren nutzen CdTe-CMOS- und Si-CMOS-Hybride mit Direktkonversion, die Röntgenphotonen direkt in elektrische Impulse mit hoher räumlicher Präzision umwandeln. Ohne Szintillator und ohne Phosphorschicht vermeidet die Direktkonversion die Lichtstreuung und trägt dazu bei, räumliche Genauigkeit, Kontrast und Detail zu bewahren.",
         "videoAria": "Visualisierung des Direktkonversionsprozesses bei Athlos-Sensoren",
         "features": {
           "cdte": "CdTe- und Si-Materialien mit Direktkonversion",

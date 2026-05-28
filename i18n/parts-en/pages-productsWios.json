@@ -47,7 +47,7 @@
           },
           "battery": {
             "title": "Battery &amp; Safety",
-            "body": "Up to 300 X-rays per charge. On-sensor safety memory stores one image. Dynamic self-calibration with every capture. Rechargeable Lithium-Ion battery. Magnetic docking for reliable recharging."
+            "body": "Up to 300 X-rays per charge. Integrated buffer memory stores one image temporarily. Dynamic self-calibration with every capture. Rechargeable Lithium-Ion battery. Magnetic docking for reliable recharging."
           },
           "ip67": {
             "title": "IP67 &amp; Durability",
@@ -61,7 +61,7 @@
       },
       "video": {
         "eyebrow": "See DC-Air&reg; in Action",
-        "headline": "The DC-Air&reg; introduction.",
+        "headline": "DC-Air&reg; overview",
         "body": "A short overview of the DC-Air&reg;, True Wireless&reg; intraoral sensor — how it works, what makes it different, and what it delivers for the modern dental practice.",
         "iframeTitle": "DC-Air&reg; Wireless Intraoral Sensor Introduction"
       },
@@ -134,9 +134,9 @@
         "button": "Download PDF"
       },
       "cta": {
-        "headline": "Become a DC-Air&reg; distribution partner.",
+        "headline": "Become a DC-Air&reg; distributor.",
         "body": "DC-Air&reg; is available through authorised dental imaging dealers and distributors. If you represent a dental product distribution company or dealer network, we would like to hear from you.",
-        "regulatory": "The DC-Air&reg; is FDA 510(k) cleared, and CE registration is under way. The product is not yet on sale in Europe.",
+        "regulatory": "The DC-Air&reg; is FDA 510(k) cleared; CE marking is in progress. The product is not yet on sale in Europe.",
         "oem": "For OEM licensing or technology integration enquiries, please reach out through the same channel.",
         "contactBtn": "Contact Athlos",
         "brochureBtn": "Download Brochure"

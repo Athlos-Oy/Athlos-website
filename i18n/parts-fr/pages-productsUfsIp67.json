@@ -11,7 +11,7 @@
       "overview": {
         "eyebrow": "Présentation",
         "headline": "Conçu pour l'industrie.<br>Aucun refroidissement requis.",
-        "body1": "L'Industrial IP67 TDI est une barrette de détection linéaire industrielle conçue pour les applications de balayage rapide dans les environnements difficiles et en fonctionnement continu. Protection IP67, aucun refroidissement actif et imagerie CdTe à conversion directe pensée pour les environnements industriels — adaptée aux flux d'inspection en ligne où la disponibilité, la sensibilité et la stabilité sur de longues durées sont déterminantes.",
+        "body1": "L'Industrial IP67 TDI est une barrette de détection linéaire industrielle conçue pour les applications de balayage rapide dans les environnements difficiles et en fonctionnement continu. Avec sa protection IP67, l'absence de refroidissement actif et l'imagerie CdTe à conversion directe, le système est conçu pour les environnements industriels et les flux d'inspection en ligne où la disponibilité, la sensibilité et la stabilité sur de longues durées sont déterminantes.",
         "body2": "Contrairement aux systèmes de détecteurs qui recourent à un refroidissement Peltier pour gérer la température du capteur, l'Industrial IP67 TDI fonctionne sans refroidissement actif sur toute sa plage de fonctionnement, grâce à sa très faible consommation électrique et à son algorithme breveté et embarqué de calibrage dynamique de l'offset.",
         "body3": "Le fonctionnement en mode TDI permet des cadences ligne allant jusqu'à 75&nbsp;000 lignes par seconde — pour des vitesses de balayage à la hauteur des exigences de l'inspection de production à haut débit.",
         "imageAlt": "Industrial IP67 TDI – vue produit"
@@ -34,7 +34,7 @@
           },
           "04": {
             "title": "Conversion directe CdTe",
-            "body": "Imagerie à conversion directe CdTe avec 28 étages TDI. Le système offre une sensibilité exceptionnellement élevée, une large plage d'énergie (10–360 kV) et une plage dynamique de 16 bits pour les applications d'inspection exigeantes. Nous proposons également une solution sur mesure pour les LINAC, pour une utilisation à des énergies allant jusqu'à 9 MeV."
+            "body": "Imagerie à conversion directe CdTe avec 28 étages TDI. Le système offre une sensibilité exceptionnellement élevée, une large plage d'énergie (10–360 kV) et une plage dynamique de 16 bits pour les applications d'inspection exigeantes. Nous proposons également une solution personnalisée pour LINAC, adaptée à des énergies allant jusqu'à 9 MeV."
           },
           "05": {
             "title": "Contraste et sensibilité élevés",
@@ -112,7 +112,7 @@
           },
           "activeCooling": {
             "label": "Refroidissement actif",
-            "value": "Aucun requis"
+            "value": "Non requis"
           },
           "enclosureRating": {
             "label": "Indice de protection du boîtier",
@@ -245,7 +245,7 @@
             "desc": "Longueur active personnalisée selon les besoins de l'application. Un module comporte trois hybrides de 25,6 mm ; la longueur active du module est de 76,8 mm. Toute longueur active est disponible de 76,8 mm jusqu'à 12 m."
           }
         },
-        "note": "Les trois configurations standard sont disponibles pour une délais de livraison très courts. Des longueurs actives personnalisées peuvent être fabriquées pour répondre à des besoins d'application spécifiques — contactez Athlos pour discuter de vos besoins de dimensionnement."
+        "note": "Les trois configurations standard sont disponibles avec des délais de livraison très courts. Des longueurs actives personnalisées peuvent être fabriquées pour répondre à des besoins d'application spécifiques — contactez Athlos pour discuter de vos besoins de dimensionnement."
       },
       "brochure": {
         "title": "Fiche technique du produit Industrial IP67 TDI",

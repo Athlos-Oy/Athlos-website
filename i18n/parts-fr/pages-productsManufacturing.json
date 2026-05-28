@@ -19,14 +19,14 @@
         "cards": {
           "bumping": {
             "title": "Bumping de détecteurs",
-            "body": "Dépôt de bumps de soudure InSn à pas fin sur wafers CMOS. Capacité pour des pas inférieurs à 100 µm pour l'intégration de détecteurs CdTe et Si. Dépôt de bumps à pilier de cuivre à pas fin sur wafers CMOS. Capacité pour des pas inférieurs à 30 µm pour l'intégration de détecteurs CdTe et Si."
+            "body": "Dépôt de bumps de soudure InSn sur wafers CMOS pour interconnexions avancées, avec capacité de pas inférieurs à 100 µm pour l'intégration de détecteurs CdTe et Si. Bumps à piliers Cu pour composants microélectroniques et optoélectroniques spécialisés, avec capacité de pas inférieurs à 30 µm."
           },
           "flipChip": {
             "title": "Assemblage flip chip",
             "body": "Interconnexion flip chip de précision entre le matériau détecteur et la lecture CMOS. Essentielle pour obtenir le contact électrique direct qui rend possible l'imagerie à conversion directe."
           },
           "wire": {
-            "title": "Câblage filaire",
+            "title": "Wire bonding",
             "body": "Connexions par wire bonding à haute densité, de la puce CMOS vers les circuits imprimés et les substrats de boîtier. Adapté aux configurations de capteurs à pas fin et de grand format."
           },
           "probing": {
@@ -39,7 +39,7 @@
           },
           "quality": {
             "title": "Qualité et fiabilité",
-            "body": "Système de management de la qualité certifié ISO 13485:2016. Des contrôles de processus à chaque étape de fabrication, du contrôle des matériaux entrants jusqu'au test final du produit et à sa libération."
+            "body": "Système de management de la qualité certifié ISO 13485:2016. Des contrôles de processus sont réalisés à chaque étape de fabrication, du contrôle des matériaux entrants jusqu'au test final du produit et à sa libération."
           }
         }
       },

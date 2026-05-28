@@ -100,7 +100,7 @@
           },
           "iso": {
             "number": "ISO",
-            "label": "13485:2016 Certificado"
+            "label": "Certificado ISO 13485:2016"
           }
         }
       },
@@ -108,7 +108,7 @@
         "eyebrow": "La ciencia detrás del rendimiento",
         "headline": "Conversión directa.<br>Sin pasos intermedios.<br>Sin concesiones.",
         "body1": "Los sensores de rayos X convencionales dependen de un centellador que convierte primero los rayos X en luz visible, la cual entra a continuación en un fotodiodo con un factor de llenado limitado y se transforma en un pulso eléctrico. Esta conversión no directa, de rayos X a luz y de luz a pulso eléctrico, introduce un desenfoque importante, pérdida de señal (factor de llenado muy inferior al 100 %) y fotones de rayos X no detectados (debido a la DQE limitada de los centelladores).",
-        "body2": "Los sensores de Athlos utilizan híbridos CdTe-CMOS y Si-CMOS de conversión directa que transforman los fotones de rayos X directamente en pulsos eléctricos manteniendo la precisión espacial. Sin luz dispersa no hay pérdida de fidelidad espacial. Sin conversión a luz. Sin capa de fósforo. Sin desenfoque innecesario. Sin pérdida de señal ni de contraste.",
+        "body2": "Los sensores de Athlos utilizan híbridos CdTe-CMOS y Si-CMOS de conversión directa que transforman los fotones de rayos X directamente en pulsos eléctricos manteniendo la precisión espacial. Sin centellador ni capa de fósforo, la conversión directa evita la difusión de luz y ayuda a preservar la fidelidad espacial, el contraste y el detalle.",
         "videoAria": "Visualización del proceso de conversión directa de los sensores Athlos",
         "features": {
           "cdte": "Materiales de conversión directa CdTe y Si",

@@ -14,7 +14,7 @@
         "headline": "Ein Sensor.<br>Vielfältige Anwendungen.",
         "body1": "UFS ist ein vielseitiger Zeilenscansensor mit Direktkonversion, konzipiert für dentales Panoramaröntgen und Fernröntgenseitenbilder, industrielle Inline-Inspektion sowie automatisierte Röntgenprüfsysteme. Der Detektor besteht aus CdTe-Detektormaterial, das per Bump Bonding mit einem vollständig kundenspezifischen ASIC verbunden ist — eine Konfiguration, die in allen unterstützten Anwendungen eine außergewöhnliche Bildgebungsleistung liefert.",
         "body2": "Das Ergebnis ist ein Sensor mit sehr hoher Schärfe und Auflösung, exzellenter Empfindlichkeit und Kontrastauflösung, Einzelphotonen-Detektion und einem extrem weiten Dynamikumfang. UFS wird über Gigabit Ethernet angebunden und unterstützt sowohl Frame-Modus als auch TDI-Betrieb, wodurch er für ein breites Spektrum an Systemarchitekturen geeignet ist.",
-        "body3": "Alle UFS-Produkte enthalten das Athlos SDK und die API; die Integration erfolgt über DLL.",
+        "body3": "Athlos unterstützt die OEM-Integration mit SDK- und API-Werkzeugen für industrielle Systemarchitekturen.",
         "sdkCallout": {
           "title": "Athlos SDK &amp; API",
           "body": "Alle UFS-Produkte enthalten das Athlos SDK und die API; die Integration erfolgt über DLL. Eine grafische Auswerteoberfläche und eine umfangreiche Filterbibliothek zur Nachbearbeitung sind enthalten."
@@ -27,7 +27,7 @@
         "cards": {
           "directConversion": {
             "title": "Direktkonversion CdTe-CMOS",
-            "body": "CdTe-Detektormaterial, per Bump Bonding verbunden auf einem proprietären, vollständig kundenspezifischen ASIC. Röntgenstrahlung wird direkt in Signal umgewandelt — ohne Szintillator, ohne energetische Zwischenschritte."
+            "body": "CdTe-Detektormaterial, per Bump-Bonding mit einem vollständig kundenspezifischen, proprietären Athlos-ASIC verbunden. Röntgenstrahlung wird direkt in Signal umgewandelt — ohne Szintillator und ohne energetischen Zwischenschritt."
           },
           "ultraFast": {
             "title": "Ultraschnelles Scannen",

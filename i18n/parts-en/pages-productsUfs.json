@@ -14,7 +14,7 @@
         "headline": "One sensor.<br>Multiple applications.",
         "body1": "UFS is a multipurpose direct conversion linear scanning sensor designed for dental panoramic and cephalometric imaging, inline industrial inspection, and automated X-ray inspection systems. It is built on CdTe detector material bump-bonded to a full-custom ASIC — a configuration that delivers exceptional imaging performance across all supported applications.",
         "body2": "The result is a sensor with very high sharpness and resolution, exquisite sensitivity and contrast resolution, single-photon-sensitive performance, and an extremely wide dynamic range. UFS connects via Gigabit Ethernet and supports both frame mode and TDI operation, making it suitable for a broad range of system architectures.",
-        "body3": "All UFS products include the Athlos SDK and API, and integration is supported through DLL.",
+        "body3": "Athlos supports OEM integration with SDK and API tools designed for industrial system architectures.",
         "sdkCallout": {
           "title": "Athlos SDK &amp; API",
           "body": "All UFS products include the Athlos SDK &amp; API. Integration is supported through DLL. A graphical evaluation interface and advanced post-processing filter library are included."
@@ -178,7 +178,7 @@
       },
       "cta": {
         "eyebrow": "Get in Touch",
-        "headline": "Talk with Athlos about Ultra-Fast Scanning Sensor integration.",
+        "headline": "Talk with Athlos about integrating the Ultra-Fast Scanning Sensor.",
         "body": "Whether you are integrating the Ultra-Fast Scanning Sensor into a new imaging system or evaluating it for an existing platform, the Athlos team can support you from specification through integration.",
         "buttonContact": "Contact Athlos",
         "buttonAll": "All Products"

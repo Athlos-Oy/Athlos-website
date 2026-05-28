@@ -106,7 +106,7 @@
         "eyebrow": "The Science Behind Performance",
         "headline": "Direct conversion.<br>No intermediate steps.<br>No compromise.",
         "body1": "Conventional X-ray sensors rely on a scintillator to first convert X-rays into visible light, which then enters a photodiode with limited fill factor and converts to electrical pulses. This indirect conversion — from X-rays to light, then from light to electrical signal — introduces significant blur, signal loss (fill factor well below 100%) and undetected X-rays due to the limited DQE of scintillators.",
-        "body2": "Athlos sensors use CdTe-CMOS and Si-CMOS direct conversion hybrids that convert X-ray photons directly into electric pulses that retain point accuracy. No scattered light means no loss of point accuracy. No light conversion. No phosphor layer. No unnecessary blurriness. No signal and contrast loss.",
+        "body2": "Athlos sensors use CdTe-CMOS and Si-CMOS direct conversion hybrids that convert X-ray photons directly into electric pulses that retain point accuracy. With no scintillator or phosphor layer, direct conversion avoids light spread and helps preserve spatial accuracy, contrast, and detail.",
         "videoAria": "Athlos sensor direct conversion process visualization",
         "features": {
           "cdte": "CdTe and Si direct conversion materials",

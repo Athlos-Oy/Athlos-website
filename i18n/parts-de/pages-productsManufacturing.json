@@ -19,7 +19,7 @@
         "cards": {
           "bumping": {
             "title": "Detektor-Bumping",
-            "body": "Abscheidung von InSn-Lötbumps mit feinem Raster auf CMOS-Wafern. Rastermaß unter 100 µm für die Integration von CdTe- und Si-Detektoren. Abscheidung von Cu-Pillar-Bumps mit feinem Raster auf CMOS-Wafern. Rastermaß unter 30 µm für die Integration von CdTe- und Si-Detektoren."
+            "body": "InSn-Lötbump-Abscheidung auf CMOS-Wafern für anspruchsvolle Interconnects, mit Rastermaßen unter 100 µm für die Integration von CdTe- und Si-Detektoren. Cu-Pillar-Bumps für spezialisierte mikroelektronische und optoelektronische Komponenten, mit Rastermaßen unter 30 µm für die Integration von CdTe- und Si-Detektoren."
           },
           "flipChip": {
             "title": "Flip-Chip-Bonden",
@@ -27,7 +27,7 @@
           },
           "wire": {
             "title": "Drahtbonden",
-            "body": "Dichte Drahtbondverbindungen vom CMOS-Die zur Leiterplatte und zu Gehäusesubstraten. Geeignet für feines Raster und großformatige Sensorkonfigurationen."
+            "body": "Drahtbondverbindungen mit hoher Dichte vom CMOS-Die zur Leiterplatte und zu Gehäusesubstraten. Geeignet für feines Raster und großformatige Sensorkonfigurationen."
           },
           "probing": {
             "title": "Röntgen-Probing &amp; Charakterisierung",

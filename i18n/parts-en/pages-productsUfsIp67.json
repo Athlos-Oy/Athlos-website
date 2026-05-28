@@ -34,7 +34,7 @@
           },
           "04": {
             "title": "Direct Conversion CdTe",
-            "body": "CdTe direct conversion imaging with 28 TDI stages. Exceptionally high sensitivity, wide energy range (10–360 kV), and 16-bit dynamic range for demanding inspection applications. We also offer a custom solution for LINACs for use at energies up to 9 MeV."
+            "body": "CdTe direct conversion imaging with 28 TDI stages. Exceptionally high sensitivity, wide energy range (10–360 kV), and 16-bit dynamic range for demanding inspection applications. We also offer a custom LINAC solution for energies up to 9 MeV."
           },
           "05": {
             "title": "High Contrast &amp; Sensitivity",
@@ -186,7 +186,7 @@
       },
       "models": {
         "eyebrow": "Product Family",
-        "headline": "Three variants.<br>Same rugged core.",
+        "headline": "Three variants.<br>Same robust architecture.",
         "cards": {
           "ufs150": {
             "name": "UFS-150 IP67NC",

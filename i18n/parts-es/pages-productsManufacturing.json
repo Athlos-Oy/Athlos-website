@@ -19,7 +19,7 @@
         "cards": {
           "bumping": {
             "title": "Bumping de detectores",
-            "body": "Deposición de bumps de soldadura InSn de paso fino sobre obleas CMOS. Capacidad de paso inferior a 100 µm para la integración de detectores CdTe y Si. Deposición de bumps de pilar de Cu de paso fino sobre obleas CMOS. Capacidad de paso inferior a 30 µm para la integración de detectores CdTe y Si."
+            "body": "Deposición de bumps de soldadura InSn sobre obleas CMOS para interconexiones avanzadas, con capacidad de paso inferior a 100 µm para la integración de detectores CdTe y Si. Bumps de pilar de Cu para componentes microelectrónicos y optoelectrónicos especializados, con capacidad de paso inferior a 30 µm."
           },
           "flipChip": {
             "title": "Unión flip chip",

@@ -12,9 +12,9 @@
       "overview": {
         "eyebrow": "Présentation",
         "headline": "Un seul capteur.<br>De multiples applications.",
-        "body1": "L'UFS est un capteur linéaire à balayage à conversion directe polyvalent, conçu pour l'imagerie dentaire panoramique et céphalométrique, l'inspection industrielle en ligne et les systèmes automatisés d'inspection par rayons X. Il repose sur un matériau détecteur CdTe assemblé par bump bonding à un ASIC entièrement personnalisé — une configuration qui offre des performances d'imagerie exceptionnelles dans toutes les applications prises en charge.",
+        "body1": "L'UFS est un capteur linéaire à balayage à conversion directe polyvalent, conçu pour l'imagerie dentaire panoramique et céphalométrique, l'inspection industrielle en ligne et les systèmes automatisés d'inspection par rayons X. Il repose sur un matériau détecteur en CdTe assemblé par bump bonding à un ASIC entièrement personnalisé — une configuration qui offre des performances d'imagerie exceptionnelles dans toutes les applications prises en charge.",
         "body2": "Le résultat est un capteur offrant une très grande netteté et résolution, une sensibilité et une résolution de contraste remarquables, une capacité de détection du photon unique et une plage dynamique extrêmement large. L'UFS se connecte via Gigabit Ethernet et prend en charge à la fois le mode trame et le fonctionnement TDI, ce qui le rend adapté à un large éventail d'architectures de systèmes.",
-        "body3": "Tous les produits UFS incluent le SDK et l'API Athlos ; l'intégration s'effectue via DLL.",
+        "body3": "Athlos prend en charge l'intégration OEM avec un SDK et des API conçus pour les architectures de systèmes industriels.",
         "sdkCallout": {
           "title": "SDK et API Athlos",
           "body": "Tous les produits UFS incluent le SDK et l'API Athlos ; l'intégration s'effectue via DLL. Une interface graphique d'évaluation et une bibliothèque avancée de filtres de post-traitement sont incluses."
@@ -27,7 +27,7 @@
         "cards": {
           "directConversion": {
             "title": "Conversion directe CdTe-CMOS",
-            "body": "Matériau détecteur CdTe assemblé par bump bonding à un ASIC propriétaire entièrement personnalisé. Les rayons X sont convertis directement en signal — sans scintillateur, sans conversion énergétique intermédiaire."
+            "body": "Matériau détecteur en CdTe assemblé par bump bonding à un ASIC propriétaire entièrement personnalisé. Les rayons X sont convertis directement en signal — sans scintillateur ni étape de conversion énergétique intermédiaire."
           },
           "ultraFast": {
             "title": "Balayage ultra-rapide",
@@ -54,7 +54,7 @@
       "models": {
         "eyebrow": "Famille de produits",
         "headline": "Trois modèles.<br>Différenciés par longueur active.",
-        "body1": "La famille UFS comprend trois modèles standard — UFS150, UFS225 et UFS460 — différenciés par la longueur active. UFS et Industrial IP67 TDI sont deux versions de la même plateforme de détecteur à conversion directe ; le UFS standard est la version non-IP67, destinée aux environnements contrôlés et intégrés.",
+        "body1": "La famille UFS comprend trois modèles standard — UFS150, UFS225 et UFS460 — différenciés par la longueur active. UFS et Industrial IP67 TDI sont deux versions de la même plateforme de détecteur à conversion directe ; l'UFS standard est la version non-IP67, destinée aux environnements contrôlés et intégrés.",
         "body2": "La conception modulaire de l'UFS permet des longueurs actives de 7,5 cm jusqu'à 12 m. Contactez-nous pour plus d'informations et des offres sur mesure.",
         "imageAlt": "Famille Ultra-Fast Scanning Sensor – vue studio de la carte électronique",
         "cards": {
@@ -104,7 +104,7 @@
       "specs": {
         "eyebrow": "Aperçu technique",
         "headline": "Une plateforme.<br>Deux niveaux de protection.",
-        "body1": "L'Ultra-Fast Scanning Sensor et l'Industrial IP67 TDI sont deux versions de la même plateforme de détecteur à conversion directe — performances d'acquisition, technologie de capteur, vitesse de balayage, résolution et capacités TDI identiques. Le UFS standard est la version non-IP67, destinée aux environnements d'imagerie contrôlés et intégrés.",
+        "body1": "L'Ultra-Fast Scanning Sensor et l'Industrial IP67 TDI sont deux versions de la même plateforme de détecteur à conversion directe — performances d'acquisition, technologie de capteur, vitesse de balayage, résolution et capacités TDI identiques. L'UFS standard est la version non-IP67, destinée aux environnements d'imagerie contrôlés et intégrés.",
         "body2": "Pour les environnements industriels, humides ou de lavage exigeant une protection contre la poussière et l'immersion temporaire (IP67), consultez l'<a href=\"ufs-ip67.html\" style=\"color:var(--cyan);\">Industrial IP67 TDI</a>.",
         "rows": {
           "pixelSize": {

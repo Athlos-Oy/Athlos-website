@@ -106,7 +106,7 @@
           },
           "iso": {
             "number": "ISO",
-            "label": "13485:2016 Certificato"
+            "label": "Certificato ISO 13485:2016"
           }
         }
       },
@@ -114,7 +114,7 @@
         "eyebrow": "La scienza dietro le prestazioni",
         "headline": "Conversione diretta.<br>Nessun passaggio intermedio.<br>Nessun compromesso.",
         "body1": "I sensori a raggi X convenzionali si affidano a uno scintillatore che converte prima i raggi X in luce visibile, la quale entra poi in un fotodiodo con fattore di riempimento limitato e viene convertita in un impulso elettrico. Questa conversione non diretta — da raggi X a luce e da luce a impulso elettrico — introduce sfocatura significativa, perdita di segnale (fattore di riempimento molto inferiore al 100%) e fotoni X non rilevati (a causa della DQE limitata degli scintillatori).",
-        "body2": "I sensori Athlos utilizzano ibridi CdTe-CMOS e Si-CMOS a conversione diretta che convertono i fotoni X direttamente in impulsi elettrici, mantenendo la fedeltà spaziale. Nessuna luce diffusa significa nessuna perdita di precisione spaziale. Nessuna conversione in luce. Nessuno strato di fosforo. Nessuna sfocatura inutile. Nessuna perdita di segnale e di contrasto.",
+        "body2": "I sensori Athlos utilizzano ibridi CdTe-CMOS e Si-CMOS a conversione diretta che convertono i fotoni X direttamente in impulsi elettrici, mantenendo la fedeltà spaziale. Senza scintillatore né strato di fosforo, la conversione diretta evita la diffusione della luce e aiuta a preservare la precisione spaziale, il contrasto e il dettaglio.",
         "videoAria": "Visualizzazione del processo di conversione diretta dei sensori Athlos",
         "features": {
           "cdte": "Materiali a conversione diretta CdTe e Si",

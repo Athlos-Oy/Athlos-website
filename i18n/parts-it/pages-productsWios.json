@@ -12,8 +12,8 @@
         "eyebrow": "Panoramica",
         "headline": "Libertà di movimento.<br>Nessun compromesso sull'immagine.",
         "body1": "DC-Air&reg; — il sensore intraorale wireless — combina la tecnologia Si-CMOS a conversione diretta di Athlos con la connettività wireless Bluetooth 5.0. Il risultato è un sensore intraorale True Wireless&reg; che offre la nitidezza della conversione diretta, il comfort delle placche al fosforo e la rapidità del flusso di lavoro di un sistema cablato — senza il cavo.",
-        "body2": "Il sistema DC-Air&reg; comprende il sensore, una stazione di docking magnetica e il set completo di supporti Zero Profile&reg; — progettato da odontoiatri insieme ad Athlos per un posizionamento intraorale accurato e per il comfort del paziente.",
-        "imageAlt": "Sistema DC-Air® — stazione di docking e set di supporti Zero Profile",
+        "body2": "Il sistema DC-Air&reg; comprende il sensore, una stazione di ricarica magnetica e il set completo di supporti Zero Profile&reg; — progettato da odontoiatri insieme ad Athlos per un posizionamento intraorale accurato e per il comfort del paziente.",
+        "imageAlt": "Sistema DC-Air® — stazione di ricarica magnetica e set di supporti Zero Profile",
         "specs": {
           "technologyLabel": "Tecnologia",
           "technologyValue": "Si-CMOS a conversione diretta",
@@ -35,7 +35,7 @@
         "cards": {
           "wireless": {
             "title": "Flusso di lavoro True Wireless®",
-            "body": "Nessun cavo intraorale. Collegamento wireless Bluetooth 5.0 dal sensore alla stazione di docking e al PC. Portata del sensore fino a 3 metri. Riduce il disagio del paziente e semplifica il flusso di lavoro clinico."
+            "body": "Nessun cavo intraorale. Collegamento wireless Bluetooth 5.0 dal sensore alla stazione di ricarica e al PC. Portata del sensore fino a 3 metri. Riduce il disagio del paziente e semplifica il flusso di lavoro clinico."
           },
           "directConversion": {
             "title": "Imaging a conversione diretta",
@@ -47,7 +47,7 @@
           },
           "battery": {
             "title": "Batteria e sicurezza",
-            "body": "Fino a 300 radiografie per carica. La memoria buffer integrata nel sensore conserva temporaneamente un'immagine. Autocalibrazione dinamica a ogni acquisizione. Batteria ricaricabile agli ioni di litio. Docking magnetico per una ricarica affidabile."
+            "body": "Fino a 300 radiografie per carica. La memoria buffer integrata nel sensore conserva temporaneamente un'immagine. Autocalibrazione dinamica a ogni acquisizione. Batteria ricaricabile agli ioni di litio. Ricarica magnetica per un'alimentazione affidabile."
           },
           "ip67": {
             "title": "IP67 e robustezza",

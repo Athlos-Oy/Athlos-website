@@ -19,7 +19,7 @@
         "cards": {
           "bumping": {
             "title": "Bumping dei rivelatori",
-            "body": "Deposizione di bump di saldatura InSn a passo fine su wafer CMOS. Capacità di passo inferiore a 100 µm per l'integrazione di rivelatori CdTe e Si. Deposizione di bump a pilastro in Cu a passo fine su wafer CMOS. Capacità di passo inferiore a 30 µm per l'integrazione di rivelatori CdTe e Si."
+            "body": "Deposizione di bump di saldatura InSn su wafer CMOS per interconnessioni avanzate, con capacità di passo inferiore a 100 µm per l'integrazione di rivelatori CdTe e Si. Bump a pilastro in Cu per componenti microelettronici e optoelettronici specializzati, con capacità di passo inferiore a 30 µm."
           },
           "flipChip": {
             "title": "Bonding flip chip",
