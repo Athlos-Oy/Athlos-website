@@ -71,7 +71,7 @@
       },
       "hero": {
         "eyebrow": "Direct Conversion X-Ray Imaging",
-        "headline": "Direct Conversion X-Ray Imaging.<br>Direct Advantage.",
+        "headline": "Direct Conversion<span class=\"visually-hidden\"> X-Ray Imaging</span>,<br>Direct Advantage.",
         "sub": "Athlos develops and manufactures advanced X-ray imaging sensors — delivering superior image quality, higher sensitivity, and faster acquisition for dental, medical, and industrial applications.",
         "ctaProducts": "Explore Products",
         "ctaAbout": "About Athlos"
