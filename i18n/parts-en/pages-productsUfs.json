@@ -27,7 +27,7 @@
         "cards": {
           "directConversion": {
             "title": "Direct Conversion CdTe-CMOS",
-            "body": "CdTe detector material bump-bonded to a proprietary full-custom ASIC. X-rays convert directly to signal — no scintillator, without intermediate energy conversion."
+            "body": "CdTe detector material bump-bonded to a proprietary full-custom ASIC. X-rays convert directly to signal — no scintillator and no intermediate energy-conversion step."
           },
           "ultraFast": {
             "title": "Ultra-Fast Scanning",

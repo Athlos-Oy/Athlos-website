@@ -54,7 +54,7 @@
       "models": {
         "eyebrow": "Famille de produits",
         "headline": "Trois modèles.<br>Différenciés par longueur active.",
-        "body1": "La famille UFS comprend trois modèles standard — UFS150, UFS225 et UFS460 — différenciées par la longueur active. UFS et Industrial IP67 TDI sont deux versions de la même plateforme de détecteur à conversion directe ; le UFS standard est la version non-IP67, destinée aux environnements contrôlés et intégrés.",
+        "body1": "La famille UFS comprend trois modèles standard — UFS150, UFS225 et UFS460 — différenciés par la longueur active. UFS et Industrial IP67 TDI sont deux versions de la même plateforme de détecteur à conversion directe ; le UFS standard est la version non-IP67, destinée aux environnements contrôlés et intégrés.",
         "body2": "La conception modulaire de l'UFS permet des longueurs actives de 7,5 cm jusqu'à 12 m. Contactez-nous pour plus d'informations et des offres sur mesure.",
         "imageAlt": "Famille Ultra-Fast Scanning Sensor – vue studio de la carte électronique",
         "cards": {
@@ -105,7 +105,7 @@
         "eyebrow": "Aperçu technique",
         "headline": "Une plateforme.<br>Deux niveaux de protection.",
         "body1": "L'Ultra-Fast Scanning Sensor et l'Industrial IP67 TDI sont deux versions de la même plateforme de détecteur à conversion directe — performances d'acquisition, technologie de capteur, vitesse de balayage, résolution et capacités TDI identiques. Le UFS standard est la version non-IP67, destinée aux environnements d'imagerie contrôlés et intégrés.",
-        "body2": "Pour une protection IP67 — protégé contre la poussière et l'immersion temporaire selon IP67 — en environnements industriels, humides ou de lavage, consultez l'<a href=\"ufs-ip67.html\" style=\"color:var(--cyan);\">Industrial IP67 TDI</a>.",
+        "body2": "Pour les environnements industriels, humides ou de lavage exigeant une protection contre la poussière et l'immersion temporaire (IP67), consultez l'<a href=\"ufs-ip67.html\" style=\"color:var(--cyan);\">Industrial IP67 TDI</a>.",
         "rows": {
           "pixelSize": {
             "label": "Taille de pixel",
