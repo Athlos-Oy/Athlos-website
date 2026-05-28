@@ -119,8 +119,21 @@
     });
   }
 
-  // Close on mobile link click
-  document.querySelectorAll('.nav-mobile-link').forEach(link => {
+  // Expand/collapse mobile submenus (e.g. Products). The toggle is a
+  // <button>, distinct from the actual nav links — tapping it just
+  // expands the section, it does NOT close the menu or navigate.
+  document.querySelectorAll('.nav-mobile-toggle').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+    });
+  });
+
+  // Close menu when a real navigation link is tapped. .nav-mobile-toggle
+  // is intentionally excluded — see above. Sublinks DO close the menu
+  // because they navigate to a real page.
+  document.querySelectorAll('.nav-mobile-link:not(.nav-mobile-toggle), .nav-mobile-sublink').forEach(link => {
     link.addEventListener('click', () => toggleMenu(false));
   });
 

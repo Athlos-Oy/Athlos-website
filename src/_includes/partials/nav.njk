@@ -45,7 +45,18 @@
     </div>
     <div class="nav-mobile-menu" id="mobileMenu">
       <a href="{{ "/index.html" | localeUrl(lang) }}" class="nav-mobile-link">{{ "nav.home" | t }}</a>
-      <a href="{{ "/products/index.html" | localeUrl(lang) }}" class="nav-mobile-link">{{ "nav.products" | t }}</a>
+      <button type="button" class="nav-mobile-link nav-mobile-toggle" aria-expanded="false" aria-controls="mobileProductsSubmenu">
+        <span>{{ "nav.products" | t }}</span>
+        <svg class="nav-mobile-toggle-chevron" viewBox="0 0 10 10" fill="none" width="11" height="11" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-mobile-submenu" id="mobileProductsSubmenu">
+        <a href="{{ "/products/index.html" | localeUrl(lang) }}" class="nav-mobile-sublink nav-mobile-sublink-all">{{ "nav.productDropdown.allProducts" | t }}</a>
+        <a href="{{ "/products/wios.html" | localeUrl(lang) }}" class="nav-mobile-sublink">{{ "nav.productDropdown.dcAir" | t | safe }}</a>
+        <a href="{{ "/products/ufs.html" | localeUrl(lang) }}" class="nav-mobile-sublink">{{ "nav.productDropdown.ufs" | t }}</a>
+        <a href="{{ "/products/ufs-ip67.html" | localeUrl(lang) }}" class="nav-mobile-sublink">{{ "nav.productDropdown.ufsIp67" | t }}</a>
+        <a href="{{ "/products/manufacturing.html" | localeUrl(lang) }}" class="nav-mobile-sublink">{{ "nav.productDropdown.manufacturing" | t }}</a>
+        <a href="{{ "/products/software.html" | localeUrl(lang) }}" class="nav-mobile-sublink">{{ "nav.productDropdown.software" | t }}</a>
+      </div>
       <a href="{{ "/applications.html" | localeUrl(lang) }}" class="nav-mobile-link">{{ "nav.applications" | t }}</a>
       <a href="{{ "/about.html" | localeUrl(lang) }}" class="nav-mobile-link">{{ "nav.about" | t }}</a>
       <a href="{{ "/contact.html" | localeUrl(lang) }}" class="nav-mobile-link nav-mobile-cta">{{ "nav.contact" | t }}</a>

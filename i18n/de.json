@@ -12,6 +12,7 @@
     "about": "Über uns",
     "contact": "Kontakt",
     "productDropdown": {
+      "allProducts": "Alle Produkte",
       "dcAir": "DC-Air&reg;",
       "ufs": "Ultra-Fast Scanning Sensor",
       "ufsIp67": "Industrial IP67 TDI",

@@ -477,6 +477,56 @@ body::before {
   font-weight: 500;
 }
 
+/* Mobile menu: expandable section header (e.g. Products). Looks like
+   a .nav-mobile-link but is a <button> that toggles the submenu below.
+   Distinguished from real nav links so the menu-close handler skips it. */
+.nav-mobile-toggle {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  font-size: var(--text-md);
+  text-align: left;
+  cursor: pointer;
+}
+.nav-mobile-toggle-chevron {
+  flex: 0 0 auto;
+  margin-left: 0.5rem;
+  color: currentColor;
+  transition: transform var(--trs);
+}
+.nav-mobile-toggle[aria-expanded="true"] .nav-mobile-toggle-chevron {
+  transform: rotate(180deg);
+}
+
+/* Submenu container. Hidden by default; revealed when the preceding
+   .nav-mobile-toggle is expanded. */
+.nav-mobile-submenu {
+  display: none;
+  flex-direction: column;
+  padding-left: 0.85rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.nav-mobile-toggle[aria-expanded="true"] + .nav-mobile-submenu {
+  display: flex;
+}
+.nav-mobile-sublink {
+  padding: 0.7rem 0;
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  transition: color var(--trs);
+}
+.nav-mobile-sublink:last-child { border-bottom: 0; }
+.nav-mobile-sublink:hover { color: var(--white); }
+.nav-mobile-sublink-all {
+  color: rgba(255,255,255,0.85);
+  font-weight: 500;
+}
+
 /* Scrolled state */
 .nav.scrolled {
   background: rgba(255,255,255,0.97);
@@ -1818,24 +1868,44 @@ body::before {
   .nav-inner .lang-switcher {
     display: none;
   }
+  /* Compact mobile language switcher: a single pill that opens a
+     small dropdown below it on tap. Same data-open mechanism as
+     desktop, just restyled for the dark mobile menu background. */
   .nav-mobile-menu .lang-switcher {
+    display: block;
     margin: 1rem 0 0;
     padding-top: 1rem;
     border-top: 1px solid rgba(255,255,255,0.1);
   }
+  .nav-mobile-menu .lang-switcher-trigger {
+    color: rgba(255,255,255,0.85);
+    border-color: rgba(255,255,255,0.18);
+    background: transparent;
+  }
+  .nav-mobile-menu .lang-switcher-trigger:hover,
+  .nav-mobile-menu .lang-switcher[data-open] .lang-switcher-trigger {
+    color: var(--white);
+    border-color: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.04);
+  }
   .nav-mobile-menu .lang-switcher-menu {
-    /* expand under the trigger on mobile */
+    /* Drop in-flow under the pill, hidden until opened. */
     position: static;
     box-shadow: none;
-    border: 1px solid rgba(255,255,255,0.08);
-    background: transparent;
-    margin-top: 0.5rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.02);
+    margin-top: 0.6rem;
+    min-width: 180px;
+    display: none;
     opacity: 1;
     pointer-events: all;
     transform: none;
   }
+  .nav-mobile-menu .lang-switcher[data-open] .lang-switcher-menu {
+    display: block;
+  }
   .nav-mobile-menu .lang-switcher-item {
-    color: rgba(255,255,255,0.65);
+    color: rgba(255,255,255,0.75);
   }
   .nav-mobile-menu .lang-switcher-item:hover {
     color: var(--white);
