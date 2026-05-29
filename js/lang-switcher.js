@@ -4,6 +4,17 @@
 (function () {
   'use strict';
 
+  // Remember an explicit language choice so the suggestion banner
+  // (js/lang-suggest.js) never overrides it later. Stored on the same
+  // localStorage key the banner reads.
+  document.querySelectorAll('.lang-switcher-item').forEach((item) => {
+    item.addEventListener('click', () => {
+      const loc = (item.getAttribute('hreflang') || '').toLowerCase();
+      if (!loc) return;
+      try { window.localStorage.setItem('athlosLangPref', loc); } catch (e) { /* private mode */ }
+    });
+  });
+
   document.querySelectorAll('[data-lang-switcher]').forEach((sw) => {
     const trigger = sw.querySelector('.lang-switcher-trigger');
     if (!trigger) return;

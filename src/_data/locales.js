@@ -11,6 +11,8 @@
 //             existing SEO authority and inbound links.
 // `labels`  — human-readable names used by the language switcher.
 //             Each label is written in the language it represents.
+// `ogLocale` — Open Graph locale codes (language_TERRITORY) used by
+//             head-meta.njk to emit og:locale + og:locale:alternate.
 
 export default {
   active: ["en", "de", "it", "es", "fr"],
@@ -22,5 +24,12 @@ export default {
     fr: "Français",
     it: "Italiano",
     es: "Español",
+  },
+  ogLocale: {
+    en: "en_US",
+    de: "de_DE",
+    fr: "fr_FR",
+    it: "it_IT",
+    es: "es_ES",
   },
 };
