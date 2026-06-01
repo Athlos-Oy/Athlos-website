@@ -53,7 +53,7 @@ activeProduct: ufs
 
       <!-- Right: product image -->
       <div style="position:relative; overflow:hidden; background:#1A2128; min-height:500px;">
-        <img src="/images/new_ultra-fast.webp" width="1792" height="2400" alt="{{ "pages.productsUfs.hero.imageAlt" | t }}"
+        <img src="/images/new_ultra-fast.webp" srcset="/images/new_ultra-fast-480.webp 480w, /images/new_ultra-fast-768.webp 768w, /images/new_ultra-fast.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" width="1792" height="2400" alt="{{ "pages.productsUfs.hero.imageAlt" | t }}"
           style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; opacity:0; transition:opacity 400ms ease;"
           loading="eager"
           onload="this.style.opacity='1'">
@@ -97,7 +97,7 @@ activeProduct: ufs
             </div>
           </div>
           <div class="overview-visual aspect-portrait reveal">
-            <img src="/images/ufs-white-bg.webp" width="1792" height="2400" alt="{{ "pages.productsUfs.overview.imageAlt" | t }}" loading="lazy">
+            <img src="/images/ufs-white-bg.webp" srcset="/images/ufs-white-bg-480.webp 480w, /images/ufs-white-bg-768.webp 768w, /images/ufs-white-bg.webp 1200w" sizes="(max-width: 768px) 90vw, 600px" width="1792" height="2400" alt="{{ "pages.productsUfs.overview.imageAlt" | t }}" loading="lazy">
           </div>
         </div>
       </div>

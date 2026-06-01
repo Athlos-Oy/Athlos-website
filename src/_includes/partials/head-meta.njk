@@ -31,6 +31,12 @@
   <meta property="og:description" content="{{ _ogDesc | safe }}">
   <meta property="og:type" content="{{ og.type or 'website' }}">
   <meta property="og:url" content="{{ _canonical }}">
+  <meta property="og:locale" content="{{ locales.ogLocale[lang] or locales.ogLocale[locales.default] }}">
+{%- for loc in locales.active %}
+{%- if loc != (lang or locales.default) %}
+  <meta property="og:locale:alternate" content="{{ locales.ogLocale[loc] }}">
+{%- endif -%}
+{%- endfor %}
   <meta property="og:image" content="{{ og.image }}">
 {%- if og.imageWidth %}
   <meta property="og:image:width" content="{{ og.imageWidth }}">
