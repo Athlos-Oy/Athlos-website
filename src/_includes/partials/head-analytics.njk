@@ -6,17 +6,26 @@
       'analytics_storage': 'denied',
       'ad_storage': 'denied',
       'ad_user_data': 'denied',
-      'ad_personalization': 'denied',
-      'wait_for_update': 500
+      'ad_personalization': 'denied'
     });
+
+    // Strict opt-in: GTM (and therefore GA4) is loaded ONLY after the
+    // visitor explicitly accepts analytics cookies. No container, tags or
+    // pings — cookieless or otherwise — are sent before consent is given.
+    // Called here on load for returning visitors who already accepted, and
+    // by cookie-banner.js the moment a new visitor clicks "Accept".
+    window.loadGtm = function () {
+      if (window.__gtmLoaded) return;
+      window.__gtmLoaded = true;
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','{{ site.gtmId }}');
+    };
+
     if (localStorage.getItem('cookies-accepted') === '1') {
       gtag('consent', 'update', {'analytics_storage': 'granted'});
+      window.loadGtm();
     }
   </script>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','{{ site.gtmId }}');</script>
-  <!-- End Google Tag Manager -->
