@@ -223,6 +223,12 @@
   overflow: hidden;
 }
 
+/* Two-column variant for grids with an even card count (e.g. 4 cards),
+   so they form a balanced 2x2 matrix instead of a 3 + 1 orphan row. */
+.highlights-grid--2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .highlight-card {
   background: var(--white);
   padding: 2rem 1.75rem;
