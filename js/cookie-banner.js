@@ -36,6 +36,11 @@
     if (typeof gtag === 'function') {
       gtag('consent', 'update', {'analytics_storage': 'granted'});
     }
+    // Strict opt-in: GTM is not loaded until this moment. Load it now so
+    // tracking starts in this session without requiring a page reload.
+    if (typeof window.loadGtm === 'function') {
+      window.loadGtm();
+    }
     hideBanner();
   });
 
