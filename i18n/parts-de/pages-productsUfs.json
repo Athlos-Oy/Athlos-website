@@ -176,6 +176,12 @@
           "imgAlt": "Vergrößerte Röntgenaufnahme"
         }
       },
+      "brochure": {
+        "title": "UFS Produktdatenblatt",
+        "subtitle": "Vollständige Spezifikationen, Modelle und Anwendungsdaten — PDF",
+        "button": "Datenblatt herunterladen",
+        "ip67Button": "UFS IP67 Datenblatt"
+      },
       "cta": {
         "eyebrow": "Kontakt aufnehmen",
         "headline": "Sprechen Sie mit Athlos über die Integration des Ultra-Fast Scanning Sensors.",

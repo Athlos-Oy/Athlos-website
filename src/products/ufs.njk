@@ -32,6 +32,26 @@ activeProduct: ufs
 ---
   <!-- PRODUCT SUBNAV -->
 {% include "partials/product-subnav.njk" %}
+{#- UFS datasheet downloads, one PDF per locale. The standard UFS
+    datasheet is the primary download; the UFS IP67 datasheet is offered
+    as a clearly-labelled secondary link. URL-safe filenames live in
+    downloads/ (passthrough-copied). -#}
+{%- set ufsDatasheets = {
+  "en": "/downloads/athlos-ufs-datasheet-en.pdf",
+  "de": "/downloads/athlos-ufs-datasheet-de.pdf",
+  "it": "/downloads/athlos-ufs-datasheet-it.pdf",
+  "es": "/downloads/athlos-ufs-datasheet-es.pdf",
+  "fr": "/downloads/athlos-ufs-datasheet-fr.pdf"
+} -%}
+{%- set ufsDatasheet = ufsDatasheets[lang] or ufsDatasheets["en"] -%}
+{%- set ufsIp67Datasheets = {
+  "en": "/downloads/athlos-ufs-ip67-datasheet-en.pdf",
+  "de": "/downloads/athlos-ufs-ip67-datasheet-de.pdf",
+  "it": "/downloads/athlos-ufs-ip67-datasheet-it.pdf",
+  "es": "/downloads/athlos-ufs-ip67-datasheet-es.pdf",
+  "fr": "/downloads/athlos-ufs-ip67-datasheet-fr.pdf"
+} -%}
+{%- set ufsIp67Datasheet = ufsIp67Datasheets[lang] or ufsIp67Datasheets["en"] -%}
 
   <main>
 
@@ -301,6 +321,28 @@ activeProduct: ufs
       <button class="gallery-lightbox-close" aria-label="{{ "pages.productsUfs.gallery.lightbox.closeAria" | t }}">✕</button>
       <img class="gallery-lightbox-img" src="" alt="{{ "pages.productsUfs.gallery.lightbox.imgAlt" | t }}" loading="lazy">
     </div>
+
+    <!-- DATASHEET DOWNLOAD -->
+    <section class="brochure-section">
+      <div class="container">
+        <div class="brochure-card reveal">
+          <div class="brochure-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <path d="M13 2H6a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V9l-5-7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M13 2v7h7M11 13v5M8.5 15.5l2.5 2.5 2.5-2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="brochure-info">
+            <strong>{{ "pages.productsUfs.brochure.title" | t }}</strong>
+            <span>{{ "pages.productsUfs.brochure.subtitle" | t }}</span>
+          </div>
+          <div style="display:flex; flex-direction:column; align-items:flex-start; gap:0.6rem; flex-shrink:0;">
+            <a href="{{ ufsDatasheet }}" class="btn btn-primary" target="_blank" style="white-space:nowrap;">{{ "pages.productsUfs.brochure.button" | t }}</a>
+            <a href="{{ ufsIp67Datasheet }}" class="btn btn-secondary" target="_blank" style="white-space:nowrap;">{{ "pages.productsUfs.brochure.ip67Button" | t }}</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- CTA -->
     <section class="product-cta" id="contact">

@@ -176,6 +176,12 @@
           "imgAlt": "Imagen radiográfica ampliada"
         }
       },
+      "brochure": {
+        "title": "Ficha técnica del producto UFS",
+        "subtitle": "Especificaciones completas, modelos y datos de aplicación — PDF",
+        "button": "Descargar ficha técnica",
+        "ip67Button": "Ficha técnica UFS IP67"
+      },
       "cta": {
         "eyebrow": "Póngase en contacto",
         "headline": "Hable con Athlos sobre la integración del Ultra-Fast Scanning Sensor.",

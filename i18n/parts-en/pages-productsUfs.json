@@ -176,6 +176,12 @@
           "imgAlt": "X-ray image enlarged"
         }
       },
+      "brochure": {
+        "title": "UFS Product Datasheet",
+        "subtitle": "Full specifications, models, and application data — PDF",
+        "button": "Download datasheet",
+        "ip67Button": "UFS IP67 datasheet"
+      },
       "cta": {
         "eyebrow": "Get in Touch",
         "headline": "Talk with Athlos about integrating the Ultra-Fast Scanning Sensor.",

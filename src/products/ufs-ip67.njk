@@ -32,6 +32,16 @@ activeProduct: ufs-ip67
 ---
   <!-- PRODUCT SUBNAV -->
 {% include "partials/product-subnav.njk" %}
+{#- UFS IP67 datasheet download, one PDF per locale. URL-safe filenames
+    live in downloads/ (passthrough-copied). -#}
+{%- set ip67Datasheets = {
+  "en": "/downloads/athlos-ufs-ip67-datasheet-en.pdf",
+  "de": "/downloads/athlos-ufs-ip67-datasheet-de.pdf",
+  "it": "/downloads/athlos-ufs-ip67-datasheet-it.pdf",
+  "es": "/downloads/athlos-ufs-ip67-datasheet-es.pdf",
+  "fr": "/downloads/athlos-ufs-ip67-datasheet-fr.pdf"
+} -%}
+{%- set ip67Datasheet = ip67Datasheets[lang] or ip67Datasheets["en"] -%}
 
   <main>
 
@@ -47,7 +57,7 @@ activeProduct: ufs-ip67
           {{ "pages.productsUfsIp67.hero.tagline" | t }}
         </p>
         <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-          <a href="/downloads/brochure-ufs-ip67.pdf" class="btn btn-primary" target="_blank">{{ "pages.productsUfsIp67.hero.ctaSpecs" | t }}</a>
+          <a href="{{ ip67Datasheet }}" class="btn btn-primary" target="_blank">{{ "pages.productsUfsIp67.hero.ctaSpecs" | t }}</a>
           <a href="#contact" class="btn btn-outline">{{ "pages.productsUfsIp67.hero.ctaDiscuss" | t }}</a>
         </div>
       </div>
@@ -441,7 +451,7 @@ activeProduct: ufs-ip67
             <strong>{{ "pages.productsUfsIp67.brochure.title" | t }}</strong>
             <span>{{ "pages.productsUfsIp67.brochure.desc" | t }}</span>
           </div>
-          <a href="/downloads/brochure-ufs-ip67.pdf" class="btn btn-secondary" target="_blank" style="white-space:nowrap; flex-shrink:0;">{{ "pages.productsUfsIp67.brochure.button" | t }}</a>
+          <a href="{{ ip67Datasheet }}" class="btn btn-secondary" target="_blank" style="white-space:nowrap; flex-shrink:0;">{{ "pages.productsUfsIp67.brochure.button" | t }}</a>
         </div>
       </div>
     </section>
@@ -456,7 +466,7 @@ activeProduct: ufs-ip67
           <div class="reveal" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
             <a href="../contact.html" class="btn btn-primary btn-large">{{ "pages.productsUfsIp67.cta.ctaContact" | t }}</a>
             <a href="index.html" class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);">{{ "pages.productsUfsIp67.cta.ctaAll" | t }}</a>
-            <a href="/downloads/brochure-ufs-ip67.pdf" class="btn btn-outline" target="_blank" style="border-color:rgba(255,255,255,0.3);">{{ "pages.productsUfsIp67.cta.ctaDatasheet" | t }}</a>
+            <a href="{{ ip67Datasheet }}" class="btn btn-outline" target="_blank" style="border-color:rgba(255,255,255,0.3);">{{ "pages.productsUfsIp67.cta.ctaDatasheet" | t }}</a>
           </div>
         </div>
       </div>

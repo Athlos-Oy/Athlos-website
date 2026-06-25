@@ -6,7 +6,7 @@
         "headline": "DC-Air<sup>&reg;</sup>: Kabelloser Intraoral-Röntgensensor",
         "tagline": "True Wireless® Intraoral-Röntgenbildgebung mit Direktkonversion.<br>Gestochen scharfe Bilder. Ohne Kabel. Ohne Kompromisse.",
         "ctaPrimary": "Distributor-Anfrage",
-        "ctaBrochure": "Broschüre herunterladen"
+        "ctaBrochure": "Datenblatt herunterladen"
       },
       "overview": {
         "eyebrow": "Überblick",
@@ -131,7 +131,7 @@
       "brochure": {
         "title": "DC-Air&reg; Produktbroschüre",
         "subtitle": "Vollständige Spezifikationen, Funktionen und Systemüberblick — PDF",
-        "button": "PDF herunterladen"
+        "button": "Datenblatt herunterladen"
       },
       "cta": {
         "headline": "Werden Sie DC-Air&reg;-Vertriebspartner.",
@@ -139,7 +139,7 @@
         "regulatory": "DC-Air&reg; verfügt über eine FDA 510(k)-Freigabe; die CE-Kennzeichnung ist in Vorbereitung. Das Produkt ist in Europa noch nicht erhältlich.",
         "oem": "Für Anfragen zu OEM-Lizenzierung oder Technologieintegration nutzen Sie bitte denselben Kontaktweg.",
         "contactBtn": "Athlos kontaktieren",
-        "brochureBtn": "Broschüre herunterladen"
+        "brochureBtn": "Datenblatt herunterladen"
       },
       "lightbox": {
         "ariaLabel": "Bildbetrachter",
