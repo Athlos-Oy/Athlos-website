@@ -1927,3 +1927,244 @@ body::before {
   white-space: nowrap;
   border: 0;
 }
+
+/* =====================================================
+   DIRECT vs INDIRECT CONVERSION COMPARISON
+   Flagship animated SVG component (see
+   partials/conversion-comparison.njk). Pure SVG + CSS.
+   One master duration (--dcc-cycle) choreographs every
+   element via keyframe %; running is gated on .dcc-inview
+   (js/script.js) and replaced by a static frame under
+   prefers-reduced-motion.
+   ===================================================== */
+.dcc-panel {
+  --dcc-cycle: 11s;
+  position: relative;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  padding: clamp(1.5rem, 3vw, 2.75rem) clamp(1rem, 2.5vw, 2rem) clamp(1.25rem, 2.5vw, 2rem);
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(36,60,76,0.45), transparent 62%),
+    linear-gradient(165deg, #0d1820 0%, #0a1016 55%, #0c141b 100%);
+  border: 1px solid rgba(125, 191, 232, 0.14);
+  box-shadow: 0 30px 70px -32px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.03);
+  isolation: isolate;
+}
+
+.dcc-header {
+  text-align: center;
+  max-width: 46rem;
+  margin: 0 auto clamp(1rem, 2vw, 1.75rem);
+}
+.dcc-eyebrow {
+  font-size: clamp(1.1rem, 1.6vw, 1.45rem);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #eaf3fa;
+  margin: 0 0 0.5rem;
+}
+.dcc-sub {
+  font-size: var(--text-sm);
+  font-weight: 300;
+  line-height: 1.6;
+  color: #9fb3c1;
+  margin: 0;
+}
+
+.dcc-stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: start;
+}
+.dcc-divider {
+  position: absolute;
+  top: 2.25rem;
+  bottom: 2.25rem;
+  left: 50%;
+  width: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, transparent, rgba(125,191,232,0.22), transparent);
+}
+
+.dcc-side {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 clamp(0.25rem, 1vw, 1rem);
+  min-width: 0;
+}
+.dcc-side-title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 0.25rem;
+}
+.dcc-side--indirect .dcc-side-title { color: #9fb6c6; }
+.dcc-side--direct   .dcc-side-title { color: var(--cyan-light); }
+
+.dcc-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.dcc-footnote {
+  text-align: center;
+  font-size: var(--text-sm);
+  color: #8fa6b5;
+  font-weight: 400;
+  margin: clamp(1rem, 2vw, 1.75rem) 0 0;
+}
+.dcc-sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---- SVG primitives ---- */
+.dcc-face-top   { fill: url(#dcc-slab-top);  stroke: rgba(125,191,232,0.32); stroke-width: 1; }
+.dcc-face-top--conv { fill: url(#dcc-slab-conv); }
+.dcc-face-front { fill: rgba(13,20,25,0.9);  stroke: rgba(125,191,232,0.16); stroke-width: 1; }
+.dcc-face-front--conv { fill: rgba(16,26,32,0.92); }
+.dcc-face-side  { fill: rgba(9,14,18,0.92);  stroke: rgba(125,191,232,0.10); stroke-width: 1; }
+
+.dcc-a-photon { stroke: #eaf6ff; stroke-width: 2.4; stroke-linecap: round; filter: url(#dcc-glow); transform-box: fill-box; }
+.dcc-a-bloom  { transform-box: fill-box; transform-origin: center; }
+.dcc-a-scint  { fill: #bfe6ff; opacity: 0; mix-blend-mode: screen; }
+.dcc-a-soft   { opacity: 0; mix-blend-mode: screen; }
+.dcc-a-softdot{ fill: #bcdcf2; opacity: 0; }
+.dcc-a-trace  { stroke: #7dbfe8; stroke-width: 1.4; stroke-linecap: round; opacity: 0.05; }
+.dcc-col      { stroke: rgba(67,161,216,0.30); stroke-width: 1.6; stroke-linecap: round; }
+.dcc-a-charge { fill: #cfeaff; opacity: 0; }
+.dcc-a-spark  { fill: #eaf6ff; opacity: 0; transform-box: fill-box; transform-origin: center; }
+
+.dcc-a-out    { opacity: 0; }
+.dcc-out-frame{ fill: rgba(6,11,15,0.85); stroke: rgba(125,191,232,0.2); stroke-width: 1; }
+.dcc-bars rect       { fill: #c0ccd4; }
+.dcc-bars--sharp rect{ fill: #e3f2fc; }
+.dcc-a-scan   { opacity: 0; transform-box: fill-box; }
+.dcc-scan-edge{ stroke: #cfeeff; stroke-width: 1; opacity: 0.7; }
+
+.dcc-label    { opacity: 0; transition: opacity 0.7s ease; }
+.dcc-leader   { stroke: rgba(125,191,232,0.4); stroke-width: 1; }
+.dcc-tx       { fill: #b6c7d4; font-size: 13px; font-weight: 400; letter-spacing: 0.01em; }
+.dcc-tx--accent { fill: var(--cyan-light); }
+.dcc-tx--out  { fill: #cfe0ec; font-size: 14px; font-weight: 600; }
+.dcc-side--direct .dcc-tx--out { fill: var(--cyan-light); }
+
+/* ---- run gating ---- */
+.dcc-panel [class*="dcc-a-"] { animation-play-state: paused; }
+.dcc-panel.dcc-inview [class*="dcc-a-"] { animation-play-state: running; }
+.dcc-panel.dcc-inview .dcc-label { opacity: 1; }
+
+.dcc-a-photon { animation: dcc-fall   var(--dcc-cycle) linear      infinite; animation-delay: var(--pd, 0s); }
+.dcc-a-bloom  { animation: dcc-bloom  var(--dcc-cycle) ease-out    infinite; animation-delay: var(--pd, 0s); }
+.dcc-a-scint  { animation: dcc-scint  var(--dcc-cycle) ease-in-out infinite; }
+.dcc-a-soft   { animation: dcc-soft   var(--dcc-cycle) ease-in-out infinite; }
+.dcc-a-softdot{ animation: dcc-softdot var(--dcc-cycle) linear     infinite; animation-delay: var(--pd, 0s); }
+.dcc-a-trace  { animation: dcc-trace  var(--dcc-cycle) ease-in-out infinite; animation-delay: var(--pd, 0s); }
+.dcc-a-spark  { animation: dcc-spark  var(--dcc-cycle) ease-out    infinite; animation-delay: var(--pd, 0s); }
+.dcc-a-charge { animation: dcc-charge var(--dcc-cycle) linear      infinite; animation-delay: var(--pd, 0s); }
+.dcc-a-out    { animation: dcc-out    var(--dcc-cycle) ease-in-out infinite; }
+.dcc-a-scan   { animation: dcc-scan   var(--dcc-cycle) linear      infinite; }
+
+@keyframes dcc-fall {
+  0%   { transform: translateY(-136px); opacity: 0; }
+  4%   { opacity: 1; }
+  11%  { transform: translateY(0); opacity: 1; }
+  13%  { opacity: 0; }
+  100% { transform: translateY(0); opacity: 0; }
+}
+@keyframes dcc-bloom {
+  0%, 12% { transform: translateY(0) scale(0.25); opacity: 0; }
+  17%     { opacity: 0.55; }
+  28%     { transform: translateY(14px) scale(2.4); opacity: 0.3; }
+  34%     { transform: translateY(20px) scale(2.9); opacity: 0; }
+  100%    { transform: translateY(0) scale(0.25); opacity: 0; }
+}
+@keyframes dcc-scint {
+  0%, 11% { opacity: 0; }
+  15%     { opacity: 0.75; }
+  26%     { opacity: 0.3; }
+  40%     { opacity: 0; }
+  100%    { opacity: 0; }
+}
+@keyframes dcc-soft {
+  0%, 26% { opacity: 0; }
+  36%     { opacity: 0.5; }
+  50%     { opacity: 0.12; }
+  58%     { opacity: 0; }
+  100%    { opacity: 0; }
+}
+@keyframes dcc-softdot {
+  0%, 32% { transform: translateY(0); opacity: 0; }
+  37%     { opacity: 0.7; }
+  58%     { transform: translateY(136px); opacity: 0.55; }
+  63%     { opacity: 0; }
+  100%    { transform: translateY(136px); opacity: 0; }
+}
+@keyframes dcc-trace {
+  0%, 38% { opacity: 0.05; }
+  46%     { opacity: 0.75; }
+  56%     { opacity: 0.2; }
+  100%    { opacity: 0.05; }
+}
+@keyframes dcc-spark {
+  0%, 11% { opacity: 0; transform: scale(0.4); }
+  14%     { opacity: 1; transform: scale(1); }
+  22%     { opacity: 0.7; }
+  32%     { opacity: 0; transform: scale(1.15); }
+  100%    { opacity: 0; transform: scale(0.4); }
+}
+@keyframes dcc-charge {
+  0%, 12% { transform: translateY(0); opacity: 0; }
+  15%     { opacity: 1; }
+  44%     { transform: translateY(197px); opacity: 1; }
+  48%     { opacity: 0; }
+  100%    { transform: translateY(197px); opacity: 0; }
+}
+@keyframes dcc-out {
+  0%, 48% { opacity: 0; }
+  58%     { opacity: 1; }
+  92%     { opacity: 1; }
+  100%    { opacity: 0; }
+}
+@keyframes dcc-scan {
+  0%, 50% { transform: translateY(0); opacity: 0; }
+  54%     { opacity: 0.85; }
+  72%     { transform: translateY(92px); opacity: 0.85; }
+  77%     { opacity: 0; }
+  100%    { transform: translateY(92px); opacity: 0; }
+}
+
+/* ---- responsive: stack vertically on mobile ---- */
+@media (max-width: 768px) {
+  .dcc-stage { grid-template-columns: 1fr; gap: 1.75rem; }
+  .dcc-divider { display: none; }
+  .dcc-svg { max-width: 400px; margin: 0 auto; }
+}
+
+/* ---- reduced motion: complete static comparison frame ---- */
+@media (prefers-reduced-motion: reduce) {
+  .dcc-panel [class*="dcc-a-"] { animation: none !important; }
+  .dcc-label   { opacity: 1 !important; }
+  .dcc-a-out   { opacity: 1 !important; }
+  .dcc-a-scan  { opacity: 0 !important; }
+  .dcc-a-scint { opacity: 0.22 !important; }
+  .dcc-a-soft  { opacity: 0.28 !important; }
+  .dcc-a-bloom { opacity: 0.32 !important; transform: scale(2.2); transform-box: fill-box; transform-origin: center; }
+  .dcc-a-photon{ opacity: 0.6 !important; }
+  .dcc-a-spark { opacity: 0.9 !important; }
+  .dcc-a-charge{ opacity: 0 !important; }
+  .dcc-a-trace { opacity: 0.4 !important; }
+  .dcc-a-softdot { opacity: 0 !important; }
+}

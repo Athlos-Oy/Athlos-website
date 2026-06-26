@@ -117,7 +117,30 @@
           "photon": "Détection du photon unique",
           "libs": "Bibliothèques avancées de reconstruction et de filtrage"
         },
-        "learnLink": "En savoir plus sur Athlos"
+        "learnLink": "En savoir plus sur Athlos",
+        "comparison": {
+          "heading": "Conversion directe vs. indirecte",
+          "subheading": "La conversion directe supprime l'étape de diffusion lumineuse du scintillateur, créant un trajet du rayon X au signal plus court et mieux localisé.",
+          "bottomLine": "Moins d'étapes de conversion. Une localisation du signal plus directe.",
+          "indirectTitle": "Conversion indirecte",
+          "directTitle": "Conversion directe",
+          "ariaDescription": "Comparaison côte à côte de deux types de détecteurs de rayons X. En conversion indirecte, les rayons X frappent d'abord un scintillateur qui les convertit en lumière visible ; cette lumière se diffuse latéralement avant d'atteindre la photodiode et la lecture, ce qui adoucit la localisation du signal. En conversion directe, les rayons X sont convertis directement en charge électrique dans une couche de CdTe ou de silicium, produisant d'étroites colonnes de charge verticales qui se déplacent directement vers la lecture CMOS — un trajet de signal plus court et mieux localisé et une sortie plus nette.",
+          "indirect": {
+            "scintillator": "Scintillateur",
+            "toLight": "Rayons X convertis en lumière",
+            "spread": "Diffusion de la lumière",
+            "photodiode": "Photodiode",
+            "readout": "Lecture",
+            "output": "Localisation du signal plus douce"
+          },
+          "direct": {
+            "conversion": "Couche de conversion CdTe / Si",
+            "charge": "Génération directe de charges",
+            "cmos": "Lecture CMOS",
+            "path": "Trajet du signal plus court",
+            "output": "Localisation du signal plus nette"
+          }
+        }
       },
       "products": {
         "eyebrow": "Gamme de produits",

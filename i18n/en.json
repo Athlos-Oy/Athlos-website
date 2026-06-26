@@ -115,7 +115,30 @@
           "photon": "Single-photon sensitivity capability",
           "libs": "Advanced reconstruction and filter libraries"
         },
-        "learnLink": "Learn about Athlos"
+        "learnLink": "Learn about Athlos",
+        "comparison": {
+          "heading": "Direct vs. Indirect Conversion",
+          "subheading": "Direct conversion removes the scintillator light-spread stage, creating a shorter and more localized X-ray-to-signal pathway.",
+          "bottomLine": "Fewer conversion stages. More direct signal localization.",
+          "indirectTitle": "Indirect Conversion",
+          "directTitle": "Direct Conversion",
+          "ariaDescription": "Side-by-side comparison of two X-ray detector types. In indirect conversion, X-rays first strike a scintillator that converts them into visible light; that light spreads laterally before reaching the photodiode and readout, softening signal localization. In direct conversion, X-rays are converted straight into electric charge inside a CdTe or silicon layer, producing tight vertical charge columns that travel directly to the CMOS readout — a shorter, more localized signal path and a sharper output.",
+          "indirect": {
+            "scintillator": "Scintillator",
+            "toLight": "X-rays converted to light",
+            "spread": "Light spread",
+            "photodiode": "Photodiode",
+            "readout": "Readout",
+            "output": "Softer signal localization"
+          },
+          "direct": {
+            "conversion": "CdTe / Si conversion layer",
+            "charge": "Direct charge generation",
+            "cmos": "CMOS readout",
+            "path": "Shorter signal path",
+            "output": "Sharper signal localization"
+          }
+        }
       },
       "products": {
         "eyebrow": "Product Portfolio",

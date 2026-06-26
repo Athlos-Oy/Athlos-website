@@ -113,22 +113,8 @@ footerNavAriaLabel: Footer navigation
               {{ "pages.home.tech.body2" | t }}
             </p>
           </div>
-          <div class="tech-visual reveal">
-            <div class="tech-image-wrap">
-              <video
-                autoplay
-                loop
-                muted
-                playsinline
-                preload="metadata"
-                disablepictureinpicture
-                poster="/images/product-macro-1.webp"
-                aria-label="{{ "pages.home.tech.videoAria" | t }}"
-                data-playback-rate="1.5"
-              >
-                <source src="/images/direct-conversion.mp4" type="video/mp4">
-              </video>
-            </div>
+          <div class="tech-visual">
+            {% include "partials/conversion-comparison.njk" %}
           </div>
           <div class="tech-bottom">
             <div class="tech-features reveal">

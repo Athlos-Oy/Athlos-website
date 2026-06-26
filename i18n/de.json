@@ -117,7 +117,30 @@
           "photon": "Einzelphotonen-Detektion",
           "libs": "Fortschrittliche Rekonstruktions- und Filterbibliotheken"
         },
-        "learnLink": "Mehr über Athlos erfahren"
+        "learnLink": "Mehr über Athlos erfahren",
+        "comparison": {
+          "heading": "Direkte vs. indirekte Konversion",
+          "subheading": "Die direkte Konversion eliminiert die Lichtstreuungsstufe des Szintillators und schafft einen kürzeren, stärker lokalisierten Weg vom Röntgenstrahl zum Signal.",
+          "bottomLine": "Weniger Konversionsstufen. Direktere Signallokalisierung.",
+          "indirectTitle": "Indirekte Konversion",
+          "directTitle": "Direkte Konversion",
+          "ariaDescription": "Vergleich zweier Röntgendetektortypen nebeneinander. Bei der indirekten Konversion treffen Röntgenstrahlen zunächst auf einen Szintillator, der sie in sichtbares Licht umwandelt; dieses Licht streut seitlich, bevor es die Photodiode und die Ausleseschicht erreicht, was die Signallokalisierung aufweicht. Bei der direkten Konversion werden Röntgenstrahlen in einer CdTe- oder Siliziumschicht unmittelbar in elektrische Ladung umgewandelt und erzeugen enge vertikale Ladungssäulen, die direkt zur CMOS-Ausleseschicht wandern – für einen kürzeren, stärker lokalisierten Signalweg und eine schärfere Ausgabe.",
+          "indirect": {
+            "scintillator": "Szintillator",
+            "toLight": "Röntgen in Licht umgewandelt",
+            "spread": "Lichtstreuung",
+            "photodiode": "Photodiode",
+            "readout": "Auslese",
+            "output": "Weichere Signallokalisierung"
+          },
+          "direct": {
+            "conversion": "CdTe-/Si-Konversionsschicht",
+            "charge": "Direkte Ladungserzeugung",
+            "cmos": "CMOS-Auslese",
+            "path": "Kürzerer Signalweg",
+            "output": "Schärfere Signallokalisierung"
+          }
+        }
       },
       "products": {
         "eyebrow": "Produktportfolio",

@@ -117,7 +117,30 @@
           "photon": "Detección de fotón único",
           "libs": "Bibliotecas avanzadas de reconstrucción y filtros"
         },
-        "learnLink": "Más información sobre Athlos"
+        "learnLink": "Más información sobre Athlos",
+        "comparison": {
+          "heading": "Conversión directa vs. indirecta",
+          "subheading": "La conversión directa elimina la etapa de dispersión de luz del centelleador, creando una trayectoria del rayo X a la señal más corta y localizada.",
+          "bottomLine": "Menos etapas de conversión. Localización de señal más directa.",
+          "indirectTitle": "Conversión indirecta",
+          "directTitle": "Conversión directa",
+          "ariaDescription": "Comparación en paralelo de dos tipos de detectores de rayos X. En la conversión indirecta, los rayos X inciden primero en un centelleador que los convierte en luz visible; esa luz se dispersa lateralmente antes de llegar al fotodiodo y la lectura, lo que suaviza la localización de la señal. En la conversión directa, los rayos X se convierten directamente en carga eléctrica en una capa de CdTe o silicio, generando estrechas columnas de carga verticales que se desplazan directamente a la lectura CMOS — una trayectoria de señal más corta y localizada y una salida más nítida.",
+          "indirect": {
+            "scintillator": "Centelleador",
+            "toLight": "Rayos X convertidos en luz",
+            "spread": "Dispersión de luz",
+            "photodiode": "Fotodiodo",
+            "readout": "Lectura",
+            "output": "Localización de señal más suave"
+          },
+          "direct": {
+            "conversion": "Capa de conversión CdTe / Si",
+            "charge": "Generación directa de carga",
+            "cmos": "Lectura CMOS",
+            "path": "Trayectoria de señal más corta",
+            "output": "Localización de señal más nítida"
+          }
+        }
       },
       "products": {
         "eyebrow": "Catálogo de productos",

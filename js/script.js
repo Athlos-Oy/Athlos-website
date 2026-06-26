@@ -295,4 +295,22 @@
 
   // Lang-switcher logic now lives in js/lang-switcher.js (loaded on every page).
 
+  /* =====================================================
+     CONVERSION COMPARISON — run the looping SVG animation
+     only while the panel is on screen (saves CPU/GPU when
+     scrolled away). The pure-CSS keyframes stay paused
+     until `.dcc-inview` is present.
+  ===================================================== */
+  const dccPanel = document.querySelector('.dcc-panel');
+  if (dccPanel && 'IntersectionObserver' in window) {
+    const dccIO = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        dccPanel.classList.toggle('dcc-inview', entry.isIntersecting);
+      });
+    }, { threshold: 0.2 });
+    dccIO.observe(dccPanel);
+  } else if (dccPanel) {
+    dccPanel.classList.add('dcc-inview');
+  }
+
 })();

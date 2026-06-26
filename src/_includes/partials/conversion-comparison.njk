@@ -1,0 +1,210 @@
+{#- =====================================================
+    DirectConversionComparison
+    Flagship animated SVG comparison of indirect vs direct
+    X-ray conversion. Pure SVG + CSS (no JS animation loop,
+    no dependencies). Looping choreography is driven by a
+    single master duration (--dcc-cycle) with phases encoded
+    as keyframe percentages, gated on `.dcc-inview` (added by
+    the small observer in js/script.js) and disabled under
+    prefers-reduced-motion (a complete static frame remains).
+    Copy: i18n pages.home.tech.comparison.*
+   ===================================================== -#}
+{%- set c = "pages.home.tech.comparison" -%}
+<div class="dcc-panel reveal">
+  <div class="dcc-header">
+    <p class="dcc-eyebrow reveal" data-delay="60">{{ (c ~ ".heading") | t }}</p>
+    <p class="dcc-sub reveal" data-delay="120">{{ (c ~ ".subheading") | t }}</p>
+  </div>
+
+  {#- Shared gradient/filter/pattern definitions (referenced by both scenes).
+      Kept OUTSIDE the grid so it is not treated as a grid item. -#}
+  <svg class="dcc-defs" width="0" height="0" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="dcc-slab-top" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#4a5b66" stop-opacity="0.62"/>
+          <stop offset="1" stop-color="#222d33" stop-opacity="0.5"/>
+        </linearGradient>
+        <linearGradient id="dcc-slab-conv" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#3d5566" stop-opacity="0.66"/>
+          <stop offset="1" stop-color="#1d2a31" stop-opacity="0.58"/>
+        </linearGradient>
+        <radialGradient id="dcc-bloom-grad" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#dff1ff" stop-opacity="0.95"/>
+          <stop offset="0.45" stop-color="#7dbfe8" stop-opacity="0.55"/>
+          <stop offset="1" stop-color="#43a1d8" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="dcc-scan-grad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#7dbfe8" stop-opacity="0"/>
+          <stop offset="0.5" stop-color="#aee0ff" stop-opacity="0.55"/>
+          <stop offset="1" stop-color="#7dbfe8" stop-opacity="0"/>
+        </linearGradient>
+        <radialGradient id="dcc-vignette" cx="0.5" cy="0.42" r="0.75">
+          <stop offset="0" stop-color="#0b141a" stop-opacity="0"/>
+          <stop offset="1" stop-color="#070d12" stop-opacity="0.85"/>
+        </radialGradient>
+        <pattern id="dcc-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+          <path d="M28 0H0V28" fill="none" stroke="#7dbfe8" stroke-opacity="0.06" stroke-width="1"/>
+        </pattern>
+        <filter id="dcc-blur-bloom" x="-60%" y="-60%" width="220%" height="220%">
+          <feGaussianBlur stdDeviation="7"/>
+        </filter>
+        <filter id="dcc-soft-out" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur stdDeviation="2.4"/>
+        </filter>
+        <filter id="dcc-glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="2.1"/>
+        </filter>
+      </defs>
+    </svg>
+
+  <div class="dcc-stage">
+    {#- ======================= INDIRECT ======================= -#}
+    <div class="dcc-side dcc-side--indirect">
+      <p class="dcc-side-title">{{ (c ~ ".indirectTitle") | t }}</p>
+      <svg class="dcc-svg" viewBox="0 0 470 540" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+        <rect x="0" y="0" width="470" height="540" fill="url(#dcc-grid)"/>
+        <rect x="0" y="0" width="470" height="540" fill="url(#dcc-vignette)"/>
+
+        {#- photon entry beams -#}
+        <g class="dcc-photons">
+          <line class="dcc-a-photon" style="--pd:0s"     x1="120" y1="136" x2="120" y2="150"/>
+          <line class="dcc-a-photon" style="--pd:.45s" x1="150" y1="136" x2="150" y2="150"/>
+          <line class="dcc-a-photon" style="--pd:.9s"  x1="180" y1="136" x2="180" y2="150"/>
+        </g>
+
+        {#- detector stack: SCINTILLATOR (y150) / PHOTODIODE (y232) / READOUT (y314) -#}
+        {#- scintillator -#}
+        <path class="dcc-face-side" d="M250 150 L284 130 L284 142 L250 162 Z"/>
+        <path class="dcc-face-top dcc-face-top--scint" d="M40 150 L250 150 L284 130 L74 130 Z"/>
+        <path class="dcc-face-front" d="M40 150 L250 150 L250 162 L40 162 Z"/>
+        <path class="dcc-a-scint" d="M40 150 L250 150 L284 130 L74 130 Z"/>
+        {#- light spread blooms (the teaching moment) -#}
+        <g class="dcc-blooms">
+          <circle class="dcc-a-bloom" style="--pd:0s"    cx="150" cy="166" r="20" fill="url(#dcc-bloom-grad)" filter="url(#dcc-blur-bloom)"/>
+          <circle class="dcc-a-bloom" style="--pd:.5s" cx="178" cy="166" r="18" fill="url(#dcc-bloom-grad)" filter="url(#dcc-blur-bloom)"/>
+        </g>
+        {#- photodiode -#}
+        <path class="dcc-face-side" d="M250 232 L284 212 L284 224 L250 244 Z"/>
+        <ellipse class="dcc-a-soft" cx="158" cy="222" rx="74" ry="12" fill="url(#dcc-bloom-grad)" filter="url(#dcc-glow)"/>
+        <path class="dcc-face-top" d="M40 232 L250 232 L284 212 L74 212 Z"/>
+        <path class="dcc-face-front" d="M40 232 L250 232 L250 244 L40 244 Z"/>
+        {#- soft (slightly spread) signal travelling to readout/output -#}
+        <g class="dcc-softdots">
+          <circle class="dcc-a-softdot" style="--pd:0s"    cx="146" cy="248" r="5" filter="url(#dcc-glow)"/>
+          <circle class="dcc-a-softdot" style="--pd:.4s" cx="182" cy="248" r="5" filter="url(#dcc-glow)"/>
+        </g>
+        {#- readout -#}
+        <path class="dcc-face-side" d="M250 314 L284 294 L284 306 L250 326 Z"/>
+        <path class="dcc-face-top" d="M40 314 L250 314 L284 294 L74 294 Z"/>
+        <g class="dcc-traces">
+          <line class="dcc-a-trace" style="--pd:0s"    x1="70" y1="306" x2="240" y2="306"/>
+          <line class="dcc-a-trace" style="--pd:.2s" x1="84" y1="300" x2="254" y2="300"/>
+        </g>
+        <path class="dcc-face-front" d="M40 314 L250 314 L250 326 L40 326 Z"/>
+
+        {#- output image plane (softer) -#}
+        <g class="dcc-a-out">
+          <rect class="dcc-out-frame" x="58" y="384" width="174" height="102" rx="10"/>
+          <g class="dcc-bars" filter="url(#dcc-soft-out)">
+            <rect x="72"  y="402" width="6" height="64"/><rect x="84"  y="402" width="6" height="64"/><rect x="96" y="402" width="6" height="64"/>
+            <rect x="116" y="402" width="4" height="64"/><rect x="125" y="402" width="4" height="64"/><rect x="134" y="402" width="4" height="64"/>
+            <rect x="150" y="402" width="3" height="64"/><rect x="157" y="402" width="3" height="64"/><rect x="164" y="402" width="3" height="64"/>
+            <rect x="182" y="402" width="2" height="64"/><rect x="188" y="402" width="2" height="64"/><rect x="194" y="402" width="2" height="64"/><rect x="200" y="402" width="2" height="64"/>
+          </g>
+          <g class="dcc-a-scan">
+            <rect x="58" y="384" width="174" height="14" fill="url(#dcc-scan-grad)"/>
+            <line x1="58" y1="391" x2="232" y2="391" class="dcc-scan-edge"/>
+          </g>
+        </g>
+
+        {#- labels with thin leader lines -#}
+        <g class="dcc-label">
+          <line class="dcc-leader" x1="252" y1="140" x2="300" y2="140"/>
+          <text class="dcc-tx" x="304" y="144">{{ (c ~ ".indirect.scintillator") | t }}</text>
+          <line class="dcc-leader" x1="226" y1="186" x2="300" y2="192"/>
+          <text class="dcc-tx dcc-tx--accent" x="304" y="196">{{ (c ~ ".indirect.spread") | t }}</text>
+          <line class="dcc-leader" x1="252" y1="226" x2="300" y2="228"/>
+          <text class="dcc-tx" x="304" y="232">{{ (c ~ ".indirect.photodiode") | t }}</text>
+          <line class="dcc-leader" x1="252" y1="308" x2="300" y2="310"/>
+          <text class="dcc-tx" x="304" y="314">{{ (c ~ ".indirect.readout") | t }}</text>
+          <text class="dcc-tx dcc-tx--out" x="145" y="508" text-anchor="middle">{{ (c ~ ".indirect.output") | t }}</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="dcc-divider" aria-hidden="true"></div>
+
+    {#- ======================= DIRECT ======================= -#}
+    <div class="dcc-side dcc-side--direct">
+      <p class="dcc-side-title">{{ (c ~ ".directTitle") | t }}</p>
+      <svg class="dcc-svg" viewBox="0 0 470 540" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+        <rect x="0" y="0" width="470" height="540" fill="url(#dcc-grid)"/>
+        <rect x="0" y="0" width="470" height="540" fill="url(#dcc-vignette)"/>
+
+        {#- photon entry beams -#}
+        <g class="dcc-photons">
+          <line class="dcc-a-photon" style="--pd:0s"     x1="120" y1="161" x2="120" y2="175"/>
+          <line class="dcc-a-photon" style="--pd:.45s" x1="150" y1="161" x2="150" y2="175"/>
+          <line class="dcc-a-photon" style="--pd:.9s"  x1="180" y1="161" x2="180" y2="175"/>
+        </g>
+
+        {#- CdTe / Si conversion layer (y175, thicker) -#}
+        <path class="dcc-face-side" d="M250 175 L284 155 L284 173 L250 193 Z"/>
+        <path class="dcc-face-top dcc-face-top--conv" d="M40 175 L250 175 L284 155 L74 155 Z"/>
+        <path class="dcc-face-front dcc-face-front--conv" d="M40 175 L250 175 L250 193 L40 193 Z"/>
+        {#- localized charge sparks at impact points -#}
+        <g class="dcc-sparks">
+          <circle class="dcc-a-spark" style="--pd:0s"     cx="120" cy="175" r="4.5" filter="url(#dcc-glow)"/>
+          <circle class="dcc-a-spark" style="--pd:.45s" cx="150" cy="175" r="4.5" filter="url(#dcc-glow)"/>
+          <circle class="dcc-a-spark" style="--pd:.9s"  cx="180" cy="175" r="4.5" filter="url(#dcc-glow)"/>
+        </g>
+        {#- tight vertical charge columns down to CMOS + output -#}
+        <g class="dcc-columns">
+          <line class="dcc-col" x1="120" y1="193" x2="120" y2="384"/>
+          <line class="dcc-col" x1="150" y1="193" x2="150" y2="384"/>
+          <line class="dcc-col" x1="180" y1="193" x2="180" y2="384"/>
+          <circle class="dcc-a-charge" style="--pd:0s"     cx="120" cy="187" r="4" filter="url(#dcc-glow)"/>
+          <circle class="dcc-a-charge" style="--pd:.45s" cx="150" cy="187" r="4" filter="url(#dcc-glow)"/>
+          <circle class="dcc-a-charge" style="--pd:.9s"  cx="180" cy="187" r="4" filter="url(#dcc-glow)"/>
+        </g>
+        {#- CMOS readout (y300) -#}
+        <path class="dcc-face-side" d="M250 300 L284 280 L284 292 L250 312 Z"/>
+        <path class="dcc-face-top" d="M40 300 L250 300 L284 280 L74 280 Z"/>
+        <g class="dcc-traces">
+          <line class="dcc-a-trace" style="--pd:0s"    x1="70" y1="292" x2="240" y2="292"/>
+          <line class="dcc-a-trace" style="--pd:.2s" x1="84" y1="286" x2="254" y2="286"/>
+        </g>
+        <path class="dcc-face-front" d="M40 300 L250 300 L250 312 L40 312 Z"/>
+
+        {#- output image plane (sharper) -#}
+        <g class="dcc-a-out">
+          <rect class="dcc-out-frame" x="58" y="384" width="174" height="102" rx="10"/>
+          <g class="dcc-bars dcc-bars--sharp">
+            <rect x="72"  y="402" width="6" height="64"/><rect x="84"  y="402" width="6" height="64"/><rect x="96" y="402" width="6" height="64"/>
+            <rect x="116" y="402" width="4" height="64"/><rect x="125" y="402" width="4" height="64"/><rect x="134" y="402" width="4" height="64"/>
+            <rect x="150" y="402" width="3" height="64"/><rect x="157" y="402" width="3" height="64"/><rect x="164" y="402" width="3" height="64"/>
+            <rect x="182" y="402" width="2" height="64"/><rect x="188" y="402" width="2" height="64"/><rect x="194" y="402" width="2" height="64"/><rect x="200" y="402" width="2" height="64"/>
+          </g>
+          <g class="dcc-a-scan">
+            <rect x="58" y="384" width="174" height="14" fill="url(#dcc-scan-grad)"/>
+            <line x1="58" y1="391" x2="232" y2="391" class="dcc-scan-edge"/>
+          </g>
+        </g>
+
+        {#- labels -#}
+        <g class="dcc-label">
+          <line class="dcc-leader" x1="252" y1="166" x2="296" y2="168"/>
+          <text class="dcc-tx" x="300" y="166"><tspan x="300" dy="0">{{ (c ~ ".direct.conversion") | t }}</tspan></text>
+          <line class="dcc-leader" x1="190" y1="212" x2="296" y2="214"/>
+          <text class="dcc-tx dcc-tx--accent" x="300" y="218">{{ (c ~ ".direct.charge") | t }}</text>
+          <line class="dcc-leader" x1="252" y1="294" x2="296" y2="296"/>
+          <text class="dcc-tx" x="300" y="300">{{ (c ~ ".direct.cmos") | t }}</text>
+          <text class="dcc-tx dcc-tx--out" x="145" y="508" text-anchor="middle">{{ (c ~ ".direct.output") | t }}</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <p class="dcc-footnote reveal" data-delay="160">{{ (c ~ ".bottomLine") | t }}</p>
+  <p class="dcc-sr-only">{{ (c ~ ".ariaDescription") | t }}</p>
+</div>

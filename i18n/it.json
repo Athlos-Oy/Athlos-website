@@ -123,7 +123,30 @@
           "photon": "Rilevamento del singolo fotone",
           "libs": "Librerie avanzate di ricostruzione e filtri"
         },
-        "learnLink": "Scopri Athlos"
+        "learnLink": "Scopri Athlos",
+        "comparison": {
+          "heading": "Conversione diretta vs. indiretta",
+          "subheading": "La conversione diretta elimina la fase di diffusione luminosa dello scintillatore, creando un percorso dal raggio X al segnale più corto e localizzato.",
+          "bottomLine": "Meno fasi di conversione. Localizzazione del segnale più diretta.",
+          "indirectTitle": "Conversione indiretta",
+          "directTitle": "Conversione diretta",
+          "ariaDescription": "Confronto affiancato di due tipi di rilevatori a raggi X. Nella conversione indiretta, i raggi X colpiscono prima uno scintillatore che li converte in luce visibile; questa luce si diffonde lateralmente prima di raggiungere il fotodiodo e la lettura, ammorbidendo la localizzazione del segnale. Nella conversione diretta, i raggi X vengono convertiti direttamente in carica elettrica in uno strato di CdTe o silicio, producendo strette colonne di carica verticali che si spostano direttamente verso la lettura CMOS — un percorso del segnale più corto e localizzato e un'uscita più nitida.",
+          "indirect": {
+            "scintillator": "Scintillatore",
+            "toLight": "Raggi X convertiti in luce",
+            "spread": "Diffusione della luce",
+            "photodiode": "Fotodiodo",
+            "readout": "Lettura",
+            "output": "Localizzazione del segnale più morbida"
+          },
+          "direct": {
+            "conversion": "Strato di conversione CdTe / Si",
+            "charge": "Generazione diretta di carica",
+            "cmos": "Lettura CMOS",
+            "path": "Percorso del segnale più corto",
+            "output": "Localizzazione del segnale più nitida"
+          }
+        }
       },
       "products": {
         "eyebrow": "Portfolio prodotti",
