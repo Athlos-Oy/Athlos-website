@@ -6,6 +6,7 @@
         "headline": "Ultra-Fast<br>Scanning Sensor",
         "tagline": "Ultra-fast direct conversion scanning sensor for high-speed, high-sensitivity X-ray imaging.",
         "ctaExplore": "Explore Ultra-Fast Scanning Sensor",
+        "ctaDatasheet": "Download datasheet",
         "ctaDiscuss": "Discuss integration",
         "imageAlt": "Ultra-Fast Scanning Sensor – circuit board detail view"
       },
@@ -179,8 +180,7 @@
       "brochure": {
         "title": "UFS Product Datasheet",
         "subtitle": "Full specifications, models, and application data — PDF",
-        "button": "Download datasheet",
-        "ip67Button": "UFS IP67 datasheet"
+        "button": "Download datasheet"
       },
       "cta": {
         "eyebrow": "Get in Touch",

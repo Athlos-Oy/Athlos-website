@@ -6,6 +6,7 @@
         "headline": "Ultra-Fast<br>Scanning Sensor",
         "tagline": "Capteur à balayage à conversion directe ultra-rapide pour une imagerie par rayons X à haute vitesse et haute sensibilité.",
         "ctaExplore": "Découvrir Ultra-Fast Scanning Sensor",
+        "ctaDatasheet": "Télécharger la fiche technique",
         "ctaDiscuss": "Demander des informations d'intégration",
         "imageAlt": "Ultra-Fast Scanning Sensor – vue détaillée de la carte électronique"
       },
@@ -179,8 +180,7 @@
       "brochure": {
         "title": "Fiche technique du produit UFS",
         "subtitle": "Spécifications complètes, modèles et données d'application — PDF",
-        "button": "Télécharger la fiche technique",
-        "ip67Button": "Fiche technique UFS IP67"
+        "button": "Télécharger la fiche technique"
       },
       "cta": {
         "eyebrow": "Nous contacter",
