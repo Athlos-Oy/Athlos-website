@@ -32,6 +32,16 @@ activeProduct: ufs
 ---
   <!-- PRODUCT SUBNAV -->
 {% include "partials/product-subnav.njk" %}
+{#- UFS datasheet download, one PDF per locale. URL-safe filenames live
+    in downloads/ (passthrough-copied). -#}
+{%- set ufsDatasheets = {
+  "en": "/downloads/athlos-ufs-datasheet-en.pdf",
+  "de": "/downloads/athlos-ufs-datasheet-de.pdf",
+  "it": "/downloads/athlos-ufs-datasheet-it.pdf",
+  "es": "/downloads/athlos-ufs-datasheet-es.pdf",
+  "fr": "/downloads/athlos-ufs-datasheet-fr.pdf"
+} -%}
+{%- set ufsDatasheet = ufsDatasheets[lang] or ufsDatasheets["en"] -%}
 
   <main>
 
@@ -47,6 +57,7 @@ activeProduct: ufs
         </p>
         <div style="display:flex;gap:1rem;flex-wrap:wrap;">
           <a href="#overview" class="btn btn-primary">{{ "pages.productsUfs.hero.ctaExplore" | t }}</a>
+          <a href="{{ ufsDatasheet }}" class="btn btn-outline" target="_blank">{{ "pages.productsUfs.hero.ctaDatasheet" | t }}</a>
           <a href="#contact" class="btn btn-outline">{{ "pages.productsUfs.hero.ctaDiscuss" | t }}</a>
         </div>
       </div>
@@ -301,6 +312,25 @@ activeProduct: ufs
       <button class="gallery-lightbox-close" aria-label="{{ "pages.productsUfs.gallery.lightbox.closeAria" | t }}">✕</button>
       <img class="gallery-lightbox-img" src="" alt="{{ "pages.productsUfs.gallery.lightbox.imgAlt" | t }}" loading="lazy">
     </div>
+
+    <!-- DATASHEET DOWNLOAD -->
+    <section class="brochure-section">
+      <div class="container">
+        <div class="brochure-card reveal">
+          <div class="brochure-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <path d="M13 2H6a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V9l-5-7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M13 2v7h7M11 13v5M8.5 15.5l2.5 2.5 2.5-2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="brochure-info">
+            <strong>{{ "pages.productsUfs.brochure.title" | t }}</strong>
+            <span>{{ "pages.productsUfs.brochure.subtitle" | t }}</span>
+          </div>
+          <a href="{{ ufsDatasheet }}" class="btn btn-secondary" target="_blank" style="white-space:nowrap; flex-shrink:0;">{{ "pages.productsUfs.brochure.button" | t }}</a>
+        </div>
+      </div>
+    </section>
 
     <!-- CTA -->
     <section class="product-cta" id="contact">

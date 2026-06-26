@@ -6,6 +6,7 @@
         "headline": "Ultra-Fast<br>Scanning Sensor",
         "tagline": "Sensore di scansione a conversione diretta ultrarapido per acquisizione radiografica ad alta velocità e alta sensibilità.",
         "ctaExplore": "Scopri Ultra-Fast Scanning Sensor",
+        "ctaDatasheet": "Scarica la scheda tecnica",
         "ctaDiscuss": "Richiedi informazioni sull'integrazione",
         "imageAlt": "Ultra-Fast Scanning Sensor – vista in dettaglio del circuito stampato"
       },
@@ -175,6 +176,11 @@
           "closeAria": "Chiudi",
           "imgAlt": "Radiografia ingrandita"
         }
+      },
+      "brochure": {
+        "title": "Scheda tecnica del prodotto UFS",
+        "subtitle": "Specifiche complete, modelli e dati applicativi — PDF",
+        "button": "Scarica la scheda tecnica"
       },
       "cta": {
         "eyebrow": "Contattaci",

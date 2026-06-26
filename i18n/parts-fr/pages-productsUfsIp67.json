@@ -6,6 +6,7 @@
         "headline": "Industrial IP67 TDI – détecteur linéaire à rayons X",
         "tagline": "Système d'imagerie par rayons X à balayage ultra-rapide et robuste, pour les environnements d'inspection industrielle les plus exigeants.",
         "ctaSpecs": "Caractéristiques techniques",
+        "ctaDatasheet": "Télécharger la fiche technique",
         "ctaDiscuss": "Échanger sur votre application"
       },
       "overview": {
@@ -250,7 +251,7 @@
       "brochure": {
         "title": "Fiche technique du produit Industrial IP67 TDI",
         "desc": "Spécifications techniques complètes, modèles et données d'application — PDF",
-        "button": "Télécharger le PDF"
+        "button": "Télécharger la fiche technique"
       },
       "cta": {
         "eyebrow": "Nous contacter",

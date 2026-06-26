@@ -6,7 +6,7 @@
         "headline": "DC-Air<sup>&reg;</sup>: sensore intraorale wireless a raggi X",
         "tagline": "Radiografia intraorale a conversione diretta True Wireless®.<br>Immagini nitide e dettagliate. Senza cavo. Senza compromessi.",
         "ctaPrimary": "Diventa distributore",
-        "ctaBrochure": "Scarica la brochure"
+        "ctaBrochure": "Scarica la scheda tecnica"
       },
       "overview": {
         "eyebrow": "Panoramica",
@@ -129,9 +129,9 @@
         "footnote": "Clinicians Report è pubblicato da CR Foundation, un'organizzazione indipendente e senza scopo di lucro per la valutazione di prodotti dentali. Valutazioni citate: CR First Look, gennaio 2022; CR Comparative Evaluation, marzo 2022."
       },
       "brochure": {
-        "title": "Brochure prodotto DC-Air&reg;",
-        "subtitle": "Specifiche complete, caratteristiche e panoramica del sistema — PDF",
-        "button": "Scarica il PDF"
+        "title": "Scheda tecnica DC-Air&reg;",
+        "subtitle": "Specifiche tecniche complete, codici d'ordine e dettagli del sistema — PDF",
+        "button": "Scarica la scheda tecnica"
       },
       "cta": {
         "headline": "Diventa distributore DC-Air&reg;.",
@@ -139,7 +139,7 @@
         "regulatory": "DC-Air&reg; ha ottenuto l'autorizzazione FDA 510(k). L'iter per la marcatura CE è in corso. Il prodotto non è ancora commercializzato in Europa.",
         "oem": "Per richieste di licenza OEM o integrazione tecnologica, contattaci tramite lo stesso canale.",
         "contactBtn": "Contatta Athlos",
-        "brochureBtn": "Scarica la brochure"
+        "brochureBtn": "Scarica la scheda tecnica"
       },
       "lightbox": {
         "ariaLabel": "Visualizzatore di immagini",
