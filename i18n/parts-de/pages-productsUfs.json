@@ -6,6 +6,7 @@
         "headline": "Ultra-Fast<br>Scanning Sensor",
         "tagline": "Ultraschneller Zeilenscansensor mit Direktkonversion für hochsensible Röntgenbildgebung bei hoher Geschwindigkeit.",
         "ctaExplore": "Ultra-Fast Scanning Sensor entdecken",
+        "ctaDatasheet": "Datenblatt herunterladen",
         "ctaDiscuss": "Integration anfragen",
         "imageAlt": "Ultra-Fast Scanning Sensor – Detailansicht der Leiterplatte"
       },
@@ -175,6 +176,11 @@
           "closeAria": "Schließen",
           "imgAlt": "Vergrößerte Röntgenaufnahme"
         }
+      },
+      "brochure": {
+        "title": "UFS Produktdatenblatt",
+        "subtitle": "Vollständige Spezifikationen, Modelle und Anwendungsdaten — PDF",
+        "button": "Datenblatt herunterladen"
       },
       "cta": {
         "eyebrow": "Kontakt aufnehmen",

@@ -32,15 +32,14 @@ jsonldHeadAfterAnalyticsPartials:
   - partials/product-jsonld/wios-3.njk
 ---
 {% include "partials/product-subnav.njk" %}
-{#- DC-Air brochure download, one PDF per locale. Filenames are the
-    originals as supplied (spaces %20-encoded); en keeps the existing
-    repo asset. Files live in downloads/ (passthrough-copied). -#}
+{#- DC-Air datasheet download, one PDF per locale. URL-safe filenames
+    live in downloads/ (passthrough-copied). -#}
 {%- set wiosBrochures = {
-  "en": "/downloads/brochure-wios.pdf",
-  "de": "/downloads/Brochure%20-%20DC-Air_German.pdf",
-  "it": "/downloads/Brochure%20-%20DC-Air_Italian.pdf",
-  "es": "/downloads/Brochure%20-%20DC-Air_Spanish.pdf",
-  "fr": "/downloads/Brochure%20-%20DC-Air_French.pdf"
+  "en": "/downloads/athlos-dc-air-datasheet-en.pdf",
+  "de": "/downloads/athlos-dc-air-datasheet-de.pdf",
+  "it": "/downloads/athlos-dc-air-datasheet-it.pdf",
+  "es": "/downloads/athlos-dc-air-datasheet-es.pdf",
+  "fr": "/downloads/athlos-dc-air-datasheet-fr.pdf"
 } -%}
 {%- set wiosBrochure = wiosBrochures[lang] or wiosBrochures["en"] -%}
 

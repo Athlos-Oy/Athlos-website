@@ -6,6 +6,7 @@
         "headline": "Industrial IP67 TDI – Zeilen-Scan-Röntgendetektor",
         "tagline": "Robustes Hochgeschwindigkeits-Röntgenscansystem für anspruchsvolle industrielle Inspektionsumgebungen.",
         "ctaSpecs": "Technische Daten",
+        "ctaDatasheet": "Datenblatt herunterladen",
         "ctaDiscuss": "Anwendung mit Athlos besprechen"
       },
       "overview": {
@@ -250,7 +251,7 @@
       "brochure": {
         "title": "Industrial IP67 TDI – Produktdatenblatt",
         "desc": "Vollständige technische Daten, Modelle und Anwendungsdaten – PDF",
-        "button": "PDF herunterladen"
+        "button": "Datenblatt herunterladen"
       },
       "cta": {
         "eyebrow": "Kontakt aufnehmen",

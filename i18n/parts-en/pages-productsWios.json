@@ -6,7 +6,7 @@
         "headline": "DC-Air<sup>&reg;</sup> Wireless Intraoral X-Ray Sensor",
         "tagline": "True Wireless® direct conversion intraoral X-ray imaging.<br>Crystal clear images. No wire. No compromise.",
         "ctaPrimary": "Distributor enquiry",
-        "ctaBrochure": "Download Brochure"
+        "ctaBrochure": "Download datasheet"
       },
       "overview": {
         "eyebrow": "Overview",
@@ -129,9 +129,9 @@
         "footnote": "Clinicians Report is published by CR Foundation, an independent non-profit dental product testing organisation. Evaluations referenced: CR First Look, January 2022; CR Comparative Evaluation, March 2022."
       },
       "brochure": {
-        "title": "DC-Air&reg; Product Brochure",
-        "subtitle": "Full specifications, features, and system overview — PDF",
-        "button": "Download PDF"
+        "title": "DC-Air&reg; Datasheet",
+        "subtitle": "Full technical specifications, order codes and system details — PDF",
+        "button": "Download datasheet"
       },
       "cta": {
         "headline": "Become a DC-Air&reg; distributor.",
@@ -139,7 +139,7 @@
         "regulatory": "The DC-Air&reg; is FDA 510(k) cleared; CE marking is in progress. The product is not yet on sale in Europe.",
         "oem": "For OEM licensing or technology integration enquiries, please reach out through the same channel.",
         "contactBtn": "Contact Athlos",
-        "brochureBtn": "Download Brochure"
+        "brochureBtn": "Download datasheet"
       },
       "lightbox": {
         "ariaLabel": "Image viewer",
