@@ -2037,11 +2037,9 @@ body::before {
 .dcc-face-front--conv { fill: rgba(16,26,32,0.92); }
 .dcc-face-side  { fill: rgba(9,14,18,0.92);  stroke: rgba(125,191,232,0.10); stroke-width: 1; }
 
-.dcc-a-photon { stroke: #eaf6ff; stroke-width: 2.4; stroke-linecap: round; filter: url(#dcc-glow); transform-box: fill-box; }
-.dcc-a-bloom  { transform-box: fill-box; transform-origin: center; }
-.dcc-a-scint  { fill: #bfe6ff; opacity: 0; mix-blend-mode: screen; }
-.dcc-a-soft   { opacity: 0; mix-blend-mode: screen; }
-.dcc-a-softdot{ fill: #bcdcf2; opacity: 0; }
+.dcc-a-photon { fill: #eaf6ff; filter: url(#dcc-glow); transform-box: fill-box; }
+.dcc-a-cloud  { opacity: 0; transform-box: fill-box; transform-origin: center; mix-blend-mode: screen; }
+.dcc-a-scint  { fill: #ffe9a8; opacity: 0; mix-blend-mode: screen; }
 .dcc-a-trace  { stroke: #7dbfe8; stroke-width: 1.4; stroke-linecap: round; opacity: 0.05; }
 .dcc-col      { stroke: rgba(67,161,216,0.30); stroke-width: 1.6; stroke-linecap: round; }
 .dcc-a-charge { fill: #cfeaff; opacity: 0; }
@@ -2067,10 +2065,8 @@ body::before {
 .dcc-panel.dcc-inview .dcc-label { opacity: 1; }
 
 .dcc-a-photon { animation: dcc-fall   var(--dcc-cycle) linear      infinite; animation-delay: var(--pd, 0s); }
-.dcc-a-bloom  { animation: dcc-bloom  var(--dcc-cycle) ease-out    infinite; animation-delay: var(--pd, 0s); }
+.dcc-a-cloud  { animation: dcc-cloud  var(--dcc-cycle) ease-in-out infinite; animation-delay: var(--pd, 0s); }
 .dcc-a-scint  { animation: dcc-scint  var(--dcc-cycle) ease-in-out infinite; }
-.dcc-a-soft   { animation: dcc-soft   var(--dcc-cycle) ease-in-out infinite; }
-.dcc-a-softdot{ animation: dcc-softdot var(--dcc-cycle) linear     infinite; animation-delay: var(--pd, 0s); }
 .dcc-a-trace  { animation: dcc-trace  var(--dcc-cycle) ease-in-out infinite; animation-delay: var(--pd, 0s); }
 .dcc-a-spark  { animation: dcc-spark  var(--dcc-cycle) ease-out    infinite; animation-delay: var(--pd, 0s); }
 .dcc-a-charge { animation: dcc-charge var(--dcc-cycle) linear      infinite; animation-delay: var(--pd, 0s); }
@@ -2084,33 +2080,22 @@ body::before {
   13%  { opacity: 0; }
   100% { transform: translateY(0); opacity: 0; }
 }
-@keyframes dcc-bloom {
-  0%, 12% { transform: translateY(0) scale(0.25); opacity: 0; }
-  17%     { opacity: 0.55; }
-  28%     { transform: translateY(14px) scale(2.4); opacity: 0.3; }
-  34%     { transform: translateY(20px) scale(2.9); opacity: 0; }
-  100%    { transform: translateY(0) scale(0.25); opacity: 0; }
+/* Indirect light cloud: spreads laterally at the scintillator, then drifts
+   soft and wide all the way down the stack to the output (translateY ~212). */
+@keyframes dcc-cloud {
+  0%, 12% { transform: translateY(0) scale(0.4); opacity: 0; }
+  20%     { transform: translateY(8px) scale(1.7); opacity: 0.6; }
+  40%     { transform: translateY(80px) scale(2.3); opacity: 0.52; }
+  62%     { transform: translateY(180px) scale(2.7); opacity: 0.42; }
+  74%     { transform: translateY(212px) scale(3.0); opacity: 0; }
+  100%    { transform: translateY(0) scale(0.4); opacity: 0; }
 }
 @keyframes dcc-scint {
   0%, 11% { opacity: 0; }
-  15%     { opacity: 0.75; }
-  26%     { opacity: 0.3; }
-  40%     { opacity: 0; }
+  15%     { opacity: 0.85; }
+  30%     { opacity: 0.4; }
+  46%     { opacity: 0; }
   100%    { opacity: 0; }
-}
-@keyframes dcc-soft {
-  0%, 26% { opacity: 0; }
-  36%     { opacity: 0.5; }
-  50%     { opacity: 0.12; }
-  58%     { opacity: 0; }
-  100%    { opacity: 0; }
-}
-@keyframes dcc-softdot {
-  0%, 32% { transform: translateY(0); opacity: 0; }
-  37%     { opacity: 0.7; }
-  58%     { transform: translateY(136px); opacity: 0.55; }
-  63%     { opacity: 0; }
-  100%    { transform: translateY(136px); opacity: 0; }
 }
 @keyframes dcc-trace {
   0%, 38% { opacity: 0.05; }
@@ -2159,12 +2144,10 @@ body::before {
   .dcc-label   { opacity: 1 !important; }
   .dcc-a-out   { opacity: 1 !important; }
   .dcc-a-scan  { opacity: 0 !important; }
-  .dcc-a-scint { opacity: 0.22 !important; }
-  .dcc-a-soft  { opacity: 0.28 !important; }
-  .dcc-a-bloom { opacity: 0.32 !important; transform: scale(2.2); transform-box: fill-box; transform-origin: center; }
+  .dcc-a-scint { opacity: 0.3 !important; }
+  .dcc-a-cloud { opacity: 0.4 !important; transform: translateY(90px) scale(2.6); transform-box: fill-box; transform-origin: center; }
   .dcc-a-photon{ opacity: 0.6 !important; }
   .dcc-a-spark { opacity: 0.9 !important; }
   .dcc-a-charge{ opacity: 0 !important; }
   .dcc-a-trace { opacity: 0.4 !important; }
-  .dcc-a-softdot { opacity: 0 !important; }
 }

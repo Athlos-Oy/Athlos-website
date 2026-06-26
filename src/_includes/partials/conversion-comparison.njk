@@ -33,6 +33,12 @@
           <stop offset="0.45" stop-color="#7dbfe8" stop-opacity="0.55"/>
           <stop offset="1" stop-color="#43a1d8" stop-opacity="0"/>
         </radialGradient>
+        {#- warm yellow visible-light cloud (indirect scintillator emission) -#}
+        <radialGradient id="dcc-cloud-grad" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#fff4cf" stop-opacity="0.95"/>
+          <stop offset="0.45" stop-color="#ffd86b" stop-opacity="0.6"/>
+          <stop offset="1" stop-color="#f0b429" stop-opacity="0"/>
+        </radialGradient>
         <linearGradient id="dcc-scan-grad" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stop-color="#7dbfe8" stop-opacity="0"/>
           <stop offset="0.5" stop-color="#aee0ff" stop-opacity="0.55"/>
@@ -65,11 +71,11 @@
         <rect x="0" y="0" width="470" height="540" fill="url(#dcc-grid)"/>
         <rect x="0" y="0" width="470" height="540" fill="url(#dcc-vignette)"/>
 
-        {#- photon entry beams -#}
+        {#- incoming X-ray photons: small particles descending from above -#}
         <g class="dcc-photons">
-          <line class="dcc-a-photon" style="--pd:0s"     x1="120" y1="136" x2="120" y2="150"/>
-          <line class="dcc-a-photon" style="--pd:.45s" x1="150" y1="136" x2="150" y2="150"/>
-          <line class="dcc-a-photon" style="--pd:.9s"  x1="180" y1="136" x2="180" y2="150"/>
+          <circle class="dcc-a-photon" style="--pd:0s"   cx="120" cy="150" r="3"/>
+          <circle class="dcc-a-photon" style="--pd:.45s" cx="150" cy="150" r="3"/>
+          <circle class="dcc-a-photon" style="--pd:.9s"  cx="180" cy="150" r="3"/>
         </g>
 
         {#- detector stack: SCINTILLATOR (y150) / PHOTODIODE (y232) / READOUT (y314) -#}
@@ -78,29 +84,24 @@
         <path class="dcc-face-top dcc-face-top--scint" d="M40 150 L250 150 L284 130 L74 130 Z"/>
         <path class="dcc-face-front" d="M40 150 L250 150 L250 162 L40 162 Z"/>
         <path class="dcc-a-scint" d="M40 150 L250 150 L284 130 L74 130 Z"/>
-        {#- light spread blooms (the teaching moment) -#}
-        <g class="dcc-blooms">
-          <circle class="dcc-a-bloom" style="--pd:0s"    cx="150" cy="166" r="20" fill="url(#dcc-bloom-grad)" filter="url(#dcc-blur-bloom)"/>
-          <circle class="dcc-a-bloom" style="--pd:.5s" cx="178" cy="166" r="18" fill="url(#dcc-bloom-grad)" filter="url(#dcc-blur-bloom)"/>
-        </g>
         {#- photodiode -#}
         <path class="dcc-face-side" d="M250 232 L284 212 L284 224 L250 244 Z"/>
-        <ellipse class="dcc-a-soft" cx="158" cy="222" rx="74" ry="12" fill="url(#dcc-bloom-grad)" filter="url(#dcc-glow)"/>
         <path class="dcc-face-top" d="M40 232 L250 232 L284 212 L74 212 Z"/>
         <path class="dcc-face-front" d="M40 232 L250 232 L250 244 L40 244 Z"/>
-        {#- soft (slightly spread) signal travelling to readout/output -#}
-        <g class="dcc-softdots">
-          <circle class="dcc-a-softdot" style="--pd:0s"    cx="146" cy="248" r="5" filter="url(#dcc-glow)"/>
-          <circle class="dcc-a-softdot" style="--pd:.4s" cx="182" cy="248" r="5" filter="url(#dcc-glow)"/>
-        </g>
         {#- readout -#}
         <path class="dcc-face-side" d="M250 314 L284 294 L284 306 L250 326 Z"/>
         <path class="dcc-face-top" d="M40 314 L250 314 L284 294 L74 294 Z"/>
-        <g class="dcc-traces">
-          <line class="dcc-a-trace" style="--pd:0s"    x1="70" y1="306" x2="240" y2="306"/>
-          <line class="dcc-a-trace" style="--pd:.2s" x1="84" y1="300" x2="254" y2="300"/>
-        </g>
         <path class="dcc-face-front" d="M40 314 L250 314 L250 326 L40 326 Z"/>
+
+        {#- INDIRECT light: X-rays become a diffuse YELLOW light cloud at the
+            scintillator that spreads laterally, then drifts soft and wide all
+            the way down through the stack to the output — no localized charge.
+            Rendered above the slabs so the light appears to glow through them. -#}
+        <g class="dcc-clouds">
+          <circle class="dcc-a-cloud" style="--pd:0s"   cx="150" cy="172" r="22" fill="url(#dcc-cloud-grad)" filter="url(#dcc-blur-bloom)"/>
+          <circle class="dcc-a-cloud" style="--pd:.7s"  cx="172" cy="172" r="20" fill="url(#dcc-cloud-grad)" filter="url(#dcc-blur-bloom)"/>
+          <circle class="dcc-a-cloud" style="--pd:1.4s" cx="158" cy="172" r="18" fill="url(#dcc-cloud-grad)" filter="url(#dcc-blur-bloom)"/>
+        </g>
 
         {#- output image plane (softer) -#}
         <g class="dcc-a-out">
@@ -141,11 +142,11 @@
         <rect x="0" y="0" width="470" height="540" fill="url(#dcc-grid)"/>
         <rect x="0" y="0" width="470" height="540" fill="url(#dcc-vignette)"/>
 
-        {#- photon entry beams -#}
+        {#- incoming X-ray photons: small particles descending from above -#}
         <g class="dcc-photons">
-          <line class="dcc-a-photon" style="--pd:0s"     x1="120" y1="161" x2="120" y2="175"/>
-          <line class="dcc-a-photon" style="--pd:.45s" x1="150" y1="161" x2="150" y2="175"/>
-          <line class="dcc-a-photon" style="--pd:.9s"  x1="180" y1="161" x2="180" y2="175"/>
+          <circle class="dcc-a-photon" style="--pd:0s"   cx="120" cy="175" r="3"/>
+          <circle class="dcc-a-photon" style="--pd:.45s" cx="150" cy="175" r="3"/>
+          <circle class="dcc-a-photon" style="--pd:.9s"  cx="180" cy="175" r="3"/>
         </g>
 
         {#- CdTe / Si conversion layer (y175, thicker) -#}
