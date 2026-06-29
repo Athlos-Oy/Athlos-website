@@ -139,7 +139,8 @@
             "cmos": "Lecture CMOS",
             "path": "Trajet du signal plus court",
             "output": "Localisation du signal plus nette"
-          }
+          },
+          "microcopy": "Des photons invisibles au détail de l'image — avec moins d'étapes de conversion."
         }
       },
       "products": {

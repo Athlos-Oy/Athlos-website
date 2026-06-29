@@ -139,7 +139,8 @@
             "cmos": "CMOS-Auslese",
             "path": "Kürzerer Signalweg",
             "output": "Schärfere Signallokalisierung"
-          }
+          },
+          "microcopy": "Von unsichtbaren Photonen zum Bilddetail — mit weniger Konversionsstufen."
         }
       },
       "products": {

@@ -1930,11 +1930,10 @@ body::before {
 
 /* =====================================================
    DIRECT vs INDIRECT CONVERSION COMPARISON
-   Flagship animated SVG component (see
-   partials/conversion-comparison.njk). Pure SVG + CSS.
-   One master duration (--dcc-cycle) choreographs every
-   element via keyframe %; running is gated on .dcc-inview
-   (js/script.js) and replaced by a static frame under
+   Flagship animated SVG component (partials/conversion-comparison.njk).
+   Pure SVG + CSS, no deps. One master duration (--dcc-cycle)
+   choreographs every element via keyframe %; running is gated on
+   .dcc-inview (js/script.js) and replaced by a static frame under
    prefers-reduced-motion.
    ===================================================== */
 .dcc-panel {
@@ -1944,191 +1943,155 @@ body::before {
   overflow: hidden;
   padding: clamp(1.5rem, 3vw, 2.75rem) clamp(1rem, 2.5vw, 2rem) clamp(1.25rem, 2.5vw, 2rem);
   background:
-    radial-gradient(120% 80% at 50% 0%, rgba(36,60,76,0.45), transparent 62%),
-    linear-gradient(165deg, #0d1820 0%, #0a1016 55%, #0c141b 100%);
-  border: 1px solid rgba(125, 191, 232, 0.14);
-  box-shadow: 0 30px 70px -32px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.03);
+    radial-gradient(120% 80% at 50% 0%, rgba(38,64,80,0.45), transparent 62%),
+    linear-gradient(165deg, #0d1820 0%, #090f15 55%, #0c141b 100%);
+  border: 1px solid rgba(125,191,232,0.16);
+  box-shadow: 0 40px 90px -40px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.04), inset 0 0 60px rgba(67,161,216,0.05);
   isolation: isolate;
 }
+/* corner registration ticks */
+.dcc-tick { position: absolute; width: 14px; height: 14px; pointer-events: none; opacity: 0.5; }
+.dcc-tick::before, .dcc-tick::after { content: ""; position: absolute; background: rgba(125,191,232,0.45); }
+.dcc-tick::before { width: 14px; height: 1px; } .dcc-tick::after { width: 1px; height: 14px; }
+.dcc-tick--tl { top: 14px; left: 14px; } .dcc-tick--tl::before { top:0; left:0; } .dcc-tick--tl::after { top:0; left:0; }
+.dcc-tick--tr { top: 14px; right: 14px; } .dcc-tick--tr::before { top:0; right:0; } .dcc-tick--tr::after { top:0; right:0; }
+.dcc-tick--bl { bottom: 14px; left: 14px; } .dcc-tick--bl::before { bottom:0; left:0; } .dcc-tick--bl::after { bottom:0; left:0; }
+.dcc-tick--br { bottom: 14px; right: 14px; } .dcc-tick--br::before { bottom:0; right:0; } .dcc-tick--br::after { bottom:0; right:0; }
 
-.dcc-header {
-  text-align: center;
-  max-width: 46rem;
-  margin: 0 auto clamp(1rem, 2vw, 1.75rem);
-}
-.dcc-eyebrow {
-  font-size: clamp(1.1rem, 1.6vw, 1.45rem);
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  color: #eaf3fa;
-  margin: 0 0 0.5rem;
-}
-.dcc-sub {
-  font-size: var(--text-sm);
-  font-weight: 300;
-  line-height: 1.6;
-  color: #9fb3c1;
-  margin: 0;
-}
+.dcc-header { text-align: center; max-width: 46rem; margin: 0 auto clamp(1rem,2vw,1.75rem); position: relative; z-index: 1; }
+.dcc-eyebrow { font-size: clamp(1.1rem,1.6vw,1.45rem); font-weight: 600; letter-spacing: 0.01em; color: #eaf3fa; margin: 0 0 0.5rem; }
+.dcc-sub { font-size: var(--text-sm); font-weight: 300; line-height: 1.6; color: #9fb3c1; margin: 0; }
 
-.dcc-stage {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  align-items: start;
-}
-.dcc-divider {
-  position: absolute;
-  top: 2.25rem;
-  bottom: 2.25rem;
-  left: 50%;
-  width: 1px;
-  transform: translateX(-50%);
-  background: linear-gradient(180deg, transparent, rgba(125,191,232,0.22), transparent);
-}
-
-.dcc-side {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 clamp(0.25rem, 1vw, 1rem);
-  min-width: 0;
-}
-.dcc-side-title {
-  font-size: var(--text-sm);
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin: 0 0 0.25rem;
-}
+.dcc-stage { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: start; }
+.dcc-divider { position: absolute; top: 2.25rem; bottom: 2.25rem; left: 50%; width: 1px; transform: translateX(-50%);
+  background: linear-gradient(180deg, transparent, rgba(125,191,232,0.22), transparent); }
+.dcc-side { position: relative; display: flex; flex-direction: column; align-items: center; padding: 0 clamp(0.25rem,1vw,1rem); min-width: 0; }
+.dcc-side-title { font-size: var(--text-sm); font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 0.25rem; }
 .dcc-side--indirect .dcc-side-title { color: #9fb6c6; }
 .dcc-side--direct   .dcc-side-title { color: var(--cyan-light); }
+.dcc-svg { width: 100%; height: auto; display: block; overflow: visible; }
+/* subtle pointer parallax (desktop only; vars set by js/script.js) */
+.dcc-bg { transform: translate(calc(var(--dcc-px,0) * 4px), calc(var(--dcc-py,0) * 4px)); }
+.dcc-fg { transform: translate(calc(var(--dcc-px,0) * -6px), calc(var(--dcc-py,0) * -6px)); }
+.dcc-bg, .dcc-fg { transition: transform 0.25s ease-out; }
 
-.dcc-svg {
-  width: 100%;
-  height: auto;
-  display: block;
-  overflow: visible;
-}
-
-.dcc-footnote {
-  text-align: center;
-  font-size: var(--text-sm);
-  color: #8fa6b5;
-  font-weight: 400;
-  margin: clamp(1rem, 2vw, 1.75rem) 0 0;
-}
-.dcc-sr-only {
-  position: absolute;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
+.dcc-footnote { text-align: center; font-size: var(--text-sm); color: #aebfcb; font-weight: 500; margin: clamp(1rem,2vw,1.75rem) 0 0; }
+.dcc-microcopy { text-align: center; font-size: var(--text-sm); color: #7e93a2; font-weight: 300; font-style: italic; margin: 0.4rem 0 0; }
+.dcc-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
 /* ---- SVG primitives ---- */
-.dcc-face-top   { fill: url(#dcc-slab-top);  stroke: rgba(125,191,232,0.32); stroke-width: 1; }
+.dcc-shadow { fill: #05090d; opacity: 0.45; filter: url(#dcc-glow-strong); }
+.dcc-face-top  { fill: url(#dcc-slab-top); stroke: rgba(125,191,232,0.30); stroke-width: 1; }
 .dcc-face-top--conv { fill: url(#dcc-slab-conv); }
-.dcc-face-front { fill: rgba(13,20,25,0.9);  stroke: rgba(125,191,232,0.16); stroke-width: 1; }
-.dcc-face-front--conv { fill: rgba(16,26,32,0.92); }
-.dcc-face-side  { fill: rgba(9,14,18,0.92);  stroke: rgba(125,191,232,0.10); stroke-width: 1; }
+.dcc-face-front { fill: rgba(11,18,23,0.92); stroke: rgba(125,191,232,0.14); stroke-width: 1; }
+.dcc-face-side  { fill: rgba(7,12,16,0.94); stroke: rgba(125,191,232,0.08); stroke-width: 1; }
+.dcc-edge { fill: none; stroke: rgba(173,214,240,0.55); stroke-width: 1; }
 
-.dcc-a-photon { fill: #eaf6ff; filter: url(#dcc-glow); transform-box: fill-box; }
-.dcc-a-cloud  { opacity: 0; transform-box: fill-box; transform-origin: center; mix-blend-mode: screen; }
+.dcc-streak { stroke: url(#dcc-streak-grad); stroke-width: 2; stroke-linecap: round; }
+.dcc-head   { fill: #eaf6ff; filter: url(#dcc-glow); }
+.dcc-a-photon { transform-box: fill-box; }
+.dcc-a-flash  { opacity: 0; transform-box: fill-box; transform-origin: center; }
 .dcc-a-scint  { fill: #ffe9a8; opacity: 0; mix-blend-mode: screen; }
-.dcc-a-trace  { stroke: #7dbfe8; stroke-width: 1.4; stroke-linecap: round; opacity: 0.05; }
-.dcc-col      { stroke: rgba(67,161,216,0.30); stroke-width: 1.6; stroke-linecap: round; }
-.dcc-a-charge { fill: #cfeaff; opacity: 0; }
-.dcc-a-spark  { fill: #eaf6ff; opacity: 0; transform-box: fill-box; transform-origin: center; }
+.dcc-ray { stroke: #ffdf9e; stroke-width: 1.4; stroke-linecap: round; }
+.dcc-a-ray { opacity: 0; transform-box: fill-box; transform-origin: center; mix-blend-mode: screen; }
+.dcc-a-cloud { opacity: 0; transform-box: fill-box; transform-origin: center; mix-blend-mode: screen; }
 
-.dcc-a-out    { opacity: 0; }
-.dcc-out-frame{ fill: rgba(6,11,15,0.85); stroke: rgba(125,191,232,0.2); stroke-width: 1; }
-.dcc-bars rect       { fill: #c0ccd4; }
-.dcc-bars--sharp rect{ fill: #e3f2fc; }
-.dcc-a-scan   { opacity: 0; transform-box: fill-box; }
-.dcc-scan-edge{ stroke: #cfeeff; stroke-width: 1; opacity: 0.7; }
+.dcc-col { stroke: rgba(127,208,255,0.28); stroke-width: 1.6; stroke-linecap: round; }
+.dcc-a-spark  { opacity: 0; transform-box: fill-box; transform-origin: center; mix-blend-mode: screen; }
+.dcc-a-charge { fill: #dff3ff; opacity: 0; transform-box: fill-box; }
 
-.dcc-label    { opacity: 0; transition: opacity 0.7s ease; }
-.dcc-leader   { stroke: rgba(125,191,232,0.4); stroke-width: 1; }
-.dcc-tx       { fill: #b6c7d4; font-size: 13px; font-weight: 400; letter-spacing: 0.01em; }
+.dcc-a-trace { fill: none; stroke: #7fd0ff; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; opacity: 0; stroke-dasharray: 14 150; }
+
+.dcc-a-out { opacity: 0; }
+.dcc-screen { fill: rgba(5,10,14,0.9); stroke: rgba(125,191,232,0.22); stroke-width: 1; }
+.dcc-bars rect       { fill: #b8c6cf; }
+.dcc-bars--sharp rect{ fill: #e6f3fd; }
+.dcc-a-scan { opacity: 0; transform-box: fill-box; }
+.dcc-scan-edge { stroke: #d7f1ff; stroke-width: 1; opacity: 0.8; }
+
+.dcc-leader { stroke: rgba(125,191,232,0.42); stroke-width: 1; stroke-dasharray: 62; stroke-dashoffset: 62; transition: stroke-dashoffset 0.7s ease 0.2s; }
+.dcc-tx { fill: #b6c7d4; font-size: 13px; font-weight: 400; letter-spacing: 0.01em; opacity: 0; transition: opacity 0.6s ease 0.3s; }
 .dcc-tx--accent { fill: var(--cyan-light); }
-.dcc-tx--out  { fill: #cfe0ec; font-size: 14px; font-weight: 600; }
+.dcc-tx--out { fill: #cfe0ec; font-size: 14px; font-weight: 600; }
 .dcc-side--direct .dcc-tx--out { fill: var(--cyan-light); }
 
-/* ---- run gating ---- */
+/* ---- run gating + label reveal ---- */
 .dcc-panel [class*="dcc-a-"] { animation-play-state: paused; }
 .dcc-panel.dcc-inview [class*="dcc-a-"] { animation-play-state: running; }
-.dcc-panel.dcc-inview .dcc-label { opacity: 1; }
+.dcc-panel.dcc-inview .dcc-leader { stroke-dashoffset: 0; }
+.dcc-panel.dcc-inview .dcc-tx { opacity: 1; }
 
-.dcc-a-photon { animation: dcc-fall   var(--dcc-cycle) linear      infinite; animation-delay: var(--pd, 0s); }
-.dcc-a-cloud  { animation: dcc-cloud  var(--dcc-cycle) ease-in-out infinite; animation-delay: var(--pd, 0s); }
+.dcc-a-photon { animation: dcc-photon var(--dcc-cycle) linear      infinite; animation-delay: var(--pd,0s); }
+.dcc-a-flash  { animation: dcc-flash  var(--dcc-cycle) ease-out    infinite; animation-delay: var(--pd,0s); }
 .dcc-a-scint  { animation: dcc-scint  var(--dcc-cycle) ease-in-out infinite; }
-.dcc-a-trace  { animation: dcc-trace  var(--dcc-cycle) ease-in-out infinite; animation-delay: var(--pd, 0s); }
-.dcc-a-spark  { animation: dcc-spark  var(--dcc-cycle) ease-out    infinite; animation-delay: var(--pd, 0s); }
-.dcc-a-charge { animation: dcc-charge var(--dcc-cycle) linear      infinite; animation-delay: var(--pd, 0s); }
+.dcc-a-ray    { animation: dcc-ray    var(--dcc-cycle) ease-out    infinite; }
+.dcc-a-cloud  { animation: dcc-cloud  var(--dcc-cycle) ease-in-out infinite; animation-delay: var(--pd,0s); }
+.dcc-a-spark  { animation: dcc-spark  var(--dcc-cycle) ease-out    infinite; animation-delay: var(--pd,0s); }
+.dcc-a-charge { animation: dcc-charge var(--dcc-cycle) linear      infinite; animation-delay: var(--pd,0s); }
+.dcc-a-trace  { animation: dcc-trace  var(--dcc-cycle) ease-in-out infinite; animation-delay: var(--pd,0s); }
 .dcc-a-out    { animation: dcc-out    var(--dcc-cycle) ease-in-out infinite; }
 .dcc-a-scan   { animation: dcc-scan   var(--dcc-cycle) linear      infinite; }
 
-@keyframes dcc-fall {
-  0%   { transform: translateY(-136px); opacity: 0; }
-  4%   { opacity: 1; }
+@keyframes dcc-photon {
+  0%   { transform: translateY(-140px); opacity: 0; }
+  3%   { opacity: 1; }
   11%  { transform: translateY(0); opacity: 1; }
-  13%  { opacity: 0; }
+  14%  { opacity: 0; }
   100% { transform: translateY(0); opacity: 0; }
 }
-/* Indirect light cloud: spreads laterally at the scintillator, then drifts
-   soft and wide all the way down the stack to the output (translateY ~212). */
-@keyframes dcc-cloud {
-  0%, 12% { transform: translateY(0) scale(0.4); opacity: 0; }
-  20%     { transform: translateY(8px) scale(1.7); opacity: 0.6; }
-  40%     { transform: translateY(80px) scale(2.3); opacity: 0.52; }
-  62%     { transform: translateY(180px) scale(2.7); opacity: 0.42; }
-  74%     { transform: translateY(212px) scale(3.0); opacity: 0; }
-  100%    { transform: translateY(0) scale(0.4); opacity: 0; }
+@keyframes dcc-flash {
+  0%, 10% { opacity: 0; transform: scale(0.3); }
+  13%     { opacity: 0.9; transform: scale(1); }
+  20%     { opacity: 0; transform: scale(1.7); }
+  100%    { opacity: 0; transform: scale(0.3); }
 }
 @keyframes dcc-scint {
-  0%, 11% { opacity: 0; }
-  15%     { opacity: 0.85; }
-  30%     { opacity: 0.4; }
-  46%     { opacity: 0; }
-  100%    { opacity: 0; }
+  0%, 11% { opacity: 0; } 16% { opacity: 0.9; } 32% { opacity: 0.4; } 50% { opacity: 0; } 100% { opacity: 0; }
 }
-@keyframes dcc-trace {
-  0%, 38% { opacity: 0.05; }
-  46%     { opacity: 0.75; }
-  56%     { opacity: 0.2; }
-  100%    { opacity: 0.05; }
+@keyframes dcc-ray {
+  0%, 13% { opacity: 0; transform: scale(0.4); }
+  19%     { opacity: 0.6; transform: scale(1); }
+  30%     { opacity: 0; transform: scale(1.35); }
+  100%    { opacity: 0; transform: scale(0.4); }
+}
+@keyframes dcc-cloud {
+  0%, 13% { transform: translateY(0) scale(0.35); opacity: 0; }
+  20%     { transform: translateY(4px) scale(1.5); opacity: 0.7; }
+  36%     { transform: translateY(70px) scale(2.2); opacity: 0.55; }
+  58%     { transform: translateY(168px) scale(2.7); opacity: 0.42; }
+  74%     { transform: translateY(206px) scale(3.0); opacity: 0; }
+  100%    { transform: translateY(0) scale(0.35); opacity: 0; }
 }
 @keyframes dcc-spark {
-  0%, 11% { opacity: 0; transform: scale(0.4); }
-  14%     { opacity: 1; transform: scale(1); }
-  22%     { opacity: 0.7; }
-  32%     { opacity: 0; transform: scale(1.15); }
+  0%, 12% { opacity: 0; transform: scale(0.4); }
+  15%     { opacity: 1; transform: scale(1); }
+  24%     { opacity: 0.6; }
+  34%     { opacity: 0; transform: scale(1.2); }
   100%    { opacity: 0; transform: scale(0.4); }
 }
 @keyframes dcc-charge {
-  0%, 12% { transform: translateY(0); opacity: 0; }
-  15%     { opacity: 1; }
-  44%     { transform: translateY(197px); opacity: 1; }
-  48%     { opacity: 0; }
-  100%    { transform: translateY(197px); opacity: 0; }
+  0%, 13% { transform: translateY(0); opacity: 0; }
+  16%     { opacity: 1; }
+  46%     { transform: translateY(187px); opacity: 1; }
+  50%     { opacity: 0; }
+  100%    { transform: translateY(187px); opacity: 0; }
+}
+@keyframes dcc-trace {
+  0%, 34% { opacity: 0; stroke-dashoffset: 160; }
+  42%     { opacity: 0.85; }
+  56%     { stroke-dashoffset: 0; opacity: 0.45; }
+  66%     { opacity: 0; }
+  100%    { opacity: 0; stroke-dashoffset: 0; }
 }
 @keyframes dcc-out {
-  0%, 48% { opacity: 0; }
-  58%     { opacity: 1; }
-  92%     { opacity: 1; }
-  100%    { opacity: 0; }
+  0%, 52% { opacity: 0; } 62% { opacity: 1; } 92% { opacity: 1; } 100% { opacity: 0; }
 }
 @keyframes dcc-scan {
-  0%, 50% { transform: translateY(0); opacity: 0; }
-  54%     { opacity: 0.85; }
-  72%     { transform: translateY(92px); opacity: 0.85; }
-  77%     { opacity: 0; }
-  100%    { transform: translateY(92px); opacity: 0; }
+  0%, 54% { transform: translateY(0); opacity: 0; }
+  58%     { opacity: 0.9; }
+  74%     { transform: translateY(106px); opacity: 0.9; }
+  79%     { opacity: 0; }
+  100%    { transform: translateY(106px); opacity: 0; }
 }
 
 /* ---- responsive: stack vertically on mobile ---- */
@@ -2136,18 +2099,24 @@ body::before {
   .dcc-stage { grid-template-columns: 1fr; gap: 1.75rem; }
   .dcc-divider { display: none; }
   .dcc-svg { max-width: 400px; margin: 0 auto; }
+  .dcc-bg, .dcc-fg { transform: none !important; }
+  .dcc-a-cloud { filter: blur(5px) !important; }
 }
 
 /* ---- reduced motion: complete static comparison frame ---- */
 @media (prefers-reduced-motion: reduce) {
   .dcc-panel [class*="dcc-a-"] { animation: none !important; }
-  .dcc-label   { opacity: 1 !important; }
-  .dcc-a-out   { opacity: 1 !important; }
-  .dcc-a-scan  { opacity: 0 !important; }
-  .dcc-a-scint { opacity: 0.3 !important; }
-  .dcc-a-cloud { opacity: 0.4 !important; transform: translateY(90px) scale(2.6); transform-box: fill-box; transform-origin: center; }
-  .dcc-a-photon{ opacity: 0.6 !important; }
+  .dcc-bg, .dcc-fg { transform: none !important; }
+  .dcc-leader { stroke-dashoffset: 0 !important; }
+  .dcc-tx { opacity: 1 !important; }
+  .dcc-a-out { opacity: 1 !important; }
+  .dcc-a-scan { opacity: 0 !important; }
+  .dcc-a-scint { opacity: 0.28 !important; }
+  .dcc-a-cloud { opacity: 0.4 !important; transform: translateY(80px) scale(2.5); }
+  .dcc-a-photon { opacity: 0.65 !important; }
+  .dcc-a-flash { opacity: 0 !important; }
+  .dcc-a-ray { opacity: 0.5 !important; transform: scale(1); }
   .dcc-a-spark { opacity: 0.9 !important; }
-  .dcc-a-charge{ opacity: 0 !important; }
-  .dcc-a-trace { opacity: 0.4 !important; }
+  .dcc-a-charge { opacity: 0 !important; }
+  .dcc-a-trace { opacity: 0.35 !important; stroke-dashoffset: 0 !important; }
 }
