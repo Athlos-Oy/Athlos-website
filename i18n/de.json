@@ -146,11 +146,14 @@
           "spread": "Licht breitet sich aus",
           "charge": "Ladung entsteht",
           "localize": "Signal lokalisiert sich",
+          "readout": "Signal wird ausgelesen",
+          "digital": "Digitale Bilddaten",
           "summary": "Weniger Wandlungsstufen. Stärker lokalisierter Signalweg.",
           "layers": {
             "scintillator": "Szintillator",
             "photodiode": "Photodiode",
             "cdte": "CdTe / Si",
+            "electrodes": "Pixelelektroden",
             "cmos": "CMOS-Auslese"
           },
           "softerTag": "Weicher · breiter",

@@ -146,11 +146,14 @@
           "spread": "La luz se dispersa",
           "charge": "Se forma la carga",
           "localize": "La señal se localiza",
+          "readout": "Lectura de la señal",
+          "digital": "Datos de imagen digitales",
           "summary": "Menos etapas de conversión. Ruta de señal más localizada.",
           "layers": {
             "scintillator": "Centellador",
             "photodiode": "Fotodiodo",
             "cdte": "CdTe / Si",
+            "electrodes": "Electrodos de píxel",
             "cmos": "Lectura CMOS"
           },
           "softerTag": "Más difuso · más ancho",

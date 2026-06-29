@@ -144,11 +144,14 @@
           "spread": "Light spreads",
           "charge": "Charge forms",
           "localize": "Signal localizes",
+          "readout": "Signal read out",
+          "digital": "Digital image data",
           "summary": "Fewer conversion stages. More localized signal path.",
           "layers": {
             "scintillator": "Scintillator",
             "photodiode": "Photodiode",
             "cdte": "CdTe / Si",
+            "electrodes": "Pixel electrodes",
             "cmos": "CMOS readout"
           },
           "softerTag": "Softer · wider",
