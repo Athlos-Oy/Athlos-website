@@ -140,6 +140,14 @@
             "path": "Trayectoria de señal más corta",
             "output": "Localización de señal más nítida"
           }
+        },
+        "experience": {
+          "intro": "Del fotón de rayos X a la señal de imagen.",
+          "indirect": "Un centellador convierte los rayos X en luz, que se dispersa antes de la detección.",
+          "direct": "La conversión directa genera carga localizada en el material del detector.",
+          "output": "Menos etapas de conversión. Una ruta de señal más corta y localizada.",
+          "hero": "Conversión directa. Ventaja directa.",
+          "aria": "Secuencia animada: los fotones de rayos X entran en dos tipos de detector. En el detector indirecto, un centellador convierte los rayos X en luz que se dispersa lateralmente antes de llegar a la lectura. En el detector de conversión directa de Athlos, la energía de los rayos X se convierte en carga localizada en la capa de CdTe o silicio y se recoge directamente hacia abajo en la lectura CMOS, para una ruta de señal más corta y localizada."
         }
       },
       "products": {

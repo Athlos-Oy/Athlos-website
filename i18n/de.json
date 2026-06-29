@@ -140,6 +140,14 @@
             "path": "Kürzerer Signalweg",
             "output": "Schärfere Signallokalisierung"
           }
+        },
+        "experience": {
+          "intro": "Vom Röntgenphoton zum Bildsignal.",
+          "indirect": "Ein Szintillator wandelt Röntgenstrahlen in Licht um, das sich vor der Detektion ausbreitet.",
+          "direct": "Direktkonversion erzeugt lokalisierte Ladung direkt im Detektormaterial.",
+          "output": "Weniger Wandlungsstufen. Ein kürzerer, stärker lokalisierter Signalweg.",
+          "hero": "Direktkonversion. Direkter Vorteil.",
+          "aria": "Animierte Sequenz: Röntgenphotonen treffen auf zwei Detektortypen. Im indirekten Detektor wandelt ein Szintillator Röntgenstrahlen in Licht um, das sich seitlich ausbreitet, bevor es den Ausleseschaltkreis erreicht. Im Athlos-Direktkonversionsdetektor wird die Röntgenenergie im CdTe- oder Siliziummaterial zu lokalisierter Ladung und direkt nach unten in den CMOS-Ausleseschaltkreis gesammelt – ein kürzerer, stärker lokalisierter Signalweg."
         }
       },
       "products": {

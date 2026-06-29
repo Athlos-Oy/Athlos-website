@@ -138,6 +138,14 @@
             "path": "Shorter signal path",
             "output": "Sharper signal localization"
           }
+        },
+        "experience": {
+          "intro": "From X-ray photons to image signal.",
+          "indirect": "A scintillator turns X-rays into light, which spreads before detection.",
+          "direct": "Direct conversion generates localized charge inside the detector material.",
+          "output": "Fewer conversion stages. A shorter, more localized signal path.",
+          "hero": "Direct conversion. Direct advantage.",
+          "aria": "Animated sequence: X-ray photons enter two detector types. In the indirect detector, a scintillator converts X-rays into light that spreads laterally before reaching the readout. In the Athlos direct-conversion detector, X-ray energy becomes localized charge in the CdTe or silicon layer and is collected straight down into the CMOS readout, giving a shorter, more localized signal path."
         }
       },
       "products": {
