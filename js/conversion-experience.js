@@ -1,29 +1,34 @@
 /* =====================================================
    ATHLOS — "PHOTON FLIGHT" CINEMATIC DETECTOR EXPERIENCE
    ---------------------------------------------------------------
-   A short (≈9.5s) looping WebGL film for the homepage Technology
-   section. A virtual camera flies through two detector stacks:
+   A ~13s looping WebGL film for the homepage Technology section,
+   built around ONE clear physical story the viewer can follow:
 
-     • Indirect — X-rays strike a scintillator, light blooms and
-       SPREADS laterally before a softer signal reaches readout.
-     • Direct  — X-ray energy becomes LOCALISED charge in CdTe/Si
-       and is collected straight down into the CMOS readout.
+     BEAT 1 (0.0–1.8s)  A single hero X-ray photon enters; the two
+                        detector stacks are established.
+     BEAT 2 (1.8–4.8s)  INDIRECT — the photon strikes a scintillator;
+                        X-rays become WARM visible light that BLOOMS
+                        and SPREADS sideways before reaching the
+                        photodiode (a softer, wider signal).
+     BEAT 3 (4.8–8.0s)  DIRECT — the photon strikes CdTe/Si; energy
+                        becomes a COLD, tight vertical CHARGE column
+                        collected straight into the CMOS readout
+                        (a localized signal).
+     BEAT 4 (8.0–13s)   COMPARISON — the same test pattern on both
+                        outputs: indirect softer/wider, direct
+                        sharper/localized. Summary line, brief hold,
+                        dip-to-black reset.
 
-   Design constraints (homepage-grade):
-     • Three.js is lazy-loaded (dynamic import of a vendored, pinned
-       ESM build) only when the section nears the viewport — zero
-       bytes on initial page load.
-     • Three independent guards fall back to the static SVG poster
-       and never touch WebGL: prefers-reduced-motion, no WebGL
-       context, and navigator.webdriver (keeps visual-regression
-       snapshots deterministic).
-     • DPR is capped, the render loop pauses when off-screen or when
-       the tab is hidden, particle counts are small.
-     • The loop seam is hidden by a brief dip-to-black so the camera
-       reset is never visible.
+   Camera grammar is deliberately restrained: one slow push-in onto
+   the indirect stack, one clean lateral transition to the direct
+   stack, one pull-back for the comparison. Layer labels are HTML
+   tags projected from 3D anchors and faded in exactly when their
+   physical event happens.
 
-   No build step / bundler — this file is a native ES module loaded
-   with <script type="module"> and imports Three with import().
+   Constraints: Three.js lazy-loaded (vendored, pinned ESM) only when
+   the section nears the viewport; DPR-capped; render loop pauses
+   off-screen / when hidden; three guards fall back to the static SVG
+   poster (prefers-reduced-motion, no WebGL, navigator.webdriver).
    ===================================================== */
 
 (function () {
@@ -31,13 +36,11 @@
 
   const root = document.querySelector('[data-dce]');
   if (!root) return;
-
   const canvas = root.querySelector('.dce-canvas');
   if (!canvas) return;
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // WebGL availability probe (cheap, disposed immediately).
   function hasWebGL() {
     try {
       const c = document.createElement('canvas');
@@ -46,18 +49,12 @@
     } catch (_) { return false; }
   }
 
-  // Guards → keep the static poster, never load Three.
-  // navigator.webdriver: automated screenshot runs (Playwright) get the
-  // deterministic poster so layout baselines stay stable.
   if (reduceMotion || navigator.webdriver || !hasWebGL()) {
     root.classList.add('dce-static');
     return;
   }
 
   let started = false;
-  let scene = null; // populated after Three loads
-
-  // Lazy-load + boot the first time the panel scrolls near the viewport.
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -74,20 +71,17 @@
   }
 
   async function boot() {
-    // Switch the frame to the cinematic (aspect-boxed) dark screen while
-    // Three loads. If anything fails we revert to the static poster.
     root.classList.add('dce-booting');
     let THREE;
     try {
       THREE = await import('./vendor/three.module.min.js');
     } catch (err) {
-      // Network / parse failure → graceful static fallback.
       root.classList.remove('dce-booting');
       root.classList.add('dce-static');
       return;
     }
     try {
-      scene = buildScene(THREE);
+      const scene = buildScene(THREE);
       root.classList.add('dce-live');
       scene.start();
     } catch (err) {
@@ -100,23 +94,23 @@
      SCENE
   =================================================== */
   function buildScene(THREE) {
-    const LOOP = 9.5;                    // seconds, full cinematic cycle
+    const LOOP = 13.0;
     const DPR_CAP = window.matchMedia('(max-width: 768px)').matches ? 1.3 : 1.75;
 
-    // Palette --------------------------------------------------------
     const COL = {
       bg:       0x070d12,
       slab:     0x33424b,
-      slabConv: 0x3a5260,
+      scint:    0x4a4030,   // warm-leaning scintillator
+      cdte:     0x2f4a5a,   // cool-leaning CdTe/Si
       edge:     0x8fd2f5,
-      photon:   0xdff1ff,
-      light:    0xffd271,   // warm scintillator light (spreads)
-      lightHi:  0xfff2cf,
-      charge:   0x73ccff,   // cool localised charge
-      trace:    0x5fb6e6
+      edgeWarm: 0xffcf8a,
+      photon:   0xeaf4ff,
+      warm:     0xffb24a,   // indirect light (spreads)
+      warmHi:   0xffe6b0,
+      cold:     0x6cc8ff,   // direct charge (localized)
+      coldHi:   0xd6f1ff
     };
 
-    // Renderer -------------------------------------------------------
     const renderer = new THREE.WebGLRenderer({
       canvas, antialias: true, alpha: false, powerPreference: 'high-performance'
     });
@@ -125,92 +119,110 @@
 
     const scene3 = new THREE.Scene();
     scene3.background = new THREE.Color(COL.bg);
-    scene3.fog = new THREE.Fog(COL.bg, 12, 34);
+    scene3.fog = new THREE.Fog(COL.bg, 14, 40);
 
-    const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 100);
+    const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
 
-    // Lights — soft key + cool fill so the glass slabs read as form.
     scene3.add(new THREE.AmbientLight(0x33506a, 0.9));
-    const key = new THREE.DirectionalLight(0xbfe4ff, 1.1);
-    key.position.set(-6, 12, 10);
+    const key = new THREE.DirectionalLight(0xbfe4ff, 1.05);
+    key.position.set(0, 12, 12);
     scene3.add(key);
-    const rim = new THREE.PointLight(0x4aa6e0, 30, 40);
-    rim.position.set(8, 2, 6);
-    scene3.add(rim);
 
-    // Soft radial sprite texture, shared by all additive particles ---
     const sprite = makeDiscTexture(THREE);
 
-    /* ---- Detector slabs (glass-like box + glowing wire edges) ---- */
-    const STACK_X = 7;          // indirect at -X, direct at +X
-    const gIndirect = new THREE.Group(); gIndirect.position.x = -STACK_X;
-    const gDirect   = new THREE.Group(); gDirect.position.x =  STACK_X;
-    scene3.add(gIndirect, gDirect);
+    // Two stacks, fixed side by side: indirect (-X), direct (+X).
+    const SX = 6;
+    const gI = new THREE.Group(); gI.position.x = -SX; scene3.add(gI);
+    const gD = new THREE.Group(); gD.position.x =  SX; scene3.add(gD);
 
-    function slab(group, y, h, conv) {
-      const w = 6, d = 6;
+    function slab(group, y, h, opt) {
+      opt = opt || {};
+      const w = 5.4, d = 5.4;
       const geo = new THREE.BoxGeometry(w, h, d);
       const mat = new THREE.MeshStandardMaterial({
-        color: conv ? COL.slabConv : COL.slab,
-        metalness: 0.55, roughness: 0.35,
-        transparent: true, opacity: conv ? 0.34 : 0.24,
-        emissive: 0x0a1a24, emissiveIntensity: 0.6
+        color: opt.color || COL.slab,
+        metalness: 0.5, roughness: 0.38,
+        transparent: true, opacity: opt.opacity || 0.26,
+        emissive: opt.emissive || 0x0a1a24, emissiveIntensity: 0.55
       });
       const mesh = new THREE.Mesh(geo, mat);
       mesh.position.y = y;
       group.add(mesh);
-
       const edges = new THREE.LineSegments(
         new THREE.EdgesGeometry(geo),
-        new THREE.LineBasicMaterial({ color: COL.edge, transparent: true, opacity: 0.55 })
+        new THREE.LineBasicMaterial({ color: opt.edge || COL.edge, transparent: true, opacity: 0.6 })
       );
       edges.position.y = y;
       group.add(edges);
       return mesh;
     }
 
-    // Indirect stack: scintillator → photodiode → readout
-    slab(gIndirect, 2.4, 0.6, false);
-    slab(gIndirect, 0.4, 0.5, false);
-    slab(gIndirect, -1.6, 0.5, false);
-    // Direct stack: CdTe/Si (thicker) → CMOS
-    slab(gDirect, 2.4, 0.95, true);
-    slab(gDirect, -1.1, 0.6, false);
+    // Indirect: scintillator (warm) → photodiode → readout base
+    slab(gI, 2.6, 0.7, { color: COL.scint, edge: COL.edgeWarm, emissive: 0x241a0c, opacity: 0.30 });
+    slab(gI, 0.6, 0.5, {});
+    slab(gI, -1.4, 0.5, { opacity: 0.22 });
+    // Direct: CdTe/Si (cool, thicker) → CMOS
+    slab(gD, 2.6, 1.0, { color: COL.cdte, edge: COL.edge, emissive: 0x0a2230, opacity: 0.32 });
+    slab(gD, -0.4, 0.7, {});
 
-    // CMOS trace plane on the direct readout — "microchip city".
+    // CMOS "microchip city" trace plane on the direct readout.
     const cmos = new THREE.Mesh(
-      new THREE.PlaneGeometry(5.6, 5.6),
+      new THREE.PlaneGeometry(5.0, 5.0),
       new THREE.MeshBasicMaterial({
-        map: makeTraceTexture(THREE), transparent: true, opacity: 0.0,
+        map: makeTraceTexture(THREE), transparent: true, opacity: 0,
         blending: THREE.AdditiveBlending, depthWrite: false
       })
     );
     cmos.rotation.x = -Math.PI / 2;
-    cmos.position.set(0, -0.78, 0);
-    gDirect.add(cmos);
+    cmos.position.set(0, -0.04, 0);
+    gD.add(cmos);
 
-    /* ---- Output image planes (soft vs sharp resolution targets) ---- */
-    const outIndirect = outputPlane(THREE, true);
-    outIndirect.position.set(0, -3.7, 1.2);
-    gIndirect.add(outIndirect);
-    const outDirect = outputPlane(THREE, false);
-    outDirect.position.set(0, -3.7, 1.2);
-    gDirect.add(outDirect);
+    /* ---- Output comparison planes (same pattern, soft vs sharp) ---- */
+    const outI = outputPlane(THREE, true);  outI.position.set(0, -3.7, 1.4); gI.add(outI);
+    const outD = outputPlane(THREE, false); outD.position.set(0, -3.7, 1.4); gD.add(outD);
 
-    // Scan bar that sweeps the direct output during readout.
-    const scan = new THREE.Mesh(
-      new THREE.PlaneGeometry(4.6, 0.18),
-      new THREE.MeshBasicMaterial({
-        color: 0xd6f1ff, transparent: true, opacity: 0,
+    /* ---- Hero photon (head sprite + streak) ---------------------- */
+    function makeHero(streakColor) {
+      const g = new THREE.Group();
+      const head = new THREE.Sprite(new THREE.SpriteMaterial({
+        map: sprite, color: COL.photon, transparent: true, opacity: 0,
         blending: THREE.AdditiveBlending, depthWrite: false
-      })
-    );
-    scan.position.set(0, -3.7, 1.26);
-    gDirect.add(scan);
+      }));
+      head.scale.set(0.95, 0.95, 1);
+      const streak = new THREE.Mesh(
+        new THREE.BoxGeometry(0.05, 1.6, 0.05),
+        new THREE.MeshBasicMaterial({
+          color: COL.photon, transparent: true, opacity: 0,
+          blending: THREE.AdditiveBlending, depthWrite: false
+        })
+      );
+      streak.position.y = 1.05;
+      g.add(streak, head);
+      g.userData = { head, streak };
+      return g;
+    }
+    const heroI = makeHero(); heroI.position.x = -SX; scene3.add(heroI);
+    const heroD = makeHero(); heroD.position.x =  SX; scene3.add(heroD);
+
+    /* ---- Glow sprites (impact blooms, soft fields, pixel pulse) --- */
+    function glow(parent, color, size, x, y, z) {
+      const s = new THREE.Sprite(new THREE.SpriteMaterial({
+        map: sprite, color, transparent: true, opacity: 0,
+        blending: THREE.AdditiveBlending, depthWrite: false
+      }));
+      s.scale.set(size, size, 1);
+      s.position.set(x || 0, y || 0, z || 0);
+      parent.add(s);
+      return s;
+    }
+    const bloomI = glow(gI, COL.warm, 6, 0, 2.6, 0.4);     // scintillator bloom
+    const fieldI = glow(gI, COL.warm, 4.4, 0, 0.6, 0.4);   // softened light at photodiode
+    const sparkD = glow(gD, COL.coldHi, 2.6, 0, 2.6, 0.4); // direct impact
+    const pixelD = glow(gD, COL.cold, 1.1, 0, -0.4, 0.3);  // localized pixel pulse
+    const heroEnd = glow(gD, COL.cold, 7, 0, 0.4, 0);      // subtle hero glow
 
     /* ---- Particle systems ---------------------------------------- */
-    // Generic soft-point system.
-    function points(count, color, size) {
+    function points(parent, count, color, size) {
       const geo = new THREE.BufferGeometry();
       geo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(count * 3), 3));
       const mat = new THREE.PointsMaterial({
@@ -219,56 +231,33 @@
       });
       const p = new THREE.Points(geo, mat);
       p.frustumCulled = false;
+      parent.add(p);
       return p;
     }
-
-    // Deterministic pseudo-random so the loop is identical every cycle.
     function rng(i, salt) {
       const s = Math.sin(i * 12.9898 + salt * 78.233) * 43758.5453;
       return s - Math.floor(s);
     }
 
-    // Photons raining onto both stacks.
-    const PHOTON_N = 16;
-    const photons = points(PHOTON_N, COL.photon, 0.5);
-    scene3.add(photons);
+    const AMB_N = 10;
+    const amb = points(scene3, AMB_N, COL.photon, 0.32);
+    const LIGHT_N = 160;
+    const lightP = points(gI, LIGHT_N, COL.warm, 1.0);     // lateral warm spread
+    const CHARGE_N = 64;
+    const chargeP = points(gD, CHARGE_N, COL.cold, 0.55);  // tight cold column
 
-    // Indirect lateral light spread.
-    const LIGHT_N = 150;
-    const lightP = points(LIGHT_N, COL.light, 0.95);
-    gIndirect.add(lightP);
-
-    // Direct localised charge column.
-    const CHARGE_N = 70;
-    const chargeP = points(CHARGE_N, COL.charge, 0.6);
-    gDirect.add(chargeP);
-
-    // Impact glow sprites at each conversion surface + hero glow.
-    function glow(color, size) {
-      const s = new THREE.Sprite(new THREE.SpriteMaterial({
-        map: sprite, color, transparent: true, opacity: 0,
-        blending: THREE.AdditiveBlending, depthWrite: false
-      }));
-      s.scale.set(size, size, 1);
-      return s;
-    }
-    const glowI = glow(COL.lightHi, 5); glowI.position.set(0, 2.4, 0); gIndirect.add(glowI);
-    const glowD = glow(COL.charge, 3.4); glowD.position.set(0, 2.4, 0); gDirect.add(glowD);
-    const glowHero = glow(COL.charge, 9); glowHero.position.set(0, 0.4, 0); gDirect.add(glowHero);
-
-    /* ---- Camera choreography ------------------------------------- */
-    // Keyframes: u in [0,1]; pos/target in world space. A dip-to-black
-    // at the seam hides the wrap, so endpoints need not match exactly.
+    /* ---- Camera: 3 deliberate moves ------------------------------ */
     const KEYS = [
-      { u: 0.00, p: [-7, 7.5, 13],  t: [-7, 3.2, 0] }, // SHOT 1 — beam descends
-      { u: 0.13, p: [-7, 4.6, 9.5], t: [-7, 2.7, 0] },
-      { u: 0.30, p: [-5.2, 2.7, 7.6], t: [-7, 1.4, 0] }, // SHOT 2 — light spreads
-      { u: 0.40, p: [-2, 3.4, 9],   t: [0, 1.4, 0] },   // sweep across
-      { u: 0.52, p: [7, 3.3, 8.6],  t: [7, 1.6, 0] },   // SHOT 3 — direct top
-      { u: 0.63, p: [6.4, 0.7, 7.0], t: [7, -1.0, 0] }, // follow charge down
-      { u: 0.78, p: [0, 0.2, 17],   t: [0, -3.2, 0] },  // SHOT 4 — pull back, outputs
-      { u: 0.90, p: [7, -1.6, 8.6], t: [7, -2.4, 0] },  // SHOT 5 — direct hero
-      { u: 1.00, p: [-7, 7.5, 13],  t: [-7, 3.2, 0] }   // = K0 (seam covered by dip)
+      { u: 0.00, p: [-2.2, 5.6, 18], t: [-3.0, 2.4, 0] }, // establish (slight indirect bias)
+      { u: 0.14, p: [-6.0, 3.5, 9.6], t: [-6.0, 2.5, 0] }, // BEAT2 push-in: scintillator
+      { u: 0.32, p: [-6.0, 2.2, 9.4], t: [-6.0, 1.0, 0] }, // settle: spread + photodiode
+      { u: 0.40, p: [-3.0, 3.0, 10], t: [0.0, 1.6, 0] },   // clean lateral transition →
+      { u: 0.50, p: [6.0, 3.4, 9.6], t: [6.0, 2.5, 0] },   // BEAT3: CdTe impact
+      { u: 0.60, p: [6.0, 1.8, 9.2], t: [6.0, 0.2, 0] },   // follow charge to CMOS
+      { u: 0.70, p: [3.0, 0.4, 13], t: [0.0, -1.8, 0] },   // begin pull-back
+      { u: 0.82, p: [0.0, -1.2, 19], t: [0.0, -3.4, 0] },  // BEAT4: comparison wide
+      { u: 0.96, p: [0.0, -1.3, 18], t: [0.0, -3.4, 0] },  // hold
+      { u: 1.00, p: [-2.2, 5.6, 18], t: [-3.0, 2.4, 0] }   // = K0 (seam under dip)
     ];
     function smooth(t) { return t * t * (3 - 2 * t); }
     const _p = new THREE.Vector3(), _t = new THREE.Vector3();
@@ -277,171 +266,182 @@
       for (let i = 0; i < KEYS.length - 1; i++) {
         if (u >= KEYS[i].u && u <= KEYS[i + 1].u) { a = KEYS[i]; b = KEYS[i + 1]; break; }
       }
-      const span = (b.u - a.u) || 1;
-      const e = smooth((u - a.u) / span);
-      _p.set(
-        a.p[0] + (b.p[0] - a.p[0]) * e,
-        a.p[1] + (b.p[1] - a.p[1]) * e,
-        a.p[2] + (b.p[2] - a.p[2]) * e
-      );
-      _t.set(
-        a.t[0] + (b.t[0] - a.t[0]) * e,
-        a.t[1] + (b.t[1] - a.t[1]) * e,
-        a.t[2] + (b.t[2] - a.t[2]) * e
-      );
+      const e = smooth((u - a.u) / ((b.u - a.u) || 1));
+      _p.set(a.p[0] + (b.p[0] - a.p[0]) * e, a.p[1] + (b.p[1] - a.p[1]) * e, a.p[2] + (b.p[2] - a.p[2]) * e);
+      _t.set(a.t[0] + (b.t[0] - a.t[0]) * e, a.t[1] + (b.t[1] - a.t[1]) * e, a.t[2] + (b.t[2] - a.t[2]) * e);
     }
 
-    /* ---- Captions (one cinematic line per shot) ------------------ */
-    const lines = Array.from(root.querySelectorAll('.dce-line'));
-    // [shotIndex(1-5), uStart, uEnd]
-    const CAPTIONS = [
-      [1, 0.02, 0.13],
-      [2, 0.17, 0.33],
-      [3, 0.43, 0.61],
-      [4, 0.66, 0.77],
-      [5, 0.82, 0.96]
+    /* ---- HTML labels: bottom captions + projected layer tags ----- */
+    const capEls = {};
+    root.querySelectorAll('.dce-line').forEach((el) => { capEls[el.dataset.cap] = el; });
+    const CAPS = [
+      ['enter',    0.02, 0.12],
+      ['spread',   0.19, 0.36],
+      ['charge',   0.41, 0.55],
+      ['localize', 0.56, 0.66],
+      ['summary',  0.71, 0.97]
     ];
-    let activeLine = -1;
+    let activeCap = '';
     function updateCaptions(u) {
-      let want = -1;
-      for (let i = 0; i < CAPTIONS.length; i++) {
-        if (u >= CAPTIONS[i][1] && u <= CAPTIONS[i][2]) { want = i; break; }
+      let want = '';
+      for (let i = 0; i < CAPS.length; i++) {
+        if (u >= CAPS[i][1] && u <= CAPS[i][2]) { want = CAPS[i][0]; break; }
       }
-      if (want === activeLine) return;
-      activeLine = want;
-      lines.forEach((el, i) => el.classList.toggle('is-on', i === want));
+      if (want === activeCap) return;
+      activeCap = want;
+      Object.keys(capEls).forEach((k) => capEls[k].classList.toggle('is-on', k === want));
     }
 
-    // Dip-to-black overlay at the loop seam.
-    const fade = root.querySelector('.dce-fade');
+    const tagEls = {};
+    root.querySelectorAll('.dce-tag').forEach((el) => { tagEls[el.dataset.tag] = el; });
+    // anchor = world position (group x + local); z toward front face.
+    const TAGS = [
+      { key: 'scintillator', pos: [-SX, 3.0, 2.7], a: 0.15, b: 0.39 },
+      { key: 'photodiode',   pos: [-SX, 0.6, 2.7], a: 0.27, b: 0.39 },
+      { key: 'cdte',         pos: [ SX, 3.1, 2.7], a: 0.50, b: 0.67 },
+      { key: 'cmos',         pos: [ SX, -0.4, 2.7], a: 0.60, b: 0.69 },
+      { key: 'softer',       pos: [-SX, -2.0, 1.4], a: 0.76, b: 0.99 },
+      { key: 'sharper',      pos: [ SX, -2.0, 1.4], a: 0.76, b: 0.99 }
+    ];
+    const _v = new THREE.Vector3();
+    function updateTags(u) {
+      const W = root.clientWidth, H = root.clientHeight;
+      for (let i = 0; i < TAGS.length; i++) {
+        const t = TAGS[i], el = tagEls[t.key];
+        if (!el) continue;
+        const o = windowed(u, t.a, t.b, 0.04);
+        if (o <= 0.001) { el.style.opacity = '0'; continue; }
+        _v.set(t.pos[0], t.pos[1], t.pos[2]).project(camera);
+        if (_v.z > 1) { el.style.opacity = '0'; continue; }
+        const x = (_v.x * 0.5 + 0.5) * W;
+        const y = (-_v.y * 0.5 + 0.5) * H;
+        el.style.transform = 'translate(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px) translate(-50%,-150%)';
+        el.style.opacity = o.toFixed(3);
+      }
+    }
+
+    const fadeEl = root.querySelector('.dce-fade');
     function updateFade(u) {
       let o = 0;
       if (u > 0.965) o = (u - 0.965) / 0.035;
       else if (u < 0.035) o = 1 - u / 0.035;
-      if (fade) fade.style.opacity = o.toFixed(3);
+      if (fadeEl) fadeEl.style.opacity = o.toFixed(3);
     }
 
-    // Window helper: smooth 0→1→0 ramp across [a,b] with edge feather.
-    function windowed(u, a, b, feather) {
+    function windowed(u, a, b, f) {
       if (u <= a || u >= b) return 0;
-      const f = feather || 0.06;
-      const up = Math.min(1, (u - a) / f);
-      const dn = Math.min(1, (b - u) / f);
-      return Math.min(up, dn);
+      f = f || 0.06;
+      return Math.min(1, Math.min((u - a) / f, (b - u) / f));
     }
+    function clamp01(x) { return x < 0 ? 0 : x > 1 ? 1 : x; }
 
-    /* ---- Per-frame particle updates ------------------------------ */
-    const pos = {
-      photon: photons.geometry.attributes.position.array,
-      light: lightP.geometry.attributes.position.array,
-      charge: chargeP.geometry.attributes.position.array
-    };
+    /* ---- Particle updates ---------------------------------------- */
+    const posAmb = amb.geometry.attributes.position.array;
+    const posL = lightP.geometry.attributes.position.array;
+    const posC = chargeP.geometry.attributes.position.array;
 
-    function updatePhotons(time) {
-      const arr = pos.photon;
-      for (let i = 0; i < PHOTON_N; i++) {
-        const col = i < PHOTON_N / 2 ? -STACK_X : STACK_X;
-        const lane = i % (PHOTON_N / 2);
-        const x = col + (rng(i, 1) - 0.5) * 4.4;
-        const z = (rng(i, 2) - 0.5) * 4.4;
-        const speed = 2.2 + rng(i, 3) * 1.2;
-        const phase = (time * speed + lane * 1.3 + rng(i, 4) * 6) % 7;
-        const y = 6.2 - phase;            // fall from above to ~ -0.8
-        arr[i * 3] = x; arr[i * 3 + 1] = y; arr[i * 3 + 2] = z;
+    function updateAmbient(time) {
+      for (let i = 0; i < AMB_N; i++) {
+        const col = i < AMB_N / 2 ? -SX : SX;
+        const x = col + (rng(i, 1) - 0.5) * 4.2;
+        const z = (rng(i, 2) - 0.5) * 4.2;
+        const ph = (time * 1.8 + rng(i, 3) * 8) % 9;
+        posAmb[i * 3] = x; posAmb[i * 3 + 1] = 6.5 - ph; posAmb[i * 3 + 2] = z;
       }
-      photons.geometry.attributes.position.needsUpdate = true;
+      amb.geometry.attributes.position.needsUpdate = true;
     }
-
     function updateLight(time) {
-      // Particles born at the scintillator surface, drifting laterally
-      // (wide in X/Z) and slowly sinking — the light "spreads".
-      const arr = pos.light;
+      // warm light born at scintillator, spreading wide laterally then sinking
       for (let i = 0; i < LIGHT_N; i++) {
-        const life = (time * 0.5 + rng(i, 5)) % 1;
+        const life = (time * 0.42 + rng(i, 5)) % 1;
         const ang = rng(i, 6) * Math.PI * 2;
-        const rad = (0.3 + rng(i, 7) * 2.6) * life;
-        arr[i * 3]     = Math.cos(ang) * rad * 1.15;
-        arr[i * 3 + 1] = 2.4 - life * 1.7 + Math.sin(ang) * 0.15;
-        arr[i * 3 + 2] = Math.sin(ang) * rad * 1.15;
+        const rad = (0.3 + rng(i, 7) * 2.8) * life;
+        posL[i * 3]     = Math.cos(ang) * rad * 1.2;
+        posL[i * 3 + 1] = 2.6 - life * 2.0 + Math.sin(ang) * 0.12;
+        posL[i * 3 + 2] = Math.sin(ang) * rad * 1.2;
       }
       lightP.geometry.attributes.position.needsUpdate = true;
     }
-
     function updateCharge(time) {
-      // Tight vertical column: born at CdTe surface, collected straight
-      // down to the CMOS — minimal lateral drift.
-      const arr = pos.charge;
+      // cold charge: tight vertical column CdTe(2.6) → CMOS(-0.4)
       for (let i = 0; i < CHARGE_N; i++) {
-        const life = (time * 0.85 + rng(i, 8)) % 1;
-        const lane = (i % 9 - 4) * 0.42;
-        arr[i * 3]     = lane + (rng(i, 9) - 0.5) * 0.18;
-        arr[i * 3 + 1] = 2.3 - life * 3.1;
-        arr[i * 3 + 2] = (rng(i, 10) - 0.5) * 0.5;
+        const life = (time * 0.9 + rng(i, 8)) % 1;
+        const lane = (i % 7 - 3) * 0.32;
+        posC[i * 3]     = lane + (rng(i, 9) - 0.5) * 0.12;
+        posC[i * 3 + 1] = 2.6 - life * 3.0;
+        posC[i * 3 + 2] = (rng(i, 10) - 0.5) * 0.4;
       }
       chargeP.geometry.attributes.position.needsUpdate = true;
     }
 
+    function setHero(hero, prog, vis) {
+      const y = 7.2 - prog * 4.25;          // 7.2 → ~2.95 (slab top)
+      hero.position.y = y;
+      hero.userData.head.material.opacity = vis;
+      hero.userData.streak.material.opacity = vis * 0.8;
+    }
+
     /* ---- Render loop --------------------------------------------- */
-    // `clock` drives particle motion; `phaseT` drives the cinematic
-    // timeline. Both are accumulators, so they freeze on pause and the
-    // loop resumes exactly where it left off (no phase jump).
     let running = false, rafId = 0, tPrev = 0, clock = 0, phaseT = 0;
-    let px = 0, py = 0; // pointer parallax
+    let px = 0, py = 0;
 
     function frame(now) {
       if (!running) return;
       rafId = requestAnimationFrame(frame);
       if (!tPrev) tPrev = now;
       const dt = Math.min(0.05, (now - tPrev) / 1000);
-      tPrev = now;
-      clock += dt;
-      phaseT += dt;
+      tPrev = now; clock += dt; phaseT += dt;
       const u = (phaseT % LOOP) / LOOP;
 
-      // Camera + subtle pointer parallax.
       sampleCamera(u);
       camera.position.copy(_p);
-      camera.position.x += px * 0.9;
-      camera.position.y += -py * 0.5;
+      camera.position.x += px * 0.7;
+      camera.position.y += -py * 0.4;
       camera.lookAt(_t);
 
-      updatePhotons(clock);
+      updateAmbient(clock);
       updateLight(clock);
       updateCharge(clock);
 
-      // Phase-gated opacities.
-      photons.material.opacity = 0.85;
-      const lw = windowed(u, 0.14, 0.40, 0.07);
-      lightP.material.opacity = 0.9 * lw;
-      glowI.material.opacity = 0.85 * windowed(u, 0.15, 0.36, 0.05);
-      glowI.scale.setScalar(4 + 3 * windowed(u, 0.15, 0.40, 0.1));
+      // Ambient photons fade out once we focus on a stack.
+      amb.material.opacity = 0.5 * (1 - clamp01((u - 0.06) / 0.08)) + 0.12;
 
-      const cw = windowed(u, 0.42, 0.66, 0.06);
-      chargeP.material.opacity = 0.95 * cw;
-      glowD.material.opacity = 0.8 * windowed(u, 0.43, 0.6, 0.05);
-      cmos.material.opacity = 0.7 * windowed(u, 0.5, 0.7, 0.08);
+      // Hero photons.
+      setHero(heroI, clamp01(u / 0.14), windowed(u, -0.02, 0.17, 0.03) || (u < 0.14 ? 1 : 0));
+      heroI.userData.head.material.opacity = u < 0.155 ? 1 : Math.max(0, 1 - (u - 0.155) / 0.02);
+      heroI.userData.streak.material.opacity = heroI.userData.head.material.opacity * 0.8;
+      setHero(heroD, clamp01((u - 0.40) / 0.10), 0);
+      const hdVis = (u > 0.40 && u < 0.515) ? 1 : Math.max(0, 1 - Math.abs(u - 0.50) / 0.02);
+      heroD.userData.head.material.opacity = (u > 0.40 && u < 0.52) ? hdVis : 0;
+      heroD.userData.streak.material.opacity = heroD.userData.head.material.opacity * 0.8;
 
-      // Output reveal + scan sweep (shot 4) and hero glow (shot 5).
-      const ow = windowed(u, 0.64, 0.82, 0.05);
-      // Indirect output only during the comparison shot; the direct
-      // output lingers into the hero hold.
-      outIndirect.material.opacity = 0.95 * ow;
-      outDirect.material.opacity = 0.98 * Math.max(ow, windowed(u, 0.8, 0.97, 0.06));
-      const sweep = windowed(u, 0.66, 0.78, 0.02);
-      scan.material.opacity = 0.9 * sweep;
-      scan.position.y = -3.7 + 1.5 - (u - 0.66) / 0.12 * 3.0;
-      glowHero.material.opacity = 0.55 * windowed(u, 0.82, 0.97, 0.06);
+      // INDIRECT: warm bloom + lateral spread + softened field at photodiode
+      bloomI.material.opacity = 0.9 * windowed(u, 0.14, 0.34, 0.04);
+      bloomI.scale.setScalar(4 + 5 * windowed(u, 0.14, 0.39, 0.12));
+      lightP.material.opacity = 0.95 * windowed(u, 0.15, 0.40, 0.06);
+      fieldI.material.opacity = 0.7 * windowed(u, 0.29, 0.40, 0.04);
 
-      updateCaptions(u);
-      updateFade(u);
+      // DIRECT: cold impact + tight charge column + localized pixel
+      sparkD.material.opacity = 0.95 * windowed(u, 0.50, 0.60, 0.03);
+      chargeP.material.opacity = 0.98 * windowed(u, 0.51, 0.67, 0.05);
+      pixelD.material.opacity = 0.95 * windowed(u, 0.60, 0.69, 0.03);
+      pixelD.scale.setScalar(0.7 + 0.6 * windowed(u, 0.60, 0.69, 0.05));
+      cmos.material.opacity = 0.7 * windowed(u, 0.55, 0.70, 0.05);
+      heroEnd.material.opacity = 0.4 * windowed(u, 0.60, 0.70, 0.05);
+
+      // COMPARISON outputs (same pattern; soft vs sharp).
+      const ow = windowed(u, 0.71, 1.0, 0.05);
+      outI.material.opacity = 0.95 * ow;
+      outD.material.opacity = 0.98 * ow;
 
       renderer.render(scene3, camera);
+      updateCaptions(u);
+      updateTags(u);   // after render: camera matrices are current
+      updateFade(u);
     }
 
-    /* ---- Sizing -------------------------------------------------- */
     function resize() {
-      const w = root.clientWidth || 1;
-      const h = root.clientHeight || 1;
+      const w = root.clientWidth || 1, h = root.clientHeight || 1;
       renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, DPR_CAP));
       renderer.setSize(w, h, false);
       camera.aspect = w / h;
@@ -451,7 +451,6 @@
     else window.addEventListener('resize', resize);
     resize();
 
-    /* ---- Pointer parallax (desktop fine-pointer only) ------------ */
     if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
       root.addEventListener('pointermove', (e) => {
         const r = root.getBoundingClientRect();
@@ -461,20 +460,9 @@
       root.addEventListener('pointerleave', () => { px = 0; py = 0; });
     }
 
-    /* ---- Run/pause gating ---------------------------------------- */
-    function play() {
-      if (running) return;
-      running = true;
-      tPrev = 0;                 // re-baseline dt on the next frame
-      rafId = requestAnimationFrame(frame);
-    }
-    function pause() {
-      if (!running) return;
-      running = false;
-      cancelAnimationFrame(rafId);
-    }
+    function play() { if (running) return; running = true; tPrev = 0; rafId = requestAnimationFrame(frame); }
+    function pause() { if (!running) return; running = false; cancelAnimationFrame(rafId); }
 
-    // Visibility: pause when scrolled away or tab hidden.
     if ('IntersectionObserver' in window) {
       const vio = new IntersectionObserver((entries) => {
         entries.forEach((e) => { e.isIntersecting ? play() : pause(); });
@@ -511,40 +499,45 @@
     return tex;
   }
 
-  // Resolution-target line pairs; `soft` pre-blurs to read as the
-  // indirect (less localised) output.
+  // Identical resolution-target pattern; `soft` pre-blurs and widens
+  // the spots (indirect), else crisp line pairs + pixel grid (direct).
   function outputPlane(THREE, soft) {
-    const w = 256, h = 160, c = document.createElement('canvas');
+    const w = 256, h = 168, c = document.createElement('canvas');
     c.width = w; c.height = h;
     const ctx = c.getContext('2d');
     ctx.fillStyle = '#0a141b';
     ctx.fillRect(0, 0, w, h);
-    if (soft) ctx.filter = 'blur(2.2px)';
-    ctx.fillStyle = '#bfe6ff';
-    // groups of vertical bars at increasing frequency (line pairs)
-    const groups = [[24, 8], [86, 5], [134, 3.2], [176, 2], [212, 1.3]];
+    if (soft) ctx.filter = 'blur(2.6px)';
+    ctx.fillStyle = soft ? '#ffd9a0' : '#cdecff';
+    // identical line-pair groups (increasing frequency)
+    const groups = [[22, 9], [82, 6], [132, 3.6], [176, 2.2], [214, 1.4]];
     groups.forEach(([x0, bw]) => {
-      for (let i = 0; i < 4; i++) {
-        ctx.fillRect(x0 + i * bw * 2, 28, bw, 104);
-      }
+      for (let i = 0; i < 4; i++) ctx.fillRect(x0 + i * bw * 2, 24, bw, 86);
     });
+    // identical dot row (resolution spots)
+    for (let i = 0; i < 7; i++) {
+      ctx.beginPath();
+      ctx.arc(30 + i * 32, 138, soft ? 7 : 4, 0, Math.PI * 2);
+      ctx.fill();
+    }
     ctx.filter = 'none';
+    // direct gets a faint crisp pixel grid to read as "localized"
+    if (!soft) {
+      ctx.strokeStyle = 'rgba(120,200,255,0.18)';
+      ctx.lineWidth = 1;
+      for (let x = 0; x <= w; x += 16) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke(); }
+      for (let y = 0; y <= h; y += 16) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke(); }
+    }
     const tex = new THREE.CanvasTexture(c);
     tex.needsUpdate = true;
-    const geo = new THREE.PlaneGeometry(4.8, 3);
-    const mat = new THREE.MeshBasicMaterial({
-      map: tex, transparent: true, opacity: 0, depthWrite: false
-    });
-    return new THREE.Mesh(geo, mat);
+    const mat = new THREE.MeshBasicMaterial({ map: tex, transparent: true, opacity: 0, depthWrite: false });
+    return new THREE.Mesh(new THREE.PlaneGeometry(4.6, 3.0), mat);
   }
 
-  // "Microchip city" — thin emissive traces + pads.
   function makeTraceTexture(THREE) {
     const s = 256, c = document.createElement('canvas');
     c.width = c.height = s;
     const ctx = c.getContext('2d');
-    ctx.fillStyle = 'rgba(8,18,26,0)';
-    ctx.fillRect(0, 0, s, s);
     ctx.strokeStyle = 'rgba(95,182,230,0.85)';
     ctx.lineWidth = 1.4;
     for (let i = 1; i < 8; i++) {

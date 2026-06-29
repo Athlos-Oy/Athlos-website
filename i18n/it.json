@@ -148,12 +148,20 @@
           }
         },
         "experience": {
-          "intro": "Dal fotone X al segnale d'immagine.",
-          "indirect": "Uno scintillatore converte i raggi X in luce, che si diffonde prima della rilevazione.",
-          "direct": "La conversione diretta genera carica localizzata nel materiale del rivelatore.",
-          "output": "Meno fasi di conversione. Un percorso del segnale più breve e più localizzato.",
-          "hero": "Conversione diretta. Vantaggio diretto.",
-          "aria": "Sequenza animata: i fotoni X entrano in due tipi di rivelatore. Nel rivelatore indiretto uno scintillatore converte i raggi X in luce che si diffonde lateralmente prima di raggiungere la lettura. Nel rivelatore a conversione diretta di Athlos l'energia dei raggi X diventa carica localizzata nello strato di CdTe o silicio e viene raccolta direttamente verso il basso nella lettura CMOS, per un percorso del segnale più breve e più localizzato."
+          "enter": "I raggi X entrano",
+          "spread": "La luce si diffonde",
+          "charge": "La carica si forma",
+          "localize": "Il segnale si localizza",
+          "summary": "Meno fasi di conversione. Percorso del segnale più localizzato.",
+          "layers": {
+            "scintillator": "Scintillatore",
+            "photodiode": "Fotodiodo",
+            "cdte": "CdTe / Si",
+            "cmos": "Lettura CMOS"
+          },
+          "softerTag": "Più diffuso · più ampio",
+          "sharperTag": "Più nitido · localizzato",
+          "aria": "Sequenza animata che segue un singolo fotone X in due rivelatori. Nel rivelatore indiretto il fotone colpisce uno scintillatore che lo converte in luce visibile calda, che si diffonde lateralmente prima di raggiungere il fotodiodo — un segnale più diffuso e ampio. Nel rivelatore a conversione diretta di Athlos l'energia del fotone diventa una carica stretta e localizzata nello strato di CdTe o silicio che scende direttamente nella lettura CMOS — un segnale più nitido e localizzato. Il confronto finale mostra lo stesso motivo di test, più diffuso sul lato indiretto e più nitido sul lato diretto."
         }
       },
       "products": {

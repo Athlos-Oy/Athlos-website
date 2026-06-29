@@ -5,28 +5,36 @@
     fall back to the static SVG poster below and never load WebGL:
     prefers-reduced-motion, no WebGL, and automation (navigator.
     webdriver — keeps visual-regression snapshots deterministic).
-    Copy: i18n pages.home.tech.experience.* (cinematic captions) and
-    pages.home.tech.comparison.* (poster).
+    Copy: i18n pages.home.tech.experience.* (captions + layer tags)
+    and pages.home.tech.comparison.* (poster).
    ===================================================== -#}
 {%- set x = "pages.home.tech.experience" -%}
 <div class="dce reveal" data-dce>
   <canvas class="dce-canvas" aria-hidden="true"></canvas>
 
-  {#- cinematic captions — JS reveals one line per shot -#}
+  {#- layer tags: positioned by JS from 3D anchors, faded in on the event -#}
+  <div class="dce-tags" aria-hidden="true">
+    <span class="dce-tag" data-tag="scintillator">{{ (x ~ ".layers.scintillator") | t }}</span>
+    <span class="dce-tag" data-tag="photodiode">{{ (x ~ ".layers.photodiode") | t }}</span>
+    <span class="dce-tag" data-tag="cdte">{{ (x ~ ".layers.cdte") | t }}</span>
+    <span class="dce-tag" data-tag="cmos">{{ (x ~ ".layers.cmos") | t }}</span>
+    <span class="dce-tag dce-tag--soft" data-tag="softer">{{ (x ~ ".softerTag") | t }}</span>
+    <span class="dce-tag dce-tag--sharp" data-tag="sharper">{{ (x ~ ".sharperTag") | t }}</span>
+  </div>
+
+  {#- bottom caption line: JS reveals one per beat -#}
   <div class="dce-captions" aria-hidden="true">
-    <span class="dce-line" data-shot="1">{{ (x ~ ".intro") | t }}</span>
-    <span class="dce-line" data-shot="2">{{ (x ~ ".indirect") | t }}</span>
-    <span class="dce-line" data-shot="3">{{ (x ~ ".direct") | t }}</span>
-    <span class="dce-line" data-shot="4">{{ (x ~ ".output") | t }}</span>
-    <span class="dce-line" data-shot="5">{{ (x ~ ".hero") | t }}</span>
+    <span class="dce-line" data-cap="enter">{{ (x ~ ".enter") | t }}</span>
+    <span class="dce-line" data-cap="spread">{{ (x ~ ".spread") | t }}</span>
+    <span class="dce-line" data-cap="charge">{{ (x ~ ".charge") | t }}</span>
+    <span class="dce-line" data-cap="localize">{{ (x ~ ".localize") | t }}</span>
+    <span class="dce-line dce-line--summary" data-cap="summary">{{ (x ~ ".summary") | t }}</span>
   </div>
 
   {#- dip-to-black covering the loop seam -#}
   <div class="dce-fade" aria-hidden="true"></div>
 
-  {#- static fallback: the existing pure-SVG comparison panel. Shown
-      until WebGL boots (.dce-live) and whenever a guard trips
-      (.dce-static). -#}
+  {#- static fallback: existing pure-SVG comparison panel -#}
   <div class="dce-poster">
     {% include "partials/conversion-comparison.njk" %}
   </div>

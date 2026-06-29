@@ -1998,6 +1998,40 @@ body::before {
   opacity: 1;
   transform: translateY(0);
 }
+/* The summary line (final comparison) reads a touch larger. */
+.dce-line--summary {
+  font-size: clamp(1rem, 1.7vw, 1.32rem);
+  font-weight: 600;
+  max-width: 34rem;
+}
+
+/* Layer tags — positioned over 3D anchors by JS (transform + opacity). */
+.dce-tags {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+.dce-tag {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  padding: 0.26rem 0.62rem;
+  font-size: clamp(0.7rem, 1.05vw, 0.83rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #eaf4fc;
+  background: rgba(8, 16, 22, 0.62);
+  border: 1px solid rgba(143, 210, 245, 0.38);
+  border-radius: 999px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.45);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  will-change: transform, opacity;
+}
+.dce-tag--soft { border-color: rgba(255, 198, 128, 0.5); color: #ffe6c2; }
+.dce-tag--sharp { border-color: rgba(120, 205, 255, 0.6); color: #d6f1ff; }
 
 /* Dip-to-black covering the loop seam (opacity driven by JS). */
 .dce-fade {

@@ -142,12 +142,20 @@
           }
         },
         "experience": {
-          "intro": "Del fotón de rayos X a la señal de imagen.",
-          "indirect": "Un centellador convierte los rayos X en luz, que se dispersa antes de la detección.",
-          "direct": "La conversión directa genera carga localizada en el material del detector.",
-          "output": "Menos etapas de conversión. Una ruta de señal más corta y localizada.",
-          "hero": "Conversión directa. Ventaja directa.",
-          "aria": "Secuencia animada: los fotones de rayos X entran en dos tipos de detector. En el detector indirecto, un centellador convierte los rayos X en luz que se dispersa lateralmente antes de llegar a la lectura. En el detector de conversión directa de Athlos, la energía de los rayos X se convierte en carga localizada en la capa de CdTe o silicio y se recoge directamente hacia abajo en la lectura CMOS, para una ruta de señal más corta y localizada."
+          "enter": "Entran los rayos X",
+          "spread": "La luz se dispersa",
+          "charge": "Se forma la carga",
+          "localize": "La señal se localiza",
+          "summary": "Menos etapas de conversión. Ruta de señal más localizada.",
+          "layers": {
+            "scintillator": "Centellador",
+            "photodiode": "Fotodiodo",
+            "cdte": "CdTe / Si",
+            "cmos": "Lectura CMOS"
+          },
+          "softerTag": "Más difuso · más ancho",
+          "sharperTag": "Más nítido · localizado",
+          "aria": "Secuencia animada que sigue a un único fotón de rayos X dentro de dos detectores. En el detector indirecto, el fotón incide en un centellador que lo convierte en luz visible cálida, que se dispersa lateralmente antes de llegar al fotodiodo — una señal más difusa y ancha. En el detector de conversión directa de Athlos, la energía del fotón se convierte en una carga estrecha y localizada en la capa de CdTe o silicio que desciende directamente a la lectura CMOS — una señal más nítida y localizada. La comparación final muestra el mismo patrón de prueba, más difuso en el lado indirecto y más nítido en el lado directo."
         }
       },
       "products": {

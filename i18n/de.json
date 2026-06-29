@@ -142,12 +142,20 @@
           }
         },
         "experience": {
-          "intro": "Vom Röntgenphoton zum Bildsignal.",
-          "indirect": "Ein Szintillator wandelt Röntgenstrahlen in Licht um, das sich vor der Detektion ausbreitet.",
-          "direct": "Direktkonversion erzeugt lokalisierte Ladung direkt im Detektormaterial.",
-          "output": "Weniger Wandlungsstufen. Ein kürzerer, stärker lokalisierter Signalweg.",
-          "hero": "Direktkonversion. Direkter Vorteil.",
-          "aria": "Animierte Sequenz: Röntgenphotonen treffen auf zwei Detektortypen. Im indirekten Detektor wandelt ein Szintillator Röntgenstrahlen in Licht um, das sich seitlich ausbreitet, bevor es den Ausleseschaltkreis erreicht. Im Athlos-Direktkonversionsdetektor wird die Röntgenenergie im CdTe- oder Siliziummaterial zu lokalisierter Ladung und direkt nach unten in den CMOS-Ausleseschaltkreis gesammelt – ein kürzerer, stärker lokalisierter Signalweg."
+          "enter": "Röntgenstrahlen treten ein",
+          "spread": "Licht breitet sich aus",
+          "charge": "Ladung entsteht",
+          "localize": "Signal lokalisiert sich",
+          "summary": "Weniger Wandlungsstufen. Stärker lokalisierter Signalweg.",
+          "layers": {
+            "scintillator": "Szintillator",
+            "photodiode": "Photodiode",
+            "cdte": "CdTe / Si",
+            "cmos": "CMOS-Auslese"
+          },
+          "softerTag": "Weicher · breiter",
+          "sharperTag": "Schärfer · lokalisiert",
+          "aria": "Animierte Sequenz, die einem einzelnen Röntgenphoton in zwei Detektoren folgt. Im indirekten Detektor trifft das Photon auf einen Szintillator, der es in warmes sichtbares Licht umwandelt, das sich seitlich ausbreitet, bevor es die Photodiode erreicht – ein weicheres, breiteres Signal. Im Athlos-Direktkonversionsdetektor wird die Energie des Photons zu einer eng begrenzten, lokalisierten Ladung in der CdTe- oder Siliziumschicht, die direkt nach unten in die CMOS-Auslese wandert – ein schärferes, stärker lokalisiertes Signal. Der abschließende Vergleich zeigt dasselbe Testmuster: auf der indirekten Seite weicher, auf der direkten Seite schärfer."
         }
       },
       "products": {

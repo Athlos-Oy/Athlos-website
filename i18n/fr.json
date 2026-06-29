@@ -142,12 +142,20 @@
           }
         },
         "experience": {
-          "intro": "Du photon X au signal d'image.",
-          "indirect": "Un scintillateur convertit les rayons X en lumière, qui se diffuse avant la détection.",
-          "direct": "La conversion directe génère une charge localisée dans le matériau du détecteur.",
-          "output": "Moins d'étapes de conversion. Un trajet du signal plus court et plus localisé.",
-          "hero": "Conversion directe. Avantage direct.",
-          "aria": "Séquence animée : des photons X pénètrent dans deux types de détecteurs. Dans le détecteur indirect, un scintillateur convertit les rayons X en lumière qui se diffuse latéralement avant d'atteindre la lecture. Dans le détecteur à conversion directe d'Athlos, l'énergie des rayons X devient une charge localisée dans la couche de CdTe ou de silicium, collectée directement vers le bas dans la lecture CMOS — un trajet du signal plus court et plus localisé."
+          "enter": "Les rayons X entrent",
+          "spread": "La lumière se diffuse",
+          "charge": "La charge se forme",
+          "localize": "Le signal se localise",
+          "summary": "Moins d'étapes de conversion. Trajet du signal plus localisé.",
+          "layers": {
+            "scintillator": "Scintillateur",
+            "photodiode": "Photodiode",
+            "cdte": "CdTe / Si",
+            "cmos": "Lecture CMOS"
+          },
+          "softerTag": "Plus diffus · plus large",
+          "sharperTag": "Plus net · localisé",
+          "aria": "Séquence animée suivant un seul photon X dans deux détecteurs. Dans le détecteur indirect, le photon frappe un scintillateur qui le convertit en lumière visible chaude, laquelle se diffuse latéralement avant d'atteindre la photodiode — un signal plus diffus et plus large. Dans le détecteur à conversion directe d'Athlos, l'énergie du photon devient une charge serrée et localisée dans la couche de CdTe ou de silicium qui descend directement dans la lecture CMOS — un signal plus net et plus localisé. La comparaison finale montre le même motif de test, plus diffus du côté indirect et plus net du côté direct."
         }
       },
       "products": {
