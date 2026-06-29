@@ -313,4 +313,27 @@
     dccPanel.classList.add('dcc-inview');
   }
 
+  /* Subtle pointer parallax on the conversion panel (desktop / fine
+     pointer only; respects reduced-motion). Sets --dcc-px/--dcc-py,
+     which the .dcc-bg / .dcc-fg layers translate by. */
+  if (dccPanel &&
+      window.matchMedia('(hover: hover) and (pointer: fine)').matches &&
+      !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let raf = 0, px = 0, py = 0;
+    dccPanel.addEventListener('pointermove', (e) => {
+      const r = dccPanel.getBoundingClientRect();
+      px = ((e.clientX - r.left) / r.width - 0.5) * 2;
+      py = ((e.clientY - r.top) / r.height - 0.5) * 2;
+      if (!raf) raf = requestAnimationFrame(() => {
+        raf = 0;
+        dccPanel.style.setProperty('--dcc-px', px.toFixed(3));
+        dccPanel.style.setProperty('--dcc-py', py.toFixed(3));
+      });
+    });
+    dccPanel.addEventListener('pointerleave', () => {
+      dccPanel.style.setProperty('--dcc-px', '0');
+      dccPanel.style.setProperty('--dcc-py', '0');
+    });
+  }
+
 })();

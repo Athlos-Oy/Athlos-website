@@ -137,7 +137,8 @@
             "cmos": "CMOS readout",
             "path": "Shorter signal path",
             "output": "Sharper signal localization"
-          }
+          },
+          "microcopy": "From invisible photons to image detail — with fewer conversion stages."
         }
       },
       "products": {
