@@ -148,11 +148,11 @@
           }
         },
         "experience": {
-          "enter": "I raggi X entrano nel rivelatore",
+          "enter": "I raggi X entrano",
           "indirectTitle": "Conversione indiretta",
-          "indirectSub": "I raggi X diventano luce — la luce si diffonde prima della rilevazione",
+          "indirectSub": "I raggi X diventano luce — la luce si diffonde",
           "directTitle": "Conversione diretta",
-          "directSub": "Carica localizzata, percorso del segnale più corto",
+          "directSub": "Generazione diretta di carica — percorso del segnale localizzato",
           "readoutTitle": "Lettura CMOS",
           "readoutSub": "Segnale raccolto sul pixel",
           "payoff": "Conversione diretta. Vantaggio diretto.",
@@ -164,8 +164,8 @@
             "electrodes": "Elettrodi di pixel",
             "cmos": "CMOS / ASIC"
           },
-          "softerTag": "Indiretta — più morbida",
-          "sharperTag": "Diretta — più nitida",
+          "softerTag": "Localizzazione più morbida",
+          "sharperTag": "Localizzazione più nitida",
           "aria": "Sequenza cinematografica che segue un singolo fotone X in un modulo rivelatore Athlos. La telecamera segue il fotone dall'alto, si immerge attraverso la finestra del sensore in una vista in sezione e mostra brevemente il percorso indiretto convenzionale: uno scintillatore converte i raggi X in luce visibile che si diffonde lateralmente prima di raggiungere il fotodiodo. Nel percorso diretto, l'energia del fotone diventa carica localizzata nel CdTe o nel silicio, raccolta da un elettrodo di pixel e letta dall'elettronica CMOS. Il rivelatore si richiude e presenta un'immagine nitida — con un piccolo confronto: indiretta più morbida, diretta più nitida."
         }
       },

@@ -140,11 +140,11 @@
           }
         },
         "experience": {
-          "enter": "X-rays enter the detector",
+          "enter": "X-rays enter",
           "indirectTitle": "Indirect conversion",
-          "indirectSub": "X-rays become light — light spreads before detection",
+          "indirectSub": "X-rays become light — light spreads",
           "directTitle": "Direct conversion",
-          "directSub": "Localized charge, shorter signal path",
+          "directSub": "Direct charge generation — localized signal path",
           "readoutTitle": "CMOS readout",
           "readoutSub": "Signal collected at the pixel",
           "payoff": "Direct conversion. Direct advantage.",
@@ -156,8 +156,8 @@
             "electrodes": "Pixel electrodes",
             "cmos": "CMOS / ASIC"
           },
-          "softerTag": "Indirect — softer",
-          "sharperTag": "Direct — sharper",
+          "softerTag": "Softer localization",
+          "sharperTag": "Sharper localization",
           "aria": "Cinematic sequence following a single X-ray photon into an Athlos detector module. The camera tracks the photon from above as it approaches the detector, dives through the sensor window into a cutaway view, and briefly shows the conventional indirect path, where a scintillator converts X-rays into visible light that spreads sideways before reaching a photodiode. In the direct-conversion path, the photon's energy becomes localized electric charge in the CdTe or silicon layer, which is collected at a pixel electrode and read out through the CMOS electronics. The detector then closes up and presents a sharp image, with a small comparison showing the softer indirect result and the sharper direct result."
         }
       },

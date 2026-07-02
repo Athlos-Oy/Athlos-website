@@ -142,11 +142,11 @@
           }
         },
         "experience": {
-          "enter": "Röntgenstrahlen treffen auf den Detektor",
+          "enter": "Röntgenstrahlen treten ein",
           "indirectTitle": "Indirekte Konversion",
-          "indirectSub": "Röntgenstrahlen werden zu Licht — Licht streut vor der Detektion",
+          "indirectSub": "Röntgenstrahlen werden zu Licht — das Licht streut",
           "directTitle": "Direkte Konversion",
-          "directSub": "Lokalisierte Ladung, kürzerer Signalweg",
+          "directSub": "Direkte Ladungserzeugung — lokalisierter Signalweg",
           "readoutTitle": "CMOS-Auslese",
           "readoutSub": "Signal am Pixel gesammelt",
           "payoff": "Direkte Konversion. Direkter Vorteil.",
@@ -158,8 +158,8 @@
             "electrodes": "Pixelelektroden",
             "cmos": "CMOS / ASIC"
           },
-          "softerTag": "Indirekt — weicher",
-          "sharperTag": "Direkt — schärfer",
+          "softerTag": "Weichere Lokalisierung",
+          "sharperTag": "Schärfere Lokalisierung",
           "aria": "Filmische Sequenz, die ein einzelnes Röntgenphoton in ein Athlos-Detektormodul begleitet. Die Kamera folgt dem Photon von oben, taucht durch das Sensorfenster in eine Schnittansicht ein und zeigt kurz den konventionellen indirekten Weg: Ein Szintillator wandelt Röntgenstrahlen in sichtbares Licht um, das sich seitlich ausbreitet, bevor es die Photodiode erreicht. Beim direkten Weg wird die Energie des Photons unmittelbar im CdTe- oder Siliziummaterial zu lokalisierter Ladung, die an einer Pixelelektrode gesammelt und über die CMOS-Elektronik ausgelesen wird. Der Detektor schließt sich wieder und liefert ein scharfes Bild — mit einem kleinen Vergleich: indirekt weicher, direkt schärfer."
         }
       },

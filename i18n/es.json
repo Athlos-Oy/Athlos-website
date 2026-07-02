@@ -142,11 +142,11 @@
           }
         },
         "experience": {
-          "enter": "Los rayos X entran en el detector",
+          "enter": "Los rayos X entran",
           "indirectTitle": "Conversión indirecta",
-          "indirectSub": "Los rayos X se convierten en luz — la luz se dispersa antes de la detección",
+          "indirectSub": "Los rayos X se convierten en luz — la luz se dispersa",
           "directTitle": "Conversión directa",
-          "directSub": "Carga localizada, recorrido de señal más corto",
+          "directSub": "Generación directa de carga — recorrido de señal localizado",
           "readoutTitle": "Lectura CMOS",
           "readoutSub": "Señal recogida en el píxel",
           "payoff": "Conversión directa. Ventaja directa.",
@@ -158,8 +158,8 @@
             "electrodes": "Electrodos de píxel",
             "cmos": "CMOS / ASIC"
           },
-          "softerTag": "Indirecta — más difusa",
-          "sharperTag": "Directa — más nítida",
+          "softerTag": "Localización más suave",
+          "sharperTag": "Localización más nítida",
           "aria": "Secuencia cinematográfica que sigue a un único fotón de rayos X dentro de un módulo detector Athlos. La cámara sigue al fotón desde arriba, se sumerge a través de la ventana del sensor en una vista de corte y muestra brevemente la vía indirecta convencional: un centellador convierte los rayos X en luz visible que se dispersa lateralmente antes de llegar al fotodiodo. En la vía directa, la energía del fotón se convierte en carga localizada en el CdTe o el silicio, recogida por un electrodo de píxel y leída por la electrónica CMOS. El detector se cierra de nuevo y presenta una imagen nítida — con una pequeña comparación: indirecta más difusa, directa más nítida."
         }
       },

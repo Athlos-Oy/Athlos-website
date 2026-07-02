@@ -142,11 +142,11 @@
           }
         },
         "experience": {
-          "enter": "Les rayons X atteignent le détecteur",
+          "enter": "Les rayons X entrent",
           "indirectTitle": "Conversion indirecte",
-          "indirectSub": "Les rayons X deviennent lumière — la lumière s'étale avant la détection",
+          "indirectSub": "Les rayons X deviennent lumière — la lumière s'étale",
           "directTitle": "Conversion directe",
-          "directSub": "Charge localisée, trajet du signal plus court",
+          "directSub": "Génération directe de charge — trajet du signal localisé",
           "readoutTitle": "Lecture CMOS",
           "readoutSub": "Signal collecté au niveau du pixel",
           "payoff": "Conversion directe. Avantage direct.",
@@ -158,8 +158,8 @@
             "electrodes": "Électrodes de pixel",
             "cmos": "CMOS / ASIC"
           },
-          "softerTag": "Indirecte — plus floue",
-          "sharperTag": "Directe — plus nette",
+          "softerTag": "Localisation plus douce",
+          "sharperTag": "Localisation plus nette",
           "aria": "Séquence cinématique suivant un photon X unique dans un module détecteur Athlos. La caméra suit le photon vu de dessus, plonge à travers la fenêtre du capteur dans une vue en coupe et montre brièvement la voie indirecte conventionnelle : un scintillateur convertit les rayons X en lumière visible qui s'étale latéralement avant d'atteindre la photodiode. Dans la voie directe, l'énergie du photon devient une charge localisée dans le CdTe ou le silicium, collectée par une électrode de pixel puis lue par l'électronique CMOS. Le détecteur se referme et présente une image nette — avec une petite comparaison : indirecte plus floue, directe plus nette."
         }
       },

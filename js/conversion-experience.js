@@ -7,25 +7,28 @@
    the Industrial IP67 TDI design language: black machined body,
    carbon-fibre entrance window, heatsink fins, M12 connector):
 
-     SHOT 1 (0.0–2.0s)   Bird's-eye tracking — the photon descends
-                         toward the detector lying on a dark stage.
+     SHOT 1 (0.0–2.0s)   X-RAYS ENTER — high camera above the module;
+                         the hero photon (plus a few secondary photons)
+                         falls STRAIGHT DOWN, normal to the detector
+                         plane (physically correct imaging geometry).
      SHOT 2 (2.0–3.5s)   Macro dive to the sensor window; a glowing
                          SECTION CUT sweeps the housing open and the
                          body fades to glass — a cutaway of a real
                          engineered device.
-     SHOT 3 (3.5–5.8s)   GHOST OF INDIRECT — a spectral copy of the
-                         photon peels into a translucent scintillator
-                         stack: warm light BLOOMS and SPREADS sideways
-                         before a photodiode. Clearly "the other way".
-     SHOT 4 (5.8–8.0s)   DIRECT HERO — the real photon is absorbed in
-                         CdTe/Si: one precise localized event, charge
-                         drawn straight down to a pixel electrode.
-     SHOT 5 (8.0–10.2s)  PIXEL CITY — the camera flies low over the
-                         bump-bond plaza and CMOS traces as the pulse
-                         races into the ASIC.
-     SHOT 6 (10.2–13s)   The section closes, the body re-solidifies,
-                         and the detector presents a crisp image
-                         panel with a soft-vs-sharp inset.
+     SHOT 3 (3.5–6.8s)   INDIRECT, SLOWED — a ghost photon drops
+                         vertically (same beam direction) into the
+                         translucent scintillator: warm light blooms
+                         and SPREADS sideways across several pixel
+                         regions of the photodiode. Held long.
+     SHOT 4 (6.8–10.3s)  DIRECT, SLOWED — the hero photon is absorbed
+                         in CdTe/Si: one precise localized event,
+                         charge drawn straight down to ONE pixel
+                         electrode, then out through CMOS traces to
+                         the ASIC. Same vertical beam, same geometry.
+     SHOT 5 (10.3–13s)   CLIMAX — the housing re-solidifies and TWO
+                         identical test patterns scan-line-reveal side
+                         by side: indirect softer/wider, direct crisp/
+                         localized. Held long enough to actually read.
                          "Direct conversion. Direct advantage."
 
    Constraints: Three.js lazy-loaded (vendored, pinned ESM) only when
@@ -444,8 +447,15 @@
     hero.position.set(HX, 13.5, HZ);
     scene3.add(hero);
 
-    // Ghost photon (spectral copy that peels off into the scintillator).
-    const ghostPhoton = glowSprite(0xffe9c4, 0.44, HX, 0.6, 0.8);
+    // Ghost photon — drops STRAIGHT DOWN (same beam direction as the
+    // hero) into the scintillator lane.
+    const ghostPhoton = glowSprite(0xffe9c4, 0.44, HX, 2.6, GZ);
+
+    // Secondary photons in the entry shot — the beam, not one stray.
+    const SIDEKICKS = [];
+    [[-3.2, 0.0], [0.6, 0.018], [2.4, 0.036]].forEach(([sx, off]) => {
+      SIDEKICKS.push({ s: glowSprite(COL.photon, 0.3, sx, 12, HZ), off });
+    });
 
     // Window ripple, absorption flash, electrode / ASIC glows.
     const winRipple = glowSprite(COL.coldHi, 0.7, HX, 0.05, HZ);
@@ -466,6 +476,26 @@
     smear.rotation.x = -Math.PI / 2;
     smear.position.set(HX, -0.712, GZ);
     scene3.add(smear);
+
+    // Pixel-region ticks on the photodiode: SEVERAL of them glow under
+    // the spread light — the indirect weakness made countable (vs ONE
+    // electrode lighting up on the direct side).
+    const diodeTicks = (function () {
+      const n = 7;
+      const geo = new THREE.BufferGeometry();
+      const arr = new Float32Array(n * 3);
+      for (let i = 0; i < n; i++) {
+        arr[i * 3] = HX + (i - 3) * 0.55; arr[i * 3 + 1] = -0.705; arr[i * 3 + 2] = GZ;
+      }
+      geo.setAttribute('position', new THREE.BufferAttribute(arr, 3));
+      const p = new THREE.Points(geo, new THREE.PointsMaterial({
+        size: 0.15, map: sprite, color: COL.warm, transparent: true, opacity: 0,
+        blending: THREE.AdditiveBlending, depthWrite: false, sizeAttenuation: true
+      }));
+      p.frustumCulled = false;
+      scene3.add(p);
+      return p;
+    })();
 
     function points(count, color, size) {
       const geo = new THREE.BufferGeometry();
@@ -523,33 +553,49 @@
       PULSES.push(glowSprite(COL.coldHi, 0.34 - i * 0.045, E.x, -0.855, HZ));
     }
 
-    // Final image panel (crisp pattern + soft-vs-sharp inset).
-    const payoff = new THREE.Mesh(
-      new THREE.PlaneGeometry(4.8, 2.8),
-      new THREE.MeshBasicMaterial({
-        map: makePayoffTexture(THREE), transparent: true, opacity: 0, depthWrite: false
-      })
-    );
-    payoff.position.set(0, 2.1, 0.4);
-    scene3.add(payoff);
+    // FINAL COMPARISON — the climax: two identical test patterns side
+    // by side, revealed top-down by a scan line. Indirect = softer /
+    // wider; direct = crisp / localized.
+    function outputPanel(soft, x) {
+      const tex = makeOutputTexture(THREE, soft);
+      const geo = new THREE.PlaneGeometry(3.3, 2.2);
+      geo.translate(0, -1.1, 0);           // origin at the top edge (scan reveal)
+      const mesh = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({
+        map: tex, transparent: true, opacity: 0, depthWrite: false
+      }));
+      mesh.position.set(x, 3.15, 0.4);
+      scene3.add(mesh);
+      const bar = new THREE.Mesh(
+        new THREE.PlaneGeometry(3.3, 0.06),
+        new THREE.MeshBasicMaterial({
+          color: soft ? COL.warmHi : COL.coldHi, transparent: true, opacity: 0,
+          blending: THREE.AdditiveBlending, depthWrite: false
+        })
+      );
+      bar.position.set(x, 3.15, 0.42);
+      scene3.add(bar);
+      return { mesh, bar, tex };
+    }
+    const panelI = outputPanel(true, -1.85);
+    const panelD = outputPanel(false, 1.85);
 
     /* ==============================================================
        CAMERA — one continuous purposeful move (no aimless spin)
     ============================================================== */
     const KEYS = [
-      { u: 0.000, p: [2.4, 11.5, 9.5],  t: [-2.8, 3.8, 1.6] },   // bird's-eye (target overridden: tracks the photon)
-      { u: 0.090, p: [0.8, 8.0, 7.2],   t: [-1.2, 0.8, 0.95] },  // tracking it down
-      { u: 0.165, p: [-3.6, 2.6, 4.3],  t: [-1.2, 0.1, 0.95] },  // macro on window
-      { u: 0.235, p: [-4.0, 1.7, 4.2],  t: [-1.1, -0.35, 0.6] }, // section opens
-      { u: 0.330, p: [-2.4, 1.35, 4.8], t: [-0.8, -0.45, -0.5] },// frame the ghost
-      { u: 0.430, p: [-3.0, 0.9, 3.2],  t: [-1.2, -0.45, 0.9] }, // back to the hero
-      { u: 0.520, p: [-2.3, 0.25, 2.5], t: [-1.2, -0.62, 0.95] },// charge close-up
-      { u: 0.615, p: [-1.5, -0.15, 2.4],t: [-0.5, -0.88, 0.95] },// pixel city, low
-      { u: 0.720, p: [0.9, 0.1, 2.6],   t: [2.9, -0.85, 0.95] }, // pulse → ASIC
-      { u: 0.800, p: [4.4, 4.6, 7.6],   t: [0.4, 0.2, 0.3] },    // pull back
-      { u: 0.880, p: [0.8, 4.2, 9.8],   t: [0.0, 1.5, 0.3] },    // payoff frame
-      { u: 0.965, p: [0.4, 4.35, 10.2], t: [0.0, 1.6, 0.3] },    // hold, drift
-      { u: 1.000, p: [2.4, 11.5, 9.5],  t: [-2.8, 3.8, 1.6] }    // loop (in fade)
+      { u: 0.000, p: [0.5, 12.5, 6.5],  t: [-1.2, 6.0, 0.95] },  // high above (target overridden: tracks the photon)
+      { u: 0.100, p: [-0.6, 8.5, 5.8],  t: [-1.2, 0.8, 0.95] },  // following it down
+      { u: 0.150, p: [-3.4, 2.4, 4.4],  t: [-1.2, 0.1, 0.95] },  // macro on window
+      { u: 0.225, p: [-3.9, 1.8, 4.6],  t: [-0.9, -0.4, 0.3] },  // section opens
+      { u: 0.300, p: [-2.6, 1.5, 4.9],  t: [-0.9, -0.45, -0.6] },// frame the ghost lane
+      { u: 0.460, p: [-1.6, 1.15, 4.5], t: [-0.5, -0.5, -0.85] },// slow drift: light spread held
+      { u: 0.540, p: [-2.8, 0.9, 3.1],  t: [-1.2, -0.45, 0.9] }, // back to the hero lane
+      { u: 0.630, p: [-2.2, 0.3, 2.5],  t: [-1.2, -0.6, 0.95] }, // charge close-up
+      { u: 0.720, p: [-1.0, 0.0, 2.6],  t: [0.6, -0.85, 0.95] }, // traces → ASIC
+      { u: 0.790, p: [3.4, 4.0, 8.2],   t: [0.2, 0.6, 0.3] },    // pull back
+      { u: 0.870, p: [0.6, 3.4, 10.0],  t: [0.0, 1.35, 0.3] },   // comparison frame
+      { u: 0.970, p: [0.3, 3.5, 10.3],  t: [0.0, 1.4, 0.3] },    // long hold, drift
+      { u: 1.000, p: [0.5, 12.5, 6.5],  t: [-1.2, 6.0, 0.95] }   // loop (in fade)
     ];
     function smooth(t) { return t * t * (3 - 2 * t); }
     const _p = new THREE.Vector3(), _t = new THREE.Vector3();
@@ -567,11 +613,11 @@
     const capEls = {};
     root.querySelectorAll('.dce-line').forEach((el) => { capEls[el.dataset.cap] = el; });
     const CAPS = [
-      ['enter',    0.02, 0.15],
-      ['indirect', 0.265, 0.445],
-      ['direct',   0.465, 0.60],
-      ['readout',  0.615, 0.78],
-      ['payoff',   0.875, 0.985]
+      ['enter',    0.02, 0.135],
+      ['indirect', 0.30, 0.51],
+      ['direct',   0.545, 0.66],
+      ['readout',  0.665, 0.785],
+      ['payoff',   0.86, 0.985]
     ];
     let activeCap = '';
     function updateCaptions(u) {
@@ -587,14 +633,14 @@
     const tagEls = {};
     root.querySelectorAll('.dce-tag').forEach((el) => { tagEls[el.dataset.tag] = el; });
     const TAGS = [
-      { key: 'window',       pos: [-3.0, 0.1, 1.6],    a: 0.155, b: 0.225 },
-      { key: 'scintillator', pos: [1.8, -0.3, GZ],     a: 0.28, b: 0.445 },
-      { key: 'photodiode',   pos: [1.8, -0.8, GZ],     a: 0.335, b: 0.445 },
-      { key: 'cdte',         pos: [0.9, -0.35, HZ],    a: 0.47, b: 0.575 },
-      { key: 'electrodes',   pos: [-0.35, -0.72, HZ],  a: 0.565, b: 0.655 },
-      { key: 'cmos',         pos: [ASIC_X, -0.62, HZ], a: 0.665, b: 0.78 },
-      { key: 'softer',       pos: [-1.17, 0.98, 0.42], a: 0.885, b: 0.985 },
-      { key: 'sharper',      pos: [1.17, 0.98, 0.42],  a: 0.885, b: 0.985 }
+      { key: 'window',       pos: [-3.0, 0.1, 1.6],    a: 0.145, b: 0.215 },
+      { key: 'scintillator', pos: [1.8, -0.3, GZ],     a: 0.30, b: 0.505 },
+      { key: 'photodiode',   pos: [1.8, -0.8, GZ],     a: 0.37, b: 0.505 },
+      { key: 'cdte',         pos: [0.9, -0.35, HZ],    a: 0.545, b: 0.645 },
+      { key: 'electrodes',   pos: [-0.35, -0.72, HZ],  a: 0.615, b: 0.705 },
+      { key: 'cmos',         pos: [ASIC_X, -0.62, HZ], a: 0.705, b: 0.79 },
+      { key: 'softer',       pos: [-1.85, 0.72, 0.42], a: 0.83, b: 0.985 },
+      { key: 'sharper',      pos: [1.85, 0.72, 0.42],  a: 0.83, b: 0.985 }
     ];
     const _v = new THREE.Vector3();
     function updateTags(u) {
@@ -632,13 +678,14 @@
     /* ==============================================================
        PER-FRAME STORY LOGIC
     ============================================================== */
-    // Hero photon path: a long diagonal approach (the tube is far
-    // away) → window crossing → slow-motion fall → absorption.
+    // Hero photon path: STRAIGHT DOWN, normal to the detector plane
+    // (real imaging geometry) → window crossing → slow-motion fall
+    // held through the indirect beat → absorption in the direct beat.
     const HERO_PATH = [
-      { u: 0.015, p: [-7.5, 9.5, 4.0] },
-      { u: 0.205, p: [HX, 0.03, HZ] },   // window crossing
-      { u: 0.44,  p: [HX, -0.20, HZ] },  // slow-motion fall to the CdTe surface
-      { u: 0.47,  p: [HX, A.y, HZ] }     // absorption
+      { u: 0.015, p: [HX, 11.5, HZ] },
+      { u: 0.145, p: [HX, 0.03, HZ] },   // window crossing
+      { u: 0.50,  p: [HX, -0.20, HZ] },  // slow-motion fall to the CdTe surface
+      { u: 0.53,  p: [HX, A.y, HZ] }     // absorption
     ];
     const _hp = new THREE.Vector3(), _hpA = new THREE.Vector3(),
           _hpB = new THREE.Vector3(), _up = new THREE.Vector3(0, 1, 0);
@@ -662,7 +709,7 @@
       for (let i = 0; i < LIGHT_N; i++) {
         const life = (time * 0.5 + rng(i, 5)) % 1;
         const ang = rng(i, 6) * Math.PI * 2;
-        const rad = (0.25 + rng(i, 7) * 2.6) * life * env;
+        const rad = (0.25 + rng(i, 7) * 3.2) * life * env;
         posL[i * 3]     = HX + Math.cos(ang) * rad;
         posL[i * 3 + 1] = -0.4 - life * 0.26 + Math.sin(ang * 2) * 0.04;
         posL[i * 3 + 2] = GZ + Math.sin(ang) * rad * 0.3;
@@ -672,7 +719,7 @@
 
     // Tight charge cluster forming at A and drifting down to E.
     function updateCharge(u, time) {
-      const cd = clamp01((u - 0.478) / 0.105);
+      const cd = clamp01((u - 0.545) / 0.10);
       const yy = lerp(A.y, E.y, smooth(cd));
       const r0 = 0.15 * (1 - cd * 0.55);
       for (let i = 0; i < CHARGE_N; i++) {
@@ -702,7 +749,7 @@
       // weighted point between the photon and its impact point so both
       // the photon and the detector stay in frame, easing back onto the
       // keyframed target as the macro dive begins.
-      const trackAmt = 1 - smooth(clamp01((u - 0.125) / 0.055));
+      const trackAmt = 1 - smooth(clamp01((u - 0.105) / 0.05));
       if (trackAmt > 0.001) {
         heroPos(u, _hp);
         _t.x = lerp(_t.x, _hp.x * 0.85 + HX * 0.15, trackAmt);
@@ -715,11 +762,11 @@
       camera.lookAt(_t);
 
       /* --- housing: section cut sweep + glass fade --- */
-      const openAmt = smooth(clamp01((u - 0.185) / 0.085)) *
-                      (1 - smooth(clamp01((u - 0.78) / 0.085)));
+      const openAmt = smooth(clamp01((u - 0.155) / 0.08)) *
+                      (1 - smooth(clamp01((u - 0.755) / 0.085)));
       clipPlane.constant = 3.6 - 3.25 * openAmt;
-      const glassAmt = smooth(clamp01((u - 0.205) / 0.09)) *
-                       (1 - smooth(clamp01((u - 0.795) / 0.08)));
+      const glassAmt = smooth(clamp01((u - 0.175) / 0.09)) *
+                       (1 - smooth(clamp01((u - 0.77) / 0.08)));
       const bodyOp = 1 - 0.85 * glassAmt;
       for (let i = 0; i < HOUSE_MATS.length; i++) {
         HOUSE_MATS[i].opacity = HOUSE_MATS[i] === winFrameMat ? bodyOp * 0.4 : bodyOp;
@@ -727,72 +774,94 @@
       }
       cutLight.position.z = clipPlane.constant;
       cutLight.material.opacity =
-        0.85 * windowed(u, 0.185, 0.285, 0.03) +
-        0.6 * windowed(u, 0.775, 0.875, 0.03) +
-        0.1 * windowed(u, 0.27, 0.79, 0.02);
+        0.85 * windowed(u, 0.155, 0.25, 0.03) +
+        0.6 * windowed(u, 0.75, 0.85, 0.03) +
+        0.1 * windowed(u, 0.24, 0.765, 0.02);
 
       /* --- hero photon --- */
       heroPos(u, hero.position);
       // orient the streak along the (reversed) velocity so it trails.
-      heroPos(Math.min(u + 0.004, 0.47), _hpB);
+      heroPos(Math.min(u + 0.004, 0.53), _hpB);
       _hpA.copy(_hpB).sub(hero.position);
       if (_hpA.lengthSq() > 1e-8) {
         _hpA.normalize().negate();
         hero.quaternion.setFromUnitVectors(_up, _hpA);
       }
-      const inFlight = u > 0.015 && u < 0.478;
+      const inFlight = u > 0.015 && u < 0.538;
       const heroOp = inFlight
-        ? Math.min(1, (u - 0.015) / 0.02, (0.478 - u) / 0.015)
+        ? Math.min(1, (u - 0.015) / 0.02, (0.538 - u) / 0.015)
         : 0;
       heroHead.material.opacity = heroOp;
-      const diving = u < 0.205;
+      const diving = u < 0.145;
       heroStreak.scale.y = diving ? 1.9 : 0.35;
       heroStreak.position.y = diving ? 1.15 : 0.3;
       heroStreak.material.opacity = heroOp * 0.75;
-      winRipple.material.opacity = 0.8 * windowed(u, 0.195, 0.25, 0.015);
-      winRipple.scale.setScalar(0.5 + 1.4 * clamp01((u - 0.195) / 0.055));
+      winRipple.material.opacity = 0.8 * windowed(u, 0.135, 0.19, 0.015);
+      winRipple.scale.setScalar(0.5 + 1.4 * clamp01((u - 0.135) / 0.055));
 
-      /* --- ghost of indirect --- */
-      const gEnv = windowed(u, 0.225, 0.465, 0.05);
+      // secondary photons — the vertical beam in the entry shot
+      for (let i = 0; i < SIDEKICKS.length; i++) {
+        const k = SIDEKICKS[i];
+        const e = clamp01((u - 0.025 - k.off) / 0.115);
+        k.s.position.y = lerp(10.5, 0.05, smooth(e));
+        k.s.material.opacity = (e > 0.01 && e < 0.99) ? 0.5 * Math.min(1, (1 - e) / 0.12) : 0;
+      }
+
+      /* --- indirect conversion, slowed and held --- */
+      const gEnv = windowed(u, 0.25, 0.525, 0.05);
       ghostScintMat.opacity = 0.34 * gEnv;
       ghostScintEdges.material.opacity = 0.4 * gEnv;
       ghostDiodeMat.opacity = 0.3 * gEnv;
-      const gp = clamp01((u - 0.235) / 0.05);
-      ghostPhoton.position.set(HX, lerp(0.6, -0.2, smooth(gp)), lerp(0.8, GZ, smooth(gp)));
-      ghostPhoton.material.opacity = 0.8 * windowed(u, 0.235, 0.295, 0.02);
-      const bp = clamp01((u - 0.285) / 0.13);
-      bloom.scale.set(0.6 + 3.0 * bp, 0.5 + 0.7 * bp, 1);
-      bloom.material.opacity = 0.85 * windowed(u, 0.285, 0.455, 0.04);
-      lightP.material.opacity = 0.9 * windowed(u, 0.29, 0.455, 0.04);
-      updateLightCloud(clock, Math.max(0.001, windowed(u, 0.285, 0.465, 0.1)));
-      smear.scale.x = 0.6 + 2.6 * clamp01((u - 0.32) / 0.12);
-      smear.material.opacity = 0.7 * windowed(u, 0.325, 0.46, 0.04);
+      // the indirect photon drops straight down — same beam direction.
+      const gp = clamp01((u - 0.285) / 0.045);
+      ghostPhoton.position.set(HX, lerp(2.6, -0.2, smooth(gp)), GZ);
+      ghostPhoton.material.opacity = 0.85 * windowed(u, 0.285, 0.345, 0.015);
+      const bp = clamp01((u - 0.33) / 0.14);
+      bloom.scale.set(0.6 + 3.6 * bp, 0.5 + 0.75 * bp, 1);
+      bloom.material.opacity = 0.85 * windowed(u, 0.33, 0.515, 0.04);
+      lightP.material.opacity = 0.9 * windowed(u, 0.335, 0.515, 0.04);
+      updateLightCloud(clock, Math.max(0.001, windowed(u, 0.33, 0.525, 0.1)));
+      smear.scale.x = 0.6 + 3.0 * clamp01((u - 0.365) / 0.12);
+      smear.material.opacity = 0.7 * windowed(u, 0.37, 0.52, 0.04);
+      diodeTicks.material.opacity = 0.8 * windowed(u, 0.385, 0.52, 0.04);
 
-      /* --- direct conversion hero beat --- */
-      lattice.material.opacity = 0.2 * windowed(u, 0.43, 0.62, 0.05);
-      absorbFlash.material.opacity = 0.95 * windowed(u, 0.462, 0.53, 0.015);
-      absorbFlash.scale.setScalar(0.9 + 1.7 * clamp01((u - 0.462) / 0.05));
-      chargeP.material.opacity = 0.95 * windowed(u, 0.472, 0.60, 0.03);
+      /* --- direct conversion hero beat, slowed and held --- */
+      lattice.material.opacity = 0.2 * windowed(u, 0.50, 0.68, 0.05);
+      absorbFlash.material.opacity = 0.95 * windowed(u, 0.522, 0.585, 0.015);
+      absorbFlash.scale.setScalar(0.9 + 1.7 * clamp01((u - 0.522) / 0.05));
+      chargeP.material.opacity = 0.95 * windowed(u, 0.535, 0.665, 0.03);
       updateCharge(u, clock);
-      fieldLines.material.opacity = 0.32 * windowed(u, 0.49, 0.60, 0.03);
-      electrodeGlow.material.opacity = 0.9 * windowed(u, 0.545, 0.645, 0.03);
+      fieldLines.material.opacity = 0.32 * windowed(u, 0.555, 0.665, 0.03);
+      electrodeGlow.material.opacity = 0.9 * windowed(u, 0.605, 0.705, 0.03);
       electrodeGlow.scale.setScalar(0.45 + 0.25 * Math.sin(clock * 6));
 
       /* --- readout: pixel city + pulse train into the ASIC --- */
-      traces.material.opacity = 0.72 * windowed(u, 0.555, 0.79, 0.04);
-      bumpMat.emissiveIntensity = 0.4 + 1.5 * windowed(u, 0.60, 0.76, 0.05);
-      lane.material.opacity = 0.65 * windowed(u, 0.60, 0.745, 0.03);
-      const pulseOp = windowed(u, 0.60, 0.735, 0.02);
+      traces.material.opacity = 0.72 * windowed(u, 0.62, 0.80, 0.04);
+      bumpMat.emissiveIntensity = 0.4 + 1.5 * windowed(u, 0.655, 0.795, 0.05);
+      lane.material.opacity = 0.65 * windowed(u, 0.66, 0.785, 0.03);
+      const pulseOp = windowed(u, 0.66, 0.78, 0.02);
       for (let i = 0; i < PULSES.length; i++) {
-        const pp = clamp01((u - 0.605) / 0.11 - i * 0.05);
+        const pp = clamp01((u - 0.665) / 0.095 - i * 0.05);
         PULSES[i].position.x = E.x + laneLen * smooth(pp);
         PULSES[i].material.opacity = pulseOp * Math.pow(0.72, i) * (pp > 0 && pp < 1 ? 1 : 0.25);
       }
-      asicGlow.material.opacity = 0.85 * windowed(u, 0.705, 0.80, 0.03);
+      asicGlow.material.opacity = 0.85 * windowed(u, 0.74, 0.815, 0.03);
       asicGlow.scale.setScalar(1.0 + 0.35 * Math.sin(clock * 5));
 
-      /* --- payoff --- */
-      payoff.material.opacity = 0.97 * windowed(u, 0.868, 0.995, 0.03);
+      /* --- climax: scan-line reveal of the two outputs, held long --- */
+      const rev = smooth(clamp01((u - 0.80) / 0.085));
+      const pvis = windowed(u, 0.795, 0.995, 0.02);
+      const panels = [panelI, panelD];
+      for (let i = 0; i < 2; i++) {
+        const pn = panels[i];
+        const f = Math.max(rev, 0.001);
+        pn.mesh.scale.y = f;
+        pn.tex.repeat.y = f;
+        pn.tex.offset.y = 1 - f;
+        pn.mesh.material.opacity = 0.97 * pvis;
+        pn.bar.position.y = 3.15 - 2.2 * rev;
+        pn.bar.material.opacity = (rev > 0.02 && rev < 0.99) ? 0.9 * pvis : 0;
+      }
       grid.material.opacity = 0.16 - 0.08 * clamp01((u - 0.4) / 0.2) + 0.08 * clamp01((u - 0.8) / 0.1);
 
       renderer.render(scene3, camera);
@@ -952,50 +1021,45 @@
     return tex;
   }
 
-  // Final image panel: crisp line pairs above a soft-vs-sharp inset.
-  function makePayoffTexture(THREE) {
-    const w = 512, h = 300, c = document.createElement('canvas');
+  // Output comparison panel: the SAME line-pair test pattern in both,
+  // plus a line-profile curve. soft (indirect) = blurred bars, broad
+  // warm bump. sharp (direct) = crisp bars, narrow cool peak + grid.
+  function makeOutputTexture(THREE, soft) {
+    const w = 360, h = 240, c = document.createElement('canvas');
     c.width = w; c.height = h;
     const ctx = c.getContext('2d');
     ctx.fillStyle = '#081019';
     ctx.fillRect(0, 0, w, h);
-    ctx.strokeStyle = 'rgba(120,200,255,0.4)';
+    ctx.strokeStyle = soft ? 'rgba(255,198,128,0.5)' : 'rgba(120,205,255,0.55)';
     ctx.lineWidth = 2;
-    ctx.strokeRect(6, 6, w - 12, h - 12);
+    ctx.strokeRect(5, 5, w - 10, h - 10);
 
-    // crisp line-pair pattern — the image the detector produces
-    ctx.fillStyle = '#d5efff';
-    const groups = [[40, 16], [150, 10], [250, 6.5], [340, 4], [420, 2.6]];
+    // identical line-pair groups (blur is the only difference)
+    if (soft) ctx.filter = 'blur(2.6px)';
+    ctx.fillStyle = soft ? '#ffd9a0' : '#d5efff';
+    const groups = [[28, 12], [110, 8], [186, 5], [252, 3.2], [310, 2]];
     groups.forEach(([x0, bw]) => {
-      for (let i = 0; i < 4; i++) ctx.fillRect(x0 + i * bw * 2, 26, bw, 108);
+      for (let i = 0; i < 4; i++) ctx.fillRect(x0 + i * bw * 2, 22, bw, 92);
     });
-    ctx.strokeStyle = 'rgba(120,200,255,0.14)';
-    ctx.lineWidth = 1;
-    for (let x = 24; x <= w - 24; x += 24) {
-      ctx.beginPath(); ctx.moveTo(x, 24); ctx.lineTo(x, 138); ctx.stroke();
+    ctx.filter = 'none';
+    if (!soft) {
+      ctx.strokeStyle = 'rgba(120,200,255,0.13)';
+      ctx.lineWidth = 1;
+      for (let x = 20; x <= w - 20; x += 20) {
+        ctx.beginPath(); ctx.moveTo(x, 20); ctx.lineTo(x, 116); ctx.stroke();
+      }
     }
 
-    // inset comparison: indirect (soft, warm) vs direct (sharp, cool)
-    function inset(x0, soft) {
-      ctx.strokeStyle = soft ? 'rgba(255,198,128,0.45)' : 'rgba(120,205,255,0.5)';
-      ctx.lineWidth = 1.5;
-      ctx.strokeRect(x0, 168, 210, 112);
-      if (soft) ctx.filter = 'blur(2.4px)';
-      ctx.fillStyle = soft ? '#ffd9a0' : '#cdecff';
-      for (let i = 0; i < 5; i++) ctx.fillRect(x0 + 24 + i * 16, 182, 6, 42);
-      ctx.filter = 'none';
-      ctx.strokeStyle = soft ? '#ffcf8a' : '#9fe0ff';
-      ctx.lineWidth = 2;
-      ctx.beginPath();
-      const base = 268, cx = x0 + 105, sd = soft ? 30 : 9, amp = soft ? 22 : 34;
-      for (let x = x0 + 8; x <= x0 + 202; x += 2) {
-        const yv = base - amp * Math.exp(-((x - cx) * (x - cx)) / (2 * sd * sd));
-        x === x0 + 8 ? ctx.moveTo(x, yv) : ctx.lineTo(x, yv);
-      }
-      ctx.stroke();
+    // line profile: broad low bump (indirect) vs tall narrow peak (direct)
+    ctx.strokeStyle = soft ? '#ffcf8a' : '#9fe0ff';
+    ctx.lineWidth = 2.4;
+    ctx.beginPath();
+    const base = 212, cx = w / 2, sd = soft ? 46 : 11, amp = soft ? 38 : 66;
+    for (let x = 14; x <= w - 14; x += 2) {
+      const yv = base - amp * Math.exp(-((x - cx) * (x - cx)) / (2 * sd * sd));
+      x === 14 ? ctx.moveTo(x, yv) : ctx.lineTo(x, yv);
     }
-    inset(26, true);
-    inset(276, false);
+    ctx.stroke();
 
     const tex = new THREE.CanvasTexture(c);
     tex.needsUpdate = true;
