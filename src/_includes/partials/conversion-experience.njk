@@ -1,6 +1,7 @@
 {#- =====================================================
     CinematicDirectConversionExperience — flagship homepage visual
-    A lazy-loaded WebGL "photon flight" through the detector stacks
+    "Photon Odyssey": a lazy-loaded WebGL product film following a
+    single X-ray photon into a real-looking Athlos detector module
     (js/conversion-experience.js + vendored Three.js). Three guards
     fall back to the static SVG poster below and never load WebGL:
     prefers-reduced-motion, no WebGL, and automation (navigator.
@@ -14,24 +15,23 @@
 
   {#- layer tags: positioned by JS from 3D anchors, faded in on the event -#}
   <div class="dce-tags" aria-hidden="true">
-    <span class="dce-tag" data-tag="scintillator">{{ (x ~ ".layers.scintillator") | t }}</span>
-    <span class="dce-tag" data-tag="photodiode">{{ (x ~ ".layers.photodiode") | t }}</span>
-    <span class="dce-tag" data-tag="cdte">{{ (x ~ ".layers.cdte") | t }}</span>
+    <span class="dce-tag" data-tag="window">{{ (x ~ ".layers.window") | t }}</span>
+    <span class="dce-tag dce-tag--soft" data-tag="scintillator">{{ (x ~ ".layers.scintillator") | t }}</span>
+    <span class="dce-tag dce-tag--soft" data-tag="photodiode">{{ (x ~ ".layers.photodiode") | t }}</span>
+    <span class="dce-tag dce-tag--sharp" data-tag="cdte">{{ (x ~ ".layers.cdte") | t }}</span>
     <span class="dce-tag dce-tag--sharp" data-tag="electrodes">{{ (x ~ ".layers.electrodes") | t }}</span>
     <span class="dce-tag" data-tag="cmos">{{ (x ~ ".layers.cmos") | t }}</span>
     <span class="dce-tag dce-tag--soft" data-tag="softer">{{ (x ~ ".softerTag") | t }}</span>
     <span class="dce-tag dce-tag--sharp" data-tag="sharper">{{ (x ~ ".sharperTag") | t }}</span>
   </div>
 
-  {#- bottom caption line: JS reveals one per beat -#}
+  {#- bottom caption: JS reveals one per shot (title + sub-line) -#}
   <div class="dce-captions" aria-hidden="true">
     <span class="dce-line" data-cap="enter">{{ (x ~ ".enter") | t }}</span>
-    <span class="dce-line" data-cap="spread">{{ (x ~ ".spread") | t }}</span>
-    <span class="dce-line" data-cap="charge">{{ (x ~ ".charge") | t }}</span>
-    <span class="dce-line" data-cap="localize">{{ (x ~ ".localize") | t }}</span>
-    <span class="dce-line" data-cap="readout">{{ (x ~ ".readout") | t }}</span>
-    <span class="dce-line" data-cap="digital">{{ (x ~ ".digital") | t }}</span>
-    <span class="dce-line dce-line--summary" data-cap="summary">{{ (x ~ ".summary") | t }}</span>
+    <span class="dce-line" data-cap="indirect"><strong>{{ (x ~ ".indirectTitle") | t }}</strong><small>{{ (x ~ ".indirectSub") | t }}</small></span>
+    <span class="dce-line" data-cap="direct"><strong>{{ (x ~ ".directTitle") | t }}</strong><small>{{ (x ~ ".directSub") | t }}</small></span>
+    <span class="dce-line" data-cap="readout"><strong>{{ (x ~ ".readoutTitle") | t }}</strong><small>{{ (x ~ ".readoutSub") | t }}</small></span>
+    <span class="dce-line dce-line--payoff" data-cap="payoff">{{ (x ~ ".payoff") | t }}</span>
   </div>
 
   {#- dip-to-black covering the loop seam -#}

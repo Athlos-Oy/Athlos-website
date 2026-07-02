@@ -142,23 +142,25 @@
           }
         },
         "experience": {
-          "enter": "Les rayons X entrent",
-          "spread": "La lumière se diffuse",
-          "charge": "La charge se forme",
-          "localize": "Le signal se localise",
-          "readout": "Lecture du signal",
-          "digital": "Données d'image numériques",
-          "summary": "Moins d'étapes de conversion. Trajet du signal plus localisé.",
+          "enter": "Les rayons X atteignent le détecteur",
+          "indirectTitle": "Conversion indirecte",
+          "indirectSub": "Les rayons X deviennent lumière — la lumière s'étale avant la détection",
+          "directTitle": "Conversion directe",
+          "directSub": "Charge localisée, trajet du signal plus court",
+          "readoutTitle": "Lecture CMOS",
+          "readoutSub": "Signal collecté au niveau du pixel",
+          "payoff": "Conversion directe. Avantage direct.",
           "layers": {
+            "window": "Fenêtre du capteur",
             "scintillator": "Scintillateur",
             "photodiode": "Photodiode",
             "cdte": "CdTe / Si",
             "electrodes": "Électrodes de pixel",
-            "cmos": "Lecture CMOS"
+            "cmos": "CMOS / ASIC"
           },
-          "softerTag": "Plus diffus · plus large",
-          "sharperTag": "Plus net · localisé",
-          "aria": "Séquence animée suivant un seul photon X dans deux détecteurs. Dans le détecteur indirect, le photon frappe un scintillateur qui le convertit en lumière visible chaude, laquelle se diffuse latéralement avant d'atteindre la photodiode — un signal plus diffus et plus large. Dans le détecteur à conversion directe d'Athlos, l'énergie du photon devient une charge serrée et localisée dans la couche de CdTe ou de silicium qui descend directement dans la lecture CMOS — un signal plus net et plus localisé. La comparaison finale montre le même motif de test, plus diffus du côté indirect et plus net du côté direct."
+          "softerTag": "Indirecte — plus floue",
+          "sharperTag": "Directe — plus nette",
+          "aria": "Séquence cinématique suivant un photon X unique dans un module détecteur Athlos. La caméra suit le photon vu de dessus, plonge à travers la fenêtre du capteur dans une vue en coupe et montre brièvement la voie indirecte conventionnelle : un scintillateur convertit les rayons X en lumière visible qui s'étale latéralement avant d'atteindre la photodiode. Dans la voie directe, l'énergie du photon devient une charge localisée dans le CdTe ou le silicium, collectée par une électrode de pixel puis lue par l'électronique CMOS. Le détecteur se referme et présente une image nette — avec une petite comparaison : indirecte plus floue, directe plus nette."
         }
       },
       "products": {

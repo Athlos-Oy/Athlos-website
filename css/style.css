@@ -1998,10 +1998,25 @@ body::before {
   opacity: 1;
   transform: translateY(0);
 }
-/* The summary line (final comparison) reads a touch larger. */
-.dce-line--summary {
-  font-size: clamp(1rem, 1.7vw, 1.32rem);
-  font-weight: 600;
+/* Title + sub-line captions (indirect / direct / readout shots). */
+.dce-line strong {
+  display: block;
+  font-weight: 650;
+  font-size: 1.06em;
+  letter-spacing: 0.015em;
+}
+.dce-line small {
+  display: block;
+  margin-top: 0.18rem;
+  font-size: 0.82em;
+  font-weight: 400;
+  color: #b9d5e6;
+}
+/* The payoff line (final hero moment) reads a touch larger. */
+.dce-line--payoff {
+  font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+  font-weight: 650;
+  letter-spacing: 0.01em;
   max-width: 34rem;
 }
 

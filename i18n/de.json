@@ -142,23 +142,25 @@
           }
         },
         "experience": {
-          "enter": "Röntgenstrahlen treten ein",
-          "spread": "Licht breitet sich aus",
-          "charge": "Ladung entsteht",
-          "localize": "Signal lokalisiert sich",
-          "readout": "Signal wird ausgelesen",
-          "digital": "Digitale Bilddaten",
-          "summary": "Weniger Wandlungsstufen. Stärker lokalisierter Signalweg.",
+          "enter": "Röntgenstrahlen treffen auf den Detektor",
+          "indirectTitle": "Indirekte Konversion",
+          "indirectSub": "Röntgenstrahlen werden zu Licht — Licht streut vor der Detektion",
+          "directTitle": "Direkte Konversion",
+          "directSub": "Lokalisierte Ladung, kürzerer Signalweg",
+          "readoutTitle": "CMOS-Auslese",
+          "readoutSub": "Signal am Pixel gesammelt",
+          "payoff": "Direkte Konversion. Direkter Vorteil.",
           "layers": {
+            "window": "Sensorfenster",
             "scintillator": "Szintillator",
             "photodiode": "Photodiode",
             "cdte": "CdTe / Si",
             "electrodes": "Pixelelektroden",
-            "cmos": "CMOS-Auslese"
+            "cmos": "CMOS / ASIC"
           },
-          "softerTag": "Weicher · breiter",
-          "sharperTag": "Schärfer · lokalisiert",
-          "aria": "Animierte Sequenz, die einem einzelnen Röntgenphoton in zwei Detektoren folgt. Im indirekten Detektor trifft das Photon auf einen Szintillator, der es in warmes sichtbares Licht umwandelt, das sich seitlich ausbreitet, bevor es die Photodiode erreicht – ein weicheres, breiteres Signal. Im Athlos-Direktkonversionsdetektor wird die Energie des Photons zu einer eng begrenzten, lokalisierten Ladung in der CdTe- oder Siliziumschicht, die direkt nach unten in die CMOS-Auslese wandert – ein schärferes, stärker lokalisiertes Signal. Der abschließende Vergleich zeigt dasselbe Testmuster: auf der indirekten Seite weicher, auf der direkten Seite schärfer."
+          "softerTag": "Indirekt — weicher",
+          "sharperTag": "Direkt — schärfer",
+          "aria": "Filmische Sequenz, die ein einzelnes Röntgenphoton in ein Athlos-Detektormodul begleitet. Die Kamera folgt dem Photon von oben, taucht durch das Sensorfenster in eine Schnittansicht ein und zeigt kurz den konventionellen indirekten Weg: Ein Szintillator wandelt Röntgenstrahlen in sichtbares Licht um, das sich seitlich ausbreitet, bevor es die Photodiode erreicht. Beim direkten Weg wird die Energie des Photons unmittelbar im CdTe- oder Siliziummaterial zu lokalisierter Ladung, die an einer Pixelelektrode gesammelt und über die CMOS-Elektronik ausgelesen wird. Der Detektor schließt sich wieder und liefert ein scharfes Bild — mit einem kleinen Vergleich: indirekt weicher, direkt schärfer."
         }
       },
       "products": {

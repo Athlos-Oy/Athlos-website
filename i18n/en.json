@@ -140,23 +140,25 @@
           }
         },
         "experience": {
-          "enter": "X-rays enter",
-          "spread": "Light spreads",
-          "charge": "Charge forms",
-          "localize": "Signal localizes",
-          "readout": "Signal read out",
-          "digital": "Digital image data",
-          "summary": "Fewer conversion stages. More localized signal path.",
+          "enter": "X-rays enter the detector",
+          "indirectTitle": "Indirect conversion",
+          "indirectSub": "X-rays become light — light spreads before detection",
+          "directTitle": "Direct conversion",
+          "directSub": "Localized charge, shorter signal path",
+          "readoutTitle": "CMOS readout",
+          "readoutSub": "Signal collected at the pixel",
+          "payoff": "Direct conversion. Direct advantage.",
           "layers": {
+            "window": "Sensor window",
             "scintillator": "Scintillator",
             "photodiode": "Photodiode",
             "cdte": "CdTe / Si",
             "electrodes": "Pixel electrodes",
-            "cmos": "CMOS readout"
+            "cmos": "CMOS / ASIC"
           },
-          "softerTag": "Softer · wider",
-          "sharperTag": "Sharper · localized",
-          "aria": "Animated sequence following a single X-ray photon into two detectors. In the indirect detector, the photon strikes a scintillator that converts it into warm visible light, which spreads laterally before reaching the photodiode — a softer, wider signal. In the Athlos direct-conversion detector, the photon's energy becomes a tight, localized charge in the CdTe or silicon layer that travels straight down into the CMOS readout — a sharper, more localized signal. The final comparison shows the same test pattern softer on the indirect side and sharper on the direct side."
+          "softerTag": "Indirect — softer",
+          "sharperTag": "Direct — sharper",
+          "aria": "Cinematic sequence following a single X-ray photon into an Athlos detector module. The camera tracks the photon from above as it approaches the detector, dives through the sensor window into a cutaway view, and briefly shows the conventional indirect path, where a scintillator converts X-rays into visible light that spreads sideways before reaching a photodiode. In the direct-conversion path, the photon's energy becomes localized electric charge in the CdTe or silicon layer, which is collected at a pixel electrode and read out through the CMOS electronics. The detector then closes up and presents a sharp image, with a small comparison showing the softer indirect result and the sharper direct result."
         }
       },
       "products": {
