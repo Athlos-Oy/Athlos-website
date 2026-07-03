@@ -168,9 +168,9 @@
             "path": "Percorso del segnale localizzato",
             "footNarrow": "Impronta di lettura più stretta"
           },
-          "softerTag": "Localizzazione più morbida",
-          "sharperTag": "Localizzazione più nitida",
-          "aria": "Diagramma animato. I raggi X entrano nel rivelatore dall’alto. Conversione indiretta: uno scintillatore converte i raggi X in luce visibile, la luce si diffonde lateralmente prima della rilevazione e diversi pixel di lettura a fotodiodo registrano un’impronta di segnale più ampia. Conversione diretta: uno strato di CdTe o silicio converte i raggi X direttamente in carica, che percorre un tragitto stretto fino alla lettura CMOS e resta localizzata. I grafici di uscita confrontano una localizzazione più morbida con una più nitida."
+          "softerTag": "Localizzazione sfocata",
+          "sharperTag": "Localizzazione nitida",
+          "aria": "Diagramma animato. I raggi X entrano nel rivelatore dall’alto. Conversione indiretta: uno scintillatore converte i raggi X in luce visibile, la luce si diffonde lateralmente prima della rilevazione e diversi pixel di lettura a fotodiodo registrano un’impronta di segnale più ampia. Conversione diretta: uno strato di CdTe o silicio converte i raggi X direttamente in carica, che percorre un tragitto stretto fino alla lettura CMOS e resta localizzata. I grafici di uscita confrontano una localizzazione sfocata con una nitida."
         }
       },
       "products": {

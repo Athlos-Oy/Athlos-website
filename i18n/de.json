@@ -162,9 +162,9 @@
             "path": "Lokalisierter Signalpfad",
             "footNarrow": "Schmalere Auslesefläche"
           },
-          "softerTag": "Weichere Lokalisierung",
-          "sharperTag": "Schärfere Lokalisierung",
-          "aria": "Animiertes Diagramm. Röntgenstrahlung tritt von oben in den Detektor ein. Indirekte Konversion: Ein Szintillator wandelt Röntgenstrahlung in sichtbares Licht um, das Licht streut vor der Detektion seitlich, und mehrere Photodioden-Auslesepixel registrieren eine breitere Signalfläche. Direkte Konversion: Eine CdTe- oder Silizium-Schicht wandelt Röntgenstrahlung direkt in Ladung um, die auf einem schmalen Pfad in die CMOS-Auslese gelangt und lokalisiert bleibt. Die resultierenden Ausgabegrafiken vergleichen weichere und schärfere Lokalisierung."
+          "softerTag": "Verwaschene Lokalisierung",
+          "sharperTag": "Scharfe Lokalisierung",
+          "aria": "Animiertes Diagramm. Röntgenstrahlung tritt von oben in den Detektor ein. Indirekte Konversion: Ein Szintillator wandelt Röntgenstrahlung in sichtbares Licht um, das Licht streut vor der Detektion seitlich, und mehrere Photodioden-Auslesepixel registrieren eine breitere Signalfläche. Direkte Konversion: Eine CdTe- oder Silizium-Schicht wandelt Röntgenstrahlung direkt in Ladung um, die auf einem schmalen Pfad in die CMOS-Auslese gelangt und lokalisiert bleibt. Die resultierenden Ausgabegrafiken vergleichen verwaschene und scharfe Lokalisierung."
         }
       },
       "products": {

@@ -162,9 +162,9 @@
             "path": "Trajet du signal localisé",
             "footNarrow": "Empreinte de lecture plus étroite"
           },
-          "softerTag": "Localisation plus douce",
-          "sharperTag": "Localisation plus nette",
-          "aria": "Schéma animé. Les rayons X entrent dans le détecteur par le haut. Conversion indirecte : un scintillateur convertit les rayons X en lumière visible, la lumière se disperse latéralement avant la détection, et plusieurs pixels de lecture à photodiode enregistrent une empreinte de signal plus large. Conversion directe : une couche de CdTe ou de silicium convertit les rayons X directement en charge, qui suit un trajet étroit vers la lecture CMOS et reste localisée. Les graphiques de sortie comparent une localisation plus douce et une localisation plus nette."
+          "softerTag": "Localisation floue",
+          "sharperTag": "Localisation nette",
+          "aria": "Schéma animé. Les rayons X entrent dans le détecteur par le haut. Conversion indirecte : un scintillateur convertit les rayons X en lumière visible, la lumière se disperse latéralement avant la détection, et plusieurs pixels de lecture à photodiode enregistrent une empreinte de signal plus large. Conversion directe : une couche de CdTe ou de silicium convertit les rayons X directement en charge, qui suit un trajet étroit vers la lecture CMOS et reste localisée. Les graphiques de sortie comparent une localisation floue et une localisation nette."
         }
       },
       "products": {

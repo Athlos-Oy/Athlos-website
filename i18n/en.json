@@ -160,9 +160,9 @@
             "path": "Localized signal path",
             "footNarrow": "Narrow readout footprint"
           },
-          "softerTag": "Softer localization",
-          "sharperTag": "Sharper localization",
-          "aria": "Animated diagram. X-rays enter the detector from above. Indirect conversion: a scintillator converts X-rays into visible light, the light spreads sideways before detection, and several photodiode readout pixels register a wider signal footprint. Direct conversion: a CdTe or silicon layer converts X-rays straight into charge, which travels a narrow path into the CMOS readout and stays localized. The resulting output graphs compare softer versus sharper localization."
+          "softerTag": "Blurred localization",
+          "sharperTag": "Sharp localization",
+          "aria": "Animated diagram. X-rays enter the detector from above. Indirect conversion: a scintillator converts X-rays into visible light, the light spreads sideways before detection, and several photodiode readout pixels register a wider signal footprint. Direct conversion: a CdTe or silicon layer converts X-rays straight into charge, which travels a narrow path into the CMOS readout and stays localized. The resulting output graphs compare blurred versus sharp localization."
         }
       },
       "products": {

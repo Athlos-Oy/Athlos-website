@@ -162,9 +162,9 @@
             "path": "Trayecto de señal localizado",
             "footNarrow": "Huella de lectura más estrecha"
           },
-          "softerTag": "Localización más suave",
-          "sharperTag": "Localización más nítida",
-          "aria": "Diagrama animado. Los rayos X entran en el detector desde arriba. Conversión indirecta: un centelleador convierte los rayos X en luz visible, la luz se dispersa lateralmente antes de la detección y varios píxeles de lectura de fotodiodo registran una huella de señal más amplia. Conversión directa: una capa de CdTe o silicio convierte los rayos X directamente en carga, que recorre un trayecto estrecho hasta la lectura CMOS y permanece localizada. Los gráficos de salida comparan una localización más suave con una más nítida."
+          "softerTag": "Localización borrosa",
+          "sharperTag": "Localización nítida",
+          "aria": "Diagrama animado. Los rayos X entran en el detector desde arriba. Conversión indirecta: un centelleador convierte los rayos X en luz visible, la luz se dispersa lateralmente antes de la detección y varios píxeles de lectura de fotodiodo registran una huella de señal más amplia. Conversión directa: una capa de CdTe o silicio convierte los rayos X directamente en carga, que recorre un trayecto estrecho hasta la lectura CMOS y permanece localizada. Los gráficos de salida comparan una localización borrosa con una nítida."
         }
       },
       "products": {

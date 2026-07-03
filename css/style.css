@@ -2047,6 +2047,11 @@ body::before {
 }
 .dce-tag--soft { border-color: rgba(255, 198, 128, 0.5); color: #ffe6c2; }
 .dce-tag--sharp { border-color: rgba(120, 205, 255, 0.6); color: #d6f1ff; }
+.dce-tag--title {
+  font-size: clamp(0.82rem, 1.3vw, 1rem);
+  font-weight: 650;
+  letter-spacing: 0.03em;
+}
 
 /* Dip-to-black covering the loop seam (opacity driven by JS). */
 .dce-fade {

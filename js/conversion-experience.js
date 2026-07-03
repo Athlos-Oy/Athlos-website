@@ -97,7 +97,7 @@
      SCENE
   =================================================== */
   function buildScene(THREE) {
-    const LOOP = 15.0;
+    const LOOP = 18.3;
     const DPR_CAP = window.matchMedia('(max-width: 768px)').matches ? 1.3 : 1.75;
 
     const COL = {
@@ -355,7 +355,9 @@
        readout row below it, substrate at the bottom.
     ============================================================== */
     const PIX_N = 11, PIX_PITCH = 0.31, PIX_W = 0.27, PIX_H = 0.16;
-    const SLAB_TOP = -0.12, SLAB_BOT = -0.54, PIX_TOP = -0.62, PIX_CY = -0.70;
+    // A clear air gap between the conversion slab and the readout row
+    // so the two layers read as distinct.
+    const SLAB_TOP = -0.12, SLAB_BOT = -0.54, PIX_TOP = -0.76, PIX_CY = -0.84;
 
     function buildStage(x, warm) {
       const grp = new THREE.Group();
@@ -403,7 +405,7 @@
         transparent: true, opacity: 0
       });
       const sub = new THREE.Mesh(new THREE.BoxGeometry(3.4, 0.10, 1.1), subMat);
-      sub.position.y = -0.86;
+      sub.position.y = -1.0;
       grp.add(sub);
 
       // Signal-footprint underline beneath the pixel row.
@@ -414,7 +416,7 @@
           blending: THREE.AdditiveBlending, depthWrite: false
         })
       );
-      foot.position.set(x, -0.945, SZ + 0.58);
+      foot.position.set(x, -1.085, SZ + 0.58);
       scene3.add(foot);
 
       // Photon + impact flash for this stage.
@@ -546,19 +548,26 @@
       { u: 0.000, p: [7.0, 8.0, 12.0],   t: [-0.2, 3.0, 0.0] },   // WIDE: module + falling beam
       { u: 0.140, p: [5.0, 6.0, 10.0],   t: [-0.4, 1.6, 0.6] },   // slow push-in
       { u: 0.188, p: [0.8, 3.6, 9.0],    t: [-1.6, 0.1, 0.3] },   // swing out front as the cut opens
-      { u: 0.231, p: [-2.4, 0.42, 5.6],  t: [-2.4, -0.30, 0.3] }, // INDIRECT stage, face-on, static
-      { u: 0.480, p: [-2.2, 0.34, 5.3],  t: [-2.36, -0.34, 0.3] },// micro drift only
-      { u: 0.545, p: [2.3, 0.42, 5.6],   t: [2.36, -0.30, 0.3] }, // calm glide to the DIRECT stage
-      { u: 0.755, p: [2.55, 0.34, 5.3],  t: [2.42, -0.34, 0.3] }, // micro drift only
+      { u: 0.231, p: [-2.4, 0.38, 5.75], t: [-2.4, -0.38, 0.3] }, // INDIRECT stage, face-on, static
+      { u: 0.480, p: [-2.26, 0.33, 5.5], t: [-2.38, -0.41, 0.3] },// micro drift only
+      { u: 0.545, p: [2.3, 0.38, 5.75],  t: [2.36, -0.38, 0.3] }, // calm glide to the DIRECT stage
+      { u: 0.755, p: [2.48, 0.33, 5.5],  t: [2.42, -0.41, 0.3] }, // micro drift only
       { u: 0.805, p: [0.7, 3.3, 9.9],    t: [0.0, 1.4, 0.3] },    // pull out to the outputs
       { u: 0.970, p: [0.2, 3.5, 10.2],   t: [0.0, 1.45, 0.3] },   // long hold, drift
       { u: 1.000, p: [7.0, 8.0, 12.0],   t: [-0.2, 3.0, 0.0] }    // loop (in fade)
     ];
     function smooth(t) { return t * t * (3 - 2 * t); }
     // Wall-clock → story position. All animation windows are fractions
-    // of the original 13s film; the story plays at that pace, then the
-    // final graph comparison holds ~2s in slow drift before the seam.
-    const TIME_MAP = [[0, 0], [12.3, 0.946], [14.3, 0.975], [15.0, 1.0]];
+    // of the original 13s film: entry and zoom play at that pace, the
+    // two layer demonstrations run ~16% slower (calmer), and the final
+    // graph comparison holds ~4s in slow drift before the loop seam.
+    const TIME_MAP = [
+      [0, 0], [3.0, 0.2308],     // wide shot + zoom, original pace
+      [11.3, 0.7692],            // both layer demos, slowed
+      [13.6, 0.946],             // pull-out + graph reveals, original pace
+      [17.6, 0.975],             // long hold on the comparison
+      [18.3, 1.0]                // fade through the seam
+    ];
     function storyU(t) {
       for (let i = 0; i < TIME_MAP.length - 1; i++) {
         const a = TIME_MAP[i], b = TIME_MAP[i + 1];
@@ -604,17 +613,19 @@
     const TAGS = [
       // indirect stage: persistent layer labels + sequential step labels
       { key: 'scintillator', pos: [IX - 1.15, -0.06, SZ + 0.6],  a: 0.240, b: 0.475 },
-      { key: 'photodiode',   pos: [IX - 1.30, -0.82, SZ + 0.6],  a: 0.250, b: 0.475, sh: '55%' },
+      { key: 'photodiode',   pos: [IX - 1.30, -0.96, SZ + 0.6],  a: 0.250, b: 0.475, sh: '55%' },
       { key: 'becomeLight',  pos: [IX + 0.45, 0.06, SZ + 0.3],   a: 0.274, b: 0.355 },
       { key: 'spreads',      pos: [IX + 1.30, -0.10, SZ + 0.3],  a: 0.318, b: 0.428 },
-      { key: 'footWide',     pos: [IX + 0.55, -0.94, SZ + 0.6],  a: 0.402, b: 0.478, sh: '55%' },
+      { key: 'footWide',     pos: [IX + 0.55, -1.08, SZ + 0.6],  a: 0.402, b: 0.478, sh: '55%' },
       // direct stage: same layout
       { key: 'cdte',         pos: [DX - 1.15, -0.06, SZ + 0.6],  a: 0.552, b: 0.748 },
-      { key: 'cmos',         pos: [DX - 1.30, -0.82, SZ + 0.6],  a: 0.560, b: 0.748, sh: '55%' },
+      { key: 'cmos',         pos: [DX - 1.30, -0.96, SZ + 0.6],  a: 0.560, b: 0.748, sh: '55%' },
       { key: 'chargeGen',    pos: [DX + 0.45, 0.02, SZ + 0.3],   a: 0.592, b: 0.662 },
       { key: 'path',         pos: [DX + 0.85, -0.30, SZ + 0.3],  a: 0.636, b: 0.712 },
-      { key: 'footNarrow',   pos: [DX + 0.55, -0.94, SZ + 0.6],  a: 0.686, b: 0.752, sh: '55%' },
-      // payoff
+      { key: 'footNarrow',   pos: [DX + 0.55, -1.08, SZ + 0.6],  a: 0.686, b: 0.752, sh: '55%' },
+      // payoff: graph titles above, localization verdicts below
+      { key: 'graphI',       pos: [-1.85, 3.34, 0.4],  a: 0.800, b: 0.985 },
+      { key: 'graphD',       pos: [1.85, 3.34, 0.4],   a: 0.880, b: 0.985 },
       { key: 'softer',       pos: [-1.85, 0.72, 0.42], a: 0.815, b: 0.985 },
       { key: 'sharper',      pos: [1.85, 0.72, 0.42],  a: 0.895, b: 0.985 }
     ];
@@ -743,7 +754,7 @@
       st.flash.material.opacity = 0.95 * windowed(u, 0.585, 0.625, 0.008) * env;
       st.flash.scale.setScalar(0.35 + 0.65 * clamp01((u - 0.585) / 0.035));
       const drop = smooth(clamp01((u - 0.632) / 0.05));
-      const cy = lerp(D_ABS.y, -0.585, drop);
+      const cy = lerp(D_ABS.y, -0.72, drop);
       const r0 = 0.085 * (1 - 0.35 * drop);
       for (let i = 0; i < CHARGE_N; i++) {
         const ang = rng(i, 8) * Math.PI * 2 + clock * 0.7;
@@ -1018,7 +1029,7 @@
     ctx.strokeStyle = soft ? '#ffcf8a' : '#9fe0ff';
     ctx.lineWidth = 2.4;
     ctx.beginPath();
-    const base = 212, cx = w / 2, sd = soft ? 46 : 11, amp = soft ? 38 : 66;
+    const base = 212, cx = w / 2, sd = soft ? 46 : 8, amp = soft ? 38 : 78;
     for (let x = 14; x <= w - 14; x += 2) {
       const yv = base - amp * Math.exp(-((x - cx) * (x - cx)) / (2 * sd * sd));
       x === 14 ? ctx.moveTo(x, yv) : ctx.lineTo(x, yv);
