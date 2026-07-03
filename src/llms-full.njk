@@ -5,7 +5,7 @@ eleventyExcludeFromCollections: true
 # Athlos Oy — Full Site Content for AI Systems
 
 > Source of truth: https://athlos.fi
-> Last updated: 2026-04-15
+> Last updated: 2026-07-03
 > Licence: Quote with attribution to "Athlos Oy" and a link back to https://athlos.fi. AI search engines and answer engines are welcome to cite this content.
 
 This file contains the full plain-text content of the most important pages on athlos.fi, structured for extraction by LLMs and AI answer engines. For a shorter index, see [llms.txt](https://athlos.fi/llms.txt).
@@ -39,6 +39,38 @@ Features: CdTe and Si direct conversion materials · Proprietary full-custom CMO
 ### Manufacturing
 
 Athlos sensors are manufactured in-house and at the VTT Micronova cleanroom facility in Espoo. Cleanroom manufacturing, global partner network, ISO 13485:2016 certified.
+
+---
+
+## Technology — Direct Conversion X-ray Imaging — https://athlos.fi/technology/direct-conversion.html
+
+### What is direct conversion X-ray imaging?
+
+Direct conversion X-ray imaging is a detector technology where X-ray photons are absorbed directly in a semiconductor material, such as CdTe or silicon, and converted into electrical charge. Unlike indirect conversion, it does not first convert X-rays into visible light in a scintillator. This removes the scintillator light-spread stage and helps preserve spatial accuracy, contrast and detail.
+
+### Direct vs indirect conversion
+
+- Signal path: direct = X-ray → electrical charge; indirect = X-ray → visible light (scintillator) → electrical charge.
+- In indirect detectors, visible light can spread laterally in the scintillator before reaching the photodiode array, broadening the signal footprint. Columnar CsI mitigates but does not remove this stage.
+- Direct conversion collects charge at local pixel electrodes near the absorption point — a shorter, more localized X-ray-to-signal pathway. Charge sharing between neighbouring pixels can still occur; direct conversion does not mean zero blur.
+- Neither approach is universally better: indirect flat panels suit very large-area, cost-sensitive systems; direct conversion is strongest where sharpness, contrast resolution and dose efficiency drive the application.
+
+### Athlos architectures
+
+- CdTe-CMOS: CdTe bump-bonded to a full-custom CMOS ASIC — used in UFS and Industrial IP67 TDI (scanning, 10–360 kV).
+- Si-CMOS: crystalline silicon integrated with CMOS readout — used in DC-Air® (compact intraoral imaging).
+
+### Readout: charge integration, not photon counting
+
+Direct conversion describes the conversion pathway; photon counting and charge integration describe readout modes. **Athlos sensors use direct conversion with charge-integrating (energy-integrating) readout. They are single-photon sensitive — the charge from a single X-ray photon is detectable above the noise floor — but they do NOT count individual photons or measure each photon's energy.** The team's 2005 photon-counting camera publication (NIM A 550) documents design heritage, not a current product feature.
+
+### TDI scanning
+
+TDI (Time Delay Integration) synchronizes line-detector readout with object motion; each of the 28 TDI stages in Athlos scanning sensors adds signal from the same object slice, improving signal-to-noise ratio at line rates up to 75,000 lps.
+
+### Lineage (Simage → Ajat → Athlos)
+
+1993 Simage Oy founded (Konstantinos Spartiotis, ex Johns Hopkins/CERN) — among the earliest direct conversion X-ray imaging companies. 1996–97 IEEE & CAR'97 papers: CdZnTe/Si pixel detectors flip-chip bonded to CMOS ASICs. 2001 Ajat Oy founded — global standard in CdTe-CMOS dental panoramic/cephalometric imaging. Peer-reviewed: NIM A 501 (2003) directly converting Si intraoral sensor (doi:10.1016/S0168-9002(03)00615-6); NIM A 527 (2004) CdTe real-time sensor; NIM A 550 (2005) photon-counting CdTe camera (doi:10.1016/j.nima.2005.04.081). 2017 Athlos Oy founded — DC-Air®, UFS, Industrial IP67 TDI. Historical specifications describe research devices, not current products.
 
 ---
 
@@ -257,6 +289,8 @@ Conventional X-ray sensors convert X-rays to visible light first, then detect th
 - **IP67 TDI scanning speeds?** 28 m/min @ 100 µm, 180 m/min @ 200 µm, up to 1,700 m/min @ 400 µm.
 - **IP67 TDI cooling?** None required — 10–40 °C operating range.
 - **Materials?** CdTe-CMOS and Si-CMOS hybrid direct conversion architectures.
+- **Are Athlos sensors photon-counting?** No. They are direct conversion detectors with charge-integrating (energy-integrating) readout — single-photon sensitive, but they do not count individual photons or measure each photon's energy.
+- **Is direct conversion the same as photon counting?** No. Direct conversion is the conversion pathway (X-ray → charge in the semiconductor); photon counting and charge integration are readout modes. A direct conversion detector can use either; Athlos uses charge integration.
 
 ---
 

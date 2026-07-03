@@ -8,6 +8,7 @@
   "nav": {
     "home": "Inicio",
     "products": "Productos",
+    "technology": "Tecnología",
     "applications": "Aplicaciones",
     "about": "Nosotros",
     "contact": "Contacto",
@@ -44,6 +45,7 @@
       "industrial": "Inspección industrial",
       "medical": "Imagen médica",
       "about": "Sobre Athlos",
+      "technology": "Tecnología",
       "manufacturingShort": "Fabricación",
       "linkedin": "LinkedIn",
       "privacy": "Política de privacidad"

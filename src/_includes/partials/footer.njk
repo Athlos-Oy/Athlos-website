@@ -31,6 +31,8 @@
           <div class="footer-col">
             <span class="footer-col-label">{{ "footer.columns.company" | t }}</span>
             <a href="{{ "/about.html" | localeUrl(lang) }}" class="footer-link">{{ "footer.links.about" | t }}</a>
+            {#- English-only page — direct EN URL on every locale. -#}
+            <a href="/technology/direct-conversion.html" class="footer-link">{{ "footer.links.technology" | t }}</a>
             <a href="{{ "/products/manufacturing.html" | localeUrl(lang) }}" class="footer-link">{{ "footer.links.manufacturingShort" | t }}</a>
           </div>
           <div class="footer-col">

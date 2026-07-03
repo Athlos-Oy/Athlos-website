@@ -34,7 +34,10 @@
         <ul class="lang-switcher-menu" role="menu">
 {%- for loc in locales.active %}
 {%- if loc != lang %}
-          <li role="none"><a role="menuitem" href="{{ page.url | localeUrl(loc) }}" hreflang="{{ loc }}" class="lang-switcher-item">{{ flag(loc) }}<span class="lang-switcher-item-label">{{ locales.labels[loc] }}</span></a></li>
+          {#- Single-locale pages (e.g. /technology/…) have no localized
+              variants; send other-language visitors to that locale's
+              homepage instead of a 404. -#}
+          <li role="none"><a role="menuitem" href="{{ ("/index.html" if singleLocale else page.url) | localeUrl(loc) }}" hreflang="{{ loc }}" class="lang-switcher-item">{{ flag(loc) }}<span class="lang-switcher-item-label">{{ locales.labels[loc] }}</span></a></li>
 {%- endif -%}
 {%- endfor %}
         </ul>

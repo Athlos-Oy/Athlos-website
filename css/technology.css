@@ -1,0 +1,365 @@
+/* =====================================================
+   ATHLOS — TECHNOLOGY PAGE (/technology/direct-conversion.html)
+   Builds on style.css + products.css. Only page-specific
+   layout lives here; shared tokens come from :root in style.css.
+===================================================== */
+
+.container--narrow { max-width: 880px; }
+
+/* ---- section rhythm -------------------------------------------------- */
+.tech-section { padding: var(--section-py, clamp(4rem, 8vw, 7rem)) 0; }
+.tech-section--light { background: var(--white); }
+.tech-section--dark { background: var(--charcoal); }
+.tech-section--tight { padding: clamp(2rem, 4vw, 3rem) 0; }
+.tech-block { margin-top: clamp(2.5rem, 5vw, 4rem); }
+
+.tech-body {
+  font-size: var(--text-base);
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--gray-steel);
+  margin-bottom: 1.25rem;
+  max-width: 72ch;
+}
+.tech-body--dark { color: rgba(255, 255, 255, 0.65); }
+.tech-body a, .tech-list a { color: var(--cyan); text-decoration: none; }
+.tech-body a:hover, .tech-list a:hover { text-decoration: underline; }
+.tech-body--dark strong, .tech-list strong { color: rgba(255, 255, 255, 0.9); }
+
+/* ---- hero ------------------------------------------------------------ */
+.tech-hero {
+  min-height: 46vh;
+  display: flex;
+  align-items: flex-end;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 20%, rgba(67, 161, 216, 0.14), transparent 60%),
+    linear-gradient(160deg, #0d151b 0%, var(--charcoal) 70%);
+  padding: calc(var(--nav-h, 72px) + 4rem) var(--page-x, 5vw) 3.5rem;
+}
+.tech-hero-content { max-width: 880px; margin: 0 auto; width: 100%; }
+.tech-hero-headline {
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: var(--white);
+  margin: 0.75rem 0 1rem;
+}
+.tech-hero-sub {
+  font-size: var(--text-md);
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 620px;
+}
+
+/* ---- answer box ------------------------------------------------------ */
+.tech-answer-box {
+  border: 1px solid rgba(67, 161, 216, 0.35);
+  border-left: 4px solid var(--cyan);
+  background: rgba(67, 161, 216, 0.06);
+  border-radius: var(--r-lg, 12px);
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+.tech-answer-box p {
+  font-size: var(--text-md);
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--gray-dark, #2a3439);
+  margin: 0;
+}
+
+/* ---- steps ----------------------------------------------------------- */
+.tech-steps {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  display: grid;
+  gap: 0.85rem;
+}
+.tech-steps li {
+  counter-increment: step;
+  position: relative;
+  padding: 1rem 1.25rem 1rem 3.6rem;
+  border: 1px solid rgba(20, 35, 48, 0.1);
+  border-radius: var(--r-lg, 12px);
+  font-size: var(--text-base);
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--gray-steel);
+  background: rgba(20, 35, 48, 0.02);
+}
+.tech-steps li::before {
+  content: counter(step, decimal-leading-zero);
+  position: absolute;
+  left: 1.1rem;
+  top: 1.05rem;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--cyan);
+}
+
+/* ---- tables ---------------------------------------------------------- */
+.tech-table-wrap { overflow-x: auto; margin: 1.5rem 0; -webkit-overflow-scrolling: touch; }
+.tech-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+  font-weight: 300;
+  line-height: 1.6;
+}
+.tech-table th, .tech-table td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.65);
+}
+.tech-table thead th {
+  font-weight: 600;
+  font-size: var(--text-xs, 0.75rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  border-bottom: 1px solid rgba(67, 161, 216, 0.4);
+}
+.tech-table tbody th[scope="row"] {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  white-space: nowrap;
+}
+.tech-table tbody tr:hover td, .tech-table tbody tr:hover th { background: rgba(255, 255, 255, 0.03); }
+.tech-table a { color: var(--cyan); text-decoration: none; }
+.tech-table a:hover { text-decoration: underline; }
+
+.tech-table--light th, .tech-table--light td {
+  border-bottom-color: rgba(20, 35, 48, 0.1);
+  color: var(--gray-steel);
+}
+.tech-table--light tbody th[scope="row"] { color: var(--charcoal); }
+.tech-table--light tbody tr:hover td, .tech-table--light tbody tr:hover th { background: rgba(20, 35, 48, 0.03); }
+
+/* ---- diagrams -------------------------------------------------------- */
+.tech-pathway {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0 0.75rem;
+}
+.tech-pathway-panel {
+  border: 1px solid rgba(20, 35, 48, 0.1);
+  border-radius: var(--r-lg, 12px);
+  padding: 1.25rem;
+  background: #fbfcfd;
+}
+.tech-pathway-title {
+  font-size: var(--text-xs, 0.75rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-steel);
+  margin-bottom: 0.75rem;
+}
+.tech-svg-label { font-size: 11px; font-family: inherit; font-weight: 500; }
+.tech-svg-label--dark { fill: rgba(255, 255, 255, 0.75); }
+.tech-caption {
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: var(--gray-steel);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+.tech-two-col {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.tech-stack, .tech-tdi { margin: 1.5rem 0; }
+
+/* Subtle looping motion, fully disabled under prefers-reduced-motion
+   (a complete static frame remains — the SVGs are drawn static-first). */
+@media (prefers-reduced-motion: no-preference) {
+  .tech-anim-beam { animation: tech-beam 2.4s linear infinite; }
+  @keyframes tech-beam { to { stroke-dashoffset: -20; } }
+  .tech-anim-cloud { animation: tech-cloud 2.4s ease-in-out infinite alternate; transform-origin: center; transform-box: fill-box; }
+  .tech-anim-cloud--wide { animation-delay: 0.2s; }
+  .tech-anim-cloud--wider { animation-delay: 0.4s; }
+  @keyframes tech-cloud { from { opacity: 0.75; transform: scale(0.96); } to { opacity: 1; transform: scale(1.05); } }
+  .tech-anim-column { animation: tech-column 2.4s ease-in-out infinite alternate; }
+  @keyframes tech-column { from { fill-opacity: 0.6; } to { fill-opacity: 0.95; } }
+}
+
+/* ---- lists ----------------------------------------------------------- */
+.tech-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0;
+  display: grid;
+  gap: 0.75rem;
+}
+.tech-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: var(--text-base);
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.65);
+}
+.tech-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cyan);
+}
+.tech-list--grid { grid-template-columns: 1fr 1fr; gap: 1rem 2.5rem; }
+
+.tech-note {
+  border: 1px solid rgba(67, 161, 216, 0.4);
+  border-left: 4px solid var(--cyan);
+  background: rgba(67, 161, 216, 0.08);
+  border-radius: var(--r-lg, 12px);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.tech-note p {
+  font-size: var(--text-base);
+  font-weight: 300;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+.tech-note strong { color: var(--white); }
+
+/* ---- timeline -------------------------------------------------------- */
+.tech-timeline {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  position: relative;
+}
+.tech-timeline::before {
+  content: "";
+  position: absolute;
+  left: 5.5rem;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  width: 1px;
+  background: rgba(67, 161, 216, 0.35);
+}
+.tech-timeline li {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: 2rem;
+  padding: 0 0 1.75rem;
+  position: relative;
+}
+.tech-timeline li::before {
+  content: "";
+  position: absolute;
+  left: calc(5.5rem - 4px);
+  top: 0.45rem;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--cyan);
+}
+.tech-timeline-year {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--cyan);
+  text-align: right;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.tech-timeline li p {
+  font-size: var(--text-base);
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+}
+.tech-timeline li p strong { color: rgba(255, 255, 255, 0.9); }
+
+/* ---- publications / references --------------------------------------- */
+.tech-publications { list-style: none; padding: 0; margin: 1.5rem 0; display: grid; gap: 1rem; }
+.tech-publication {
+  border: 1px solid rgba(20, 35, 48, 0.1);
+  border-radius: var(--r-lg, 12px);
+  padding: 1.25rem 1.5rem;
+  background: rgba(20, 35, 48, 0.02);
+}
+.tech-publication-title { font-size: var(--text-base); font-weight: 500; color: var(--charcoal); margin-bottom: 0.35rem; }
+.tech-publication-title a { color: var(--charcoal); text-decoration: none; border-bottom: 1px solid rgba(67, 161, 216, 0.5); }
+.tech-publication-title a:hover { color: var(--cyan); }
+.tech-publication-meta { font-size: var(--text-sm); font-weight: 300; color: var(--gray-steel); opacity: 0.85; margin-bottom: 0.6rem; }
+.tech-publication-body { font-size: var(--text-sm); font-weight: 300; line-height: 1.65; color: var(--gray-steel); margin: 0; }
+
+.tech-references {
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  display: grid;
+  gap: 0.75rem;
+  font-size: var(--text-sm);
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--gray-steel);
+}
+.tech-references a { color: var(--cyan); text-decoration: none; word-break: break-all; }
+.tech-references a:hover { text-decoration: underline; }
+
+/* ---- glossary -------------------------------------------------------- */
+.tech-glossary {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0 0;
+}
+.tech-glossary-card {
+  border: 1px solid rgba(20, 35, 48, 0.1);
+  border-radius: var(--r-lg, 12px);
+  padding: 1.1rem 1.25rem;
+  background: rgba(20, 35, 48, 0.02);
+}
+.tech-glossary-card dt { font-size: var(--text-sm); font-weight: 600; color: var(--charcoal); margin-bottom: 0.4rem; }
+.tech-glossary-card dd { font-size: var(--text-sm); font-weight: 300; line-height: 1.6; color: var(--gray-steel); margin: 0; }
+
+/* ---- FAQ ------------------------------------------------------------- */
+.tech-faq { display: grid; gap: 1.25rem; margin-top: 2rem; }
+.tech-faq-item {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--r-lg, 12px);
+  padding: 1.25rem 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+.tech-faq-q { font-size: var(--text-base); font-weight: 500; color: var(--white); margin-bottom: 0.6rem; letter-spacing: -0.01em; }
+.tech-faq-a { font-size: var(--text-sm); font-weight: 300; line-height: 1.7; color: rgba(255, 255, 255, 0.6); margin: 0; }
+
+/* ---- reviewed-by ------------------------------------------------------ */
+.tech-reviewed {
+  border-top: 1px solid rgba(20, 35, 48, 0.1);
+  padding-top: 1.5rem;
+}
+.tech-reviewed-title { font-size: var(--text-base); font-weight: 500; color: var(--charcoal); margin-bottom: 0.4rem; }
+.tech-reviewed-title a { color: var(--charcoal); border-bottom: 1px solid rgba(67, 161, 216, 0.5); text-decoration: none; }
+.tech-reviewed-title a:hover { color: var(--cyan); }
+.tech-reviewed-body { font-size: var(--text-sm); font-weight: 300; line-height: 1.65; color: var(--gray-steel); margin-bottom: 0.6rem; max-width: 72ch; }
+.tech-reviewed-date { font-size: var(--text-sm); font-weight: 400; color: var(--gray-steel); opacity: 0.8; }
+
+/* ---- responsive ------------------------------------------------------- */
+@media (max-width: 820px) {
+  .tech-pathway { grid-template-columns: 1fr; }
+  .tech-two-col { grid-template-columns: 1fr; }
+  .tech-list--grid { grid-template-columns: 1fr; }
+  .tech-timeline::before { left: 4.4rem; }
+  .tech-timeline li { grid-template-columns: 3.6rem 1fr; gap: 1.5rem; }
+  .tech-timeline li::before { left: calc(4.4rem - 4px); }
+}

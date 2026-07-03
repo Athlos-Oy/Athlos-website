@@ -35,8 +35,9 @@ const PAGES = [
 
 // Single-locale URLs that don't have localized variants.
 const EXTRA = [
-  { path: "/llms.txt",      priority: "0.5", changefreq: "monthly", lastmod: "2026-04-17" },
-  { path: "/llms-full.txt", priority: "0.5", changefreq: "monthly", lastmod: "2026-04-17" },
+  { path: "/technology/direct-conversion.html", priority: "0.9", changefreq: "monthly", lastmod: "2026-07-03" },
+  { path: "/llms.txt",      priority: "0.5", changefreq: "monthly", lastmod: "2026-07-03" },
+  { path: "/llms-full.txt", priority: "0.5", changefreq: "monthly", lastmod: "2026-07-03" },
 ];
 
 // Decay priority by one tier for localized variants ("1.0" → "0.9",

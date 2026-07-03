@@ -1,0 +1,16 @@
+{
+  "pages": {
+    "technology": {
+      "title": "Direct Conversion X-ray Imaging Technology | CdTe &amp; Si-CMOS | Athlos",
+      "description": "How direct conversion X-ray sensors turn photons directly into electrical signal — no scintillator light-spread stage. CdTe-CMOS &amp; Si-CMOS by Athlos.",
+      "og": {
+        "title": "Direct Conversion X-ray Imaging Technology | Athlos",
+        "description": "What direct conversion is, direct vs indirect (scintillator) comparison, CdTe-CMOS and Si-CMOS architectures, TDI scanning, and 30 years of peer-reviewed lineage."
+      },
+      "twitter": {
+        "title": "Direct Conversion X-ray Imaging Technology | Athlos",
+        "description": "How direct conversion X-ray sensors convert photons directly into electrical signal — no scintillator light-spread stage."
+      }
+    }
+  }
+}
