@@ -21,9 +21,10 @@
                          localized charge → NARROW vertical signal
                          path → ONE CMOS pixel activates. The indirect
                          stage's wide footprint stays lit for contrast.
-     SHOT 5 (10.0–13s)   Pull out: the INDIRECT output graph reveals
+     SHOT 5 (10.0–15s)   Pull out: the INDIRECT output graph reveals
                          first and holds alone (softer), then the
-                         DIRECT graph beside it (sharper); both hold.
+                         DIRECT graph beside it (sharper); both hold
+                         ~2s extra (slow drift) before the loop seam.
                          "Direct conversion removes the scintillator
                          light-spread stage."
 
@@ -96,7 +97,7 @@
      SCENE
   =================================================== */
   function buildScene(THREE) {
-    const LOOP = 13.0;
+    const LOOP = 15.0;
     const DPR_CAP = window.matchMedia('(max-width: 768px)').matches ? 1.3 : 1.75;
 
     const COL = {
@@ -554,6 +555,17 @@
       { u: 1.000, p: [7.0, 8.0, 12.0],   t: [-0.2, 3.0, 0.0] }    // loop (in fade)
     ];
     function smooth(t) { return t * t * (3 - 2 * t); }
+    // Wall-clock → story position. All animation windows are fractions
+    // of the original 13s film; the story plays at that pace, then the
+    // final graph comparison holds ~2s in slow drift before the seam.
+    const TIME_MAP = [[0, 0], [12.3, 0.946], [14.3, 0.975], [15.0, 1.0]];
+    function storyU(t) {
+      for (let i = 0; i < TIME_MAP.length - 1; i++) {
+        const a = TIME_MAP[i], b = TIME_MAP[i + 1];
+        if (t <= b[0]) return a[1] + (b[1] - a[1]) * ((t - a[0]) / (b[0] - a[0]));
+      }
+      return 1;
+    }
     const _p = new THREE.Vector3(), _t = new THREE.Vector3();
     function sampleCamera(u) {
       let a = KEYS[0], b = KEYS[KEYS.length - 1];
@@ -778,7 +790,7 @@
       if (!tPrev) tPrev = now;
       const dt = Math.min(0.05, (now - tPrev) / 1000);
       tPrev = now; clock += dt; phaseT += dt;
-      const u = (phaseT % LOOP) / LOOP;
+      const u = storyU(phaseT % LOOP);
 
       sampleCamera(u);
       // Portrait / narrow viewports: dolly back during the stage shots
