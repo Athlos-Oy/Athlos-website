@@ -140,6 +140,31 @@
             "path": "Trajet du signal plus court",
             "output": "Localisation du signal plus nette"
           }
+        },
+        "experience": {
+          "enter": "Les rayons X entrent dans le détecteur",
+          "indirectTitle": "Conversion indirecte",
+          "indirectSub": "Les rayons X deviennent lumière — la lumière se disperse avant la lecture",
+          "directTitle": "Conversion directe",
+          "directSub": "La charge reste localisée jusqu’à la lecture CMOS",
+          "payoff": "La conversion directe supprime l’étape de dispersion lumineuse du scintillateur.",
+          "layers": {
+            "scintillator": "Scintillateur",
+            "photodiode": "Lecture photodiode",
+            "cdte": "Couche CdTe / Si",
+            "cmos": "Lecture CMOS"
+          },
+          "steps": {
+            "becomeLight": "Les rayons X deviennent lumière",
+            "spreads": "La lumière se disperse",
+            "footWide": "Empreinte de lecture plus large",
+            "chargeGen": "Génération directe de charge",
+            "path": "Trajet du signal localisé",
+            "footNarrow": "Empreinte de lecture plus étroite"
+          },
+          "softerTag": "Localisation floue",
+          "sharperTag": "Localisation nette",
+          "aria": "Schéma animé. Les rayons X entrent dans le détecteur par le haut. Conversion indirecte : un scintillateur convertit les rayons X en lumière visible, la lumière se disperse latéralement avant la détection, et plusieurs pixels de lecture à photodiode enregistrent une empreinte de signal plus large. Conversion directe : une couche de CdTe ou de silicium convertit les rayons X directement en charge, qui suit un trajet étroit vers la lecture CMOS et reste localisée. Les graphiques de sortie comparent une localisation floue et une localisation nette."
         }
       },
       "products": {

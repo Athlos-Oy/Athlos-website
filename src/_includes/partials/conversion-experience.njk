@@ -1,0 +1,54 @@
+{#- =====================================================
+    CinematicDirectConversionExperience — flagship homepage visual
+    A lazy-loaded WebGL layer-demonstration film: wide shot of the
+    Athlos module, then two stable cross-section stages — indirect
+    conversion (scintillator → light spread → wide photodiode
+    footprint) and direct conversion (CdTe/Si → localized charge →
+    narrow CMOS footprint) — ending on the output comparison.
+    (js/conversion-experience.js + vendored Three.js). Three guards
+    fall back to the static SVG poster below and never load WebGL:
+    prefers-reduced-motion, no WebGL, and automation (navigator.
+    webdriver — keeps visual-regression snapshots deterministic).
+    Copy: i18n pages.home.tech.experience.* (captions + layer tags)
+    and pages.home.tech.comparison.* (poster).
+   ===================================================== -#}
+{%- set x = "pages.home.tech.experience" -%}
+<div class="dce reveal" data-dce>
+  <canvas class="dce-canvas" aria-hidden="true"></canvas>
+
+  {#- layer + step tags: positioned by JS from 3D anchors -#}
+  <div class="dce-tags" aria-hidden="true">
+    <span class="dce-tag dce-tag--soft" data-tag="scintillator">{{ (x ~ ".layers.scintillator") | t }}</span>
+    <span class="dce-tag dce-tag--soft" data-tag="photodiode">{{ (x ~ ".layers.photodiode") | t }}</span>
+    <span class="dce-tag dce-tag--soft" data-tag="becomeLight">{{ (x ~ ".steps.becomeLight") | t }}</span>
+    <span class="dce-tag dce-tag--soft" data-tag="spreads">{{ (x ~ ".steps.spreads") | t }}</span>
+    <span class="dce-tag dce-tag--soft" data-tag="footWide">{{ (x ~ ".steps.footWide") | t }}</span>
+    <span class="dce-tag dce-tag--sharp" data-tag="cdte">{{ (x ~ ".layers.cdte") | t }}</span>
+    <span class="dce-tag dce-tag--sharp" data-tag="cmos">{{ (x ~ ".layers.cmos") | t }}</span>
+    <span class="dce-tag dce-tag--sharp" data-tag="chargeGen">{{ (x ~ ".steps.chargeGen") | t }}</span>
+    <span class="dce-tag dce-tag--sharp" data-tag="path">{{ (x ~ ".steps.path") | t }}</span>
+    <span class="dce-tag dce-tag--sharp" data-tag="footNarrow">{{ (x ~ ".steps.footNarrow") | t }}</span>
+    <span class="dce-tag dce-tag--soft dce-tag--title" data-tag="graphI">{{ (x ~ ".indirectTitle") | t }}</span>
+    <span class="dce-tag dce-tag--sharp dce-tag--title" data-tag="graphD">{{ (x ~ ".directTitle") | t }}</span>
+    <span class="dce-tag dce-tag--soft" data-tag="softer">{{ (x ~ ".softerTag") | t }}</span>
+    <span class="dce-tag dce-tag--sharp" data-tag="sharper">{{ (x ~ ".sharperTag") | t }}</span>
+  </div>
+
+  {#- bottom caption: JS reveals one per shot (title + sub-line) -#}
+  <div class="dce-captions" aria-hidden="true">
+    <span class="dce-line" data-cap="enter">{{ (x ~ ".enter") | t }}</span>
+    <span class="dce-line" data-cap="indirect"><strong>{{ (x ~ ".indirectTitle") | t }}</strong><small>{{ (x ~ ".indirectSub") | t }}</small></span>
+    <span class="dce-line" data-cap="direct"><strong>{{ (x ~ ".directTitle") | t }}</strong><small>{{ (x ~ ".directSub") | t }}</small></span>
+    <span class="dce-line dce-line--payoff" data-cap="payoff">{{ (x ~ ".payoff") | t }}</span>
+  </div>
+
+  {#- dip-to-black covering the loop seam -#}
+  <div class="dce-fade" aria-hidden="true"></div>
+
+  {#- static fallback: existing pure-SVG comparison panel -#}
+  <div class="dce-poster">
+    {% include "partials/conversion-comparison.njk" %}
+  </div>
+
+  <p class="dcc-sr-only">{{ (x ~ ".aria") | t }}</p>
+</div>

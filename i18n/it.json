@@ -146,6 +146,31 @@
             "path": "Percorso del segnale più corto",
             "output": "Localizzazione del segnale più nitida"
           }
+        },
+        "experience": {
+          "enter": "I raggi X entrano nel rivelatore",
+          "indirectTitle": "Conversione indiretta",
+          "indirectSub": "I raggi X diventano luce — la luce si diffonde prima della lettura",
+          "directTitle": "Conversione diretta",
+          "directSub": "La carica resta localizzata fino alla lettura CMOS",
+          "payoff": "La conversione diretta elimina lo stadio di diffusione della luce dello scintillatore.",
+          "layers": {
+            "scintillator": "Scintillatore",
+            "photodiode": "Lettura a fotodiodi",
+            "cdte": "Strato CdTe / Si",
+            "cmos": "Lettura CMOS"
+          },
+          "steps": {
+            "becomeLight": "I raggi X diventano luce",
+            "spreads": "La luce si diffonde",
+            "footWide": "Impronta di lettura più ampia",
+            "chargeGen": "Generazione diretta di carica",
+            "path": "Percorso del segnale localizzato",
+            "footNarrow": "Impronta di lettura più stretta"
+          },
+          "softerTag": "Localizzazione sfocata",
+          "sharperTag": "Localizzazione nitida",
+          "aria": "Diagramma animato. I raggi X entrano nel rivelatore dall’alto. Conversione indiretta: uno scintillatore converte i raggi X in luce visibile, la luce si diffonde lateralmente prima della rilevazione e diversi pixel di lettura a fotodiodo registrano un’impronta di segnale più ampia. Conversione diretta: uno strato di CdTe o silicio converte i raggi X direttamente in carica, che percorre un tragitto stretto fino alla lettura CMOS e resta localizzata. I grafici di uscita confrontano una localizzazione sfocata con una nitida."
         }
       },
       "products": {

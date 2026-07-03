@@ -140,6 +140,31 @@
             "path": "Trayectoria de señal más corta",
             "output": "Localización de señal más nítida"
           }
+        },
+        "experience": {
+          "enter": "Los rayos X entran en el detector",
+          "indirectTitle": "Conversión indirecta",
+          "indirectSub": "Los rayos X se convierten en luz — la luz se dispersa antes de la lectura",
+          "directTitle": "Conversión directa",
+          "directSub": "La carga permanece localizada hasta la lectura CMOS",
+          "payoff": "La conversión directa elimina la etapa de dispersión de luz del centelleador.",
+          "layers": {
+            "scintillator": "Centelleador",
+            "photodiode": "Lectura de fotodiodos",
+            "cdte": "Capa de CdTe / Si",
+            "cmos": "Lectura CMOS"
+          },
+          "steps": {
+            "becomeLight": "Los rayos X se convierten en luz",
+            "spreads": "La luz se dispersa",
+            "footWide": "Huella de lectura más amplia",
+            "chargeGen": "Generación directa de carga",
+            "path": "Trayecto de señal localizado",
+            "footNarrow": "Huella de lectura más estrecha"
+          },
+          "softerTag": "Localización borrosa",
+          "sharperTag": "Localización nítida",
+          "aria": "Diagrama animado. Los rayos X entran en el detector desde arriba. Conversión indirecta: un centelleador convierte los rayos X en luz visible, la luz se dispersa lateralmente antes de la detección y varios píxeles de lectura de fotodiodo registran una huella de señal más amplia. Conversión directa: una capa de CdTe o silicio convierte los rayos X directamente en carga, que recorre un trayecto estrecho hasta la lectura CMOS y permanece localizada. Los gráficos de salida comparan una localización borrosa con una nítida."
         }
       },
       "products": {
