@@ -142,25 +142,22 @@
           }
         },
         "experience": {
-          "enter": "Les rayons X entrent",
+          "enter": "Les rayons X entrent dans le détecteur",
           "indirectTitle": "Conversion indirecte",
-          "indirectSub": "Les rayons X deviennent lumière — la lumière s'étale",
+          "indirectSub": "Rayons X convertis en lumière — la lumière se diffuse avant la détection",
           "directTitle": "Conversion directe",
           "directSub": "Génération directe de charge — trajet du signal localisé",
-          "readoutTitle": "Lecture CMOS",
-          "readoutSub": "Signal collecté au niveau du pixel",
-          "payoff": "Conversion directe. Avantage direct.",
+          "payoff": "La conversion directe supprime l'étape de diffusion lumineuse du scintillateur.",
           "layers": {
             "window": "Fenêtre du capteur",
             "scintillator": "Scintillateur",
-            "photodiode": "Photodiode",
-            "cdte": "CdTe / Si",
-            "electrodes": "Électrodes de pixel",
-            "cmos": "CMOS / ASIC"
+            "readout": "Lecture",
+            "cdte": "Couche de conversion CdTe",
+            "cmos": "Lecture CMOS"
           },
-          "softerTag": "Localisation plus douce",
-          "sharperTag": "Localisation plus nette",
-          "aria": "Séquence cinématique suivant un photon X unique dans un module détecteur Athlos. La caméra suit le photon vu de dessus, plonge à travers la fenêtre du capteur dans une vue en coupe et montre brièvement la voie indirecte conventionnelle : un scintillateur convertit les rayons X en lumière visible qui s'étale latéralement avant d'atteindre la photodiode. Dans la voie directe, l'énergie du photon devient une charge localisée dans le CdTe ou le silicium, collectée par une électrode de pixel puis lue par l'électronique CMOS. Le détecteur se referme et présente une image nette — avec une petite comparaison : indirecte plus floue, directe plus nette."
+          "softerTag": "Localisation du signal plus douce",
+          "sharperTag": "Localisation du signal plus nette",
+          "aria": "Séquence cinématique. Un plan large montre un module détecteur Athlos réel tandis que des photons X entrent verticalement, perpendiculairement à la surface du détecteur. La caméra zoome dans une vue en coupe des couches internes. En conversion indirecte, un scintillateur convertit les rayons X en lumière visible qui se diffuse latéralement sur plusieurs zones de pixels avant d'atteindre la lecture — un signal plus large et moins localisé. En conversion directe, le rayon X devient une charge localisée dans la couche de CdTe et rejoint directement la lecture CMOS, sans étape de diffusion lumineuse. La caméra dézoome : le graphique de sortie indirect apparaît d'abord, avec une localisation du signal plus douce, puis le graphique direct apparaît à côté, avec une localisation plus nette. La conversion directe supprime l'étape de diffusion lumineuse du scintillateur."
         }
       },
       "products": {

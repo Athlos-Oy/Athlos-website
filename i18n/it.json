@@ -148,25 +148,22 @@
           }
         },
         "experience": {
-          "enter": "I raggi X entrano",
+          "enter": "I raggi X entrano nel rivelatore",
           "indirectTitle": "Conversione indiretta",
-          "indirectSub": "I raggi X diventano luce — la luce si diffonde",
+          "indirectSub": "Raggi X convertiti in luce — la luce si diffonde prima della rilevazione",
           "directTitle": "Conversione diretta",
           "directSub": "Generazione diretta di carica — percorso del segnale localizzato",
-          "readoutTitle": "Lettura CMOS",
-          "readoutSub": "Segnale raccolto sul pixel",
-          "payoff": "Conversione diretta. Vantaggio diretto.",
+          "payoff": "La conversione diretta elimina la fase di diffusione della luce dello scintillatore.",
           "layers": {
             "window": "Finestra del sensore",
             "scintillator": "Scintillatore",
-            "photodiode": "Fotodiodo",
-            "cdte": "CdTe / Si",
-            "electrodes": "Elettrodi di pixel",
-            "cmos": "CMOS / ASIC"
+            "readout": "Lettura",
+            "cdte": "Strato di conversione CdTe",
+            "cmos": "Lettura CMOS"
           },
-          "softerTag": "Localizzazione più morbida",
-          "sharperTag": "Localizzazione più nitida",
-          "aria": "Sequenza cinematografica che segue un singolo fotone X in un modulo rivelatore Athlos. La telecamera segue il fotone dall'alto, si immerge attraverso la finestra del sensore in una vista in sezione e mostra brevemente il percorso indiretto convenzionale: uno scintillatore converte i raggi X in luce visibile che si diffonde lateralmente prima di raggiungere il fotodiodo. Nel percorso diretto, l'energia del fotone diventa carica localizzata nel CdTe o nel silicio, raccolta da un elettrodo di pixel e letta dall'elettronica CMOS. Il rivelatore si richiude e presenta un'immagine nitida — con un piccolo confronto: indiretta più morbida, diretta più nitida."
+          "softerTag": "Localizzazione del segnale più morbida",
+          "sharperTag": "Localizzazione del segnale più nitida",
+          "aria": "Sequenza cinematografica. Un'inquadratura ampia mostra un modulo rivelatore Athlos reale mentre i fotoni X entrano verticalmente, perpendicolari alla superficie del rivelatore. La telecamera zooma in una vista in sezione degli strati interni. Nella conversione indiretta, uno scintillatore converte i raggi X in luce visibile che si diffonde lateralmente su più regioni di pixel prima di raggiungere la lettura — un segnale più ampio e meno localizzato. Nella conversione diretta, il raggio X diventa carica localizzata nello strato di CdTe e passa direttamente alla lettura CMOS, senza fase di diffusione della luce. La telecamera si allontana: appare prima il grafico dell'uscita indiretta, con localizzazione del segnale più morbida, poi accanto quello diretto, con localizzazione più nitida. La conversione diretta elimina la fase di diffusione della luce dello scintillatore."
         }
       },
       "products": {

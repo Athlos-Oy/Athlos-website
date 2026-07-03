@@ -140,25 +140,22 @@
           }
         },
         "experience": {
-          "enter": "X-rays enter",
+          "enter": "X-rays enter the detector",
           "indirectTitle": "Indirect conversion",
-          "indirectSub": "X-rays become light — light spreads",
+          "indirectSub": "X-rays converted to light — light spreads before detection",
           "directTitle": "Direct conversion",
           "directSub": "Direct charge generation — localized signal path",
-          "readoutTitle": "CMOS readout",
-          "readoutSub": "Signal collected at the pixel",
-          "payoff": "Direct conversion. Direct advantage.",
+          "payoff": "Direct conversion removes the scintillator light-spread stage.",
           "layers": {
             "window": "Sensor window",
             "scintillator": "Scintillator",
-            "photodiode": "Photodiode",
-            "cdte": "CdTe / Si",
-            "electrodes": "Pixel electrodes",
-            "cmos": "CMOS / ASIC"
+            "readout": "Readout",
+            "cdte": "CdTe conversion layer",
+            "cmos": "CMOS readout"
           },
-          "softerTag": "Softer localization",
-          "sharperTag": "Sharper localization",
-          "aria": "Cinematic sequence following a single X-ray photon into an Athlos detector module. The camera tracks the photon from above as it approaches the detector, dives through the sensor window into a cutaway view, and briefly shows the conventional indirect path, where a scintillator converts X-rays into visible light that spreads sideways before reaching a photodiode. In the direct-conversion path, the photon's energy becomes localized electric charge in the CdTe or silicon layer, which is collected at a pixel electrode and read out through the CMOS electronics. The detector then closes up and presents a sharp image, with a small comparison showing the softer indirect result and the sharper direct result."
+          "softerTag": "Softer signal localization",
+          "sharperTag": "Sharper signal localization",
+          "aria": "Cinematic sequence. A wide view shows a real Athlos detector module as X-ray photons enter straight from above, perpendicular to the detector surface. The camera zooms into a cutaway of the internal layers. In indirect conversion, a scintillator converts the X-rays into visible light that spreads sideways across several pixel regions before reaching the readout — a wider, less localized signal. In direct conversion, the X-ray becomes localized electric charge in the CdTe layer and travels straight into the CMOS readout, with no light-spread stage. The camera zooms back out: the indirect output graph appears first, showing softer signal localization, then the direct output graph appears beside it, showing sharper signal localization. Direct conversion removes the scintillator light-spread stage."
         }
       },
       "products": {

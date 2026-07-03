@@ -142,25 +142,22 @@
           }
         },
         "experience": {
-          "enter": "Röntgenstrahlen treten ein",
+          "enter": "Röntgenstrahlen treffen auf den Detektor",
           "indirectTitle": "Indirekte Konversion",
-          "indirectSub": "Röntgenstrahlen werden zu Licht — das Licht streut",
+          "indirectSub": "Röntgenstrahlen werden in Licht umgewandelt — das Licht streut vor der Detektion",
           "directTitle": "Direkte Konversion",
           "directSub": "Direkte Ladungserzeugung — lokalisierter Signalweg",
-          "readoutTitle": "CMOS-Auslese",
-          "readoutSub": "Signal am Pixel gesammelt",
-          "payoff": "Direkte Konversion. Direkter Vorteil.",
+          "payoff": "Die direkte Konversion eliminiert die Lichtstreuungsstufe des Szintillators.",
           "layers": {
             "window": "Sensorfenster",
             "scintillator": "Szintillator",
-            "photodiode": "Photodiode",
-            "cdte": "CdTe / Si",
-            "electrodes": "Pixelelektroden",
-            "cmos": "CMOS / ASIC"
+            "readout": "Auslese",
+            "cdte": "CdTe-Konversionsschicht",
+            "cmos": "CMOS-Auslese"
           },
-          "softerTag": "Weichere Lokalisierung",
-          "sharperTag": "Schärfere Lokalisierung",
-          "aria": "Filmische Sequenz, die ein einzelnes Röntgenphoton in ein Athlos-Detektormodul begleitet. Die Kamera folgt dem Photon von oben, taucht durch das Sensorfenster in eine Schnittansicht ein und zeigt kurz den konventionellen indirekten Weg: Ein Szintillator wandelt Röntgenstrahlen in sichtbares Licht um, das sich seitlich ausbreitet, bevor es die Photodiode erreicht. Beim direkten Weg wird die Energie des Photons unmittelbar im CdTe- oder Siliziummaterial zu lokalisierter Ladung, die an einer Pixelelektrode gesammelt und über die CMOS-Elektronik ausgelesen wird. Der Detektor schließt sich wieder und liefert ein scharfes Bild — mit einem kleinen Vergleich: indirekt weicher, direkt schärfer."
+          "softerTag": "Weichere Signallokalisierung",
+          "sharperTag": "Schärfere Signallokalisierung",
+          "aria": "Filmische Sequenz. Eine Totale zeigt ein reales Athlos-Detektormodul, während Röntgenphotonen senkrecht von oben auf die Detektoroberfläche treffen. Die Kamera zoomt in eine Schnittansicht der inneren Schichten. Bei der indirekten Konversion wandelt ein Szintillator die Röntgenstrahlen in sichtbares Licht um, das sich seitlich über mehrere Pixelbereiche ausbreitet, bevor es die Auslese erreicht — ein breiteres, weniger lokalisiertes Signal. Bei der direkten Konversion wird die Röntgenstrahlung in der CdTe-Schicht zu lokalisierter Ladung, die ohne Lichtstreuungsstufe direkt in die CMOS-Auslese gelangt. Die Kamera zoomt wieder heraus: Zuerst erscheint das indirekte Ausgabediagramm mit weicherer Signallokalisierung, dann daneben das direkte mit schärferer Signallokalisierung. Die direkte Konversion eliminiert die Lichtstreuungsstufe des Szintillators."
         }
       },
       "products": {

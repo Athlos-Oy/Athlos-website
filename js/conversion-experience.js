@@ -7,29 +7,29 @@
    the Industrial IP67 TDI design language: black machined body,
    carbon-fibre entrance window, heatsink fins, M12 connector):
 
-     SHOT 1 (0.0–2.0s)   X-RAYS ENTER — high camera above the module;
-                         the hero photon (plus a few secondary photons)
-                         falls STRAIGHT DOWN, normal to the detector
-                         plane (physically correct imaging geometry).
-     SHOT 2 (2.0–3.5s)   Macro dive to the sensor window; a glowing
-                         SECTION CUT sweeps the housing open and the
-                         body fades to glass — a cutaway of a real
-                         engineered device.
-     SHOT 3 (3.5–6.8s)   INDIRECT, SLOWED — a ghost photon drops
-                         vertically (same beam direction) into the
-                         translucent scintillator: warm light blooms
-                         and SPREADS sideways across several pixel
-                         regions of the photodiode. Held long.
-     SHOT 4 (6.8–10.3s)  DIRECT, SLOWED — the hero photon is absorbed
-                         in CdTe/Si: one precise localized event,
-                         charge drawn straight down to ONE pixel
-                         electrode, then out through CMOS traces to
-                         the ASIC. Same vertical beam, same geometry.
-     SHOT 5 (10.3–13s)   CLIMAX — the housing re-solidifies and TWO
-                         identical test patterns scan-line-reveal side
-                         by side: indirect softer/wider, direct crisp/
-                         localized. Held long enough to actually read.
-                         "Direct conversion. Direct advantage."
+   Structure: a clear ZOOM-IN / ZOOM-OUT arc.
+
+     SHOT 1 (0.0–2.0s)   WIDE — the whole engineered module is visible;
+                         X-ray photons (hero + secondaries) fall
+                         STRAIGHT DOWN, normal to the detector plane.
+     SHOT 2 (2.0–4.5s)   ZOOM IN, INDIRECT — the section cut opens the
+                         housing to layer level. A photon drops into
+                         the scintillator: X-rays become visible light
+                         that SPREADS sideways across several pixel
+                         regions before the readout. Slow enough to
+                         watch the lateral spread happen.
+     SHOT 3 (4.5–7.5s)   DIRECT — same vertical beam, same geometry:
+                         the hero photon is absorbed in the CdTe layer,
+                         charge forms locally, stays narrow, and goes
+                         straight into the CMOS readout. No light-
+                         spread stage.
+     SHOT 4 (7.5–10.0s)  ZOOM OUT — the housing re-solidifies; the
+                         INDIRECT output graph scan-reveals FIRST and
+                         holds alone (softer, wider).
+     SHOT 5 (10.0–13s)   The DIRECT output graph reveals beside it
+                         (sharper, localized); both hold long.
+                         "Direct conversion removes the scintillator
+                         light-spread stage."
 
    Constraints: Three.js lazy-loaded (vendored, pinned ESM) only when
    the section nears the viewport; DPR-capped; render loop pauses
@@ -454,7 +454,7 @@
     // Secondary photons in the entry shot — the beam, not one stray.
     const SIDEKICKS = [];
     [[-3.2, 0.0], [0.6, 0.018], [2.4, 0.036]].forEach(([sx, off]) => {
-      SIDEKICKS.push({ s: glowSprite(COL.photon, 0.3, sx, 12, HZ), off });
+      SIDEKICKS.push({ s: glowSprite(COL.photon, 0.3, sx, 7, HZ), off });
     });
 
     // Window ripple, absorption flash, electrode / ASIC glows.
@@ -583,19 +583,19 @@
        CAMERA — one continuous purposeful move (no aimless spin)
     ============================================================== */
     const KEYS = [
-      { u: 0.000, p: [0.5, 12.5, 6.5],  t: [-1.2, 6.0, 0.95] },  // high above (target overridden: tracks the photon)
-      { u: 0.100, p: [-0.6, 8.5, 5.8],  t: [-1.2, 0.8, 0.95] },  // following it down
-      { u: 0.150, p: [-3.4, 2.4, 4.4],  t: [-1.2, 0.1, 0.95] },  // macro on window
-      { u: 0.225, p: [-3.9, 1.8, 4.6],  t: [-0.9, -0.4, 0.3] },  // section opens
-      { u: 0.300, p: [-2.6, 1.5, 4.9],  t: [-0.9, -0.45, -0.6] },// frame the ghost lane
-      { u: 0.460, p: [-1.6, 1.15, 4.5], t: [-0.5, -0.5, -0.85] },// slow drift: light spread held
-      { u: 0.540, p: [-2.8, 0.9, 3.1],  t: [-1.2, -0.45, 0.9] }, // back to the hero lane
-      { u: 0.630, p: [-2.2, 0.3, 2.5],  t: [-1.2, -0.6, 0.95] }, // charge close-up
-      { u: 0.720, p: [-1.0, 0.0, 2.6],  t: [0.6, -0.85, 0.95] }, // traces → ASIC
-      { u: 0.790, p: [3.4, 4.0, 8.2],   t: [0.2, 0.6, 0.3] },    // pull back
-      { u: 0.870, p: [0.6, 3.4, 10.0],  t: [0.0, 1.35, 0.3] },   // comparison frame
-      { u: 0.970, p: [0.3, 3.5, 10.3],  t: [0.0, 1.4, 0.3] },    // long hold, drift
-      { u: 1.000, p: [0.5, 12.5, 6.5],  t: [-1.2, 6.0, 0.95] }   // loop (in fade)
+      { u: 0.000, p: [7.0, 8.0, 12.0],  t: [-0.2, 3.0, 0.0] },   // WIDE: whole module + falling beam
+      { u: 0.140, p: [5.0, 6.0, 10.0],  t: [-0.6, 1.4, 0.6] },   // slow push-in
+      { u: 0.180, p: [-3.9, 1.8, 4.6],  t: [-0.9, -0.4, 0.3] },  // zoom to layer level, section opens
+      { u: 0.230, p: [-2.6, 1.5, 4.9],  t: [-0.9, -0.45, -0.6] },// frame the indirect lane
+      { u: 0.335, p: [-1.6, 1.15, 4.5], t: [-0.5, -0.5, -0.85] },// slow drift: watch the light spread
+      { u: 0.400, p: [-2.8, 0.9, 3.1],  t: [-1.2, -0.45, 0.9] }, // over to the direct lane
+      { u: 0.470, p: [-2.2, 0.3, 2.5],  t: [-1.2, -0.6, 0.95] }, // charge close-up
+      { u: 0.545, p: [-1.0, 0.0, 2.6],  t: [0.6, -0.85, 0.95] }, // traces → CMOS/ASIC
+      { u: 0.620, p: [3.4, 4.0, 8.2],   t: [0.2, 0.6, 0.3] },    // zoom back out
+      { u: 0.680, p: [0.7, 3.3, 9.8],   t: [-0.5, 1.35, 0.3] },  // indirect graph alone (left bias)
+      { u: 0.790, p: [0.4, 3.4, 10.0],  t: [0.0, 1.4, 0.3] },    // recenter as direct graph joins
+      { u: 0.970, p: [0.2, 3.5, 10.2],  t: [0.0, 1.45, 0.3] },   // long hold, drift
+      { u: 1.000, p: [7.0, 8.0, 12.0],  t: [-0.2, 3.0, 0.0] }    // loop (in fade)
     ];
     function smooth(t) { return t * t * (3 - 2 * t); }
     const _p = new THREE.Vector3(), _t = new THREE.Vector3();
@@ -613,11 +613,10 @@
     const capEls = {};
     root.querySelectorAll('.dce-line').forEach((el) => { capEls[el.dataset.cap] = el; });
     const CAPS = [
-      ['enter',    0.02, 0.135],
-      ['indirect', 0.30, 0.51],
-      ['direct',   0.545, 0.66],
-      ['readout',  0.665, 0.785],
-      ['payoff',   0.86, 0.985]
+      ['enter',    0.02, 0.13],
+      ['indirect', 0.20, 0.345],
+      ['direct',   0.365, 0.56],
+      ['payoff',   0.84, 0.985]
     ];
     let activeCap = '';
     function updateCaptions(u) {
@@ -633,14 +632,13 @@
     const tagEls = {};
     root.querySelectorAll('.dce-tag').forEach((el) => { tagEls[el.dataset.tag] = el; });
     const TAGS = [
-      { key: 'window',       pos: [-3.0, 0.1, 1.6],    a: 0.145, b: 0.215 },
-      { key: 'scintillator', pos: [1.8, -0.3, GZ],     a: 0.30, b: 0.505 },
-      { key: 'photodiode',   pos: [1.8, -0.8, GZ],     a: 0.37, b: 0.505 },
-      { key: 'cdte',         pos: [0.9, -0.35, HZ],    a: 0.545, b: 0.645 },
-      { key: 'electrodes',   pos: [-0.35, -0.72, HZ],  a: 0.615, b: 0.705 },
-      { key: 'cmos',         pos: [ASIC_X, -0.62, HZ], a: 0.705, b: 0.79 },
-      { key: 'softer',       pos: [-1.85, 0.72, 0.42], a: 0.83, b: 0.985 },
-      { key: 'sharper',      pos: [1.85, 0.72, 0.42],  a: 0.83, b: 0.985 }
+      { key: 'window',       pos: [-3.0, 0.1, 1.6],    a: 0.145, b: 0.21 },
+      { key: 'scintillator', pos: [1.8, -0.3, GZ],     a: 0.20, b: 0.34 },
+      { key: 'readout',      pos: [1.8, -0.8, GZ],     a: 0.255, b: 0.34 },
+      { key: 'cdte',         pos: [0.9, -0.35, HZ],    a: 0.375, b: 0.47 },
+      { key: 'cmos',         pos: [ASIC_X, -0.62, HZ], a: 0.48, b: 0.585 },
+      { key: 'softer',       pos: [-1.85, 0.72, 0.42], a: 0.665, b: 0.985 },
+      { key: 'sharper',      pos: [1.85, 0.72, 0.42],  a: 0.80, b: 0.985 }
     ];
     const _v = new THREE.Vector3();
     function updateTags(u) {
@@ -682,10 +680,10 @@
     // (real imaging geometry) → window crossing → slow-motion fall
     // held through the indirect beat → absorption in the direct beat.
     const HERO_PATH = [
-      { u: 0.015, p: [HX, 11.5, HZ] },
-      { u: 0.145, p: [HX, 0.03, HZ] },   // window crossing
-      { u: 0.50,  p: [HX, -0.20, HZ] },  // slow-motion fall to the CdTe surface
-      { u: 0.53,  p: [HX, A.y, HZ] }     // absorption
+      { u: 0.015, p: [HX, 6.5, HZ] },
+      { u: 0.135, p: [HX, 0.03, HZ] },   // window crossing
+      { u: 0.385, p: [HX, -0.20, HZ] },  // slow-motion fall to the CdTe surface
+      { u: 0.405, p: [HX, A.y, HZ] }     // absorption (direct beat)
     ];
     const _hp = new THREE.Vector3(), _hpA = new THREE.Vector3(),
           _hpB = new THREE.Vector3(), _up = new THREE.Vector3(0, 1, 0);
@@ -719,7 +717,7 @@
 
     // Tight charge cluster forming at A and drifting down to E.
     function updateCharge(u, time) {
-      const cd = clamp01((u - 0.545) / 0.10);
+      const cd = clamp01((u - 0.415) / 0.075);
       const yy = lerp(A.y, E.y, smooth(cd));
       const r0 = 0.15 * (1 - cd * 0.55);
       for (let i = 0; i < CHARGE_N; i++) {
@@ -745,28 +743,17 @@
       const u = (phaseT % LOOP) / LOOP;
 
       sampleCamera(u);
-      // Shot 1: the camera operator tracks the hero photon — aim at a
-      // weighted point between the photon and its impact point so both
-      // the photon and the detector stay in frame, easing back onto the
-      // keyframed target as the macro dive begins.
-      const trackAmt = 1 - smooth(clamp01((u - 0.105) / 0.05));
-      if (trackAmt > 0.001) {
-        heroPos(u, _hp);
-        _t.x = lerp(_t.x, _hp.x * 0.85 + HX * 0.15, trackAmt);
-        _t.y = lerp(_t.y, _hp.y * 0.85, trackAmt);
-        _t.z = lerp(_t.z, _hp.z * 0.85 + HZ * 0.15, trackAmt);
-      }
       camera.position.copy(_p);
       camera.position.x += px * 0.3;
       camera.position.y += -py * 0.22;
       camera.lookAt(_t);
 
       /* --- housing: section cut sweep + glass fade --- */
-      const openAmt = smooth(clamp01((u - 0.155) / 0.08)) *
-                      (1 - smooth(clamp01((u - 0.755) / 0.085)));
+      const openAmt = smooth(clamp01((u - 0.155) / 0.075)) *
+                      (1 - smooth(clamp01((u - 0.575) / 0.075)));
       clipPlane.constant = 3.6 - 3.25 * openAmt;
-      const glassAmt = smooth(clamp01((u - 0.175) / 0.09)) *
-                       (1 - smooth(clamp01((u - 0.77) / 0.08)));
+      const glassAmt = smooth(clamp01((u - 0.17) / 0.085)) *
+                       (1 - smooth(clamp01((u - 0.585) / 0.07)));
       const bodyOp = 1 - 0.85 * glassAmt;
       for (let i = 0; i < HOUSE_MATS.length; i++) {
         HOUSE_MATS[i].opacity = HOUSE_MATS[i] === winFrameMat ? bodyOp * 0.4 : bodyOp;
@@ -774,95 +761,97 @@
       }
       cutLight.position.z = clipPlane.constant;
       cutLight.material.opacity =
-        0.85 * windowed(u, 0.155, 0.25, 0.03) +
-        0.6 * windowed(u, 0.75, 0.85, 0.03) +
-        0.1 * windowed(u, 0.24, 0.765, 0.02);
+        0.85 * windowed(u, 0.155, 0.245, 0.03) +
+        0.6 * windowed(u, 0.57, 0.66, 0.03) +
+        0.1 * windowed(u, 0.235, 0.585, 0.02);
 
       /* --- hero photon --- */
       heroPos(u, hero.position);
       // orient the streak along the (reversed) velocity so it trails.
-      heroPos(Math.min(u + 0.004, 0.53), _hpB);
+      heroPos(Math.min(u + 0.004, 0.405), _hpB);
       _hpA.copy(_hpB).sub(hero.position);
       if (_hpA.lengthSq() > 1e-8) {
         _hpA.normalize().negate();
         hero.quaternion.setFromUnitVectors(_up, _hpA);
       }
-      const inFlight = u > 0.015 && u < 0.538;
+      const inFlight = u > 0.015 && u < 0.413;
       const heroOp = inFlight
-        ? Math.min(1, (u - 0.015) / 0.02, (0.538 - u) / 0.015)
+        ? Math.min(1, (u - 0.015) / 0.02, (0.413 - u) / 0.012)
         : 0;
       heroHead.material.opacity = heroOp;
-      const diving = u < 0.145;
+      const diving = u < 0.135;
       heroStreak.scale.y = diving ? 1.9 : 0.35;
       heroStreak.position.y = diving ? 1.15 : 0.3;
       heroStreak.material.opacity = heroOp * 0.75;
-      winRipple.material.opacity = 0.8 * windowed(u, 0.135, 0.19, 0.015);
-      winRipple.scale.setScalar(0.5 + 1.4 * clamp01((u - 0.135) / 0.055));
+      winRipple.material.opacity = 0.8 * windowed(u, 0.125, 0.18, 0.015);
+      winRipple.scale.setScalar(0.5 + 1.4 * clamp01((u - 0.125) / 0.05));
 
       // secondary photons — the vertical beam in the entry shot
       for (let i = 0; i < SIDEKICKS.length; i++) {
         const k = SIDEKICKS[i];
-        const e = clamp01((u - 0.025 - k.off) / 0.115);
-        k.s.position.y = lerp(10.5, 0.05, smooth(e));
+        const e = clamp01((u - 0.02 - k.off) / 0.10);
+        k.s.position.y = lerp(7.0, 0.05, smooth(e));
         k.s.material.opacity = (e > 0.01 && e < 0.99) ? 0.5 * Math.min(1, (1 - e) / 0.12) : 0;
       }
 
-      /* --- indirect conversion, slowed and held --- */
-      const gEnv = windowed(u, 0.25, 0.525, 0.05);
+      /* --- indirect conversion at layer level, slowed --- */
+      const gEnv = windowed(u, 0.175, 0.355, 0.04);
       ghostScintMat.opacity = 0.34 * gEnv;
       ghostScintEdges.material.opacity = 0.4 * gEnv;
       ghostDiodeMat.opacity = 0.3 * gEnv;
       // the indirect photon drops straight down — same beam direction.
-      const gp = clamp01((u - 0.285) / 0.045);
+      const gp = clamp01((u - 0.19) / 0.04);
       ghostPhoton.position.set(HX, lerp(2.6, -0.2, smooth(gp)), GZ);
-      ghostPhoton.material.opacity = 0.85 * windowed(u, 0.285, 0.345, 0.015);
-      const bp = clamp01((u - 0.33) / 0.14);
+      ghostPhoton.material.opacity = 0.85 * windowed(u, 0.19, 0.245, 0.015);
+      const bp = clamp01((u - 0.228) / 0.10);
       bloom.scale.set(0.6 + 3.6 * bp, 0.5 + 0.75 * bp, 1);
-      bloom.material.opacity = 0.85 * windowed(u, 0.33, 0.515, 0.04);
-      lightP.material.opacity = 0.9 * windowed(u, 0.335, 0.515, 0.04);
-      updateLightCloud(clock, Math.max(0.001, windowed(u, 0.33, 0.525, 0.1)));
-      smear.scale.x = 0.6 + 3.0 * clamp01((u - 0.365) / 0.12);
-      smear.material.opacity = 0.7 * windowed(u, 0.37, 0.52, 0.04);
-      diodeTicks.material.opacity = 0.8 * windowed(u, 0.385, 0.52, 0.04);
+      bloom.material.opacity = 0.85 * windowed(u, 0.228, 0.345, 0.03);
+      lightP.material.opacity = 0.9 * windowed(u, 0.232, 0.345, 0.03);
+      updateLightCloud(clock, Math.max(0.001, windowed(u, 0.228, 0.355, 0.08)));
+      smear.scale.x = 0.6 + 3.0 * clamp01((u - 0.255) / 0.085);
+      smear.material.opacity = 0.7 * windowed(u, 0.26, 0.348, 0.03);
+      diodeTicks.material.opacity = 0.8 * windowed(u, 0.27, 0.348, 0.03);
 
-      /* --- direct conversion hero beat, slowed and held --- */
-      lattice.material.opacity = 0.2 * windowed(u, 0.50, 0.68, 0.05);
-      absorbFlash.material.opacity = 0.95 * windowed(u, 0.522, 0.585, 0.015);
-      absorbFlash.scale.setScalar(0.9 + 1.7 * clamp01((u - 0.522) / 0.05));
-      chargeP.material.opacity = 0.95 * windowed(u, 0.535, 0.665, 0.03);
+      /* --- direct conversion at layer level, slowed --- */
+      lattice.material.opacity = 0.2 * windowed(u, 0.355, 0.50, 0.04);
+      absorbFlash.material.opacity = 0.95 * windowed(u, 0.397, 0.45, 0.012);
+      absorbFlash.scale.setScalar(0.9 + 1.7 * clamp01((u - 0.397) / 0.04));
+      chargeP.material.opacity = 0.95 * windowed(u, 0.408, 0.50, 0.025);
       updateCharge(u, clock);
-      fieldLines.material.opacity = 0.32 * windowed(u, 0.555, 0.665, 0.03);
-      electrodeGlow.material.opacity = 0.9 * windowed(u, 0.605, 0.705, 0.03);
+      fieldLines.material.opacity = 0.32 * windowed(u, 0.425, 0.50, 0.025);
+      electrodeGlow.material.opacity = 0.9 * windowed(u, 0.455, 0.53, 0.025);
       electrodeGlow.scale.setScalar(0.45 + 0.25 * Math.sin(clock * 6));
 
-      /* --- readout: pixel city + pulse train into the ASIC --- */
-      traces.material.opacity = 0.72 * windowed(u, 0.62, 0.80, 0.04);
-      bumpMat.emissiveIntensity = 0.4 + 1.5 * windowed(u, 0.655, 0.795, 0.05);
-      lane.material.opacity = 0.65 * windowed(u, 0.66, 0.785, 0.03);
-      const pulseOp = windowed(u, 0.66, 0.78, 0.02);
+      /* --- readout: charge straight into the CMOS/ASIC --- */
+      traces.material.opacity = 0.72 * windowed(u, 0.46, 0.60, 0.03);
+      bumpMat.emissiveIntensity = 0.4 + 1.5 * windowed(u, 0.47, 0.585, 0.04);
+      lane.material.opacity = 0.65 * windowed(u, 0.48, 0.575, 0.025);
+      const pulseOp = windowed(u, 0.48, 0.57, 0.015);
       for (let i = 0; i < PULSES.length; i++) {
-        const pp = clamp01((u - 0.665) / 0.095 - i * 0.05);
+        const pp = clamp01((u - 0.485) / 0.075 - i * 0.04);
         PULSES[i].position.x = E.x + laneLen * smooth(pp);
         PULSES[i].material.opacity = pulseOp * Math.pow(0.72, i) * (pp > 0 && pp < 1 ? 1 : 0.25);
       }
-      asicGlow.material.opacity = 0.85 * windowed(u, 0.74, 0.815, 0.03);
+      asicGlow.material.opacity = 0.85 * windowed(u, 0.545, 0.605, 0.02);
       asicGlow.scale.setScalar(1.0 + 0.35 * Math.sin(clock * 5));
 
-      /* --- climax: scan-line reveal of the two outputs, held long --- */
-      const rev = smooth(clamp01((u - 0.80) / 0.085));
-      const pvis = windowed(u, 0.795, 0.995, 0.02);
-      const panels = [panelI, panelD];
+      /* --- zoom-out climax: SEQUENTIAL scan-line reveal — indirect
+             graph first, alone; then the direct graph beside it. --- */
+      const panels = [
+        { pn: panelI, rev: smooth(clamp01((u - 0.635) / 0.065)), vis: windowed(u, 0.63, 0.995, 0.02) },
+        { pn: panelD, rev: smooth(clamp01((u - 0.775) / 0.065)), vis: windowed(u, 0.77, 0.995, 0.02) }
+      ];
       for (let i = 0; i < 2; i++) {
-        const pn = panels[i];
+        const pn = panels[i].pn, rev = panels[i].rev;
         const f = Math.max(rev, 0.001);
         pn.mesh.scale.y = f;
         pn.tex.repeat.y = f;
         pn.tex.offset.y = 1 - f;
-        pn.mesh.material.opacity = 0.97 * pvis;
+        pn.mesh.material.opacity = 0.97 * panels[i].vis;
         pn.bar.position.y = 3.15 - 2.2 * rev;
-        pn.bar.material.opacity = (rev > 0.02 && rev < 0.99) ? 0.9 * pvis : 0;
+        pn.bar.material.opacity = (rev > 0.02 && rev < 0.99) ? 0.9 * panels[i].vis : 0;
       }
-      grid.material.opacity = 0.16 - 0.08 * clamp01((u - 0.4) / 0.2) + 0.08 * clamp01((u - 0.8) / 0.1);
+      grid.material.opacity = 0.16 - 0.08 * clamp01((u - 0.3) / 0.2) + 0.08 * clamp01((u - 0.62) / 0.1);
 
       renderer.render(scene3, camera);
       updateCaptions(u);
