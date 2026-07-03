@@ -142,20 +142,27 @@
         "experience": {
           "enter": "X-rays enter the detector",
           "indirectTitle": "Indirect conversion",
-          "indirectSub": "X-rays converted to light — light spreads before detection",
+          "indirectSub": "X-rays become light — the light spreads before readout",
           "directTitle": "Direct conversion",
-          "directSub": "Direct charge generation — localized signal path",
+          "directSub": "Charge stays localized into the CMOS readout",
           "payoff": "Direct conversion removes the scintillator light-spread stage.",
           "layers": {
-            "window": "Sensor window",
             "scintillator": "Scintillator",
-            "readout": "Readout",
-            "cdte": "CdTe conversion layer",
+            "photodiode": "Photodiode readout",
+            "cdte": "CdTe / Si layer",
             "cmos": "CMOS readout"
           },
-          "softerTag": "Softer signal localization",
-          "sharperTag": "Sharper signal localization",
-          "aria": "Cinematic sequence. A wide view shows a real Athlos detector module as X-ray photons enter straight from above, perpendicular to the detector surface. The camera zooms into a cutaway of the internal layers. In indirect conversion, a scintillator converts the X-rays into visible light that spreads sideways across several pixel regions before reaching the readout — a wider, less localized signal. In direct conversion, the X-ray becomes localized electric charge in the CdTe layer and travels straight into the CMOS readout, with no light-spread stage. The camera zooms back out: the indirect output graph appears first, showing softer signal localization, then the direct output graph appears beside it, showing sharper signal localization. Direct conversion removes the scintillator light-spread stage."
+          "steps": {
+            "becomeLight": "X-rays become light",
+            "spreads": "Light spreads",
+            "footWide": "Wider readout footprint",
+            "chargeGen": "Direct charge generation",
+            "path": "Localized signal path",
+            "footNarrow": "Narrow readout footprint"
+          },
+          "softerTag": "Softer localization",
+          "sharperTag": "Sharper localization",
+          "aria": "Animated diagram. X-rays enter the detector from above. Indirect conversion: a scintillator converts X-rays into visible light, the light spreads sideways before detection, and several photodiode readout pixels register a wider signal footprint. Direct conversion: a CdTe or silicon layer converts X-rays straight into charge, which travels a narrow path into the CMOS readout and stays localized. The resulting output graphs compare softer versus sharper localization."
         }
       },
       "products": {

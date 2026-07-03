@@ -142,22 +142,29 @@
           }
         },
         "experience": {
-          "enter": "Röntgenstrahlen treffen auf den Detektor",
+          "enter": "Röntgenstrahlung tritt in den Detektor ein",
           "indirectTitle": "Indirekte Konversion",
-          "indirectSub": "Röntgenstrahlen werden in Licht umgewandelt — das Licht streut vor der Detektion",
+          "indirectSub": "Röntgenstrahlung wird zu Licht — das Licht streut vor der Auslese",
           "directTitle": "Direkte Konversion",
-          "directSub": "Direkte Ladungserzeugung — lokalisierter Signalweg",
+          "directSub": "Die Ladung bleibt bis in die CMOS-Auslese lokalisiert",
           "payoff": "Die direkte Konversion eliminiert die Lichtstreuungsstufe des Szintillators.",
           "layers": {
-            "window": "Sensorfenster",
             "scintillator": "Szintillator",
-            "readout": "Auslese",
-            "cdte": "CdTe-Konversionsschicht",
+            "photodiode": "Photodioden-Auslese",
+            "cdte": "CdTe-/Si-Schicht",
             "cmos": "CMOS-Auslese"
           },
-          "softerTag": "Weichere Signallokalisierung",
-          "sharperTag": "Schärfere Signallokalisierung",
-          "aria": "Filmische Sequenz. Eine Totale zeigt ein reales Athlos-Detektormodul, während Röntgenphotonen senkrecht von oben auf die Detektoroberfläche treffen. Die Kamera zoomt in eine Schnittansicht der inneren Schichten. Bei der indirekten Konversion wandelt ein Szintillator die Röntgenstrahlen in sichtbares Licht um, das sich seitlich über mehrere Pixelbereiche ausbreitet, bevor es die Auslese erreicht — ein breiteres, weniger lokalisiertes Signal. Bei der direkten Konversion wird die Röntgenstrahlung in der CdTe-Schicht zu lokalisierter Ladung, die ohne Lichtstreuungsstufe direkt in die CMOS-Auslese gelangt. Die Kamera zoomt wieder heraus: Zuerst erscheint das indirekte Ausgabediagramm mit weicherer Signallokalisierung, dann daneben das direkte mit schärferer Signallokalisierung. Die direkte Konversion eliminiert die Lichtstreuungsstufe des Szintillators."
+          "steps": {
+            "becomeLight": "Röntgenstrahlung wird zu Licht",
+            "spreads": "Licht streut seitlich",
+            "footWide": "Breitere Auslesefläche",
+            "chargeGen": "Direkte Ladungserzeugung",
+            "path": "Lokalisierter Signalpfad",
+            "footNarrow": "Schmalere Auslesefläche"
+          },
+          "softerTag": "Weichere Lokalisierung",
+          "sharperTag": "Schärfere Lokalisierung",
+          "aria": "Animiertes Diagramm. Röntgenstrahlung tritt von oben in den Detektor ein. Indirekte Konversion: Ein Szintillator wandelt Röntgenstrahlung in sichtbares Licht um, das Licht streut vor der Detektion seitlich, und mehrere Photodioden-Auslesepixel registrieren eine breitere Signalfläche. Direkte Konversion: Eine CdTe- oder Silizium-Schicht wandelt Röntgenstrahlung direkt in Ladung um, die auf einem schmalen Pfad in die CMOS-Auslese gelangt und lokalisiert bleibt. Die resultierenden Ausgabegrafiken vergleichen weichere und schärfere Lokalisierung."
         }
       },
       "products": {

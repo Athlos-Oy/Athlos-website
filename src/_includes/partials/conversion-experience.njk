@@ -1,7 +1,10 @@
 {#- =====================================================
     CinematicDirectConversionExperience — flagship homepage visual
-    "Photon Odyssey": a lazy-loaded WebGL product film following a
-    single X-ray photon into a real-looking Athlos detector module
+    A lazy-loaded WebGL layer-demonstration film: wide shot of the
+    Athlos module, then two stable cross-section stages — indirect
+    conversion (scintillator → light spread → wide photodiode
+    footprint) and direct conversion (CdTe/Si → localized charge →
+    narrow CMOS footprint) — ending on the output comparison.
     (js/conversion-experience.js + vendored Three.js). Three guards
     fall back to the static SVG poster below and never load WebGL:
     prefers-reduced-motion, no WebGL, and automation (navigator.
@@ -13,13 +16,18 @@
 <div class="dce reveal" data-dce>
   <canvas class="dce-canvas" aria-hidden="true"></canvas>
 
-  {#- layer tags: positioned by JS from 3D anchors, faded in on the event -#}
+  {#- layer + step tags: positioned by JS from 3D anchors -#}
   <div class="dce-tags" aria-hidden="true">
-    <span class="dce-tag" data-tag="window">{{ (x ~ ".layers.window") | t }}</span>
     <span class="dce-tag dce-tag--soft" data-tag="scintillator">{{ (x ~ ".layers.scintillator") | t }}</span>
-    <span class="dce-tag dce-tag--soft" data-tag="readout">{{ (x ~ ".layers.readout") | t }}</span>
+    <span class="dce-tag dce-tag--soft" data-tag="photodiode">{{ (x ~ ".layers.photodiode") | t }}</span>
+    <span class="dce-tag dce-tag--soft" data-tag="becomeLight">{{ (x ~ ".steps.becomeLight") | t }}</span>
+    <span class="dce-tag dce-tag--soft" data-tag="spreads">{{ (x ~ ".steps.spreads") | t }}</span>
+    <span class="dce-tag dce-tag--soft" data-tag="footWide">{{ (x ~ ".steps.footWide") | t }}</span>
     <span class="dce-tag dce-tag--sharp" data-tag="cdte">{{ (x ~ ".layers.cdte") | t }}</span>
     <span class="dce-tag dce-tag--sharp" data-tag="cmos">{{ (x ~ ".layers.cmos") | t }}</span>
+    <span class="dce-tag dce-tag--sharp" data-tag="chargeGen">{{ (x ~ ".steps.chargeGen") | t }}</span>
+    <span class="dce-tag dce-tag--sharp" data-tag="path">{{ (x ~ ".steps.path") | t }}</span>
+    <span class="dce-tag dce-tag--sharp" data-tag="footNarrow">{{ (x ~ ".steps.footNarrow") | t }}</span>
     <span class="dce-tag dce-tag--soft" data-tag="softer">{{ (x ~ ".softerTag") | t }}</span>
     <span class="dce-tag dce-tag--sharp" data-tag="sharper">{{ (x ~ ".sharperTag") | t }}</span>
   </div>

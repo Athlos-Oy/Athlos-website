@@ -1,33 +1,29 @@
 /* =====================================================
-   ATHLOS — "PHOTON ODYSSEY" CINEMATIC DETECTOR FILM
+   ATHLOS — DIRECT vs INDIRECT CONVERSION: LAYER DEMONSTRATION FILM
    ---------------------------------------------------------------
-   A ~13s looping WebGL product film for the homepage Technology
-   section. One continuous camera move follows a single hero X-ray
-   photon into a real-looking Athlos detector module (grounded in
-   the Industrial IP67 TDI design language: black machined body,
-   carbon-fibre entrance window, heatsink fins, M12 connector):
+   A ~13s looping WebGL film for the homepage Technology section.
+   The camera establishes the real Athlos module, then holds a calm,
+   stable layer-level view while the physics is demonstrated slowly,
+   step by step — a layer-by-layer explanation, not a camera dive.
 
-   Structure: a clear ZOOM-IN / ZOOM-OUT arc.
-
-     SHOT 1 (0.0–2.0s)   WIDE — the whole engineered module is visible;
-                         X-ray photons (hero + secondaries) fall
-                         STRAIGHT DOWN, normal to the detector plane.
-     SHOT 2 (2.0–4.5s)   ZOOM IN, INDIRECT — the section cut opens the
-                         housing to layer level. A photon drops into
-                         the scintillator: X-rays become visible light
-                         that SPREADS sideways across several pixel
-                         regions before the readout. Slow enough to
-                         watch the lateral spread happen.
-     SHOT 3 (4.5–7.5s)   DIRECT — same vertical beam, same geometry:
-                         the hero photon is absorbed in the CdTe layer,
-                         charge forms locally, stays narrow, and goes
-                         straight into the CMOS readout. No light-
-                         spread stage.
-     SHOT 4 (7.5–10.0s)  ZOOM OUT — the housing re-solidifies; the
-                         INDIRECT output graph scan-reveals FIRST and
-                         holds alone (softer, wider).
-     SHOT 5 (10.0–13s)   The DIRECT output graph reveals beside it
-                         (sharper, localized); both hold long.
+     SHOT 1 (0.0–2.0s)   WIDE — the engineered module; X-ray photons
+                         fall STRAIGHT DOWN, normal to the surface.
+     SHOT 2 (2.0–3.0s)   ZOOM to a clean layer-level view; the section
+                         cut opens the housing and reveals two
+                         magnified cross-section stages side by side.
+     SHOT 3 (3.0–6.5s)   INDIRECT stage (left), camera nearly static:
+                         photon hits the SCINTILLATOR → converts to
+                         visible light → DEFINED RAYS spread laterally
+                         → several PHOTODIODE PIXELS activate over a
+                         WIDE readout footprint.
+     SHOT 4 (6.5–10.0s)  Calm glide to the DIRECT stage (right), same
+                         layer layout: photon hits the CdTe/Si layer →
+                         localized charge → NARROW vertical signal
+                         path → ONE CMOS pixel activates. The indirect
+                         stage's wide footprint stays lit for contrast.
+     SHOT 5 (10.0–13s)   Pull out: the INDIRECT output graph reveals
+                         first and holds alone (softer), then the
+                         DIRECT graph beside it (sharper); both hold.
                          "Direct conversion removes the scintillator
                          light-spread stage."
 
@@ -112,16 +108,15 @@
       cold:    0x6cc8ff,
       coldHi:  0xd6f1ff,
       edge:    0x8fd2f5,
-      gold:    0xc9a04e
+      amberEdge: 0xd9b073
     };
 
     // Story geography (world units ~ cm).
-    const HX = -1.2;               // hero photon x
-    const HZ = 0.95;               // hero (direct) stack z — the open cutaway side
-    const GZ = -1.15;              // ghost (indirect) stack z — behind the glass half
-    const A  = { x: HX, y: -0.42, z: HZ };   // absorption point in CdTe
-    const E  = { x: HX, y: -0.815, z: HZ };  // pixel electrode (CdTe underside)
-    const ASIC_X = 3.55;
+    const HX = -1.2;      // wide-shot hero photon x (hits the window)
+    const HZ = 0.95;      // entrance-window strip z
+    const IX = -2.4;      // INDIRECT demonstration stage center x
+    const DX = 2.4;       // DIRECT demonstration stage center x
+    const SZ = 0.3;       // stage center z (inside the opened housing)
 
     const renderer = new THREE.WebGLRenderer({
       canvas, antialias: true, alpha: false, powerPreference: 'high-performance'
@@ -292,99 +287,7 @@
     cutLight.position.set(0, -0.55, 3.6);
     scene3.add(cutLight);
 
-    /* ==============================================================
-       INTERIOR — the sensor stack under the window (open cutaway
-       side) and the ghosted indirect stack behind the glass half.
-    ============================================================== */
-    // CdTe / Si conversion crystal.
-    const cdteGeo = new THREE.BoxGeometry(7.6, 0.6, 1.3);
-    const cdteMat = new THREE.MeshStandardMaterial({
-      color: 0x274150, transparent: true, opacity: 0.5,
-      emissive: 0x0b2130, emissiveIntensity: 0.7,
-      roughness: 0.22, metalness: 0.15, depthWrite: false
-    });
-    const cdte = new THREE.Mesh(cdteGeo, cdteMat);
-    cdte.position.set(0, -0.5, HZ);
-    scene3.add(cdte);
-    const cdteEdges = new THREE.LineSegments(
-      new THREE.EdgesGeometry(cdteGeo),
-      new THREE.LineBasicMaterial({ color: COL.edge, transparent: true, opacity: 0.5 })
-    );
-    cdteEdges.position.copy(cdte.position);
-    scene3.add(cdteEdges);
-
-    // Faint crystal lattice inside the CdTe.
-    const lattice = (function () {
-      const nx = 14, ny = 3, nz = 4, n = nx * ny * nz;
-      const geo = new THREE.BufferGeometry();
-      const arr = new Float32Array(n * 3);
-      let k = 0;
-      for (let i = 0; i < nx; i++) for (let j = 0; j < ny; j++) for (let l = 0; l < nz; l++) {
-        arr[k++] = -3.5 + i * (7.0 / (nx - 1));
-        arr[k++] = -0.72 + j * 0.22;
-        arr[k++] = HZ - 0.5 + l * (1.0 / (nz - 1));
-      }
-      geo.setAttribute('position', new THREE.BufferAttribute(arr, 3));
-      const p = new THREE.Points(geo, new THREE.PointsMaterial({
-        size: 0.045, map: sprite, color: COL.cold, transparent: true, opacity: 0,
-        blending: THREE.AdditiveBlending, depthWrite: false, sizeAttenuation: true
-      }));
-      p.frustumCulled = false;
-      scene3.add(p);
-      return p;
-    })();
-
-    // Bump-bond plaza (flip-chip interconnects) — the "pixel city".
-    const bumpMat = new THREE.MeshStandardMaterial({
-      color: COL.gold, metalness: 0.95, roughness: 0.35,
-      emissive: 0x1a1206, emissiveIntensity: 0.4
-    });
-    {
-      const cols = 44, rows = 7;
-      const bumps = new THREE.InstancedMesh(
-        new THREE.SphereGeometry(0.045, 6, 5), bumpMat, cols * rows
-      );
-      const m4 = new THREE.Matrix4();
-      let i = 0;
-      for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
-        m4.setPosition(-3.55 + c * (7.1 / (cols - 1)), -0.85, HZ - 0.51 + r * (1.02 / (rows - 1)));
-        bumps.setMatrixAt(i++, m4);
-      }
-      scene3.add(bumps);
-    }
-
-    // CMOS die + circuit-trace surface + ASIC block + PCB.
-    const cmosDie = new THREE.Mesh(
-      new THREE.BoxGeometry(8.0, 0.14, 1.6),
-      new THREE.MeshStandardMaterial({ color: 0x11181e, metalness: 0.6, roughness: 0.45 })
-    );
-    cmosDie.position.set(0, -0.95, HZ);
-    scene3.add(cmosDie);
-
-    const traces = new THREE.Mesh(
-      new THREE.PlaneGeometry(7.9, 1.55),
-      new THREE.MeshBasicMaterial({
-        map: makeTraceTexture(THREE), transparent: true, opacity: 0,
-        blending: THREE.AdditiveBlending, depthWrite: false
-      })
-    );
-    traces.rotation.x = -Math.PI / 2;
-    traces.position.set(0, -0.877, HZ);
-    scene3.add(traces);
-
-    const asicGeo = new THREE.BoxGeometry(1.1, 0.2, 1.3);
-    const asic = new THREE.Mesh(asicGeo, new THREE.MeshStandardMaterial({
-      color: 0x0d1319, metalness: 0.65, roughness: 0.4
-    }));
-    asic.position.set(ASIC_X, -0.78, HZ);
-    scene3.add(asic);
-    const asicEdges = new THREE.LineSegments(
-      new THREE.EdgesGeometry(asicGeo),
-      new THREE.LineBasicMaterial({ color: COL.edge, transparent: true, opacity: 0.35 })
-    );
-    asicEdges.position.copy(asic.position);
-    scene3.add(asicEdges);
-
+    // Interior base board the stages sit above.
     const pcb = new THREE.Mesh(
       new THREE.BoxGeometry(9.2, 0.09, 4.9),
       new THREE.MeshStandardMaterial({ color: 0x0f151a, metalness: 0.3, roughness: 0.7 })
@@ -392,31 +295,8 @@
     pcb.position.set(0, -1.18, 0);
     scene3.add(pcb);
 
-    /* ---- Ghost stack (indirect) behind the glass half ------------ */
-    const ghostScintMat = new THREE.MeshStandardMaterial({
-      color: 0x46402e, transparent: true, opacity: 0,
-      emissive: 0x1c1408, emissiveIntensity: 0.8, roughness: 0.4, depthWrite: false
-    });
-    const ghostScint = new THREE.Mesh(new THREE.BoxGeometry(7.6, 0.5, 1.25), ghostScintMat);
-    ghostScint.position.set(0, -0.45, GZ);
-    scene3.add(ghostScint);
-    const ghostScintEdges = new THREE.LineSegments(
-      new THREE.EdgesGeometry(ghostScint.geometry),
-      new THREE.LineBasicMaterial({ color: 0xd9b073, transparent: true, opacity: 0 })
-    );
-    ghostScintEdges.position.copy(ghostScint.position);
-    scene3.add(ghostScintEdges);
-
-    const ghostDiodeMat = new THREE.MeshStandardMaterial({
-      color: 0x333d45, transparent: true, opacity: 0,
-      emissive: 0x0a1218, emissiveIntensity: 0.7, roughness: 0.4, depthWrite: false
-    });
-    const ghostDiode = new THREE.Mesh(new THREE.BoxGeometry(7.6, 0.12, 1.25), ghostDiodeMat);
-    ghostDiode.position.set(0, -0.78, GZ);
-    scene3.add(ghostDiode);
-
     /* ==============================================================
-       ACTORS — hero photon, ghost photon, glows, particles
+       SHARED ACTOR HELPERS
     ============================================================== */
     function glowSprite(color, size, x, y, z) {
       const s = new THREE.Sprite(new THREE.SpriteMaterial({
@@ -429,73 +309,27 @@
       return s;
     }
 
-    // Hero photon: head + vertical streak (streak shortens in slow-mo).
-    const hero = new THREE.Group();
-    const heroHead = new THREE.Sprite(new THREE.SpriteMaterial({
-      map: sprite, color: COL.photon, transparent: true, opacity: 0,
-      blending: THREE.AdditiveBlending, depthWrite: false
-    }));
-    heroHead.scale.set(0.6, 0.6, 1);
-    const heroStreak = new THREE.Mesh(
-      new THREE.BoxGeometry(0.04, 1, 0.04),
-      new THREE.MeshBasicMaterial({
-        color: COL.photon, transparent: true, opacity: 0,
+    // A vertical X-ray photon: bright head + short streak trailing up.
+    function photonActor(x, z) {
+      const g = new THREE.Group();
+      const head = new THREE.Sprite(new THREE.SpriteMaterial({
+        map: sprite, color: COL.photon, transparent: true, opacity: 0,
         blending: THREE.AdditiveBlending, depthWrite: false
-      })
-    );
-    hero.add(heroStreak, heroHead);
-    hero.position.set(HX, 13.5, HZ);
-    scene3.add(hero);
-
-    // Ghost photon — drops STRAIGHT DOWN (same beam direction as the
-    // hero) into the scintillator lane.
-    const ghostPhoton = glowSprite(0xffe9c4, 0.44, HX, 2.6, GZ);
-
-    // Secondary photons in the entry shot — the beam, not one stray.
-    const SIDEKICKS = [];
-    [[-3.2, 0.0], [0.6, 0.018], [2.4, 0.036]].forEach(([sx, off]) => {
-      SIDEKICKS.push({ s: glowSprite(COL.photon, 0.3, sx, 7, HZ), off });
-    });
-
-    // Window ripple, absorption flash, electrode / ASIC glows.
-    const winRipple = glowSprite(COL.coldHi, 0.7, HX, 0.05, HZ);
-    const absorbFlash = glowSprite(COL.coldHi, 1.4, A.x, A.y, A.z);
-    const electrodeGlow = glowSprite(COL.cold, 0.55, E.x, E.y, E.z);
-    const asicGlow = glowSprite(COL.coldHi, 1.2, ASIC_X, -0.7, HZ);
-
-    // Warm scintillation bloom (anisotropic — spreads laterally).
-    const bloom = glowSprite(COL.warm, 1, HX, -0.34, GZ);
-    // Smear band on the photodiode — the wide arrival footprint.
-    const smear = new THREE.Mesh(
-      new THREE.PlaneGeometry(1, 0.32),
-      new THREE.MeshBasicMaterial({
-        color: COL.warm, transparent: true, opacity: 0,
-        blending: THREE.AdditiveBlending, depthWrite: false
-      })
-    );
-    smear.rotation.x = -Math.PI / 2;
-    smear.position.set(HX, -0.712, GZ);
-    scene3.add(smear);
-
-    // Pixel-region ticks on the photodiode: SEVERAL of them glow under
-    // the spread light — the indirect weakness made countable (vs ONE
-    // electrode lighting up on the direct side).
-    const diodeTicks = (function () {
-      const n = 7;
-      const geo = new THREE.BufferGeometry();
-      const arr = new Float32Array(n * 3);
-      for (let i = 0; i < n; i++) {
-        arr[i * 3] = HX + (i - 3) * 0.55; arr[i * 3 + 1] = -0.705; arr[i * 3 + 2] = GZ;
-      }
-      geo.setAttribute('position', new THREE.BufferAttribute(arr, 3));
-      const p = new THREE.Points(geo, new THREE.PointsMaterial({
-        size: 0.15, map: sprite, color: COL.warm, transparent: true, opacity: 0,
-        blending: THREE.AdditiveBlending, depthWrite: false, sizeAttenuation: true
       }));
-      p.frustumCulled = false;
-      scene3.add(p);
-      return p;
-    })();
+      head.scale.set(0.34, 0.34, 1);
+      const streak = new THREE.Mesh(
+        new THREE.BoxGeometry(0.035, 0.9, 0.035),
+        new THREE.MeshBasicMaterial({
+          color: COL.photon, transparent: true, opacity: 0,
+          blending: THREE.AdditiveBlending, depthWrite: false
+        })
+      );
+      streak.position.y = 0.55;
+      g.add(streak, head);
+      g.position.set(x, 10, z);
+      scene3.add(g);
+      return { g, head, streak };
+    }
 
     function points(count, color, size) {
       const geo = new THREE.BufferGeometry();
@@ -513,49 +347,173 @@
       return s - Math.floor(s);
     }
 
-    const LIGHT_N = 130;
-    const lightP = points(LIGHT_N, COL.warm, 0.5);     // spreading optical cloud
-    const CHARGE_N = 60;
-    const chargeP = points(CHARGE_N, COL.cold, 0.16);  // localized charge cluster
+    /* ==============================================================
+       DEMONSTRATION STAGES — two magnified cross-sections, side by
+       side inside the opened housing. Identical layer layout so the
+       comparison is direct: conversion layer on top, an 11-pixel
+       readout row below it, substrate at the bottom.
+    ============================================================== */
+    const PIX_N = 11, PIX_PITCH = 0.31, PIX_W = 0.27, PIX_H = 0.16;
+    const SLAB_TOP = -0.12, SLAB_BOT = -0.54, PIX_TOP = -0.62, PIX_CY = -0.70;
 
-    // Vertical field lines guiding the charge to the electrode.
-    const fieldLines = (function () {
-      const n = 5;
-      const geo = new THREE.BufferGeometry();
-      const arr = new Float32Array(n * 2 * 3);
+    function buildStage(x, warm) {
+      const grp = new THREE.Group();
+      grp.position.set(x, 0, SZ);
+      scene3.add(grp);
+
+      // Conversion layer slab (scintillator: warm; CdTe/Si: cool slate).
+      const slabMat = new THREE.MeshStandardMaterial({
+        color: warm ? 0x6b5c3a : 0x274150,
+        emissive: warm ? 0x2a2010 : 0x0b2130, emissiveIntensity: 0.8,
+        transparent: true, opacity: 0, roughness: 0.3, metalness: 0.12,
+        depthWrite: false
+      });
+      const slab = new THREE.Mesh(new THREE.BoxGeometry(3.4, SLAB_TOP - SLAB_BOT, 1.1), slabMat);
+      slab.position.y = (SLAB_TOP + SLAB_BOT) / 2;
+      grp.add(slab);
+      const edgeMat = new THREE.LineBasicMaterial({
+        color: warm ? COL.amberEdge : COL.edge, transparent: true, opacity: 0
+      });
+      const edges = new THREE.LineSegments(new THREE.EdgesGeometry(slab.geometry), edgeMat);
+      edges.position.copy(slab.position);
+      grp.add(edges);
+
+      // Readout pixel row — 11 individually lightable cells.
+      const pixGeo = new THREE.BoxGeometry(PIX_W, PIX_H, 1.1);
+      const pixMats = [], pixGlows = [];
+      for (let i = 0; i < PIX_N; i++) {
+        const m = new THREE.MeshStandardMaterial({
+          color: 0x151c23, metalness: 0.6, roughness: 0.4,
+          emissive: warm ? COL.warm : COL.cold, emissiveIntensity: 0.02,
+          transparent: true, opacity: 0
+        });
+        const px = new THREE.Mesh(pixGeo, m);
+        px.position.set((i - (PIX_N - 1) / 2) * PIX_PITCH, PIX_CY, 0);
+        grp.add(px);
+        pixMats.push(m);
+        const gl = glowSprite(warm ? COL.warm : COL.cold, 0.42,
+          x + (i - (PIX_N - 1) / 2) * PIX_PITCH, PIX_CY + 0.04, SZ + 0.6);
+        pixGlows.push(gl);
+      }
+
+      // Substrate under the pixel row.
+      const subMat = new THREE.MeshStandardMaterial({
+        color: 0x11181e, metalness: 0.55, roughness: 0.5,
+        transparent: true, opacity: 0
+      });
+      const sub = new THREE.Mesh(new THREE.BoxGeometry(3.4, 0.10, 1.1), subMat);
+      sub.position.y = -0.86;
+      grp.add(sub);
+
+      // Signal-footprint underline beneath the pixel row.
+      const foot = new THREE.Mesh(
+        new THREE.PlaneGeometry(1, 0.07),
+        new THREE.MeshBasicMaterial({
+          color: warm ? COL.warm : COL.cold, transparent: true, opacity: 0,
+          blending: THREE.AdditiveBlending, depthWrite: false
+        })
+      );
+      foot.position.set(x, -0.945, SZ + 0.58);
+      scene3.add(foot);
+
+      // Photon + impact flash for this stage.
+      const photon = photonActor(x, SZ + 0.2);
+      const flash = glowSprite(COL.coldHi, 1.1, x, 0, SZ + 0.25);
+
+      return { grp, slabMat, edgeMat, pixMats, pixGlows, subMat, foot, photon, flash };
+    }
+
+    const stageI = buildStage(IX, true);
+    const stageD = buildStage(DX, false);
+
+    /* ---- INDIRECT-only actors: conversion glow, wavefront, rays --- */
+    const I_ABS = { x: IX, y: -0.24 };            // absorption point (world)
+    const convGlow = glowSprite(COL.warm, 0.9, I_ABS.x, I_ABS.y, SZ + 0.22);
+
+    // Expanding wavefront arc — the "controlled spread" made visible.
+    const arc = (function () {
+      const n = 40, geo = new THREE.BufferGeometry();
+      const arr = new Float32Array(n * 3);
       for (let i = 0; i < n; i++) {
-        const x = HX + (i - 2) * 0.19;
-        arr[i * 6] = x;     arr[i * 6 + 1] = -0.22; arr[i * 6 + 2] = HZ;
-        arr[i * 6 + 3] = x; arr[i * 6 + 4] = -0.80; arr[i * 6 + 5] = HZ;
+        const th = Math.PI + (i / (n - 1)) * Math.PI;   // lower semicircle
+        arr[i * 3] = Math.cos(th); arr[i * 3 + 1] = Math.sin(th); arr[i * 3 + 2] = 0;
       }
       geo.setAttribute('position', new THREE.BufferAttribute(arr, 3));
-      const l = new THREE.LineSegments(geo, new THREE.LineBasicMaterial({
-        color: COL.cold, transparent: true, opacity: 0,
+      const l = new THREE.Line(geo, new THREE.LineBasicMaterial({
+        color: COL.warmHi, transparent: true, opacity: 0,
         blending: THREE.AdditiveBlending, depthWrite: false
       }));
+      l.position.set(I_ABS.x, I_ABS.y, SZ + 0.2);
       scene3.add(l);
       return l;
     })();
 
-    // Readout channel: glowing lane + travelling pulse train.
-    const laneLen = ASIC_X - E.x;
-    const lane = new THREE.Mesh(
-      new THREE.BoxGeometry(laneLen, 0.02, 0.05),
-      new THREE.MeshBasicMaterial({
-        color: COL.cold, transparent: true, opacity: 0,
-        blending: THREE.AdditiveBlending, depthWrite: false
-      })
-    );
-    lane.position.set(E.x + laneLen / 2, -0.855, HZ);
-    scene3.add(lane);
-    const PULSES = [];
-    for (let i = 0; i < 4; i++) {
-      PULSES.push(glowSprite(COL.coldHi, 0.34 - i * 0.045, E.x, -0.855, HZ));
+    // Defined light rays: one per target pixel (indices 1..9), fanning
+    // out from the conversion point to the photodiode row — sharp
+    // glowing paths, not a cloud. Plus a few short upward scatter rays.
+    const _down = new THREE.Vector3(0, -1, 0);
+    function makeRay(fromX, fromY, toX, toY, width, warmHue) {
+      const geo = new THREE.PlaneGeometry(width, 1);
+      geo.translate(0, -0.5, 0);                 // origin at the ray start
+      const mat = new THREE.MeshBasicMaterial({
+        color: warmHue ? COL.warmHi : COL.coldHi, transparent: true, opacity: 0,
+        blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide
+      });
+      const mesh = new THREE.Mesh(geo, mat);
+      mesh.position.set(fromX, fromY, SZ + 0.24);
+      const dir = new THREE.Vector3(toX - fromX, toY - fromY, 0);
+      const len = dir.length();
+      dir.normalize();
+      mesh.quaternion.setFromUnitVectors(_down, dir);
+      scene3.add(mesh);
+      return { mesh, mat, len, ox: fromX, oy: fromY, dx: dir.x, dy: dir.y };
     }
 
-    // FINAL COMPARISON — the climax: two identical test patterns side
-    // by side, revealed top-down by a scan line. Indirect = softer /
-    // wider; direct = crisp / localized.
+    const RAYS = [];
+    for (let i = 1; i <= 9; i++) {
+      const d = Math.abs(i - 5);
+      const tx = IX + (i - (PIX_N - 1) / 2) * PIX_PITCH;
+      const r = makeRay(I_ABS.x, I_ABS.y, tx, PIX_TOP, 0.05 - d * 0.006, true);
+      r.d = d;
+      r.tip = glowSprite(COL.warmHi, 0.26 - d * 0.03, I_ABS.x, I_ABS.y, SZ + 0.26);
+      RAYS.push(r);
+    }
+    // Short upward scatter rays (light goes everywhere; readout is below).
+    const SCATTER = [];
+    [[-0.5, 0.85], [-0.2, 0.98], [0.25, 0.97], [0.55, 0.83]].forEach(([sx, sy]) => {
+      const s = makeRay(I_ABS.x, I_ABS.y, I_ABS.x + sx * 0.18, I_ABS.y + sy * 0.18, 0.03, true);
+      SCATTER.push(s);
+    });
+
+    /* ---- DIRECT-only actors: charge cluster, narrow signal beam --- */
+    const D_ABS = { x: DX, y: -0.30 };
+    const CHARGE_N = 42;
+    const chargeP = points(CHARGE_N, COL.cold, 0.16);
+    const posC = chargeP.geometry.attributes.position.array;
+
+    const beam = (function () {
+      const geo = new THREE.PlaneGeometry(0.07, 1);
+      geo.translate(0, -0.5, 0);
+      const m = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({
+        color: COL.coldHi, transparent: true, opacity: 0,
+        blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide
+      }));
+      m.position.set(D_ABS.x, D_ABS.y, SZ + 0.24);
+      scene3.add(m);
+      return m;
+    })();
+    const beamPulse = glowSprite(COL.coldHi, 0.3, D_ABS.x, D_ABS.y, SZ + 0.26);
+    const hitGlow = glowSprite(COL.cold, 0.55, DX, PIX_TOP + 0.02, SZ + 0.3);
+
+    /* ---- Wide-shot beam actors ------------------------------------ */
+    const wideHero = photonActor(HX, HZ);
+    const winRipple = glowSprite(COL.coldHi, 0.7, HX, 0.05, HZ);
+    const SIDEKICKS = [];
+    [[-3.2, 0.0], [0.6, 0.018], [2.4, 0.036]].forEach(([sx, off]) => {
+      SIDEKICKS.push({ s: glowSprite(COL.photon, 0.3, sx, 7, HZ), off });
+    });
+
+    /* ---- FINAL COMPARISON — sequential scan-line reveal ----------- */
     function outputPanel(soft, x) {
       const tex = makeOutputTexture(THREE, soft);
       const geo = new THREE.PlaneGeometry(3.3, 2.2);
@@ -580,22 +538,20 @@
     const panelD = outputPanel(false, 1.85);
 
     /* ==============================================================
-       CAMERA — one continuous purposeful move (no aimless spin)
+       CAMERA — wide establish, then STABLE per-stage views with only
+       micro-drift; one calm glide between them; pull out at the end.
     ============================================================== */
     const KEYS = [
-      { u: 0.000, p: [7.0, 8.0, 12.0],  t: [-0.2, 3.0, 0.0] },   // WIDE: whole module + falling beam
-      { u: 0.140, p: [5.0, 6.0, 10.0],  t: [-0.6, 1.4, 0.6] },   // slow push-in
-      { u: 0.180, p: [-3.9, 1.8, 4.6],  t: [-0.9, -0.4, 0.3] },  // zoom to layer level, section opens
-      { u: 0.230, p: [-2.6, 1.5, 4.9],  t: [-0.9, -0.45, -0.6] },// frame the indirect lane
-      { u: 0.335, p: [-1.6, 1.15, 4.5], t: [-0.5, -0.5, -0.85] },// slow drift: watch the light spread
-      { u: 0.400, p: [-2.8, 0.9, 3.1],  t: [-1.2, -0.45, 0.9] }, // over to the direct lane
-      { u: 0.470, p: [-2.2, 0.3, 2.5],  t: [-1.2, -0.6, 0.95] }, // charge close-up
-      { u: 0.545, p: [-1.0, 0.0, 2.6],  t: [0.6, -0.85, 0.95] }, // traces → CMOS/ASIC
-      { u: 0.620, p: [3.4, 4.0, 8.2],   t: [0.2, 0.6, 0.3] },    // zoom back out
-      { u: 0.680, p: [0.7, 3.3, 9.8],   t: [-0.5, 1.35, 0.3] },  // indirect graph alone (left bias)
-      { u: 0.790, p: [0.4, 3.4, 10.0],  t: [0.0, 1.4, 0.3] },    // recenter as direct graph joins
-      { u: 0.970, p: [0.2, 3.5, 10.2],  t: [0.0, 1.45, 0.3] },   // long hold, drift
-      { u: 1.000, p: [7.0, 8.0, 12.0],  t: [-0.2, 3.0, 0.0] }    // loop (in fade)
+      { u: 0.000, p: [7.0, 8.0, 12.0],   t: [-0.2, 3.0, 0.0] },   // WIDE: module + falling beam
+      { u: 0.140, p: [5.0, 6.0, 10.0],   t: [-0.4, 1.6, 0.6] },   // slow push-in
+      { u: 0.188, p: [0.8, 3.6, 9.0],    t: [-1.6, 0.1, 0.3] },   // swing out front as the cut opens
+      { u: 0.231, p: [-2.4, 0.42, 5.6],  t: [-2.4, -0.30, 0.3] }, // INDIRECT stage, face-on, static
+      { u: 0.480, p: [-2.2, 0.34, 5.3],  t: [-2.36, -0.34, 0.3] },// micro drift only
+      { u: 0.545, p: [2.3, 0.42, 5.6],   t: [2.36, -0.30, 0.3] }, // calm glide to the DIRECT stage
+      { u: 0.755, p: [2.55, 0.34, 5.3],  t: [2.42, -0.34, 0.3] }, // micro drift only
+      { u: 0.805, p: [0.7, 3.3, 9.9],    t: [0.0, 1.4, 0.3] },    // pull out to the outputs
+      { u: 0.970, p: [0.2, 3.5, 10.2],   t: [0.0, 1.45, 0.3] },   // long hold, drift
+      { u: 1.000, p: [7.0, 8.0, 12.0],   t: [-0.2, 3.0, 0.0] }    // loop (in fade)
     ];
     function smooth(t) { return t * t * (3 - 2 * t); }
     const _p = new THREE.Vector3(), _t = new THREE.Vector3();
@@ -609,14 +565,14 @@
       _t.set(a.t[0] + (b.t[0] - a.t[0]) * e, a.t[1] + (b.t[1] - a.t[1]) * e, a.t[2] + (b.t[2] - a.t[2]) * e);
     }
 
-    /* ---- HTML captions & 3D-anchored layer tags ------------------ */
+    /* ---- HTML captions & 3D-anchored tags ------------------------- */
     const capEls = {};
     root.querySelectorAll('.dce-line').forEach((el) => { capEls[el.dataset.cap] = el; });
     const CAPS = [
-      ['enter',    0.02, 0.13],
-      ['indirect', 0.20, 0.345],
-      ['direct',   0.365, 0.56],
-      ['payoff',   0.84, 0.985]
+      ['enter',    0.02, 0.135],
+      ['indirect', 0.245, 0.485],
+      ['direct',   0.555, 0.755],
+      ['payoff',   0.885, 0.985]
     ];
     let activeCap = '';
     function updateCaptions(u) {
@@ -631,14 +587,24 @@
 
     const tagEls = {};
     root.querySelectorAll('.dce-tag').forEach((el) => { tagEls[el.dataset.tag] = el; });
+    // sh: vertical shift — '-150%' floats the label above its anchor,
+    // '55%' hangs it below (used for the readout-row labels).
     const TAGS = [
-      { key: 'window',       pos: [-3.0, 0.1, 1.6],    a: 0.145, b: 0.21 },
-      { key: 'scintillator', pos: [1.8, -0.3, GZ],     a: 0.20, b: 0.34 },
-      { key: 'readout',      pos: [1.8, -0.8, GZ],     a: 0.255, b: 0.34 },
-      { key: 'cdte',         pos: [0.9, -0.35, HZ],    a: 0.375, b: 0.47 },
-      { key: 'cmos',         pos: [ASIC_X, -0.62, HZ], a: 0.48, b: 0.585 },
-      { key: 'softer',       pos: [-1.85, 0.72, 0.42], a: 0.665, b: 0.985 },
-      { key: 'sharper',      pos: [1.85, 0.72, 0.42],  a: 0.80, b: 0.985 }
+      // indirect stage: persistent layer labels + sequential step labels
+      { key: 'scintillator', pos: [IX - 1.15, -0.06, SZ + 0.6],  a: 0.240, b: 0.475 },
+      { key: 'photodiode',   pos: [IX - 1.30, -0.82, SZ + 0.6],  a: 0.250, b: 0.475, sh: '55%' },
+      { key: 'becomeLight',  pos: [IX + 0.45, 0.06, SZ + 0.3],   a: 0.274, b: 0.355 },
+      { key: 'spreads',      pos: [IX + 1.30, -0.10, SZ + 0.3],  a: 0.318, b: 0.428 },
+      { key: 'footWide',     pos: [IX + 0.55, -0.94, SZ + 0.6],  a: 0.402, b: 0.478, sh: '55%' },
+      // direct stage: same layout
+      { key: 'cdte',         pos: [DX - 1.15, -0.06, SZ + 0.6],  a: 0.552, b: 0.748 },
+      { key: 'cmos',         pos: [DX - 1.30, -0.82, SZ + 0.6],  a: 0.560, b: 0.748, sh: '55%' },
+      { key: 'chargeGen',    pos: [DX + 0.45, 0.02, SZ + 0.3],   a: 0.592, b: 0.662 },
+      { key: 'path',         pos: [DX + 0.85, -0.30, SZ + 0.3],  a: 0.636, b: 0.712 },
+      { key: 'footNarrow',   pos: [DX + 0.55, -0.94, SZ + 0.6],  a: 0.686, b: 0.752, sh: '55%' },
+      // payoff
+      { key: 'softer',       pos: [-1.85, 0.72, 0.42], a: 0.815, b: 0.985 },
+      { key: 'sharper',      pos: [1.85, 0.72, 0.42],  a: 0.895, b: 0.985 }
     ];
     const _v = new THREE.Vector3();
     function updateTags(u) {
@@ -646,13 +612,14 @@
       for (let i = 0; i < TAGS.length; i++) {
         const t = TAGS[i], el = tagEls[t.key];
         if (!el) continue;
-        const o = windowed(u, t.a, t.b, 0.04);
+        const o = windowed(u, t.a, t.b, 0.03);
         if (o <= 0.001) { el.style.opacity = '0'; continue; }
         _v.set(t.pos[0], t.pos[1], t.pos[2]).project(camera);
         if (_v.z > 1) { el.style.opacity = '0'; continue; }
         const x = (_v.x * 0.5 + 0.5) * W;
         const y = (-_v.y * 0.5 + 0.5) * H;
-        el.style.transform = 'translate(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px) translate(-50%,-150%)';
+        el.style.transform = 'translate(' + x.toFixed(1) + 'px,' + y.toFixed(1) +
+          'px) translate(-50%,' + (t.sh || '-150%') + ')';
         el.style.opacity = o.toFixed(3);
       }
     }
@@ -676,58 +643,129 @@
     /* ==============================================================
        PER-FRAME STORY LOGIC
     ============================================================== */
-    // Hero photon path: STRAIGHT DOWN, normal to the detector plane
-    // (real imaging geometry) → window crossing → slow-motion fall
-    // held through the indirect beat → absorption in the direct beat.
-    const HERO_PATH = [
-      { u: 0.015, p: [HX, 6.5, HZ] },
-      { u: 0.135, p: [HX, 0.03, HZ] },   // window crossing
-      { u: 0.385, p: [HX, -0.20, HZ] },  // slow-motion fall to the CdTe surface
-      { u: 0.405, p: [HX, A.y, HZ] }     // absorption (direct beat)
-    ];
-    const _hp = new THREE.Vector3(), _hpA = new THREE.Vector3(),
-          _hpB = new THREE.Vector3(), _up = new THREE.Vector3(0, 1, 0);
-    function heroPos(u, out) {
-      let a = HERO_PATH[0], b = HERO_PATH[0];
-      if (u <= HERO_PATH[0].u) { out.set(a.p[0], a.p[1], a.p[2]); return out; }
-      for (let i = 0; i < HERO_PATH.length - 1; i++) {
-        if (u >= HERO_PATH[i].u && u <= HERO_PATH[i + 1].u) { a = HERO_PATH[i]; b = HERO_PATH[i + 1]; break; }
-        a = b = HERO_PATH[HERO_PATH.length - 1];
-      }
-      const e = a === b ? 0 : smooth((u - a.u) / (b.u - a.u));
-      out.set(lerp(a.p[0], b.p[0], e), lerp(a.p[1], b.p[1], e), lerp(a.p[2], b.p[2], e));
-      return out;
+    // Per-pixel activation profile for the INDIRECT footprint: a wide
+    // gaussian — 9 of 11 pixels receive light, brightest at center.
+    const G_WIDE = [1.0, 0.82, 0.55, 0.30, 0.14];
+
+    function setPhoton(actor, x, z, yFrom, yTo, u, a, b) {
+      const e = clamp01((u - a) / (b - a));
+      actor.g.position.set(x, lerp(yFrom, yTo, smooth(e)), z);
+      const op = (u > a && u < b + 0.006) ? Math.min(1, (u - a) / 0.012, (b + 0.006 - u) / 0.008) : 0;
+      actor.head.material.opacity = op;
+      actor.streak.material.opacity = op * 0.7;
+      return e;
     }
 
-    const posL = lightP.geometry.attributes.position.array;
-    const posC = chargeP.geometry.attributes.position.array;
+    // The whole demonstration (both stages) fades in with the cutaway
+    // and out again just before the pull-out to the output graphs.
+    function stagePresence(u) { return windowed(u, 0.205, 0.788, 0.05); }
 
-    // Warm optical cloud expanding sideways in the ghost scintillator.
-    function updateLightCloud(time, env) {
-      for (let i = 0; i < LIGHT_N; i++) {
-        const life = (time * 0.5 + rng(i, 5)) % 1;
-        const ang = rng(i, 6) * Math.PI * 2;
-        const rad = (0.25 + rng(i, 7) * 3.2) * life * env;
-        posL[i * 3]     = HX + Math.cos(ang) * rad;
-        posL[i * 3 + 1] = -0.4 - life * 0.26 + Math.sin(ang * 2) * 0.04;
-        posL[i * 3 + 2] = GZ + Math.sin(ang) * rad * 0.3;
+    function updateIndirect(u, clock, env) {
+      const st = stageI;
+      st.slabMat.opacity = 0.32 * env;
+      st.edgeMat.opacity = 0.65 * env;
+      st.subMat.opacity = 0.9 * env;
+
+      // STEP A — the X-ray photon drops straight down into the slab.
+      setPhoton(st.photon, IX, SZ + 0.2, 1.5, I_ABS.y, u, 0.238, 0.272);
+
+      // STEP B — conversion flash: X-rays become visible light.
+      st.flash.position.set(I_ABS.x, I_ABS.y, SZ + 0.25);
+      st.flash.material.opacity = 0.95 * windowed(u, 0.269, 0.31, 0.008) * env;
+      st.flash.scale.setScalar(0.35 + 0.75 * clamp01((u - 0.269) / 0.035));
+      convGlow.material.opacity = 0.85 * windowed(u, 0.272, 0.492, 0.02) * env;
+      convGlow.scale.setScalar(0.4 + 0.3 * clamp01((u - 0.272) / 0.06) +
+        0.04 * Math.sin(clock * 5));
+
+      // STEP C — defined rays fan out laterally to the photodiode row,
+      // led by an expanding wavefront arc.
+      const wf = smooth(clamp01((u - 0.302) / 0.115));
+      const wr = 0.15 + 1.5 * wf;
+      arc.scale.set(wr, wr * 0.42, 1);
+      arc.material.opacity = 0.55 * windowed(u, 0.302, 0.445, 0.02) * env;
+
+      for (let i = 0; i < RAYS.length; i++) {
+        const r = RAYS[i];
+        const sk = 0.305 + 0.018 * r.d;
+        const prog = smooth(clamp01((u - sk) / 0.045));
+        r.mesh.scale.y = Math.max(r.len * prog, 0.001);
+        const op = (0.9 - 0.09 * r.d) * windowed(u, sk, 0.492, 0.022) * env;
+        r.mat.opacity = op;
+        r.tip.position.set(r.ox + r.dx * r.len * prog, r.oy + r.dy * r.len * prog, SZ + 0.26);
+        r.tip.material.opacity = op * (prog < 0.99 ? 0.85 : 0.4);
       }
-      lightP.geometry.attributes.position.needsUpdate = true;
+      for (let i = 0; i < SCATTER.length; i++) {
+        const s = SCATTER[i];
+        const prog = smooth(clamp01((u - 0.305) / 0.05));
+        s.mesh.scale.y = Math.max(s.len * prog, 0.001);
+        s.mat.opacity = 0.4 * windowed(u, 0.305, 0.46, 0.025) * env;
+      }
+
+      // STEP D — the spread light arrives: SEVERAL pixels activate,
+      // wider area = wider signal footprint. They stay lit through the
+      // direct demo so the contrast is side by side.
+      for (let i = 0; i < PIX_N; i++) {
+        const d = Math.abs(i - 5);
+        const g = (i >= 1 && i <= 9) ? G_WIDE[d] : 0;
+        const amt = g * smooth(clamp01((u - (0.335 + 0.02 * d)) / 0.05));
+        st.pixMats[i].opacity = env;
+        st.pixMats[i].emissiveIntensity = 0.02 + 3.2 * amt * Math.min(1, env * 2);
+        st.pixGlows[i].material.opacity = 0.5 * amt * env;
+      }
+      const fw = smooth(clamp01((u - 0.345) / 0.10));
+      st.foot.scale.x = 0.4 + 2.35 * fw;
+      st.foot.material.opacity = 0.55 * windowed(u, 0.355, 0.782, 0.03);
     }
 
-    // Tight charge cluster forming at A and drifting down to E.
-    function updateCharge(u, time) {
-      const cd = clamp01((u - 0.415) / 0.075);
-      const yy = lerp(A.y, E.y, smooth(cd));
-      const r0 = 0.15 * (1 - cd * 0.55);
+    function updateDirect(u, clock, env) {
+      const st = stageD;
+      st.slabMat.opacity = 0.4 * env;
+      st.edgeMat.opacity = 0.65 * env;
+      st.subMat.opacity = 0.9 * env;
+
+      // STEP A — same vertical photon, now into the CdTe/Si layer.
+      setPhoton(st.photon, DX, SZ + 0.2, 1.5, D_ABS.y, u, 0.552, 0.588);
+
+      // STEP B — localized charge at the absorption point.
+      st.flash.position.set(D_ABS.x, D_ABS.y, SZ + 0.25);
+      st.flash.material.opacity = 0.95 * windowed(u, 0.585, 0.625, 0.008) * env;
+      st.flash.scale.setScalar(0.35 + 0.65 * clamp01((u - 0.585) / 0.035));
+      const drop = smooth(clamp01((u - 0.632) / 0.05));
+      const cy = lerp(D_ABS.y, -0.585, drop);
+      const r0 = 0.085 * (1 - 0.35 * drop);
       for (let i = 0; i < CHARGE_N; i++) {
-        const ang = rng(i, 8) * Math.PI * 2 + time * 0.7;
+        const ang = rng(i, 8) * Math.PI * 2 + clock * 0.7;
         const rad = r0 * (0.25 + rng(i, 9));
-        posC[i * 3]     = A.x + Math.cos(ang) * rad;
-        posC[i * 3 + 1] = yy + (rng(i, 10) - 0.5) * 0.1 * (1 - cd * 0.5);
-        posC[i * 3 + 2] = A.z + Math.sin(ang) * rad * 0.7;
+        posC[i * 3]     = D_ABS.x + Math.cos(ang) * rad;
+        posC[i * 3 + 1] = cy + (rng(i, 10) - 0.5) * 0.09 * (1 - 0.4 * drop);
+        posC[i * 3 + 2] = SZ + 0.2 + Math.sin(ang) * rad * 0.5;
       }
       chargeP.geometry.attributes.position.needsUpdate = true;
+      chargeP.material.opacity = 0.95 * windowed(u, 0.59, 0.71, 0.02) * env;
+
+      // STEP C — the signal travels DOWN a narrow, targeted path.
+      const bp = smooth(clamp01((u - 0.630) / 0.04));
+      beam.scale.y = Math.max((D_ABS.y - PIX_TOP) * bp, 0.001);
+      beam.material.opacity = 0.9 * windowed(u, 0.630, 0.758, 0.02) * env;
+      const pp1 = clamp01((u - 0.636) / 0.04), pp2 = clamp01((u - 0.688) / 0.04);
+      const pp = pp1 < 1 ? pp1 : pp2;
+      beamPulse.position.set(D_ABS.x, lerp(D_ABS.y, PIX_TOP, pp), SZ + 0.26);
+      beamPulse.material.opacity = (pp > 0 && pp < 1 ? 0.9 : 0) * windowed(u, 0.632, 0.74, 0.02) * env;
+
+      // STEP D — ONE pixel receives it (faint neighbours only): a much
+      // more localized readout area.
+      const hit = smooth(clamp01((u - 0.662) / 0.045));
+      for (let i = 0; i < PIX_N; i++) {
+        const d = Math.abs(i - 5);
+        const g = d === 0 ? 1 : d === 1 ? 0.12 : 0;
+        st.pixMats[i].opacity = env;
+        st.pixMats[i].emissiveIntensity = 0.02 + 4.5 * g * hit * Math.min(1, env * 2);
+        st.pixGlows[i].material.opacity = 0.55 * g * hit * env;
+      }
+      hitGlow.material.opacity = 0.8 * hit * windowed(u, 0.662, 0.765, 0.03) *
+        (0.8 + 0.2 * Math.sin(clock * 6));
+      st.foot.scale.x = 0.45;
+      st.foot.material.opacity = 0.6 * hit * windowed(u, 0.668, 0.782, 0.03);
     }
 
     /* ---- Render loop --------------------------------------------- */
@@ -743,17 +781,23 @@
       const u = (phaseT % LOOP) / LOOP;
 
       sampleCamera(u);
+      // Portrait / narrow viewports: dolly back during the stage shots
+      // so the full layer stack stays in frame.
+      if (camera.aspect < 1.05) {
+        const bo = 1 + 0.32 * windowed(u, 0.19, 0.79, 0.04);
+        _p.sub(_t).multiplyScalar(bo).add(_t);
+      }
       camera.position.copy(_p);
       camera.position.x += px * 0.3;
       camera.position.y += -py * 0.22;
       camera.lookAt(_t);
 
       /* --- housing: section cut sweep + glass fade --- */
-      const openAmt = smooth(clamp01((u - 0.155) / 0.075)) *
-                      (1 - smooth(clamp01((u - 0.575) / 0.075)));
+      const openAmt = smooth(clamp01((u - 0.155) / 0.07)) *
+                      (1 - smooth(clamp01((u - 0.762) / 0.05)));
       clipPlane.constant = 3.6 - 3.25 * openAmt;
-      const glassAmt = smooth(clamp01((u - 0.17) / 0.085)) *
-                       (1 - smooth(clamp01((u - 0.585) / 0.07)));
+      const glassAmt = smooth(clamp01((u - 0.168) / 0.08)) *
+                       (1 - smooth(clamp01((u - 0.772) / 0.05)));
       const bodyOp = 1 - 0.85 * glassAmt;
       for (let i = 0; i < HOUSE_MATS.length; i++) {
         HOUSE_MATS[i].opacity = HOUSE_MATS[i] === winFrameMat ? bodyOp * 0.4 : bodyOp;
@@ -761,32 +805,16 @@
       }
       cutLight.position.z = clipPlane.constant;
       cutLight.material.opacity =
-        0.85 * windowed(u, 0.155, 0.245, 0.03) +
-        0.6 * windowed(u, 0.57, 0.66, 0.03) +
-        0.1 * windowed(u, 0.235, 0.585, 0.02);
+        0.5 * windowed(u, 0.155, 0.24, 0.03) +
+        0.45 * windowed(u, 0.75, 0.84, 0.03) +
+        0.06 * windowed(u, 0.23, 0.755, 0.02);
 
-      /* --- hero photon --- */
-      heroPos(u, hero.position);
-      // orient the streak along the (reversed) velocity so it trails.
-      heroPos(Math.min(u + 0.004, 0.405), _hpB);
-      _hpA.copy(_hpB).sub(hero.position);
-      if (_hpA.lengthSq() > 1e-8) {
-        _hpA.normalize().negate();
-        hero.quaternion.setFromUnitVectors(_up, _hpA);
-      }
-      const inFlight = u > 0.015 && u < 0.413;
-      const heroOp = inFlight
-        ? Math.min(1, (u - 0.015) / 0.02, (0.413 - u) / 0.012)
-        : 0;
-      heroHead.material.opacity = heroOp;
-      const diving = u < 0.135;
-      heroStreak.scale.y = diving ? 1.9 : 0.35;
-      heroStreak.position.y = diving ? 1.15 : 0.3;
-      heroStreak.material.opacity = heroOp * 0.75;
+      /* --- wide shot: the vertical X-ray beam --- */
+      setPhoton(wideHero, HX, HZ, 6.5, 0.03, u, 0.015, 0.13);
+      wideHero.streak.scale.y = 1.9;
+      wideHero.streak.position.y = 1.15;
       winRipple.material.opacity = 0.8 * windowed(u, 0.125, 0.18, 0.015);
       winRipple.scale.setScalar(0.5 + 1.4 * clamp01((u - 0.125) / 0.05));
-
-      // secondary photons — the vertical beam in the entry shot
       for (let i = 0; i < SIDEKICKS.length; i++) {
         const k = SIDEKICKS[i];
         const e = clamp01((u - 0.02 - k.off) / 0.10);
@@ -794,52 +822,16 @@
         k.s.material.opacity = (e > 0.01 && e < 0.99) ? 0.5 * Math.min(1, (1 - e) / 0.12) : 0;
       }
 
-      /* --- indirect conversion at layer level, slowed --- */
-      const gEnv = windowed(u, 0.175, 0.355, 0.04);
-      ghostScintMat.opacity = 0.34 * gEnv;
-      ghostScintEdges.material.opacity = 0.4 * gEnv;
-      ghostDiodeMat.opacity = 0.3 * gEnv;
-      // the indirect photon drops straight down — same beam direction.
-      const gp = clamp01((u - 0.19) / 0.04);
-      ghostPhoton.position.set(HX, lerp(2.6, -0.2, smooth(gp)), GZ);
-      ghostPhoton.material.opacity = 0.85 * windowed(u, 0.19, 0.245, 0.015);
-      const bp = clamp01((u - 0.228) / 0.10);
-      bloom.scale.set(0.6 + 3.6 * bp, 0.5 + 0.75 * bp, 1);
-      bloom.material.opacity = 0.85 * windowed(u, 0.228, 0.345, 0.03);
-      lightP.material.opacity = 0.9 * windowed(u, 0.232, 0.345, 0.03);
-      updateLightCloud(clock, Math.max(0.001, windowed(u, 0.228, 0.355, 0.08)));
-      smear.scale.x = 0.6 + 3.0 * clamp01((u - 0.255) / 0.085);
-      smear.material.opacity = 0.7 * windowed(u, 0.26, 0.348, 0.03);
-      diodeTicks.material.opacity = 0.8 * windowed(u, 0.27, 0.348, 0.03);
+      /* --- the two layer demonstrations --- */
+      const env = stagePresence(u);
+      updateIndirect(u, clock, env);
+      updateDirect(u, clock, env);
 
-      /* --- direct conversion at layer level, slowed --- */
-      lattice.material.opacity = 0.2 * windowed(u, 0.355, 0.50, 0.04);
-      absorbFlash.material.opacity = 0.95 * windowed(u, 0.397, 0.45, 0.012);
-      absorbFlash.scale.setScalar(0.9 + 1.7 * clamp01((u - 0.397) / 0.04));
-      chargeP.material.opacity = 0.95 * windowed(u, 0.408, 0.50, 0.025);
-      updateCharge(u, clock);
-      fieldLines.material.opacity = 0.32 * windowed(u, 0.425, 0.50, 0.025);
-      electrodeGlow.material.opacity = 0.9 * windowed(u, 0.455, 0.53, 0.025);
-      electrodeGlow.scale.setScalar(0.45 + 0.25 * Math.sin(clock * 6));
-
-      /* --- readout: charge straight into the CMOS/ASIC --- */
-      traces.material.opacity = 0.72 * windowed(u, 0.46, 0.60, 0.03);
-      bumpMat.emissiveIntensity = 0.4 + 1.5 * windowed(u, 0.47, 0.585, 0.04);
-      lane.material.opacity = 0.65 * windowed(u, 0.48, 0.575, 0.025);
-      const pulseOp = windowed(u, 0.48, 0.57, 0.015);
-      for (let i = 0; i < PULSES.length; i++) {
-        const pp = clamp01((u - 0.485) / 0.075 - i * 0.04);
-        PULSES[i].position.x = E.x + laneLen * smooth(pp);
-        PULSES[i].material.opacity = pulseOp * Math.pow(0.72, i) * (pp > 0 && pp < 1 ? 1 : 0.25);
-      }
-      asicGlow.material.opacity = 0.85 * windowed(u, 0.545, 0.605, 0.02);
-      asicGlow.scale.setScalar(1.0 + 0.35 * Math.sin(clock * 5));
-
-      /* --- zoom-out climax: SEQUENTIAL scan-line reveal — indirect
+      /* --- pull-out climax: SEQUENTIAL scan-line reveal — indirect
              graph first, alone; then the direct graph beside it. --- */
       const panels = [
-        { pn: panelI, rev: smooth(clamp01((u - 0.635) / 0.065)), vis: windowed(u, 0.63, 0.995, 0.02) },
-        { pn: panelD, rev: smooth(clamp01((u - 0.775) / 0.065)), vis: windowed(u, 0.77, 0.995, 0.02) }
+        { pn: panelI, rev: smooth(clamp01((u - 0.798) / 0.06)), vis: windowed(u, 0.795, 0.995, 0.02) },
+        { pn: panelD, rev: smooth(clamp01((u - 0.878) / 0.06)), vis: windowed(u, 0.875, 0.995, 0.02) }
       ];
       for (let i = 0; i < 2; i++) {
         const pn = panels[i].pn, rev = panels[i].rev;
@@ -851,7 +843,7 @@
         pn.bar.position.y = 3.15 - 2.2 * rev;
         pn.bar.material.opacity = (rev > 0.02 && rev < 0.99) ? 0.9 * panels[i].vis : 0;
       }
-      grid.material.opacity = 0.16 - 0.08 * clamp01((u - 0.3) / 0.2) + 0.08 * clamp01((u - 0.62) / 0.1);
+      grid.material.opacity = 0.16 - 0.08 * clamp01((u - 0.25) / 0.2) + 0.08 * clamp01((u - 0.79) / 0.08);
 
       renderer.render(scene3, camera);
       updateCaptions(u);
@@ -977,35 +969,6 @@
     const tex = new THREE.CanvasTexture(c);
     tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
     tex.repeat.set(6, 1);
-    tex.needsUpdate = true;
-    return tex;
-  }
-
-  // CMOS circuit traces (cool metallic lines + vias).
-  function makeTraceTexture(THREE) {
-    const s = 256, c = document.createElement('canvas');
-    c.width = c.height = s;
-    const ctx = c.getContext('2d');
-    ctx.strokeStyle = 'rgba(95,182,230,0.8)';
-    ctx.lineWidth = 1.4;
-    for (let i = 1; i < 8; i++) {
-      const y = i * s / 8;
-      ctx.beginPath();
-      ctx.moveTo(10, y);
-      ctx.lineTo(s * (0.4 + 0.5 * ((i * 37) % 7) / 7), y);
-      ctx.lineTo(s * (0.4 + 0.5 * ((i * 37) % 7) / 7), y + s / 8 - 8);
-      ctx.stroke();
-    }
-    for (let i = 1; i < 8; i++) {
-      const x = i * s / 8;
-      ctx.beginPath();
-      ctx.moveTo(x, 10);
-      ctx.lineTo(x, s * (0.3 + 0.5 * ((i * 53) % 5) / 5));
-      ctx.stroke();
-      ctx.fillStyle = 'rgba(150,220,255,0.85)';
-      ctx.fillRect(x - 2.5, 10, 5, 5);
-    }
-    const tex = new THREE.CanvasTexture(c);
     tex.needsUpdate = true;
     return tex;
   }

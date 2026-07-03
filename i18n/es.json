@@ -144,20 +144,27 @@
         "experience": {
           "enter": "Los rayos X entran en el detector",
           "indirectTitle": "Conversión indirecta",
-          "indirectSub": "Rayos X convertidos en luz — la luz se dispersa antes de la detección",
+          "indirectSub": "Los rayos X se convierten en luz — la luz se dispersa antes de la lectura",
           "directTitle": "Conversión directa",
-          "directSub": "Generación directa de carga — recorrido de señal localizado",
+          "directSub": "La carga permanece localizada hasta la lectura CMOS",
           "payoff": "La conversión directa elimina la etapa de dispersión de luz del centelleador.",
           "layers": {
-            "window": "Ventana del sensor",
-            "scintillator": "Centellador",
-            "readout": "Lectura",
-            "cdte": "Capa de conversión CdTe",
+            "scintillator": "Centelleador",
+            "photodiode": "Lectura de fotodiodos",
+            "cdte": "Capa de CdTe / Si",
             "cmos": "Lectura CMOS"
           },
-          "softerTag": "Localización de señal más suave",
-          "sharperTag": "Localización de señal más nítida",
-          "aria": "Secuencia cinematográfica. Un plano amplio muestra un módulo detector Athlos real mientras los fotones de rayos X entran verticalmente, perpendiculares a la superficie del detector. La cámara se acerca a una vista de corte de las capas internas. En la conversión indirecta, un centelleador convierte los rayos X en luz visible que se dispersa lateralmente por varias regiones de píxeles antes de llegar a la lectura — una señal más ancha y menos localizada. En la conversión directa, el rayo X se convierte en carga localizada en la capa de CdTe y pasa directamente a la lectura CMOS, sin etapa de dispersión de luz. La cámara se aleja: primero aparece el gráfico de salida indirecta, con localización de señal más suave, y después el gráfico directo a su lado, con localización más nítida. La conversión directa elimina la etapa de dispersión de luz del centelleador."
+          "steps": {
+            "becomeLight": "Los rayos X se convierten en luz",
+            "spreads": "La luz se dispersa",
+            "footWide": "Huella de lectura más amplia",
+            "chargeGen": "Generación directa de carga",
+            "path": "Trayecto de señal localizado",
+            "footNarrow": "Huella de lectura más estrecha"
+          },
+          "softerTag": "Localización más suave",
+          "sharperTag": "Localización más nítida",
+          "aria": "Diagrama animado. Los rayos X entran en el detector desde arriba. Conversión indirecta: un centelleador convierte los rayos X en luz visible, la luz se dispersa lateralmente antes de la detección y varios píxeles de lectura de fotodiodo registran una huella de señal más amplia. Conversión directa: una capa de CdTe o silicio convierte los rayos X directamente en carga, que recorre un trayecto estrecho hasta la lectura CMOS y permanece localizada. Los gráficos de salida comparan una localización más suave con una más nítida."
         }
       },
       "products": {
