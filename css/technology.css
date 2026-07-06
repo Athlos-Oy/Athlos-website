@@ -11,6 +11,8 @@
 .tech-section--light { background: var(--white); }
 .tech-section--dark { background: var(--charcoal); }
 .tech-section--tight { padding: clamp(2rem, 4vw, 3rem) 0; }
+/* Seam between two adjacent dark sections (keeps them visually distinct). */
+.tech-section--seam { border-top: 1px solid rgba(255, 255, 255, 0.06); }
 .tech-block { margin-top: clamp(2.5rem, 5vw, 4rem); }
 
 .tech-body {

@@ -1,8 +1,10 @@
 {#-
   Structured data for /technology/direct-conversion.html.
-  FAQ, glossary and citation content comes from src/_data/technologyPage.js
-  — the SAME data the visible page renders, so schema and on-page text
-  cannot drift. English-only page (singleLocale), so no `t` lookups here.
+  FAQ and glossary content comes from src/_data/technologyPage.js — the
+  SAME data the visible page renders, so schema and on-page text cannot
+  drift. English-only page (singleLocale), so no `t` lookups here.
+  (No `citation`/`reviewedBy` here: the visible publications and reviewer
+  sections were removed, so schema must not advertise them.)
 -#}
   <script type="application/ld+json">
   {
@@ -12,7 +14,7 @@
         "@type": "TechArticle",
         "@id": "https://athlos.fi/technology/direct-conversion.html#article",
         "headline": "Direct Conversion X-ray Imaging Technology",
-        "description": "How direct conversion X-ray sensors convert photons directly into electrical signal — no scintillator light-spread stage. CdTe-CMOS and Si-CMOS architectures, direct vs indirect comparison, TDI scanning, publications and patents since 1993.",
+        "description": "How direct conversion X-ray sensors convert photons directly into electrical signal — no scintillator light-spread stage. CdTe-CMOS and Si-CMOS architectures, direct vs indirect comparison, and TDI scanning.",
         "url": "https://athlos.fi/technology/direct-conversion.html",
         "mainEntityOfPage": "https://athlos.fi/technology/direct-conversion.html",
         "inLanguage": "en",
@@ -20,31 +22,11 @@
         "dateModified": "{{ technologyPage.dateModified }}",
         "author": { "@id": "https://athlos.fi/#organization" },
         "publisher": { "@id": "https://athlos.fi/#organization" },
-        "reviewedBy": { "@id": "https://athlos.fi/about.html#konstantinos-spartiotis" },
         "about": [
           { "@type": "Thing", "name": "Direct conversion X-ray imaging" },
           { "@type": "Thing", "name": "CdTe-CMOS X-ray detectors" },
           { "@type": "Thing", "name": "Si-CMOS X-ray detectors" }
-        ],
-        "citation": [
-{%- for c in technologyPage.citations %}
-          {
-            "@type": "ScholarlyArticle",
-            "headline": {{ c.title | dump | safe }},
-            "author": {{ c.authors | dump | safe }},
-            "datePublished": {{ c.year | dump | safe }},
-            "isPartOf": {{ c.venue | dump | safe }}{% if c.url %},
-            "url": {{ c.url | dump | safe }}{% endif %}
-          }{{ "," if not loop.last }}
-{%- endfor %}
         ]
-      },
-      {
-        "@type": "Person",
-        "@id": "https://athlos.fi/about.html#konstantinos-spartiotis",
-        "name": "Konstantinos Spartiotis",
-        "jobTitle": "Founder & CEO, Athlos Oy",
-        "url": "https://athlos.fi/about.html"
       },
       {
         "@type": "FAQPage",
