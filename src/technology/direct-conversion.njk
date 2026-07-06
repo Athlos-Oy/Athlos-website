@@ -25,96 +25,20 @@ jsonldHeadAfterAnalyticsPartials:
   - partials/page-jsonld/technology-jsonld.njk
 ---
 {#-
-  Technology explainer page — ENGLISH ONLY by design (decision D5,
-  2026-07-03). Unlike product pages, this page does NOT paginate over
-  locales.active and its copy is authored inline rather than through
-  i18n keys; only the head meta strings live in i18n (pages.technology.*,
-  mirrored into every parts-<locale>/ dir for parity). If the page is
-  localized later, extract the copy to i18n parts following the
-  product-page pattern.
-
-  FAQ, glossary and citation content renders from
-  src/_data/technologyPage.js — the same data source as the JSON-LD
-  partial, so visible text and structured data cannot drift.
+  Technology explainer page — ENGLISH ONLY (singleLocale). Deliberately
+  short and visual: the core technology story only. Longer Q&A and the
+  glossary live on /technology/faq.html (linked from the footer and the
+  bottom of this page). Citations render from src/_data/technologyPage.js
+  so the visible reference list and the TechArticle `citation` schema
+  share one source.
 
   Wording rules (approved): no "zero spread / perfect / zero noise /
-  always better"; Athlos products are direct conversion with
+  always better"; Athlos sensors are direct conversion with
   charge-integrating readout — single-photon SENSITIVE, not
-  photon-counting. Historical papers are lineage only, never current
-  product specs. YXLON 2007 evaluation excluded (confidential — D1).
+  photon-counting. Historical papers are background only, never current
+  product specs.
 -#}
 {%- set tp = technologyPage %}
-{#-
-  dcsScene — one continuous detector cross-section used six times: five
-  static per-step thumbnails (mobile cards) and one interactive sticky
-  stage (desktop). The scene never changes; each step reveals its own
-  layer (photon → absorption → charge carriers → field collection →
-  readout pulse), reinforcing "short, localized X-ray-to-signal pathway".
-  Shared gradients/filters live in one hidden .dcs-defs svg (same
-  pattern as the homepage dcc-defs). State = data-active on the svg;
-  CSS shows layers cumulatively, dimming completed ones.
--#}
-{%- macro dcsScene(active, cls) %}
-          <svg class="dcs {{ cls }}" data-active="{{ active }}" viewBox="0 0 320 360" aria-hidden="true" focusable="false">
-            {#- base scene: semiconductor slice, pixel electrodes, bump bonds, CMOS -#}
-            <g class="dcs-base">
-              <rect x="40" y="140" width="240" height="110" rx="8" fill="url(#dcs-slab)" fill-opacity="0.85" stroke="#43a1d8" stroke-opacity="0.3"/>
-              <rect x="44" y="141.5" width="232" height="3" rx="1.5" fill="#ffffff" fill-opacity="0.6"/>
-              <text x="280" y="132" text-anchor="end" class="dcs-label">CdTe / Si</text>
-              <g fill="#8ea3b0" fill-opacity="0.75">
-                <rect x="56" y="236" width="24" height="7" rx="2.5"/>
-                <rect x="102" y="236" width="24" height="7" rx="2.5"/>
-                <rect x="148" y="236" width="24" height="7" rx="2.5"/>
-                <rect x="194" y="236" width="24" height="7" rx="2.5"/>
-                <rect x="240" y="236" width="24" height="7" rx="2.5"/>
-              </g>
-              <g fill="#aebbc4">
-                <circle cx="68" cy="259" r="4"/><circle cx="114" cy="259" r="4"/><circle cx="160" cy="259" r="4"/><circle cx="206" cy="259" r="4"/><circle cx="252" cy="259" r="4"/>
-              </g>
-              <rect x="40" y="272" width="240" height="52" rx="8" fill="url(#dcs-cmos)" stroke="#5a6b76" stroke-opacity="0.3"/>
-              <text x="160" y="345" text-anchor="middle" class="dcs-label">CMOS / ASIC readout</text>
-            </g>
-            {#- 1 · photon enters -#}
-            <g class="dcs-g dcs-g1">
-              <line x1="160" y1="26" x2="160" y2="124" stroke="#43a1d8" stroke-width="2.5" stroke-dasharray="7 5" class="dcs-anim-photon"/>
-              <polygon points="160,138 154,124 166,124" fill="#43a1d8"/>
-            </g>
-            {#- 2 · absorption -#}
-            <g class="dcs-g dcs-g2">
-              <line x1="160" y1="141" x2="160" y2="174" stroke="#43a1d8" stroke-width="2" stroke-opacity="0.4"/>
-              <circle cx="160" cy="186" r="17" fill="url(#dcs-glow)" filter="url(#dcs-blur)" class="dcs-anim-glow"/>
-              <circle cx="160" cy="186" r="3.5" fill="#dff1ff" stroke="#43a1d8"/>
-            </g>
-            {#- 3 · electron–hole pairs (− cyan below, + neutral above) -#}
-            <g class="dcs-g dcs-g3">
-              <g stroke="#ffffff" stroke-width="1.3" stroke-linecap="round">
-                <circle cx="146" cy="198" r="4.5" fill="#43a1d8" stroke="none"/><line x1="143.6" y1="198" x2="148.4" y2="198"/>
-                <circle cx="160" cy="204" r="4.5" fill="#43a1d8" stroke="none"/><line x1="157.6" y1="204" x2="162.4" y2="204"/>
-                <circle cx="174" cy="198" r="4.5" fill="#43a1d8" stroke="none"/><line x1="171.6" y1="198" x2="176.4" y2="198"/>
-                <circle cx="149" cy="172" r="4.5" fill="#93a8b4" stroke="none"/><line x1="146.6" y1="172" x2="151.4" y2="172"/><line x1="149" y1="169.6" x2="149" y2="174.4"/>
-                <circle cx="163" cy="167" r="4.5" fill="#93a8b4" stroke="none"/><line x1="160.6" y1="167" x2="165.4" y2="167"/><line x1="163" y1="164.6" x2="163" y2="169.4"/>
-                <circle cx="175" cy="176" r="4.5" fill="#93a8b4" stroke="none"/><line x1="172.6" y1="176" x2="177.4" y2="176"/><line x1="175" y1="173.6" x2="175" y2="178.4"/>
-              </g>
-            </g>
-            {#- 4 · field lines guide charge to the pixel electrode -#}
-            <g class="dcs-g dcs-g4">
-              <g stroke="#43a1d8" stroke-opacity="0.35" stroke-width="1.3" fill="none">
-                <path d="M147 208 C147 220 152 228 157 234"/>
-                <path d="M160 210 L160 234"/>
-                <path d="M173 208 C173 220 168 228 163 234"/>
-              </g>
-              <circle class="dcs-anim-drift" cx="160" cy="211" r="3.5" fill="#43a1d8"/>
-              <circle class="dcs-anim-drift dcs-anim-drift--d2" cx="152" cy="214" r="3" fill="#43a1d8"/>
-              <circle class="dcs-anim-drift dcs-anim-drift--d3" cx="168" cy="214" r="3" fill="#43a1d8"/>
-            </g>
-            {#- 5 · readout: pixel + bump light up, clean digital pulse -#}
-            <g class="dcs-g dcs-g5">
-              <rect x="148" y="236" width="24" height="7" rx="2.5" fill="#43a1d8"/>
-              <circle cx="160" cy="259" r="4" fill="#43a1d8"/>
-              <path class="dcs-anim-pulse" d="M56 308 H140 V290 H180 V308 H264" stroke="#43a1d8" stroke-width="2.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
-            </g>
-          </svg>
-{%- endmacro %}
   <main>
 
     <!-- HERO -->
@@ -123,389 +47,209 @@ jsonldHeadAfterAnalyticsPartials:
         <span class="product-category">Technology</span>
         <h1 class="tech-hero-headline">Direct Conversion X-ray Imaging Technology</h1>
         <p class="tech-hero-sub">
-          Athlos direct conversion sensors convert X-ray photons directly into electrical signal — without the scintillator light-spread stage used in conventional indirect detectors.
+          Direct conversion removes the scintillator light-spread stage, creating a shorter and more localized X-ray-to-signal pathway.
         </p>
       </div>
     </section>
 
-    <!-- ANSWER BOX -->
-    <section class="tech-section tech-section--light" id="definition">
-      <div class="container container--narrow">
-        <div class="tech-answer-box reveal">
-          <p>
-            <strong>Direct conversion X-ray imaging</strong> is a detector technology where X-ray photons are absorbed directly in a semiconductor material, such as CdTe or silicon, and converted into electrical charge. Unlike indirect conversion, it does not first convert X-rays into visible light in a scintillator. This removes the scintillator light-spread stage and helps preserve spatial accuracy, contrast and detail.
+    <!-- CORE VISUAL STORY -->
+    <section class="tech-section tech-section--light" id="how-it-works">
+      <div class="container">
+        <div class="tech-section-head">
+          <p class="section-eyebrow reveal">How it works</p>
+          <h2 class="section-headline reveal">From X-ray photon to digital signal</h2>
+          <p class="tech-lead reveal">
+            Conventional detectors take a detour through visible light. Athlos direct conversion sensors don't — they turn X-rays into signal in a single, localized step.
           </p>
         </div>
 
-        <!-- WHAT IS DIRECT CONVERSION -->
-        <div class="tech-block">
-          <p class="section-eyebrow reveal">The Basics</p>
-          <h2 class="section-headline reveal" id="what-is-direct-conversion-imaging">What is direct conversion X-ray imaging?</h2>
-          <p class="tech-body reveal">
-            In a direct conversion detector, the X-ray-to-signal pathway is short and localized. The process has five steps:
-          </p>
-          {#- shared gradient/filter defs for every dcs instance (kept
-              visible at 0×0 — display:none would break url() refs in
-              some browsers; same approach as the homepage dcc-defs) -#}
-          <svg class="dcs-defs" width="0" height="0" aria-hidden="true" focusable="false">
-            <defs>
-              <linearGradient id="dcs-slab" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#ecf5fb"/>
-                <stop offset="1" stop-color="#d4e5f0"/>
-              </linearGradient>
-              <linearGradient id="dcs-cmos" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#e9edf1"/>
-                <stop offset="1" stop-color="#d8dfe5"/>
-              </linearGradient>
-              <radialGradient id="dcs-glow" cx="0.5" cy="0.5" r="0.5">
-                <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
-                <stop offset="0.4" stop-color="#7dbfe8" stop-opacity="0.7"/>
-                <stop offset="1" stop-color="#43a1d8" stop-opacity="0"/>
-              </radialGradient>
-              <filter id="dcs-blur" x="-60%" y="-60%" width="220%" height="220%">
-                <feGaussianBlur stdDeviation="4"/>
-              </filter>
-            </defs>
-          </svg>
-          <div class="tech-steps-layout">
-            <ol class="tech-steps reveal" id="dcs-steps">
-              <li data-step="1"><strong>An X-ray photon enters the detector material</strong> — a semiconductor such as cadmium telluride (CdTe) or crystalline silicon (Si).
-                <span class="tech-step-mini">{{ dcsScene(1, "dcs--static") }}</span>
-              </li>
-              <li data-step="2"><strong>The photon is absorbed</strong> in the semiconductor through photoelectric interaction.
-                <span class="tech-step-mini">{{ dcsScene(2, "dcs--static") }}</span>
-              </li>
-              <li data-step="3"><strong>The absorbed energy creates charge carriers</strong> — electron–hole pairs — in proportion to the photon's energy.
-                <span class="tech-step-mini">{{ dcsScene(3, "dcs--static") }}</span>
-              </li>
-              <li data-step="4"><strong>An applied electric field drives the charge to local pixel electrodes</strong>, keeping the signal footprint close to the point of absorption.
-                <span class="tech-step-mini">{{ dcsScene(4, "dcs--static") }}</span>
-              </li>
-              <li data-step="5"><strong>A CMOS/ASIC readout circuit, bonded directly to the detector material, converts the collected charge into a digital signal.</strong>
-                <span class="tech-step-mini">{{ dcsScene(5, "dcs--static") }}</span>
-              </li>
-            </ol>
-            {#- decorative — the five steps above carry the information -#}
-            <div class="tech-steps-stage reveal" aria-hidden="true">
-              {{ dcsScene(1, "dcs--stage") }}
+        {#- shared gradient/filter defs for the three story SVGs -#}
+        <svg class="dcs-defs" width="0" height="0" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="ts-slab" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#eaf4fb"/><stop offset="1" stop-color="#d3e4ef"/>
+            </linearGradient>
+            <linearGradient id="ts-cmos" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#e9edf1"/><stop offset="1" stop-color="#d6dee4"/>
+            </linearGradient>
+            <linearGradient id="ts-scint" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#fdf3d6"/><stop offset="1" stop-color="#f6e3ab"/>
+            </linearGradient>
+            <radialGradient id="ts-glow" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+              <stop offset="0.4" stop-color="#7dbfe8" stop-opacity="0.7"/>
+              <stop offset="1" stop-color="#43a1d8" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="ts-cloud" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0" stop-color="#fff4cf" stop-opacity="0.95"/>
+              <stop offset="0.45" stop-color="#ffd86b" stop-opacity="0.6"/>
+              <stop offset="1" stop-color="#f0b429" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="ts-blur" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3.4"/></filter>
+          </defs>
+        </svg>
+
+        <div class="tech-story">
+          <!-- STEP 1 · INDIRECT -->
+          <article class="tech-story-panel reveal">
+            <span class="tech-story-tag tech-story-tag--muted">Conventional</span>
+            <div class="tech-story-figure" role="img" aria-label="Indirect conversion: an X-ray photon enters a scintillator and is converted to visible light, which spreads sideways before reaching the photodiode array below, producing a wide signal footprint.">
+              <svg viewBox="0 0 220 210" width="100%" aria-hidden="true">
+                <line x1="110" y1="10" x2="110" y2="52" stroke="#43a1d8" stroke-width="2.5" stroke-dasharray="6 4" class="ts-anim-beam"/>
+                <polygon points="110,58 105,46 115,46" fill="#43a1d8"/>
+                <rect x="24" y="58" width="172" height="44" rx="5" fill="url(#ts-scint)" stroke="#e0b64a" stroke-opacity="0.6"/>
+                <text x="30" y="74" class="tech-svg-label" fill="#a07c1c">Scintillator</text>
+                <ellipse cx="110" cy="86" rx="10" ry="8" fill="url(#ts-cloud)" class="ts-anim-cloud"/>
+                <ellipse cx="110" cy="90" rx="34" ry="13" fill="url(#ts-cloud)" class="ts-anim-cloud ts-anim-cloud--2"/>
+                <ellipse cx="110" cy="94" rx="60" ry="15" fill="url(#ts-cloud)" class="ts-anim-cloud ts-anim-cloud--3"/>
+                <rect x="24" y="112" width="172" height="26" rx="5" fill="#5a6b76" fill-opacity="0.26" stroke="#5a6b76" stroke-opacity="0.5"/>
+                <text x="30" y="129" class="tech-svg-label" fill="#5a6b76">Photodiode array</text>
+                <path d="M52 152 q58 26 116 0" stroke="#c0392b" stroke-width="2" fill="none"/>
+                <text x="110" y="184" text-anchor="middle" class="tech-svg-label" fill="#c0392b">Wide signal footprint</text>
+              </svg>
             </div>
+            <h3 class="tech-story-title">Indirect conversion</h3>
+            <p class="tech-story-copy">In indirect conversion, X-rays are first converted into visible light. Before detection, that light can spread laterally inside the scintillator.</p>
+          </article>
+
+          <div class="tech-story-arrow" aria-hidden="true">
+            <svg viewBox="0 0 40 24" width="40" height="24"><path d="M4 12h30m0 0l-7-6m7 6l-7 6" stroke="#43a1d8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <script>
-            // Sync the sticky illustration stage with the step the reader
-            // is on (scroll position via IntersectionObserver, or hover).
-            // The stage is decorative and defaults to step 1 without JS;
-            // mobile thumbnails are static and need none of this.
-            (function () {
-              var stage = document.querySelector('.tech-steps-stage .dcs');
-              var steps = document.querySelectorAll('#dcs-steps > li[data-step]');
-              if (!stage || !steps.length) return;
-              function setActive(n) {
-                stage.setAttribute('data-active', String(n));
-                Array.prototype.forEach.call(steps, function (li) {
-                  li.classList.toggle('is-active', li.getAttribute('data-step') === String(n));
-                });
-              }
-              setActive(1);
-              Array.prototype.forEach.call(steps, function (li) {
-                li.addEventListener('mouseenter', function () {
-                  setActive(li.getAttribute('data-step'));
-                });
-              });
-              if ('IntersectionObserver' in window) {
-                var io = new IntersectionObserver(function (entries) {
-                  entries.forEach(function (e) {
-                    if (e.isIntersecting) setActive(e.target.getAttribute('data-step'));
-                  });
-                }, { rootMargin: '-45% 0px -45% 0px' });
-                Array.prototype.forEach.call(steps, function (li) { io.observe(li); });
-              }
-            })();
-          </script>
-          <p class="tech-body reveal">
-            No scintillator and no visible-light conversion step is required. Because the charge is collected by electrodes at the pixel where the photon was absorbed, direct conversion helps preserve a more localized signal path from photon to pixel — supporting sharpness, contrast and detail, depending on detector material, geometry and system design.
+
+          <!-- STEP 2 · DIRECT -->
+          <article class="tech-story-panel tech-story-panel--accent reveal" data-delay="80">
+            <span class="tech-story-tag">Direct conversion</span>
+            <div class="tech-story-figure" role="img" aria-label="Direct conversion: an X-ray photon enters a CdTe or silicon semiconductor and generates charge at a localized point, which is collected straight down by the nearest pixel electrode, producing a narrow signal footprint.">
+              <svg viewBox="0 0 220 210" width="100%" aria-hidden="true">
+                <line x1="110" y1="10" x2="110" y2="52" stroke="#43a1d8" stroke-width="2.5" stroke-dasharray="6 4" class="ts-anim-beam"/>
+                <polygon points="110,58 105,46 115,46" fill="#43a1d8"/>
+                <rect x="24" y="58" width="172" height="44" rx="5" fill="url(#ts-slab)" stroke="#43a1d8" stroke-opacity="0.45"/>
+                <text x="30" y="74" class="tech-svg-label" fill="#2b7bab">CdTe or Si semiconductor</text>
+                <circle cx="110" cy="82" r="13" fill="url(#ts-glow)" filter="url(#ts-blur)" class="ts-anim-glow"/>
+                <rect x="105" y="80" width="10" height="34" rx="3" fill="#43a1d8" fill-opacity="0.8" class="ts-anim-col"/>
+                <rect x="24" y="112" width="172" height="26" rx="5" fill="#5a6b76" fill-opacity="0.26" stroke="#5a6b76" stroke-opacity="0.5"/>
+                <text x="30" y="129" class="tech-svg-label" fill="#5a6b76">CMOS / ASIC readout</text>
+                <path d="M98 152 q12 10 24 0" stroke="#2e8b57" stroke-width="2" fill="none"/>
+                <text x="110" y="184" text-anchor="middle" class="tech-svg-label" fill="#2e8b57">Narrow signal footprint</text>
+              </svg>
+            </div>
+            <h3 class="tech-story-title">Direct conversion</h3>
+            <p class="tech-story-copy">In direct conversion, the X-ray photon generates charge directly inside the detector material, keeping the signal path shorter and more localized.</p>
+          </article>
+
+          <div class="tech-story-arrow" aria-hidden="true">
+            <svg viewBox="0 0 40 24" width="40" height="24"><path d="M4 12h30m0 0l-7-6m7 6l-7 6" stroke="#43a1d8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+
+          <!-- STEP 3 · ATHLOS -->
+          <article class="tech-story-panel reveal" data-delay="160">
+            <span class="tech-story-tag tech-story-tag--muted">Athlos design</span>
+            <div class="tech-story-figure" role="img" aria-label="Athlos implementation: a semiconductor detector layer is bonded through bump bonds to a CMOS readout chip, producing a clean digital signal output.">
+              <svg viewBox="0 0 220 210" width="100%" aria-hidden="true">
+                <rect x="30" y="26" width="160" height="34" rx="5" fill="url(#ts-slab)" stroke="#43a1d8" stroke-opacity="0.45"/>
+                <text x="110" y="47" text-anchor="middle" class="tech-svg-label" fill="#2b7bab">Detector (CdTe / Si)</text>
+                <g fill="#8ea3b0"><circle cx="62" cy="70" r="4"/><circle cx="93" cy="70" r="4"/><circle cx="124" cy="70" r="4"/><circle cx="155" cy="70" r="4"/></g>
+                <rect x="30" y="80" width="160" height="34" rx="5" fill="url(#ts-cmos)" stroke="#5a6b76" stroke-opacity="0.4"/>
+                <text x="110" y="101" text-anchor="middle" class="tech-svg-label" fill="#5a6b76">CMOS / ASIC readout</text>
+                <path d="M110 118 v14 m0 0l-5-6m5 6l5-6" stroke="#43a1d8" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="ts-anim-pulse" d="M40 168 H92 V148 H128 V168 H180" stroke="#43a1d8" stroke-width="2.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+                <text x="110" y="192" text-anchor="middle" class="tech-svg-label" fill="#2b7bab">Clean digital signal</text>
+              </svg>
+            </div>
+            <h3 class="tech-story-title">Athlos implementation</h3>
+            <p class="tech-story-copy">Athlos designs direct conversion sensors where the detector material and readout electronics work together as a compact imaging system.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY LOCALIZATION MATTERS -->
+    <section class="tech-section tech-section--dark" id="why-localization">
+      <div class="container">
+        <div class="tech-section-head">
+          <p class="section-eyebrow section-eyebrow--light reveal">The advantage</p>
+          <h2 class="section-headline section-headline--light reveal">Why localization matters</h2>
+        </div>
+        <div class="tech-why">
+          <div class="tech-why-card reveal">
+            <span class="tech-why-num">01</span>
+            <h3 class="tech-why-title">Shorter signal path</h3>
+            <p class="tech-why-copy">The X-ray becomes signal in one step, inside the detector material — no detour through a light-conversion layer.</p>
+          </div>
+          <div class="tech-why-card reveal" data-delay="60">
+            <span class="tech-why-num">02</span>
+            <h3 class="tech-why-title">Reduced light-spread stage</h3>
+            <p class="tech-why-copy">Removing the scintillator removes a dominant source of lateral signal spreading found in indirect detectors.</p>
+          </div>
+          <div class="tech-why-card reveal" data-delay="120">
+            <span class="tech-why-num">03</span>
+            <h3 class="tech-why-title">More localized footprint</h3>
+            <p class="tech-why-copy">Charge is collected close to where the photon was absorbed, helping preserve a compact signal footprint.</p>
+          </div>
+          <div class="tech-why-card reveal" data-delay="180">
+            <span class="tech-why-num">04</span>
+            <h3 class="tech-why-title">Built for high-resolution imaging</h3>
+            <p class="tech-why-copy">A more localized pathway supports the sharpness and contrast that demanding dental, medical and industrial imaging rely on.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ATHLOS PRODUCT CONNECTION -->
+    <section class="tech-section tech-section--light" id="across-sensors">
+      <div class="container">
+        <div class="tech-section-head">
+          <p class="section-eyebrow reveal">In our products</p>
+          <h2 class="section-headline reveal">Direct conversion across Athlos sensors</h2>
+          <p class="tech-lead reveal">Every Athlos sensor is a direct conversion detector. Two material platforms cover the range from compact intraoral imaging to high-speed industrial scanning.</p>
+        </div>
+        <div class="tech-products">
+          <a class="tech-product-card reveal" href="/products/wios.html">
+            <span class="tech-product-kicker">Si-CMOS · intraoral</span>
+            <h3 class="tech-product-name">DC-Air®</h3>
+            <p class="tech-product-copy">Wireless intraoral dental sensor built on Si-CMOS direct conversion for a compact, high-resolution format.</p>
+            <span class="tech-product-link">Explore DC-Air →</span>
+          </a>
+          <a class="tech-product-card reveal" data-delay="80" href="/products/ufs.html">
+            <span class="tech-product-kicker">CdTe-CMOS · line-scan</span>
+            <h3 class="tech-product-name">UFS &amp; Industrial IP67 TDI</h3>
+            <p class="tech-product-copy">CdTe-CMOS scanning sensors for dental panoramic, medical and inline industrial inspection — TDI scanning at high line rates.</p>
+            <span class="tech-product-link">Explore scanning sensors →</span>
+          </a>
+          <a class="tech-product-card reveal" data-delay="160" href="/products/manufacturing.html">
+            <span class="tech-product-kicker">CdTe &amp; Si · platforms</span>
+            <h3 class="tech-product-name">Detector platforms &amp; services</h3>
+            <p class="tech-product-copy">Contract detector manufacturing and software — the bump-bonding, assembly and signal processing behind direct conversion.</p>
+            <span class="tech-product-link">Manufacturing &amp; software →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCIENTIFIC FOUNDATION -->
+    <section class="tech-section tech-section--dark tech-section--tight" id="foundation">
+      <div class="container container--narrow">
+        <div class="tech-section-head">
+          <p class="section-eyebrow section-eyebrow--light reveal">Credibility</p>
+          <h2 class="section-headline section-headline--light reveal">Built on decades of detector development</h2>
+          <p class="tech-lead tech-lead--dark reveal">
+            Athlos direct conversion technology builds on more than 30 years of detector development by the same founding team — first at Simage Oy (1993), then Ajat Oy (2001). Their peer-reviewed work laid the groundwork for today's CdTe-CMOS and Si-CMOS sensors. These papers are historical background and evidence of long-term expertise, not descriptions of current product specifications.
           </p>
         </div>
-      </div>
-    </section>
-
-    <!-- DIRECT VS INDIRECT COMPARISON -->
-    <section class="tech-section tech-section--dark" id="direct-vs-indirect">
-      <div class="container">
-        <p class="section-eyebrow section-eyebrow--light reveal">Comparison</p>
-        <h2 class="section-headline section-headline--light reveal">Direct vs. indirect conversion: what is the difference?</h2>
-        <p class="tech-body tech-body--dark reveal">
-          Most digital X-ray detectors in use today are <em>indirect</em>: they first convert X-rays into visible light in a scintillator layer (such as CsI or GOS), and a photodiode array then converts that light into electrical signal. Direct conversion detectors skip the light stage entirely.
-        </p>
-        <div class="tech-table-wrap reveal">
-          <table class="tech-table">
-            <thead>
-              <tr>
-                <th scope="col">Feature</th>
-                <th scope="col">Indirect conversion (scintillator)</th>
-                <th scope="col">Direct conversion</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Signal path</th>
-                <td>X-ray → visible light → electrical charge</td>
-                <td>X-ray → electrical charge</td>
-              </tr>
-              <tr>
-                <th scope="row">Intermediate conversion stage</th>
-                <td>Scintillator (e.g. CsI, GOS) converts X-rays to visible light</td>
-                <td>None — absorption and charge generation happen in the same semiconductor layer</td>
-              </tr>
-              <tr>
-                <th scope="row">Main spread mechanism</th>
-                <td>Visible light can spread laterally in the scintillator before reaching the photodiode</td>
-                <td>Charge is drawn to local pixel electrodes by an electric field; lateral spread is smaller, though charge sharing between neighbouring pixels can still occur</td>
-              </tr>
-              <tr>
-                <th scope="row">Detector material</th>
-                <td>Scintillator + photodiode array (a-Si, CMOS or CCD)</td>
-                <td>Semiconductor absorber: CdTe, CdZnTe, Si or a-Se</td>
-              </tr>
-              <tr>
-                <th scope="row">Readout architecture</th>
-                <td>Photodiode/TFT or CMOS behind the scintillator</td>
-                <td>CMOS/ASIC readout bonded directly to the semiconductor (e.g. bump-bonded hybrid)</td>
-              </tr>
-              <tr>
-                <th scope="row">Signal localization</th>
-                <td>Footprint broadened by light spread; columnar CsI mitigates but does not remove this stage</td>
-                <td>More localized signal path from absorption point to pixel electrode</td>
-              </tr>
-              <tr>
-                <th scope="row">Image sharpness</th>
-                <td>Constrained by the light-spread stage, particularly at high spatial frequencies</td>
-                <td>Helps preserve sharpness and MTF at high spatial frequencies, depending on material, pixel geometry and system design</td>
-              </tr>
-              <tr>
-                <th scope="row">Typical strengths</th>
-                <td>Mature, cost-effective, widely available; scales to very large flat-panel areas</td>
-                <td>Sharpness, contrast resolution and dose-efficiency potential; compact sensor structure</td>
-              </tr>
-              <tr>
-                <th scope="row">Typical limitations</th>
-                <td>Light spread, fill-factor and conversion losses; each extra stage can add noise</td>
-                <td>High-quality semiconductor material (especially CdTe) is harder to produce; requires careful contact engineering, calibration and material know-how</td>
-              </tr>
-              <tr>
-                <th scope="row">Athlos relevance</th>
-                <td>—</td>
-                <td>Athlos builds exclusively direct conversion sensors: CdTe-CMOS (UFS, Industrial IP67 TDI) and Si-CMOS (DC-Air®)</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="tech-body tech-body--dark reveal">
-          Neither approach is universally better for every application: indirect flat panels remain a practical choice for very large-area, cost-sensitive systems. Direct conversion is at its strongest where sharpness, contrast resolution and dose efficiency drive the application — such as intraoral dental imaging, high-speed scanning and demanding inline inspection.
-        </p>
-      </div>
-    </section>
-
-    <!-- WHY LIGHT SPREAD MATTERS -->
-    <section class="tech-section tech-section--light" id="light-spread">
-      <div class="container container--narrow">
-        <p class="section-eyebrow reveal">Signal Pathway</p>
-        <h2 class="section-headline reveal">Why does scintillator light spread matter?</h2>
-        <p class="tech-body reveal">
-          In an indirect detector, each absorbed X-ray produces a small flash of visible light inside the scintillator. That light radiates in all directions, and part of it travels laterally before it reaches the photodiode layer below. The result is that the signal from a single X-ray photon can be recorded over a wider footprint than the point where the photon was actually absorbed — one of the mechanisms that limit sharpness in indirect systems. Columnar CsI scintillators channel light downwards to reduce this effect, but the light-conversion stage itself remains.
-        </p>
-        <p class="tech-body reveal">
-          Direct conversion removes this specific stage. The photon's energy becomes electrical charge inside the semiconductor, and the applied electric field pulls that charge to the nearest pixel electrodes. The signal footprint stays closer to the absorption point — a shorter, more localized X-ray-to-signal pathway.
-        </p>
-
-        <div class="tech-pathway reveal" role="img" aria-label="Diagram comparing indirect and direct conversion. Left: in an indirect detector an X-ray creates visible light in the scintillator, and the light spreads laterally before reaching the photodiode array, producing a wide signal footprint. Right: in a direct conversion detector the X-ray creates charge in the semiconductor, and the charge is collected by the nearest pixel electrode, producing a narrow signal footprint.">
-          <div class="tech-pathway-panel">
-            <p class="tech-pathway-title">Indirect conversion</p>
-            <svg viewBox="0 0 260 220" width="100%" aria-hidden="true">
-              <line x1="130" y1="8" x2="130" y2="58" stroke="#43a1d8" stroke-width="2.5" stroke-dasharray="6 4" class="tech-anim-beam"/>
-              <polygon points="130,64 125,52 135,52" fill="#43a1d8"/>
-              <rect x="30" y="64" width="200" height="52" rx="4" fill="#f0b429" fill-opacity="0.14" stroke="#f0b429" stroke-opacity="0.5"/>
-              <text x="36" y="80" class="tech-svg-label" fill="#a07c1c">Scintillator</text>
-              <ellipse cx="130" cy="96" rx="12" ry="9" fill="#ffd86b" fill-opacity="0.9" class="tech-anim-cloud"/>
-              <ellipse cx="130" cy="98" rx="36" ry="14" fill="#ffd86b" fill-opacity="0.45" class="tech-anim-cloud tech-anim-cloud--wide"/>
-              <ellipse cx="130" cy="102" rx="66" ry="16" fill="#ffd86b" fill-opacity="0.2" class="tech-anim-cloud tech-anim-cloud--wider"/>
-              <rect x="30" y="124" width="200" height="26" rx="4" fill="#5a6b76" fill-opacity="0.28" stroke="#5a6b76" stroke-opacity="0.55"/>
-              <text x="36" y="141" class="tech-svg-label" fill="#5a6b76">Photodiode array</text>
-              <path d="M64 162 q66 30 132 0" stroke="#c0392b" stroke-width="2" fill="none"/>
-              <text x="130" y="196" text-anchor="middle" class="tech-svg-label" fill="#c0392b">Wide signal footprint</text>
-            </svg>
-          </div>
-          <div class="tech-pathway-panel">
-            <p class="tech-pathway-title">Direct conversion</p>
-            <svg viewBox="0 0 260 220" width="100%" aria-hidden="true">
-              <line x1="130" y1="8" x2="130" y2="58" stroke="#43a1d8" stroke-width="2.5" stroke-dasharray="6 4" class="tech-anim-beam"/>
-              <polygon points="130,64 125,52 135,52" fill="#43a1d8"/>
-              <rect x="30" y="64" width="200" height="52" rx="4" fill="#43a1d8" fill-opacity="0.12" stroke="#43a1d8" stroke-opacity="0.5"/>
-              <text x="36" y="80" class="tech-svg-label" fill="#2b7bab">CdTe or Si semiconductor</text>
-              <rect x="124" y="72" width="12" height="44" rx="3" fill="#43a1d8" fill-opacity="0.85" class="tech-anim-column"/>
-              <rect x="30" y="124" width="200" height="26" rx="4" fill="#5a6b76" fill-opacity="0.28" stroke="#5a6b76" stroke-opacity="0.55"/>
-              <text x="36" y="141" class="tech-svg-label" fill="#5a6b76">CMOS / ASIC readout</text>
-              <path d="M116 162 q14 12 28 0" stroke="#2e8b57" stroke-width="2" fill="none"/>
-              <text x="130" y="196" text-anchor="middle" class="tech-svg-label" fill="#2e8b57">Narrow signal footprint</text>
-            </svg>
-          </div>
-        </div>
-        <p class="tech-caption reveal">In an indirect detector (left), visible light spreads laterally in the scintillator before detection. In a direct conversion detector (right), charge is collected at local pixel electrodes near the absorption point.</p>
-
-        <p class="tech-body reveal">
-          Direct conversion does not mean zero blur: effects such as charge sharing between neighbouring pixels, K-fluorescence and system-level factors (focal spot, motion) still exist in any real detector. What direct conversion removes is the scintillator light-spread stage — a dominant source of signal spreading in indirect designs.
-        </p>
-      </div>
-    </section>
-
-    <!-- HOW ATHLOS WORKS -->
-    <section class="tech-section tech-section--dark" id="athlos-architecture">
-      <div class="container">
-        <p class="section-eyebrow section-eyebrow--light reveal">Athlos Architecture</p>
-        <h2 class="section-headline section-headline--light reveal">How do Athlos direct conversion sensors work?</h2>
-        <div class="tech-two-col">
-          <div>
-            <p class="tech-body tech-body--dark reveal">
-              Athlos builds two direct conversion architectures on one common principle — detector material bonded directly to a full-custom CMOS/ASIC readout:
-            </p>
-            <p class="tech-body tech-body--dark reveal">
-              <strong>CdTe-CMOS</strong> — cadmium telluride detector material bump-bonded to a proprietary full-custom ASIC. Used in the <a href="/products/ufs.html">Ultra-Fast Scanning Sensor (UFS)</a> and the <a href="/products/ufs-ip67.html">Industrial IP67 TDI</a>. CdTe's high atomic number gives strong absorption efficiency across a wide energy range, which suits scanning applications in dental, medical and industrial imaging.
-            </p>
-            <p class="tech-body tech-body--dark reveal">
-              <strong>Si-CMOS</strong> — crystalline silicon detector material integrated with CMOS readout. Used in the <a href="/products/wios.html">DC-Air® wireless intraoral sensor</a>, where a compact sensor structure and high spatial resolution matter most in a size-constrained intraoral format.
-            </p>
-            <p class="tech-body tech-body--dark reveal">
-              Around the sensors, Athlos supplies the full signal chain: <a href="/products/software.html">reconstruction algorithm libraries and locally adaptive post-processing filters</a> tuned to direct conversion signal characteristics, plus an SDK and API for OEM integration. The sensors themselves are built at Athlos's own facilities and the VTT Micronova cleanroom — see <a href="/products/manufacturing.html">Manufacturing Services</a> for the bumping, flip-chip bonding and assembly capabilities behind them.
-            </p>
-          </div>
-          <div class="tech-stack reveal" role="img" aria-label="Simplified diagram of an Athlos hybrid direct conversion detector stack: the semiconductor detector layer (CdTe or Si) on top, connected through bump bonds to the CMOS ASIC readout chip, mounted on a support board.">
-            <svg viewBox="0 0 300 210" width="100%" aria-hidden="true">
-              <rect x="40" y="24" width="220" height="42" rx="5" fill="#43a1d8" fill-opacity="0.22" stroke="#43a1d8"/>
-              <text x="150" y="49" text-anchor="middle" class="tech-svg-label tech-svg-label--dark">Semiconductor detector (CdTe or Si)</text>
-              <g fill="#dfe7ec">
-                <circle cx="70" cy="80" r="5"/><circle cx="102" cy="80" r="5"/><circle cx="134" cy="80" r="5"/><circle cx="166" cy="80" r="5"/><circle cx="198" cy="80" r="5"/><circle cx="230" cy="80" r="5"/>
-              </g>
-              <text x="150" y="103" text-anchor="middle" class="tech-svg-label tech-svg-label--dark">Bump bonds — one per pixel</text>
-              <rect x="40" y="112" width="220" height="42" rx="5" fill="#7dbfe8" fill-opacity="0.14" stroke="#7dbfe8"/>
-              <text x="150" y="137" text-anchor="middle" class="tech-svg-label tech-svg-label--dark">Full-custom CMOS ASIC readout</text>
-              <rect x="24" y="166" width="252" height="24" rx="5" fill="#5a6b76" fill-opacity="0.3" stroke="#5a6b76"/>
-              <text x="150" y="182" text-anchor="middle" class="tech-svg-label tech-svg-label--dark">Support board</text>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {#- Hairline divider: this dark section now directly follows the dark
-        "How Athlos works" section (the light CdTe-vs-Si section between
-        them was removed), so a subtle seam keeps them visually distinct. -#}
-    <!-- PHOTON COUNTING VS CHARGE INTEGRATION -->
-    <section class="tech-section tech-section--dark tech-section--seam" id="photon-counting">
-      <div class="container container--narrow">
-        <p class="section-eyebrow section-eyebrow--light reveal">Readout Modes</p>
-        <h2 class="section-headline section-headline--light reveal">Is direct conversion the same as photon counting?</h2>
-        <p class="tech-body tech-body--dark reveal">
-          No — and the distinction matters. <strong>Direct conversion</strong> describes the <em>conversion pathway</em>: X-ray energy becomes electrical charge directly in the semiconductor. <strong>Photon counting</strong> and <strong>charge integration</strong> describe the <em>readout approach</em>: how the electronics turn that charge into image data.
-        </p>
-        <ul class="tech-list reveal">
-          <li>A <strong>charge-integrating (energy-integrating)</strong> readout accumulates the charge from many photons over an exposure window and digitizes the total.</li>
-          <li>A <strong>photon-counting</strong> readout compares each individual photon's pulse against a threshold and counts events one by one, optionally sorting them by energy.</li>
-        </ul>
-        <div class="tech-note reveal">
-          <p>
-            <strong>Athlos sensors use direct conversion with charge-integrating readout.</strong> They are single-photon sensitive — the charge generated by a single X-ray photon is detectable above the noise floor — but they do not count individual photons or measure the energy of each photon separately. The UFS platform, for example, offers single-photon-sensitive TDI performance with a 16-bit dynamic range.
-          </p>
-        </div>
-        <p class="tech-body tech-body--dark reveal">
-          A direct conversion detector can be designed for either readout mode. The Simage/Ajat team has built both: charge-integrating direct conversion imagers (from the 1996 IEEE pixel device onwards) and a photon-counting camera published in <em>NIM&nbsp;A</em> in 2005. That photon-counting work is part of the team's documented design heritage — not a feature of current Athlos products.
-        </p>
-      </div>
-    </section>
-
-    <!-- TDI -->
-    <section class="tech-section tech-section--light" id="tdi">
-      <div class="container container--narrow">
-        <p class="section-eyebrow reveal">Scanning</p>
-        <h2 class="section-headline reveal">What is TDI scanning?</h2>
-        <p class="tech-body reveal">
-          <strong>TDI (Time Delay Integration)</strong> is a line-scan technique in which the readout of a multi-row linear detector is synchronized with the motion of the object being scanned. As the object moves across the detector rows, each row adds its measurement of the same object slice; after N stages the signal has been accumulated N times, which improves signal-to-noise ratio without slowing the scan.
-        </p>
-        <div class="tech-tdi reveal" role="img" aria-label="Diagram of TDI scanning: an object moves across the detector's line stages, and each stage adds signal from the same object slice, so the accumulated signal grows stage by stage.">
-          <svg viewBox="0 0 320 130" width="100%" aria-hidden="true">
-            <rect x="16" y="18" width="40" height="24" rx="4" fill="#43a1d8" fill-opacity="0.55" class="tech-anim-object"/>
-            <text x="36" y="12" text-anchor="middle" class="tech-svg-label" fill="#5a6b76">Object motion →</text>
-            <g>
-              <rect x="16" y="58" width="56" height="30" rx="3" fill="#43a1d8" fill-opacity="0.15" stroke="#43a1d8" stroke-opacity="0.5"/>
-              <rect x="80" y="58" width="56" height="30" rx="3" fill="#43a1d8" fill-opacity="0.3" stroke="#43a1d8" stroke-opacity="0.5"/>
-              <rect x="144" y="58" width="56" height="30" rx="3" fill="#43a1d8" fill-opacity="0.5" stroke="#43a1d8" stroke-opacity="0.6"/>
-              <rect x="208" y="58" width="56" height="30" rx="3" fill="#43a1d8" fill-opacity="0.7" stroke="#43a1d8" stroke-opacity="0.7"/>
-              <rect x="272" y="58" width="32" height="30" rx="3" fill="#43a1d8" fill-opacity="0.9" stroke="#43a1d8"/>
-            </g>
-            <text x="16" y="106" class="tech-svg-label" fill="#5a6b76">Stage 1</text>
-            <text x="230" y="106" class="tech-svg-label" fill="#5a6b76">Stage N — accumulated signal</text>
-            <text x="16" y="124" class="tech-svg-label" fill="#2b7bab">Signal accumulates as the object passes each TDI stage</text>
-          </svg>
-        </div>
-        <p class="tech-body reveal">
-          This is why TDI suits high-speed, dose-constrained scanning: conveyor-belt inline inspection, panoramic and cephalometric dental imaging, and continuous industrial NDT. The Athlos <a href="/products/ufs.html">Ultra-Fast Scanning Sensor</a> and <a href="/products/ufs-ip67.html">Industrial IP67 TDI</a> both operate in TDI mode with <strong>28 TDI stages</strong> and line rates up to 75,000 lines per second — enabling scan speeds from 28 m/min at 100 µm resolution up to 1,700 m/min at 400 µm.
-        </p>
-      </div>
-    </section>
-
-    <!-- APPLICATIONS -->
-    <section class="tech-section tech-section--dark" id="applications">
-      <div class="container container--narrow">
-        <p class="section-eyebrow section-eyebrow--light reveal">Use Cases</p>
-        <h2 class="section-headline section-headline--light reveal">Where does direct conversion matter most?</h2>
-        <ul class="tech-list tech-list--grid reveal">
-          <li><strong>Intraoral dental imaging</strong> — sharpness and contrast at low dose in a compact sensor.</li>
-          <li><strong>Panoramic &amp; cephalometric imaging</strong> — scanning geometry with high sensitivity across the exposure.</li>
-          <li><strong>Industrial inline inspection</strong> — high line rates with enough contrast to catch small defects and contaminants.</li>
-          <li><strong>Food &amp; beverage inspection</strong> — foreign-object detection where subtle density differences matter.</li>
-          <li><strong>Electronics inspection</strong> — fine-pitch PCB, component and solder-joint detail.</li>
-          <li><strong>Medical imaging</strong> — dose efficiency and contrast resolution in scanning modalities.</li>
-          <li><strong>Custom OEM systems</strong> — the modular UFS platform scales from 7.5 cm to 12 m of active length.</li>
-        </ul>
-        <p class="tech-body tech-body--dark reveal">
-          See <a href="/applications.html">Applications</a> for the full overview of dental, medical and industrial use cases.
-        </p>
-      </div>
-    </section>
-
-    <!-- GLOSSARY -->
-    <section class="tech-section tech-section--light" id="glossary">
-      <div class="container">
-        <p class="section-eyebrow reveal">Terminology</p>
-        <h2 class="section-headline reveal">Glossary of direct conversion imaging terms</h2>
-        <dl class="tech-glossary">
-{%- for g in tp.glossary %}
-          <div class="tech-glossary-card reveal" id="term-{{ g.id }}">
-            <dt>{{ g.term }}</dt>
-            <dd>{{ g.def }}</dd>
-          </div>
+        <ul class="tech-foundation-list reveal">
+{%- for c in tp.citations %}
+          <li>{% if c.url %}<a href="{{ c.url }}" target="_blank" rel="noopener">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %} <span class="tech-foundation-meta">— {{ c.venue }}, {{ c.year }}</span></li>
 {%- endfor %}
-        </dl>
+        </ul>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="tech-section tech-section--dark" id="faq">
-      <div class="container container--narrow">
-        <p class="section-eyebrow section-eyebrow--light reveal">Questions &amp; Answers</p>
-        <h2 class="section-headline section-headline--light reveal">Frequently asked questions</h2>
-        <div class="tech-faq">
-{%- for f in tp.faq %}
-          <div class="tech-faq-item reveal" id="faq-{{ f.id }}">
-            <h3 class="tech-faq-q">{{ f.q }}</h3>
-            <p class="tech-faq-a">{{ f.a }}</p>
-          </div>
-{%- endfor %}
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
+    <!-- FAQ LINK + CTA -->
     <section class="product-cta" id="contact">
       <div class="container" style="text-align:center;">
+        <p class="tech-faq-cta reveal">
+          Looking for more technical detail? <a href="/technology/faq.html">Read the Technology FAQ →</a>
+        </p>
         <p class="section-eyebrow section-eyebrow--light reveal">Get in Touch</p>
         <h2 class="section-headline section-headline--light reveal" style="max-width:640px;margin-left:auto;margin-right:auto;">Discuss direct conversion for your application.</h2>
         <p class="reveal" style="font-size:var(--text-base);font-weight:300;line-height:1.75;color:rgba(255,255,255,0.6);max-width:560px;margin:0 auto 2rem;">

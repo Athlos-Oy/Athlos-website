@@ -103,6 +103,184 @@
   color: var(--cyan);
 }
 
+/* ---- section head + lead --------------------------------------------- */
+.tech-section-head { max-width: 720px; margin-bottom: clamp(2rem, 4vw, 3rem); }
+.tech-lead {
+  font-size: var(--text-md);
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--gray-steel);
+  margin-top: 0.75rem;
+  max-width: 62ch;
+}
+.tech-lead--dark { color: rgba(255, 255, 255, 0.68); }
+.tech-hero--compact { min-height: 34vh; }
+.tech-hero--compact .tech-hero-sub a { color: var(--cyan); text-decoration: none; }
+.tech-hero--compact .tech-hero-sub a:hover { text-decoration: underline; }
+
+/* ---- core visual story (3 panels) ------------------------------------ */
+.tech-story {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+.tech-story-panel {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(20, 35, 48, 0.1);
+  border-radius: var(--r-lg, 12px);
+  background: #fbfdfe;
+  padding: 1.25rem 1.25rem 1.5rem;
+}
+.tech-story-panel--accent {
+  border-color: rgba(67, 161, 216, 0.4);
+  background: linear-gradient(180deg, rgba(67, 161, 216, 0.06), #fbfdfe 60%);
+  box-shadow: 0 12px 40px -24px rgba(67, 161, 216, 0.5);
+}
+.tech-story-tag {
+  align-self: flex-start;
+  font-size: var(--text-xs, 0.7rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  background: rgba(67, 161, 216, 0.1);
+  padding: 0.3rem 0.6rem;
+  border-radius: 100px;
+  margin-bottom: 0.9rem;
+}
+.tech-story-tag--muted { color: var(--gray-steel); background: rgba(20, 35, 48, 0.06); }
+.tech-story-figure {
+  background: #ffffff;
+  border-radius: var(--r-md, 10px);
+  border: 1px solid rgba(20, 35, 48, 0.05);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+.tech-story-figure svg { display: block; width: 100%; height: auto; }
+.tech-story-title { font-size: var(--text-md); font-weight: 600; color: var(--charcoal); margin-bottom: 0.5rem; letter-spacing: -0.01em; }
+.tech-story-copy { font-size: var(--text-sm); font-weight: 300; line-height: 1.6; color: var(--gray-steel); margin: 0; }
+.tech-story-arrow { display: flex; align-items: center; justify-content: center; padding: 0 0.25rem; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .ts-anim-beam { animation: ts-beam 2.6s linear infinite; }
+  @keyframes ts-beam { to { stroke-dashoffset: -20; } }
+  .ts-anim-cloud { transform-origin: center; transform-box: fill-box; animation: ts-cloud 3s ease-in-out infinite alternate; }
+  .ts-anim-cloud--2 { animation-delay: 0.2s; }
+  .ts-anim-cloud--3 { animation-delay: 0.4s; }
+  @keyframes ts-cloud { from { opacity: 0.75; transform: scale(0.96); } to { opacity: 1; transform: scale(1.06); } }
+  .ts-anim-glow { transform-origin: center; transform-box: fill-box; animation: ts-glow 3s ease-in-out infinite alternate; }
+  @keyframes ts-glow { from { opacity: 0.7; transform: scale(0.9); } to { opacity: 1; transform: scale(1.08); } }
+  .ts-anim-col { animation: ts-col 3s ease-in-out infinite alternate; }
+  @keyframes ts-col { from { fill-opacity: 0.55; } to { fill-opacity: 0.9; } }
+  .ts-anim-pulse { stroke-dasharray: 260; animation: ts-pulse 3.4s ease-in-out infinite; }
+  @keyframes ts-pulse { 0% { stroke-dashoffset: 260; } 55%,100% { stroke-dashoffset: 0; } }
+}
+
+/* ---- why localization (4 cards) -------------------------------------- */
+.tech-why {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.tech-why-card {
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: var(--r-lg, 12px);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 1.5rem 1.25rem;
+}
+.tech-why-num { font-size: var(--text-sm); font-weight: 600; color: var(--cyan); letter-spacing: 0.05em; }
+.tech-why-title { font-size: var(--text-base); font-weight: 600; color: var(--white); margin: 0.75rem 0 0.5rem; letter-spacing: -0.01em; }
+.tech-why-copy { font-size: var(--text-sm); font-weight: 300; line-height: 1.6; color: rgba(255, 255, 255, 0.6); margin: 0; }
+
+/* ---- product connection (3 cards) ------------------------------------ */
+.tech-products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.tech-product-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(20, 35, 48, 0.1);
+  border-radius: var(--r-lg, 12px);
+  background: rgba(20, 35, 48, 0.02);
+  padding: 1.5rem;
+  text-decoration: none;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.tech-product-card:hover {
+  border-color: rgba(67, 161, 216, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 18px 44px -28px rgba(67, 161, 216, 0.6);
+}
+.tech-product-kicker { font-size: var(--text-xs, 0.7rem); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--cyan); }
+.tech-product-name { font-size: var(--text-lg); font-weight: 600; color: var(--charcoal); margin: 0.6rem 0 0.6rem; letter-spacing: -0.02em; }
+.tech-product-copy { font-size: var(--text-sm); font-weight: 300; line-height: 1.6; color: var(--gray-steel); margin: 0 0 1.25rem; flex: 1; }
+.tech-product-link { font-size: var(--text-sm); font-weight: 500; color: var(--cyan); margin-top: auto; }
+
+/* ---- scientific foundation list -------------------------------------- */
+.tech-foundation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+.tech-foundation-list li {
+  font-size: var(--text-sm);
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.75);
+  padding-left: 1.1rem;
+  position: relative;
+}
+.tech-foundation-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cyan);
+}
+.tech-foundation-list a { color: rgba(255, 255, 255, 0.92); text-decoration: none; border-bottom: 1px solid rgba(67, 161, 216, 0.5); }
+.tech-foundation-list a:hover { color: var(--cyan); }
+.tech-foundation-meta { color: rgba(255, 255, 255, 0.5); font-weight: 300; }
+
+/* ---- FAQ-link CTA line ----------------------------------------------- */
+.tech-faq-cta {
+  font-size: var(--text-base);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2.5rem;
+}
+.tech-faq-cta a { color: var(--cyan); font-weight: 500; text-decoration: none; }
+.tech-faq-cta a:hover { text-decoration: underline; }
+
+/* ---- FAQ page: grouped FAQ + light/dark variants --------------------- */
+.tech-faq-group { margin-bottom: clamp(2rem, 4vw, 3rem); }
+.tech-faq-group:last-child { margin-bottom: 0; }
+.tech-faq-group-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--charcoal);
+  letter-spacing: -0.02em;
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(67, 161, 216, 0.35);
+}
+.tech-faq--light .tech-faq-item {
+  border-color: rgba(20, 35, 48, 0.1);
+  background: rgba(20, 35, 48, 0.02);
+}
+.tech-faq--light .tech-faq-q { color: var(--charcoal); }
+.tech-faq--light .tech-faq-a { color: var(--gray-steel); }
+.tech-glossary--dark .tech-glossary-card {
+  border-color: rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.02);
+}
+.tech-glossary--dark .tech-glossary-card dt { color: var(--white); }
+.tech-glossary--dark .tech-glossary-card dd { color: rgba(255, 255, 255, 0.6); }
+
 /* ---- five-step illustration sequence (dcs) --------------------------- */
 .tech-steps-layout {
   display: grid;
@@ -431,6 +609,21 @@
 .tech-reviewed-date { font-size: var(--text-sm); font-weight: 400; color: var(--gray-steel); opacity: 0.8; }
 
 /* ---- responsive ------------------------------------------------------- */
+@media (max-width: 900px) {
+  .tech-why { grid-template-columns: repeat(2, 1fr); }
+  .tech-products { grid-template-columns: 1fr; }
+  .tech-story {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  .tech-story-arrow { transform: rotate(90deg); padding: 0.25rem 0; }
+}
+@media (max-width: 480px) {
+  .tech-why { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 820px) {
   .tech-steps-layout { grid-template-columns: 1fr; }
   .tech-steps-stage { display: none; }

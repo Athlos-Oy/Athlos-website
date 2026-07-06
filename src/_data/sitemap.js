@@ -35,7 +35,8 @@ const PAGES = [
 
 // Single-locale URLs that don't have localized variants.
 const EXTRA = [
-  { path: "/technology/direct-conversion.html", priority: "0.9", changefreq: "monthly", lastmod: "2026-07-03" },
+  { path: "/technology/direct-conversion.html", priority: "0.9", changefreq: "monthly", lastmod: "2026-07-06" },
+  { path: "/technology/faq.html",               priority: "0.7", changefreq: "monthly", lastmod: "2026-07-06" },
   { path: "/llms.txt",      priority: "0.5", changefreq: "monthly", lastmod: "2026-07-03" },
   { path: "/llms-full.txt", priority: "0.5", changefreq: "monthly", lastmod: "2026-07-03" },
 ];

@@ -11,71 +11,95 @@
 // document lineage only, never current product specs.
 
 const datePublished = "2026-07-03";
-const dateModified = "2026-07-03";
+const dateModified = "2026-07-06";
+
+// FAQ category order + labels for the dedicated FAQ page grouping.
+// Each faq item carries a `category` key matching one of these ids.
+const faqCategories = [
+  { id: "basics", label: "Direct conversion basics" },
+  { id: "vs-indirect", label: "Direct vs. indirect conversion" },
+  { id: "materials", label: "Detector materials" },
+  { id: "readout", label: "Readout and signal path" },
+  { id: "sensors", label: "Athlos sensors" },
+  { id: "history", label: "Historical background" },
+];
 
 const faq = [
   {
     id: "what-is-direct-conversion",
+    category: "basics",
     q: "What is direct conversion X-ray imaging?",
     a: "Direct conversion X-ray imaging is a detector technology in which X-ray photons are absorbed in a semiconductor — such as CdTe or silicon — and converted directly into electrical charge. There is no scintillator and no visible-light stage, which removes the scintillator light-spread stage and helps preserve sharpness, contrast and detail.",
   },
   {
     id: "direct-vs-indirect",
+    category: "vs-indirect",
     q: "What is the difference between direct and indirect conversion?",
     a: "Indirect detectors convert X-rays to visible light in a scintillator, then convert that light to charge in a photodiode array. Direct conversion detectors convert X-rays to charge in a single semiconductor step. The shorter, more localized signal path helps preserve spatial accuracy, depending on detector material, geometry and system design.",
   },
   {
     id: "why-light-spread-matters",
+    category: "vs-indirect",
     q: "Why does scintillator light spread matter?",
     a: "In an indirect detector, the visible light created in the scintillator can spread laterally before reaching the photodiodes, so a single photon's signal is recorded over a wider footprint than its absorption point. This broadening limits sharpness at high spatial frequencies. Direct conversion removes this specific light-spread stage.",
   },
   {
     id: "zero-blur",
+    category: "vs-indirect",
     q: "Does direct conversion mean zero blur?",
     a: "No. Real detectors still have effects such as charge sharing between neighbouring pixels, K-fluorescence, and system-level factors like focal spot size and motion. Direct conversion removes one dominant spread mechanism — the scintillator light stage — which helps preserve sharpness but does not make imaging blur-free.",
   },
   {
     id: "same-as-photon-counting",
+    category: "readout",
     q: "Is direct conversion the same as photon counting?",
     a: "No. Direct conversion describes how X-ray energy becomes electrical charge in the detector material. Photon counting and charge integration describe how the readout electronics process that charge. A direct conversion detector can be designed for either readout mode. Athlos sensors use charge-integrating readout — they are not photon-counting devices.",
   },
   {
     id: "athlos-photon-counting",
+    category: "readout",
     q: "Are Athlos sensors photon-counting?",
     a: "No. Athlos sensors are direct conversion detectors with charge-integrating (energy-integrating) readout. They are single-photon sensitive — the signal from a single X-ray photon is detectable above the noise floor — but they do not count individual photons or measure the energy of each photon separately.",
   },
   {
     id: "what-is-cdte-cmos",
+    category: "materials",
     q: "What is CdTe-CMOS?",
     a: "CdTe-CMOS is a hybrid detector architecture in which a cadmium telluride crystal is bump-bonded, pixel by pixel, to a custom CMOS readout ASIC. CdTe absorbs X-rays efficiently across a wide energy range, making the architecture well suited to scanning applications. Athlos uses it in the UFS and Industrial IP67 TDI.",
   },
   {
     id: "what-is-si-cmos",
+    category: "materials",
     q: "What is Si-CMOS?",
     a: "Si-CMOS is a direct conversion architecture using crystalline silicon as the absorber, integrated with CMOS readout circuitry. Silicon suits compact, high-resolution detectors at intraoral dental energies. Athlos uses Si-CMOS direct conversion in the DC-Air® wireless intraoral sensor.",
   },
   {
     id: "which-products",
+    category: "sensors",
     q: "Which Athlos products use direct conversion?",
     a: "All of them. DC-Air® uses Si-CMOS direct conversion; the Ultra-Fast Scanning Sensor and Industrial IP67 TDI use CdTe-CMOS direct conversion. Athlos Manufacturing Services provide the bumping and flip-chip processes that hybrid direct conversion detectors require, and Athlos software is tuned to direct conversion signal characteristics.",
   },
   {
     id: "dental",
+    category: "sensors",
     q: "Why is direct conversion useful in dental imaging?",
     a: "Dental imaging needs fine detail at low patient dose in a small sensor. Direct conversion helps preserve sharpness and contrast without a scintillator layer, supporting a compact sensor structure. Independent evaluations of DC-Air® have noted improved clarity and subtle detail compared with conventional CMOS intraoral sensors.",
   },
   {
     id: "industrial",
+    category: "sensors",
     q: "Why is direct conversion useful in industrial inspection?",
     a: "Inline inspection combines high conveyor speeds with the need to detect small, low-contrast features such as foreign objects or weld defects. Direct conversion TDI detectors accumulate signal across stages while preserving a localized signal path — supporting contrast sensitivity at line rates up to 75,000 lines per second.",
   },
   {
     id: "what-is-tdi",
+    category: "readout",
     q: "What is TDI scanning?",
     a: "TDI (Time Delay Integration) is a line-scan technique in which detector row readout is synchronized with object motion. Each of the detector's stages measures the same object slice as it passes, and the signals are summed — improving signal-to-noise ratio without slowing the scan. Athlos TDI sensors use 28 stages.",
   },
   {
     id: "simage-ajat-athlos",
+    category: "history",
     q: "How is Athlos connected to Simage and Ajat?",
     a: "The same founding team, led by Konstantinos Spartiotis, has developed direct conversion X-ray imaging since 1993 — first at Simage Oy, then at Ajat Oy, whose CdTe-CMOS dental sensors were deployed in thousands of units worldwide. Athlos, founded in 2017, continues that lineage with DC-Air®, UFS and the Industrial IP67 TDI.",
   },
@@ -161,4 +185,4 @@ const citations = [
   },
 ];
 
-export default { datePublished, dateModified, faq, glossary, citations };
+export default { datePublished, dateModified, faqCategories, faq, glossary, citations };

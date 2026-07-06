@@ -1,0 +1,16 @@
+{
+  "pages": {
+    "technologyFaq": {
+      "title": "Direct Conversion X-ray Imaging FAQ | CdTe &amp; Si-CMOS | Athlos",
+      "description": "Answers on direct vs indirect conversion, CdTe-CMOS and Si-CMOS detectors, TDI scanning, readout, and how Athlos direct conversion sensors work.",
+      "og": {
+        "title": "Direct Conversion X-ray Imaging — FAQ | Athlos",
+        "description": "Direct conversion basics, detector materials, readout and signal path, Athlos sensors, and the historical background — with a glossary and references."
+      },
+      "twitter": {
+        "title": "Direct Conversion X-ray Imaging — FAQ | Athlos",
+        "description": "Answers on direct vs indirect conversion, CdTe-CMOS and Si-CMOS detectors, TDI scanning and readout."
+      }
+    }
+  }
+}

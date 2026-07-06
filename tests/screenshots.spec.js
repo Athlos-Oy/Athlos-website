@@ -13,6 +13,7 @@ const PAGES = [
   { name: "privacy",                path: "/privacy.html" },
   { name: "cefla",                  path: "/cefla.html" },
   { name: "technology",             path: "/technology/direct-conversion.html" },
+  { name: "technology-faq",         path: "/technology/faq.html" },
   { name: "products-index",         path: "/products/" },
   { name: "products-wios",          path: "/products/wios.html" },
   { name: "products-ufs",           path: "/products/ufs.html" },

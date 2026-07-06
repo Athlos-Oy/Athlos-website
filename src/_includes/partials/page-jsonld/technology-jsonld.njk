@@ -1,10 +1,10 @@
 {#-
-  Structured data for /technology/direct-conversion.html.
-  FAQ and glossary content comes from src/_data/technologyPage.js — the
-  SAME data the visible page renders, so schema and on-page text cannot
-  drift. English-only page (singleLocale), so no `t` lookups here.
-  (No `citation`/`reviewedBy` here: the visible publications and reviewer
-  sections were removed, so schema must not advertise them.)
+  Structured data for /technology/direct-conversion.html (the short,
+  visual overview). TechArticle + BreadcrumbList only — the FAQ and
+  glossary schema live on /technology/faq.html. `citation` mirrors the
+  visible "Built on decades of detector development" list, sourced from
+  src/_data/technologyPage.js so schema and page cannot drift.
+  English-only page (singleLocale), so no `t` lookups here.
 -#}
   <script type="application/ld+json">
   {
@@ -14,7 +14,7 @@
         "@type": "TechArticle",
         "@id": "https://athlos.fi/technology/direct-conversion.html#article",
         "headline": "Direct Conversion X-ray Imaging Technology",
-        "description": "How direct conversion X-ray sensors convert photons directly into electrical signal — no scintillator light-spread stage. CdTe-CMOS and Si-CMOS architectures, direct vs indirect comparison, and TDI scanning.",
+        "description": "How direct conversion X-ray sensors convert photons directly into electrical signal — no scintillator light-spread stage. CdTe-CMOS and Si-CMOS architectures across Athlos sensors.",
         "url": "https://athlos.fi/technology/direct-conversion.html",
         "mainEntityOfPage": "https://athlos.fi/technology/direct-conversion.html",
         "inLanguage": "en",
@@ -26,24 +26,17 @@
           { "@type": "Thing", "name": "Direct conversion X-ray imaging" },
           { "@type": "Thing", "name": "CdTe-CMOS X-ray detectors" },
           { "@type": "Thing", "name": "Si-CMOS X-ray detectors" }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://athlos.fi/technology/direct-conversion.html#faq",
-        "mainEntity": [
-{%- for f in technologyPage.faq %}
-          { "@type": "Question", "name": {{ f.q | dump | safe }}, "acceptedAnswer": { "@type": "Answer", "text": {{ f.a | dump | safe }} } }{{ "," if not loop.last }}
-{%- endfor %}
-        ]
-      },
-      {
-        "@type": "DefinedTermSet",
-        "@id": "https://athlos.fi/technology/direct-conversion.html#glossary",
-        "name": "Direct conversion X-ray imaging glossary",
-        "hasDefinedTerm": [
-{%- for g in technologyPage.glossary %}
-          { "@type": "DefinedTerm", "@id": "https://athlos.fi/technology/direct-conversion.html#term-{{ g.id }}", "name": {{ g.term | dump | safe }}, "description": {{ g.def | dump | safe }} }{{ "," if not loop.last }}
+        ],
+        "citation": [
+{%- for c in technologyPage.citations %}
+          {
+            "@type": "ScholarlyArticle",
+            "headline": {{ c.title | dump | safe }},
+            "author": {{ c.authors | dump | safe }},
+            "datePublished": {{ c.year | dump | safe }},
+            "isPartOf": {{ c.venue | dump | safe }}{% if c.url %},
+            "url": {{ c.url | dump | safe }}{% endif %}
+          }{{ "," if not loop.last }}
 {%- endfor %}
         ]
       },
