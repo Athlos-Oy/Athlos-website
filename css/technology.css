@@ -101,6 +101,80 @@
   color: var(--cyan);
 }
 
+/* ---- five-step illustration sequence (dcs) --------------------------- */
+.tech-steps-layout {
+  display: grid;
+  grid-template-columns: 1fr 0.78fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+  margin: 1.5rem 0;
+}
+.tech-steps-layout .tech-steps { margin: 0; }
+.tech-steps li { transition: border-color 0.3s ease, background 0.3s ease; }
+.tech-steps li.is-active {
+  border-color: rgba(67, 161, 216, 0.55);
+  background: rgba(67, 161, 216, 0.05);
+}
+
+.tech-steps-stage {
+  position: sticky;
+  top: calc(var(--nav-h, 72px) + 2rem);
+  border: 1px solid rgba(20, 35, 48, 0.08);
+  border-radius: var(--r-lg, 12px);
+  background: #fbfdfe;
+  padding: 1.1rem;
+}
+.tech-steps-stage .dcs { width: 100%; height: auto; display: block; }
+.tech-step-mini { display: none; }
+
+.dcs-label { font-size: 11px; font-weight: 500; fill: #5a6b76; font-family: inherit; }
+
+/* Cumulative layer states: the active step's layer is full strength,
+   completed layers stay faintly visible, future layers are hidden. */
+.dcs .dcs-g { opacity: 0; }
+.dcs[data-active="1"] .dcs-g1 { opacity: 1; }
+.dcs[data-active="2"] .dcs-g1 { opacity: 0.3; }
+.dcs[data-active="2"] .dcs-g2 { opacity: 1; }
+.dcs[data-active="3"] .dcs-g1 { opacity: 0.3; }
+.dcs[data-active="3"] .dcs-g2 { opacity: 0.45; }
+.dcs[data-active="3"] .dcs-g3 { opacity: 1; }
+.dcs[data-active="4"] .dcs-g1 { opacity: 0.3; }
+.dcs[data-active="4"] .dcs-g2 { opacity: 0.45; }
+.dcs[data-active="4"] .dcs-g3 { opacity: 0.45; }
+.dcs[data-active="4"] .dcs-g4 { opacity: 1; }
+.dcs[data-active="5"] .dcs-g1 { opacity: 0.3; }
+.dcs[data-active="5"] .dcs-g2 { opacity: 0.45; }
+.dcs[data-active="5"] .dcs-g3 { opacity: 0.35; }
+.dcs[data-active="5"] .dcs-g4 { opacity: 0.45; }
+.dcs[data-active="5"] .dcs-g5 { opacity: 1; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .dcs--stage .dcs-g { transition: opacity 0.6s ease; }
+  .dcs--stage .dcs-anim-photon { animation: dcs-photon 2.8s linear infinite; }
+  @keyframes dcs-photon { to { stroke-dashoffset: -24; } }
+  .dcs--stage .dcs-anim-glow {
+    animation: dcs-glow 3s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+  @keyframes dcs-glow { from { opacity: 0.7; transform: scale(0.92); } to { opacity: 1; transform: scale(1.08); } }
+  .dcs--stage .dcs-anim-drift { animation: dcs-drift 2.6s ease-in infinite; }
+  .dcs--stage .dcs-anim-drift--d2 { animation-delay: 0.5s; }
+  .dcs--stage .dcs-anim-drift--d3 { animation-delay: 1s; }
+  @keyframes dcs-drift {
+    0% { transform: translateY(0); opacity: 0; }
+    15% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { transform: translateY(24px); opacity: 0; }
+  }
+  .dcs--stage .dcs-anim-pulse { stroke-dasharray: 300; animation: dcs-pulse 3.2s ease-in-out infinite; }
+  @keyframes dcs-pulse { 0% { stroke-dashoffset: 300; } 55% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 0; } }
+}
+@media (prefers-reduced-motion: reduce) {
+  /* Static complete scene: every layer visible, no transitions. */
+  .dcs--stage .dcs-g { opacity: 1 !important; }
+}
+
 /* ---- tables ---------------------------------------------------------- */
 .tech-table-wrap { overflow-x: auto; margin: 1.5rem 0; -webkit-overflow-scrolling: touch; }
 .tech-table {
@@ -356,6 +430,21 @@
 
 /* ---- responsive ------------------------------------------------------- */
 @media (max-width: 820px) {
+  .tech-steps-layout { grid-template-columns: 1fr; }
+  .tech-steps-stage { display: none; }
+  .tech-step-mini {
+    display: block;
+    margin-top: 0.9rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid rgba(20, 35, 48, 0.07);
+  }
+  .tech-step-mini .dcs {
+    display: block;
+    width: 100%;
+    max-width: 230px;
+    height: auto;
+    margin: 0 auto;
+  }
   .tech-pathway { grid-template-columns: 1fr; }
   .tech-two-col { grid-template-columns: 1fr; }
   .tech-list--grid { grid-template-columns: 1fr; }

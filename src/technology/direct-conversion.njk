@@ -44,6 +44,77 @@ jsonldHeadAfterAnalyticsPartials:
   product specs. YXLON 2007 evaluation excluded (confidential — D1).
 -#}
 {%- set tp = technologyPage %}
+{#-
+  dcsScene — one continuous detector cross-section used six times: five
+  static per-step thumbnails (mobile cards) and one interactive sticky
+  stage (desktop). The scene never changes; each step reveals its own
+  layer (photon → absorption → charge carriers → field collection →
+  readout pulse), reinforcing "short, localized X-ray-to-signal pathway".
+  Shared gradients/filters live in one hidden .dcs-defs svg (same
+  pattern as the homepage dcc-defs). State = data-active on the svg;
+  CSS shows layers cumulatively, dimming completed ones.
+-#}
+{%- macro dcsScene(active, cls) %}
+          <svg class="dcs {{ cls }}" data-active="{{ active }}" viewBox="0 0 320 360" aria-hidden="true" focusable="false">
+            {#- base scene: semiconductor slice, pixel electrodes, bump bonds, CMOS -#}
+            <g class="dcs-base">
+              <rect x="40" y="140" width="240" height="110" rx="8" fill="url(#dcs-slab)" fill-opacity="0.85" stroke="#43a1d8" stroke-opacity="0.3"/>
+              <rect x="44" y="141.5" width="232" height="3" rx="1.5" fill="#ffffff" fill-opacity="0.6"/>
+              <text x="280" y="132" text-anchor="end" class="dcs-label">CdTe / Si</text>
+              <g fill="#8ea3b0" fill-opacity="0.75">
+                <rect x="56" y="236" width="24" height="7" rx="2.5"/>
+                <rect x="102" y="236" width="24" height="7" rx="2.5"/>
+                <rect x="148" y="236" width="24" height="7" rx="2.5"/>
+                <rect x="194" y="236" width="24" height="7" rx="2.5"/>
+                <rect x="240" y="236" width="24" height="7" rx="2.5"/>
+              </g>
+              <g fill="#aebbc4">
+                <circle cx="68" cy="259" r="4"/><circle cx="114" cy="259" r="4"/><circle cx="160" cy="259" r="4"/><circle cx="206" cy="259" r="4"/><circle cx="252" cy="259" r="4"/>
+              </g>
+              <rect x="40" y="272" width="240" height="52" rx="8" fill="url(#dcs-cmos)" stroke="#5a6b76" stroke-opacity="0.3"/>
+              <text x="160" y="345" text-anchor="middle" class="dcs-label">CMOS / ASIC readout</text>
+            </g>
+            {#- 1 · photon enters -#}
+            <g class="dcs-g dcs-g1">
+              <line x1="160" y1="26" x2="160" y2="124" stroke="#43a1d8" stroke-width="2.5" stroke-dasharray="7 5" class="dcs-anim-photon"/>
+              <polygon points="160,138 154,124 166,124" fill="#43a1d8"/>
+            </g>
+            {#- 2 · absorption -#}
+            <g class="dcs-g dcs-g2">
+              <line x1="160" y1="141" x2="160" y2="174" stroke="#43a1d8" stroke-width="2" stroke-opacity="0.4"/>
+              <circle cx="160" cy="186" r="17" fill="url(#dcs-glow)" filter="url(#dcs-blur)" class="dcs-anim-glow"/>
+              <circle cx="160" cy="186" r="3.5" fill="#dff1ff" stroke="#43a1d8"/>
+            </g>
+            {#- 3 · electron–hole pairs (− cyan below, + neutral above) -#}
+            <g class="dcs-g dcs-g3">
+              <g stroke="#ffffff" stroke-width="1.3" stroke-linecap="round">
+                <circle cx="146" cy="198" r="4.5" fill="#43a1d8" stroke="none"/><line x1="143.6" y1="198" x2="148.4" y2="198"/>
+                <circle cx="160" cy="204" r="4.5" fill="#43a1d8" stroke="none"/><line x1="157.6" y1="204" x2="162.4" y2="204"/>
+                <circle cx="174" cy="198" r="4.5" fill="#43a1d8" stroke="none"/><line x1="171.6" y1="198" x2="176.4" y2="198"/>
+                <circle cx="149" cy="172" r="4.5" fill="#93a8b4" stroke="none"/><line x1="146.6" y1="172" x2="151.4" y2="172"/><line x1="149" y1="169.6" x2="149" y2="174.4"/>
+                <circle cx="163" cy="167" r="4.5" fill="#93a8b4" stroke="none"/><line x1="160.6" y1="167" x2="165.4" y2="167"/><line x1="163" y1="164.6" x2="163" y2="169.4"/>
+                <circle cx="175" cy="176" r="4.5" fill="#93a8b4" stroke="none"/><line x1="172.6" y1="176" x2="177.4" y2="176"/><line x1="175" y1="173.6" x2="175" y2="178.4"/>
+              </g>
+            </g>
+            {#- 4 · field lines guide charge to the pixel electrode -#}
+            <g class="dcs-g dcs-g4">
+              <g stroke="#43a1d8" stroke-opacity="0.35" stroke-width="1.3" fill="none">
+                <path d="M147 208 C147 220 152 228 157 234"/>
+                <path d="M160 210 L160 234"/>
+                <path d="M173 208 C173 220 168 228 163 234"/>
+              </g>
+              <circle class="dcs-anim-drift" cx="160" cy="211" r="3.5" fill="#43a1d8"/>
+              <circle class="dcs-anim-drift dcs-anim-drift--d2" cx="152" cy="214" r="3" fill="#43a1d8"/>
+              <circle class="dcs-anim-drift dcs-anim-drift--d3" cx="168" cy="214" r="3" fill="#43a1d8"/>
+            </g>
+            {#- 5 · readout: pixel + bump light up, clean digital pulse -#}
+            <g class="dcs-g dcs-g5">
+              <rect x="148" y="236" width="24" height="7" rx="2.5" fill="#43a1d8"/>
+              <circle cx="160" cy="259" r="4" fill="#43a1d8"/>
+              <path class="dcs-anim-pulse" d="M56 308 H140 V290 H180 V308 H264" stroke="#43a1d8" stroke-width="2.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+            </g>
+          </svg>
+{%- endmacro %}
   <main>
 
     <!-- HERO -->
@@ -73,13 +144,83 @@ jsonldHeadAfterAnalyticsPartials:
           <p class="tech-body reveal">
             In a direct conversion detector, the X-ray-to-signal pathway is short and localized. The process has five steps:
           </p>
-          <ol class="tech-steps reveal">
-            <li><strong>An X-ray photon enters the detector material</strong> — a semiconductor such as cadmium telluride (CdTe) or crystalline silicon (Si).</li>
-            <li><strong>The photon is absorbed</strong> in the semiconductor through photoelectric interaction.</li>
-            <li><strong>The absorbed energy creates charge carriers</strong> — electron–hole pairs — in proportion to the photon's energy.</li>
-            <li><strong>An applied electric field drives the charge to local pixel electrodes</strong>, keeping the signal footprint close to the point of absorption.</li>
-            <li><strong>A CMOS/ASIC readout circuit, bonded directly to the detector material, converts the collected charge into a digital signal.</strong></li>
-          </ol>
+          {#- shared gradient/filter defs for every dcs instance (kept
+              visible at 0×0 — display:none would break url() refs in
+              some browsers; same approach as the homepage dcc-defs) -#}
+          <svg class="dcs-defs" width="0" height="0" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="dcs-slab" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ecf5fb"/>
+                <stop offset="1" stop-color="#d4e5f0"/>
+              </linearGradient>
+              <linearGradient id="dcs-cmos" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#e9edf1"/>
+                <stop offset="1" stop-color="#d8dfe5"/>
+              </linearGradient>
+              <radialGradient id="dcs-glow" cx="0.5" cy="0.5" r="0.5">
+                <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+                <stop offset="0.4" stop-color="#7dbfe8" stop-opacity="0.7"/>
+                <stop offset="1" stop-color="#43a1d8" stop-opacity="0"/>
+              </radialGradient>
+              <filter id="dcs-blur" x="-60%" y="-60%" width="220%" height="220%">
+                <feGaussianBlur stdDeviation="4"/>
+              </filter>
+            </defs>
+          </svg>
+          <div class="tech-steps-layout">
+            <ol class="tech-steps reveal" id="dcs-steps">
+              <li data-step="1"><strong>An X-ray photon enters the detector material</strong> — a semiconductor such as cadmium telluride (CdTe) or crystalline silicon (Si).
+                <span class="tech-step-mini">{{ dcsScene(1, "dcs--static") }}</span>
+              </li>
+              <li data-step="2"><strong>The photon is absorbed</strong> in the semiconductor through photoelectric interaction.
+                <span class="tech-step-mini">{{ dcsScene(2, "dcs--static") }}</span>
+              </li>
+              <li data-step="3"><strong>The absorbed energy creates charge carriers</strong> — electron–hole pairs — in proportion to the photon's energy.
+                <span class="tech-step-mini">{{ dcsScene(3, "dcs--static") }}</span>
+              </li>
+              <li data-step="4"><strong>An applied electric field drives the charge to local pixel electrodes</strong>, keeping the signal footprint close to the point of absorption.
+                <span class="tech-step-mini">{{ dcsScene(4, "dcs--static") }}</span>
+              </li>
+              <li data-step="5"><strong>A CMOS/ASIC readout circuit, bonded directly to the detector material, converts the collected charge into a digital signal.</strong>
+                <span class="tech-step-mini">{{ dcsScene(5, "dcs--static") }}</span>
+              </li>
+            </ol>
+            {#- decorative — the five steps above carry the information -#}
+            <div class="tech-steps-stage reveal" aria-hidden="true">
+              {{ dcsScene(1, "dcs--stage") }}
+            </div>
+          </div>
+          <script>
+            // Sync the sticky illustration stage with the step the reader
+            // is on (scroll position via IntersectionObserver, or hover).
+            // The stage is decorative and defaults to step 1 without JS;
+            // mobile thumbnails are static and need none of this.
+            (function () {
+              var stage = document.querySelector('.tech-steps-stage .dcs');
+              var steps = document.querySelectorAll('#dcs-steps > li[data-step]');
+              if (!stage || !steps.length) return;
+              function setActive(n) {
+                stage.setAttribute('data-active', String(n));
+                Array.prototype.forEach.call(steps, function (li) {
+                  li.classList.toggle('is-active', li.getAttribute('data-step') === String(n));
+                });
+              }
+              setActive(1);
+              Array.prototype.forEach.call(steps, function (li) {
+                li.addEventListener('mouseenter', function () {
+                  setActive(li.getAttribute('data-step'));
+                });
+              });
+              if ('IntersectionObserver' in window) {
+                var io = new IntersectionObserver(function (entries) {
+                  entries.forEach(function (e) {
+                    if (e.isIntersecting) setActive(e.target.getAttribute('data-step'));
+                  });
+                }, { rootMargin: '-45% 0px -45% 0px' });
+                Array.prototype.forEach.call(steps, function (li) { io.observe(li); });
+              }
+            })();
+          </script>
           <p class="tech-body reveal">
             No scintillator and no visible-light conversion step is required. Because the charge is collected by electrodes at the pixel where the photon was absorbed, direct conversion helps preserve a more localized signal path from photon to pixel — supporting sharpness, contrast and detail, depending on detector material, geometry and system design.
           </p>
