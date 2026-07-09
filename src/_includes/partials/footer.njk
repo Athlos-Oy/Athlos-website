@@ -13,7 +13,7 @@
           </div>
           <p class="footer-tagline">{{ site.legalName }}<br>{{ site.address.street }}<br>{{ site.address.postalDisplay }} {{ site.address.city }}<br>{{ "footer.country" | t }}<br><br>{{ "footer.businessIdLabel" | t }} {{ site.businessId }} &nbsp;&middot;&nbsp; {{ "footer.vatLabel" | t }} {{ site.vat }}</p>
         </div>
-        <nav class="footer-nav"{% if footerNavAriaLabel %} aria-label="{{ "footer.aria.nav" | t }}"{% endif %}>
+        <nav class="footer-nav" aria-label="{{ "footer.aria.nav" | t }}">
           <div class="footer-col">
             <span class="footer-col-label">{{ "footer.columns.products" | t }}</span>
             <a href="{{ "/products/wios.html" | localeUrl(lang) }}" class="footer-link">{{ "footer.links.dcAir" | t | safe }}</a>

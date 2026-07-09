@@ -156,7 +156,7 @@
     }
 
     // language_switch — locale switcher links.
-    if (a.classList.contains('lang-switcher-link')) {
+    if (a.classList.contains('lang-switcher-item')) {
       if (!a.classList.contains('active')) {
         push({ event: 'language_switch', language: a.getAttribute('hreflang') || '' });
       }

@@ -20,9 +20,9 @@
     <div class="nav-inner">
       <a href="{{ "/index.html" | localeUrl(lang) }}" class="nav-logo" aria-label="{{ "nav.aria.homeLogo" | t }}">
         <img src="/images/athlos-logo.webp" width="512" height="341" alt="Athlos" class="nav-logo-png">
-        <span class="nav-logo-text"{% if lang == "en" and not nav.prefix %} aria-hidden="true"{% endif %}>ATHLOS</span>
+        <span class="nav-logo-text" aria-hidden="true">ATHLOS</span>
       </a>
-      <nav class="nav-links"{% if lang == "en" and not nav.prefix %} aria-label="{{ "nav.aria.main" | t }}"{% endif %}>
+      <nav class="nav-links" aria-label="{{ "nav.aria.main" | t }}">
         <a href="{{ "/index.html" | localeUrl(lang) }}" class="nav-link">{{ "nav.home" | t }}</a>
         <div class="nav-item has-dropdown">
           <a href="{{ "/products/index.html" | localeUrl(lang) }}" class="nav-link">{{ "nav.products" | t }} <svg class="nav-link-chevron" viewBox="0 0 10 10" fill="none" width="10" height="10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>

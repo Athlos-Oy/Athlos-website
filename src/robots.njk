@@ -19,6 +19,10 @@ Allow: /
 # (already covered by the wildcard above; listed here for clarity)
 {%- for bot in crawlers %}
 User-agent: {{ bot }}
+{%- if not env.isProduction %}
+Disallow: /
+{%- else %}
 Allow: /
+{%- endif %}
 {% endfor %}
 Sitemap: {{ site.url }}/sitemap.xml
