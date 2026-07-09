@@ -89,6 +89,7 @@
       scene.start();
     } catch (err) {
       root.classList.remove('dce-booting');
+      root.classList.remove('dce-live');
       root.classList.add('dce-static');
     }
   }
@@ -97,7 +98,6 @@
      SCENE
   =================================================== */
   function buildScene(THREE) {
-    const LOOP = 18.3;
     const DPR_CAP = window.matchMedia('(max-width: 768px)').matches ? 1.3 : 1.75;
 
     const COL = {
@@ -568,6 +568,7 @@
       [17.6, 0.975],             // long hold on the comparison
       [18.3, 1.0]                // fade through the seam
     ];
+    const LOOP = TIME_MAP[TIME_MAP.length - 1][0];
     function storyU(t) {
       for (let i = 0; i < TIME_MAP.length - 1; i++) {
         const a = TIME_MAP[i], b = TIME_MAP[i + 1];
@@ -631,7 +632,7 @@
     ];
     const _v = new THREE.Vector3();
     function updateTags(u) {
-      const W = root.clientWidth, H = root.clientHeight;
+      const W = vpW, H = vpH;
       for (let i = 0; i < TAGS.length; i++) {
         const t = TAGS[i], el = tagEls[t.key];
         if (!el) continue;
@@ -794,6 +795,17 @@
     /* ---- Render loop --------------------------------------------- */
     let running = false, rafId = 0, tPrev = 0, clock = 0, phaseT = 0;
     let px = 0, py = 0;
+    let vpW = 1, vpH = 1;
+
+    function applyPanel(pn, rev, vis) {
+      const f = Math.max(rev, 0.001);
+      pn.mesh.scale.y = f;
+      pn.tex.repeat.y = f;
+      pn.tex.offset.y = 1 - f;
+      pn.mesh.material.opacity = 0.97 * vis;
+      pn.bar.position.y = 3.15 - 2.2 * rev;
+      pn.bar.material.opacity = (rev > 0.02 && rev < 0.99) ? 0.9 * vis : 0;
+    }
 
     function frame(now) {
       if (!running) return;
@@ -852,20 +864,8 @@
 
       /* --- pull-out climax: SEQUENTIAL scan-line reveal — indirect
              graph first, alone; then the direct graph beside it. --- */
-      const panels = [
-        { pn: panelI, rev: smooth(clamp01((u - 0.798) / 0.06)), vis: windowed(u, 0.795, 0.995, 0.02) },
-        { pn: panelD, rev: smooth(clamp01((u - 0.878) / 0.06)), vis: windowed(u, 0.875, 0.995, 0.02) }
-      ];
-      for (let i = 0; i < 2; i++) {
-        const pn = panels[i].pn, rev = panels[i].rev;
-        const f = Math.max(rev, 0.001);
-        pn.mesh.scale.y = f;
-        pn.tex.repeat.y = f;
-        pn.tex.offset.y = 1 - f;
-        pn.mesh.material.opacity = 0.97 * panels[i].vis;
-        pn.bar.position.y = 3.15 - 2.2 * rev;
-        pn.bar.material.opacity = (rev > 0.02 && rev < 0.99) ? 0.9 * panels[i].vis : 0;
-      }
+      applyPanel(panelI, smooth(clamp01((u - 0.798) / 0.06)), windowed(u, 0.795, 0.995, 0.02));
+      applyPanel(panelD, smooth(clamp01((u - 0.878) / 0.06)), windowed(u, 0.875, 0.995, 0.02));
       grid.material.opacity = 0.16 - 0.08 * clamp01((u - 0.25) / 0.2) + 0.08 * clamp01((u - 0.79) / 0.08);
 
       renderer.render(scene3, camera);
@@ -876,6 +876,7 @@
 
     function resize() {
       const w = root.clientWidth || 1, h = root.clientHeight || 1;
+      vpW = w; vpH = h;
       renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, DPR_CAP));
       renderer.setSize(w, h, false);
       camera.aspect = w / h;
@@ -896,6 +897,13 @@
 
     function play() { if (running) return; running = true; tPrev = 0; rafId = requestAnimationFrame(frame); }
     function pause() { if (!running) return; running = false; cancelAnimationFrame(rafId); }
+
+    canvas.addEventListener('webglcontextlost', (e) => {
+      e.preventDefault();
+      pause();
+      root.classList.remove('dce-live');
+      root.classList.add('dce-static');
+    });
 
     if ('IntersectionObserver' in window) {
       const vio = new IntersectionObserver((entries) => {
