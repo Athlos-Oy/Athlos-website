@@ -64,9 +64,10 @@
   var current = -1;
   var completedTracked = false;
 
-  function withDownloadParam(url) {
-    if (!url) return '#';
-    return url + (url.indexOf('?') === -1 ? '?' : '&') + 'download=1';
+  // Download URLs are served with Content-Disposition: attachment
+  // (set at upload time), so plain hrefs trigger a save dialog.
+  function downloadHref(url) {
+    return url || '#';
   }
 
   function loadVideo(index) {
@@ -86,8 +87,8 @@
     catEl.textContent = catLabel(v.category);
     durEl.textContent = v.duration || '';
     noteEl.hidden = !v.positioningOnly;
-    dlCap.href = withDownloadParam(v.downloadCaptionedUrl);
-    dlNoCap.href = withDownloadParam(v.downloadNoCaptionsUrl);
+    dlCap.href = downloadHref(v.downloadCaptionedUrl);
+    dlNoCap.href = downloadHref(v.downloadNoCaptionsUrl);
     dlCap.setAttribute('data-tc-title', v.title);
     dlNoCap.setAttribute('data-tc-title', v.title);
     prevBtn.disabled = index === 0;

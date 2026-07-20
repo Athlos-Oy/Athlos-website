@@ -95,11 +95,18 @@ const VIDEOS = [
 ];
 
 // ZIP packages + documents (uploaded to the same media store).
+// docs/ blobs are served inline (for in-browser viewing + #page= links);
+// docs/download/ holds identical copies uploaded with
+// Content-Disposition: attachment so the Download buttons save the file.
+// MP4s and ZIPs are all uploaded with attachment disposition — this does
+// not affect <video> playback, only anchor-click downloads.
 const PACKAGES = {
   zipCaptioned: { file: "zip/DC-Air_Clinical_Training_EN-Captions_2026-07.zip", size: "367 MB" },
   zipNoCaptions: { file: "zip/DC-Air_Clinical_Training_No-Captions_2026-07.zip", size: "367 MB" },
   guidePdf: { file: "docs/DC-Air_User_QA_Troubleshooting_Guide_2026-1.pdf", size: "4.2 MB" },
   ifuPdf: { file: "docs/DC-Air_Instructions_for_Use_Rev18.pdf", size: "1.1 MB" },
+  guidePdfDownload: { file: "docs/download/DC-Air_User_QA_Troubleshooting_Guide_2026-1.pdf" },
+  ifuPdfDownload: { file: "docs/download/DC-Air_Instructions_for_Use_Rev18.pdf" },
 };
 
 function mediaUrl(path) {
@@ -119,6 +126,8 @@ export default {
   zipNoCaptionsUrl: mediaUrl(PACKAGES.zipNoCaptions.file),
   guidePdfUrl: mediaUrl(PACKAGES.guidePdf.file),
   ifuPdfUrl: mediaUrl(PACKAGES.ifuPdf.file),
+  guidePdfDownloadUrl: mediaUrl(PACKAGES.guidePdfDownload.file),
+  ifuPdfDownloadUrl: mediaUrl(PACKAGES.ifuPdfDownload.file),
   sizes: PACKAGES,
   totalCount: VIDEOS.length,
   totalDuration: "18 min",

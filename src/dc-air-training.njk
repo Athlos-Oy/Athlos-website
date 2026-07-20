@@ -236,7 +236,7 @@ eleventyExcludeFromCollections: true
             </div>
             <div class="tc-doc-actions">
               <a href="{{ trainingVideos.guidePdfUrl }}" target="_blank" rel="noopener" class="btn btn-secondary" data-tc-event="guide_open" data-tc-section="documents">View Guide</a>
-              <a href="{{ trainingVideos.guidePdfUrl }}{{ '&' if '?' in trainingVideos.guidePdfUrl else '?' }}download=1" class="btn btn-outline tc-btn-outline" data-tc-event="download" data-tc-type="guide_pdf">Download PDF</a>
+              <a href="{{ trainingVideos.guidePdfDownloadUrl }}" class="btn btn-outline tc-btn-outline" data-tc-event="download" data-tc-type="guide_pdf">Download PDF</a>
             </div>
           </article>
 
@@ -251,7 +251,7 @@ eleventyExcludeFromCollections: true
             </div>
             <div class="tc-doc-actions">
               <a href="{{ trainingVideos.ifuPdfUrl }}" target="_blank" rel="noopener" class="btn btn-secondary" data-tc-event="ifu_open">View Instructions</a>
-              <a href="{{ trainingVideos.ifuPdfUrl }}{{ '&' if '?' in trainingVideos.ifuPdfUrl else '?' }}download=1" class="btn btn-outline tc-btn-outline" data-tc-event="download" data-tc-type="ifu_pdf">Download PDF</a>
+              <a href="{{ trainingVideos.ifuPdfDownloadUrl }}" class="btn btn-outline tc-btn-outline" data-tc-event="download" data-tc-type="ifu_pdf">Download PDF</a>
             </div>
           </article>
 
@@ -265,8 +265,8 @@ eleventyExcludeFromCollections: true
               <p class="tc-doc-desc">The complete holder-positioning library in one download — available with or without English captions.</p>
             </div>
             <div class="tc-doc-actions tc-doc-actions-stack">
-              <a href="{{ trainingVideos.zipCaptionedUrl }}{{ '&' if '?' in trainingVideos.zipCaptionedUrl else '?' }}download=1" class="btn btn-secondary" data-tc-event="download" data-tc-type="zip_captioned">Download all — English captions{% if trainingVideos.sizes.zipCaptioned.size %} <span class="tc-size">({{ trainingVideos.sizes.zipCaptioned.size }})</span>{% endif %}</a>
-              <a href="{{ trainingVideos.zipNoCaptionsUrl }}{{ '&' if '?' in trainingVideos.zipNoCaptionsUrl else '?' }}download=1" class="btn btn-outline tc-btn-outline" data-tc-event="download" data-tc-type="zip_no_captions">Download all — no captions{% if trainingVideos.sizes.zipNoCaptions.size %} <span class="tc-size">({{ trainingVideos.sizes.zipNoCaptions.size }})</span>{% endif %}</a>
+              <a href="{{ trainingVideos.zipCaptionedUrl }}" class="btn btn-secondary" data-tc-event="download" data-tc-type="zip_captioned">Download all — English captions{% if trainingVideos.sizes.zipCaptioned.size %} <span class="tc-size">({{ trainingVideos.sizes.zipCaptioned.size }})</span>{% endif %}</a>
+              <a href="{{ trainingVideos.zipNoCaptionsUrl }}" class="btn btn-outline tc-btn-outline" data-tc-event="download" data-tc-type="zip_no_captions">Download all — no captions{% if trainingVideos.sizes.zipNoCaptions.size %} <span class="tc-size">({{ trainingVideos.sizes.zipNoCaptions.size }})</span>{% endif %}</a>
             </div>
           </article>
 
