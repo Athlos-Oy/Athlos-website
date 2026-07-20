@@ -96,10 +96,10 @@ const VIDEOS = [
 
 // ZIP packages + documents (uploaded to the same media store).
 const PACKAGES = {
-  zipCaptioned: { file: "zip/DC-Air_Clinical_Training_EN-Captions_2026-07.zip", size: "" },
-  zipNoCaptions: { file: "zip/DC-Air_Clinical_Training_No-Captions_2026-07.zip", size: "" },
-  guidePdf: { file: "docs/DC-Air_User_QA_Troubleshooting_Guide_2026-1.pdf", size: "" },
-  ifuPdf: { file: "docs/DC-Air_Instructions_for_Use_Rev18.pdf", size: "" },
+  zipCaptioned: { file: "zip/DC-Air_Clinical_Training_EN-Captions_2026-07.zip", size: "367 MB" },
+  zipNoCaptions: { file: "zip/DC-Air_Clinical_Training_No-Captions_2026-07.zip", size: "367 MB" },
+  guidePdf: { file: "docs/DC-Air_User_QA_Troubleshooting_Guide_2026-1.pdf", size: "4.2 MB" },
+  ifuPdf: { file: "docs/DC-Air_Instructions_for_Use_Rev18.pdf", size: "1.1 MB" },
 };
 
 function mediaUrl(path) {

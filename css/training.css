@@ -54,11 +54,21 @@
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
 }
 
-.tc-login-logo img {
-  width: 108px;
-  height: auto;
-  display: block;
-  margin-bottom: 1.75rem;
+.tc-login-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  margin-bottom: 1.6rem;
+}
+
+.tc-login-logo img { width: 34px; height: auto; }
+
+.tc-logo-word {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--white);
 }
 
 .tc-login-eyebrow {
@@ -216,7 +226,9 @@
   flex-shrink: 0;
 }
 
-.tc-nav-logo img { width: 84px; height: auto; }
+.tc-nav-logo img { width: 26px; height: auto; }
+
+.tc-nav-logo .tc-logo-word { font-size: 0.92rem; }
 
 .tc-nav-logo-tag {
   font-size: 11px;
