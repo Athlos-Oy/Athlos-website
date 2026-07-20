@@ -55,21 +55,12 @@
 }
 
 .tc-login-logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
+  display: inline-block;
   text-decoration: none;
   margin-bottom: 1.6rem;
 }
 
-.tc-login-logo img { width: 34px; height: auto; }
-
-.tc-logo-word {
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  color: var(--white);
-}
+.tc-login-logo img { height: 34px; width: auto; display: block; }
 
 .tc-login-eyebrow {
   font-size: 11px;
@@ -226,9 +217,7 @@
   flex-shrink: 0;
 }
 
-.tc-nav-logo img { width: 30px; height: auto; margin-right: 0.5rem; }
-
-.tc-nav-logo .tc-logo-word { font-size: 0.92rem; letter-spacing: 0.02em; }
+.tc-nav-logo img { height: 30px; width: auto; display: block; }
 
 .tc-nav-logo-tag {
   font-size: 11px;
