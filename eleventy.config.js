@@ -112,6 +112,11 @@ export default async function (eleventyConfig) {
   // Stays as a passthrough copy permanently, no .njk template.
   eleventyConfig.addPassthroughCopy("cefla.html");
 
+  // DC-Air Training Center poster thumbnails. Copied under
+  // /dc-air-training/assets/ so middleware.js's /dc-air-training/:path*
+  // matcher protects them alongside the page itself.
+  eleventyConfig.addPassthroughCopy({ "training-assets": "dc-air-training/assets" });
+
 
   // robots.txt, sitemap.xml, llms.txt, llms-full.txt are now generated
   // by src/robots.njk, src/sitemap.njk, src/llms.njk, src/llms-full.njk
