@@ -226,9 +226,9 @@
   flex-shrink: 0;
 }
 
-.tc-nav-logo img { width: 26px; height: auto; }
+.tc-nav-logo img { width: 30px; height: auto; margin-right: 0.5rem; }
 
-.tc-nav-logo .tc-logo-word { font-size: 0.92rem; }
+.tc-nav-logo .tc-logo-word { font-size: 0.92rem; letter-spacing: 0.02em; }
 
 .tc-nav-logo-tag {
   font-size: 11px;
