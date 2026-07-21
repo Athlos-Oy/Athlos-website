@@ -91,8 +91,25 @@ const VIDEOS = [
     title: "Occlusal Holder Positioning",
     description: "How to mount and position the occlusal holder.",
     category: "special", duration: "0:54", positioningOnly: true,
+    // The supplied source file duplicates video 10's footage (verified
+    // frame-by-frame 2026-07-20). Hidden from the page and excluded from
+    // the ZIPs until FTG delivers the real occlusal export — then delete
+    // this flag, upload the files, rebuild the ZIPs.
+    status: "pending-replacement",
   },
 ];
+
+// Only videos without a pending status are published.
+const ACTIVE = VIDEOS.filter((v) => !v.status);
+
+// "17 min" style total from the individual mm:ss durations.
+function totalMinutes(list) {
+  const secs = list.reduce((sum, v) => {
+    const [m, s] = v.duration.split(":").map(Number);
+    return sum + m * 60 + s;
+  }, 0);
+  return `${Math.round(secs / 60)} min`;
+}
 
 // ZIP packages + documents (uploaded to the same media store).
 // docs/ blobs are served inline (for in-browser viewing + #page= links);
@@ -101,8 +118,8 @@ const VIDEOS = [
 // MP4s and ZIPs are all uploaded with attachment disposition — this does
 // not affect <video> playback, only anchor-click downloads.
 const PACKAGES = {
-  zipCaptioned: { file: "zip/DC-Air_Clinical_Training_EN-Captions_2026-07.zip", size: "367 MB" },
-  zipNoCaptions: { file: "zip/DC-Air_Clinical_Training_No-Captions_2026-07.zip", size: "367 MB" },
+  zipCaptioned: { file: "zip/DC-Air_Clinical_Training_EN-Captions_2026-07.zip", size: "349 MB" },
+  zipNoCaptions: { file: "zip/DC-Air_Clinical_Training_No-Captions_2026-07.zip", size: "348 MB" },
   guidePdf: { file: "docs/DC-Air_User_QA_Troubleshooting_Guide_2026-1.pdf", size: "4.2 MB" },
   ifuPdf: { file: "docs/DC-Air_Instructions_for_Use_Rev18.pdf", size: "1.1 MB" },
   guidePdfDownload: { file: "docs/download/DC-Air_User_QA_Troubleshooting_Guide_2026-1.pdf" },
@@ -113,9 +130,18 @@ function mediaUrl(path) {
   return base ? `${base}/${path}${query}` : "";
 }
 
+// Document metadata rendered on the cards — single source of truth so a
+// revision bump is a one-line change here (ISO 13485: revision must be
+// visible to the user).
+const DOCUMENTS = {
+  guide: { pages: 13, version: "Version 2026.1" },
+  ifu: { pages: 40, revision: "0000679 Rev. 18" },
+};
+
 export default {
   categories: CATEGORIES,
-  videos: VIDEOS.map((v) => ({
+  documents: DOCUMENTS,
+  videos: ACTIVE.map((v) => ({
     ...v,
     watchUrl: mediaUrl(`video/captioned/${v.stem}_EN-Captions.mp4`),
     downloadCaptionedUrl: mediaUrl(`video/captioned/${v.stem}_EN-Captions.mp4`),
@@ -129,6 +155,6 @@ export default {
   guidePdfDownloadUrl: mediaUrl(PACKAGES.guidePdfDownload.file),
   ifuPdfDownloadUrl: mediaUrl(PACKAGES.ifuPdfDownload.file),
   sizes: PACKAGES,
-  totalCount: VIDEOS.length,
-  totalDuration: "18 min",
+  totalCount: ACTIVE.length,
+  totalDuration: totalMinutes(ACTIVE),
 };

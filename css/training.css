@@ -777,6 +777,14 @@
 
 .tc-btn-outline { border-color: var(--color-border-mid); color: var(--charcoal); }
 
+.tc-doc-revision-note {
+  font-size: var(--text-xs);
+  color: var(--gray-steel);
+  line-height: 1.6;
+  margin-top: 1.75rem;
+  max-width: 640px;
+}
+
 .tc-size { font-weight: 400; opacity: 0.75; }
 
 /* =====================================================

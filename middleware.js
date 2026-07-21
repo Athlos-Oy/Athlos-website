@@ -40,13 +40,17 @@ async function hasValidSession(request, secret) {
   const match = cookieHeader.match(new RegExp(`(?:^|;\\s*)${COOKIE_NAME}=([^;]+)`));
   if (!match) return false;
   const value = decodeURIComponent(match[1]);
-  const dot = value.lastIndexOf('.');
-  if (dot === -1) return false;
-  const exp = value.slice(0, dot);
-  const sig = value.slice(dot + 1);
+  // Cookie format: "<exp>.<pwv>.<hmac(exp.pwv)>". pwv is the first 8 hex
+  // chars of TRAINING_PASSWORD_HASH at login time — so rotating the
+  // password invalidates every outstanding session, not just new logins.
+  const parts = value.split('.');
+  if (parts.length !== 3) return false;
+  const [exp, pwv, sig] = parts;
   if (!/^\d+$/.test(exp)) return false;
   if (Number(exp) * 1000 < Date.now()) return false;
-  const expected = await hmacHex(secret, exp);
+  const currentPwv = (process.env.TRAINING_PASSWORD_HASH || '').slice(0, 8);
+  if (!currentPwv || !safeEqual(pwv, currentPwv)) return false;
+  const expected = await hmacHex(secret, `${exp}.${pwv}`);
   return safeEqual(sig, expected);
 }
 

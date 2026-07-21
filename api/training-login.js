@@ -59,8 +59,14 @@ export default async function handler(req, res) {
     return res.status(401).json({ ok: false, error: 'Incorrect password. Please check it and try again.' });
   }
 
+  // pwv (password version) = first 8 hex chars of the current password
+  // hash, baked into the signed payload. Rotating the password in Vercel
+  // therefore invalidates every existing session cookie immediately —
+  // middleware.js rejects cookies whose pwv doesn't match the live hash.
+  const pwv = passwordHash.slice(0, 8);
   const exp = String(Math.floor(Date.now() / 1000) + SESSION_DAYS * 24 * 60 * 60);
-  const cookieValue = `${exp}.${hmacHex(secret, exp)}`;
+  const payload = `${exp}.${pwv}`;
+  const cookieValue = `${payload}.${hmacHex(secret, payload)}`;
   res.setHeader(
     'Set-Cookie',
     `${COOKIE_NAME}=${encodeURIComponent(cookieValue)}; Path=/; Max-Age=${SESSION_DAYS * 24 * 60 * 60}; HttpOnly; Secure; SameSite=Lax`

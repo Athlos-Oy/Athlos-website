@@ -42,9 +42,35 @@ Set under Vercel → Project → Settings → Environment Variables, for
    ```
 
 2. Put the output into `TRAINING_PASSWORD_HASH` in Vercel and redeploy
-   (Deployments → ⋯ → Redeploy). Existing sessions stay valid until their
-   cookie expires; to force everyone to log in again, also change
-   `TRAINING_SESSION_SECRET` to a new random value.
+   (Deployments → ⋯ → Redeploy).
+
+Changing the password **logs every device out immediately** — the session
+cookie carries a password-version claim (`pwv`, first 8 chars of the
+hash) that the middleware checks on every request. If the password ever
+leaks, rotating it is a complete fix; no other action needed.
+
+## Emergency: "every download/video suddenly broken"
+
+Almost always the Azure SAS token (its signature or expiry). Fix:
+
+1. Azure Portal → storage account `athlosshare` → container
+   `dcair-training` → **Shared access tokens** → generate a new
+   **Read-only** token (prefer binding it to a **stored access policy**
+   so it can later be revoked/extended server-side without a redeploy).
+2. Vercel → Settings → Environment Variables → update
+   `TRAINING_MEDIA_QUERY` to `?` + the new token.
+3. Deployments → ⋯ → Redeploy.
+
+The build itself guards against this class of failure:
+`scripts/check-training-media.mjs` (run by the Vercel `buildCommand`)
+HEADs every media URL in the manifest and **fails the build** if any is
+unreachable — so a broken token/blob is caught at deploy time, never
+discovered by a customer. It skips silently when `TRAINING_MEDIA_BASE`
+is unset (pre-launch state).
+
+> **Who else can operate this?** Anyone with access to the Vercel
+> project + this file. If Evangelos is unavailable, this document plus
+> Vercel access is sufficient for every routine and emergency task.
 
 ## Video library
 
@@ -52,7 +78,20 @@ All video metadata lives in **one file**:
 [`src/_data/trainingVideos.js`](../src/_data/trainingVideos.js).
 Each entry has a number, slug, title, description, category
 (`anterior` / `posterior` / `bitewing` / `special`), duration and flags.
-The page, filters, player and download links all render from it.
+The page, filters, player, download links, video counts and total
+duration all render from it.
+
+A video with `status: "pending-replacement"` is **excluded from the
+page and should be excluded from the ZIPs** (video 11 "Occlusal Holder"
+is currently in this state — its supplied source file duplicated video
+10's footage; awaiting the correct export from FTG. To publish it:
+delete the `status` line, upload both MP4s, rebuild + re-upload the
+ZIPs, update ZIP sizes here).
+
+Document revisions (IFU revision, guide version) also live in this file
+(`DOCUMENTS`) and render on the cards — bump them there when a new
+revision ships, and replace the blob under a **new filename** so stale
+cached copies can't masquerade as current.
 
 File naming convention (media store):
 
