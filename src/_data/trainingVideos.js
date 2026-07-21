@@ -112,22 +112,26 @@ function totalMinutes(list) {
 }
 
 // ZIP packages + documents (uploaded to the same media store).
-// docs/ blobs are served inline (for in-browser viewing + #page= links);
-// docs/download/ holds identical copies uploaded with
-// Content-Disposition: attachment so the Download buttons save the file.
-// MP4s and ZIPs are all uploaded with attachment disposition — this does
-// not affect <video> playback, only anchor-click downloads.
+// Media store: Vercel Blob. "View" links use the plain blob URL (inline
+// rendering, PDF #page= anchors work); "Download" links append
+// ?download=1, which Vercel Blob translates to Content-Disposition:
+// attachment. Works identically if we ever switch back to Azure with a
+// SAS in TRAINING_MEDIA_QUERY (Azure ignores the extra parameter).
 const PACKAGES = {
   zipCaptioned: { file: "zip/DC-Air_Clinical_Training_EN-Captions_2026-07.zip", size: "349 MB" },
   zipNoCaptions: { file: "zip/DC-Air_Clinical_Training_No-Captions_2026-07.zip", size: "348 MB" },
   guidePdf: { file: "docs/DC-Air_User_QA_Troubleshooting_Guide_2026-1.pdf", size: "4.2 MB" },
   ifuPdf: { file: "docs/DC-Air_Instructions_for_Use_Rev18.pdf", size: "1.1 MB" },
-  guidePdfDownload: { file: "docs/download/DC-Air_User_QA_Troubleshooting_Guide_2026-1.pdf" },
-  ifuPdfDownload: { file: "docs/download/DC-Air_Instructions_for_Use_Rev18.pdf" },
 };
 
 function mediaUrl(path) {
   return base ? `${base}/${path}${query}` : "";
+}
+
+// Download variant — forces a save dialog instead of inline playback/view.
+function downloadUrl(path) {
+  const u = mediaUrl(path);
+  return u ? `${u}${u.includes("?") ? "&" : "?"}download=1` : "";
 }
 
 // Document metadata rendered on the cards — single source of truth so a
@@ -144,16 +148,16 @@ export default {
   videos: ACTIVE.map((v) => ({
     ...v,
     watchUrl: mediaUrl(`video/captioned/${v.stem}_EN-Captions.mp4`),
-    downloadCaptionedUrl: mediaUrl(`video/captioned/${v.stem}_EN-Captions.mp4`),
-    downloadNoCaptionsUrl: mediaUrl(`video/no-captions/${v.stem}_No-Captions.mp4`),
+    downloadCaptionedUrl: downloadUrl(`video/captioned/${v.stem}_EN-Captions.mp4`),
+    downloadNoCaptionsUrl: downloadUrl(`video/no-captions/${v.stem}_No-Captions.mp4`),
     poster: `/dc-air-training/assets/posters/${v.stem}_Poster.webp`,
   })),
-  zipCaptionedUrl: mediaUrl(PACKAGES.zipCaptioned.file),
-  zipNoCaptionsUrl: mediaUrl(PACKAGES.zipNoCaptions.file),
+  zipCaptionedUrl: downloadUrl(PACKAGES.zipCaptioned.file),
+  zipNoCaptionsUrl: downloadUrl(PACKAGES.zipNoCaptions.file),
   guidePdfUrl: mediaUrl(PACKAGES.guidePdf.file),
   ifuPdfUrl: mediaUrl(PACKAGES.ifuPdf.file),
-  guidePdfDownloadUrl: mediaUrl(PACKAGES.guidePdfDownload.file),
-  ifuPdfDownloadUrl: mediaUrl(PACKAGES.ifuPdfDownload.file),
+  guidePdfDownloadUrl: downloadUrl(PACKAGES.guidePdf.file),
+  ifuPdfDownloadUrl: downloadUrl(PACKAGES.ifuPdf.file),
   sizes: PACKAGES,
   totalCount: ACTIVE.length,
   totalDuration: totalMinutes(ACTIVE),
