@@ -180,19 +180,19 @@ eleventyExcludeFromCollections: true
       <div class="container">
         <p class="section-eyebrow">Quick Support</p>
         <h2 class="section-headline tc-headline">Solve it chairside</h2>
-        <p class="tc-section-intro">Fast answers from the DC-Air<sup>&reg;</sup> User Q&amp;A and Troubleshooting Guide. Each card opens the guide at the relevant section.</p>
+        <p class="tc-section-intro">Fast answers from the DC-Air<sup>&reg;</sup> User Q&amp;A and Troubleshooting Guide. Each card opens a quick summary, with a link to the full guide.</p>
 
         <div class="tc-support-grid">
           {%- set supportCards = [
-            { title: "Correct Installation", desc: "Connection order, supported setups and the Device Manager check.", page: 3 },
-            { title: "Daily Sensor Workflow", desc: "From dock to exposure to re-docking, step by step.", page: 4 },
-            { title: "Battery & LED Behaviour", desc: "Charging protocol, LED reference and the battery-level table.", page: 5 },
-            { title: "BLE Connection & Dock Placement", desc: "Normal behaviour, placement and automatic reconnection.", page: 6 },
-            { title: "Image Pending & Download Last Image", desc: "Onboard memory (XRAM) and recovering the last image.", page: 7 },
-            { title: "Troubleshooting Q&A", desc: "Problem-by-problem reference — causes, fixes, when to contact support.", page: 8 }
+            { key: "install", title: "Correct Installation", desc: "Connection order, supported setups and the Device Manager check.", page: 3 },
+            { key: "workflow", title: "Daily Sensor Workflow", desc: "From dock to exposure to re-docking, step by step.", page: 4 },
+            { key: "battery", title: "Battery & LED Behaviour", desc: "Charging protocol, LED reference and the battery-level table.", page: 5 },
+            { key: "ble", title: "BLE Connection & Dock Placement", desc: "Normal behaviour, placement and automatic reconnection.", page: 6 },
+            { key: "xram", title: "Image Pending & Download Last Image", desc: "Onboard memory (XRAM) and recovering the last image.", page: 7 },
+            { key: "qa", title: "Troubleshooting Q&A", desc: "Problem-by-problem reference — causes, fixes, when to contact support.", page: 8 }
           ] %}
           {%- for card in supportCards %}
-          <a class="tc-support-card" href="{{ trainingVideos.guidePdfUrl }}#page={{ card.page }}" target="_blank" rel="noopener" data-tc-event="guide_open" data-tc-section="{{ card.title }}">
+          <article class="tc-support-card" data-guide-card="{{ card.key }}" data-guide-title="{{ card.title }}" data-guide-page="{{ card.page }}">
             <span class="tc-support-icon" aria-hidden="true">
               {%- if loop.index == 1 %}
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
@@ -210,8 +210,8 @@ eleventyExcludeFromCollections: true
             </span>
             <h3 class="tc-support-title">{{ card.title }}</h3>
             <p class="tc-support-desc">{{ card.desc }}</p>
-            <span class="tc-support-link">View in guide <span class="tc-support-page">p. {{ card.page }}</span></span>
-          </a>
+            <button type="button" class="tc-support-open" data-guide="{{ card.key }}">View summary <span class="tc-support-page">p. {{ card.page }}</span></button>
+          </article>
           {%- endfor %}
         </div>
       </div>
@@ -354,6 +354,14 @@ eleventyExcludeFromCollections: true
         </button>
         <div class="tc-player-video-wrap">
           <video id="tcPlayerVideo" controls playsinline preload="metadata"></video>
+          <div class="tc-player-spinner" id="tcSpinner" hidden aria-hidden="true"><span></span></div>
+          <div class="tc-player-upnext" id="tcUpnext" hidden>
+            <button type="button" id="tcUpnextBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              <span>Up next: <strong id="tcUpnextTitle"></strong></span>
+            </button>
+          </div>
+          <p class="tc-player-unavailable" id="tcUnavailable" hidden>Video streaming will be available here soon.</p>
         </div>
         <button type="button" class="tc-player-nav tc-player-next" id="tcPlayerNext" aria-label="Next video">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
@@ -384,6 +392,127 @@ eleventyExcludeFromCollections: true
       <div class="tc-yt-frame" id="tcYtFrame"></div>
     </div>
   </dialog>
+
+  <!-- QUICK SUPPORT SUMMARY MODAL -->
+  {#- Summary text is taken verbatim (condensed, not reworded) from the
+      DC-Air User Q&A and Troubleshooting Guide v2026.1. The PDF remains
+      the authoritative reference — every panel links to it. -#}
+  <dialog class="tc-guide" id="tcGuide" aria-labelledby="tcGuideTitle">
+    <div class="tc-guide-inner">
+      <button type="button" class="tc-player-close" id="tcGuideClose" aria-label="Close summary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <p class="tc-guide-eyebrow">Quick Support</p>
+      <h2 class="tc-guide-title" id="tcGuideTitle"></h2>
+      <div class="tc-guide-body" id="tcGuideBody"></div>
+      <div class="tc-guide-foot">
+        <p class="tc-guide-note">Summary only — the User Q&amp;A and Troubleshooting Guide is the authoritative reference.</p>
+        <a href="#" target="_blank" rel="noopener" class="btn btn-secondary" id="tcGuidePdf" data-tc-event="guide_open">Open full guide <span class="tc-support-page" id="tcGuidePdfPage"></span></a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Hidden guide summary contents (cloned into the modal on open) -->
+  <div id="tcGuideContents" hidden data-pdf-base="{{ trainingVideos.guidePdfUrl }}">
+    <section data-guide-content="install">
+      <ol class="tc-guide-steps">
+        <li><strong>Fit the antenna.</strong> Screw the antenna firmly onto the docking station.</li>
+        <li><strong>Confirm the PC.</strong> The PC must run Windows — other operating systems are not supported. Low-power Pentium or Celeron processors are not supported.</li>
+        <li><strong>Connect the dock.</strong> Use the supplied USB-C to USB-A cable to connect the dock directly to a free USB port on the PC.</li>
+        <li><strong>Dock the sensor.</strong> Confirm the dock LED is blue, and that both the sensor and the dock appear in Windows Device Manager.</li>
+        <li><strong>Launch &amp; check.</strong> Start TWAIN and check the battery status. If the status is not &ldquo;Ready&rdquo;, let the DC-Air charge for at least 1 hour, then continue.</li>
+      </ol>
+      <p class="tc-guide-callout"><strong>Order matters.</strong> TWAIN is launched <em>after</em> the DC-Air has been docked, not before.</p>
+      <p class="tc-guide-warn"><strong>Not supported:</strong> virtual connections, parallel machines, tablets, USB extensions / hubs, and cables longer than 2&nbsp;m. Connect the dock straight into a PC USB port only.</p>
+    </section>
+
+    <section data-guide-content="workflow">
+      <h3 class="tc-guide-sub">Prepare &amp; position</h3>
+      <ol class="tc-guide-steps">
+        <li><strong>Undock and wait</strong> 3 seconds before using the sensor.</li>
+        <li><strong>Check the LEDs.</strong> A double green flash on the sensor means BLE is connected; the dock LED must be steady blue.</li>
+        <li><strong>New sheath</strong> — a fresh protective sheath for every patient.</li>
+        <li><strong>Mount on the holder.</strong> Choose the correct holder, mount the DC-Air, attach the stick and alignment ring.</li>
+        <li><strong>Position gently</strong> in the mouth.</li>
+      </ol>
+      <h3 class="tc-guide-sub">Expose &amp; finish</h3>
+      <ol class="tc-guide-steps">
+        <li><strong>Align the cone</strong> through the alignment ring until it almost touches the bite block, keeping the cone axis parallel — no cone-cut.</li>
+        <li><strong>Expose &amp; hold out.</strong> Shoot, then hold the sensor outside the mouth until transfer is complete (about 6 seconds).</li>
+        <li><strong>Reposition and repeat</strong> as needed.</li>
+        <li><strong>Dock.</strong> Always dock the DC-Air after use and between patients.</li>
+      </ol>
+      <p class="tc-guide-warn"><strong>Never</strong> re-use a sheath between patients, and never use the sensor without a sheath inside the patient&rsquo;s mouth.</p>
+    </section>
+
+    <section data-guide-content="battery">
+      <h3 class="tc-guide-sub">LED quick reference</h3>
+      <ul class="tc-guide-list">
+        <li><strong>Sensor &middot; double green flash</strong> — BLE connected, ready to use (just undocked).</li>
+        <li><strong>Sensor &middot; steady yellow</strong> — error, almost always a depleted or empty battery. Dock and charge before continuing.</li>
+        <li><strong>Sensor &middot; off</strong> — asleep or switched off. Dock to wake / charge.</li>
+        <li><strong>Dock &middot; steady blue</strong> — dock powered and charging.</li>
+      </ul>
+      <h3 class="tc-guide-sub">Battery level in TWAIN</h3>
+      <ul class="tc-guide-list">
+        <li><strong>100&nbsp;%</strong> — fully charged. Normal use; dock between patients.</li>
+        <li><strong>75&nbsp;%</strong> — normal working level. A drop from 100&nbsp;% to 75&nbsp;% after one exposure is normal.</li>
+        <li><strong>50&nbsp;%</strong> — still ready for use; charge when convenient.</li>
+        <li><strong>10&nbsp;%</strong> — battery low. Dock and charge before continuing.</li>
+      </ul>
+      <p class="tc-guide-callout"><strong>Charging protocol:</strong> dock after every use and between patients. Leave the DC-Air docked overnight with the PC on, so the USB port stays powered.</p>
+    </section>
+
+    <section data-guide-content="ble">
+      <h3 class="tc-guide-sub">Normal BLE behaviour</h3>
+      <ul class="tc-guide-list">
+        <li>Transmission begins about 1 second after the trigger and completes in about 5&ndash;7 seconds.</li>
+        <li>Hold the sensor outside the mouth, in line of sight with the dock, during transfer.</li>
+        <li>If BLE drops, the dock automatically retries three times within 30 seconds — give it that time before intervening.</li>
+      </ul>
+      <h3 class="tc-guide-sub">Where to place the dock</h3>
+      <ul class="tc-guide-list">
+        <li><strong>Recommended:</strong> in front of the patient, or within &plusmn;45&deg;, with a clear line of sight to the sensor during transfer.</li>
+        <li><strong>Avoid:</strong> behind the patient or head/neck, and keeping the sensor inside a closed mouth during transfer.</li>
+      </ul>
+      <p class="tc-guide-callout"><strong>If BLE disconnects:</strong> screw the antenna on firmly &middot; dock and charge &ge;&nbsp;45 min if the battery is depleted &middot; reposition the dock in front / &plusmn;45&deg; &middot; wait for the 3 automatic reconnections; if it does not recover, restart TWAIN and reconnect the dock.</p>
+    </section>
+
+    <section data-guide-content="xram">
+      <ul class="tc-guide-list">
+        <li><strong>XRAM</strong> is onboard memory that safely keeps one image — the last one acquired. A new trigger replaces it; the image is lost only if the sensor switches off.</li>
+        <li><strong>Image Pending</strong> is raised when an image was acquired but not transferred or displayed. It tells you there is an image in XRAM — so you do not retake the X-ray unnecessarily.</li>
+      </ul>
+      <h3 class="tc-guide-sub">Use &ldquo;Download Last Image&rdquo; when&hellip;</h3>
+      <ul class="tc-guide-list">
+        <li>The Image Pending flag is active.</li>
+        <li>You shot X-rays but did not receive an image on screen.</li>
+        <li>You have just restarted frozen software — the image is still in XRAM.</li>
+      </ul>
+      <p class="tc-guide-warn"><strong>Do not retake.</strong> If no image appears, check Image Pending / Download Last Image before retaking. Retaking wastes a frame and exposes the patient to additional dose unnecessarily.</p>
+    </section>
+
+    <section data-guide-content="qa">
+      <p class="tc-guide-intro">The guide covers these problems one by one — each with causes, what to do, and when to contact support:</p>
+      <ul class="tc-guide-list tc-guide-list-2col">
+        <li><strong>A</strong> Noisy / grainy image</li>
+        <li><strong>B</strong> Line or other artifacts</li>
+        <li><strong>C</strong> BLE disconnected</li>
+        <li><strong>D</strong> BLE connected but no image transmitted</li>
+        <li><strong>E</strong> X-rays shot but no trigger</li>
+        <li><strong>F</strong> Docked during BLE transmission</li>
+        <li><strong>G</strong> Rapid docking / undocking</li>
+        <li><strong>H</strong> Rogue or self triggers</li>
+        <li><strong>I</strong> Front cover came off</li>
+        <li><strong>J</strong> Consistent black or white images</li>
+        <li><strong>K</strong> Dock not recognised in Device Manager</li>
+        <li><strong>L</strong> Docking-station broken tabs</li>
+        <li><strong>M</strong> Software / third-party imaging issues</li>
+        <li><strong>N</strong> Data corruption / lost synchronisation</li>
+      </ul>
+      <p class="tc-guide-callout">A precise <strong>date and time</strong> of the event is the single most useful thing you can provide to support.</p>
+    </section>
+  </div>
 
   <script>
     // Video metadata for the player (rendered from src/_data/trainingVideos.js).
