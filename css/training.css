@@ -1583,17 +1583,19 @@
   padding-left: 1.4rem;
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
-  color: var(--gray-steel);
-  font-size: var(--text-base);
-  line-height: 1.55;
+  gap: 0.55rem;
+  color: var(--color-text);
+  font-size: 1.02rem;
+  line-height: 1.6;
 }
+
+.tc-faq-steps strong { color: var(--color-text); }
 
 .tc-faq-steps li::marker { color: var(--cyan-deep); font-weight: 600; }
 
 .tc-faq-note {
   font-size: var(--text-sm);
-  color: var(--gray-steel);
+  color: var(--color-text);
   background: var(--off-white);
   border-left: 3px solid var(--cyan);
   border-radius: 0 var(--r-sm) var(--r-sm) 0;
