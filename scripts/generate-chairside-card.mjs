@@ -3,7 +3,7 @@ import QRCode from "qrcode";
 import { chromium } from "@playwright/test";
 import { readFileSync, writeFileSync } from "node:fs";
 
-const qrDataUri = await QRCode.toDataURL("https://athlos.fi/dc-air-training#k=AthDTrai2006", {
+const qrDataUri = await QRCode.toDataURL("https://athlos.fi/dc-air-training?k=AthDTrai2006", {
   errorCorrectionLevel: "M", margin: 1, width: 320,
   color: { dark: "#0d1620", light: "#ffffff" },
 });

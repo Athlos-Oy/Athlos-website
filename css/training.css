@@ -1911,6 +1911,7 @@
 }
 
 .tc-img-modal {
+  margin: auto;
   border: none;
   border-radius: var(--r-lg);
   padding: 0;

@@ -18,6 +18,11 @@ export const config = {
 
 const COOKIE_NAME = 'dcair_session';
 
+async function sha256Hex(message) {
+  const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(message));
+  return Array.from(new Uint8Array(digest)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
 async function hmacHex(secret, message) {
   const enc = new TextEncoder();
   const key = await crypto.subtle.importKey(
@@ -73,6 +78,35 @@ export default async function middleware(request) {
         'x-robots-tag': 'noindex, nofollow',
       },
     });
+  }
+
+  // QR-code sign-in: the printed chairside card links to
+  // /dc-air-training?k=<shared password>. If the key matches, issue the
+  // same signed session cookie as the login endpoint and redirect to the
+  // clean URL — the customer never sees the login screen. Mismatches get
+  // the same 400 ms delay as the login endpoint before falling through.
+  const qrKey = url.searchParams.get('k');
+  if (qrKey && (url.pathname === '/dc-air-training' || url.pathname === '/dc-air-training/')) {
+    const passwordHash = process.env.TRAINING_PASSWORD_HASH || '';
+    const keyHash = await sha256Hex(qrKey);
+    if (passwordHash && safeEqual(keyHash, passwordHash)) {
+      const exp = String(Math.floor(Date.now() / 1000) + 365 * 24 * 60 * 60);
+      const pwv = passwordHash.slice(0, 8);
+      const payload = `${exp}.${pwv}`;
+      const cookieValue = `${payload}.${await hmacHex(secret, payload)}`;
+      const clean = new URL(request.url);
+      clean.searchParams.delete('k');
+      return new Response(null, {
+        status: 303,
+        headers: {
+          location: clean.pathname + clean.search,
+          'set-cookie': `${COOKIE_NAME}=${encodeURIComponent(cookieValue)}; Path=/; Max-Age=${365 * 24 * 60 * 60}; HttpOnly; Secure; SameSite=Lax`,
+          'cache-control': 'no-store',
+          'x-robots-tag': 'noindex, nofollow',
+        },
+      });
+    }
+    await new Promise((r) => setTimeout(r, 400));
   }
 
   // No valid session. Serve the login screen for page navigations;
