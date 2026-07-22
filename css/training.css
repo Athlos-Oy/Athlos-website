@@ -1842,7 +1842,12 @@
 .tc-led-yellow-flash { background: #f4c430; animation: tcBlink 1s infinite; }
 .tc-led-yellow { background: #f4c430; box-shadow: 0 0 8px rgba(244, 196, 48, 0.6); }
 .tc-led-off { background: rgba(255, 255, 255, 0.12); }
-.tc-led-blue { background: #43a1d8; box-shadow: 0 0 8px rgba(67, 161, 216, 0.6); }
+.tc-led-blue { background: #43a1d8; animation: tcPulse 3s ease-in-out infinite; }
+
+@keyframes tcPulse {
+  0%, 100% { opacity: 0.55; box-shadow: 0 0 4px rgba(67, 161, 216, 0.3); }
+  50% { opacity: 1; box-shadow: 0 0 12px rgba(67, 161, 216, 0.8); }
+}
 
 @keyframes tcDoubleFlash {
   0%, 8% { opacity: 1; box-shadow: 0 0 8px rgba(63, 185, 96, 0.7); }
@@ -1857,7 +1862,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .tc-led-green-flash, .tc-led-yellow-flash { animation: none; }
+  .tc-led-green-flash, .tc-led-yellow-flash, .tc-led-blue { animation: none; }
 }
 
 /* ---- Sample radiograph gallery ------------------------------------------ */

@@ -89,9 +89,10 @@ eleventyExcludeFromCollections: true
             <a href="{{ trainingVideos.guidePdfUrl }}" target="_blank" rel="noopener" class="btn btn-outline tc-btn-outline-dark" data-tc-event="guide_open" data-tc-section="hero">Open Troubleshooting Guide</a>
           </div>
           <ul class="tc-hero-chips" aria-label="Training Center overview">
-            <li>{{ trainingVideos.totalCount }} clinical positioning videos</li>
-            <li>Approx. {{ trainingVideos.totalDuration }}</li>
-            <li>English captions available</li>
+            <li>{{ trainingVideos.totalCount }} positioning videos ({{ trainingVideos.totalDuration }})</li>
+            <li>{{ trainingFaq.faq | length }} instant answers &amp; search</li>
+            <li>Software integration demos</li>
+            <li>Guides &amp; printable chairside card</li>
             <li>Materials updated July 2026</li>
           </ul>
           <div class="tc-hero-awards" aria-label="Awards">
