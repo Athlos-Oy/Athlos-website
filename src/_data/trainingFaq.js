@@ -352,6 +352,21 @@ const FAQ = [
     source: { doc: "ifu", page: 37 },
   },
   {
+    id: "software-integrations",
+    category: "usage",
+    question: "Does DC-Air work with my imaging software?",
+    keywords:
+      "integration integrate compatible compatibility works with imaging software program bridge twain "
+      + "cadi dentrix ascend dexis dtx studio eaglesoft open dental oryx sota xdr xv capture "
+      + "romexis sidexis carestream vixwin apteryx curve mediadent cliniview scanora demo",
+    steps: [
+      "Yes — almost certainly. DC-Air connects through the standard <strong>TWAIN</strong> interface used by virtually all dental imaging software.",
+      "Short acquisition demo videos are available for the most common ones: CADI, Dentrix Ascend, Dexis 10, DTX Studio, Eaglesoft, Open Dental, Oryx Imaging, SOTA Image, XDR and XV Capture.",
+      "If your software is not on that list, it almost certainly still works — contact us and we will confirm it for your setup.",
+    ],
+    link: { href: "#integrations", label: "Watch the integration demo videos" },
+  },
+  {
     id: "installation",
     category: "usage",
     question: "How do I install the system for the first time?",

@@ -136,6 +136,9 @@ eleventyExcludeFromCollections: true
                 {% for step in item.steps %}<li>{{ step | safe }}</li>{% endfor %}
               </ol>
               {% if item.note %}<p class="tc-faq-note">{{ item.note | safe }}</p>{% endif %}
+              {% if item.link %}
+              <p class="tc-faq-src"><a href="{{ item.link.href }}" class="tc-faq-jump">{{ item.link.label }} &rarr;</a></p>
+              {% elif item.source %}
               <p class="tc-faq-src">Full instructions:
                 {% if item.source.doc == 'guide' %}
                 <a href="{{ trainingVideos.guidePdfUrl }}#page={{ item.source.page }}" target="_blank" rel="noopener" data-tc-event="guide_open" data-tc-section="faq-{{ item.id }}">Troubleshooting Guide, p.&nbsp;{{ item.source.page }}</a>
@@ -143,6 +146,7 @@ eleventyExcludeFromCollections: true
                 <a href="{{ trainingVideos.ifuPdfUrl }}#page={{ item.source.page }}" target="_blank" rel="noopener" data-tc-event="ifu_open" data-tc-section="faq-{{ item.id }}">Instructions for Use, p.&nbsp;{{ item.source.page }}</a>
                 {% endif %}
               </p>
+              {% endif %}
             </div>
           </details>
           {% endfor %}
@@ -186,6 +190,21 @@ eleventyExcludeFromCollections: true
               <p class="tc-feature-desc">The full chairside workflow from sheath to exposure to re-docking, in real clinical use.</p>
             </div>
           </article>
+        </div>
+
+        <div class="tc-integrations" id="integrations">
+          <div class="tc-int-head">
+            <h3 class="tc-int-title">Works with your imaging software</h3>
+            <p class="tc-int-desc">DC-Air<sup>&reg;</sup> connects through the standard <strong>TWAIN</strong> interface used by virtually all dental imaging software &mdash; not only the ones listed here. Watch a short acquisition demo for the most common ones, and if yours is not on the list, it almost certainly still works &mdash; <a href="#contact">ask us to confirm</a>.</p>
+          </div>
+          <div class="tc-int-chips" role="group" aria-label="Software integration demo videos">
+            {% for i in trainingIntegrations %}
+            <button type="button" class="tc-int-chip" data-yt-id="{{ i.ytId }}" data-int-name="{{ i.software }}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              <span>{{ i.software }}</span>
+            </button>
+            {% endfor %}
+          </div>
         </div>
       </div>
     </section>

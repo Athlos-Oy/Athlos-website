@@ -1694,3 +1694,81 @@
 .tc-faq.is-best:not([open]) {
   box-shadow: 0 10px 28px rgba(38, 48, 53, 0.10);
 }
+
+/* ---- Software integrations panel (Start Here) --------------------------- */
+.tc-integrations {
+  margin-top: var(--gap-md);
+  background: var(--off-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-lg);
+  padding: 2rem 2.25rem;
+  scroll-margin-top: 90px;
+}
+
+.tc-int-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.6rem;
+}
+
+.tc-int-desc {
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--gray-steel);
+  max-width: 760px;
+  margin-bottom: 1.4rem;
+}
+
+.tc-int-desc strong { color: var(--color-text); }
+
+.tc-int-desc a { color: var(--cyan-deep); font-weight: 600; }
+
+.tc-int-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tc-int-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--color-text);
+  background: var(--white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-pill);
+  padding: 0.55rem 1.1rem;
+  cursor: pointer;
+  transition: all var(--trs);
+}
+
+.tc-int-chip svg { color: var(--cyan-deep); flex-shrink: 0; }
+
+.tc-int-chip:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 6px 18px rgba(38, 48, 53, 0.08);
+  transform: translateY(-1px);
+}
+
+.tc-int-chip:focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 2px;
+}
+
+.tc-faq-jump {
+  display: inline-block;
+  color: var(--cyan-deep);
+  font-weight: 600;
+  font-size: var(--text-base);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 560px) {
+  .tc-integrations { padding: 1.4rem 1.2rem; }
+}

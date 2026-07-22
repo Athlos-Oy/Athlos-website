@@ -273,22 +273,33 @@
   var ytFrame = document.getElementById('tcYtFrame');
   var ytClose = document.getElementById('tcYtClose');
 
+  function openYt(id, title, category) {
+    ytFrame.innerHTML = '';
+    var iframe = document.createElement('iframe');
+    iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0';
+    iframe.title = title || 'DC-Air video';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    iframe.allowFullscreen = true;
+    ytFrame.appendChild(iframe);
+    if (typeof ytModal.showModal === 'function') ytModal.showModal();
+    document.body.style.overflow = 'hidden';
+    track('training_video_start', { video_title: title || id, video_category: category });
+  }
+
   document.querySelectorAll('.tc-feature-card').forEach(function (card) {
     var thumb = card.querySelector('.tc-feature-thumb');
     if (!thumb) return;
     thumb.addEventListener('click', function () {
-      var id = card.getAttribute('data-yt-id');
       var title = card.querySelector('.tc-feature-title');
-      ytFrame.innerHTML = '';
-      var iframe = document.createElement('iframe');
-      iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0';
-      iframe.title = title ? title.textContent : 'DC-Air video';
-      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-      iframe.allowFullscreen = true;
-      ytFrame.appendChild(iframe);
-      if (typeof ytModal.showModal === 'function') ytModal.showModal();
-      document.body.style.overflow = 'hidden';
-      track('training_video_start', { video_title: title ? title.textContent.trim() : id, video_category: 'start_here' });
+      openYt(card.getAttribute('data-yt-id'), title ? title.textContent.trim() : '', 'start_here');
+    });
+  });
+
+  document.querySelectorAll('.tc-int-chip').forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      var name = chip.getAttribute('data-int-name') || '';
+      openYt(chip.getAttribute('data-yt-id'), name + ' — DC-Air Acquisition', 'integration');
+      track('training_integration_open', { integration_software: name });
     });
   });
 
