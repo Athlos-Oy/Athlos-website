@@ -8,7 +8,7 @@ const qrDataUri = await QRCode.toDataURL("https://athlos.fi/dc-air-training#k=At
   color: { dark: "#0d1620", light: "#ffffff" },
 });
 
-const logoB64 = readFileSync("Z:/Athlos-website/card-logo.tmp.png").toString("base64");
+const logoB64 = readFileSync("Z:/Athlos-website/scripts/chairside-card-logo.png").toString("base64");
 
 const html = `<!doctype html><html><head><meta charset="utf-8"><style>
   * { margin:0; padding:0; box-sizing:border-box; }
@@ -107,10 +107,10 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><style>
   <div class="vers">DC-Air&reg; Chairside Quick Reference &middot; v1 &middot; July 2026 &middot; Athlos Oy &middot; Not a replacement for the IFU</div>
 </body></html>`;
 
-writeFileSync("Z:/Athlos-website/card.tmp.html", html);
+writeFileSync("Z:/Athlos-website/scripts/card-preview.tmp.html", html);
 const browser = await chromium.launch();
 const page = await browser.newPage();
-await page.goto("file:///Z:/Athlos-website/card.tmp.html", { waitUntil: "networkidle" });
+await page.goto("file:///Z:/Athlos-website/scripts/card-preview.tmp.html", { waitUntil: "networkidle" });
 await page.pdf({
   path: "C:/Users/EVANGE~1.SPA/AppData/Local/Temp/claude/--fs-Userdata-evangelos-spartiotis/10affb49-da01-4676-a7e5-1a6148063595/scratchpad/upload-staging/docs/DC-Air_Chairside_Quick_Reference_2026-07.pdf",
   format: "A4", printBackground: true,
