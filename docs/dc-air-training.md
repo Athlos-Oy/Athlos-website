@@ -157,3 +157,24 @@ To forward them to GA4, add the event names to the existing
 - [ ] Page absent from `/sitemap.xml`; `X-Robots-Tag: noindex` present
       (`curl -I https://athlos.fi/dc-air-training`)
 - [ ] Public pages unchanged (spot-check home + a product page)
+
+## Find an Answer (FAQ search)
+
+The "Find an Answer" section on the page is a searchable answer bank sourced from
+the Troubleshooting Guide and the IFU.
+
+- **Content lives in** `src/_data/trainingFaq.js` — one entry per question:
+  `id`, `category`, `question`, `keywords` (search synonyms/misspellings),
+  `steps`, optional `note`, and `source` (`doc: guide|ifu` + `page` for the PDF
+  deep link). Edit that file and redeploy to add or change answers — no other
+  file needs touching.
+- **Search** is client-side (js/training.js): typo-tolerant (edit distance),
+  prefix matching and synonym groups, so poor English still finds the right
+  answer. No server, no AI — answers always show approved text verbatim.
+- **Analytics:** `training_search` (query + result count), `training_search_zero`
+  (queries with no match — review these monthly and add missing answers),
+  `training_faq_open` (which answers get opened), `training_faq_category`.
+  The zero-result list is the roadmap for new content: every WhatsApp question
+  a customer asks should become an entry in trainingFaq.js.
+- When a document revision changes page numbers, update the `source.page`
+  values in trainingFaq.js at the same time as the PDF upload.

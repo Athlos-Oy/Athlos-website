@@ -322,6 +322,262 @@
     }
   });
 
+  /* ---- Find an Answer: fuzzy FAQ search + topic browser ----------------- */
+  // Forgiving by design: tolerates typos (edit distance), partial words
+  // (prefix match) and non-native phrasings (synonym groups), so "blutooth
+  // conection lost" still lands on the BLE answer.
+  var faqIndex = window.tcFaqIndex || [];
+  var faqSearch = document.getElementById('tcFaqSearch');
+  var faqClear = document.getElementById('tcFaqClear');
+  var faqStatus = document.getElementById('tcFaqStatus');
+  var faqEmpty = document.getElementById('tcFaqEmpty');
+  var faqList = document.getElementById('tcFaqList');
+  var faqCats = Array.prototype.slice.call(document.querySelectorAll('.tc-help-cat'));
+  var faqItems = {};
+  Array.prototype.forEach.call(document.querySelectorAll('.tc-faq'), function (el) {
+    faqItems[el.getAttribute('data-faq-id')] = el;
+  });
+
+  var SYNONYMS = [
+    ['bluetooth', 'blutooth', 'bluethooth', 'ble', 'wireless', 'wireles', 'wifi', 'radio', 'signal'],
+    ['battery', 'batery', 'battary', 'power', 'charge', 'charging', 'recharge'],
+    ['image', 'picture', 'photo', 'xray', 'radiograph', 'scan'],
+    ['connect', 'connection', 'conection', 'pair', 'pairing', 'link', 'sync'],
+    ['disconnect', 'drop', 'cut', 'lost', 'lose', 'interrupt'],
+    ['clean', 'disinfect', 'disinfection', 'desinfect', 'sterilize', 'sterilise', 'sanitize', 'wipe', 'wash', 'hygiene'],
+    ['light', 'led', 'lamp', 'indicator', 'blink', 'flash'],
+    ['dock', 'docking', 'station', 'cradle', 'base', 'charger'],
+    ['sheath', 'sheat', 'barrier', 'cover', 'sleeve', 'bag'],
+    ['broken', 'break', 'broke', 'damage', 'crack', 'fault', 'faulty'],
+    ['slow', 'lag', 'delay'],
+    ['freeze', 'frozen', 'stuck', 'hang', 'crash'],
+    ['yellow', 'yelow', 'orange', 'amber'],
+    ['child', 'kid', 'pediatric', 'paediatric', 'baby'],
+    ['noise', 'noisy', 'grainy', 'grain', 'blurry', 'unclear', 'fuzzy', 'unsharp'],
+    ['install', 'installation', 'instal', 'setup'],
+    ['software', 'twain', 'program', 'app', 'application'],
+    ['empty', 'dead', 'died', 'flat']
+  ];
+  var STOPWORDS = {};
+  ('the a an is are was my i it its this that to do does how what when where why of in on at and or for with can '
+    + 'cant wont dont doesnt isnt im not no me we you your there very please sensor dcair dc air device my '
+    + 'problem issue help me working work fix').split(' ').forEach(function (w) { STOPWORDS[w] = 1; });
+
+  function stem(t) {
+    if (t.length > 5 && /ing$/.test(t)) t = t.slice(0, -3);
+    else if (t.length > 4 && /(ed|es)$/.test(t)) t = t.slice(0, -2);
+    else if (t.length > 3 && /s$/.test(t) && !/ss$/.test(t)) t = t.slice(0, -1);
+    return t;
+  }
+
+  function tokenize(text) {
+    return String(text)
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[̀-ͯ]/g, '')
+      .replace(/[^a-z0-9\s]/g, ' ')
+      .split(/\s+/)
+      .filter(function (t) { return t.length > 1; })
+      .map(stem);
+  }
+
+  // Edit distance capped at `max` — small inputs only, early exit per row.
+  function editDist(a, b, max) {
+    if (Math.abs(a.length - b.length) > max) return max + 1;
+    var prev = [], cur = [], i, j;
+    for (j = 0; j <= b.length; j++) prev[j] = j;
+    for (i = 1; i <= a.length; i++) {
+      cur[0] = i;
+      var rowMin = i;
+      for (j = 1; j <= b.length; j++) {
+        cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+        if (cur[j] < rowMin) rowMin = cur[j];
+      }
+      if (rowMin > max) return max + 1;
+      prev = cur.slice();
+    }
+    return prev[b.length];
+  }
+
+  function tokenScore(qt, dt) {
+    if (qt === dt) return 3;
+    if (dt.length >= 3 && qt.length >= 3 && (dt.indexOf(qt) === 0 || qt.indexOf(dt) === 0)) return 2;
+    if (qt.length >= 4) {
+      var max = qt.length >= 7 ? 2 : 1;
+      if (editDist(qt, dt, max) <= max) return 1.5;
+    }
+    return 0;
+  }
+
+  function expandQuery(tokens) {
+    var out = {};
+    tokens.forEach(function (t) {
+      if (STOPWORDS[t]) return;
+      out[t] = 1;
+      SYNONYMS.forEach(function (group) {
+        for (var i = 0; i < group.length; i++) {
+          var g = stem(group[i]);
+          if (tokenScore(t, g) >= 1.5) {
+            group.forEach(function (w) { out[stem(w)] = 1; });
+            return;
+          }
+        }
+      });
+    });
+    return Object.keys(out);
+  }
+
+  // Precompute document tokens (question tokens weighted via bonus).
+  var faqDocs = faqIndex.map(function (item) {
+    return {
+      id: item.id,
+      cat: item.cat,
+      qTokens: tokenize(item.q),
+      allTokens: tokenize(item.q + ' ' + item.kw)
+    };
+  });
+
+  function searchFaq(query) {
+    var qTokens = expandQuery(tokenize(query));
+    if (!qTokens.length) return null; // nothing but stopwords — not a real query
+    var results = [];
+    faqDocs.forEach(function (doc) {
+      var score = 0;
+      var matched = 0;
+      qTokens.forEach(function (qt) {
+        var best = 0;
+        doc.allTokens.forEach(function (dt) {
+          var s = tokenScore(qt, dt);
+          if (s > best) best = s;
+        });
+        if (best > 0) {
+          matched++;
+          score += best;
+          doc.qTokens.forEach(function (dt) {
+            if (tokenScore(qt, dt) >= 2) { score += 0.75; }
+          });
+        }
+      });
+      if (matched > 0 && score >= 2) results.push({ id: doc.id, score: score });
+    });
+    results.sort(function (a, b) { return b.score - a.score; });
+    return results.slice(0, 6);
+  }
+
+  function hideAllFaq() {
+    Object.keys(faqItems).forEach(function (id) {
+      faqItems[id].hidden = true;
+      faqItems[id].open = false;
+    });
+    if (faqEmpty) faqEmpty.hidden = true;
+  }
+
+  function clearCats() {
+    faqCats.forEach(function (b) {
+      b.classList.remove('is-active');
+      b.setAttribute('aria-pressed', 'false');
+    });
+  }
+
+  function setStatus(text) {
+    if (faqStatus) faqStatus.textContent = text || '';
+  }
+
+  var searchDebounce = null;
+  var trackDebounce = null;
+
+  function runSearch() {
+    var query = faqSearch.value.trim();
+    if (faqClear) faqClear.hidden = !query;
+    clearCats();
+    hideAllFaq();
+    if (!query) { setStatus(''); return; }
+
+    var results = searchFaq(query);
+    if (results === null) { setStatus(''); return; }
+
+    if (results.length) {
+      results.forEach(function (r) {
+        var el = faqItems[r.id];
+        if (!el) return;
+        el.hidden = false;
+        faqList.appendChild(el); // reorder: best match first
+      });
+      // One clear winner — open it so the answer is immediately visible.
+      if (results.length === 1 || (results[0].score >= 6 && results.length && results[0].score >= (results[1] ? results[1].score * 1.8 : 0))) {
+        var top = faqItems[results[0].id];
+        if (top) top.open = true;
+      }
+      setStatus(results.length === 1 ? '1 answer found' : results.length + ' answers found — tap a question to open it');
+    } else {
+      if (faqEmpty) faqEmpty.hidden = false;
+      setStatus('');
+    }
+
+    clearTimeout(trackDebounce);
+    trackDebounce = setTimeout(function () {
+      track(results.length ? 'training_search' : 'training_search_zero', {
+        search_query: query.toLowerCase().slice(0, 80),
+        search_results: results.length
+      });
+    }, 1200);
+  }
+
+  if (faqSearch) {
+    faqSearch.addEventListener('input', function () {
+      clearTimeout(searchDebounce);
+      searchDebounce = setTimeout(runSearch, 250);
+    });
+    faqSearch.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') { e.preventDefault(); clearTimeout(searchDebounce); runSearch(); }
+    });
+  }
+
+  if (faqClear) {
+    faqClear.addEventListener('click', function () {
+      faqSearch.value = '';
+      faqClear.hidden = true;
+      clearCats();
+      hideAllFaq();
+      setStatus('');
+      faqSearch.focus();
+    });
+  }
+
+  faqCats.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var key = btn.getAttribute('data-cat');
+      var wasActive = btn.classList.contains('is-active');
+      if (faqSearch) faqSearch.value = '';
+      if (faqClear) faqClear.hidden = true;
+      clearCats();
+      hideAllFaq();
+      if (wasActive) { setStatus(''); return; }
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-pressed', 'true');
+      var count = 0;
+      faqIndex.forEach(function (item) {
+        var el = faqItems[item.id];
+        if (el && item.cat === key) {
+          el.hidden = false;
+          faqList.appendChild(el); // restore data-file order within the topic
+          count++;
+        }
+      });
+      setStatus(count + ' answers — tap a question to open it');
+      track('training_faq_category', { faq_category: key });
+    });
+  });
+
+  if (faqList) {
+    faqList.addEventListener('toggle', function (e) {
+      var el = e.target;
+      if (el.classList && el.classList.contains('tc-faq') && el.open) {
+        track('training_faq_open', { faq_id: el.getAttribute('data-faq-id') || '' });
+      }
+    }, true);
+  }
+
   /* ---- logout ----------------------------------------------------------- */
   var logout = document.getElementById('tcLogout');
   if (logout) {

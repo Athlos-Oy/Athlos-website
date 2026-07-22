@@ -58,6 +58,7 @@ eleventyExcludeFromCollections: true
         <span class="tc-nav-logo-tag">Training Center</span>
       </a>
       <nav class="tc-nav-links" aria-label="Training Center sections">
+        <a href="#help" class="tc-nav-link">Get Help</a>
         <a href="#start-here" class="tc-nav-link">Start Here</a>
         <a href="#library" class="tc-nav-link">Positioning Videos</a>
         <a href="#support" class="tc-nav-link">Quick Support</a>
@@ -95,6 +96,57 @@ eleventyExcludeFromCollections: true
         </div>
         <div class="tc-hero-visual" aria-hidden="true">
           <img src="/images/wios-holder-kit-white.webp" srcset="/images/wios-holder-kit-white-480.webp 480w, /images/wios-holder-kit-white-768.webp 768w, /images/wios-holder-kit-white.webp 1200w" sizes="(max-width: 900px) 0px, 420px" width="1792" height="2400" alt="" loading="eager" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <!-- FIND AN ANSWER -->
+    <section class="tc-section tc-help" id="help">
+      <div class="container">
+        <p class="section-eyebrow">Find an Answer</p>
+        <h2 class="section-headline tc-headline">What do you need help with?</h2>
+        <p class="tc-section-intro">Type your question in your own words, or pick a topic. Every answer comes straight from the official DC-Air<sup>&reg;</sup> guides, with a link to the exact page.</p>
+
+        <div class="tc-help-search">
+          <svg class="tc-help-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg>
+          <input type="search" id="tcFaqSearch" class="tc-help-input" placeholder="e.g. &ldquo;yellow light blinking&rdquo; or &ldquo;no image&rdquo;" autocomplete="off" spellcheck="false" aria-label="Search DC-Air help topics">
+          <button type="button" class="tc-help-clear" id="tcFaqClear" hidden aria-label="Clear search">&times;</button>
+        </div>
+
+        <div class="tc-help-cats" id="tcFaqCats" role="group" aria-label="Browse help by topic">
+          {% for cat in trainingFaq.categories %}
+          <button type="button" class="tc-help-cat" data-cat="{{ cat.key }}" aria-pressed="false">{{ cat.label }}</button>
+          {% endfor %}
+        </div>
+
+        <p class="tc-help-status" id="tcFaqStatus" role="status" aria-live="polite"></p>
+
+        <div class="tc-help-list" id="tcFaqList">
+          {% for item in trainingFaq.faq %}
+          <details class="tc-faq" data-faq-id="{{ item.id }}" data-cat="{{ item.category }}" hidden>
+            <summary class="tc-faq-q">
+              <span>{{ item.question }}</span>
+              <svg class="tc-faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="tc-faq-a">
+              <ol class="tc-faq-steps">
+                {% for step in item.steps %}<li>{{ step | safe }}</li>{% endfor %}
+              </ol>
+              {% if item.note %}<p class="tc-faq-note">{{ item.note | safe }}</p>{% endif %}
+              <p class="tc-faq-src">Full instructions:
+                {% if item.source.doc == 'guide' %}
+                <a href="{{ trainingVideos.guidePdfUrl }}#page={{ item.source.page }}" target="_blank" rel="noopener" data-tc-event="guide_open" data-tc-section="faq-{{ item.id }}">Troubleshooting Guide, p.&nbsp;{{ item.source.page }}</a>
+                {% else %}
+                <a href="{{ trainingVideos.ifuPdfUrl }}#page={{ item.source.page }}" target="_blank" rel="noopener" data-tc-event="ifu_open" data-tc-section="faq-{{ item.id }}">Instructions for Use, p.&nbsp;{{ item.source.page }}</a>
+                {% endif %}
+              </p>
+            </div>
+          </details>
+          {% endfor %}
+        </div>
+
+        <div class="tc-help-empty" id="tcFaqEmpty" hidden>
+          <p><strong>No matching answer found.</strong> Try different words (e.g. &ldquo;battery&rdquo;, &ldquo;image&rdquo;, &ldquo;connection&rdquo;), browse a topic above &mdash; or <a href="#contact">contact us directly</a> and we will help right away.</p>
         </div>
       </div>
     </section>
@@ -519,6 +571,7 @@ eleventyExcludeFromCollections: true
   <script>
     // Video metadata for the player (rendered from src/_data/trainingVideos.js).
     window.tcVideos = {{ trainingVideos.videos | dump | safe }};
+    window.tcFaqIndex = [{% for item in trainingFaq.faq %}{"id":{{ item.id | dump | safe }},"cat":{{ item.category | dump | safe }},"q":{{ item.question | dump | safe }},"kw":{{ item.keywords | dump | safe }}}{% if not loop.last %},{% endif %}{% endfor %}];
     window.tcCategories = {{ trainingVideos.categories | dump | safe }};
   </script>
   <script src="/js/training.js" defer></script>
