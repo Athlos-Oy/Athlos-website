@@ -125,7 +125,11 @@ eleventyExcludeFromCollections: true
           {% for item in trainingFaq.faq %}
           <details class="tc-faq" data-faq-id="{{ item.id }}" data-cat="{{ item.category }}" hidden>
             <summary class="tc-faq-q">
-              <span>{{ item.question }}</span>
+              <span class="tc-faq-qtext">
+                <span class="tc-faq-badge" hidden>Best match</span>
+                <span class="tc-faq-title">{{ item.question }}</span>
+                <span class="tc-faq-preview">{{ item.steps[0] | striptags | truncate(110) }}</span>
+              </span>
               <svg class="tc-faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </summary>
             <div class="tc-faq-a">

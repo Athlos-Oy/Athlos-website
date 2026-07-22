@@ -466,10 +466,20 @@
 
   function hideAllFaq() {
     Object.keys(faqItems).forEach(function (id) {
-      faqItems[id].hidden = true;
-      faqItems[id].open = false;
+      var el = faqItems[id];
+      el.hidden = true;
+      el.open = false;
+      el.classList.remove('is-best');
+      var badge = el.querySelector('.tc-faq-badge');
+      if (badge) badge.hidden = true;
     });
     if (faqEmpty) faqEmpty.hidden = true;
+  }
+
+  function markBest(el) {
+    el.classList.add('is-best');
+    var badge = el.querySelector('.tc-faq-badge');
+    if (badge) badge.hidden = false;
   }
 
   function clearCats() {
@@ -503,12 +513,17 @@
         el.hidden = false;
         faqList.appendChild(el); // reorder: best match first
       });
-      // One clear winner — open it so the answer is immediately visible.
-      if (results.length === 1 || (results[0].score >= 6 && results.length && results[0].score >= (results[1] ? results[1].score * 1.8 : 0))) {
-        var top = faqItems[results[0].id];
+      var top = faqItems[results[0].id];
+      if (results.length === 1) {
+        // Single hit — open it right away, nothing else competes for attention.
         if (top) top.open = true;
+        setStatus('Found 1 answer:');
+      } else {
+        // Several hits — keep them all closed and equally visible; flag the
+        // likely winner instead of opening it over the others.
+        if (top) markBest(top);
+        setStatus('Found ' + results.length + ' answers — tap one to open it:');
       }
-      setStatus(results.length === 1 ? '1 answer found' : results.length + ' answers found — tap a question to open it');
     } else {
       if (faqEmpty) faqEmpty.hidden = false;
       setStatus('');
@@ -564,7 +579,7 @@
           count++;
         }
       });
-      setStatus(count + ' answers — tap a question to open it');
+      setStatus(count + ' answers about ' + btn.textContent.trim().toLowerCase() + ' — tap one to open it:');
       track('training_faq_category', { faq_category: key });
     });
   });
