@@ -33,6 +33,8 @@ for (const u of [
   trainingVideos.ifuPdfUrl,
   trainingVideos.guidePdfDownloadUrl,
   trainingVideos.ifuPdfDownloadUrl,
+  trainingVideos.chairsidePdfUrl,
+  trainingVideos.chairsidePdfDownloadUrl,
 ]) {
   if (u) urls.add(u);
 }

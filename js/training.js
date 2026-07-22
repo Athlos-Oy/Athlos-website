@@ -330,8 +330,38 @@
       track('training_ifu_open', {});
     } else if (type === 'support_click') {
       track('training_support_click', { support_contact: el.getAttribute('data-tc-contact') || '' });
+    } else if (type === 'chairside_open') {
+      track('training_chairside_open', { open_section: el.getAttribute('data-tc-section') || '' });
     }
   });
+
+  /* ---- sample radiograph lightbox -------------------------------------- */
+  var imgModal = document.getElementById('tcImgModal');
+  var imgFull = document.getElementById('tcImgFull');
+  var imgLabel = document.getElementById('tcImgLabel');
+  var imgClose = document.getElementById('tcImgClose');
+
+  document.querySelectorAll('.tc-gallery-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (!imgModal) return;
+      imgFull.src = btn.getAttribute('data-img');
+      imgFull.alt = 'Sample DC-Air radiograph — ' + (btn.getAttribute('data-label') || '');
+      imgLabel.textContent = btn.getAttribute('data-label') || '';
+      if (typeof imgModal.showModal === 'function') imgModal.showModal();
+      document.body.style.overflow = 'hidden';
+      track('training_gallery_open', { gallery_label: btn.getAttribute('data-label') || '' });
+    });
+  });
+
+  if (imgModal) {
+    imgModal.addEventListener('close', function () {
+      imgFull.src = '';
+      document.body.style.overflow = '';
+    });
+    imgModal.addEventListener('click', function (e) { if (e.target === imgModal) imgModal.close(); });
+    imgClose.addEventListener('click', function () { imgModal.close(); });
+  }
+
 
   /* ---- Find an Answer: fuzzy FAQ search + topic browser ----------------- */
   // Forgiving by design: tolerates typos (edit distance), partial words
@@ -603,6 +633,51 @@
       }
     }, true);
   }
+
+  /* ---- FAQ deep links + copy-link buttons ------------------------------- */
+  // #faq-<id> in the URL opens that answer directly — used by the QR card,
+  // WhatsApp saved replies and the per-answer "Copy link" buttons.
+  function openFaqFromHash() {
+    var m = location.hash.match(/^#faq-([\w-]+)$/);
+    if (!m) return;
+    var el = faqItems[m[1]];
+    if (!el) return;
+    hideAllFaq();
+    clearCats();
+    if (faqSearch) faqSearch.value = '';
+    el.hidden = false;
+    el.open = true;
+    setStatus('');
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    track('training_faq_open', { faq_id: m[1], faq_via: 'deep_link' });
+  }
+  window.addEventListener('hashchange', openFaqFromHash);
+  openFaqFromHash();
+
+  document.querySelectorAll('.tc-faq-copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var id = btn.getAttribute('data-faq-copy');
+      var url = location.origin + location.pathname.replace(/\/$/, '') + '#faq-' + id;
+      var done = function () {
+        var label = btn.querySelector('span');
+        if (label) {
+          label.textContent = 'Copied ✓';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 1600);
+        }
+        track('training_faq_share', { faq_id: id });
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(done, function () {});
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = url;
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); done(); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+    });
+  });
 
   /* ---- logout ----------------------------------------------------------- */
   var logout = document.getElementById('tcLogout');

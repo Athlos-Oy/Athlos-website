@@ -122,6 +122,7 @@ const PACKAGES = {
   zipNoCaptions: { file: "zip/DC-Air_Clinical_Training_No-Captions_2026-07.zip", size: "348 MB" },
   guidePdf: { file: "docs/DC-Air_User_QA_Troubleshooting_Guide_2026-1.pdf", size: "4.2 MB" },
   ifuPdf: { file: "docs/DC-Air_Instructions_for_Use_Rev18.pdf", size: "1.1 MB" },
+  chairsidePdf: { file: "docs/DC-Air_Chairside_Quick_Reference_2026-07.pdf", size: "" },
 };
 
 function mediaUrl(path) {
@@ -140,7 +141,12 @@ function downloadUrl(path) {
 const DOCUMENTS = {
   guide: { pages: 13, version: "Version 2026.1" },
   ifu: { pages: 40, revision: "0000679 Rev. 18" },
+  chairside: { version: "v1 · July 2026" },
 };
+
+// WhatsApp support number in international format, digits only
+// (e.g. "358401234567"). Empty string hides the WhatsApp buttons.
+const WHATSAPP_NUMBER = "";
 
 export default {
   categories: CATEGORIES,
@@ -158,6 +164,9 @@ export default {
   ifuPdfUrl: mediaUrl(PACKAGES.ifuPdf.file),
   guidePdfDownloadUrl: downloadUrl(PACKAGES.guidePdf.file),
   ifuPdfDownloadUrl: downloadUrl(PACKAGES.ifuPdf.file),
+  chairsidePdfUrl: mediaUrl(PACKAGES.chairsidePdf.file),
+  chairsidePdfDownloadUrl: downloadUrl(PACKAGES.chairsidePdf.file),
+  whatsapp: WHATSAPP_NUMBER,
   sizes: PACKAGES,
   totalCount: ACTIVE.length,
   totalDuration: totalMinutes(ACTIVE),

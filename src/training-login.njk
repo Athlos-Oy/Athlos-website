@@ -63,6 +63,14 @@ eleventyExcludeFromCollections: true
     var error = document.getElementById('tcLoginError');
     var submit = document.getElementById('tcSubmit');
 
+    // Printed chairside cards carry a QR code ending in #k=<password>.
+    // The fragment never reaches the server or logs; prefill and let the
+    // user just press Sign in.
+    if (location.hash.indexOf('#k=') === 0) {
+      input.value = decodeURIComponent(location.hash.slice(3));
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+
     toggle.addEventListener('click', function () {
       var show = input.type === 'password';
       input.type = show ? 'text' : 'password';

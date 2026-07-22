@@ -178,3 +178,29 @@ the Troubleshooting Guide and the IFU.
   a customer asks should become an entry in trainingFaq.js.
 - When a document revision changes page numbers, update the `source.page`
   values in trainingFaq.js at the same time as the PDF upload.
+
+## Chairside Quick Reference card
+
+`docs/DC-Air_Chairside_Quick_Reference_2026-07.pdf` in the blob store — a
+one-page printable card (top 5 problems, LED meanings, golden rules, QR code).
+Regeneration: the card is produced from an HTML template with Playwright
+(ask Claude to "regenerate the chairside card"); bump the version in
+`DOCUMENTS.chairside` in trainingVideos.js and upload the new PDF with the
+same pathname. The QR code points to
+`https://athlos.fi/dc-air-training#k=<password>` — the login page prefills
+the password from the fragment (never sent to the server). **If the password
+is rotated, the card must be regenerated and reprinted.**
+
+## FAQ deep links & WhatsApp replies
+
+Every answer has a stable anchor: `/dc-air-training#faq-<id>` opens that
+answer directly. Each open answer has a "Copy link" button. Paste-ready
+WhatsApp replies using these links: `docs/dc-air-whatsapp-replies.md`.
+The WhatsApp contact button appears on the page once `WHATSAPP_NUMBER` in
+`src/_data/trainingVideos.js` is set (international format, digits only).
+
+## Image gallery
+
+8 sample radiographs (courtesy FTG, from ftgimaging.com/radiographs) live in
+`training-assets/radiographs/` and ship with the site. To swap samples,
+replace the webp files and update the `gallery` list in dc-air-training.njk.
