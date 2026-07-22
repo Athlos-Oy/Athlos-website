@@ -634,9 +634,9 @@
     }, true);
   }
 
-  /* ---- FAQ deep links + copy-link buttons ------------------------------- */
-  // #faq-<id> in the URL opens that answer directly — used by the QR card,
-  // WhatsApp saved replies and the per-answer "Copy link" buttons.
+  /* ---- FAQ deep links --------------------------------------------------- */
+  // #faq-<id> in the URL opens that answer directly — used by the gallery's
+  // "fix a grainy image" links and any answer links shared in support email.
   function openFaqFromHash() {
     var m = location.hash.match(/^#faq-([\w-]+)$/);
     if (!m) return;
@@ -653,31 +653,6 @@
   }
   window.addEventListener('hashchange', openFaqFromHash);
   openFaqFromHash();
-
-  document.querySelectorAll('.tc-faq-copy').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var id = btn.getAttribute('data-faq-copy');
-      var url = location.origin + location.pathname.replace(/\/$/, '') + '#faq-' + id;
-      var done = function () {
-        var label = btn.querySelector('span');
-        if (label) {
-          label.textContent = 'Copied ✓';
-          setTimeout(function () { label.textContent = 'Copy link'; }, 1600);
-        }
-        track('training_faq_share', { faq_id: id });
-      };
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(url).then(done, function () {});
-      } else {
-        var ta = document.createElement('textarea');
-        ta.value = url;
-        document.body.appendChild(ta);
-        ta.select();
-        try { document.execCommand('copy'); done(); } catch (e) {}
-        document.body.removeChild(ta);
-      }
-    });
-  });
 
   /* ---- logout ----------------------------------------------------------- */
   var logout = document.getElementById('tcLogout');

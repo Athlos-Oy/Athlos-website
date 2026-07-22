@@ -144,10 +144,6 @@ const DOCUMENTS = {
   chairside: { version: "v1 · July 2026" },
 };
 
-// WhatsApp support number in international format, digits only
-// (e.g. "358401234567"). Empty string hides the WhatsApp buttons.
-const WHATSAPP_NUMBER = "";
-
 export default {
   categories: CATEGORIES,
   documents: DOCUMENTS,
@@ -166,7 +162,6 @@ export default {
   ifuPdfDownloadUrl: downloadUrl(PACKAGES.ifuPdf.file),
   chairsidePdfUrl: mediaUrl(PACKAGES.chairsidePdf.file),
   chairsidePdfDownloadUrl: downloadUrl(PACKAGES.chairsidePdf.file),
-  whatsapp: WHATSAPP_NUMBER,
   sizes: PACKAGES,
   totalCount: ACTIVE.length,
   totalDuration: totalMinutes(ACTIVE),

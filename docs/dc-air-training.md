@@ -191,13 +191,11 @@ same pathname. The QR code points to
 the password from the fragment (never sent to the server). **If the password
 is rotated, the card must be regenerated and reprinted.**
 
-## FAQ deep links & WhatsApp replies
+## FAQ deep links
 
 Every answer has a stable anchor: `/dc-air-training#faq-<id>` opens that
-answer directly. Each open answer has a "Copy link" button. Paste-ready
-WhatsApp replies using these links: `docs/dc-air-whatsapp-replies.md`.
-The WhatsApp contact button appears on the page once `WHATSAPP_NUMBER` in
-`src/_data/trainingVideos.js` is set (international format, digits only).
+answer directly — used by the image-gallery "fix a grainy image" links and
+shareable in support emails.
 
 ## Image gallery
 
