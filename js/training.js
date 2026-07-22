@@ -93,7 +93,7 @@
     else {
       el.classList.remove('is-soon');
       el.removeAttribute('aria-disabled');
-      el.removeAttribute('title');
+      if (el.getAttribute('title') === 'Available soon') el.removeAttribute('title');
     }
   }
 

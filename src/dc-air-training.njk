@@ -83,8 +83,7 @@ eleventyExcludeFromCollections: true
           <h1 class="tc-hero-title">DC-Air<sup>&reg;</sup> Training Center</h1>
           <p class="tc-hero-sub">Practical training, clinical positioning guidance and support resources for confident DC-Air use.</p>
           <div class="tc-hero-actions">
-            <a href="#library" class="btn btn-primary">Start Training</a>
-            <a href="#documents" class="btn btn-outline tc-btn-outline-dark">Download All Videos</a>
+            <a href="{{ trainingVideos.zipCaptionedUrl }}" class="btn btn-primary" data-tc-event="download" data-tc-type="zip_captioned" title="ZIP, English captions{% if trainingVideos.sizes.zipCaptioned.size %} ({{ trainingVideos.sizes.zipCaptioned.size }}){% endif %}">Download All Videos</a>
             <a href="{{ trainingVideos.guidePdfUrl }}" target="_blank" rel="noopener" class="btn btn-outline tc-btn-outline-dark" data-tc-event="guide_open" data-tc-section="hero">Open Troubleshooting Guide</a>
           </div>
           <ul class="tc-hero-chips" aria-label="Training Center overview">
