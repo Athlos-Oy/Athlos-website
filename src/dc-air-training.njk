@@ -1,0 +1,705 @@
+---
+permalink: /dc-air-training/index.html
+eleventyExcludeFromCollections: true
+---
+{#- DC-Air® Training Center — private, password-protected customer page.
+    Protected by middleware.js (edge session check); this HTML is never
+    served without a valid session cookie. English-only by design,
+    standalone head (no base layout): noindex, no og/hreflang/canonical,
+    absent from sitemap, nav and llms.txt. Content data comes from
+    src/_data/trainingVideos.js. -#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DC-Air® Training Center | Athlos</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap"></noscript>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/training.css">
+  <!-- Consent Mode defaults (must precede GTM) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
+    });
+    window.loadGtm = function () {
+      if (window.__gtmLoaded) return;
+      window.__gtmLoaded = true;
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','{{ site.gtmId }}');
+    };
+    if (localStorage.getItem('cookies-accepted') === '1') {
+      gtag('consent', 'update', {'analytics_storage': 'granted'});
+      window.loadGtm();
+    }
+  </script>
+</head>
+<body class="tc-body">
+
+  <!-- TRAINING CENTER LOCAL NAV -->
+  <header class="tc-nav" id="tcNav">
+    <div class="tc-nav-inner">
+      <a href="/" class="tc-nav-logo" aria-label="Athlos home">
+        <img src="/images/athlos-logo-nav.webp" width="354" height="220" alt="Athlos" class="tc-nav-logo-img">
+        <span class="tc-nav-logo-tag">Training Center</span>
+      </a>
+      <nav class="tc-nav-links" aria-label="Training Center sections">
+        <a href="#help" class="tc-nav-link">Get Help</a>
+        <a href="#start-here" class="tc-nav-link">Start Here</a>
+        <a href="#library" class="tc-nav-link">Positioning Videos</a>
+        <a href="#gallery" class="tc-nav-link">Gallery</a>
+        <a href="#support" class="tc-nav-link">Quick Support</a>
+        <a href="#documents" class="tc-nav-link">Documents</a>
+        <a href="#contact" class="tc-nav-link">Contact</a>
+      </nav>
+      <a href="/api/training-logout" class="tc-logout" id="tcLogout">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        Log out
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="tc-hero">
+      <div class="tc-hero-glow" aria-hidden="true"></div>
+      <div class="tc-hero-inner container">
+        <div class="tc-hero-copy">
+          <p class="tc-hero-eyebrow">DC-Air<sup>&reg;</sup> customer resource</p>
+          <h1 class="tc-hero-title">DC-Air<sup>&reg;</sup> Training Center</h1>
+          <p class="tc-hero-sub">Practical training, clinical positioning guidance and support resources for confident DC-Air use.</p>
+          <div class="tc-hero-actions">
+            <a href="{{ trainingVideos.zipCaptionedUrl }}" class="btn btn-primary" data-tc-event="download" data-tc-type="zip_captioned" title="ZIP, English captions{% if trainingVideos.sizes.zipCaptioned.size %} ({{ trainingVideos.sizes.zipCaptioned.size }}){% endif %}">Download All Videos</a>
+            <a href="{{ trainingVideos.chairsidePdfUrl }}" target="_blank" rel="noopener" class="btn btn-outline tc-btn-outline-dark" data-tc-event="chairside_open" data-tc-section="hero" title="One-page PDF — print it and keep it at the chair">Print Chairside Card</a>
+            <a href="{{ trainingVideos.guidePdfUrl }}" target="_blank" rel="noopener" class="btn btn-outline tc-btn-outline-dark" data-tc-event="guide_open" data-tc-section="hero">Open Troubleshooting Guide</a>
+          </div>
+          <ul class="tc-hero-chips" aria-label="Training Center overview">
+            <li>{{ trainingVideos.totalCount }} positioning videos ({{ trainingVideos.totalDuration }})</li>
+            <li>{{ trainingFaq.faq | length }} instant answers &amp; search</li>
+            <li>Software integration demos</li>
+            <li>Guides &amp; printable chairside card</li>
+            <li>Materials updated July 2026</li>
+          </ul>
+          <div class="tc-hero-awards" aria-label="Awards">
+            <img src="/images/wios-award-2024.webp" alt="Dental Advisor Top Award Winner 2024" width="500" height="500" loading="lazy">
+            <img src="/images/wios-award-2025.webp" alt="Dental Advisor Top Award Winner 2025" width="500" height="500" loading="lazy">
+          </div>
+        </div>
+        <div class="tc-hero-visual" aria-hidden="true">
+          <img src="/images/wios-holder-kit-white.webp" srcset="/images/wios-holder-kit-white-480.webp 480w, /images/wios-holder-kit-white-768.webp 768w, /images/wios-holder-kit-white.webp 1200w" sizes="(max-width: 900px) 0px, 420px" width="1792" height="2400" alt="" loading="eager" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <!-- FIND AN ANSWER -->
+    <section class="tc-section tc-help" id="help">
+      <div class="container">
+        <p class="section-eyebrow">Find an Answer</p>
+        <h2 class="section-headline tc-headline">What do you need help with?</h2>
+        <p class="tc-section-intro">Type your question in your own words, or pick a topic. Every answer comes straight from the official DC-Air<sup>&reg;</sup> guides, with a link to the exact page.</p>
+
+        <div class="tc-help-search">
+          <svg class="tc-help-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg>
+          <input type="search" id="tcFaqSearch" class="tc-help-input" placeholder="e.g. &ldquo;yellow light blinking&rdquo; or &ldquo;no image&rdquo;" autocomplete="off" spellcheck="false" aria-label="Search DC-Air help topics">
+          <button type="button" class="tc-help-clear" id="tcFaqClear" hidden aria-label="Clear search">&times;</button>
+        </div>
+
+        <div class="tc-help-cats" id="tcFaqCats" role="group" aria-label="Browse help by topic">
+          {% for cat in trainingFaq.categories %}
+          <button type="button" class="tc-help-cat" data-cat="{{ cat.key }}" aria-pressed="false">{{ cat.label }}</button>
+          {% endfor %}
+        </div>
+
+        <p class="tc-help-status" id="tcFaqStatus" role="status" aria-live="polite"></p>
+
+        <div class="tc-help-list" id="tcFaqList">
+          {% for item in trainingFaq.faq %}
+          <details class="tc-faq" id="faq-{{ item.id }}" data-faq-id="{{ item.id }}" data-cat="{{ item.category }}" hidden>
+            <summary class="tc-faq-q">
+              <span class="tc-faq-qtext">
+                <span class="tc-faq-badge" hidden>Best match</span>
+                <span class="tc-faq-title">{{ item.question }}</span>
+                <span class="tc-faq-preview">{{ item.steps[0] | striptags | truncate(110) }}</span>
+              </span>
+              <svg class="tc-faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="tc-faq-a">
+              <ol class="tc-faq-steps">
+                {% for step in item.steps %}<li>{{ step | safe }}</li>{% endfor %}
+              </ol>
+              {% if item.images %}
+              <div class="tc-faq-imgs">
+                {% for img in item.images %}
+                <figure>
+                  <img src="{{ img.src }}" alt="{{ img.caption }}" loading="lazy" width="940" height="526">
+                  <figcaption>{{ img.caption }}</figcaption>
+                </figure>
+                {% endfor %}
+              </div>
+              {% endif %}
+              {% if item.note %}<p class="tc-faq-note">{{ item.note | safe }}</p>{% endif %}
+              <div class="tc-faq-foot">
+                {% if item.link %}
+                <p class="tc-faq-src"><a href="{{ item.link.href }}" class="tc-faq-jump">{{ item.link.label }} &rarr;</a></p>
+                {% elif item.source %}
+                <p class="tc-faq-src">Full instructions:
+                  {% if item.source.doc == 'guide' %}
+                  <a href="{{ trainingVideos.guidePdfUrl }}#page={{ item.source.page }}" target="_blank" rel="noopener" data-tc-event="guide_open" data-tc-section="faq-{{ item.id }}">Troubleshooting Guide, p.&nbsp;{{ item.source.page }}</a>
+                  {% else %}
+                  <a href="{{ trainingVideos.ifuPdfUrl }}#page={{ item.source.page }}" target="_blank" rel="noopener" data-tc-event="ifu_open" data-tc-section="faq-{{ item.id }}">Instructions for Use, p.&nbsp;{{ item.source.page }}</a>
+                  {% endif %}
+                </p>
+                {% endif %}
+              </div>
+            </div>
+          </details>
+          {% endfor %}
+        </div>
+
+        <div class="tc-help-empty" id="tcFaqEmpty" hidden>
+          <p><strong>No matching answer found.</strong> Try different words (e.g. &ldquo;battery&rdquo;, &ldquo;image&rdquo;, &ldquo;connection&rdquo;), browse a topic above &mdash; or <a href="#contact">contact us directly</a> and we will help right away.</p>
+        </div>
+
+        <div class="tc-led" aria-label="Sensor light quick reference">
+          <h3 class="tc-led-title">What is the light telling you?</h3>
+          <div class="tc-led-grid">
+            <div class="tc-led-item">
+              <span class="tc-led-dot tc-led-green-flash" aria-hidden="true"></span>
+              <div><strong>Double green flash</strong><span>Connected &mdash; ready to use</span></div>
+            </div>
+            <div class="tc-led-item">
+              <span class="tc-led-dot tc-led-yellow-flash" aria-hidden="true"></span>
+              <div><strong>Flashing yellow</strong><span>Battery low &mdash; dock 15 min</span></div>
+            </div>
+            <div class="tc-led-item">
+              <span class="tc-led-dot tc-led-yellow" aria-hidden="true"></span>
+              <div><strong>Steady yellow</strong><span>Error / battery empty &mdash; dock &amp; charge</span></div>
+            </div>
+            <div class="tc-led-item">
+              <span class="tc-led-dot tc-led-off" aria-hidden="true"></span>
+              <div><strong>Light off</strong><span>Asleep &mdash; dock 10 s to wake</span></div>
+            </div>
+            <div class="tc-led-item">
+              <span class="tc-led-dot tc-led-blue" aria-hidden="true"></span>
+              <div><strong>Dock pulsing blue</strong><span>Powered &mdash; sensor charging</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- START HERE -->
+    <section class="tc-section" id="start-here">
+      <div class="container">
+        <p class="section-eyebrow">Start Here</p>
+        <h2 class="section-headline tc-headline">Begin with the complete workflow</h2>
+        <p class="tc-section-intro">Begin with the complete DC-Air workflow, then continue to the holder-specific positioning guides.</p>
+
+        <div class="tc-feature-grid">
+          <article class="tc-feature-card" data-yt-id="_mnX1PXeSGI">
+            <button type="button" class="tc-feature-thumb" aria-label="Play video: DC-Air How-to-Use">
+              <img src="https://i.ytimg.com/vi/_mnX1PXeSGI/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+              <span class="tc-play-badge" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+            </button>
+            <div class="tc-feature-info">
+              <h3 class="tc-feature-title">DC-Air<sup>&reg;</sup> How-to-Use</h3>
+              <p class="tc-feature-desc">The complete guided introduction — installation, docking, daily handling and image acquisition.</p>
+            </div>
+          </article>
+          <article class="tc-feature-card" data-yt-id="-_OEmlKuiX8">
+            <button type="button" class="tc-feature-thumb" aria-label="Play video: DC-Air Clinical Workflow">
+              <img src="https://i.ytimg.com/vi/-_OEmlKuiX8/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+              <span class="tc-play-badge" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+            </button>
+            <div class="tc-feature-info">
+              <h3 class="tc-feature-title">DC-Air<sup>&reg;</sup> Clinical Workflow</h3>
+              <p class="tc-feature-desc">The full chairside workflow from sheath to exposure to re-docking, in real clinical use.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="tc-integrations" id="integrations">
+          <div class="tc-int-head">
+            <h3 class="tc-int-title">Works with your imaging software</h3>
+            <p class="tc-int-desc">DC-Air<sup>&reg;</sup> connects through the standard <strong>TWAIN</strong> interface used by virtually all dental imaging software &mdash; not only the ones listed here. Watch a short acquisition demo for the most common ones, and if yours is not on the list, it almost certainly still works &mdash; <a href="#contact">ask us to confirm</a>.</p>
+          </div>
+          <div class="tc-int-chips" role="group" aria-label="Software integration demo videos">
+            {% for i in trainingIntegrations %}
+            <button type="button" class="tc-int-chip" data-yt-id="{{ i.ytId }}" data-int-name="{{ i.software }}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              <span>{{ i.software }}</span>
+            </button>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLINICAL POSITIONING LIBRARY -->
+    <section class="tc-section tc-section-alt" id="library">
+      <div class="container">
+        <p class="section-eyebrow">Clinical Positioning Library</p>
+        <h2 class="section-headline tc-headline">Select a holder or clinical situation</h2>
+        <p class="tc-section-intro">Select a holder or clinical situation to view step-by-step positioning guidance.</p>
+
+        <div class="tc-filters" role="toolbar" aria-label="Filter videos by category">
+          <button type="button" class="tc-filter is-active" data-filter="all" aria-pressed="true">All</button>
+          {%- for cat in trainingVideos.categories %}
+          <button type="button" class="tc-filter" data-filter="{{ cat.key }}" aria-pressed="false">{{ cat.label }}</button>
+          {%- endfor %}
+        </div>
+
+        <div class="tc-video-grid" id="tcVideoGrid">
+          {%- for v in trainingVideos.videos %}
+          <article class="tc-video-card" data-category="{{ v.category }}" data-index="{{ loop.index0 }}">
+            <button type="button" class="tc-video-thumb" aria-label="Play video: {{ v.title }} ({{ v.duration }})">
+              <img src="{{ v.poster }}" alt="" loading="lazy" width="540" height="960">
+              <span class="tc-video-shade" aria-hidden="true"></span>
+              <span class="tc-play-badge" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+              <span class="tc-video-meta" aria-hidden="true">
+                <span class="tc-badge tc-badge-cat">{% for cat in trainingVideos.categories %}{% if cat.key == v.category %}{{ cat.label }}{% endif %}{% endfor %}</span>
+                <span class="tc-badge tc-badge-dur">{{ v.duration }}</span>
+              </span>
+              <span class="tc-video-title" aria-hidden="true">{{ v.title }}</span>
+            </button>
+            {%- if v.positioningOnly %}
+            <p class="tc-video-note">Positioning demonstration only</p>
+            {%- endif %}
+          </article>
+          {%- endfor %}
+        </div>
+
+        <p class="tc-ftg-credit">Clinical training videos produced by FTG Imaging.</p>
+      </div>
+    </section>
+
+    <!-- IMAGE GALLERY -->
+    <section class="tc-section" id="gallery">
+      <div class="container">
+        <p class="section-eyebrow">Image Gallery</p>
+        <h2 class="section-headline tc-headline">What DC-Air<sup>&reg;</sup> images look like</h2>
+        <p class="tc-section-intro">Sample radiographs taken with DC-Air<sup>&reg;</sup> &mdash; direct-conversion image quality, straight from X-ray photons without sharpening filters. Compare with your own results after positioning practice.</p>
+
+        <div class="tc-gallery-grid">
+          {% set gallery = [
+            { file: "bitewing-3", label: "Bitewing" },
+            { file: "bitewing-7", label: "Bitewing" },
+            { file: "anterior-2", label: "Anterior PA" },
+            { file: "anterior-9", label: "Anterior PA" },
+            { file: "posterior-4", label: "Posterior PA" },
+            { file: "posterior-11", label: "Posterior PA" },
+            { file: "posterior-s1", label: "Endodontic — Zero Profile holder" },
+            { file: "posterior-s3", label: "Endodontic — Zero Profile holder" }
+          ] %}
+          {% for g in gallery %}
+          <figure class="tc-gallery-item">
+            <button type="button" class="tc-gallery-btn" data-img="/dc-air-training/assets/radiographs/{{ g.file }}.webp" data-label="{{ g.label }}" aria-label="View sample: {{ g.label }}">
+              <img src="/dc-air-training/assets/radiographs/{{ g.file }}.webp" alt="Sample DC-Air radiograph — {{ g.label }}" loading="lazy" width="900" height="676">
+            </button>
+            <figcaption>{{ g.label }}</figcaption>
+          </figure>
+          {% endfor %}
+        </div>
+        <div class="tc-gallery-benchmark">
+          <p><strong>Your images should look like these.</strong> If your results are clearly grainier, darker or less sharp, something in the setup needs adjusting &mdash; the most common cause is <strong>under-exposure</strong>. <a href="#faq-noisy-image">See how to fix a grainy or noisy image</a>. Lines or artifacts in the image? <a href="#faq-line-artifacts">That is usually a calibration file</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK SUPPORT -->
+    <section class="tc-section" id="support">
+      <div class="container">
+        <p class="section-eyebrow">Quick Support</p>
+        <h2 class="section-headline tc-headline">Solve it chairside</h2>
+        <p class="tc-section-intro">Fast answers from the DC-Air<sup>&reg;</sup> User Q&amp;A and Troubleshooting Guide. Each card opens a quick summary, with a link to the full guide.</p>
+
+        <div class="tc-support-grid">
+          {%- set supportCards = [
+            { key: "install", title: "Correct Installation", desc: "Connection order, supported setups and the Device Manager check.", page: 3 },
+            { key: "workflow", title: "Daily Sensor Workflow", desc: "From dock to exposure to re-docking, step by step.", page: 4 },
+            { key: "battery", title: "Battery & LED Behaviour", desc: "Charging protocol, LED reference and the battery-level table.", page: 5 },
+            { key: "ble", title: "BLE Connection & Dock Placement", desc: "Normal behaviour, placement and automatic reconnection.", page: 6 },
+            { key: "xram", title: "Image Pending & Download Last Image", desc: "Onboard memory (XRAM) and recovering the last image.", page: 7 },
+            { key: "qa", title: "Troubleshooting Q&A", desc: "Problem-by-problem reference — causes, fixes, when to contact support.", page: 8 }
+          ] %}
+          {%- for card in supportCards %}
+          <article class="tc-support-card" data-guide-card="{{ card.key }}" data-guide-title="{{ card.title }}" data-guide-page="{{ card.page }}">
+            <span class="tc-support-icon" aria-hidden="true">
+              {%- if loop.index == 1 %}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              {%- elif loop.index == 2 %}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+              {%- elif loop.index == 3 %}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="18" height="11" rx="2"/><path d="M22 11v3"/><line x1="6" y1="10.5" x2="6" y2="14.5"/><line x1="10" y1="10.5" x2="10" y2="14.5"/></svg>
+              {%- elif loop.index == 4 %}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
+              {%- elif loop.index == 5 %}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              {%- else %}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              {%- endif %}
+            </span>
+            <h3 class="tc-support-title">{{ card.title }}</h3>
+            <p class="tc-support-desc">{{ card.desc }}</p>
+            <button type="button" class="tc-support-open" data-guide="{{ card.key }}">View summary <span class="tc-support-page">p. {{ card.page }}</span></button>
+          </article>
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- DOCUMENTS & DOWNLOADS -->
+    <section class="tc-section tc-section-alt" id="documents">
+      <div class="container">
+        <p class="section-eyebrow">Documents &amp; Downloads</p>
+        <h2 class="section-headline tc-headline">Reference documents and full library downloads</h2>
+
+        <div class="tc-doc-grid">
+          <article class="tc-doc-card">
+            <span class="tc-doc-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </span>
+            <div class="tc-doc-info">
+              <h3 class="tc-doc-title">DC-Air<sup>&reg;</sup> User Q&amp;A and Troubleshooting Guide</h3>
+              <p class="tc-doc-meta">{{ trainingVideos.documents.guide.pages }} pages &middot; {{ trainingVideos.documents.guide.version }} &middot; PDF</p>
+              <p class="tc-doc-desc">Practical guidance for daily use, common issues and technical support. Supplementary to the Instructions for Use.</p>
+            </div>
+            <div class="tc-doc-actions">
+              <a href="{{ trainingVideos.guidePdfUrl }}" target="_blank" rel="noopener" class="btn btn-secondary" data-tc-event="guide_open" data-tc-section="documents">View Guide</a>
+              <a href="{{ trainingVideos.guidePdfDownloadUrl }}" class="btn btn-outline tc-btn-outline" data-tc-event="download" data-tc-type="guide_pdf">Download PDF</a>
+            </div>
+          </article>
+
+          <article class="tc-doc-card">
+            <span class="tc-doc-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </span>
+            <div class="tc-doc-info">
+              <h3 class="tc-doc-title">DC-Air<sup>&reg;</sup> Instructions for Use</h3>
+              <p class="tc-doc-meta">{{ trainingVideos.documents.ifu.pages }} pages &middot; {{ trainingVideos.documents.ifu.revision }} &middot; PDF</p>
+              <p class="tc-doc-desc">The official Instructions for Use — the authoritative reference for operation, reprocessing and safety.</p>
+            </div>
+            <div class="tc-doc-actions">
+              <a href="{{ trainingVideos.ifuPdfUrl }}" target="_blank" rel="noopener" class="btn btn-secondary" data-tc-event="ifu_open">View Instructions</a>
+              <a href="{{ trainingVideos.ifuPdfDownloadUrl }}" class="btn btn-outline tc-btn-outline" data-tc-event="download" data-tc-type="ifu_pdf">Download PDF</a>
+            </div>
+          </article>
+
+          <article class="tc-doc-card">
+            <span class="tc-doc-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            </span>
+            <div class="tc-doc-info">
+              <h3 class="tc-doc-title">Chairside Quick Reference Card</h3>
+              <p class="tc-doc-meta">1 page &middot; {{ trainingVideos.documents.chairside.version }} &middot; PDF</p>
+              <p class="tc-doc-desc">The five most common issues, LED meanings and golden rules on one printable page — print it and keep it next to the X-ray unit.</p>
+            </div>
+            <div class="tc-doc-actions">
+              <a href="{{ trainingVideos.chairsidePdfUrl }}" target="_blank" rel="noopener" class="btn btn-secondary" data-tc-event="chairside_open" data-tc-section="documents">View &amp; Print</a>
+              <a href="{{ trainingVideos.chairsidePdfDownloadUrl }}" class="btn btn-outline tc-btn-outline" data-tc-event="download" data-tc-type="chairside_pdf">Download PDF</a>
+            </div>
+          </article>
+
+          <article class="tc-doc-card">
+            <span class="tc-doc-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+            </span>
+            <div class="tc-doc-info">
+              <h3 class="tc-doc-title">Clinical Training Video Library</h3>
+              <p class="tc-doc-meta">{{ trainingVideos.totalCount }} videos &middot; Approx. {{ trainingVideos.totalDuration }} &middot; English</p>
+              <p class="tc-doc-desc">The complete holder-positioning library in one download — available with or without English captions.</p>
+            </div>
+            <div class="tc-doc-actions tc-doc-actions-stack">
+              <a href="{{ trainingVideos.zipCaptionedUrl }}" class="btn btn-secondary" data-tc-event="download" data-tc-type="zip_captioned">Download all — English captions{% if trainingVideos.sizes.zipCaptioned.size %} <span class="tc-size">({{ trainingVideos.sizes.zipCaptioned.size }})</span>{% endif %}</a>
+              <a href="{{ trainingVideos.zipNoCaptionsUrl }}" class="btn btn-outline tc-btn-outline" data-tc-event="download" data-tc-type="zip_no_captions">Download all — no captions{% if trainingVideos.sizes.zipNoCaptions.size %} <span class="tc-size">({{ trainingVideos.sizes.zipNoCaptions.size }})</span>{% endif %}</a>
+            </div>
+          </article>
+
+          <article class="tc-doc-card">
+            <span class="tc-doc-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </span>
+            <div class="tc-doc-info">
+              <h3 class="tc-doc-title">Individual Training Videos</h3>
+              <p class="tc-doc-meta">MP4 &middot; captioned &amp; non-captioned editions</p>
+              <p class="tc-doc-desc">Individual downloads are also available from each video card in the Clinical Positioning Library.</p>
+            </div>
+            <div class="tc-doc-actions">
+              <a href="#library" class="btn btn-outline tc-btn-outline">Browse the library</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="tc-doc-revision-note">Documents are updated as new revisions are released — always download the latest version from this page rather than relying on previously saved copies.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT SUPPORT -->
+    <section class="tc-section tc-contact" id="contact">
+      <div class="container">
+        <p class="section-eyebrow section-eyebrow--light">Contact Support</p>
+        <h2 class="section-headline section-headline--light tc-headline">Need assistance?</h2>
+        <p class="tc-section-intro tc-section-intro--light">Contact the Athlos team for help with installation, positioning, image acquisition or troubleshooting.</p>
+
+        <div class="tc-contact-grid">
+          <div class="tc-contact-card">
+            <h3 class="tc-contact-name">Evangelos Spartiotis</h3>
+            <p class="tc-contact-email">evangelos.spartiotis@athlos.fi</p>
+            <a href="mailto:evangelos.spartiotis@athlos.fi?subject=DC-Air%20Support%20Request" class="btn btn-primary" data-tc-event="support_click" data-tc-contact="evangelos">Email Evangelos</a>
+          </div>
+          <div class="tc-contact-card">
+            <h3 class="tc-contact-name">Matt Powell</h3>
+            <p class="tc-contact-email">matt.powell@athlos.fi</p>
+            <a href="mailto:matt.powell@athlos.fi?subject=DC-Air%20Support%20Request" class="btn btn-primary" data-tc-event="support_click" data-tc-contact="matt">Email Matt</a>
+          </div>
+          <div class="tc-contact-card tc-contact-card-both">
+            <h3 class="tc-contact-name">Athlos DC-Air Support</h3>
+            <p class="tc-contact-email">Reach both contacts with one message</p>
+            <a href="mailto:evangelos.spartiotis@athlos.fi,matt.powell@athlos.fi?subject=DC-Air%20Support%20Request" class="btn btn-outline tc-btn-outline-dark" data-tc-event="support_click" data-tc-contact="both">Email Both</a>
+          </div>
+        </div>
+
+        <div class="tc-checklist">
+          <h3 class="tc-checklist-title">Before contacting support</h3>
+          <p class="tc-checklist-intro">Please include the following whenever possible — a precise date and time is the single most useful item:</p>
+          <ul class="tc-checklist-items">
+            <li>Sensor serial number</li>
+            <li>Date and approximate time of the issue</li>
+            <li>A clear description of what happened</li>
+            <li>Whether an image was received</li>
+            <li>Whether Image Pending appeared</li>
+            <li>The relevant Athlos log file</li>
+            <li>Relevant repository .bin files</li>
+            <li>Photos, if physical damage is involved</li>
+            <li>Cleaning / disinfection information, if physical damage is involved</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (simplified private-page footer) -->
+  <footer class="tc-footer">
+    <div class="container">
+      <p class="tc-disclaimer">These training materials are intended for trained dental professionals and authorised DC-Air distribution partners. They supplement, but do not replace, the official Instructions for Use, applicable clinical procedures or local requirements.</p>
+      <div class="tc-footer-row">
+        <p>© 2026 Athlos Oy. All rights reserved. Made in Finland.</p>
+        <p>ISO 13485:2016 Certified &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- VIDEO PLAYER MODAL -->
+  <dialog class="tc-player" id="tcPlayer" aria-labelledby="tcPlayerTitle">
+    <div class="tc-player-inner">
+      <button type="button" class="tc-player-close" id="tcPlayerClose" aria-label="Close player">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="tc-player-stage">
+        <button type="button" class="tc-player-nav tc-player-prev" id="tcPlayerPrev" aria-label="Previous video">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="tc-player-video-wrap">
+          <video id="tcPlayerVideo" controls playsinline preload="metadata"></video>
+          <div class="tc-player-spinner" id="tcSpinner" hidden aria-hidden="true"><span></span></div>
+          <div class="tc-player-upnext" id="tcUpnext" hidden>
+            <button type="button" id="tcUpnextBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              <span>Up next: <strong id="tcUpnextTitle"></strong></span>
+            </button>
+          </div>
+          <p class="tc-player-unavailable" id="tcUnavailable" hidden>Video streaming will be available here soon.</p>
+        </div>
+        <button type="button" class="tc-player-nav tc-player-next" id="tcPlayerNext" aria-label="Next video">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+      <div class="tc-player-info">
+        <div class="tc-player-meta">
+          <span class="tc-badge tc-badge-cat" id="tcPlayerCat"></span>
+          <span class="tc-badge tc-badge-dur" id="tcPlayerDur"></span>
+        </div>
+        <h2 class="tc-player-title" id="tcPlayerTitle"></h2>
+        <p class="tc-player-desc" id="tcPlayerDesc"></p>
+        <p class="tc-player-note" id="tcPlayerNote" hidden>Positioning demonstration only</p>
+        <div class="tc-player-downloads">
+          <a href="#" class="btn btn-secondary" id="tcPlayerDlCap" data-tc-event="download" data-tc-type="video_captioned">Download with English captions</a>
+          <a href="#" class="btn btn-outline tc-btn-outline-dark" id="tcPlayerDlNoCap" data-tc-event="download" data-tc-type="video_no_captions">Download without captions</a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- YOUTUBE MODAL -->
+  <dialog class="tc-player tc-yt-modal" id="tcYtModal" aria-label="Video player">
+    <div class="tc-player-inner tc-yt-inner">
+      <button type="button" class="tc-player-close" id="tcYtClose" aria-label="Close player">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="tc-yt-frame" id="tcYtFrame"></div>
+    </div>
+  </dialog>
+
+  <!-- QUICK SUPPORT SUMMARY MODAL -->
+  {#- Summary text is taken verbatim (condensed, not reworded) from the
+      DC-Air User Q&A and Troubleshooting Guide v2026.1. The PDF remains
+      the authoritative reference — every panel links to it. -#}
+  <dialog class="tc-img-modal" id="tcImgModal" aria-label="Sample radiograph">
+    <button type="button" class="tc-player-close" id="tcImgClose" aria-label="Close">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <figure>
+      <img id="tcImgFull" src="" alt="">
+      <figcaption id="tcImgLabel"></figcaption>
+    </figure>
+  </dialog>
+
+  <dialog class="tc-guide" id="tcGuide" aria-labelledby="tcGuideTitle">
+    <div class="tc-guide-inner">
+      <button type="button" class="tc-player-close" id="tcGuideClose" aria-label="Close summary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <p class="tc-guide-eyebrow">Quick Support</p>
+      <h2 class="tc-guide-title" id="tcGuideTitle"></h2>
+      <div class="tc-guide-body" id="tcGuideBody"></div>
+      <div class="tc-guide-foot">
+        <p class="tc-guide-note">Summary only — the User Q&amp;A and Troubleshooting Guide is the authoritative reference.</p>
+        <a href="#" target="_blank" rel="noopener" class="btn btn-secondary" id="tcGuidePdf" data-tc-event="guide_open">Open full guide <span class="tc-support-page" id="tcGuidePdfPage"></span></a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Hidden guide summary contents (cloned into the modal on open) -->
+  <div id="tcGuideContents" hidden data-pdf-base="{{ trainingVideos.guidePdfUrl }}">
+    <section data-guide-content="install">
+      <ol class="tc-guide-steps">
+        <li><strong>Fit the antenna.</strong> Screw the antenna firmly onto the docking station.</li>
+        <li><strong>Confirm the PC.</strong> The PC must run Windows — other operating systems are not supported. Low-power Pentium or Celeron processors are not supported.</li>
+        <li><strong>Connect the dock.</strong> Use the supplied USB-C to USB-A cable to connect the dock directly to a free USB port on the PC.</li>
+        <li><strong>Dock the sensor.</strong> Confirm the dock LED is blue, and that both the sensor and the dock appear in Windows Device Manager.</li>
+        <li><strong>Launch &amp; check.</strong> Start TWAIN and check the battery status. If the status is not &ldquo;Ready&rdquo;, let the DC-Air charge for at least 1 hour, then continue.</li>
+      </ol>
+      <p class="tc-guide-callout"><strong>Order matters.</strong> TWAIN is launched <em>after</em> the DC-Air has been docked, not before.</p>
+      <p class="tc-guide-warn"><strong>Not supported:</strong> virtual connections, parallel machines, tablets, USB extensions / hubs, and cables longer than 2&nbsp;m. Connect the dock straight into a PC USB port only.</p>
+    </section>
+
+    <section data-guide-content="workflow">
+      <h3 class="tc-guide-sub">Prepare &amp; position</h3>
+      <ol class="tc-guide-steps">
+        <li><strong>Undock and wait</strong> 3 seconds before using the sensor.</li>
+        <li><strong>Check the LEDs.</strong> A double green flash on the sensor means BLE is connected; the dock LED pulses blue slowly.</li>
+        <li><strong>New sheath</strong> — a fresh protective sheath for every patient.</li>
+        <li><strong>Mount on the holder.</strong> Choose the correct holder, mount the DC-Air, attach the stick and alignment ring.</li>
+        <li><strong>Position gently</strong> in the mouth.</li>
+      </ol>
+      <h3 class="tc-guide-sub">Expose &amp; finish</h3>
+      <ol class="tc-guide-steps">
+        <li><strong>Align the cone</strong> through the alignment ring until it almost touches the bite block, keeping the cone axis parallel — no cone-cut.</li>
+        <li><strong>Expose &amp; hold out.</strong> Shoot, then hold the sensor outside the mouth until transfer is complete (about 6 seconds).</li>
+        <li><strong>Reposition and repeat</strong> as needed.</li>
+        <li><strong>Dock.</strong> Always dock the DC-Air after use and between patients.</li>
+      </ol>
+      <p class="tc-guide-warn"><strong>Never</strong> re-use a sheath between patients, and never use the sensor without a sheath inside the patient&rsquo;s mouth.</p>
+    </section>
+
+    <section data-guide-content="battery">
+      <h3 class="tc-guide-sub">LED quick reference</h3>
+      <ul class="tc-guide-list">
+        <li><strong>Sensor &middot; double green flash</strong> — BLE connected, ready to use (just undocked).</li>
+        <li><strong>Sensor &middot; steady yellow</strong> — error, almost always a depleted or empty battery. Dock and charge before continuing.</li>
+        <li><strong>Sensor &middot; off</strong> — asleep or switched off. Dock to wake / charge.</li>
+        <li><strong>Dock &middot; pulsing blue</strong> — dock powered and charging.</li>
+      </ul>
+      <h3 class="tc-guide-sub">Battery level in TWAIN</h3>
+      <ul class="tc-guide-list">
+        <li><strong>100&nbsp;%</strong> — fully charged. Normal use; dock between patients.</li>
+        <li><strong>75&nbsp;%</strong> — normal working level. A drop from 100&nbsp;% to 75&nbsp;% after one exposure is normal.</li>
+        <li><strong>50&nbsp;%</strong> — still ready for use; charge when convenient.</li>
+        <li><strong>10&nbsp;%</strong> — battery low. Dock and charge before continuing.</li>
+      </ul>
+      <p class="tc-guide-callout"><strong>Charging protocol:</strong> dock after every use and between patients. Leave the DC-Air docked overnight with the PC on, so the USB port stays powered.</p>
+    </section>
+
+    <section data-guide-content="ble">
+      <h3 class="tc-guide-sub">Normal BLE behaviour</h3>
+      <ul class="tc-guide-list">
+        <li>Transmission begins about 1 second after the trigger and completes in about 5&ndash;7 seconds.</li>
+        <li>Hold the sensor outside the mouth, in line of sight with the dock, during transfer.</li>
+        <li>If BLE drops, the dock automatically retries three times within 30 seconds — give it that time before intervening.</li>
+      </ul>
+      <h3 class="tc-guide-sub">Where to place the dock</h3>
+      <ul class="tc-guide-list">
+        <li><strong>Recommended:</strong> in front of the patient, or within &plusmn;45&deg;, with a clear line of sight to the sensor during transfer.</li>
+        <li><strong>Avoid:</strong> behind the patient or head/neck, and keeping the sensor inside a closed mouth during transfer.</li>
+      </ul>
+      <p class="tc-guide-callout"><strong>If BLE disconnects:</strong> screw the antenna on firmly &middot; dock and charge &ge;&nbsp;45 min if the battery is depleted &middot; reposition the dock in front / &plusmn;45&deg; &middot; wait for the 3 automatic reconnections; if it does not recover, restart TWAIN and reconnect the dock.</p>
+    </section>
+
+    <section data-guide-content="xram">
+      <ul class="tc-guide-list">
+        <li><strong>XRAM</strong> is onboard memory that safely keeps one image — the last one acquired. A new trigger replaces it; the image is lost only if the sensor switches off.</li>
+        <li><strong>Image Pending</strong> is raised when an image was acquired but not transferred or displayed. It tells you there is an image in XRAM — so you do not retake the X-ray unnecessarily.</li>
+      </ul>
+      <h3 class="tc-guide-sub">Use &ldquo;Download Last Image&rdquo; when&hellip;</h3>
+      <ul class="tc-guide-list">
+        <li>The Image Pending flag is active.</li>
+        <li>You shot X-rays but did not receive an image on screen.</li>
+        <li>You have just restarted frozen software — the image is still in XRAM.</li>
+      </ul>
+      <p class="tc-guide-warn"><strong>Do not retake.</strong> If no image appears, check Image Pending / Download Last Image before retaking. Retaking wastes a frame and exposes the patient to additional dose unnecessarily.</p>
+    </section>
+
+    <section data-guide-content="qa">
+      <p class="tc-guide-intro">The guide covers these problems one by one — each with causes, what to do, and when to contact support:</p>
+      <ul class="tc-guide-list tc-guide-list-2col">
+        <li><strong>A</strong> Noisy / grainy image</li>
+        <li><strong>B</strong> Line or other artifacts</li>
+        <li><strong>C</strong> BLE disconnected</li>
+        <li><strong>D</strong> BLE connected but no image transmitted</li>
+        <li><strong>E</strong> X-rays shot but no trigger</li>
+        <li><strong>F</strong> Docked during BLE transmission</li>
+        <li><strong>G</strong> Rapid docking / undocking</li>
+        <li><strong>H</strong> Rogue or self triggers</li>
+        <li><strong>I</strong> Front cover came off</li>
+        <li><strong>J</strong> Consistent black or white images</li>
+        <li><strong>K</strong> Dock not recognised in Device Manager</li>
+        <li><strong>L</strong> Docking-station broken tabs</li>
+        <li><strong>M</strong> Software / third-party imaging issues</li>
+        <li><strong>N</strong> Data corruption / lost synchronisation</li>
+      </ul>
+      <p class="tc-guide-callout">A precise <strong>date and time</strong> of the event is the single most useful thing you can provide to support.</p>
+    </section>
+  </div>
+
+  <script>
+    // Video metadata for the player (rendered from src/_data/trainingVideos.js).
+    window.tcVideos = {{ trainingVideos.videos | dump | safe }};
+    window.tcFaqIndex = [{% for item in trainingFaq.faq %}{"id":{{ item.id | dump | safe }},"cat":{{ item.category | dump | safe }},"q":{{ item.question | dump | safe }},"kw":{{ item.keywords | dump | safe }}}{% if not loop.last %},{% endif %}{% endfor %}];
+    window.tcCategories = {{ trainingVideos.categories | dump | safe }};
+  </script>
+  <script src="/js/training.js" defer></script>
+  <script src="/js/cookie-banner.js" defer></script>
+</body>
+</html>

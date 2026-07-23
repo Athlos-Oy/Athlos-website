@@ -1,0 +1,125 @@
+---
+permalink: /training-login.html
+eleventyExcludeFromCollections: true
+---
+{#- DC-Air® Training Center — login screen.
+    Served by middleware.js as a rewrite when /dc-air-training is
+    requested without a valid session. English-only by design (like
+    cefla.html); intentionally outside the i18n pipeline and standalone
+    (no base layout: no hreflang, no og, no sitemap, noindex). -#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DC-Air® Training Center | Athlos</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap"></noscript>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/training.css">
+</head>
+<body class="tc-login-body">
+
+  <main class="tc-login" aria-labelledby="tc-login-title">
+    <div class="tc-login-glow" aria-hidden="true"></div>
+    <div class="tc-login-card">
+      <a href="/" class="tc-login-logo" aria-label="Athlos home">
+        <img src="/images/athlos-logo-nav.webp" width="354" height="220" alt="Athlos">
+      </a>
+      <p class="tc-login-eyebrow">Private customer resource</p>
+      <h1 id="tc-login-title" class="tc-login-title">DC-Air<sup>&reg;</sup> Training Center</h1>
+      <p class="tc-login-sub">Clinical training, positioning guidance and support resources for authorised DC-Air users and distribution partners.</p>
+
+      <form id="tcLoginForm" novalidate>
+        <label for="tcPassword" class="tc-login-label">Password</label>
+        <div class="tc-login-field">
+          <input type="password" id="tcPassword" name="password" autocomplete="current-password" required
+                 class="tc-login-input" aria-describedby="tcLoginError">
+          <button type="button" class="tc-login-toggle" id="tcToggle" aria-label="Show password" aria-pressed="false">
+            <svg class="tc-eye" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            <svg class="tc-eye-off" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+          </button>
+        </div>
+        <p id="tcLoginError" class="tc-login-error" role="alert" aria-live="assertive" hidden></p>
+        <button type="submit" class="btn btn-primary tc-login-submit" id="tcSubmit">Access Training Center</button>
+      </form>
+
+      <p class="tc-login-note">Access is provided to authorised Athlos customers and distribution partners.</p>
+      <p class="tc-login-note tc-login-help">Need access? Contact your Athlos representative.</p>
+    </div>
+  </main>
+
+  <script>
+  (function () {
+    'use strict';
+    var form = document.getElementById('tcLoginForm');
+    var input = document.getElementById('tcPassword');
+    var toggle = document.getElementById('tcToggle');
+    var error = document.getElementById('tcLoginError');
+    var submit = document.getElementById('tcSubmit');
+
+    // Printed chairside cards carry a QR code ending in #k=<password>.
+    // The fragment never reaches the server or logs; prefill and let the
+    // user just press Sign in.
+    if (location.hash.indexOf('#k=') === 0) {
+      input.value = decodeURIComponent(location.hash.slice(3));
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+
+    toggle.addEventListener('click', function () {
+      var show = input.type === 'password';
+      input.type = show ? 'text' : 'password';
+      toggle.setAttribute('aria-pressed', String(show));
+      toggle.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+      toggle.querySelector('.tc-eye').style.display = show ? 'none' : '';
+      toggle.querySelector('.tc-eye-off').style.display = show ? '' : 'none';
+      input.focus();
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      error.hidden = true;
+      if (!input.value) {
+        error.textContent = 'Please enter the access password.';
+        error.hidden = false;
+        input.focus();
+        return;
+      }
+      submit.disabled = true;
+      submit.textContent = 'Checking…';
+      fetch('/api/training-login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password: input.value })
+      }).then(function (r) { return r.json().then(function (d) { return { ok: r.ok, data: d }; }); })
+        .then(function (res) {
+          if (res.ok && res.data && res.data.ok) {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({ event: 'training_login', login_result: 'success' });
+            window.location.replace('/dc-air-training');
+          } else {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({ event: 'training_login', login_result: 'failure' });
+            error.textContent = (res.data && res.data.error) || 'Incorrect password. Please check it and try again.';
+            error.hidden = false;
+            submit.disabled = false;
+            submit.textContent = 'Access Training Center';
+            input.select();
+          }
+        })
+        .catch(function () {
+          error.textContent = 'Could not reach the server. Please check your connection and try again.';
+          error.hidden = false;
+          submit.disabled = false;
+          submit.textContent = 'Access Training Center';
+        });
+    });
+  })();
+  </script>
+</body>
+</html>
