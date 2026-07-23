@@ -142,6 +142,16 @@ eleventyExcludeFromCollections: true
               <ol class="tc-faq-steps">
                 {% for step in item.steps %}<li>{{ step | safe }}</li>{% endfor %}
               </ol>
+              {% if item.images %}
+              <div class="tc-faq-imgs">
+                {% for img in item.images %}
+                <figure>
+                  <img src="{{ img.src }}" alt="{{ img.caption }}" loading="lazy" width="940" height="526">
+                  <figcaption>{{ img.caption }}</figcaption>
+                </figure>
+                {% endfor %}
+              </div>
+              {% endif %}
               {% if item.note %}<p class="tc-faq-note">{{ item.note | safe }}</p>{% endif %}
               <div class="tc-faq-foot">
                 {% if item.link %}

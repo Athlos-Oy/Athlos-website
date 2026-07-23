@@ -352,6 +352,43 @@ const FAQ = [
     source: { doc: "ifu", page: 37 },
   },
   {
+    id: "imaging-software",
+    category: "usage",
+    question: "Does DC-Air include an imaging software?",
+    keywords:
+      "imaging software included come with viewer program missing no software free twain only interface "
+      + "which where open launch start folder shortcut exe acquire xray button separate need",
+    steps: [
+      "Athlos supplies the <strong>TWAIN interface</strong> — the driver-level bridge that connects DC-Air to imaging software. It is not a separate imaging program.",
+      "Your existing <strong>imaging software opens TWAIN by itself</strong>, usually from its acquire / X-ray button. <strong>Never open TWAIN manually</strong> from a folder, desktop shortcut or .exe — it is always launched by the imaging software.",
+      "If your clinic does not have an imaging software, <strong>contact us</strong> — we can provide a very simple imaging software <strong>free of charge</strong>.",
+    ],
+    link: { href: "#contact", label: "Contact us about imaging software" },
+    images: [
+      { src: "/dc-air-training/assets/twain/twain-ready.webp", caption: "The TWAIN interface, opened by your imaging software" },
+    ],
+  },
+  {
+    id: "twain-statuses",
+    category: "usage",
+    question: "What do the TWAIN screens mean? (Docked / Scanning / Ready)",
+    keywords:
+      "twain status screen ui docked scanning connecting ready green blue grey gray view display state meaning looks",
+    steps: [
+      "<strong>DOCKED</strong> — the sensor is on the docking station, charging. Lift it off and wait 3 seconds.",
+      "<strong>SCANNING</strong> (blue glow) — the dock is connecting to the sensor over Bluetooth. Give it a moment; no exposures yet.",
+      "<strong>READY</strong> (green glow) — the sensor is connected and waiting for X-rays. Only expose when you see the green Ready state.",
+      "Never acquire an exposure until TWAIN shows the green <strong>“Ready”</strong> status.",
+    ],
+    note: "The battery % and signal strength (dB) are shown next to the serial number — battery may drop 100% → 75% after one exposure, which is normal.",
+    source: { doc: "guide", page: 5 },
+    images: [
+      { src: "/dc-air-training/assets/twain/twain-docked.webp", caption: "Docked — charging on the station" },
+      { src: "/dc-air-training/assets/twain/twain-scanning.webp", caption: "Scanning — connecting over Bluetooth" },
+      { src: "/dc-air-training/assets/twain/twain-ready.webp", caption: "Ready — green, safe to expose" },
+    ],
+  },
+  {
     id: "software-integrations",
     category: "usage",
     question: "Does DC-Air work with my imaging software?",
@@ -376,7 +413,7 @@ const FAQ = [
       "Confirm the PC runs <strong>Windows</strong> (no tablets, no virtual machines).",
       "Connect the dock with the supplied cable <strong>directly to a PC USB port</strong>.",
       "<strong>Dock the sensor</strong>, confirm the dock LED is blue and both devices appear in Device Manager.",
-      "Only then launch TWAIN and check the status — the order matters: <strong>TWAIN after docking</strong>.",
+      "Only then open TWAIN <strong>through your imaging software</strong> (its acquire / X-ray button) — never directly from a folder. The order matters: <strong>TWAIN after docking</strong>.",
       "If the status is not “Ready”, charge for at least 1 hour and re-check.",
     ],
     source: { doc: "guide", page: 3 },
