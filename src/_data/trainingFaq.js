@@ -354,7 +354,7 @@ const FAQ = [
     question: "Which holder do I use for each position?",
     keywords: "holder holders positioning position anterior posterior bitewing endo occlusal which choose kit stick ring",
     steps: [
-      "Watch the <strong>positioning videos</strong> in the library above — each video covers one holder and clinical situation, from anterior to bitewing and endodontic.",
+      "Watch the <strong>positioning videos</strong> in the library above — each video covers one holder and clinical situation, from anterior to bitewing and occlusal.",
       "Position the sensor in the holder per the holder manufacturer's instructions.",
       "The list of recommended sensor holders is in IFU Appendix E.",
     ],

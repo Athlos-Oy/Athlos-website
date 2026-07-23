@@ -57,21 +57,21 @@ const VIDEOS = [
     category: "posterior", duration: "1:44",
   },
   {
-    num: "06", slug: "lower-posterior-cotton-roll", stem: "DC-Air_Training_06_Lower_Posterior_Cotton_Roll",
-    title: "Lower Posterior Positioning with Cotton Roll",
-    description: "Using a cotton roll with the lower posterior holder for stable placement.",
+    num: "06", slug: "upper-posterior-wisdom-tooth", stem: "DC-Air_Training_06_Lower_Posterior_Cotton_Roll",
+    title: "Upper Posterior Positioning — Wisdom Tooth",
+    description: "Positioning the posterior holder for upper posterior exposures in the wisdom tooth region.",
     category: "posterior", duration: "1:52",
   },
   {
-    num: "07", slug: "lower-posterior-comfort", stem: "DC-Air_Training_07_Lower_Posterior_Comfort",
-    title: "Lower Posterior Comfort Technique",
-    description: "A cotton-roll variation that improves patient comfort in the lower posterior region.",
+    num: "07", slug: "lower-posterior-cotton-roll", stem: "DC-Air_Training_07_Lower_Posterior_Comfort",
+    title: "Lower Posterior Positioning with Cotton Roll",
+    description: "Using a cotton roll with the posterior holder for stable, comfortable placement in the lower posterior region.",
     category: "posterior", duration: "1:42",
   },
   {
-    num: "08", slug: "bitewing-distal", stem: "DC-Air_Training_08_Bitewing_Distal",
-    title: "Bitewing Holder Using Distal Positioning",
-    description: "Taking bitewings with the bitewing holder using the distal positioning technique.",
+    num: "08", slug: "bitewing-mesial", stem: "DC-Air_Training_08_Bitewing_Distal",
+    title: "Bitewing Holder Using Mesial Positioning",
+    description: "Taking bitewings with the bitewing holder using the mesial positioning technique.",
     category: "bitewing", duration: "3:39",
   },
   {
@@ -81,20 +81,21 @@ const VIDEOS = [
     category: "bitewing", duration: "1:09",
   },
   {
-    num: "10", slug: "endodontic-holder", stem: "DC-Air_Training_10_Endodontic_Holder",
-    title: "Endodontic Holder Positioning",
-    description: "How to mount and position the endodontic holder.",
-    category: "special", duration: "0:54", positioningOnly: true,
-  },
-  {
-    num: "11", slug: "occlusal-holder", stem: "DC-Air_Training_11_Occlusal_Holder",
+    num: "10", slug: "occlusal-holder", stem: "DC-Air_Training_10_Endodontic_Holder",
     title: "Occlusal Holder Positioning",
     description: "How to mount and position the occlusal holder.",
     category: "special", duration: "0:54", positioningOnly: true,
+  },
+  {
+    num: "11", slug: "endodontic-holder", stem: "DC-Air_Training_11_Occlusal_Holder",
+    title: "Endodontic Holder Positioning",
+    description: "How to mount and position the endodontic holder.",
+    category: "special", duration: "0:54", positioningOnly: true,
     // The supplied source file duplicates video 10's footage (verified
-    // frame-by-frame 2026-07-20). Hidden from the page and excluded from
-    // the ZIPs until FTG delivers the real occlusal export — then delete
-    // this flag, upload the files, rebuild the ZIPs.
+    // frame-by-frame 2026-07-20), which shows the OCCLUSAL holder — so the
+    // missing video is the endodontic one. Hidden from the page and excluded
+    // from the ZIPs until FTG delivers the real endodontic export — then
+    // delete this flag, upload the files, rebuild the ZIPs.
     status: "pending-replacement",
   },
 ];

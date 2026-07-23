@@ -82,11 +82,19 @@ The page, filters, player, download links, video counts and total
 duration all render from it.
 
 A video with `status: "pending-replacement"` is **excluded from the
-page and should be excluded from the ZIPs** (video 11 "Occlusal Holder"
-is currently in this state — its supplied source file duplicated video
-10's footage; awaiting the correct export from FTG. To publish it:
-delete the `status` line, upload both MP4s, rebuild + re-upload the
-ZIPs, update ZIP sizes here).
+page and should be excluded from the ZIPs** (video 11 "Endodontic
+Holder" is currently in this state — its supplied source file duplicated
+video 10's footage, which shows the occlusal holder; awaiting the
+endodontic export from FTG. To publish it: delete the `status` line,
+upload both MP4s, rebuild + re-upload the ZIPs, update ZIP sizes here).
+
+Note (2026-07-23): several video titles were corrected per Athlos —
+06 is upper posterior (wisdom tooth), 07 is the lower posterior cotton
+roll technique, 08 uses mesial (not distal) positioning, 10 is the
+occlusal (not endodontic) holder. The media **filenames** (stems) still
+carry the old names — renaming them would require re-uploading all
+media and rebuilding the ZIPs, so titles and filenames intentionally
+differ for 06/07/08/10.
 
 Document revisions (IFU revision, guide version) also live in this file
 (`DOCUMENTS`) and render on the cards — bump them there when a new
