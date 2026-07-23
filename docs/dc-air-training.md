@@ -191,6 +191,24 @@ the Troubleshooting Guide and the IFU.
 - When a document revision changes page numbers, update the `source.page`
   values in trainingFaq.js at the same time as the PDF upload.
 
+### Search log
+
+Every settled search (1.2 s after the user stops typing) is also stored
+server-side by `api/training-search-log.js` into the blob store as
+**`logs/searches-YYYY-MM.jsonl`** — one JSON line per search with UTC
+timestamp, the query, how many answers matched, and the id of the best
+match. No IPs or user identifiers are stored.
+
+To read a month's log, either open the file in the Vercel dashboard
+(Storage → dcair-training → logs/) or fetch it directly:
+`https://trhnl2gfkxwrmjnj.public.blob.vercel-storage.com/logs/searches-2026-07.jsonl`
+(append `?cb=1` if the CDN shows a stale copy). Lines with `"n":0` are
+searches that found nothing — the to-do list for new FAQ entries.
+
+The endpoint requires a valid session cookie, so it can't be spammed
+anonymously. Writes are read-modify-write (not atomic); with a handful
+of searches a day the risk of losing a line to a race is accepted.
+
 ## Chairside Quick Reference card
 
 `docs/DC-Air_Chairside_Quick_Reference_2026-07.pdf` in the blob store — a

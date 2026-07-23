@@ -576,7 +576,35 @@
         search_query: query.toLowerCase().slice(0, 80),
         search_results: results.length
       });
+      logSearch(query, results);
     }, 1200);
+  }
+
+  // Server-side search log (logs/searches-YYYY-MM.jsonl in the blob
+  // store) — fire-and-forget, deduped so backspacing through a query
+  // doesn't log the same settled string twice in a row.
+  var lastLogged = '';
+  function logSearch(query, results) {
+    var q = query.toLowerCase().slice(0, 120);
+    if (q === lastLogged) return;
+    lastLogged = q;
+    var payload = JSON.stringify({
+      q: q,
+      n: results.length,
+      top: results.length ? results[0].id : ''
+    });
+    try {
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon('/api/training-search-log', new Blob([payload], { type: 'application/json' }));
+      } else {
+        fetch('/api/training-search-log', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: payload,
+          keepalive: true
+        });
+      }
+    } catch (e) { /* logging must never break search */ }
   }
 
   if (faqSearch) {
