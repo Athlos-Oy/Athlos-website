@@ -33,6 +33,9 @@ const FAQ = [
     ],
     note: "If drops continue with good placement, a charged battery and a firm antenna, collect the log file and contact support.",
     source: { doc: "guide", page: 8 },
+    images: [
+      { src: "/dc-air-training/assets/twain/twain-scanning.webp", caption: "TWAIN shows “Scanning” (blue) while reconnecting — give it up to 30 s" },
+    ],
   },
   {
     id: "dock-placement",
@@ -59,6 +62,9 @@ const FAQ = [
       "Repeat this every time a sensor moves to a different operatory.",
     ],
     source: { doc: "ifu", page: 19 },
+    images: [
+      { src: "/dc-air-training/assets/twain/twain-docked.webp", caption: "TWAIN shows “Docked” while the sensor is on the station" },
+    ],
   },
   {
     id: "dock-not-recognised",
@@ -273,6 +279,9 @@ const FAQ = [
       "<strong>Dock the sensor</strong> after use and between patients — always.",
     ],
     source: { doc: "guide", page: 4 },
+    images: [
+      { src: "/dc-air-training/assets/twain/twain-ready.webp", caption: "Expose only when TWAIN shows the green “Ready” state" },
+    ],
   },
   {
     id: "exposure-settings",
@@ -369,16 +378,18 @@ const FAQ = [
     ],
   },
   {
-    id: "twain-statuses",
+    id: "how-twain-works",
     category: "usage",
-    question: "What do the TWAIN screens mean? (Docked / Scanning / Ready)",
+    question: "How does TWAIN work with DC-Air?",
     keywords:
-      "twain status screen ui docked scanning connecting ready green blue grey gray view display state meaning looks",
+      "twain how works work interface driver datasource status screen ui docked scanning connecting ready "
+      + "green blue state meaning looks acquire flow explain understand stuck stays hangs forever long",
     steps: [
-      "<strong>DOCKED</strong> — the sensor is on the docking station, charging. Lift it off and wait 3 seconds.",
+      "TWAIN is the standard interface between DC-Air and your imaging software. Your <strong>imaging software opens it</strong> from its acquire / X-ray button — you never open TWAIN from a folder yourself.",
+      "While the sensor sits on the station, TWAIN shows <strong>DOCKED</strong> — the sensor is charging. Lift it off and wait 3 seconds.",
       "<strong>SCANNING</strong> (blue glow) — the dock is connecting to the sensor over Bluetooth. Give it a moment; no exposures yet.",
-      "<strong>READY</strong> (green glow) — the sensor is connected and waiting for X-rays. Only expose when you see the green Ready state.",
-      "Never acquire an exposure until TWAIN shows the green <strong>“Ready”</strong> status.",
+      "<strong>READY</strong> (green glow) — the sensor is connected and waiting for X-rays. <strong>Only expose when you see the green Ready state.</strong>",
+      "After the exposure, TWAIN transfers the image and hands it to your imaging software automatically.",
     ],
     note: "The battery % and signal strength (dB) are shown next to the serial number — battery may drop 100% → 75% after one exposure, which is normal.",
     source: { doc: "guide", page: 5 },
