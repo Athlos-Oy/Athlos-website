@@ -65,7 +65,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><style>
       <div class="led-row"><span class="dot y"></span><b>Flashing yellow</b><span>Battery low &mdash; dock 15 min</span></div>
       <div class="led-row"><span class="dot y"></span><b>Steady yellow</b><span>Error / battery empty &mdash; dock &amp; charge</span></div>
       <div class="led-row"><span class="dot off"></span><b>Light off</b><span>Asleep &mdash; dock 10 s to wake</span></div>
-      <div class="led-row"><span class="dot b"></span><b>Dock steady blue</b><span>Powered &mdash; sensor charging</span></div>
+      <div class="led-row"><span class="dot b"></span><b>Dock pulsing blue</b><span>Powered &mdash; sensor charging</span></div>
     </div>
     <div class="panel">
       <h2>Golden rules</h2>

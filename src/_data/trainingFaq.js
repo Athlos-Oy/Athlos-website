@@ -104,7 +104,7 @@ const FAQ = [
       "<strong>Sensor — flashing yellow:</strong> battery low — dock for at least 15 minutes.",
       "<strong>Sensor — steady yellow:</strong> error, almost always a depleted or empty battery. Dock and charge.",
       "<strong>Sensor — off:</strong> asleep or switched off — dock to wake and charge.",
-      "<strong>Dock — steady blue:</strong> powered, sensor charging.",
+      "<strong>Dock — pulsing blue:</strong> powered, sensor charging.",
     ],
     source: { doc: "guide", page: 5 },
   },
@@ -271,7 +271,7 @@ const FAQ = [
     keywords: "workflow routine steps order daily use how take xray procedure sequence correct",
     steps: [
       "Undock and <strong>wait 3 seconds</strong> before using the sensor.",
-      "Check the LEDs: <strong>double green flash</strong> on the sensor, steady blue on the dock.",
+      "Check the LEDs: <strong>double green flash</strong> on the sensor, slow blue pulse on the dock.",
       "Insert the sensor into a <strong>new protective sheath</strong> — a fresh one for every patient.",
       "Mount on the correct holder, attach the stick and alignment ring, and position gently.",
       "Feed the cone through the alignment ring until it almost touches the bite block, then expose.",
