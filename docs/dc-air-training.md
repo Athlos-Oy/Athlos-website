@@ -89,12 +89,16 @@ endodontic export from FTG. To publish it: delete the `status` line,
 upload both MP4s, rebuild + re-upload the ZIPs, update ZIP sizes here).
 
 Note (2026-07-23): several video titles were corrected per Athlos —
-06 is upper posterior (wisdom tooth), 07 is the lower posterior cotton
-roll technique, 08 uses mesial (not distal) positioning, 10 is the
-occlusal (not endodontic) holder. The media **filenames** (stems) still
-carry the old names — renaming them would require re-uploading all
-media and rebuilding the ZIPs, so titles and filenames intentionally
-differ for 06/07/08/10.
+07 is the lower posterior cotton roll technique, 08 uses mesial (not
+distal) positioning, 10 is the occlusal (not endodontic) holder. The
+media **filenames** (stems) still carry the old names — renaming them
+would require re-uploading all media, so titles and filenames
+intentionally differ for 07/08/10.
+
+Video 06 turned out to be the same footage as video 05 (frame-compared
+2026-07-23) and is hidden with `status: "duplicate-of-05"`. The ZIPs
+were rebuilt without it as `..._2026-07b.zip` (9 videos each); the old
+`..._2026-07.zip` blobs and video 06's MP4 blobs were deleted.
 
 Document revisions (IFU revision, guide version) also live in this file
 (`DOCUMENTS`) and render on the cards — bump them there when a new

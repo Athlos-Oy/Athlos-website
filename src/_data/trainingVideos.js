@@ -61,6 +61,10 @@ const VIDEOS = [
     title: "Upper Posterior Positioning — Wisdom Tooth",
     description: "Positioning the posterior holder for upper posterior exposures in the wisdom tooth region.",
     category: "posterior", duration: "1:52",
+    // Same footage as video 05 (frame-compared 2026-07-23; 06 is just an
+    // ~8 s longer cut of the same wisdom-tooth session). Hidden and
+    // excluded from the ZIPs as a duplicate.
+    status: "duplicate-of-05",
   },
   {
     num: "07", slug: "lower-posterior-cotton-roll", stem: "DC-Air_Training_07_Lower_Posterior_Comfort",
@@ -119,8 +123,8 @@ function totalMinutes(list) {
 // attachment. Works identically if we ever switch back to Azure with a
 // SAS in TRAINING_MEDIA_QUERY (Azure ignores the extra parameter).
 const PACKAGES = {
-  zipCaptioned: { file: "zip/DC-Air_Clinical_Training_EN-Captions_2026-07.zip", size: "349 MB" },
-  zipNoCaptions: { file: "zip/DC-Air_Clinical_Training_No-Captions_2026-07.zip", size: "348 MB" },
+  zipCaptioned: { file: "zip/DC-Air_Clinical_Training_EN-Captions_2026-07b.zip", size: "312 MB" },
+  zipNoCaptions: { file: "zip/DC-Air_Clinical_Training_No-Captions_2026-07b.zip", size: "312 MB" },
   guidePdf: { file: "docs/DC-Air_User_QA_Troubleshooting_Guide_2026-1.pdf", size: "4.2 MB" },
   ifuPdf: { file: "docs/DC-Air_Instructions_for_Use_Rev18.pdf", size: "1.1 MB" },
   chairsidePdf: { file: "docs/DC-Air_Chairside_Quick_Reference_2026-07.pdf", size: "" },
