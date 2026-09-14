@@ -1,0 +1,60 @@
+{
+  "pages": {
+    "home": {
+      "tech": {
+        "experience": {
+          "sameEvent": "Un événement X. Deux chemins vers le signal.",
+          "pause": "Pause",
+          "play": "Lecture",
+          "static": "Vue statique",
+          "qualitative": "Schéma de principe, non à l’échelle. Profils de même échelle horizontale et hauteur de pic ; pas de performances mesurées. La conversion directe peut aussi présenter un étalement des charges et des pertes.",
+          "indirectSub": "Les rayons X deviennent de la lumière dans le scintillateur. La lumière se diffuse avant que la photodiode la transforme en charges, produisant un signal de lecture plus large.",
+          "directSub": "Les rayons X deviennent des charges électriques dans la couche de CdTe ou de silicium. Les charges sont collectées localement, sans l’étape de diffusion lumineuse du scintillateur.",
+          "steps": {
+            "becomeLight": "Les rayons X deviennent lumière",
+            "spreads": "La lumière se diffuse",
+            "footWide": "Signal plus large",
+            "chargeGen": "Les rayons X deviennent charges",
+            "path": "Les charges sont collectées",
+            "footNarrow": "Signal localisé"
+          },
+          "filmTitle": "Du rayon X au signal.",
+          "productLabel": "Caméra à conversion directe",
+          "modelLabel": "Comparaison schématique · échelle non respectée",
+          "productCaption": "La précision commence dans le détecteur.",
+          "insideCaption": "De la fenêtre d’entrée au capteur.",
+          "productAlt": "Caméra Athlos UFS 225, rendue à partir de la géométrie CAO.",
+          "chapters": "Chapitres de l’animation",
+          "chapterProduct": "Caméra",
+          "chapterInside": "Intérieur",
+          "chapterConversion": "Conversion",
+          "story": {
+            "direct": "Conversion directe",
+            "indirect": "Conversion indirecte",
+            "compare": "Comparaison des signaux",
+            "incoming": "Un photon X",
+            "absorbed": "Absorbé dans le CdTe",
+            "charges": "Des charges électriques naissent ici",
+            "collected": "Les charges atteignent la lecture CMOS",
+            "narrow": "Un signal localisé se forme",
+            "next": "Suivez maintenant le même événement dans un scintillateur",
+            "light": "Les rayons X deviennent de la lumière visible",
+            "spread": "La lumière se propage latéralement",
+            "photodiode": "La lumière devient une charge électrique",
+            "broad": "Un signal plus large se forme",
+            "final": "Le même événement. Une répartition du signal différente.",
+            "entry": "Fenêtre d’entrée",
+            "model": "Coupe schématique agrandie",
+            "legendX": "Photon X",
+            "legendLight": "Lumière visible",
+            "legendCharge": "Charge électrique",
+            "restart": "Recommencer",
+            "scrub": "Position dans l’animation",
+            "stored": "Événement précédent",
+            "pixel": "Pixels de lecture"
+          }
+        }
+      }
+    }
+  }
+}

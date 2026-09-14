@@ -1,0 +1,60 @@
+{
+  "pages": {
+    "home": {
+      "tech": {
+        "experience": {
+          "sameEvent": "Ein Röntgenereignis. Zwei Wege zum Signal.",
+          "pause": "Pause",
+          "play": "Abspielen",
+          "static": "Statische Ansicht",
+          "qualitative": "Schematische Darstellung, nicht maßstabsgetreu. Profile mit gleicher horizontaler Skala und Spitzenhöhe; keine gemessenen Leistungsdaten. Auch direkte Konversion kann Ladungsausbreitung und Verluste aufweisen.",
+          "indirectSub": "Röntgenstrahlung wird im Szintillator zu Licht. Das Licht breitet sich aus, bevor die Photodiode es in Ladung umwandelt. Dadurch entsteht ein breiteres Auslesesignal.",
+          "directSub": "Röntgenstrahlung wird in der CdTe- oder Siliziumschicht zu elektrischer Ladung. Diese wird lokal ausgelesen, ohne die Lichtausbreitung eines Szintillators.",
+          "steps": {
+            "becomeLight": "Röntgenstrahlung wird zu Licht",
+            "spreads": "Licht breitet sich aus",
+            "footWide": "Breiteres Signal",
+            "chargeGen": "Röntgenstrahlung wird zu Ladung",
+            "path": "Ladung wird gesammelt",
+            "footNarrow": "Lokalisiertes Signal"
+          },
+          "filmTitle": "Vom Röntgenstrahl zum Signal.",
+          "productLabel": "Direktkonversionskamera",
+          "modelLabel": "Schematischer Vergleich · nicht maßstabsgetreu",
+          "productCaption": "Präzision beginnt im Detektor.",
+          "insideCaption": "Vom Eintrittsfenster zum Sensor.",
+          "productAlt": "Athlos UFS 225 Kamera, aus CAD-Geometrie gerendert.",
+          "chapters": "Animationskapitel",
+          "chapterProduct": "Kamera",
+          "chapterInside": "Innenansicht",
+          "chapterConversion": "Konversion",
+          "story": {
+            "direct": "Direkte Konversion",
+            "indirect": "Indirekte Konversion",
+            "compare": "Signalvergleich",
+            "incoming": "Ein Röntgenphoton",
+            "absorbed": "In CdTe absorbiert",
+            "charges": "Hier entsteht elektrische Ladung",
+            "collected": "Ladung erreicht die CMOS-Auslese",
+            "narrow": "Ein lokalisiertes Signal entsteht",
+            "next": "Nun dasselbe Ereignis im Szintillator verfolgen",
+            "light": "Röntgenstrahlung wird zu sichtbarem Licht",
+            "spread": "Licht breitet sich seitlich aus",
+            "photodiode": "Licht wird zu elektrischer Ladung",
+            "broad": "Ein breiteres Signal entsteht",
+            "final": "Dasselbe Ereignis. Eine andere Signalverteilung.",
+            "entry": "Eintrittsfenster",
+            "model": "Vergrößerter, schematischer Querschnitt",
+            "legendX": "Röntgenphoton",
+            "legendLight": "Sichtbares Licht",
+            "legendCharge": "Elektrische Ladung",
+            "restart": "Neustart",
+            "scrub": "Animationsposition",
+            "stored": "Vorheriges Ereignis",
+            "pixel": "Auslesepixel"
+          }
+        }
+      }
+    }
+  }
+}

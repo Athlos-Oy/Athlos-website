@@ -1,0 +1,60 @@
+{
+  "pages": {
+    "home": {
+      "tech": {
+        "experience": {
+          "sameEvent": "Un evento X. Due percorsi verso il segnale.",
+          "pause": "Pausa",
+          "play": "Riproduci",
+          "static": "Vista statica",
+          "qualitative": "Schema concettuale, non in scala. Profili con la stessa scala orizzontale e altezza di picco; non sono prestazioni misurate. Anche la conversione diretta può presentare diffusione di carica e perdite.",
+          "indirectSub": "I raggi X diventano luce nello scintillatore. La luce si diffonde prima che il fotodiodo la trasformi in carica, producendo un segnale di lettura più ampio.",
+          "directSub": "I raggi X diventano carica elettrica nello strato di CdTe o silicio. La carica viene raccolta localmente, senza la fase di diffusione della luce nello scintillatore.",
+          "steps": {
+            "becomeLight": "I raggi X diventano luce",
+            "spreads": "La luce si diffonde",
+            "footWide": "Segnale più ampio",
+            "chargeGen": "I raggi X diventano carica",
+            "path": "La carica viene raccolta",
+            "footNarrow": "Segnale localizzato"
+          },
+          "filmTitle": "Dai raggi X al segnale.",
+          "productLabel": "Camera a conversione diretta",
+          "modelLabel": "Confronto schematico · non in scala",
+          "productCaption": "La precisione inizia nel rivelatore.",
+          "insideCaption": "Dalla finestra di ingresso al sensore.",
+          "productAlt": "Camera Athlos UFS 225, renderizzata dalla geometria CAD.",
+          "chapters": "Capitoli dell’animazione",
+          "chapterProduct": "Camera",
+          "chapterInside": "Interno",
+          "chapterConversion": "Conversione",
+          "story": {
+            "direct": "Conversione diretta",
+            "indirect": "Conversione indiretta",
+            "compare": "Confronto dei segnali",
+            "incoming": "Un fotone X",
+            "absorbed": "Assorbito nel CdTe",
+            "charges": "Qui si genera carica elettrica",
+            "collected": "La carica raggiunge la lettura CMOS",
+            "narrow": "Si forma un segnale localizzato",
+            "next": "Ora segui lo stesso evento in uno scintillatore",
+            "light": "I raggi X diventano luce visibile",
+            "spread": "La luce si propaga lateralmente",
+            "photodiode": "La luce diventa carica elettrica",
+            "broad": "Si forma un segnale più ampio",
+            "final": "Lo stesso evento. Una distribuzione del segnale diversa.",
+            "entry": "Finestra di ingresso",
+            "model": "Sezione schematica ingrandita",
+            "legendX": "Fotone X",
+            "legendLight": "Luce visibile",
+            "legendCharge": "Carica elettrica",
+            "restart": "Ricomincia",
+            "scrub": "Posizione nell’animazione",
+            "stored": "Evento precedente",
+            "pixel": "Pixel di lettura"
+          }
+        }
+      }
+    }
+  }
+}

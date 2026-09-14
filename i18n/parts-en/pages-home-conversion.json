@@ -1,0 +1,60 @@
+{
+  "pages": {
+    "home": {
+      "tech": {
+        "experience": {
+          "sameEvent": "One X-ray event. Two paths to a signal.",
+          "pause": "Pause",
+          "play": "Play",
+          "static": "Static view",
+          "qualitative": "Conceptual illustration, not to scale. Profiles use the same horizontal scale and equal peak height; they are not measured performance. Direct conversion can still spread charge and incur losses.",
+          "indirectSub": "X-rays become light in the scintillator. Light spreads before the photodiode converts it into charge, producing a wider readout signal.",
+          "directSub": "X-rays become electrical charge in the CdTe or silicon layer. Charge is collected locally by the readout, without a scintillator light-spread stage.",
+          "steps": {
+            "becomeLight": "X-rays become light",
+            "spreads": "Light spreads",
+            "footWide": "Wider signal",
+            "chargeGen": "X-rays become charge",
+            "path": "Charge is collected",
+            "footNarrow": "Localized signal"
+          },
+          "filmTitle": "From X-ray to signal.",
+          "productLabel": "Direct conversion camera",
+          "modelLabel": "Conceptual comparison · not to scale",
+          "productCaption": "Precision starts inside the detector.",
+          "insideCaption": "From the entrance window to the sensor.",
+          "productAlt": "Athlos UFS 225 camera, rendered from CAD geometry.",
+          "chapters": "Animation chapters",
+          "chapterProduct": "Camera",
+          "chapterInside": "Inside",
+          "chapterConversion": "Conversion",
+          "story": {
+            "direct": "Direct conversion",
+            "indirect": "Indirect conversion",
+            "compare": "Signal comparison",
+            "incoming": "One X-ray photon",
+            "absorbed": "Absorbed in CdTe",
+            "charges": "Electrical charge forms here",
+            "collected": "Charge reaches CMOS readout",
+            "narrow": "A localized signal takes shape",
+            "next": "Now follow the same event in a scintillator",
+            "light": "X-rays become visible light",
+            "spread": "Light spreads sideways",
+            "photodiode": "Light becomes electrical charge",
+            "broad": "A wider signal takes shape",
+            "final": "The same event. A different signal footprint.",
+            "entry": "Entrance window",
+            "model": "Magnified, conceptual cross-section",
+            "legendX": "X-ray photon",
+            "legendLight": "Visible light",
+            "legendCharge": "Electrical charge",
+            "restart": "Restart",
+            "scrub": "Animation position",
+            "stored": "Previous event",
+            "pixel": "Readout pixels"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1928,150 +1928,23 @@ body::before {
   border: 0;
 }
 
-/* =====================================================
-   CINEMATIC "PHOTON FLIGHT" EXPERIENCE (WebGL)
-   Lazy-loaded Three.js film (js/conversion-experience.js).
-   Default / .dce-static = the static SVG poster below at its
-   natural height (no-JS & reduced-motion safe). On boot the
-   frame becomes a cinematic aspect-boxed dark screen and the
-   canvas crossfades in.
-   ===================================================== */
-.dce {
-  position: relative;
-  border-radius: var(--r-xl);
-}
-/* Cinematic dark screen while booting / live. */
-.dce-booting,
-.dce-live {
-  overflow: hidden;
-  aspect-ratio: 16 / 10;
-  background:
-    radial-gradient(120% 90% at 50% 0%, rgba(36,60,76,0.35), transparent 60%),
-    linear-gradient(165deg, #0a131a 0%, #070d12 60%, #0a131a 100%);
-  border: 1px solid rgba(125, 191, 232, 0.16);
-  box-shadow: 0 30px 70px -32px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.03);
-}
-.dce-canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  opacity: 0;
-  transition: opacity 0.9s ease;
-}
-.dce-live .dce-canvas { opacity: 1; }
+/* UFS 225: one continuous 42-second event narrative. */
+.dce{position:relative;overflow:hidden;background:#080c11;border:1px solid #26323d;border-radius:var(--r-xl);color:#ecf2f7;margin:0;isolation:isolate;scroll-margin-top:115px}
+.dce-heading{padding:1.6rem 2rem 0;position:relative;z-index:2}.dce-eyebrow{font-size:.65rem;letter-spacing:.22em;color:#92a6b7}.dce-heading h3{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:500;letter-spacing:-.035em;line-height:1.3;margin-top:.5rem}
+.dce-stage{position:relative;height:clamp(560px,47vw,660px)}.dce-canvas{width:100%;height:100%;display:block;opacity:0}.dce-live .dce-canvas{opacity:1}
+.dce-story-overlay{position:absolute;inset:0;pointer-events:none;opacity:0}.dce-story-overlay [data-story-title]{position:absolute;top:3%;width:100%;text-align:center;font-size:clamp(1.15rem,2vw,1.5rem);font-weight:500;letter-spacing:-.025em}.dce-model-label{position:absolute;top:9%;width:100%;text-align:center;color:#91a4b5;font-size:.66rem;letter-spacing:.035em}
+.dce-layer-label{position:absolute;left:0;top:0;padding:.3rem .65rem;border:1px solid #46617480;border-radius:4px;background:#0b1622e8;color:#dcecf6;font-size:.76rem;white-space:nowrap;opacity:0}.dce-layer-label[data-entry]{color:#a4deff}
+.dce-event-plot{position:absolute;left:0;top:0;transform-origin:top left;opacity:0;color:#8cdcff;text-align:center;will-change:transform,opacity}.dce-event-plot--indirect{color:#c5b2ff}.dce-event-plot h4{font-weight:500;line-height:1.3;font-size:calc(.82rem * var(--plot-text-scale,1));margin:0 0 3px}.dce-event-plot svg{display:block;width:100%;height:90px;overflow:visible}.dce-event-plot small{font-size:calc(.7rem * var(--plot-text-scale,1));line-height:1.3}.dce-event-plot rect{fill:currentColor;opacity:.23}.dce-graph-axis{fill:none;stroke:#7890a2;stroke-width:.65;opacity:.5}.dce-profile{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round}
+.dce-signal-links{position:absolute;inset:0;width:100%;height:100%;overflow:visible}.dce-signal-links path{fill:none;stroke-width:1;stroke-dasharray:2 5}.dce-signal-links circle{stroke:none}
+.dce-legend{position:absolute;bottom:2.5%;left:5%;right:5%;display:flex;justify-content:center;gap:1.4rem;font-size:.66rem;color:#d0dbe3}.dce-legend span{display:flex;align-items:center;gap:.4rem;white-space:nowrap}.dce-legend i{display:inline-grid;place-items:center;width:9px;height:9px;font-style:normal}.dce-key-x{background:#ecf6ff;transform:rotate(45deg);width:6px!important;height:6px!important;margin:2px}.dce-key-light{background:#ffcc79;border-radius:50%;box-shadow:0 0 7px #ffcc7966}.dce-key-charge{color:#8cdcff;border:1px solid currentColor;border-radius:50%;font-size:10px;line-height:8px}
+.dce-caption{position:absolute;bottom:8.5%;left:5%;right:5%;display:grid;text-align:center;font-size:clamp(.92rem,1.5vw,1.1rem);line-height:1.4;color:#d2dfe8}.dce-caption p{grid-area:1/1;opacity:0;margin:0}
+.dce-fallback{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;background:#080c11}.dce-fallback img{width:100%;height:85%;object-fit:contain}.dce-fallback p{padding:0 6%;font-size:.9rem;text-align:center;color:#c3d1dc}.dce-live .dce-fallback{display:none}
+.dce-controls{position:relative;display:flex;align-items:center;gap:1rem;padding:.9rem 1.5rem 2rem;border-top:1px solid #202d39;min-height:84px;background:#0c1219}.dce-controls[hidden]{display:none}.dce-controls button{font:inherit;font-size:.75rem;background:none;color:#91a6b8;border:0;padding:.5rem .65rem;border-radius:4px;cursor:pointer}.dce-controls button[aria-current=true]{color:#e8f4fc;background:#1b2a36}.dce-controls [data-dce-toggle]{color:#e8f4fc;min-width:4rem;border:1px solid #3c4c5b}.dce-controls button:focus-visible,.dce-controls input:focus-visible{outline:2px solid #a2dfff;outline-offset:3px}.dce-chapters{display:flex;gap:.3rem;flex:1}.dce-time{font:10px monospace;color:#8094a6;white-space:nowrap}.dce-progress{position:absolute;left:0;right:0;top:0;height:1px;background:#233440}.dce-progress span{display:block;height:100%;background:#abd8f2;transform-origin:left;transform:scaleX(0)}.dce-controls input[type=range]{position:absolute;bottom:.35rem;left:1.5rem;width:calc(100% - 3rem);height:16px;accent-color:#a8d9f5;cursor:ew-resize}
+.dce figcaption{padding:1.1rem 1.8rem;border-top:1px solid #202d39;background:#0a1016;font-size:.76rem;line-height:1.65;color:#9eafbf}.dce figcaption small{display:block;color:#859aaa;margin-top:.65rem;font-size:.69rem;line-height:1.6}
+@media(hover:hover) and (pointer:fine){.dce-controls button:hover{color:white;background:#21313e}}
+@media(max-width:600px){.dce-heading{padding:1.3rem 1.15rem 0}.dce-stage{height:560px}.dce-story-overlay [data-story-title]{top:3%;font-size:1.06rem}.dce-model-label{top:9%;font-size:.6rem}.dce-layer-label{font-size:.68rem;padding:.25rem .45rem}.dce-caption{bottom:9%;font-size:.88rem;left:6%;right:6%}.dce-legend{bottom:2.7%;gap:.65rem;font-size:.53rem;left:2%;right:2%}.dce-controls{gap:.3rem;padding:.8rem .5rem 2rem;flex-wrap:wrap}.dce-controls button{font-size:.65rem;padding:.5rem .35rem;min-height:36px}.dce-chapters{display:grid;grid-template-columns:repeat(2,1fr);gap:0}.dce-time{display:none}.dce figcaption{padding:1rem 1.1rem}}
+@media(prefers-reduced-motion:reduce){.dce *{transition:none!important;animation:none!important}}
 
-/* Poster: shown by default and in static fallback; removed from the
-   cinematic box once booting. */
-.dce-booting .dce-poster,
-.dce-live .dce-poster { display: none; }
-
-/* Cinematic captions (one line per shot). */
-.dce-captions {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: clamp(1.1rem, 3vw, 2.2rem);
-  display: grid;
-  justify-items: center;
-  pointer-events: none;
-  z-index: 2;
-}
-.dce-line {
-  grid-area: 1 / 1;
-  margin: 0;
-  padding: 0 1.2rem;
-  max-width: 30rem;
-  text-align: center;
-  font-size: clamp(0.95rem, 1.5vw, 1.2rem);
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  line-height: 1.4;
-  color: #eaf4fc;
-  text-shadow: 0 2px 18px rgba(0,0,0,0.65);
-  opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.dce-line.is-on {
-  opacity: 1;
-  transform: translateY(0);
-}
-/* Title + sub-line captions (indirect / direct / readout shots). */
-.dce-line strong {
-  display: block;
-  font-weight: 650;
-  font-size: 1.06em;
-  letter-spacing: 0.015em;
-}
-.dce-line small {
-  display: block;
-  margin-top: 0.18rem;
-  font-size: 0.82em;
-  font-weight: 400;
-  color: #b9d5e6;
-}
-/* The payoff line (final hero moment) reads a touch larger. */
-.dce-line--payoff {
-  font-size: clamp(1.05rem, 1.8vw, 1.4rem);
-  font-weight: 650;
-  letter-spacing: 0.01em;
-  max-width: 34rem;
-}
-
-/* Layer tags — positioned over 3D anchors by JS (transform + opacity). */
-.dce-tags {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 2;
-}
-.dce-tag {
-  position: absolute;
-  left: 0;
-  top: 0;
-  white-space: nowrap;
-  padding: 0.26rem 0.62rem;
-  font-size: clamp(0.7rem, 1.05vw, 0.83rem);
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: #eaf4fc;
-  background: rgba(8, 16, 22, 0.62);
-  border: 1px solid rgba(143, 210, 245, 0.38);
-  border-radius: 999px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.45);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  will-change: transform, opacity;
-}
-.dce-tag--soft { border-color: rgba(255, 198, 128, 0.5); color: #ffe6c2; }
-.dce-tag--sharp { border-color: rgba(120, 205, 255, 0.6); color: #d6f1ff; }
-.dce-tag--title {
-  font-size: clamp(0.82rem, 1.3vw, 1rem);
-  font-weight: 650;
-  letter-spacing: 0.03em;
-}
-
-/* Dip-to-black covering the loop seam (opacity driven by JS). */
-.dce-fade {
-  position: absolute;
-  inset: 0;
-  background: #060b10;
-  opacity: 0;
-  pointer-events: none;
-  z-index: 3;
-}
-
-@media (max-width: 768px) {
-  .dce-booting,
-  .dce-live { aspect-ratio: 4 / 5; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .dce-canvas { transition: none; }
-  .dce-line { transition: none; }
-}
 
 /* =====================================================
    DIRECT vs INDIRECT CONVERSION COMPARISON

@@ -1,0 +1,60 @@
+{
+  "pages": {
+    "home": {
+      "tech": {
+        "experience": {
+          "sameEvent": "Un evento de rayos X. Dos caminos hacia la señal.",
+          "pause": "Pausa",
+          "play": "Reproducir",
+          "static": "Vista estática",
+          "qualitative": "Ilustración conceptual, no a escala. Perfiles con la misma escala horizontal y altura máxima; no son medidas de rendimiento. La conversión directa también puede presentar dispersión de carga y pérdidas.",
+          "indirectSub": "Los rayos X se convierten en luz en el centelleador. La luz se dispersa antes de que el fotodiodo la convierta en carga, produciendo una señal de lectura más amplia.",
+          "directSub": "Los rayos X se convierten en carga eléctrica en la capa de CdTe o silicio. La carga se recoge localmente, sin la etapa de dispersión de luz del centelleador.",
+          "steps": {
+            "becomeLight": "Los rayos X se convierten en luz",
+            "spreads": "La luz se dispersa",
+            "footWide": "Señal más amplia",
+            "chargeGen": "Los rayos X se convierten en carga",
+            "path": "La carga se recoge",
+            "footNarrow": "Señal localizada"
+          },
+          "filmTitle": "Del rayo X a la señal.",
+          "productLabel": "Cámara de conversión directa",
+          "modelLabel": "Comparación conceptual · no a escala",
+          "productCaption": "La precisión comienza dentro del detector.",
+          "insideCaption": "De la ventana de entrada al sensor.",
+          "productAlt": "Cámara Athlos UFS 225, renderizada a partir de geometría CAD.",
+          "chapters": "Capítulos de la animación",
+          "chapterProduct": "Cámara",
+          "chapterInside": "Interior",
+          "chapterConversion": "Conversión",
+          "story": {
+            "direct": "Conversión directa",
+            "indirect": "Conversión indirecta",
+            "compare": "Comparación de señales",
+            "incoming": "Un fotón de rayos X",
+            "absorbed": "Absorbido en CdTe",
+            "charges": "Aquí se genera carga eléctrica",
+            "collected": "La carga llega a la lectura CMOS",
+            "narrow": "Se forma una señal localizada",
+            "next": "Ahora sigue el mismo evento en un centelleador",
+            "light": "Los rayos X se convierten en luz visible",
+            "spread": "La luz se propaga lateralmente",
+            "photodiode": "La luz se convierte en carga eléctrica",
+            "broad": "Se forma una señal más amplia",
+            "final": "El mismo evento. Una distribución de señal diferente.",
+            "entry": "Ventana de entrada",
+            "model": "Sección conceptual ampliada",
+            "legendX": "Fotón de rayos X",
+            "legendLight": "Luz visible",
+            "legendCharge": "Carga eléctrica",
+            "restart": "Reiniciar",
+            "scrub": "Posición de la animación",
+            "stored": "Evento anterior",
+            "pixel": "Píxeles de lectura"
+          }
+        }
+      }
+    }
+  }
+}

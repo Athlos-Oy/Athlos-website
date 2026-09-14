@@ -1,54 +1,43 @@
-{#- =====================================================
-    CinematicDirectConversionExperience — flagship homepage visual
-    A lazy-loaded WebGL layer-demonstration film: wide shot of the
-    Athlos module, then two stable cross-section stages — indirect
-    conversion (scintillator → light spread → wide photodiode
-    footprint) and direct conversion (CdTe/Si → localized charge →
-    narrow CMOS footprint) — ending on the output comparison.
-    (js/conversion-experience.js + vendored Three.js). Three guards
-    fall back to the static SVG poster below and never load WebGL:
-    prefers-reduced-motion, no WebGL, and automation (navigator.
-    webdriver — keeps visual-regression snapshots deterministic).
-    Copy: i18n pages.home.tech.experience.* (captions + layer tags)
-    and pages.home.tech.comparison.* (poster).
-   ===================================================== -#}
 {%- set x = "pages.home.tech.experience" -%}
-<div class="dce reveal" data-dce>
-  <canvas class="dce-canvas" aria-hidden="true"></canvas>
-
-  {#- layer + step tags: positioned by JS from 3D anchors -#}
-  <div class="dce-tags" aria-hidden="true">
-    <span class="dce-tag dce-tag--soft" data-tag="scintillator">{{ (x ~ ".layers.scintillator") | t }}</span>
-    <span class="dce-tag dce-tag--soft" data-tag="photodiode">{{ (x ~ ".layers.photodiode") | t }}</span>
-    <span class="dce-tag dce-tag--soft" data-tag="becomeLight">{{ (x ~ ".steps.becomeLight") | t }}</span>
-    <span class="dce-tag dce-tag--soft" data-tag="spreads">{{ (x ~ ".steps.spreads") | t }}</span>
-    <span class="dce-tag dce-tag--soft" data-tag="footWide">{{ (x ~ ".steps.footWide") | t }}</span>
-    <span class="dce-tag dce-tag--sharp" data-tag="cdte">{{ (x ~ ".layers.cdte") | t }}</span>
-    <span class="dce-tag dce-tag--sharp" data-tag="cmos">{{ (x ~ ".layers.cmos") | t }}</span>
-    <span class="dce-tag dce-tag--sharp" data-tag="chargeGen">{{ (x ~ ".steps.chargeGen") | t }}</span>
-    <span class="dce-tag dce-tag--sharp" data-tag="path">{{ (x ~ ".steps.path") | t }}</span>
-    <span class="dce-tag dce-tag--sharp" data-tag="footNarrow">{{ (x ~ ".steps.footNarrow") | t }}</span>
-    <span class="dce-tag dce-tag--soft dce-tag--title" data-tag="graphI">{{ (x ~ ".indirectTitle") | t }}</span>
-    <span class="dce-tag dce-tag--sharp dce-tag--title" data-tag="graphD">{{ (x ~ ".directTitle") | t }}</span>
-    <span class="dce-tag dce-tag--soft" data-tag="softer">{{ (x ~ ".softerTag") | t }}</span>
-    <span class="dce-tag dce-tag--sharp" data-tag="sharper">{{ (x ~ ".sharperTag") | t }}</span>
+{%- set s = x ~ ".story" -%}
+<figure class="dce" id="conversion-comparison" data-dce aria-labelledby="dce-title" aria-describedby="dce-description">
+  <div class="dce-heading"><span class="dce-eyebrow">ATHLOS / UFS 225</span><h3 id="dce-title">{{ (x ~ ".filmTitle") | t }}</h3></div>
+  <div class="dce-stage">
+    <canvas class="dce-canvas" aria-hidden="true"></canvas>
+    <div class="dce-story-overlay" aria-hidden="true">
+      <h4 data-story-title data-direct="{{ (s ~ '.direct') | t }}" data-indirect="{{ (s ~ '.indirect') | t }}" data-compare="{{ (s ~ '.compare') | t }}"></h4>
+      <span class="dce-model-label">{{ (s ~ ".model") | t }}</span>
+      <span class="dce-layer-label" data-layer="conversion" data-indirect="{{ (x ~ '.layers.scintillator') | t }}">CdTe</span>
+      <span class="dce-layer-label" data-layer="readout" data-direct="{{ (x ~ '.layers.cmos') | t }}" data-indirect="{{ (x ~ '.layers.photodiode') | t }}"></span>
+      <span class="dce-layer-label" data-entry>{{ (s ~ ".entry") | t }}</span>
+      <svg class="dce-signal-links" focusable="false"></svg>
+      {% for kind in ["direct", "indirect"] %}
+      <div class="dce-event-plot dce-event-plot--{{ kind }}" data-plot="{{ kind }}">
+        <h4>{{ (s ~ (".direct" if kind == "direct" else ".indirect")) | t }}</h4>
+        <svg viewBox="0 0 220 90" preserveAspectRatio="none" focusable="false">
+          <path class="dce-graph-axis" d="M12 76H208M110 16V76"/>
+          {% for i in range(0,13) %}<rect data-bar x="{{ 14 + i*15 }}" y="76" width="12" height="0"/>{% endfor %}
+          <path data-profile class="dce-profile"/>
+        </svg>
+        <small>{{ (x ~ (".steps.footNarrow" if kind == "direct" else ".steps.footWide")) | t }}</small>
+      </div>
+      {% endfor %}
+      <div class="dce-legend"><span data-legend="x"><i class="dce-key-x"></i>{{ (s ~ ".legendX") | t }}</span><span data-legend="light"><i class="dce-key-light"></i>{{ (s ~ ".legendLight") | t }}</span><span data-legend="charge"><i class="dce-key-charge">−</i>{{ (s ~ ".legendCharge") | t }}</span></div>
+      <div class="dce-caption">{% for key in ["incoming","absorbed","charges","collected","narrow","next","light","spread","photodiode","broad","final"] %}<p data-story-caption="{{ key }}">{{ (s ~ ("." ~ key)) | t }}</p>{% endfor %}</div>
+    </div>
+    <div class="dce-fallback"><img src="/images/conversion/ufs225-poster.webp" alt="{{ (x ~ '.productAlt') | t }}" width="1400" height="950" loading="lazy"><p>{{ (x ~ ".payoff") | t }}</p></div>
   </div>
-
-  {#- bottom caption: JS reveals one per shot (title + sub-line) -#}
-  <div class="dce-captions" aria-hidden="true">
-    <span class="dce-line" data-cap="enter">{{ (x ~ ".enter") | t }}</span>
-    <span class="dce-line" data-cap="indirect"><strong>{{ (x ~ ".indirectTitle") | t }}</strong><small>{{ (x ~ ".indirectSub") | t }}</small></span>
-    <span class="dce-line" data-cap="direct"><strong>{{ (x ~ ".directTitle") | t }}</strong><small>{{ (x ~ ".directSub") | t }}</small></span>
-    <span class="dce-line dce-line--payoff" data-cap="payoff">{{ (x ~ ".payoff") | t }}</span>
+  <div class="dce-controls" hidden>
+    <button type="button" data-dce-toggle data-pause="{{ (x ~ '.pause') | t }}" data-play="{{ (x ~ '.play') | t }}">{{ (x ~ ".pause") | t }}</button>
+    <div class="dce-chapters" role="group" aria-label="{{ (x ~ '.chapters') | t }}">
+      <button type="button" data-seek="0.4">{{ (x ~ ".chapterProduct") | t }}</button>
+      <button type="button" data-seek="3.7">{{ (s ~ ".direct") | t }}</button>
+      <button type="button" data-seek="10">{{ (s ~ ".indirect") | t }}</button>
+      <button type="button" data-seek="17.8">{{ (s ~ ".compare") | t }}</button>
+    </div>
+    <span class="dce-time" aria-hidden="true">00 / 20</span>
+    <input data-scrub type="range" min="0" max="19.99" value="0" step="0.05" aria-label="{{ (s ~ '.scrub') | t }}">
+    <div class="dce-progress" aria-hidden="true"><span></span></div>
   </div>
-
-  {#- dip-to-black covering the loop seam -#}
-  <div class="dce-fade" aria-hidden="true"></div>
-
-  {#- static fallback: existing pure-SVG comparison panel -#}
-  <div class="dce-poster">
-    {% include "partials/conversion-comparison.njk" %}
-  </div>
-
-  <p class="dcc-sr-only">{{ (x ~ ".aria") | t }}</p>
-</div>
+  <figcaption id="dce-description"><p>{{ (x ~ ".directSub") | t }} {{ (x ~ ".indirectSub") | t }}</p><small>{{ (x ~ ".qualitative") | t }}</small></figcaption>
+</figure>
