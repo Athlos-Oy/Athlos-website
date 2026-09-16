@@ -53,7 +53,7 @@ test('mobile comparison stays within viewport; controls work with keyboard',asyn
     for(const plot of layout.plots){expect(plot.left).toBeGreaterThanOrEqual(0);expect(plot.right).toBeLessThanOrEqual(layout.viewport);}
     if(phase==='direct'||phase==='indirect'){
       const projection=await film.evaluate(el=>{const frame=el.getBoundingClientRect();return {left:frame.left,right:frame.right,labels:[...el.querySelectorAll('[data-layer]')].filter(label=>Number(getComputedStyle(label).opacity)>.9).map(label=>{const r=label.getBoundingClientRect();return {left:r.left,right:r.right};})};});
-      expect(projection.labels).toHaveLength(2);
+      expect(projection.labels).toHaveLength(phase==='indirect'?3:2);
       for(const label of projection.labels){expect(label.left).toBeGreaterThanOrEqual(projection.left);expect(label.right).toBeLessThanOrEqual(projection.right);}
     }
   }

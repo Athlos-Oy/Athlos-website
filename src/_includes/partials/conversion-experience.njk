@@ -9,6 +9,7 @@
       <span class="dce-model-label">{{ (s ~ ".model") | t }}</span>
       <span class="dce-layer-label" data-layer="conversion" data-indirect="{{ (x ~ '.layers.scintillator') | t }}">CdTe</span>
       <span class="dce-layer-label" data-layer="readout" data-direct="{{ (x ~ '.layers.cmos') | t }}" data-indirect="{{ (x ~ '.layers.photodiode') | t }}"></span>
+      <span class="dce-layer-label" data-layer="circuit">{{ (x ~ '.layers.cmos') | t }}</span>
       <span class="dce-layer-label" data-entry>{{ (s ~ ".entry") | t }}</span>
       <svg class="dce-signal-links" focusable="false"></svg>
       {% for kind in ["direct", "indirect"] %}
