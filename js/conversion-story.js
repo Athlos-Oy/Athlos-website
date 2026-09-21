@@ -35,19 +35,19 @@ export function createStory(T, context) {
     const mat=(color,opacity=1,emission=0,roughness=.35)=>{const m=new T.MeshStandardMaterial({color,metalness:.28,roughness,transparent:true,opacity,emissive:color,emissiveIntensity:emission,depthWrite:opacity>.95,side:T.DoubleSide});m.userData.baseOpacity=opacity;mats.push(m);return m;};
     const lineMat=(color,opacity)=>{const m=new T.LineBasicMaterial({color,transparent:true,opacity,depthWrite:false});m.userData.baseOpacity=opacity;mats.push(m);return m;};
     const conversionColor=indirect?0x77603f:0x244f65;
-    const conversionHeight=indirect?.76:.36,conversionY=indirect?.2:.29;
-    const entranceY=indirect?.595:.485,electrodeY=indirect?-.205:.09;
+    const conversionHeight=.36,conversionY=.29;
+    const entranceY=.485,electrodeY=.09;
     const conversion=addSlab(group,[4.16,conversionHeight,1.46],[0,conversionY,0],mat(conversionColor,.23,.1,.24),.09);
     // Entrance coating and lower electrode describe the actual interfaces
     // without wrapping the conversion material in a heavy wireframe cube.
     addSlab(group,[4.08,.026,1.38],[0,entranceY,0],mat(indirect?0xc3a879:0x91b6c8,.5,.05,.18),.065);
     addSlab(group,[4.04,.032,1.36],[0,electrodeY,0],mat(indirect?0xb59761:0x79b9d8,.56,.12,.2),.06);
-    const sensorY=indirect?-.43:-.2;
-    const readoutY=indirect?-.78:-.2;
+    const sensorY=indirect?-.155:-.2;
+    const readoutY=indirect?-.505:-.2;
     if(indirect){
       // Optical coupling glass remains visibly separate from both the
       // scintillator and the tiled photodiode surface below it.
-      addSlab(group,[4.12,.035,1.4],[0,-.305,0],mat(0x79b9ca,.42,.08,.16),.07);
+      addSlab(group,[4.12,.035,1.4],[0,-.03,0],mat(0x79b9ca,.42,.08,.16),.07);
       addSlab(group,[4.18,.055,1.44],[0,sensorY,0],mat(0x564a67,.94,.06,.24),.07);
       for(let i=0;i<13;i++)for(let row=-1;row<=1;row++)
         addSlab(group,[.276,.022,.36],[(i-6)*.316,sensorY+.042,row*.42],mat(0x9a86b3,.66,.09,.2),.026);
@@ -60,18 +60,23 @@ export function createStory(T, context) {
       for(let row=-1;row<=1;row++)addSlab(group,[.276,.068,.36],[(i-6)*.316,readoutY,row*.42],pixelMat,.025);
     }
     addSlab(group,[4.36,.105,1.55],[0,readoutY-.115,0],mat(0x111b25,1,.01,.32),.085);
-    // Direct conversion is bump-bonded almost directly to CMOS. The small
-    // contacts make that compact interface legible; the indirect stack keeps
-    // its photodiode and readout planes visibly distinct.
-    if(!indirect){
-      const bondMat=mat(0xa9b7bc,.92,.04,.17),bondGeo=new T.CylinderGeometry(.035,.046,.2,14);
-      for(let i=0;i<13;i+=2)for(const z of [-.42,0,.42]){const bond=new T.Mesh(bondGeo,bondMat);bond.position.set((i-6)*.316,-.055,z);group.add(bond);}
-    }else{
-      const viaMat=mat(0x85919c,.8,.03,.2),viaGeo=new T.CylinderGeometry(.023,.023,.22,12);
-      for(let i=0;i<13;i+=2)for(const z of [-.42,0,.42]){const via=new T.Mesh(viaGeo,viaMat);via.position.set((i-6)*.316,-.605,z);group.add(via);}
+    // Every pixel has its own rounded bump contact. The same restrained
+    // geometry links CdTe to CMOS and the photodiode plane to its readout.
+    const baseMat=mat(0x313a3e,.98,.012,.24),goldMat=mat(0xd69719,1,.02,.2);
+    const barrierMat=mat(0x557a50,1,.01,.26),capMat=mat(0xd9d5ca,1,.025,.22);
+    const baseGeo=new T.CylinderGeometry(.044,.044,.015,18);
+    const goldGeo=new T.CylinderGeometry(.034,.034,.065,18);
+    const barrierGeo=new T.CylinderGeometry(.035,.035,.011,18);
+    const capGeo=new T.SphereGeometry(.048,18,10,0,Math.PI*2,0,Math.PI/2);
+    for(let i=0;i<13;i++)for(const z of [-.42,0,.42]){
+      const bump=new T.Group();bump.position.set((i-6)*.316,readoutY+.034,z);group.add(bump);
+      const base=new T.Mesh(baseGeo,baseMat);base.position.y=.0075;bump.add(base);
+      const goldBody=new T.Mesh(goldGeo,goldMat);goldBody.position.y=.0475;bump.add(goldBody);
+      const barrier=new T.Mesh(barrierGeo,barrierMat);barrier.position.y=.0855;bump.add(barrier);
+      const cap=new T.Mesh(capGeo,capMat);cap.position.y=.091;bump.add(cap);
     }
     // A sparse internal lattice is a texture cue, never a cloud of free particles.
-    const lattice=[];for(let x=-1.8;x<=1.8;x+=.45)for(let y=-.08;y<=.48;y+=.28)lattice.push(x,y,-.24);
+    const lattice=[];for(let x=-1.8;x<=1.8;x+=.45)for(let y=conversionY-conversionHeight*.3;y<=conversionY+conversionHeight*.3;y+=.12)lattice.push(x,y,-.24);
     const latticeMat=new T.PointsMaterial({color:indirect?gold:blue,size:.014,transparent:true,opacity:.16,depthWrite:false});latticeMat.userData.baseOpacity=.16;mats.push(latticeMat);
     const latticeGeo=new T.BufferGeometry();latticeGeo.setAttribute('position',new T.Float32BufferAttribute(lattice,3));group.add(new T.Points(latticeGeo,latticeMat));
     const photon=new T.Group();scene.add(photon);
